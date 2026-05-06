@@ -25,7 +25,280 @@ select {
   font: inherit;
 }
 
-.app-shell {
-  min-height: 100vh;
-  padding: 32px;
+button {
+  cursor: pointer;
+}
+
+.workbench {
+  display: grid;
+  grid-template-rows: 48px 1fr;
+  height: 100vh;
+  overflow: hidden;
+  background: #f6f8fb;
+}
+
+.toolbar {
+  align-items: center;
+  background: #eef2f7;
+  border-bottom: 1px solid #cbd5e1;
+  display: flex;
+  gap: 8px;
+  padding: 0 12px;
+}
+
+.toolbar-button {
+  align-items: center;
+  background: #ffffff;
+  border: 1px solid #b8c3d4;
+  border-radius: 6px;
+  color: #334155;
+  display: inline-flex;
+  gap: 6px;
+  height: 30px;
+  padding: 0 10px;
+}
+
+.bible-search {
+  align-items: center;
+  display: flex;
+  margin-left: auto;
+  position: relative;
+}
+
+.bible-search > svg {
+  color: #64748b;
+  left: 9px;
+  position: absolute;
+  z-index: 1;
+}
+
+.bible-search input {
+  border: 1px solid #b8c3d4;
+  border-radius: 6px;
+  height: 30px;
+  padding: 0 10px 0 31px;
+  width: 270px;
+}
+
+.bible-search__results {
+  background: #ffffff;
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+  box-shadow: 0 12px 30px rgb(15 23 42 / 16%);
+  display: grid;
+  gap: 4px;
+  padding: 6px;
+  position: absolute;
+  right: 0;
+  top: 36px;
+  width: 450px;
+  z-index: 10;
+}
+
+.bible-search__results button {
+  background: transparent;
+  border: 0;
+  border-radius: 4px;
+  color: #111827;
+  padding: 8px;
+  text-align: left;
+}
+
+.bible-search__results button:hover {
+  background: #eff6ff;
+}
+
+.workbench-grid {
+  display: grid;
+  min-height: 0;
+  overflow: hidden;
+}
+
+.reader-pane {
+  background: #ffffff;
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: minmax(260px, 1fr);
+  min-width: 0;
+  overflow: hidden;
+}
+
+.bible-column {
+  min-width: 0;
+  overflow: auto;
+  padding: 28px;
+  border-right: 1px solid #cbd5e1;
+}
+
+.bible-column h2 {
+  color: #64748b;
+  font-size: 20px;
+  margin: 0 0 24px;
+}
+
+.bible-column--kjv h2 {
+  color: #7c3aed;
+}
+
+.verse-list {
+  display: grid;
+  gap: 10px;
+}
+
+.verse-button {
+  background: transparent;
+  border: 0;
+  border-left: 5px solid transparent;
+  color: #111827;
+  display: block;
+  font-size: 21px;
+  line-height: 1.8;
+  padding: 8px 12px;
+  text-align: left;
+  width: 100%;
+}
+
+.bible-column--kjv .verse-button {
+  color: #25124d;
+  line-height: 1.55;
+}
+
+.verse-button[aria-current="true"] {
+  background: #fff1bd;
+  border-left-color: #d99b12;
+}
+
+.bible-column--kjv .verse-button[aria-current="true"] {
+  background: #efe3ff;
+  border-left-color: #7c3aed;
+}
+
+.resource-dock {
+  background: #f3f7fc;
+  border-right: 1px solid #cbd5e1;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  min-width: 0;
+  overflow: auto;
+  padding: 12px;
+}
+
+.resource-dock--right {
+  border-left: 1px solid #cbd5e1;
+  border-right: 0;
+}
+
+.resource-dock__title {
+  color: #1d4ed8;
+  display: flex;
+  font-size: 13px;
+  font-weight: 700;
+  justify-content: space-between;
+}
+
+.resource-module {
+  display: grid;
+  gap: 10px;
+}
+
+.resource-module__header {
+  align-items: center;
+  color: #1d4ed8;
+  display: flex;
+  font-size: 12px;
+  font-weight: 700;
+  gap: 8px;
+  justify-content: space-between;
+}
+
+.resource-module__header button {
+  align-items: center;
+  background: #ffffff;
+  border: 1px solid #bfdbfe;
+  border-radius: 5px;
+  color: #334155;
+  display: inline-flex;
+  font-size: 11px;
+  gap: 4px;
+  padding: 3px 6px;
+}
+
+.resource-dock__empty {
+  background: #ffffff;
+  border: 1px dashed #9ec5ff;
+  border-radius: 8px;
+  color: #64748b;
+  margin: 0;
+  padding: 12px;
+  text-align: center;
+}
+
+.resource-card {
+  background: #ffffff;
+  border: 1px solid #9ec5ff;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.resource-card__header {
+  align-items: center;
+  background: #f8fbff;
+  border-bottom: 1px solid #dbeafe;
+  display: flex;
+  gap: 8px;
+  min-height: 30px;
+  padding: 0 8px;
+}
+
+.resource-card__header h3 {
+  color: #334155;
+  font-size: 13px;
+  margin: 0;
+}
+
+.drag-handle {
+  color: #64748b;
+  font-size: 12px;
+}
+
+.resource-card__body {
+  color: #111827;
+  font-size: 13px;
+  line-height: 1.6;
+  padding: 10px;
+}
+
+.html-preview,
+.image-preview,
+.video-preview {
+  align-items: center;
+  border-radius: 6px;
+  display: flex;
+  justify-content: center;
+  min-height: 84px;
+  text-align: center;
+}
+
+.html-preview {
+  border: 1px dashed #94a3b8;
+  color: #475569;
+}
+
+.image-preview {
+  background: #dbeafe;
+  color: #475569;
+}
+
+.video-preview {
+  background: #111827;
+  color: #ffffff;
+}
+
+.sr-only {
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  position: absolute;
+  width: 1px;
 }

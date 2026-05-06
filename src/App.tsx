@@ -1,10 +1,14 @@
+import { Workbench } from "./components/Workbench";
+import { cuvGenesis1, kjvGenesis1, sampleResources } from "./data/sampleLibrary";
+import { defaultWorkbenchLayout } from "./domain/layout";
 import "./styles.css";
 
 export default function App() {
   return (
-    <main className="app-shell">
-      <h1>Bible Study Reader</h1>
-      <p>Genesis study workbench is loading.</p>
-    </main>
+    <Workbench
+      versions={[cuvGenesis1, kjvGenesis1]}
+      resources={sampleResources}
+      initialLayout={defaultWorkbenchLayout}
+    />
   );
 }

@@ -1,6 +1,6 @@
 {
   "$schema": "https://schema.tauri.app/config/2",
-  "productName": "bible-study-reader",
+  "productName": "Bible Study Reader",
   "version": "0.1.0",
   "identifier": "com.simon.biblestudyreader",
   "build": {
@@ -12,9 +12,9 @@
   "app": {
     "windows": [
       {
-        "title": "bible-study-reader",
-        "width": 800,
-        "height": 600
+        "title": "Bible Study Reader",
+        "width": 1280,
+        "height": 820
       }
     ],
     "security": {

@@ -1,7 +1,5 @@
-# Tauri + React + Typescript
+# One Holy Bible
 
-This template should help get you started developing with Tauri, React and Typescript in Vite.
+One Holy Bible is a desktop Bible study app draft built with Tauri, React, and TypeScript.
 
-## Recommended IDE Setup
-
-- [VS Code](https://code.visualstudio.com/) + [Tauri](https://marketplace.visualstudio.com/items?itemName=tauri-apps.tauri-vscode) + [rust-analyzer](https://marketplace.visualstudio.com/items?itemName=rust-lang.rust-analyzer)
+The current draft includes a Genesis 1 reading workbench with CUV/KJV synchronized highlighting, Bible-text search, and movable left/right resource modules.

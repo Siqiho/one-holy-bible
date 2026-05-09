@@ -2,5 +2,5 @@
 #![cfg_attr(not(debug_assertions), windows_subsystem = "windows")]
 
 fn main() {
-    bible_study_reader_lib::run()
+    one_holy_bible_lib::run()
 }

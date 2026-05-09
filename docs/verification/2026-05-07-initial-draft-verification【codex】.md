@@ -2,7 +2,7 @@
 
 ## Scope
 
-Verified the first Bible Study Reader draft: scaffold, sample Genesis data, synchronized CUV/KJV reading core, current-verse resources, Bible-text search, layout movement controls, frontend build, and Tauri desktop packaging.
+Verified the first One Holy Bible draft: scaffold, sample Genesis data, synchronized CUV/KJV reading core, current-verse resources, Bible-text search, layout movement controls, frontend build, and Tauri desktop packaging.
 
 ## Automated Checks
 
@@ -28,8 +28,8 @@ Verified the first Bible Study Reader draft: scaffold, sample Genesis data, sync
 
 ## Built Artifacts
 
-- `/Users/simon/✝️/bible-study-reader/src-tauri/target/release/bundle/macos/Bible Study Reader.app`
-- `/Users/simon/✝️/bible-study-reader/src-tauri/target/release/bundle/dmg/Bible Study Reader_0.1.0_aarch64.dmg`
+- `/Users/simon/✝️/one-holy-bible/src-tauri/target/release/bundle/macos/One Holy Bible.app`
+- `/Users/simon/✝️/one-holy-bible/src-tauri/target/release/bundle/dmg/One Holy Bible_0.1.0_aarch64.dmg`
 
 ## Remaining Risk
 

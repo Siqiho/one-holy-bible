@@ -9,7 +9,7 @@ import type { VerseId } from "../domain/verse";
 import { resourcesForVerse } from "../lib/backlinks";
 import { searchBibleText } from "../lib/bibleSearch";
 
-const layoutStorageKey = "bible-study-reader-layout";
+export const layoutStorageKey = "one-holy-bible-layout";
 
 interface WorkbenchProps {
   versions: BibleVersion[];

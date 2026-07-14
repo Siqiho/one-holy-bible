@@ -23,6 +23,8 @@ const PROVENANCE_KEYS = new Set(["sourceLabel", "page", "pageRange", "primaryAnc
 const COVERAGE_KEYS = new Set(["start", "end"]);
 const SEARCH_KEYS = new Set(["verseId", "versionId", "versionLabel", "book", "chapter", "verse", "text"]);
 const VERSION_LABELS = new Map([["cuv", "和合本"], ["kjv", "KJV"]]);
+const EXPECTED_SEARCH_INDEX_URL = "/data/search-index.json";
+const SAFE_RELEASE_VERSION = /^[0-9A-Za-z][0-9A-Za-z._+-]{0,63}$/;
 
 function sha256(bytes) {
   return createHash("sha256").update(bytes).digest("hex");
@@ -45,6 +47,11 @@ function assertExactKeys(value, allowed, label) {
 
 function assertString(value, label) {
   if (typeof value !== "string") throw new Error(`${label} must be a string`);
+}
+
+function assertReleaseVersion(value, label) {
+  assertString(value, label);
+  if (!SAFE_RELEASE_VERSION.test(value)) throw new Error(`${label} must be a non-empty safe release identifier`);
 }
 
 function assertPositiveInteger(value, label) {
@@ -122,6 +129,10 @@ export async function validatePublicData(outputPath) {
   assertExactKeys(manifest, MANIFEST_KEYS, "manifest");
   if (manifest.schemaVersion !== 1 || !Array.isArray(manifest.books) || manifest.books.length !== 66) {
     throw new Error("Manifest must contain exactly 66 books with schemaVersion 1");
+  }
+  assertReleaseVersion(manifest.releaseVersion, "manifest.releaseVersion");
+  if (manifest.searchIndexUrl !== EXPECTED_SEARCH_INDEX_URL) {
+    throw new Error(`manifest.searchIndexUrl must be ${EXPECTED_SEARCH_INDEX_URL}`);
   }
   if (JSON.stringify(manifest.books.map((book) => book.id)) !== JSON.stringify(BOOK_IDS)) {
     throw new Error("Manifest books are not in canonical BIBLE_BOOKS order");

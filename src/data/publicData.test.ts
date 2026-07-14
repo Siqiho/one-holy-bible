@@ -19,6 +19,26 @@ describe("public data contracts", () => {
   });
 
   it.each([
+    ["missing release version", (manifest: Record<string, unknown>) => { delete manifest.releaseVersion; }],
+    ["empty release version", (manifest: Record<string, unknown>) => { manifest.releaseVersion = ""; }],
+    ["wrong release version type", (manifest: Record<string, unknown>) => { manifest.releaseVersion = 1; }],
+    ["unsafe release version", (manifest: Record<string, unknown>) => { manifest.releaseVersion = "../draft"; }],
+    ["relative search index URL", (manifest: Record<string, unknown>) => { manifest.searchIndexUrl = "data/search-index.json"; }],
+    ["different rooted search index URL", (manifest: Record<string, unknown>) => { manifest.searchIndexUrl = "/data/other.json"; }],
+    ["wrong search index URL type", (manifest: Record<string, unknown>) => { manifest.searchIndexUrl = 1; }],
+  ])("rejects a runtime manifest with %s", (_label, mutate) => {
+    const manifest: Record<string, unknown> = {
+      schemaVersion: 1,
+      releaseVersion: "0.1.0",
+      searchIndexUrl: "/data/search-index.json",
+      books: [{ id: "Gen", url: "/data/books/Gen.json", bytes: 123, sha256: "a".repeat(64), cuvVerseCount: 1, kjvVerseCount: 1, textCardCount: 1 }],
+    };
+    mutate(manifest);
+
+    expect(() => validatePublicManifest(manifest)).toThrow(/unsafe public data/i);
+  });
+
+  it.each([
     ["absolute path", ["", "Users", "simon", "OHB", "file.pdf"].join("/")],
     ["local URL", `http://${[127, 0, 0, 1].join(".")}:${5179}/api/card`],
   ])("rejects %s metadata", (_label, unsafe) => {

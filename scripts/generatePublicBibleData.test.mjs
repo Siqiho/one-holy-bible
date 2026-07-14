@@ -10,6 +10,7 @@ const BOOK_IDS = [
 ];
 
 const generator = join(process.cwd(), "scripts/generatePublicBibleData.mjs");
+const standaloneValidator = join(process.cwd(), "scripts/validatePublicData.mjs");
 const temporaryRoots = new Set();
 
 afterEach(async () => {
@@ -23,6 +24,10 @@ function sha256(bytes) {
 
 function runGenerator(args) {
   return spawnSync(process.execPath, [generator, ...args], { encoding: "utf8" });
+}
+
+function runStandaloneValidator(outputPath) {
+  return spawnSync(process.execPath, [standaloneValidator, outputPath], { encoding: "utf8" });
 }
 
 async function fixture({ verseExtras = {} } = {}) {
@@ -80,7 +85,28 @@ async function rewriteSearchIndex(outputPath, mutate) {
   await writeFile(searchPath, `${JSON.stringify(searchIndex, null, 2)}\n`);
 }
 
+async function rewriteManifest(outputPath, mutate) {
+  const manifestPath = join(outputPath, "manifest.json");
+  const manifest = JSON.parse(await readFile(manifestPath, "utf8"));
+  mutate(manifest);
+  await writeFile(manifestPath, `${JSON.stringify(manifest, null, 2)}\n`);
+}
+
 describe("public Bible data generator", () => {
+  it("requires --release-version when generating new output", async () => {
+    const { biblePath, resourcesPath, outputPath } = await fixture();
+    const result = runGenerator(["--bible", biblePath, "--resources", resourcesPath, "--output", outputPath]);
+
+    expect(result.status).not.toBe(0);
+  });
+
+  it.each(["", "   ", "../draft"])("rejects unsafe release version %j during generation", async (releaseVersion) => {
+    const { biblePath, resourcesPath, outputPath } = await fixture();
+    const result = runGenerator(["--bible", biblePath, "--resources", resourcesPath, "--output", outputPath, "--release-version", releaseVersion]);
+
+    expect(result.status).not.toBe(0);
+  });
+
   it("rejects an existing non-dedicated output directory without changing it", async () => {
     const { biblePath, resourcesPath } = await fixture();
     const outputPath = join(biblePath, "..", "unrelated-output");
@@ -181,6 +207,23 @@ describe("public Bible data generator", () => {
     expect(await readFile(join(outputPath, "manifest.json"))).toEqual(firstManifest);
     await expect(readFile(join(outputPath, "stale.json"))).rejects.toThrow();
     expect(runGenerator(["--validate-only", outputPath]).status).toBe(0);
+  });
+
+  it.each([
+    ["missing release version", (manifest) => { delete manifest.releaseVersion; }],
+    ["empty release version", (manifest) => { manifest.releaseVersion = ""; }],
+    ["wrong release version type", (manifest) => { manifest.releaseVersion = 1; }],
+    ["unsafe release version", (manifest) => { manifest.releaseVersion = "../draft"; }],
+    ["relative search index URL", (manifest) => { manifest.searchIndexUrl = "data/search-index.json"; }],
+    ["different rooted search index URL", (manifest) => { manifest.searchIndexUrl = "/data/other.json"; }],
+    ["wrong search index URL type", (manifest) => { manifest.searchIndexUrl = 1; }],
+  ])("both public-data validators reject a manifest with %s", async (_label, mutate) => {
+    const { outputPath, result } = await generateFixture();
+    expect(result.status).toBe(0);
+    await rewriteManifest(outputPath, mutate);
+
+    expect(runGenerator(["--validate-only", outputPath]).status).not.toBe(0);
+    expect(runStandaloneValidator(outputPath).status).not.toBe(0);
   });
 
   it("publishes scripture through an exact field allowlist", async () => {

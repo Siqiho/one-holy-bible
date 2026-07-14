@@ -219,7 +219,7 @@ describe("public Bible data loading", () => {
       searchIndexUrl: url,
     }));
 
-    await expect(loadPublicSearchIndex({ fetcher })).rejects.toThrow(/rooted at \/data\//);
+    await expect(loadPublicSearchIndex({ fetcher })).rejects.toThrow(/manifest\.searchIndexUrl/);
     expect(fetcher).toHaveBeenCalledTimes(1);
   });
 

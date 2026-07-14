@@ -63,6 +63,8 @@ export interface PublicScriptureSearchEntry {
 const CANONICAL_BOOK_IDS = new Set(BIBLE_BOOKS.map((book) => book.id));
 const CANONICAL_BOOKS = new Map(BIBLE_BOOKS.map((book) => [book.id, book]));
 const LOWERCASE_SHA256 = /^[0-9a-f]{64}$/;
+const SAFE_RELEASE_VERSION = /^[0-9A-Za-z][0-9A-Za-z._+-]{0,63}$/;
+const EXPECTED_SEARCH_INDEX_URL = "/data/search-index.json";
 const UNSAFE_PUBLIC_STRING = /\/Users\/|file:\/\/|127\.0\.0\.1|localhost/i;
 const UNSAFE_SOURCE_FIELD = new RegExp("^sourceApi|^sourceWorkbench(?:Path|Url|Api)", "i");
 const MANIFEST_KEYS = new Set(["schemaVersion", "releaseVersion", "searchIndexUrl", "books"]);
@@ -178,6 +180,12 @@ export function validatePublicManifest(value: unknown): PublicDataManifest {
   }
   assertString(value.releaseVersion, "manifest.releaseVersion");
   assertString(value.searchIndexUrl, "manifest.searchIndexUrl");
+  if (!SAFE_RELEASE_VERSION.test(value.releaseVersion)) {
+    fail("manifest.releaseVersion must be a non-empty safe release identifier");
+  }
+  if (value.searchIndexUrl !== EXPECTED_SEARCH_INDEX_URL) {
+    fail(`manifest.searchIndexUrl must be ${EXPECTED_SEARCH_INDEX_URL}`);
+  }
   if (!Array.isArray(value.books)) {
     fail("manifest.books must be an array");
   }

@@ -23,6 +23,8 @@ const PROVENANCE_KEYS = new Set(["sourceLabel", "page", "pageRange", "primaryAnc
 const COVERAGE_KEYS = new Set(["start", "end"]);
 const SEARCH_KEYS = new Set(["verseId", "versionId", "versionLabel", "book", "chapter", "verse", "text"]);
 const VERSION_LABELS = new Map([["cuv", "和合本"], ["kjv", "KJV"]]);
+const EXPECTED_SEARCH_INDEX_URL = "/data/search-index.json";
+const SAFE_RELEASE_VERSION = /^[0-9A-Za-z][0-9A-Za-z._+-]{0,63}$/;
 
 function stableValue(value) {
   if (Array.isArray(value)) return value.map(stableValue);
@@ -57,6 +59,11 @@ function assertExactKeys(value, allowed, label) {
 
 function assertString(value, label) {
   if (typeof value !== "string") throw new Error(`${label} must be a string`);
+}
+
+function assertReleaseVersion(value, label) {
+  assertString(value, label);
+  if (!SAFE_RELEASE_VERSION.test(value)) throw new Error(`${label} must be a non-empty safe release identifier`);
 }
 
 function assertPositiveInteger(value, label) {
@@ -310,6 +317,10 @@ async function validateOutput(outputPath) {
   if (manifest.schemaVersion !== 1 || !Array.isArray(manifest.books) || manifest.books.length !== 66) {
     throw new Error("Manifest must contain exactly 66 books with schemaVersion 1");
   }
+  assertReleaseVersion(manifest.releaseVersion, "manifest.releaseVersion");
+  if (manifest.searchIndexUrl !== EXPECTED_SEARCH_INDEX_URL) {
+    throw new Error(`manifest.searchIndexUrl must be ${EXPECTED_SEARCH_INDEX_URL}`);
+  }
   if (JSON.stringify(manifest.books.map((book) => book.id)) !== JSON.stringify(BOOK_IDS)) {
     throw new Error("Manifest books are not in canonical BIBLE_BOOKS order");
   }
@@ -372,6 +383,7 @@ async function validateOutput(outputPath) {
 }
 
 async function generate({ biblePath, resourcesPath, outputPath, releaseVersion }) {
+  assertReleaseVersion(releaseVersion, "--release-version");
   const target = await safeGenerationTarget({ biblePath, resourcesPath, outputPath });
   const bible = JSON.parse(await readFile(biblePath, "utf8"));
   const resourceInput = JSON.parse(await readFile(resourcesPath, "utf8"));
@@ -414,7 +426,7 @@ async function generate({ biblePath, resourcesPath, outputPath, releaseVersion }
     const searchBytes = jsonBytes(scriptureSearchEntries(bible));
     assertSafeBytes(searchBytes, "search-index.json");
     await writeFile(join(temporaryPath, "search-index.json"), searchBytes);
-    await writeFile(join(temporaryPath, "manifest.json"), jsonBytes({ schemaVersion: 1, releaseVersion, searchIndexUrl: "/data/search-index.json", books: manifestBooks }));
+    await writeFile(join(temporaryPath, "manifest.json"), jsonBytes({ schemaVersion: 1, releaseVersion, searchIndexUrl: EXPECTED_SEARCH_INDEX_URL, books: manifestBooks }));
     const result = await validateOutput(temporaryPath);
     await replaceGeneratedOutput({ temporaryPath, target });
     return result;

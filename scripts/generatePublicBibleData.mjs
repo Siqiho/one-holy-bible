@@ -1,8 +1,9 @@
 #!/usr/bin/env node
 
-import { createHash } from "node:crypto";
-import { mkdir, readFile, readdir, rm, writeFile } from "node:fs/promises";
-import { join } from "node:path";
+import { createHash, randomUUID } from "node:crypto";
+import { lstat, mkdir, readFile, readdir, realpath, rename, rm, writeFile } from "node:fs/promises";
+import { homedir } from "node:os";
+import { basename, dirname, isAbsolute, join, parse, relative, resolve, sep } from "node:path";
 
 const bibleBooksSource = await readFile(new URL("../src/domain/bibleBooks.ts", import.meta.url), "utf8");
 const BOOK_IDS = [...bibleBooksSource.matchAll(/\{\s*id:\s*"([^"]+)"/g)].map((match) => match[1]);
@@ -77,6 +78,105 @@ function parseArgs(argv) {
     index += 1;
   }
   return args;
+}
+
+function isSameOrDescendant(candidate, ancestor) {
+  const relation = relative(ancestor, candidate);
+  return relation === "" || (relation !== ".." && !relation.startsWith(`..${sep}`) && !isAbsolute(relation));
+}
+
+async function lstatIfPresent(path) {
+  try {
+    return await lstat(path);
+  } catch (error) {
+    if (error?.code === "ENOENT") return undefined;
+    throw error;
+  }
+}
+
+async function assertNoSymlinks(path, label) {
+  const entries = await readdir(path, { withFileTypes: true });
+  for (const entry of entries) {
+    const entryPath = join(path, entry.name);
+    if (entry.isSymbolicLink()) throw new Error(`${label} must not contain symbolic links`);
+    if (entry.isDirectory()) await assertNoSymlinks(entryPath, label);
+  }
+}
+
+async function assertDedicatedExistingOutput(outputPath) {
+  const requiredEntries = [
+    ["manifest.json", "file"],
+    ["search-index.json", "file"],
+    ["books", "directory"],
+  ];
+  for (const [name, kind] of requiredEntries) {
+    const entry = await lstatIfPresent(join(outputPath, name));
+    const matchesKind = kind === "file" ? entry?.isFile() : entry?.isDirectory();
+    if (!matchesKind || entry.isSymbolicLink()) {
+      throw new Error("Existing output is not a dedicated public-data directory");
+    }
+  }
+  await assertNoSymlinks(outputPath, "Existing output");
+}
+
+async function safeGenerationTarget({ biblePath, resourcesPath, outputPath }) {
+  if (typeof outputPath !== "string" || outputPath.trim() === "") throw new Error("--output is required");
+  const lexicalOutput = resolve(outputPath);
+  const outputName = basename(lexicalOutput);
+  if (!outputName || outputName === "." || outputName === "..") throw new Error("Unsafe output directory");
+
+  const outputEntry = await lstatIfPresent(lexicalOutput);
+  if (outputEntry?.isSymbolicLink()) throw new Error("Output directory must not be a symbolic link");
+  if (outputEntry && !outputEntry.isDirectory()) throw new Error("Output path must be a directory");
+
+  const parentPath = await realpath(dirname(lexicalOutput));
+  const resolvedOutput = join(parentPath, outputName);
+  if (outputEntry && await realpath(lexicalOutput) !== resolvedOutput) throw new Error("Output path resolution is unsafe");
+
+  const [repositoryRoot, workingDirectory, userHome, resolvedBible, resolvedResources] = await Promise.all([
+    realpath(new URL("..", import.meta.url)),
+    realpath(process.cwd()),
+    realpath(homedir()),
+    realpath(resolve(biblePath)),
+    realpath(resolve(resourcesPath)),
+  ]);
+  const filesystemRoot = parse(resolvedOutput).root;
+  const protectedPaths = [repositoryRoot, workingDirectory, userHome, resolvedBible, resolvedResources];
+  if (resolvedOutput === filesystemRoot || protectedPaths.some((protectedPath) => isSameOrDescendant(protectedPath, resolvedOutput))) {
+    throw new Error("Output must not be a protected path or an ancestor of the repository, working directory, home, or inputs");
+  }
+  if ([resolvedBible, resolvedResources].some((inputPath) => isSameOrDescendant(resolvedOutput, inputPath))) {
+    throw new Error("Output must not overlap a source input");
+  }
+
+  if (outputEntry) await assertDedicatedExistingOutput(resolvedOutput);
+  return { outputPath: resolvedOutput, outputExists: Boolean(outputEntry), outputName, parentPath };
+}
+
+function assertBoundedSibling(path, parentPath, outputName, kind) {
+  const prefix = `.${outputName}.${kind}-`;
+  if (dirname(path) !== parentPath || !basename(path).startsWith(prefix)) {
+    throw new Error(`Refusing unbounded ${kind} path`);
+  }
+}
+
+async function replaceGeneratedOutput({ temporaryPath, target }) {
+  assertBoundedSibling(temporaryPath, target.parentPath, target.outputName, "generate");
+  if (!target.outputExists) {
+    await rename(temporaryPath, target.outputPath);
+    return;
+  }
+
+  const previousPath = join(target.parentPath, `.${target.outputName}.previous-${randomUUID()}`);
+  assertBoundedSibling(previousPath, target.parentPath, target.outputName, "previous");
+  await rename(target.outputPath, previousPath);
+  try {
+    await rename(temporaryPath, target.outputPath);
+  } catch (error) {
+    await rename(previousPath, target.outputPath);
+    throw error;
+  }
+  await rm(previousPath, { recursive: true, force: false });
 }
 
 function verseBook(value) {
@@ -272,6 +372,7 @@ async function validateOutput(outputPath) {
 }
 
 async function generate({ biblePath, resourcesPath, outputPath, releaseVersion }) {
+  const target = await safeGenerationTarget({ biblePath, resourcesPath, outputPath });
   const bible = JSON.parse(await readFile(biblePath, "utf8"));
   const resourceInput = JSON.parse(await readFile(resourcesPath, "utf8"));
   if (!Array.isArray(resourceInput.resources)) throw new Error("Resources input must contain a resources array");
@@ -283,35 +384,44 @@ async function generate({ biblePath, resourcesPath, outputPath, releaseVersion }
     resourcesByBook.get(bookId).push(sanitizeResource(resource, bookId));
   }
 
-  await rm(outputPath, { recursive: true, force: true });
-  await mkdir(join(outputPath, "books"), { recursive: true });
-  const manifestBooks = [];
-  for (const bookId of BOOK_IDS) {
-    const payload = {
-      schemaVersion: 1,
-      bookId,
-      cuvVerses: bible.cuvBible.verses.filter((verse) => verse.book === bookId).map(publicVerse),
-      kjvVerses: bible.kjvBible.verses.filter((verse) => verse.book === bookId).map(publicVerse),
-      textCards: resourcesByBook.get(bookId),
-    };
-    const bytes = jsonBytes(payload);
-    assertSafeBytes(bytes, `books/${bookId}.json`);
-    await writeFile(join(outputPath, "books", `${bookId}.json`), bytes);
-    manifestBooks.push({
-      id: bookId,
-      url: `/data/books/${bookId}.json`,
-      bytes: bytes.length,
-      sha256: sha256(bytes),
-      cuvVerseCount: payload.cuvVerses.length,
-      kjvVerseCount: payload.kjvVerses.length,
-      textCardCount: payload.textCards.length,
-    });
+  const temporaryPath = join(target.parentPath, `.${target.outputName}.generate-${randomUUID()}`);
+  assertBoundedSibling(temporaryPath, target.parentPath, target.outputName, "generate");
+  await mkdir(temporaryPath, { mode: 0o700 });
+  await mkdir(join(temporaryPath, "books"), { mode: 0o700 });
+  try {
+    const manifestBooks = [];
+    for (const bookId of BOOK_IDS) {
+      const payload = {
+        schemaVersion: 1,
+        bookId,
+        cuvVerses: bible.cuvBible.verses.filter((verse) => verse.book === bookId).map(publicVerse),
+        kjvVerses: bible.kjvBible.verses.filter((verse) => verse.book === bookId).map(publicVerse),
+        textCards: resourcesByBook.get(bookId),
+      };
+      const bytes = jsonBytes(payload);
+      assertSafeBytes(bytes, `books/${bookId}.json`);
+      await writeFile(join(temporaryPath, "books", `${bookId}.json`), bytes);
+      manifestBooks.push({
+        id: bookId,
+        url: `/data/books/${bookId}.json`,
+        bytes: bytes.length,
+        sha256: sha256(bytes),
+        cuvVerseCount: payload.cuvVerses.length,
+        kjvVerseCount: payload.kjvVerses.length,
+        textCardCount: payload.textCards.length,
+      });
+    }
+    const searchBytes = jsonBytes(scriptureSearchEntries(bible));
+    assertSafeBytes(searchBytes, "search-index.json");
+    await writeFile(join(temporaryPath, "search-index.json"), searchBytes);
+    await writeFile(join(temporaryPath, "manifest.json"), jsonBytes({ schemaVersion: 1, releaseVersion, searchIndexUrl: "/data/search-index.json", books: manifestBooks }));
+    const result = await validateOutput(temporaryPath);
+    await replaceGeneratedOutput({ temporaryPath, target });
+    return result;
+  } catch (error) {
+    await rm(temporaryPath, { recursive: true, force: true });
+    throw error;
   }
-  const searchBytes = jsonBytes(scriptureSearchEntries(bible));
-  assertSafeBytes(searchBytes, "search-index.json");
-  await writeFile(join(outputPath, "search-index.json"), searchBytes);
-  await writeFile(join(outputPath, "manifest.json"), jsonBytes({ schemaVersion: 1, releaseVersion, searchIndexUrl: "/data/search-index.json", books: manifestBooks }));
-  return validateOutput(outputPath);
 }
 
 async function main() {

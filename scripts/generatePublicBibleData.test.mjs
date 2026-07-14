@@ -1,7 +1,7 @@
 import { createHash } from "node:crypto";
-import { mkdtemp, readFile, rm, writeFile } from "node:fs/promises";
-import { tmpdir } from "node:os";
-import { join } from "node:path";
+import { mkdir, mkdtemp, readFile, readdir, rm, symlink, writeFile } from "node:fs/promises";
+import { homedir, tmpdir } from "node:os";
+import { join, parse } from "node:path";
 import { spawnSync } from "node:child_process";
 import { afterEach, describe, expect, it } from "vitest";
 
@@ -81,6 +81,79 @@ async function rewriteSearchIndex(outputPath, mutate) {
 }
 
 describe("public Bible data generator", () => {
+  it("rejects an existing non-dedicated output directory without changing it", async () => {
+    const { biblePath, resourcesPath } = await fixture();
+    const outputPath = join(biblePath, "..", "unrelated-output");
+    await mkdir(outputPath);
+    const sentinelPath = join(outputPath, "keep.txt");
+    await writeFile(sentinelPath, "keep me");
+
+    const result = runGenerator(["--bible", biblePath, "--resources", resourcesPath, "--output", outputPath, "--release-version", "0.1.0"]);
+
+    expect(result.status).not.toBe(0);
+    await expect(readFile(sentinelPath, "utf8")).resolves.toBe("keep me");
+  });
+
+  it("rejects output paths that overlap an input or contain the inputs", async () => {
+    const { biblePath, resourcesPath } = await fixture();
+
+    expect(runGenerator(["--bible", biblePath, "--resources", resourcesPath, "--output", biblePath, "--release-version", "0.1.0"]).status).not.toBe(0);
+    expect(runGenerator(["--bible", biblePath, "--resources", resourcesPath, "--output", join(biblePath, ".."), "--release-version", "0.1.0"]).status).not.toBe(0);
+  });
+
+  it("rejects a symlink output without touching its target", async () => {
+    const { biblePath, resourcesPath } = await fixture();
+    const targetPath = join(biblePath, "..", "symlink-target");
+    const outputPath = join(biblePath, "..", "public-data-link");
+    await mkdir(targetPath);
+    const sentinelPath = join(targetPath, "keep.txt");
+    await writeFile(sentinelPath, "keep me");
+    await symlink(targetPath, outputPath, "dir");
+
+    const result = runGenerator(["--bible", biblePath, "--resources", resourcesPath, "--output", outputPath, "--release-version", "0.1.0"]);
+
+    expect(result.status).not.toBe(0);
+    await expect(readFile(sentinelPath, "utf8")).resolves.toBe("keep me");
+  });
+
+  it("rejects protected roots before inspecting them as output directories", async () => {
+    const { biblePath, resourcesPath } = await fixture();
+    const protectedOutputs = [".", process.cwd(), homedir(), parse(process.cwd()).root];
+
+    for (const outputPath of protectedOutputs) {
+      const result = runGenerator(["--bible", biblePath, "--resources", resourcesPath, "--output", outputPath, "--release-version", "0.1.0"]);
+      expect(result.status, outputPath).not.toBe(0);
+    }
+  });
+
+  it("rejects symbolic links nested inside an existing dedicated output", async () => {
+    const { biblePath, resourcesPath, outputPath } = await generateFixture();
+    const previousManifest = await readFile(join(outputPath, "manifest.json"));
+    const targetPath = join(outputPath, "..", "outside.txt");
+    await writeFile(targetPath, "outside");
+    await symlink(targetPath, join(outputPath, "books", "linked.json"));
+
+    const result = runGenerator(["--bible", biblePath, "--resources", resourcesPath, "--output", outputPath, "--release-version", "0.1.0"]);
+
+    expect(result.status).not.toBe(0);
+    await expect(readFile(targetPath, "utf8")).resolves.toBe("outside");
+    await expect(readFile(join(outputPath, "manifest.json"))).resolves.toEqual(previousManifest);
+  });
+
+  it("preserves the previous valid output when replacement generation fails", async () => {
+    const { biblePath, resourcesPath, outputPath } = await fixture();
+    const args = ["--bible", biblePath, "--resources", resourcesPath, "--output", outputPath, "--release-version", "0.1.0"];
+    expect(runGenerator(args).status).toBe(0);
+    const previousManifest = await readFile(join(outputPath, "manifest.json"));
+    const bible = JSON.parse(await readFile(biblePath, "utf8"));
+    bible.cuvBible.verses[0].text = ["", "Volumes", "private", "source.txt"].join("/");
+    await writeFile(biblePath, JSON.stringify(bible));
+
+    expect(runGenerator(args).status).not.toBe(0);
+    await expect(readFile(join(outputPath, "manifest.json"))).resolves.toEqual(previousManifest);
+    expect((await readdir(join(outputPath, ".."))).filter((name) => name.includes(".generate-") || name.includes(".previous-"))).toEqual([]);
+  });
+
   it("writes exactly 66 safe text-only book packages with exact hashes", async () => {
     const { biblePath, resourcesPath, outputPath } = await fixture();
     const result = runGenerator(["--bible", biblePath, "--resources", resourcesPath, "--output", outputPath, "--release-version", "0.1.0"]);

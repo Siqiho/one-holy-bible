@@ -20,4 +20,5 @@ jobs:
       - run: npm run validate:public-data
       - run: npm test
       - run: npx tsc --noEmit
+      - run: npx tsc -p tsconfig.node.json --noEmit
       - run: npm run build

@@ -1,0 +1,2399 @@
+{
+  "bookId": "Joel",
+  "cuvVerses": [
+    {
+      "book": "Joel",
+      "chapter": 1,
+      "id": "Joel.1.1",
+      "text": "耶和华的话临到毗土珥的儿子约珥。",
+      "verse": 1
+    },
+    {
+      "book": "Joel",
+      "chapter": 1,
+      "id": "Joel.1.2",
+      "text": "老年人哪，当听我的话！ 国中的居民哪，都要侧耳而听！ 在你们的日子， 或你们列祖的日子， 曾有这样的事吗？",
+      "verse": 2
+    },
+    {
+      "book": "Joel",
+      "chapter": 1,
+      "id": "Joel.1.3",
+      "text": "你们要将这事传与子， 子传与孙， 孙传与后代。",
+      "verse": 3
+    },
+    {
+      "book": "Joel",
+      "chapter": 1,
+      "id": "Joel.1.4",
+      "text": "剪虫剩下的，蝗虫来吃； 蝗虫剩下的，蝻子来吃； 蝻子剩下的，蚂蚱来吃。",
+      "verse": 4
+    },
+    {
+      "book": "Joel",
+      "chapter": 1,
+      "id": "Joel.1.5",
+      "text": "酒醉的人哪，要清醒哭泣； 好酒的人哪，都要为甜酒哀号； 因为从你们的口中断绝了。",
+      "verse": 5
+    },
+    {
+      "book": "Joel",
+      "chapter": 1,
+      "id": "Joel.1.6",
+      "text": "有一队蝗虫（注：原文作“民” ）又强盛又无数， 侵犯我的地。 它的牙齿如狮子的牙齿， 大牙如母狮的大牙。",
+      "verse": 6
+    },
+    {
+      "book": "Joel",
+      "chapter": 1,
+      "id": "Joel.1.7",
+      "text": "它毁坏我的葡萄树， 剥了我无花果树的皮， 剥尽而丢弃，使枝条露白。",
+      "verse": 7
+    },
+    {
+      "book": "Joel",
+      "chapter": 1,
+      "id": "Joel.1.8",
+      "text": "我的民哪，你当哀号！像处女腰束麻布， 为幼年的丈夫哀号。",
+      "verse": 8
+    },
+    {
+      "book": "Joel",
+      "chapter": 1,
+      "id": "Joel.1.9",
+      "text": "素祭和奠祭从耶和华的殿中断绝， 侍奉耶和华的祭司都悲哀。",
+      "verse": 9
+    },
+    {
+      "book": "Joel",
+      "chapter": 1,
+      "id": "Joel.1.10",
+      "text": "田荒凉，地悲哀， 因为五谷毁坏， 新酒干竭，油也缺乏。",
+      "verse": 10
+    },
+    {
+      "book": "Joel",
+      "chapter": 1,
+      "id": "Joel.1.11",
+      "text": "农夫啊，你们要惭愧； 修理葡萄园的啊，你们要哀号； 因为大麦小麦与田间的庄稼都灭绝了。",
+      "verse": 11
+    },
+    {
+      "book": "Joel",
+      "chapter": 1,
+      "id": "Joel.1.12",
+      "text": "葡萄树枯干， 无花果树衰残， 石榴树、棕树、苹果树， 连田野一切的树木也都枯干； 众人的喜乐尽都消灭。",
+      "verse": 12
+    },
+    {
+      "book": "Joel",
+      "chapter": 1,
+      "id": "Joel.1.13",
+      "text": "祭司啊，你们当腰束麻布痛哭； 伺候祭坛的啊，你们要哀号； 侍奉我 神的啊，你们要来披上麻布过夜； 因为素祭和奠祭从你们 神的殿中断绝了。",
+      "verse": 13
+    },
+    {
+      "book": "Joel",
+      "chapter": 1,
+      "id": "Joel.1.14",
+      "text": "你们要分定禁食的日子， 宣告严肃会， 招聚长老和国中的一切居民， 到耶和华你们 神的殿， 向耶和华哀求。",
+      "verse": 14
+    },
+    {
+      "book": "Joel",
+      "chapter": 1,
+      "id": "Joel.1.15",
+      "text": "哀哉，耶和华的日子临近了！ 这日来到，好像毁灭从全能者来到。",
+      "verse": 15
+    },
+    {
+      "book": "Joel",
+      "chapter": 1,
+      "id": "Joel.1.16",
+      "text": "粮食不是在我们眼前断绝了吗？ 欢喜快乐不是从我们 神的殿中止息了吗？",
+      "verse": 16
+    },
+    {
+      "book": "Joel",
+      "chapter": 1,
+      "id": "Joel.1.17",
+      "text": "谷种在土块下朽烂， 仓也荒凉，廪也破坏， 因为五谷枯干了。",
+      "verse": 17
+    },
+    {
+      "book": "Joel",
+      "chapter": 1,
+      "id": "Joel.1.18",
+      "text": "牲畜哀鸣； 牛群混乱，因为无草； 羊群也受了困苦。",
+      "verse": 18
+    },
+    {
+      "book": "Joel",
+      "chapter": 1,
+      "id": "Joel.1.19",
+      "text": "耶和华啊，我向你求告， 因为火烧灭旷野的草场； 火焰烧尽田野的树木。",
+      "verse": 19
+    },
+    {
+      "book": "Joel",
+      "chapter": 1,
+      "id": "Joel.1.20",
+      "text": "田野的走兽向你发喘， 因为溪水干涸， 火也烧灭旷野的草场。",
+      "verse": 20
+    },
+    {
+      "book": "Joel",
+      "chapter": 2,
+      "id": "Joel.2.1",
+      "text": "你们要在锡安吹角， 在我圣山吹出大声。 国中的居民都要发颤； 因为耶和华的日子将到， 已经临近。",
+      "verse": 1
+    },
+    {
+      "book": "Joel",
+      "chapter": 2,
+      "id": "Joel.2.2",
+      "text": "那日是黑暗、幽冥、 密云、乌黑的日子， 好像晨光铺满山岭。 有一队蝗虫（注：原文作“民” ）又大又强； 从来没有这样的， 以后直到万代也必没有。",
+      "verse": 2
+    },
+    {
+      "book": "Joel",
+      "chapter": 2,
+      "id": "Joel.2.3",
+      "text": "它们前面如火烧灭， 后面如火焰烧尽； 未到以前，地如伊甸园； 过去以后，成了荒凉的旷野， 没有一样能躲避它们的。",
+      "verse": 3
+    },
+    {
+      "book": "Joel",
+      "chapter": 2,
+      "id": "Joel.2.4",
+      "text": "它们的形状如马， 奔跑如马兵。",
+      "verse": 4
+    },
+    {
+      "book": "Joel",
+      "chapter": 2,
+      "id": "Joel.2.5",
+      "text": "在山顶蹦跳的响声，如车辆的响声， 又如火焰烧碎秸的响声， 好像强盛的民摆阵预备打仗。",
+      "verse": 5
+    },
+    {
+      "book": "Joel",
+      "chapter": 2,
+      "id": "Joel.2.6",
+      "text": "它们一来，众民伤恸， 脸都变色。",
+      "verse": 6
+    },
+    {
+      "book": "Joel",
+      "chapter": 2,
+      "id": "Joel.2.7",
+      "text": "它们如勇士奔跑， 像战士爬城。 各都步行，不乱队伍。",
+      "verse": 7
+    },
+    {
+      "book": "Joel",
+      "chapter": 2,
+      "id": "Joel.2.8",
+      "text": "彼此并不拥挤，向前各行其路， 直闯兵器，不偏左右。",
+      "verse": 8
+    },
+    {
+      "book": "Joel",
+      "chapter": 2,
+      "id": "Joel.2.9",
+      "text": "它们蹦上城，蹿上墙， 爬上房屋， 进入窗户如同盗贼。",
+      "verse": 9
+    },
+    {
+      "book": "Joel",
+      "chapter": 2,
+      "id": "Joel.2.10",
+      "text": "它们一来， 地震天动， 日月昏暗， 星宿无光。",
+      "verse": 10
+    },
+    {
+      "book": "Joel",
+      "chapter": 2,
+      "id": "Joel.2.11",
+      "text": "耶和华在他军旅前发声， 他的队伍甚大； 成就他命的是强盛者。 因为耶和华的日子大而可畏， 谁能当得起呢？",
+      "verse": 11
+    },
+    {
+      "book": "Joel",
+      "chapter": 2,
+      "id": "Joel.2.12",
+      "text": "耶和华说： “虽然如此， 你们应当禁食、哭泣、悲哀， 一心归向我。 ”",
+      "verse": 12
+    },
+    {
+      "book": "Joel",
+      "chapter": 2,
+      "id": "Joel.2.13",
+      "text": "你们要撕裂心肠， 不撕裂衣服， 归向耶和华你们的 神； 因为他有恩典，有怜悯， 不轻易发怒， 有丰盛的慈爱， 并且后悔不降所说的灾。",
+      "verse": 13
+    },
+    {
+      "book": "Joel",
+      "chapter": 2,
+      "id": "Joel.2.14",
+      "text": "或者他转意后悔，留下余福， 就是留下献给耶和华你们 神的素祭和奠祭， 也未可知。",
+      "verse": 14
+    },
+    {
+      "book": "Joel",
+      "chapter": 2,
+      "id": "Joel.2.15",
+      "text": "你们要在锡安吹角， 分定禁食的日子， 宣告严肃会。",
+      "verse": 15
+    },
+    {
+      "book": "Joel",
+      "chapter": 2,
+      "id": "Joel.2.16",
+      "text": "聚集众民，使会众自洁； 招聚老者， 聚集孩童和吃奶的； 使新郎出离洞房， 新妇出离内室。",
+      "verse": 16
+    },
+    {
+      "book": "Joel",
+      "chapter": 2,
+      "id": "Joel.2.17",
+      "text": "事奉耶和华的祭司， 要在廊子和祭坛中间哭泣说： “耶和华啊，求你顾惜你的百姓， 不要使你的产业受羞辱， 列邦管辖他们。 为何容列国的人说： ‘他们的 神在哪里呢？’ ”",
+      "verse": 17
+    },
+    {
+      "book": "Joel",
+      "chapter": 2,
+      "id": "Joel.2.18",
+      "text": "耶和华就为自己的地发热心， 怜恤他的百姓。",
+      "verse": 18
+    },
+    {
+      "book": "Joel",
+      "chapter": 2,
+      "id": "Joel.2.19",
+      "text": "耶和华应允他的百姓说： “我必赐给你们五谷、新酒和油， 使你们饱足； 我也不再使你们受列国的羞辱，",
+      "verse": 19
+    },
+    {
+      "book": "Joel",
+      "chapter": 2,
+      "id": "Joel.2.20",
+      "text": "却要使北方来的军队远离你们， 将他们赶到干旱荒废之地： 前队赶入东海， 后队赶入西海； 因为他们所行的大恶（注：原文作“事” ） ， 臭气上升，腥味腾空。 ”",
+      "verse": 20
+    },
+    {
+      "book": "Joel",
+      "chapter": 2,
+      "id": "Joel.2.21",
+      "text": "地土啊，不要惧怕！ 要欢喜快乐， 因为耶和华行了大事。",
+      "verse": 21
+    },
+    {
+      "book": "Joel",
+      "chapter": 2,
+      "id": "Joel.2.22",
+      "text": "田野的走兽啊，不要惧怕！ 因为旷野的草发生， 树木结果， 无花果树、葡萄树也都效力。",
+      "verse": 22
+    },
+    {
+      "book": "Joel",
+      "chapter": 2,
+      "id": "Joel.2.23",
+      "text": "锡安的民哪，你们要快乐， 为耶和华你们的 神欢喜， 因他赐给你们合宜的秋雨， 为你们降下甘霖， 就是秋雨春雨，和先前一样。",
+      "verse": 23
+    },
+    {
+      "book": "Joel",
+      "chapter": 2,
+      "id": "Joel.2.24",
+      "text": "禾场必满了麦子， 酒榨与油榨必有新酒和油盈溢。",
+      "verse": 24
+    },
+    {
+      "book": "Joel",
+      "chapter": 2,
+      "id": "Joel.2.25",
+      "text": "“我打发到你们中间的大军队， 就是蝗虫、蝻子、蚂蚱、剪虫， 那些年所吃的我要补还你们。",
+      "verse": 25
+    },
+    {
+      "book": "Joel",
+      "chapter": 2,
+      "id": "Joel.2.26",
+      "text": "你们必多吃而得饱足， 就赞美为你们行奇妙事之耶和华你们 神的名。 我的百姓必永远不至羞愧。",
+      "verse": 26
+    },
+    {
+      "book": "Joel",
+      "chapter": 2,
+      "id": "Joel.2.27",
+      "text": "你们必知道我是在以色列中间， 又知道我是耶和华你们的 神， 在我以外并无别神。 我的百姓必永远不至羞愧。",
+      "verse": 27
+    },
+    {
+      "book": "Joel",
+      "chapter": 2,
+      "id": "Joel.2.28",
+      "text": "以后，我要将我的灵浇灌凡有血气的。 你们的儿女要说预言， 你们的老年人要做异梦， 少年人要见异像。",
+      "verse": 28
+    },
+    {
+      "book": "Joel",
+      "chapter": 2,
+      "id": "Joel.2.29",
+      "text": "在那些日子， 我要将我的灵浇灌我的仆人和使女。",
+      "verse": 29
+    },
+    {
+      "book": "Joel",
+      "chapter": 2,
+      "id": "Joel.2.30",
+      "text": "在天上地下，我要显出奇事，有血、有火、有烟柱。",
+      "verse": 30
+    },
+    {
+      "book": "Joel",
+      "chapter": 2,
+      "id": "Joel.2.31",
+      "text": "日头要变为黑暗，月亮要变为血，这都在耶和华大而可畏的日子未到以前。",
+      "verse": 31
+    },
+    {
+      "book": "Joel",
+      "chapter": 2,
+      "id": "Joel.2.32",
+      "text": "到那时候， 凡求告耶和华名的就必得救； 因为照耶和华所说的， 在锡安山， 耶路撒冷必有逃脱的人， 在剩下的人中，必有耶和华所召的。",
+      "verse": 32
+    },
+    {
+      "book": "Joel",
+      "chapter": 3,
+      "id": "Joel.3.1",
+      "text": "到那日，我使犹大和耶路撒冷被掳之人归回的时候，",
+      "verse": 1
+    },
+    {
+      "book": "Joel",
+      "chapter": 3,
+      "id": "Joel.3.2",
+      "text": "我要聚集万民，带他们下到约沙法谷，在那里施行审判；因为他们将我的百姓，就是我的产业以 色列，分散在列国中，又分取我的地土，",
+      "verse": 2
+    },
+    {
+      "book": "Joel",
+      "chapter": 3,
+      "id": "Joel.3.3",
+      "text": "且为我的百姓拈阄，将童子换妓女，卖童女买酒喝。",
+      "verse": 3
+    },
+    {
+      "book": "Joel",
+      "chapter": 3,
+      "id": "Joel.3.4",
+      "text": "推罗、西顿和非利士四境的人哪，你们与我何干？你们要报复我吗？若报复我，我必使报应速速归到 你们的头上。",
+      "verse": 4
+    },
+    {
+      "book": "Joel",
+      "chapter": 3,
+      "id": "Joel.3.5",
+      "text": "你们既然夺取我的金银，又将我可爱的宝物带入你们宫殿（注：或作“庙中” ） ，",
+      "verse": 5
+    },
+    {
+      "book": "Joel",
+      "chapter": 3,
+      "id": "Joel.3.6",
+      "text": "并将犹大人和耶路撒冷人卖给希腊人（注：原文作“雅完人” ） ，使他们远离自己的境界。",
+      "verse": 6
+    },
+    {
+      "book": "Joel",
+      "chapter": 3,
+      "id": "Joel.3.7",
+      "text": "我必激动他们离开你们所卖到之地，又必使报应归到你们的头上。",
+      "verse": 7
+    },
+    {
+      "book": "Joel",
+      "chapter": 3,
+      "id": "Joel.3.8",
+      "text": "我必将你们的儿女卖在犹大人的手中，他们必卖给远方示巴国的人。 ”这是耶和华说的。",
+      "verse": 8
+    },
+    {
+      "book": "Joel",
+      "chapter": 3,
+      "id": "Joel.3.9",
+      "text": "当在万民中宣告说： 要预备打仗， 激动勇士， 使一切战士上前来。",
+      "verse": 9
+    },
+    {
+      "book": "Joel",
+      "chapter": 3,
+      "id": "Joel.3.10",
+      "text": "要将犁头打成刀剑， 将镰刀打成戈矛。 软弱的要说： “我有勇力。 ”",
+      "verse": 10
+    },
+    {
+      "book": "Joel",
+      "chapter": 3,
+      "id": "Joel.3.11",
+      "text": "四围的列国啊， 你们要速速地来， 一同聚集。 耶和华啊， 求你使你的大能者降临！",
+      "verse": 11
+    },
+    {
+      "book": "Joel",
+      "chapter": 3,
+      "id": "Joel.3.12",
+      "text": "“万民都当兴起， 上到约沙法谷； 因为我必坐在那里， 审判四围的列国。",
+      "verse": 12
+    },
+    {
+      "book": "Joel",
+      "chapter": 3,
+      "id": "Joel.3.13",
+      "text": "开镰吧！因为庄稼熟了； 践踏吧！因为酒榨满了， 酒池盈溢， 他们的罪恶甚大。 ”",
+      "verse": 13
+    },
+    {
+      "book": "Joel",
+      "chapter": 3,
+      "id": "Joel.3.14",
+      "text": "许多许多的人在断定谷， 因为耶和华的日子临近断定谷。",
+      "verse": 14
+    },
+    {
+      "book": "Joel",
+      "chapter": 3,
+      "id": "Joel.3.15",
+      "text": "日月昏暗， 星宿无光。",
+      "verse": 15
+    },
+    {
+      "book": "Joel",
+      "chapter": 3,
+      "id": "Joel.3.16",
+      "text": "耶和华必从锡安吼叫， 从耶路撒冷发声， 天地就震动。 耶和华却要作他百姓的避难所， 作以色列人的保障。",
+      "verse": 16
+    },
+    {
+      "book": "Joel",
+      "chapter": 3,
+      "id": "Joel.3.17",
+      "text": "“你们就知道我是耶和华你们的 神， 且又住在锡安我的圣山。 那时，耶路撒冷必成为圣， 外邦人不再从其中经过。",
+      "verse": 17
+    },
+    {
+      "book": "Joel",
+      "chapter": 3,
+      "id": "Joel.3.18",
+      "text": "到那日，大山要滴甜酒， 小山要流奶子， 犹大溪河都有水流。 必有泉源从耶和华的殿中流出来， 滋润什亭谷。",
+      "verse": 18
+    },
+    {
+      "book": "Joel",
+      "chapter": 3,
+      "id": "Joel.3.19",
+      "text": "埃及必然荒凉， 以东变为凄凉的旷野， 都因向犹大人所行的强暴， 又因在本地流无辜人的血。",
+      "verse": 19
+    },
+    {
+      "book": "Joel",
+      "chapter": 3,
+      "id": "Joel.3.20",
+      "text": "但犹大必存到永远， 耶路撒冷必存到万代。",
+      "verse": 20
+    },
+    {
+      "book": "Joel",
+      "chapter": 3,
+      "id": "Joel.3.21",
+      "text": "我未曾报复（注：或作“洗除” 。下同）流血的罪， 现在我要报复。 ” 因为耶和华住在锡安。",
+      "verse": 21
+    }
+  ],
+  "kjvVerses": [
+    {
+      "book": "Joel",
+      "chapter": 1,
+      "id": "Joel.1.1",
+      "text": "The word of the LORD that came to Joel the son of Pethuel.",
+      "verse": 1
+    },
+    {
+      "book": "Joel",
+      "chapter": 1,
+      "id": "Joel.1.2",
+      "text": "Hear this, ye old men, and give ear, all ye inhabitants of the land. Hath this been in your days, or even in the days of your fathers?",
+      "verse": 2
+    },
+    {
+      "book": "Joel",
+      "chapter": 1,
+      "id": "Joel.1.3",
+      "text": "Tell ye your children of it, and [let] your children [tell] their children, and their children another generation.",
+      "verse": 3
+    },
+    {
+      "book": "Joel",
+      "chapter": 1,
+      "id": "Joel.1.4",
+      "text": "That which the palmerworm hath left hath the locust eaten; and that which the locust hath left hath the cankerworm eaten; and that which the cankerworm hath left hath the caterpiller eaten.",
+      "verse": 4
+    },
+    {
+      "book": "Joel",
+      "chapter": 1,
+      "id": "Joel.1.5",
+      "text": "Awake, ye drunkards, and weep; and howl, all ye drinkers of wine, because of the new wine; for it is cut off from your mouth.",
+      "verse": 5
+    },
+    {
+      "book": "Joel",
+      "chapter": 1,
+      "id": "Joel.1.6",
+      "text": "For a nation is come up upon my land, strong, and without number, whose teeth [are] the teeth of a lion, and he hath the cheek teeth of a great lion.",
+      "verse": 6
+    },
+    {
+      "book": "Joel",
+      "chapter": 1,
+      "id": "Joel.1.7",
+      "text": "He hath laid my vine waste, and barked my fig tree: he hath made it clean bare, and cast [it] away; the branches thereof are made white.",
+      "verse": 7
+    },
+    {
+      "book": "Joel",
+      "chapter": 1,
+      "id": "Joel.1.8",
+      "text": "Lament like a virgin girded with sackcloth for the husband of her youth.",
+      "verse": 8
+    },
+    {
+      "book": "Joel",
+      "chapter": 1,
+      "id": "Joel.1.9",
+      "text": "The meat offering and the drink offering is cut off from the house of the LORD; the priests, the LORD’S ministers, mourn.",
+      "verse": 9
+    },
+    {
+      "book": "Joel",
+      "chapter": 1,
+      "id": "Joel.1.10",
+      "text": "The field is wasted, the land mourneth; for the corn is wasted: the new wine is dried up, the oil languisheth.",
+      "verse": 10
+    },
+    {
+      "book": "Joel",
+      "chapter": 1,
+      "id": "Joel.1.11",
+      "text": "Be ye ashamed, O ye husbandmen; howl, O ye vinedressers, for the wheat and for the barley; because the harvest of the field is perished.",
+      "verse": 11
+    },
+    {
+      "book": "Joel",
+      "chapter": 1,
+      "id": "Joel.1.12",
+      "text": "The vine is dried up, and the fig tree languisheth; the pomegranate tree, the palm tree also, and the apple tree, [even] all the trees of the field, are withered: because joy is withered away from the sons of men.",
+      "verse": 12
+    },
+    {
+      "book": "Joel",
+      "chapter": 1,
+      "id": "Joel.1.13",
+      "text": "Gird yourselves, and lament, ye priests: howl, ye ministers of the altar: come, lie all night in sackcloth, ye ministers of my God: for the meat offering and the drink offering is withholden from the house of your God.",
+      "verse": 13
+    },
+    {
+      "book": "Joel",
+      "chapter": 1,
+      "id": "Joel.1.14",
+      "text": "Sanctify ye a fast, call a solemn assembly, gather the elders [and] all the inhabitants of the land [into] the house of the LORD your God, and cry unto the LORD,",
+      "verse": 14
+    },
+    {
+      "book": "Joel",
+      "chapter": 1,
+      "id": "Joel.1.15",
+      "text": "Alas for the day! for the day of the LORD [is] at hand, and as a destruction from the Almighty shall it come.",
+      "verse": 15
+    },
+    {
+      "book": "Joel",
+      "chapter": 1,
+      "id": "Joel.1.16",
+      "text": "Is not the meat cut off before our eyes, [yea,] joy and gladness from the house of our God?",
+      "verse": 16
+    },
+    {
+      "book": "Joel",
+      "chapter": 1,
+      "id": "Joel.1.17",
+      "text": "The seed is rotten under their clods, the garners are laid desolate, the barns are broken down; for the corn is withered.",
+      "verse": 17
+    },
+    {
+      "book": "Joel",
+      "chapter": 1,
+      "id": "Joel.1.18",
+      "text": "How do the beasts groan! the herds of cattle are perplexed, because they have no pasture; yea, the flocks of sheep are made desolate.",
+      "verse": 18
+    },
+    {
+      "book": "Joel",
+      "chapter": 1,
+      "id": "Joel.1.19",
+      "text": "O LORD, to thee will I cry: for the fire hath devoured the pastures of the wilderness, and the flame hath burned all the trees of the field.",
+      "verse": 19
+    },
+    {
+      "book": "Joel",
+      "chapter": 1,
+      "id": "Joel.1.20",
+      "text": "The beasts of the field cry also unto thee: for the rivers of waters are dried up, and the fire hath devoured the pastures of the wilderness.",
+      "verse": 20
+    },
+    {
+      "book": "Joel",
+      "chapter": 2,
+      "id": "Joel.2.1",
+      "text": "Blow ye the trumpet in Zion, and sound an alarm in my holy mountain: let all the inhabitants of the land tremble: for the day of the LORD cometh, for [it is] nigh at hand;",
+      "verse": 1
+    },
+    {
+      "book": "Joel",
+      "chapter": 2,
+      "id": "Joel.2.2",
+      "text": "A day of darkness and of gloominess, a day of clouds and of thick darkness, as the morning spread upon the mountains: a great people and a strong; there hath not been ever the like, neither shall be any more after it, [even] to the years of many generations.",
+      "verse": 2
+    },
+    {
+      "book": "Joel",
+      "chapter": 2,
+      "id": "Joel.2.3",
+      "text": "A fire devoureth before them; and behind them a flame burneth: the land [is] as the garden of Eden before them, and behind them a desolate wilderness; yea, and nothing shall escape them.",
+      "verse": 3
+    },
+    {
+      "book": "Joel",
+      "chapter": 2,
+      "id": "Joel.2.4",
+      "text": "The appearance of them [is] as the appearance of horses; and as horsemen, so shall they run.",
+      "verse": 4
+    },
+    {
+      "book": "Joel",
+      "chapter": 2,
+      "id": "Joel.2.5",
+      "text": "Like the noise of chariots on the tops of mountains shall they leap, like the noise of a flame of fire that devoureth the stubble, as a strong people set in battle array.",
+      "verse": 5
+    },
+    {
+      "book": "Joel",
+      "chapter": 2,
+      "id": "Joel.2.6",
+      "text": "Before their face the people shall be much pained: all faces shall gather blackness.",
+      "verse": 6
+    },
+    {
+      "book": "Joel",
+      "chapter": 2,
+      "id": "Joel.2.7",
+      "text": "They shall run like mighty men; they shall climb the wall like men of war; and they shall march every one on his ways, and they shall not break their ranks:",
+      "verse": 7
+    },
+    {
+      "book": "Joel",
+      "chapter": 2,
+      "id": "Joel.2.8",
+      "text": "Neither shall one thrust another; they shall walk every one in his path: and [when] they fall upon the sword, they shall not be wounded.",
+      "verse": 8
+    },
+    {
+      "book": "Joel",
+      "chapter": 2,
+      "id": "Joel.2.9",
+      "text": "They shall run to and fro in the city; they shall run upon the wall, they shall climb up upon the houses; they shall enter in at the windows like a thief.",
+      "verse": 9
+    },
+    {
+      "book": "Joel",
+      "chapter": 2,
+      "id": "Joel.2.10",
+      "text": "The earth shall quake before them; the heavens shall tremble: the sun and the moon shall be dark, and the stars shall withdraw their shining:",
+      "verse": 10
+    },
+    {
+      "book": "Joel",
+      "chapter": 2,
+      "id": "Joel.2.11",
+      "text": "And the LORD shall utter his voice before his army: for his camp [is] very great: for [he is] strong that executeth his word: for the day of the LORD [is] great and very terrible; and who can abide it?",
+      "verse": 11
+    },
+    {
+      "book": "Joel",
+      "chapter": 2,
+      "id": "Joel.2.12",
+      "text": "Therefore also now, saith the LORD, turn ye [even] to me with all your heart, and with fasting, and with weeping, and with mourning:",
+      "verse": 12
+    },
+    {
+      "book": "Joel",
+      "chapter": 2,
+      "id": "Joel.2.13",
+      "text": "And rend your heart, and not your garments, and turn unto the LORD your God: for he [is] gracious and merciful, slow to anger, and of great kindness, and repenteth him of the evil.",
+      "verse": 13
+    },
+    {
+      "book": "Joel",
+      "chapter": 2,
+      "id": "Joel.2.14",
+      "text": "Who knoweth [if] he will return and repent, and leave a blessing behind him; [even] a meat offering and a drink offering unto the LORD your God?",
+      "verse": 14
+    },
+    {
+      "book": "Joel",
+      "chapter": 2,
+      "id": "Joel.2.15",
+      "text": "Blow the trumpet in Zion, sanctify a fast, call a solemn assembly:",
+      "verse": 15
+    },
+    {
+      "book": "Joel",
+      "chapter": 2,
+      "id": "Joel.2.16",
+      "text": "Gather the people, sanctify the congregation, assemble the elders, gather the children, and those that suck the breasts: let the bridegroom go forth of his chamber, and the bride out of her closet.",
+      "verse": 16
+    },
+    {
+      "book": "Joel",
+      "chapter": 2,
+      "id": "Joel.2.17",
+      "text": "Let the priests, the ministers of the LORD, weep between the porch and the altar, and let them say, Spare thy people, O LORD, and give not thine heritage to reproach, that the heathen should rule over them: wherefore should they say among the people, Where [is] their God?",
+      "verse": 17
+    },
+    {
+      "book": "Joel",
+      "chapter": 2,
+      "id": "Joel.2.18",
+      "text": "Then will the LORD be jealous for his land, and pity his people.",
+      "verse": 18
+    },
+    {
+      "book": "Joel",
+      "chapter": 2,
+      "id": "Joel.2.19",
+      "text": "Yea, the LORD will answer and say unto his people, Behold, I will send you corn, and wine, and oil, and ye shall be satisfied therewith: and I will no more make you a reproach among the heathen:",
+      "verse": 19
+    },
+    {
+      "book": "Joel",
+      "chapter": 2,
+      "id": "Joel.2.20",
+      "text": "But I will remove far off from you the northern [army,] and will drive him into a land barren and desolate, with his face toward the east sea, and his hinder part toward the utmost sea, and his stink shall come up, and his ill savour shall come up, because he hath done great things.",
+      "verse": 20
+    },
+    {
+      "book": "Joel",
+      "chapter": 2,
+      "id": "Joel.2.21",
+      "text": "Fear not, O land; be glad and rejoice: for the LORD will do great things.",
+      "verse": 21
+    },
+    {
+      "book": "Joel",
+      "chapter": 2,
+      "id": "Joel.2.22",
+      "text": "Be not afraid, ye beasts of the field: for the pastures of the wilderness do spring, for the tree beareth her fruit, the fig tree and the vine do yield their strength.",
+      "verse": 22
+    },
+    {
+      "book": "Joel",
+      "chapter": 2,
+      "id": "Joel.2.23",
+      "text": "Be glad then, ye children of Zion, and rejoice in the LORD your God: for he hath given you the former rain moderately, and he will cause to come down for you the rain, the former rain, and the latter rain in the first [month. ]",
+      "verse": 23
+    },
+    {
+      "book": "Joel",
+      "chapter": 2,
+      "id": "Joel.2.24",
+      "text": "And the floors shall be full of wheat, and the fats shall overflow with wine and oil.",
+      "verse": 24
+    },
+    {
+      "book": "Joel",
+      "chapter": 2,
+      "id": "Joel.2.25",
+      "text": "And I will restore to you the years that the locust hath eaten, the cankerworm, and the caterpiller, and the palmerworm, my great army which I sent among you.",
+      "verse": 25
+    },
+    {
+      "book": "Joel",
+      "chapter": 2,
+      "id": "Joel.2.26",
+      "text": "And ye shall eat in plenty, and be satisfied, and praise the name of the LORD your God, that hath dealt wondrously with you: and my people shall never be ashamed.",
+      "verse": 26
+    },
+    {
+      "book": "Joel",
+      "chapter": 2,
+      "id": "Joel.2.27",
+      "text": "And ye shall know that I [am] in the midst of Israel, and [that] I [am] the LORD your God, and none else: and my people shall never be ashamed.",
+      "verse": 27
+    },
+    {
+      "book": "Joel",
+      "chapter": 2,
+      "id": "Joel.2.28",
+      "text": "And it shall come to pass afterward, [that] I will pour out my spirit upon all flesh; and your sons and your daughters shall prophesy, your old men shall dream dreams, your young men shall see visions:",
+      "verse": 28
+    },
+    {
+      "book": "Joel",
+      "chapter": 2,
+      "id": "Joel.2.29",
+      "text": "And also upon the servants and upon the handmaids in those days will I pour out my spirit.",
+      "verse": 29
+    },
+    {
+      "book": "Joel",
+      "chapter": 2,
+      "id": "Joel.2.30",
+      "text": "And I will shew wonders in the heavens and in the earth, blood, and fire, and pillars of smoke.",
+      "verse": 30
+    },
+    {
+      "book": "Joel",
+      "chapter": 2,
+      "id": "Joel.2.31",
+      "text": "The sun shall be turned into darkness, and the moon into blood, before the great and the terrible day of the LORD come.",
+      "verse": 31
+    },
+    {
+      "book": "Joel",
+      "chapter": 2,
+      "id": "Joel.2.32",
+      "text": "And it shall come to pass, [that] whosoever shall call on the name of the LORD shall be delivered: for in mount Zion and in Jerusalem shall be deliverance, as the LORD hath said, and in the remnant whom the LORD shall call.",
+      "verse": 32
+    },
+    {
+      "book": "Joel",
+      "chapter": 3,
+      "id": "Joel.3.1",
+      "text": "For, behold, in those days, and in that time, when I shall bring again the captivity of Judah and Jerusalem,",
+      "verse": 1
+    },
+    {
+      "book": "Joel",
+      "chapter": 3,
+      "id": "Joel.3.2",
+      "text": "I will also gather all nations, and will bring them down into the valley of Jehoshaphat, and will plead with them there for my people and [for] my heritage Israel, whom they have scattered among the nations, and parted my land.",
+      "verse": 2
+    },
+    {
+      "book": "Joel",
+      "chapter": 3,
+      "id": "Joel.3.3",
+      "text": "And they have cast lots for my people; and have given a boy for an harlot, and sold a girl for wine, that they might drink.",
+      "verse": 3
+    },
+    {
+      "book": "Joel",
+      "chapter": 3,
+      "id": "Joel.3.4",
+      "text": "Yea, and what have ye to do with me, O Tyre, and Zidon, and all the coasts of Palestine? will ye render me a recompence? and if ye recompense me, swiftly [and] speedily will I return your recompence upon your own head;",
+      "verse": 4
+    },
+    {
+      "book": "Joel",
+      "chapter": 3,
+      "id": "Joel.3.5",
+      "text": "Because ye have taken my silver and my gold, and have carried into your temples my goodly pleasant things:",
+      "verse": 5
+    },
+    {
+      "book": "Joel",
+      "chapter": 3,
+      "id": "Joel.3.6",
+      "text": "The children also of Judah and the children of Jerusalem have ye sold unto the Grecians, that ye might remove them far from their border.",
+      "verse": 6
+    },
+    {
+      "book": "Joel",
+      "chapter": 3,
+      "id": "Joel.3.7",
+      "text": "Behold, I will raise them out of the place whither ye have sold them, and will return your recompence upon your own head:",
+      "verse": 7
+    },
+    {
+      "book": "Joel",
+      "chapter": 3,
+      "id": "Joel.3.8",
+      "text": "And I will sell your sons and your daughters into the hand of the children of Judah, and they shall sell them to the Sabeans, to a people far off: for the LORD hath spoken [it. ]",
+      "verse": 8
+    },
+    {
+      "book": "Joel",
+      "chapter": 3,
+      "id": "Joel.3.9",
+      "text": "Proclaim ye this among the Gentiles; Prepare war, wake up the mighty men, let all the men of war draw near; let them come up:",
+      "verse": 9
+    },
+    {
+      "book": "Joel",
+      "chapter": 3,
+      "id": "Joel.3.10",
+      "text": "Beat your plowshares into swords, and your pruninghooks into spears: let the weak say, I [am] strong.",
+      "verse": 10
+    },
+    {
+      "book": "Joel",
+      "chapter": 3,
+      "id": "Joel.3.11",
+      "text": "Assemble yourselves, and come, all ye heathen, and gather yourselves together round about: thither cause thy mighty ones to come down, O LORD.",
+      "verse": 11
+    },
+    {
+      "book": "Joel",
+      "chapter": 3,
+      "id": "Joel.3.12",
+      "text": "Let the heathen be wakened, and come up to the valley of Jehoshaphat: for there will I sit to judge all the heathen round about.",
+      "verse": 12
+    },
+    {
+      "book": "Joel",
+      "chapter": 3,
+      "id": "Joel.3.13",
+      "text": "Put ye in the sickle, for the harvest is ripe: come, get you down; for the press is full, the fats overflow; for their wickedness [is] great.",
+      "verse": 13
+    },
+    {
+      "book": "Joel",
+      "chapter": 3,
+      "id": "Joel.3.14",
+      "text": "Multitudes, multitudes in the valley of decision: for the day of the LORD [is] near in the valley of decision.",
+      "verse": 14
+    },
+    {
+      "book": "Joel",
+      "chapter": 3,
+      "id": "Joel.3.15",
+      "text": "The sun and the moon shall be darkened, and the stars shall withdraw their shining.",
+      "verse": 15
+    },
+    {
+      "book": "Joel",
+      "chapter": 3,
+      "id": "Joel.3.16",
+      "text": "The LORD also shall roar out of Zion, and utter his voice from Jerusalem; and the heavens and the earth shall shake: but the LORD [will be] the hope of his people, and the strength of the children of Israel.",
+      "verse": 16
+    },
+    {
+      "book": "Joel",
+      "chapter": 3,
+      "id": "Joel.3.17",
+      "text": "So shall ye know that I [am] the LORD your God dwelling in Zion, my holy mountain: then shall Jerusalem be holy, and there shall no strangers pass through her any more.",
+      "verse": 17
+    },
+    {
+      "book": "Joel",
+      "chapter": 3,
+      "id": "Joel.3.18",
+      "text": "And it shall come to pass in that day, [that] the mountains shall drop down new wine, and the hills shall flow with milk, and all the rivers of Judah shall flow with waters, and a fountain shall come forth of the house of the LORD, and shall water the valley of Shittim.",
+      "verse": 18
+    },
+    {
+      "book": "Joel",
+      "chapter": 3,
+      "id": "Joel.3.19",
+      "text": "Egypt shall be a desolation, and Edom shall be a desolate wilderness, for the violence [against] the children of Judah, because they have shed innocent blood in their land.",
+      "verse": 19
+    },
+    {
+      "book": "Joel",
+      "chapter": 3,
+      "id": "Joel.3.20",
+      "text": "But Judah shall dwell for ever, and Jerusalem from generation to generation.",
+      "verse": 20
+    },
+    {
+      "book": "Joel",
+      "chapter": 3,
+      "id": "Joel.3.21",
+      "text": "For I will cleanse their blood [that] I have not cleansed: for the LORD dwelleth in Zion. Amos",
+      "verse": 21
+    }
+  ],
+  "schemaVersion": 1,
+  "textCards": [
+    {
+      "body": "《约珥书》的希伯来名是「约珥 yVin/ Yo’el」，是《十二先知书》（Tuy nn / Trei Asar）中的第二篇。在希伯来文圣经《塔纳赫》（7\"Jn / Tanakh）中，《十二先知书》被合为一卷，是《先知书》的最后一卷。《塔纳赫》这个名字由三个单词的开头字母组成，代表以下三部分、24卷书：\n1.《妥拉》（Torah /nin）：意思是「指导、教导」，共5卷。顺序是：创世记、出埃及记、利未记、民数记和申命记。 2. 《先知书》（Navim/ \"N 21）：意思是「先知们」，共8卷。现代顺序是：早期先知书（约书亚记、士师记、撒母耳记、列王纪）、后期先知书（以赛亚书、耶利米书、以西结书、十二先知书）。 3.《圣卷》（Ketuvim / '2I）：意思是「作品集」，共11卷。现代顺序是：诗歌 （诗篇、箴言、约伯记），五小卷（雅歌、路得记、耶利米哀歌、传道书、以斯帖记），历史书（但以理书、以斯拉记-尼希米记、历代志）。",
+      "debugMeta": {
+        "coverageRanges": [
+          {
+            "end": "Joel.3.8",
+            "start": "Joel.3.8"
+          }
+        ],
+        "page": 5,
+        "primaryAnchor": "Joel.3.8",
+        "sourceLabel": "image-text-ocr-conversion"
+      },
+      "id": "image-text-29-约珥书-codex-pdf-p005-img005",
+      "primaryAnchor": "Joel.3.8",
+      "searchText": "《约珥书》的希伯来名是「约珥 yVin/ Yo’el」，是《十二先知书》（Tuy nn / Trei Asar）中的第二篇。 《约珥书》的希伯来名是「约珥 yVin/ Yo’el」，是《十二先知书》（Tuy nn / Trei Asar）中的第二篇。在希伯来文圣经《塔纳赫》（7\"Jn / Tanakh）中，《十二先知书》被合为一卷，是《先知书》的最后一卷。《塔纳赫》这个名字由三个单词的开头字母组成，代表以下三部分、24卷书：\n1.《妥拉》（Torah /nin）：意思是「指导、教导」，共5卷。顺序是：创世记、出埃及记、利未记、民数记和申命记。 2. 《先知书》（Navim/ \"N 21）：意思是「先知们」，共8卷。现代顺序是：早期先知书（约书亚记、士师记、撒母耳记、列王纪）、后期先知书（以赛亚书、耶利米书、以西结书、十二先知书）。 3.《圣卷》（Ketuvim / '2I）：意思是「作品集」，共11卷。现代顺序是：诗歌 （诗篇、箴言、约伯记），五小卷（雅歌、路得记、耶利米哀歌、传道书、以斯帖记），历史书（但以理书、以斯拉记-尼希米记、历代志）。",
+      "source": "image-text-ocr-conversion",
+      "title": "《约珥书》的希伯来名是「约珥 yVin/ Yo’el」，是《十二先知书》（Tuy nn / Trei Asar）中的第二篇。",
+      "type": "commentary",
+      "verses": [
+        "Joel.3.8"
+      ]
+    },
+    {
+      "body": "老年人（原文或译：长老、老者；见14节，2:16）.在这里可能指百姓中年纪较大的人，而不是一个官职（参2:28；但见撒上4:3注）。这些命令广泛地颁布给几类人，包括老年人、醉酒的人、祭司和农夫。第一段从1:2开始，到1:14结束，首尾都提到\"老年人\"和一切居民。",
+      "debugMeta": {
+        "coverageRanges": [
+          {
+            "end": "Joel.1.2",
+            "start": "Joel.1.2"
+          }
+        ],
+        "page": 4,
+        "primaryAnchor": "Joel.1.2",
+        "sourceLabel": "圣经研修本 29_约珥书【codex-v3】"
+      },
+      "id": "study-bible-joel-1-2-p004-n013",
+      "primaryAnchor": "Joel.1.2",
+      "searchText": "约珥书 1:2 研修本注释：老年人（原文或译\n老年人（原文或译：长老、老者；见14节，2:16）.在这里可能指百姓中年纪较大的人，而不是一个官职（参2:28；但见撒上4:3注）。这些命令广泛地颁布给几类人，包括老年人、醉酒的人、祭司和农夫。第一段从1:2开始，到1:14结束，首尾都提…\n老年人（原文或译：长老、老者；见14节，2:16）.在这里可能指百姓中年纪较大的人，而不是一个官职（参2:28；但见撒上4:3注）。这些命令广泛地颁布给几类人，包括老年人、醉酒的人、祭司和农夫。第一段从1:2开始，到1:14结束，首尾都提到\"老年人\"和一切居民。\n1:2\n圣经研修本 29_约珥书【codex-v3】",
+      "source": "圣经研修本 29_约珥书【codex-v3】",
+      "summary": "老年人（原文或译：长老、老者；见14节，2:16）.在这里可能指百姓中年纪较大的人，而不是一个官职（参2:28；但见撒上4:3注）。这些命令广泛地颁布给几类人，包括老年人、醉酒的人、祭司和农夫。第一段从1:2开始，到1:14结束，首尾都提…",
+      "title": "约珥书 1:2 研修本注释：老年人（原文或译",
+      "type": "commentary",
+      "verses": [
+        "Joel.1.2"
+      ]
+    },
+    {
+      "body": "传与子，犹大的百姓应该将这事讲给四代人听（参出10:1-2.4-6）。圣约群体要常常讲述上帝在他们中间所行的伟大作为，以及对他们的吩咐（出13:8.14：申4:9.6:4-7.20-21；诗78:4-6）。",
+      "debugMeta": {
+        "coverageRanges": [
+          {
+            "end": "Joel.1.3",
+            "start": "Joel.1.3"
+          }
+        ],
+        "page": 4,
+        "primaryAnchor": "Joel.1.3",
+        "sourceLabel": "圣经研修本 29_约珥书【codex-v3】"
+      },
+      "id": "study-bible-joel-1-3-p004-n014",
+      "primaryAnchor": "Joel.1.3",
+      "searchText": "约珥书 1:3 研修本注释\n传与子，犹大的百姓应该将这事讲给四代人听（参出10:1-2.4-6）。圣约群体要常常讲述上帝在他们中间所行的伟大作为，以及对他们的吩咐（出13:8.14：申4:9.6:4-7.20-21；诗78:4-6）。\n传与子，犹大的百姓应该将这事讲给四代人听（参出10:1-2.4-6）。圣约群体要常常讲述上帝在他们中间所行的伟大作为，以及对他们的吩咐（出13:8.14：申4:9.6:4-7.20-21；诗78:4-6）。\n1:3\n圣经研修本 29_约珥书【codex-v3】",
+      "source": "圣经研修本 29_约珥书【codex-v3】",
+      "summary": "传与子，犹大的百姓应该将这事讲给四代人听（参出10:1-2.4-6）。圣约群体要常常讲述上帝在他们中间所行的伟大作为，以及对他们的吩咐（出13:8.14：申4:9.6:4-7.20-21；诗78:4-6）。",
+      "title": "约珥书 1:3 研修本注释",
+      "type": "commentary",
+      "verses": [
+        "Joel.1.3"
+      ]
+    },
+    {
+      "body": "蝗虫是蚱蜢的一种，在适宜的环境下会成群结队地飞行，吃掉沿途的所有植物。剪虫……蝗虫…蝻子…蚂蚱，约珥很可能用这几个不同的名字指同一种蝗虫（可能指先后几批），而不是指四种不同的虫子，以强调完全的毁灭（注意：它们在2:25的顺序与这里不同）。《圣经》经常列举四种毁坏的力量来强调彻底的毁灭（参耶15:2-3：结14:21：启6：-8.9:15）。",
+      "debugMeta": {
+        "coverageRanges": [
+          {
+            "end": "Joel.1.4",
+            "start": "Joel.1.4"
+          }
+        ],
+        "page": 4,
+        "primaryAnchor": "Joel.1.4",
+        "sourceLabel": "圣经研修本 29_约珥书【codex-v3】"
+      },
+      "id": "study-bible-joel-1-4-p004-n015",
+      "primaryAnchor": "Joel.1.4",
+      "searchText": "约珥书 1:4 研修本注释\n蝗虫是蚱蜢的一种，在适宜的环境下会成群结队地飞行，吃掉沿途的所有植物。剪虫……蝗虫…蝻子…蚂蚱，约珥很可能用这几个不同的名字指同一种蝗虫（可能指先后几批），而不是指四种不同的虫子，以强调完全的毁灭（注意：它们在2:25的顺序与这里不同）。…\n蝗虫是蚱蜢的一种，在适宜的环境下会成群结队地飞行，吃掉沿途的所有植物。剪虫……蝗虫…蝻子…蚂蚱，约珥很可能用这几个不同的名字指同一种蝗虫（可能指先后几批），而不是指四种不同的虫子，以强调完全的毁灭（注意：它们在2:25的顺序与这里不同）。《圣经》经常列举四种毁坏的力量来强调彻底的毁灭（参耶15:2-3：结14:21：启6：-8.9:15）。\n1:4\n圣经研修本 29_约珥书【codex-v3】",
+      "source": "圣经研修本 29_约珥书【codex-v3】",
+      "summary": "蝗虫是蚱蜢的一种，在适宜的环境下会成群结队地飞行，吃掉沿途的所有植物。剪虫……蝗虫…蝻子…蚂蚱，约珥很可能用这几个不同的名字指同一种蝗虫（可能指先后几批），而不是指四种不同的虫子，以强调完全的毁灭（注意：它们在2:25的顺序与这里不同）。…",
+      "title": "约珥书 1:4 研修本注释",
+      "type": "commentary",
+      "verses": [
+        "Joel.1.4"
+      ]
+    },
+    {
+      "body": "酒醉的人和好酒的人都察觉不到乱世将至，他们必须从混沌无知中被唤醒过来。蝗虫吃光葡萄树之后，他们不会再有甜酒喝。甜酒的发酵时间较短，比长时间发酵的酒酒劲小些，但也能使人醉倒。",
+      "debugMeta": {
+        "coverageRanges": [
+          {
+            "end": "Joel.1.5",
+            "start": "Joel.1.5"
+          }
+        ],
+        "page": 4,
+        "primaryAnchor": "Joel.1.5",
+        "sourceLabel": "圣经研修本 29_约珥书【codex-v3】"
+      },
+      "id": "study-bible-joel-1-5-p004-n009",
+      "primaryAnchor": "Joel.1.5",
+      "searchText": "约珥书 1:5 研修本注释\n酒醉的人和好酒的人都察觉不到乱世将至，他们必须从混沌无知中被唤醒过来。蝗虫吃光葡萄树之后，他们不会再有甜酒喝。甜酒的发酵时间较短，比长时间发酵的酒酒劲小些，但也能使人醉倒。\n酒醉的人和好酒的人都察觉不到乱世将至，他们必须从混沌无知中被唤醒过来。蝗虫吃光葡萄树之后，他们不会再有甜酒喝。甜酒的发酵时间较短，比长时间发酵的酒酒劲小些，但也能使人醉倒。\n1:5\n圣经研修本 29_约珥书【codex-v3】",
+      "source": "圣经研修本 29_约珥书【codex-v3】",
+      "summary": "酒醉的人和好酒的人都察觉不到乱世将至，他们必须从混沌无知中被唤醒过来。蝗虫吃光葡萄树之后，他们不会再有甜酒喝。甜酒的发酵时间较短，比长时间发酵的酒酒劲小些，但也能使人醉倒。",
+      "title": "约珥书 1:5 研修本注释",
+      "type": "commentary",
+      "verses": [
+        "Joel.1.5"
+      ]
+    },
+    {
+      "body": "本节将蝗虫比作民（见《和》注；《和修》注\"一国相当于一支庞大的军队（参箴30:27；耶5:15-17：珥2:25：启9.7）。《旧约》其他经文（士6:5.7:12：赛33:4；耶46:23.51.：14.27）和古代近东的一些文献，也曾把军队比作蝗虫和蚂蚱。",
+      "debugMeta": {
+        "coverageRanges": [
+          {
+            "end": "Joel.1.6",
+            "start": "Joel.1.6"
+          }
+        ],
+        "page": 4,
+        "primaryAnchor": "Joel.1.6",
+        "sourceLabel": "圣经研修本 29_约珥书【codex-v3】"
+      },
+      "id": "study-bible-joel-1-6-p004-n012",
+      "primaryAnchor": "Joel.1.6",
+      "searchText": "约珥书 1:6 研修本注释\n本节将蝗虫比作民（见《和》注；《和修》注\"一国相当于一支庞大的军队（参箴30:27；耶5:15-17：珥2:25：启9.7）。《旧约》其他经文（士6:5.7:12：赛33:4；耶46:23.51.：14.27）和古代近东的一些文献，也曾把…\n本节将蝗虫比作民（见《和》注；《和修》注\"一国相当于一支庞大的军队（参箴30:27；耶5:15-17：珥2:25：启9.7）。《旧约》其他经文（士6:5.7:12：赛33:4；耶46:23.51.：14.27）和古代近东的一些文献，也曾把军队比作蝗虫和蚂蚱。\n1:6\n圣经研修本 29_约珥书【codex-v3】",
+      "source": "圣经研修本 29_约珥书【codex-v3】",
+      "summary": "本节将蝗虫比作民（见《和》注；《和修》注\"一国相当于一支庞大的军队（参箴30:27；耶5:15-17：珥2:25：启9.7）。《旧约》其他经文（士6:5.7:12：赛33:4；耶46:23.51.：14.27）和古代近东的一些文献，也曾把…",
+      "title": "约珥书 1:6 研修本注释",
+      "type": "commentary",
+      "verses": [
+        "Joel.1.6"
+      ]
+    },
+    {
+      "body": "葡萄树和无花果树象征以色列人和平、富裕的生活（王下18:31；弥4:4），并且上帝视以色列为他的产业。葡萄树和无花果树被毁，使\"狮子的牙齿\"这个比喻（1非常贴切。",
+      "debugMeta": {
+        "coverageRanges": [
+          {
+            "end": "Joel.1.7",
+            "start": "Joel.1.7"
+          }
+        ],
+        "page": 4,
+        "primaryAnchor": "Joel.1.7",
+        "sourceLabel": "圣经研修本 29_约珥书【codex-v3】"
+      },
+      "id": "study-bible-joel-1-7-p004-n012",
+      "primaryAnchor": "Joel.1.7",
+      "searchText": "约珥书 1:7 研修本注释\n葡萄树和无花果树象征以色列人和平、富裕的生活（王下18:31；弥4:4），并且上帝视以色列为他的产业。葡萄树和无花果树被毁，使\"狮子的牙齿\"这个比喻（1非常贴切。\n葡萄树和无花果树象征以色列人和平、富裕的生活（王下18:31；弥4:4），并且上帝视以色列为他的产业。葡萄树和无花果树被毁，使\"狮子的牙齿\"这个比喻（1非常贴切。\n1:7\n圣经研修本 29_约珥书【codex-v3】",
+      "source": "圣经研修本 29_约珥书【codex-v3】",
+      "summary": "葡萄树和无花果树象征以色列人和平、富裕的生活（王下18:31；弥4:4），并且上帝视以色列为他的产业。葡萄树和无花果树被毁，使\"狮子的牙齿\"这个比喻（1非常贴切。",
+      "title": "约珥书 1:7 研修本注释",
+      "type": "commentary",
+      "verses": [
+        "Joel.1.7"
+      ]
+    },
+    {
+      "body": "幼年的丈夫，或作\"她年少时的新郎\"，先知呼吁百姓要深切哀恸，如同已订婚的处女尚未完婚，丈夫就死了。麻布是用山羊毛或骆驼毛织成的衣服，在哀悼、悔改和禁食时穿。",
+      "debugMeta": {
+        "coverageRanges": [
+          {
+            "end": "Joel.1.8",
+            "start": "Joel.1.8"
+          }
+        ],
+        "page": 4,
+        "primaryAnchor": "Joel.1.8",
+        "sourceLabel": "圣经研修本 29_约珥书【codex-v3】"
+      },
+      "id": "study-bible-joel-1-8-p004-n014",
+      "primaryAnchor": "Joel.1.8",
+      "searchText": "约珥书 1:8 研修本注释\n幼年的丈夫，或作\"她年少时的新郎\"，先知呼吁百姓要深切哀恸，如同已订婚的处女尚未完婚，丈夫就死了。麻布是用山羊毛或骆驼毛织成的衣服，在哀悼、悔改和禁食时穿。\n幼年的丈夫，或作\"她年少时的新郎\"，先知呼吁百姓要深切哀恸，如同已订婚的处女尚未完婚，丈夫就死了。麻布是用山羊毛或骆驼毛织成的衣服，在哀悼、悔改和禁食时穿。\n1:8\n圣经研修本 29_约珥书【codex-v3】",
+      "source": "圣经研修本 29_约珥书【codex-v3】",
+      "summary": "幼年的丈夫，或作\"她年少时的新郎\"，先知呼吁百姓要深切哀恸，如同已订婚的处女尚未完婚，丈夫就死了。麻布是用山羊毛或骆驼毛织成的衣服，在哀悼、悔改和禁食时穿。",
+      "title": "约珥书 1:8 研修本注释",
+      "type": "commentary",
+      "verses": [
+        "Joel.1.8"
+      ]
+    },
+    {
+      "body": "祭，除了每日献上的燔祭之外，再没有其他祭物可以献上（出29:38-42：利23:13）。祭司都悲哀，有一部分祭物是给祭司作食物的，因此祭司个人会有损失。",
+      "debugMeta": {
+        "coverageRanges": [
+          {
+            "end": "Joel.1.9",
+            "start": "Joel.1.9"
+          }
+        ],
+        "page": 4,
+        "primaryAnchor": "Joel.1.9",
+        "sourceLabel": "圣经研修本 29_约珥书【codex-v3】"
+      },
+      "id": "study-bible-joel-1-9-p004-n016",
+      "primaryAnchor": "Joel.1.9",
+      "searchText": "约珥书 1:9 研修本注释\n祭，除了每日献上的燔祭之外，再没有其他祭物可以献上（出29:38-42：利23:13）。祭司都悲哀，有一部分祭物是给祭司作食物的，因此祭司个人会有损失。\n祭，除了每日献上的燔祭之外，再没有其他祭物可以献上（出29:38-42：利23:13）。祭司都悲哀，有一部分祭物是给祭司作食物的，因此祭司个人会有损失。\n1:9\n圣经研修本 29_约珥书【codex-v3】",
+      "source": "圣经研修本 29_约珥书【codex-v3】",
+      "summary": "祭，除了每日献上的燔祭之外，再没有其他祭物可以献上（出29:38-42：利23:13）。祭司都悲哀，有一部分祭物是给祭司作食物的，因此祭司个人会有损失。",
+      "title": "约珥书 1:9 研修本注释",
+      "type": "commentary",
+      "verses": [
+        "Joel.1.9"
+      ]
+    },
+    {
+      "body": "地悲哀油也缺乏（原文直译：油也憔悴），约珥运用拟人法，形容这些东西也感到悲哀。有五谷、新24）：相反，如果这些东西没有了，则表明上帝的审判临到（申28:49-51：何2:8-9）。",
+      "debugMeta": {
+        "coverageRanges": [
+          {
+            "end": "Joel.1.10",
+            "start": "Joel.1.10"
+          }
+        ],
+        "page": 4,
+        "primaryAnchor": "Joel.1.10",
+        "sourceLabel": "圣经研修本 29_约珥书【codex-v3】"
+      },
+      "id": "study-bible-joel-1-10-p004-n018",
+      "primaryAnchor": "Joel.1.10",
+      "searchText": "约珥书 1:10 研修本注释：地悲哀油也缺乏（原文直译\n地悲哀油也缺乏（原文直译：油也憔悴），约珥运用拟人法，形容这些东西也感到悲哀。有五谷、新24）：相反，如果这些东西没有了，则表明上帝的审判临到（申28:49-51：何2:8-9）。\n地悲哀油也缺乏（原文直译：油也憔悴），约珥运用拟人法，形容这些东西也感到悲哀。有五谷、新24）：相反，如果这些东西没有了，则表明上帝的审判临到（申28:49-51：何2:8-9）。\n1:10\n圣经研修本 29_约珥书【codex-v3】",
+      "source": "圣经研修本 29_约珥书【codex-v3】",
+      "summary": "地悲哀油也缺乏（原文直译：油也憔悴），约珥运用拟人法，形容这些东西也感到悲哀。有五谷、新24）：相反，如果这些东西没有了，则表明上帝的审判临到（申28:49-51：何2:8-9）。",
+      "title": "约珥书 1:10 研修本注释：地悲哀油也缺乏（原文直译",
+      "type": "commentary",
+      "verses": [
+        "Joel.1.10"
+      ]
+    },
+    {
+      "body": "这节经文是本段落的高潮，特别命令祭司模仿处女的行动（8节），腰束麻布并痛哭。祭司之所以痛哭，是因为献祭的工作已经断绝了。",
+      "debugMeta": {
+        "coverageRanges": [
+          {
+            "end": "Joel.1.13",
+            "start": "Joel.1.13"
+          }
+        ],
+        "page": 5,
+        "primaryAnchor": "Joel.1.13",
+        "sourceLabel": "圣经研修本 29_约珥书【codex-v3】"
+      },
+      "id": "study-bible-joel-1-13-p005-n021",
+      "primaryAnchor": "Joel.1.13",
+      "searchText": "约珥书 1:13 研修本注释\n这节经文是本段落的高潮，特别命令祭司模仿处女的行动（8节），腰束麻布并痛哭。祭司之所以痛哭，是因为献祭的工作已经断绝了。\n这节经文是本段落的高潮，特别命令祭司模仿处女的行动（8节），腰束麻布并痛哭。祭司之所以痛哭，是因为献祭的工作已经断绝了。\n1:13\n圣经研修本 29_约珥书【codex-v3】",
+      "source": "圣经研修本 29_约珥书【codex-v3】",
+      "summary": "这节经文是本段落的高潮，特别命令祭司模仿处女的行动（8节），腰束麻布并痛哭。祭司之所以痛哭，是因为献祭的工作已经断绝了。",
+      "title": "约珥书 1:13 研修本注释",
+      "type": "commentary",
+      "verses": [
+        "Joel.1.13"
+      ]
+    },
+    {
+      "body": "祭司接下来的任务是分定和招聚。禁食的日子…求，在《旧约》中，禁食表示哀悼、悔改和谦卑，也是寻求上帝的帮助、引导和赦免的一种方法（士20:26：撒上7:6；撒下1:12；拉8:21-23：尼1:4,9:1；但9:3）。",
+      "debugMeta": {
+        "coverageRanges": [
+          {
+            "end": "Joel.1.14",
+            "start": "Joel.1.14"
+          }
+        ],
+        "page": 5,
+        "primaryAnchor": "Joel.1.14",
+        "sourceLabel": "圣经研修本 29_约珥书【codex-v3】"
+      },
+      "id": "study-bible-joel-1-14-p005-n017",
+      "primaryAnchor": "Joel.1.14",
+      "searchText": "约珥书 1:14 研修本注释：祭司接下来的任务是分定和招聚\n祭司接下来的任务是分定和招聚。禁食的日子…求，在《旧约》中，禁食表示哀悼、悔改和谦卑，也是寻求上帝的帮助、引导和赦免的一种方法（士20:26：撒上7:6；撒下1:12；拉8:21-23：尼1:4,9:1；但9:3）。\n祭司接下来的任务是分定和招聚。禁食的日子…求，在《旧约》中，禁食表示哀悼、悔改和谦卑，也是寻求上帝的帮助、引导和赦免的一种方法（士20:26：撒上7:6；撒下1:12；拉8:21-23：尼1:4,9:1；但9:3）。\n1:14\n圣经研修本 29_约珥书【codex-v3】",
+      "source": "圣经研修本 29_约珥书【codex-v3】",
+      "summary": "祭司接下来的任务是分定和招聚。禁食的日子…求，在《旧约》中，禁食表示哀悼、悔改和谦卑，也是寻求上帝的帮助、引导和赦免的一种方法（士20:26：撒上7:6；撒下1:12；拉8:21-23：尼1:4,9:1；但9:3）。",
+      "title": "约珥书 1:14 研修本注释：祭司接下来的任务是分定和招聚",
+      "type": "commentary",
+      "verses": [
+        "Joel.1.14"
+      ]
+    },
+    {
+      "body": "耶和华的日子（见\"导论：关键主题\"，是本书的重要主题，可特指蝗虫带来的毁灭（15节），以及上帝最后为他的百姓伸冤，恢复他们的出产（3:18-21），也可指以色列（2:1,11）或列国（3:14）被毁灭和受到威胁的日子。然而，对上帝的百姓来说，那日子也表明上帝的同在（2:27）、赐福（3:18）和拯救（2:31-32.3:16）。更多关于\"耶和华的日子\"的讨论，见摩5:18-20注；灭全能者，在希伯来原文中，约珥运用了头韵法shod..Shadday.语带双关，巧妙地暗示\"毁灭者",
+      "debugMeta": {
+        "coverageRanges": [
+          {
+            "end": "Joel.1.15",
+            "start": "Joel.1.15"
+          }
+        ],
+        "page": 5,
+        "primaryAnchor": "Joel.1.15",
+        "sourceLabel": "圣经研修本 29_约珥书【codex-v3】"
+      },
+      "id": "study-bible-joel-1-15-p005-n025",
+      "primaryAnchor": "Joel.1.15",
+      "searchText": "约珥书 1:15 研修本注释：耶和华的日子（见\"导论\n耶和华的日子（见\"导论：关键主题\"，是本书的重要主题，可特指蝗虫带来的毁灭（15节），以及上帝最后为他的百姓伸冤，恢复他们的出产（3:18-21），也可指以色列（2:1,11）或列国（3:14）被毁灭和受到威胁的日子。然而，对上帝的百姓来…\n耶和华的日子（见\"导论：关键主题\"，是本书的重要主题，可特指蝗虫带来的毁灭（15节），以及上帝最后为他的百姓伸冤，恢复他们的出产（3:18-21），也可指以色列（2:1,11）或列国（3:14）被毁灭和受到威胁的日子。然而，对上帝的百姓来说，那日子也表明上帝的同在（2:27）、赐福（3:18）和拯救（2:31-32.3:16）。更多关于\"耶和华的日子\"的讨论，见摩5:18-20注；灭全能者，在希伯来原文中，约珥运用了头韵法shod..Shadday.语带双关，巧妙地暗示\"毁灭者\n1:15\n圣经研修本 29_约珥书【codex-v3】",
+      "source": "圣经研修本 29_约珥书【codex-v3】",
+      "summary": "耶和华的日子（见\"导论：关键主题\"，是本书的重要主题，可特指蝗虫带来的毁灭（15节），以及上帝最后为他的百姓伸冤，恢复他们的出产（3:18-21），也可指以色列（2:1,11）或列国（3:14）被毁灭和受到威胁的日子。然而，对上帝的百姓来…",
+      "title": "约珥书 1:15 研修本注释：耶和华的日子（见\"导论",
+      "type": "commentary",
+      "verses": [
+        "Joel.1.15"
+      ]
+    },
+    {
+      "body": "谷种…土块 烂，在《希伯来圣经》中，这三个词只在本节出现，因此它们的确切意思并不清楚。但从后面的描述来看，这片土地显然还遇到了旱灾（20节）。",
+      "debugMeta": {
+        "coverageRanges": [
+          {
+            "end": "Joel.1.17",
+            "start": "Joel.1.17"
+          }
+        ],
+        "page": 5,
+        "primaryAnchor": "Joel.1.17",
+        "sourceLabel": "圣经研修本 29_约珥书【codex-v3】"
+      },
+      "id": "study-bible-joel-1-17-p005-n020",
+      "primaryAnchor": "Joel.1.17",
+      "searchText": "约珥书 1:17 研修本注释\n谷种…土块 烂，在《希伯来圣经》中，这三个词只在本节出现，因此它们的确切意思并不清楚。但从后面的描述来看，这片土地显然还遇到了旱灾（20节）。\n谷种…土块 烂，在《希伯来圣经》中，这三个词只在本节出现，因此它们的确切意思并不清楚。但从后面的描述来看，这片土地显然还遇到了旱灾（20节）。\n1:17\n圣经研修本 29_约珥书【codex-v3】",
+      "source": "圣经研修本 29_约珥书【codex-v3】",
+      "summary": "谷种…土块 烂，在《希伯来圣经》中，这三个词只在本节出现，因此它们的确切意思并不清楚。但从后面的描述来看，这片土地显然还遇到了旱灾（20节）。",
+      "title": "约珥书 1:17 研修本注释",
+      "type": "commentary",
+      "verses": [
+        "Joel.1.17"
+      ]
+    },
+    {
+      "body": "羊群 …受了困苦，\"受了困苦\"的希伯来原文是'asham，在这里指\"承受刑罚\"或\"担当罪责\"想表达的意思是，以色列犯罪，受造物也一同受苦。这个哀希伯来词也可以理解为shamem的不同形式，指\"成为荒凉\"。1:19-20耶和华啊，我向你求告（2:32；诗28:1,30:8），上帝所降的灾祸也只有他能解除。火有时用来指上帝的审判（创19:24；民11:1；申32:22：耶4:4；何8:14；摩1:4，7.10.12.14：番1:18,3:8）。",
+      "debugMeta": {
+        "coverageRanges": [
+          {
+            "end": "Joel.1.18",
+            "start": "Joel.1.18"
+          }
+        ],
+        "page": 5,
+        "primaryAnchor": "Joel.1.18",
+        "sourceLabel": "圣经研修本 29_约珥书【codex-v3】"
+      },
+      "id": "study-bible-joel-1-18-p005-n022",
+      "primaryAnchor": "Joel.1.18",
+      "searchText": "约珥书 1:18 研修本注释\n羊群 …受了困苦，\"受了困苦\"的希伯来原文是'asham，在这里指\"承受刑罚\"或\"担当罪责\"想表达的意思是，以色列犯罪，受造物也一同受苦。这个哀希伯来词也可以理解为shamem的不同形式，指\"成为荒凉\"。1:19-20耶和华啊，我向你求告…\n羊群 …受了困苦，\"受了困苦\"的希伯来原文是'asham，在这里指\"承受刑罚\"或\"担当罪责\"想表达的意思是，以色列犯罪，受造物也一同受苦。这个哀希伯来词也可以理解为shamem的不同形式，指\"成为荒凉\"。1:19-20耶和华啊，我向你求告（2:32；诗28:1,30:8），上帝所降的灾祸也只有他能解除。火有时用来指上帝的审判（创19:24；民11:1；申32:22：耶4:4；何8:14；摩1:4，7.10.12.14：番1:18,3:8）。\n1:18\n圣经研修本 29_约珥书【codex-v3】",
+      "source": "圣经研修本 29_约珥书【codex-v3】",
+      "summary": "羊群 …受了困苦，\"受了困苦\"的希伯来原文是'asham，在这里指\"承受刑罚\"或\"担当罪责\"想表达的意思是，以色列犯罪，受造物也一同受苦。这个哀希伯来词也可以理解为shamem的不同形式，指\"成为荒凉\"。1:19-20耶和华啊，我向你求告…",
+      "title": "约珥书 1:18 研修本注释",
+      "type": "commentary",
+      "verses": [
+        "Joel.1.18"
+      ]
+    },
+    {
+      "body": "锡安是上帝的宝座所在之地，可泛指圣殿区域，也可代表整个耶路撒冷。",
+      "debugMeta": {
+        "coverageRanges": [
+          {
+            "end": "Joel.2.1",
+            "start": "Joel.2.1"
+          }
+        ],
+        "page": 5,
+        "primaryAnchor": "Joel.2.1",
+        "sourceLabel": "圣经研修本 29_约珥书【codex-v3】"
+      },
+      "id": "study-bible-joel-2-1-p005-n027",
+      "primaryAnchor": "Joel.2.1",
+      "searchText": "约珥书 2:1 研修本注释\n锡安是上帝的宝座所在之地，可泛指圣殿区域，也可代表整个耶路撒冷。\n锡安是上帝的宝座所在之地，可泛指圣殿区域，也可代表整个耶路撒冷。\n2:1\n圣经研修本 29_约珥书【codex-v3】",
+      "source": "圣经研修本 29_约珥书【codex-v3】",
+      "summary": "锡安是上帝的宝座所在之地，可泛指圣殿区域，也可代表整个耶路撒冷。",
+      "title": "约珥书 2:1 研修本注释",
+      "type": "commentary",
+      "verses": [
+        "Joel.2.1"
+      ]
+    },
+    {
+      "body": "黑暗，使人想起上帝在西奈山显现（出19:16-19；申4:11.5:22-23）。上帝在西奈山的显现预表将来他的那个\"日子\"（摩5:18-20；番1:14-15）。",
+      "debugMeta": {
+        "coverageRanges": [
+          {
+            "end": "Joel.2.2",
+            "start": "Joel.2.2"
+          }
+        ],
+        "page": 6,
+        "primaryAnchor": "Joel.2.2",
+        "sourceLabel": "圣经研修本 29_约珥书【codex-v3】"
+      },
+      "id": "study-bible-joel-2-2-p006-n019",
+      "primaryAnchor": "Joel.2.2",
+      "searchText": "约珥书 2:2 研修本注释\n黑暗，使人想起上帝在西奈山显现（出19:16-19；申4:11.5:22-23）。上帝在西奈山的显现预表将来他的那个\"日子\"（摩5:18-20；番1:14-15）。\n黑暗，使人想起上帝在西奈山显现（出19:16-19；申4:11.5:22-23）。上帝在西奈山的显现预表将来他的那个\"日子\"（摩5:18-20；番1:14-15）。\n2:2\n圣经研修本 29_约珥书【codex-v3】",
+      "source": "圣经研修本 29_约珥书【codex-v3】",
+      "summary": "黑暗，使人想起上帝在西奈山显现（出19:16-19；申4:11.5:22-23）。上帝在西奈山的显现预表将来他的那个\"日子\"（摩5:18-20；番1:14-15）。",
+      "title": "约珥书 2:2 研修本注释",
+      "type": "commentary",
+      "verses": [
+        "Joel.2.2"
+      ]
+    },
+    {
+      "body": "火烧灭……火焰烧尽，这符合《圣经》中有关上帝临到的其他描述（诗50:3.97:3：赛30:27.66:15），军队与毁灭之火相关（见1:19）。如伊甸园……荒凉的旷野，这\"大民\"（希伯来原文amrab，22：参《和》注）的破坏力如此之大，只能用人类堕落对上帝起初的创造所造成的毁坏来比拟（创2:8，10，3:17-19，13:10）。2:4-5如马（参伯39:19-20：耶51:27），蝗虫在外形、行动和声音上都与军队类似，约珥用马和蝗虫这两个形象来形容极端强盛的民（希伯来原文'am'atsum：《和修》\"强大的军队\"；原文直译：大能的民）出现。",
+      "debugMeta": {
+        "coverageRanges": [
+          {
+            "end": "Joel.2.3",
+            "start": "Joel.2.3"
+          }
+        ],
+        "page": 6,
+        "primaryAnchor": "Joel.2.3",
+        "sourceLabel": "圣经研修本 29_约珥书【codex-v3】"
+      },
+      "id": "study-bible-joel-2-3-p006-n020",
+      "primaryAnchor": "Joel.2.3",
+      "searchText": "约珥书 2:3 研修本注释\n火烧灭……火焰烧尽，这符合《圣经》中有关上帝临到的其他描述（诗50:3.97:3：赛30:27.66:15），军队与毁灭之火相关（见1:19）。如伊甸园……荒凉的旷野，这\"大民\"（希伯来原文amrab，22：参《和》注）的破坏力如此之大，…\n火烧灭……火焰烧尽，这符合《圣经》中有关上帝临到的其他描述（诗50:3.97:3：赛30:27.66:15），军队与毁灭之火相关（见1:19）。如伊甸园……荒凉的旷野，这\"大民\"（希伯来原文amrab，22：参《和》注）的破坏力如此之大，只能用人类堕落对上帝起初的创造所造成的毁坏来比拟（创2:8，10，3:17-19，13:10）。2:4-5如马（参伯39:19-20：耶51:27），蝗虫在外形、行动和声音上都与军队类似，约珥用马和蝗虫这两个形象来形容极端强盛的民（希伯来原文'am'atsum：《和修》\"强大的军队\"；原文直译：大能的民）出现。\n2:3\n圣经研修本 29_约珥书【codex-v3】",
+      "source": "圣经研修本 29_约珥书【codex-v3】",
+      "summary": "火烧灭……火焰烧尽，这符合《圣经》中有关上帝临到的其他描述（诗50:3.97:3：赛30:27.66:15），军队与毁灭之火相关（见1:19）。如伊甸园……荒凉的旷野，这\"大民\"（希伯来原文amrab，22：参《和》注）的破坏力如此之大，…",
+      "title": "约珥书 2:3 研修本注释",
+      "type": "commentary",
+      "verses": [
+        "Joel.2.3"
+      ]
+    },
+    {
+      "body": "它们一来（《和修》\"在它们面前\"；原文直译：\"在他面前\"：与第3节\"它们前面\"和第6节的用词相同）。震 动……昏暗，只有在耶和华的日子，才会发生这样的\"天地震动\"。先知书多次用希伯来动词ra'ash（这里译作\"动\"，来表述与末日、重归混沌和上帝最后审有关的事情（赛13:13，24:18：耶4:23-24；摩8:8-9；鸿1:5：该2:6.21）。",
+      "debugMeta": {
+        "coverageRanges": [
+          {
+            "end": "Joel.2.10",
+            "start": "Joel.2.10"
+          }
+        ],
+        "page": 6,
+        "primaryAnchor": "Joel.2.10",
+        "sourceLabel": "圣经研修本 29_约珥书【codex-v3】"
+      },
+      "id": "study-bible-joel-2-10-p006-n035",
+      "primaryAnchor": "Joel.2.10",
+      "searchText": "约珥书 2:10 研修本注释：它们一来（《和修》\"在它们面前\"；原文直译\n它们一来（《和修》\"在它们面前\"；原文直译：\"在他面前\"：与第3节\"它们前面\"和第6节的用词相同）。震 动……昏暗，只有在耶和华的日子，才会发生这样的\"天地震动\"。先知书多次用希伯来动词ra'ash（这里译作\"动\"，来表述与末日、重归混沌…\n它们一来（《和修》\"在它们面前\"；原文直译：\"在他面前\"：与第3节\"它们前面\"和第6节的用词相同）。震 动……昏暗，只有在耶和华的日子，才会发生这样的\"天地震动\"。先知书多次用希伯来动词ra'ash（这里译作\"动\"，来表述与末日、重归混沌和上帝最后审有关的事情（赛13:13，24:18：耶4:23-24；摩8:8-9；鸿1:5：该2:6.21）。\n2:10\n圣经研修本 29_约珥书【codex-v3】",
+      "source": "圣经研修本 29_约珥书【codex-v3】",
+      "summary": "它们一来（《和修》\"在它们面前\"；原文直译：\"在他面前\"：与第3节\"它们前面\"和第6节的用词相同）。震 动……昏暗，只有在耶和华的日子，才会发生这样的\"天地震动\"。先知书多次用希伯来动词ra'ash（这里译作\"动\"，来表述与末日、重归混沌…",
+      "title": "约珥书 2:10 研修本注释：它们一来（《和修》\"在它们面前\"；原文直译",
+      "type": "commentary",
+      "verses": [
+        "Joel.2.10"
+      ]
+    },
+    {
+      "body": "他军旅，这支令人惊惧的军旅是由上帝指挥的。发声雷鸣声与第10节描述的天地变动有关（参伯37:4；诗18:13.77:17：耶10:13）。成就他命的是，由平行关系可知，执行上帝命令的\"强盛者\"是指这支军旅（参结9:1-11）",
+      "debugMeta": {
+        "coverageRanges": [
+          {
+            "end": "Joel.2.11",
+            "start": "Joel.2.11"
+          }
+        ],
+        "page": 6,
+        "primaryAnchor": "Joel.2.11",
+        "sourceLabel": "圣经研修本 29_约珥书【codex-v3】"
+      },
+      "id": "study-bible-joel-2-11-p006-n030",
+      "primaryAnchor": "Joel.2.11",
+      "searchText": "约珥书 2:11 研修本注释：他军旅，这支令人惊惧的军旅是由上帝指挥的\n他军旅，这支令人惊惧的军旅是由上帝指挥的。发声雷鸣声与第10节描述的天地变动有关（参伯37:4；诗18:13.77:17：耶10:13）。成就他命的是，由平行关系可知，执行上帝命令的\"强盛者\"是指这支军旅（参结9:1-11）\n他军旅，这支令人惊惧的军旅是由上帝指挥的。发声雷鸣声与第10节描述的天地变动有关（参伯37:4；诗18:13.77:17：耶10:13）。成就他命的是，由平行关系可知，执行上帝命令的\"强盛者\"是指这支军旅（参结9:1-11）\n2:11\n圣经研修本 29_约珥书【codex-v3】",
+      "source": "圣经研修本 29_约珥书【codex-v3】",
+      "summary": "他军旅，这支令人惊惧的军旅是由上帝指挥的。发声雷鸣声与第10节描述的天地变动有关（参伯37:4；诗18:13.77:17：耶10:13）。成就他命的是，由平行关系可知，执行上帝命令的\"强盛者\"是指这支军旅（参结9:1-11）",
+      "title": "约珥书 2:11 研修本注释：他军旅，这支令人惊惧的军旅是由上帝指挥的",
+      "type": "commentary",
+      "verses": [
+        "Joel.2.11"
+      ]
+    },
+    {
+      "body": "虽然如此，你们应当…归向，百姓仍可及时回转归向上帝，为他们冷淡对待上帝而悔改。一心，上帝所的是人全然的委身。",
+      "debugMeta": {
+        "coverageRanges": [
+          {
+            "end": "Joel.2.12",
+            "start": "Joel.2.12"
+          }
+        ],
+        "page": 6,
+        "primaryAnchor": "Joel.2.12",
+        "sourceLabel": "圣经研修本 29_约珥书【codex-v3】"
+      },
+      "id": "study-bible-joel-2-12-p006-n021",
+      "primaryAnchor": "Joel.2.12",
+      "searchText": "约珥书 2:12 研修本注释\n虽然如此，你们应当…归向，百姓仍可及时回转归向上帝，为他们冷淡对待上帝而悔改。一心，上帝所的是人全然的委身。\n虽然如此，你们应当…归向，百姓仍可及时回转归向上帝，为他们冷淡对待上帝而悔改。一心，上帝所的是人全然的委身。\n2:12\n圣经研修本 29_约珥书【codex-v3】",
+      "source": "圣经研修本 29_约珥书【codex-v3】",
+      "summary": "虽然如此，你们应当…归向，百姓仍可及时回转归向上帝，为他们冷淡对待上帝而悔改。一心，上帝所的是人全然的委身。",
+      "title": "约珥书 2:12 研修本注释",
+      "type": "commentary",
+      "verses": [
+        "Joel.2.12"
+      ]
+    },
+    {
+      "body": "撕裂心肠，形容内心极度痛苦。这个命令和12节要求的全然委身，与申30:6呼应，那里讲到受过割礼的心（《和修》）是全心全意爱上帝的。有恩典，有怜悯，整本《经》都在讲述上帝这一永不改变的属性，这属性是百姓悔改的基础（参出34:6-7）。",
+      "debugMeta": {
+        "coverageRanges": [
+          {
+            "end": "Joel.2.13",
+            "start": "Joel.2.13"
+          }
+        ],
+        "page": 6,
+        "primaryAnchor": "Joel.2.13",
+        "sourceLabel": "圣经研修本 29_约珥书【codex-v3】"
+      },
+      "id": "study-bible-joel-2-13-p006-n032",
+      "primaryAnchor": "Joel.2.13",
+      "searchText": "约珥书 2:13 研修本注释：撕裂心肠，形容内心极度痛苦\n撕裂心肠，形容内心极度痛苦。这个命令和12节要求的全然委身，与申30:6呼应，那里讲到受过割礼的心（《和修》）是全心全意爱上帝的。有恩典，有怜悯，整本《经》都在讲述上帝这一永不改变的属性，这属性是百姓悔改的基础（参出34:6-7）。\n撕裂心肠，形容内心极度痛苦。这个命令和12节要求的全然委身，与申30:6呼应，那里讲到受过割礼的心（《和修》）是全心全意爱上帝的。有恩典，有怜悯，整本《经》都在讲述上帝这一永不改变的属性，这属性是百姓悔改的基础（参出34:6-7）。\n2:13\n圣经研修本 29_约珥书【codex-v3】",
+      "source": "圣经研修本 29_约珥书【codex-v3】",
+      "summary": "撕裂心肠，形容内心极度痛苦。这个命令和12节要求的全然委身，与申30:6呼应，那里讲到受过割礼的心（《和修》）是全心全意爱上帝的。有恩典，有怜悯，整本《经》都在讲述上帝这一永不改变的属性，这属性是百姓悔改的基础（参出34:6-7）。",
+      "title": "约珥书 2:13 研修本注释：撕裂心肠，形容内心极度痛苦",
+      "type": "commentary",
+      "verses": [
+        "Joel.2.13"
+      ]
+    },
+    {
+      "body": "或者他…也未可知（《和修》\"谁知道他也许会…），至高的上帝照他自己的意旨行事。转意后悔（《和修》\"回心转意），这个说法表明上帝可能会在不违反他人类启示的属性下，转而赐福，不再降灾（参拿3:9,4:2）亚10:7d诗100:1，2：哈3:18：亚10:7e申11:14：耶5:24「申11:14：耶5:249何6:32:252:26m利25:19",
+      "debugMeta": {
+        "coverageRanges": [
+          {
+            "end": "Joel.2.14",
+            "start": "Joel.2.14"
+          }
+        ],
+        "page": 6,
+        "primaryAnchor": "Joel.2.14",
+        "sourceLabel": "圣经研修本 29_约珥书【codex-v3】"
+      },
+      "id": "study-bible-joel-2-14-p006-n034",
+      "primaryAnchor": "Joel.2.14",
+      "searchText": "约珥书 2:14 研修本注释\n或者他…也未可知（《和修》\"谁知道他也许会…），至高的上帝照他自己的意旨行事。转意后悔（《和修》\"回心转意），这个说法表明上帝可能会在不违反他人类启示的属性下，转而赐福，不再降灾（参拿3:9,4:2）亚10:7d诗100:1，2：哈3:1…\n或者他…也未可知（《和修》\"谁知道他也许会…），至高的上帝照他自己的意旨行事。转意后悔（《和修》\"回心转意），这个说法表明上帝可能会在不违反他人类启示的属性下，转而赐福，不再降灾（参拿3:9,4:2）亚10:7d诗100:1，2：哈3:18：亚10:7e申11:14：耶5:24「申11:14：耶5:249何6:32:252:26m利25:19\n2:14\n圣经研修本 29_约珥书【codex-v3】",
+      "source": "圣经研修本 29_约珥书【codex-v3】",
+      "summary": "或者他…也未可知（《和修》\"谁知道他也许会…），至高的上帝照他自己的意旨行事。转意后悔（《和修》\"回心转意），这个说法表明上帝可能会在不违反他人类启示的属性下，转而赐福，不再降灾（参拿3:9,4:2）亚10:7d诗100:1，2：哈3:1…",
+      "title": "约珥书 2:14 研修本注释",
+      "type": "commentary",
+      "verses": [
+        "Joel.2.14"
+      ]
+    },
+    {
+      "body": "使会众自洁，和1:14一样，全体百姓聚集敬拜上帝，他们预备自己，禁食（2:15）呼求上帝。甚至连吃奶的婴孩.即襁褓中的孩子，以及新婚夫妇也不例外。",
+      "debugMeta": {
+        "coverageRanges": [
+          {
+            "end": "Joel.2.16",
+            "start": "Joel.2.16"
+          }
+        ],
+        "page": 7,
+        "primaryAnchor": "Joel.2.16",
+        "sourceLabel": "圣经研修本 29_约珥书【codex-v3】"
+      },
+      "id": "study-bible-joel-2-16-p007-n037",
+      "primaryAnchor": "Joel.2.16",
+      "searchText": "约珥书 2:16 研修本注释\n使会众自洁，和1:14一样，全体百姓聚集敬拜上帝，他们预备自己，禁食（2:15）呼求上帝。甚至连吃奶的婴孩.即襁褓中的孩子，以及新婚夫妇也不例外。\n使会众自洁，和1:14一样，全体百姓聚集敬拜上帝，他们预备自己，禁食（2:15）呼求上帝。甚至连吃奶的婴孩.即襁褓中的孩子，以及新婚夫妇也不例外。\n2:16\n圣经研修本 29_约珥书【codex-v3】",
+      "source": "圣经研修本 29_约珥书【codex-v3】",
+      "summary": "使会众自洁，和1:14一样，全体百姓聚集敬拜上帝，他们预备自己，禁食（2:15）呼求上帝。甚至连吃奶的婴孩.即襁褓中的孩子，以及新婚夫妇也不例外。",
+      "title": "约珥书 2:16 研修本注释",
+      "type": "commentary",
+      "verses": [
+        "Joel.2.16"
+      ]
+    },
+    {
+      "body": "祷告的地方是在圣殿的门厅（廊子或柱廊）和祭坛之间。你的百姓，作者呼求上帝看顾他的圣约子民。管辖他们，因为外邦人快要入侵；另一种译法是\"成为笑柄\"（《和修》），这是一句谚语或俗语，常用来挖苦人。他们的上帝在哪里呢？这是一个语带讽刺的问题，出自那些质疑上帝会否保护他百姓之人的口（诗79:10，115:2）。",
+      "debugMeta": {
+        "coverageRanges": [
+          {
+            "end": "Joel.2.17",
+            "start": "Joel.2.17"
+          }
+        ],
+        "page": 7,
+        "primaryAnchor": "Joel.2.17",
+        "sourceLabel": "圣经研修本 29_约珥书【codex-v3】"
+      },
+      "id": "study-bible-joel-2-17-p007-n024",
+      "primaryAnchor": "Joel.2.17",
+      "searchText": "约珥书 2:17 研修本注释\n祷告的地方是在圣殿的门厅（廊子或柱廊）和祭坛之间。你的百姓，作者呼求上帝看顾他的圣约子民。管辖他们，因为外邦人快要入侵；另一种译法是\"成为笑柄\"（《和修》），这是一句谚语或俗语，常用来挖苦人。他们的上帝在哪里呢？这是一个语带讽刺的问题，出…\n祷告的地方是在圣殿的门厅（廊子或柱廊）和祭坛之间。你的百姓，作者呼求上帝看顾他的圣约子民。管辖他们，因为外邦人快要入侵；另一种译法是\"成为笑柄\"（《和修》），这是一句谚语或俗语，常用来挖苦人。他们的上帝在哪里呢？这是一个语带讽刺的问题，出自那些质疑上帝会否保护他百姓之人的口（诗79:10，115:2）。\n2:17\n圣经研修本 29_约珥书【codex-v3】",
+      "source": "圣经研修本 29_约珥书【codex-v3】",
+      "summary": "祷告的地方是在圣殿的门厅（廊子或柱廊）和祭坛之间。你的百姓，作者呼求上帝看顾他的圣约子民。管辖他们，因为外邦人快要入侵；另一种译法是\"成为笑柄\"（《和修》），这是一句谚语或俗语，常用来挖苦人。他们的上帝在哪里呢？这是一个语带讽刺的问题，出…",
+      "title": "约珥书 2:17 研修本注释",
+      "type": "commentary",
+      "verses": [
+        "Joel.2.17"
+      ]
+    },
+    {
+      "body": "热心（或译：嫉妒），在这里指一种很深的情感，促使上帝介人，为自己荣耀的缘故拯救他的百姓（结39:25：亚1:14,8:2）。",
+      "debugMeta": {
+        "coverageRanges": [
+          {
+            "end": "Joel.2.18",
+            "start": "Joel.2.18"
+          }
+        ],
+        "page": 7,
+        "primaryAnchor": "Joel.2.18",
+        "sourceLabel": "圣经研修本 29_约珥书【codex-v3】"
+      },
+      "id": "study-bible-joel-2-18-p007-n044",
+      "primaryAnchor": "Joel.2.18",
+      "searchText": "约珥书 2:18 研修本注释：热心（或译\n热心（或译：嫉妒），在这里指一种很深的情感，促使上帝介人，为自己荣耀的缘故拯救他的百姓（结39:25：亚1:14,8:2）。\n热心（或译：嫉妒），在这里指一种很深的情感，促使上帝介人，为自己荣耀的缘故拯救他的百姓（结39:25：亚1:14,8:2）。\n2:18\n圣经研修本 29_约珥书【codex-v3】",
+      "source": "圣经研修本 29_约珥书【codex-v3】",
+      "summary": "热心（或译：嫉妒），在这里指一种很深的情感，促使上帝介人，为自己荣耀的缘故拯救他的百姓（结39:25：亚1:14,8:2）。",
+      "title": "约珥书 2:18 研修本注释：热心（或译",
+      "type": "commentary",
+      "verses": [
+        "Joel.2.18"
+      ]
+    },
+    {
+      "body": "应允，上帝垂听他百姓的祷告。l节i本书1:4本书1:4K本书1:4/本书1",
+      "debugMeta": {
+        "coverageRanges": [
+          {
+            "end": "Joel.2.19",
+            "start": "Joel.2.19"
+          }
+        ],
+        "page": 7,
+        "primaryAnchor": "Joel.2.19",
+        "sourceLabel": "圣经研修本 29_约珥书【codex-v3】"
+      },
+      "id": "study-bible-joel-2-19-p007-n047",
+      "primaryAnchor": "Joel.2.19",
+      "searchText": "约珥书 2:19 研修本注释：应允，上帝垂听他百姓的祷告\n应允，上帝垂听他百姓的祷告。l节i本书1:4本书1:4K本书1:4/本书1\n应允，上帝垂听他百姓的祷告。l节i本书1:4本书1:4K本书1:4/本书1\n2:19\n圣经研修本 29_约珥书【codex-v3】",
+      "source": "圣经研修本 29_约珥书【codex-v3】",
+      "summary": "应允，上帝垂听他百姓的祷告。l节i本书1:4本书1:4K本书1:4/本书1",
+      "title": "约珥书 2:19 研修本注释：应允，上帝垂听他百姓的祷告",
+      "type": "commentary",
+      "verses": [
+        "Joel.2.19"
+      ]
+    },
+    {
+      "body": "北方来的军队，可指蝗虫、一支侵略的军队，或在世界末日时以色列的敌人。主张第三种理解的论据如下：（1）如果这里\"北方来的军队\"指蝗虫的话会有些奇怪，因为蝗虫一般从南方或东方飞来；（2）耶利米和以西结都曾描述一支大军从北方来（见耶1:14-15,4:6.6:1.22-23；结23:24,26:7,38:6,15,39:2）：……后队（原文直译：他的脸……他的末端），表明那是一次彻底的全歼。东海……西海，指死海和地中海。",
+      "debugMeta": {
+        "coverageRanges": [
+          {
+            "end": "Joel.2.20",
+            "start": "Joel.2.20"
+          }
+        ],
+        "page": 7,
+        "primaryAnchor": "Joel.2.20",
+        "sourceLabel": "圣经研修本 29_约珥书【codex-v3】"
+      },
+      "id": "study-bible-joel-2-20-p007-n036",
+      "primaryAnchor": "Joel.2.20",
+      "searchText": "约珥书 2:20 研修本注释\n北方来的军队，可指蝗虫、一支侵略的军队，或在世界末日时以色列的敌人。主张第三种理解的论据如下：（1）如果这里\"北方来的军队\"指蝗虫的话会有些奇怪，因为蝗虫一般从南方或东方飞来；（2）耶利米和以西结都曾描述一支大军从北方来（见耶1:14-1…\n北方来的军队，可指蝗虫、一支侵略的军队，或在世界末日时以色列的敌人。主张第三种理解的论据如下：（1）如果这里\"北方来的军队\"指蝗虫的话会有些奇怪，因为蝗虫一般从南方或东方飞来；（2）耶利米和以西结都曾描述一支大军从北方来（见耶1:14-15,4:6.6:1.22-23；结23:24,26:7,38:6,15,39:2）：……后队（原文直译：他的脸……他的末端），表明那是一次彻底的全歼。东海……西海，指死海和地中海。\n2:20\n圣经研修本 29_约珥书【codex-v3】",
+      "source": "圣经研修本 29_约珥书【codex-v3】",
+      "summary": "北方来的军队，可指蝗虫、一支侵略的军队，或在世界末日时以色列的敌人。主张第三种理解的论据如下：（1）如果这里\"北方来的军队\"指蝗虫的话会有些奇怪，因为蝗虫一般从南方或东方飞来；（2）耶利米和以西结都曾描述一支大军从北方来（见耶1:14-1…",
+      "title": "约珥书 2:20 研修本注释",
+      "type": "commentary",
+      "verses": [
+        "Joel.2.20"
+      ]
+    },
+    {
+      "body": "讽刺的是，尸首的\"腥味\"是这支军队所行大事（见《和》注，20节）的唯一遗迹（赛34:3）。这与上帝所行的大事形成鲜明对比，上帝施行拯救，所以他盼咐地士不要惧怕。",
+      "debugMeta": {
+        "coverageRanges": [
+          {
+            "end": "Joel.2.21",
+            "start": "Joel.2.21"
+          }
+        ],
+        "page": 7,
+        "primaryAnchor": "Joel.2.21",
+        "sourceLabel": "圣经研修本 29_约珥书【codex-v3】"
+      },
+      "id": "study-bible-joel-2-21-p007-n039",
+      "primaryAnchor": "Joel.2.21",
+      "searchText": "约珥书 2:21 研修本注释\n讽刺的是，尸首的\"腥味\"是这支军队所行大事（见《和》注，20节）的唯一遗迹（赛34:3）。这与上帝所行的大事形成鲜明对比，上帝施行拯救，所以他盼咐地士不要惧怕。\n讽刺的是，尸首的\"腥味\"是这支军队所行大事（见《和》注，20节）的唯一遗迹（赛34:3）。这与上帝所行的大事形成鲜明对比，上帝施行拯救，所以他盼咐地士不要惧怕。\n2:21\n圣经研修本 29_约珥书【codex-v3】",
+      "source": "圣经研修本 29_约珥书【codex-v3】",
+      "summary": "讽刺的是，尸首的\"腥味\"是这支军队所行大事（见《和》注，20节）的唯一遗迹（赛34:3）。这与上帝所行的大事形成鲜明对比，上帝施行拯救，所以他盼咐地士不要惧怕。",
+      "title": "约珥书 2:21 研修本注释",
+      "type": "commentary",
+      "verses": [
+        "Joel.2.21"
+      ]
+    },
+    {
+      "body": "发生（《和修》\"生长》这个希伯来动词（dasha\"）除了这里，只在创1:11出现过。约珥可能要读者设想，将来土地复原的样子就像伊甸园一样（见2:3）。",
+      "debugMeta": {
+        "coverageRanges": [
+          {
+            "end": "Joel.2.22",
+            "start": "Joel.2.22"
+          }
+        ],
+        "page": 7,
+        "primaryAnchor": "Joel.2.22",
+        "sourceLabel": "圣经研修本 29_约珥书【codex-v3】"
+      },
+      "id": "study-bible-joel-2-22-p007-n041",
+      "primaryAnchor": "Joel.2.22",
+      "searchText": "约珥书 2:22 研修本注释\n发生（《和修》\"生长》这个希伯来动词（dasha\"）除了这里，只在创1:11出现过。约珥可能要读者设想，将来土地复原的样子就像伊甸园一样（见2:3）。\n发生（《和修》\"生长》这个希伯来动词（dasha\"）除了这里，只在创1:11出现过。约珥可能要读者设想，将来土地复原的样子就像伊甸园一样（见2:3）。\n2:22\n圣经研修本 29_约珥书【codex-v3】",
+      "source": "圣经研修本 29_约珥书【codex-v3】",
+      "summary": "发生（《和修》\"生长》这个希伯来动词（dasha\"）除了这里，只在创1:11出现过。约珥可能要读者设想，将来土地复原的样子就像伊甸园一样（见2:3）。",
+      "title": "约珥书 2:22 研修本注释",
+      "type": "commentary",
+      "verses": [
+        "Joel.2.22"
+      ]
+    },
+    {
+      "body": "合宜的秋雨（希伯来原文litsdagahhammoreh），也可译作\"公义的教师\"（见《和修》注：\"教师\"希伯来原文hammoreh），死海古卷曾提到这样一个人物。然而，本节最后一行出现的moreh一词，清楚表明这里指\"秋雨，因此《和》的译法是恰当的。",
+      "debugMeta": {
+        "coverageRanges": [
+          {
+            "end": "Joel.2.23",
+            "start": "Joel.2.23"
+          }
+        ],
+        "page": 7,
+        "primaryAnchor": "Joel.2.23",
+        "sourceLabel": "圣经研修本 29_约珥书【codex-v3】"
+      },
+      "id": "study-bible-joel-2-23-p007-n043",
+      "primaryAnchor": "Joel.2.23",
+      "searchText": "约珥书 2:23 研修本注释\n合宜的秋雨（希伯来原文litsdagahhammoreh），也可译作\"公义的教师\"（见《和修》注：\"教师\"希伯来原文hammoreh），死海古卷曾提到这样一个人物。然而，本节最后一行出现的moreh一词，清楚表明这里指\"秋雨，因此《和》的…\n合宜的秋雨（希伯来原文litsdagahhammoreh），也可译作\"公义的教师\"（见《和修》注：\"教师\"希伯来原文hammoreh），死海古卷曾提到这样一个人物。然而，本节最后一行出现的moreh一词，清楚表明这里指\"秋雨，因此《和》的译法是恰当的。\n2:23\n圣经研修本 29_约珥书【codex-v3】",
+      "source": "圣经研修本 29_约珥书【codex-v3】",
+      "summary": "合宜的秋雨（希伯来原文litsdagahhammoreh），也可译作\"公义的教师\"（见《和修》注：\"教师\"希伯来原文hammoreh），死海古卷曾提到这样一个人物。然而，本节最后一行出现的moreh一词，清楚表明这里指\"秋雨，因此《和》的…",
+      "title": "约珥书 2:23 研修本注释",
+      "type": "commentary",
+      "verses": [
+        "Joel.2.23"
+      ]
+    },
+    {
+      "body": "我打发……大军队，正如211和其他经文（如摩4:6-13）所表明的那样，上帝用来刑罚他百姓的人都在他的权下。很多时候，人永远无法得回已经失去的东西（蝗虫… 那些年所吃的），但是上帝既降灾祸（诗也满有怜悯，他有丰盛的恩典，能够完全补偿人的损失：我要补还你们。关于\"蝗虫*，见1:4。",
+      "debugMeta": {
+        "coverageRanges": [
+          {
+            "end": "Joel.2.25",
+            "start": "Joel.2.25"
+          }
+        ],
+        "page": 7,
+        "primaryAnchor": "Joel.2.25",
+        "sourceLabel": "圣经研修本 29_约珥书【codex-v3】"
+      },
+      "id": "study-bible-joel-2-25-p007-n027",
+      "primaryAnchor": "Joel.2.25",
+      "searchText": "约珥书 2:25 研修本注释\n我打发……大军队，正如211和其他经文（如摩4:6-13）所表明的那样，上帝用来刑罚他百姓的人都在他的权下。很多时候，人永远无法得回已经失去的东西（蝗虫… 那些年所吃的），但是上帝既降灾祸（诗也满有怜悯，他有丰盛的恩典，能够完全补偿人的损…\n我打发……大军队，正如211和其他经文（如摩4:6-13）所表明的那样，上帝用来刑罚他百姓的人都在他的权下。很多时候，人永远无法得回已经失去的东西（蝗虫… 那些年所吃的），但是上帝既降灾祸（诗也满有怜悯，他有丰盛的恩典，能够完全补偿人的损失：我要补还你们。关于\"蝗虫*，见1:4。\n2:25\n圣经研修本 29_约珥书【codex-v3】",
+      "source": "圣经研修本 29_约珥书【codex-v3】",
+      "summary": "我打发……大军队，正如211和其他经文（如摩4:6-13）所表明的那样，上帝用来刑罚他百姓的人都在他的权下。很多时候，人永远无法得回已经失去的东西（蝗虫… 那些年所吃的），但是上帝既降灾祸（诗也满有怜悯，他有丰盛的恩典，能够完全补偿人的损…",
+      "title": "约珥书 2:25 研修本注释",
+      "type": "commentary",
+      "verses": [
+        "Joel.2.25"
+      ]
+    },
+    {
+      "body": "你们必知道，以色列民族遭难的重要意义是，让他们知道上帝的同在，知道上帝是守约的，他将除去他们的羞耻。我是耶和华你们的上帝，让百姓认识上帝和以色列的圣约关系（出6:7；申5:6；赛43:3；结20:5）。羞愧被永久除掉，这使上帝的供应（2:26）与他的临在和他无可比拟的属性（27节）紧密相连。",
+      "debugMeta": {
+        "coverageRanges": [
+          {
+            "end": "Joel.2.27",
+            "start": "Joel.2.27"
+          }
+        ],
+        "page": 8,
+        "primaryAnchor": "Joel.2.27",
+        "sourceLabel": "圣经研修本 29_约珥书【codex-v3】"
+      },
+      "id": "study-bible-joel-2-27-p008-n029",
+      "primaryAnchor": "Joel.2.27",
+      "searchText": "约珥书 2:27 研修本注释\n你们必知道，以色列民族遭难的重要意义是，让他们知道上帝的同在，知道上帝是守约的，他将除去他们的羞耻。我是耶和华你们的上帝，让百姓认识上帝和以色列的圣约关系（出6:7；申5:6；赛43:3；结20:5）。羞愧被永久除掉，这使上帝的供应（2:…\n你们必知道，以色列民族遭难的重要意义是，让他们知道上帝的同在，知道上帝是守约的，他将除去他们的羞耻。我是耶和华你们的上帝，让百姓认识上帝和以色列的圣约关系（出6:7；申5:6；赛43:3；结20:5）。羞愧被永久除掉，这使上帝的供应（2:26）与他的临在和他无可比拟的属性（27节）紧密相连。\n2:27\n圣经研修本 29_约珥书【codex-v3】",
+      "source": "圣经研修本 29_约珥书【codex-v3】",
+      "summary": "你们必知道，以色列民族遭难的重要意义是，让他们知道上帝的同在，知道上帝是守约的，他将除去他们的羞耻。我是耶和华你们的上帝，让百姓认识上帝和以色列的圣约关系（出6:7；申5:6；赛43:3；结20:5）。羞愧被永久除掉，这使上帝的供应（2:…",
+      "title": "约珥书 2:27 研修本注释",
+      "type": "commentary",
+      "verses": [
+        "Joel.2.27"
+      ]
+    },
+    {
+      "body": "凡（原文直译：每一个），上帝不是单单拯救他的百姓脱离蝗虫带来的毁灭，他的救恩不止于此。求告耶和华名，意味着按照圣约、单单敬拜那位施行拯救的独一真神（诗116:4；箴18:10：赛44:5-8）。保罗在罗10:13引用这句话，因为他和其他基督徒都认为，这些经文描述的90:15）.在弥赛亚时代发生的事，那时犹太人和外邦人都要得救。照耶和华所说的话，可能指赛4:3-4、珥2:27或俄17节。逃脱的人就是耶和华所召的那些剩下的人（《和修》\"余民\"。上帝所召的人，就是回应他、求告他名的人（创12:8.13:4；赛51:2）。",
+      "debugMeta": {
+        "coverageRanges": [
+          {
+            "end": "Joel.2.32",
+            "start": "Joel.2.32"
+          }
+        ],
+        "page": 8,
+        "primaryAnchor": "Joel.2.32",
+        "sourceLabel": "圣经研修本 29_约珥书【codex-v3】"
+      },
+      "id": "study-bible-joel-2-32-p008-n059",
+      "primaryAnchor": "Joel.2.32",
+      "searchText": "约珥书 2:32 研修本注释：凡（原文直译\n凡（原文直译：每一个），上帝不是单单拯救他的百姓脱离蝗虫带来的毁灭，他的救恩不止于此。求告耶和华名，意味着按照圣约、单单敬拜那位施行拯救的独一真神（诗116:4；箴18:10：赛44:5-8）。保罗在罗10:13引用这句话，因为他和其他基…\n凡（原文直译：每一个），上帝不是单单拯救他的百姓脱离蝗虫带来的毁灭，他的救恩不止于此。求告耶和华名，意味着按照圣约、单单敬拜那位施行拯救的独一真神（诗116:4；箴18:10：赛44:5-8）。保罗在罗10:13引用这句话，因为他和其他基督徒都认为，这些经文描述的90:15）.在弥赛亚时代发生的事，那时犹太人和外邦人都要得救。照耶和华所说的话，可能指赛4:3-4、珥2:27或俄17节。逃脱的人就是耶和华所召的那些剩下的人（《和修》\"余民\"。上帝所召的人，就是回应他、求告他名的人（创12:8.13:4；赛51:2）。\n2:32\n圣经研修本 29_约珥书【codex-v3】",
+      "source": "圣经研修本 29_约珥书【codex-v3】",
+      "summary": "凡（原文直译：每一个），上帝不是单单拯救他的百姓脱离蝗虫带来的毁灭，他的救恩不止于此。求告耶和华名，意味着按照圣约、单单敬拜那位施行拯救的独一真神（诗116:4；箴18:10：赛44:5-8）。保罗在罗10:13引用这句话，因为他和其他基…",
+      "title": "约珥书 2:32 研修本注释：凡（原文直译",
+      "type": "commentary",
+      "verses": [
+        "Joel.2.32"
+      ]
+    },
+    {
+      "body": "到那日，这个说法让人想起2:28-32所描述的事件，特别是主的日子（耶33:15,50:4,20）。",
+      "debugMeta": {
+        "coverageRanges": [
+          {
+            "end": "Joel.3.1",
+            "start": "Joel.3.1"
+          }
+        ],
+        "page": 8,
+        "primaryAnchor": "Joel.3.1",
+        "sourceLabel": "圣经研修本 29_约珥书【codex-v3】"
+      },
+      "id": "study-bible-joel-3-1-p008-n049",
+      "primaryAnchor": "Joel.3.1",
+      "searchText": "约珥书 3:1 研修本注释\n到那日，这个说法让人想起2:28-32所描述的事件，特别是主的日子（耶33:15,50:4,20）。\n到那日，这个说法让人想起2:28-32所描述的事件，特别是主的日子（耶33:15,50:4,20）。\n3:1\n圣经研修本 29_约珥书【codex-v3】",
+      "source": "圣经研修本 29_约珥书【codex-v3】",
+      "summary": "到那日，这个说法让人想起2:28-32所描述的事件，特别是主的日子（耶33:15,50:4,20）。",
+      "title": "约珥书 3:1 研修本注释",
+      "type": "commentary",
+      "verses": [
+        "Joel.3.1"
+      ]
+    },
+    {
+      "body": "万民，即所有欺压上帝百姓的人（参诗110:6；赛66:18：耶25:31：结39:21：弥4:11-12；番3:8）。约沙法谷（\"约沙法\"意为\"耶和华审判\"，指执行最后审判的地方，而不是某个已知的地理位置。分散，指被掳流亡。",
+      "debugMeta": {
+        "coverageRanges": [
+          {
+            "end": "Joel.3.2",
+            "start": "Joel.3.2"
+          }
+        ],
+        "page": 8,
+        "primaryAnchor": "Joel.3.2",
+        "sourceLabel": "圣经研修本 29_约珥书【codex-v3】"
+      },
+      "id": "study-bible-joel-3-2-p008-n051",
+      "primaryAnchor": "Joel.3.2",
+      "searchText": "约珥书 3:2 研修本注释\n万民，即所有欺压上帝百姓的人（参诗110:6；赛66:18：耶25:31：结39:21：弥4:11-12；番3:8）。约沙法谷（\"约沙法\"意为\"耶和华审判\"，指执行最后审判的地方，而不是某个已知的地理位置。分散，指被掳流亡。\n万民，即所有欺压上帝百姓的人（参诗110:6；赛66:18：耶25:31：结39:21：弥4:11-12；番3:8）。约沙法谷（\"约沙法\"意为\"耶和华审判\"，指执行最后审判的地方，而不是某个已知的地理位置。分散，指被掳流亡。\n3:2\n圣经研修本 29_约珥书【codex-v3】",
+      "source": "圣经研修本 29_约珥书【codex-v3】",
+      "summary": "万民，即所有欺压上帝百姓的人（参诗110:6；赛66:18：耶25:31：结39:21：弥4:11-12；番3:8）。约沙法谷（\"约沙法\"意为\"耶和华审判\"，指执行最后审判的地方，而不是某个已知的地理位置。分散，指被掳流亡。",
+      "title": "约珥书 3:2 研修本注释",
+      "type": "commentary",
+      "verses": [
+        "Joel.3.2"
+      ]
+    },
+    {
+      "body": "为我的百姓拈阉，为要把他们带走作奴隶，见俄11节",
+      "debugMeta": {
+        "coverageRanges": [
+          {
+            "end": "Joel.3.3",
+            "start": "Joel.3.3"
+          }
+        ],
+        "page": 8,
+        "primaryAnchor": "Joel.3.3",
+        "sourceLabel": "圣经研修本 29_约珥书【codex-v3】"
+      },
+      "id": "study-bible-joel-3-3-p008-n052",
+      "primaryAnchor": "Joel.3.3",
+      "searchText": "约珥书 3:3 研修本注释\n为我的百姓拈阉，为要把他们带走作奴隶，见俄11节\n为我的百姓拈阉，为要把他们带走作奴隶，见俄11节\n3:3\n圣经研修本 29_约珥书【codex-v3】",
+      "source": "圣经研修本 29_约珥书【codex-v3】",
+      "summary": "为我的百姓拈阉，为要把他们带走作奴隶，见俄11节",
+      "title": "约珥书 3:3 研修本注释",
+      "type": "commentary",
+      "verses": [
+        "Joel.3.3"
+      ]
+    },
+    {
+      "body": "推罗和西顿是地中海沿岸的腓尼基城邑。以色列和腓尼基的关系有时很好（参王上5:1），但有时腓尼基给以色列带来不良的影响（王上16:31）。另一方面，非利士是以色列的宿敌（耶47:4）。我必使报应……归到，上帝的結期品：酵省上導茶花的部：黄",
+      "debugMeta": {
+        "coverageRanges": [
+          {
+            "end": "Joel.3.4",
+            "start": "Joel.3.4"
+          }
+        ],
+        "page": 8,
+        "primaryAnchor": "Joel.3.4",
+        "sourceLabel": "圣经研修本 29_约珥书【codex-v3】"
+      },
+      "id": "study-bible-joel-3-4-p008-n031",
+      "primaryAnchor": "Joel.3.4",
+      "searchText": "约珥书 3:4 研修本注释：推罗和西顿是地中海沿岸的腓尼基城邑\n推罗和西顿是地中海沿岸的腓尼基城邑。以色列和腓尼基的关系有时很好（参王上5:1），但有时腓尼基给以色列带来不良的影响（王上16:31）。另一方面，非利士是以色列的宿敌（耶47:4）。我必使报应……归到，上帝的結期品：酵省上導茶花的部：黄\n推罗和西顿是地中海沿岸的腓尼基城邑。以色列和腓尼基的关系有时很好（参王上5:1），但有时腓尼基给以色列带来不良的影响（王上16:31）。另一方面，非利士是以色列的宿敌（耶47:4）。我必使报应……归到，上帝的結期品：酵省上導茶花的部：黄\n3:4\n圣经研修本 29_约珥书【codex-v3】",
+      "source": "圣经研修本 29_约珥书【codex-v3】",
+      "summary": "推罗和西顿是地中海沿岸的腓尼基城邑。以色列和腓尼基的关系有时很好（参王上5:1），但有时腓尼基给以色列带来不良的影响（王上16:31）。另一方面，非利士是以色列的宿敌（耶47:4）。我必使报应……归到，上帝的結期品：酵省上導茶花的部：黄",
+      "title": "约珥书 3:4 研修本注释：推罗和西顿是地中海沿岸的腓尼基城邑",
+      "type": "commentary",
+      "verses": [
+        "Joel.3.4"
+      ]
+    },
+    {
+      "body": "卖给希腊人，\"希腊人\"希伯来原文是hayyewanim（\"完人*，见《和》注：见创10:2；代上1:7；赛66:19），指住在爱琴海两岸说希腊话的人。非利士人和腓尼基人都被控告把奴隶卖给以东人（摩1:6-9）。结27:13提到推罗和雅完之间的奴隶贸易。",
+      "debugMeta": {
+        "coverageRanges": [
+          {
+            "end": "Joel.3.6",
+            "start": "Joel.3.6"
+          }
+        ],
+        "page": 8,
+        "primaryAnchor": "Joel.3.6",
+        "sourceLabel": "圣经研修本 29_约珥书【codex-v3】"
+      },
+      "id": "study-bible-joel-3-6-p008-n032",
+      "primaryAnchor": "Joel.3.6",
+      "searchText": "约珥书 3:6 研修本注释\n卖给希腊人，\"希腊人\"希伯来原文是hayyewanim（\"完人*，见《和》注：见创10:2；代上1:7；赛66:19），指住在爱琴海两岸说希腊话的人。非利士人和腓尼基人都被控告把奴隶卖给以东人（摩1:6-9）。结27:13提到推罗和雅完之…\n卖给希腊人，\"希腊人\"希伯来原文是hayyewanim（\"完人*，见《和》注：见创10:2；代上1:7；赛66:19），指住在爱琴海两岸说希腊话的人。非利士人和腓尼基人都被控告把奴隶卖给以东人（摩1:6-9）。结27:13提到推罗和雅完之间的奴隶贸易。\n3:6\n圣经研修本 29_约珥书【codex-v3】",
+      "source": "圣经研修本 29_约珥书【codex-v3】",
+      "summary": "卖给希腊人，\"希腊人\"希伯来原文是hayyewanim（\"完人*，见《和》注：见创10:2；代上1:7；赛66:19），指住在爱琴海两岸说希腊话的人。非利士人和腓尼基人都被控告把奴隶卖给以东人（摩1:6-9）。结27:13提到推罗和雅完之…",
+      "title": "约珥书 3:6 研修本注释",
+      "type": "commentary",
+      "verses": [
+        "Joel.3.6"
+      ]
+    },
+    {
+      "body": "要将犁头打成刀剑，与赛2:4和弥4:3恰好相反，他们竭尽一切兵力，甚至把农具打成兵器。软弱的，表示急需大量士兵，甚至连不适合打仗的人也被征召入伍。",
+      "debugMeta": {
+        "coverageRanges": [
+          {
+            "end": "Joel.3.10",
+            "start": "Joel.3.10"
+          }
+        ],
+        "page": 9,
+        "primaryAnchor": "Joel.3.10",
+        "sourceLabel": "圣经研修本 29_约珥书【codex-v3】"
+      },
+      "id": "study-bible-joel-3-10-p009-n062",
+      "primaryAnchor": "Joel.3.10",
+      "searchText": "约珥书 3:10 研修本注释\n要将犁头打成刀剑，与赛2:4和弥4:3恰好相反，他们竭尽一切兵力，甚至把农具打成兵器。软弱的，表示急需大量士兵，甚至连不适合打仗的人也被征召入伍。\n要将犁头打成刀剑，与赛2:4和弥4:3恰好相反，他们竭尽一切兵力，甚至把农具打成兵器。软弱的，表示急需大量士兵，甚至连不适合打仗的人也被征召入伍。\n3:10\n圣经研修本 29_约珥书【codex-v3】",
+      "source": "圣经研修本 29_约珥书【codex-v3】",
+      "summary": "要将犁头打成刀剑，与赛2:4和弥4:3恰好相反，他们竭尽一切兵力，甚至把农具打成兵器。软弱的，表示急需大量士兵，甚至连不适合打仗的人也被征召入伍。",
+      "title": "约珥书 3:10 研修本注释",
+      "type": "commentary",
+      "verses": [
+        "Joel.3.10"
+      ]
+    },
+    {
+      "body": "坐在那里，审判…，清楚说明地点（约沙法谷）与上帝的作为（审判）之间的联系。第9节的讽刺意味很明显，因为并没有战争，只有上帝向四围的列国（11节）宣告判决。",
+      "debugMeta": {
+        "coverageRanges": [
+          {
+            "end": "Joel.3.12",
+            "start": "Joel.3.12"
+          }
+        ],
+        "page": 9,
+        "primaryAnchor": "Joel.3.12",
+        "sourceLabel": "圣经研修本 29_约珥书【codex-v3】"
+      },
+      "id": "study-bible-joel-3-12-p009-n034",
+      "primaryAnchor": "Joel.3.12",
+      "searchText": "约珥书 3:12 研修本注释\n坐在那里，审判…，清楚说明地点（约沙法谷）与上帝的作为（审判）之间的联系。第9节的讽刺意味很明显，因为并没有战争，只有上帝向四围的列国（11节）宣告判决。\n坐在那里，审判…，清楚说明地点（约沙法谷）与上帝的作为（审判）之间的联系。第9节的讽刺意味很明显，因为并没有战争，只有上帝向四围的列国（11节）宣告判决。\n3:12\n圣经研修本 29_约珥书【codex-v3】",
+      "source": "圣经研修本 29_约珥书【codex-v3】",
+      "summary": "坐在那里，审判…，清楚说明地点（约沙法谷）与上帝的作为（审判）之间的联系。第9节的讽刺意味很明显，因为并没有战争，只有上帝向四围的列国（11节）宣告判决。",
+      "title": "约珥书 3:12 研修本注释",
+      "type": "commentary",
+      "verses": [
+        "Joel.3.12"
+      ]
+    },
+    {
+      "body": "过去曾因蝗灾而没有庄稼可收（1:1），现在则是禾场丰满，可以挥镰像割麦子一样收割聚拢一处的列国（赛17:4-5：耶9:22.51:33；弥4:11-12）。酒榨……酒池，列国罪大恶极，连审判的酒池都满溢（赛63:1-6：启14:14-20）。2:24曾应许禾场和酒榨都必满溢，真是莫大的讽刺！",
+      "debugMeta": {
+        "coverageRanges": [
+          {
+            "end": "Joel.3.13",
+            "start": "Joel.3.13"
+          }
+        ],
+        "page": 9,
+        "primaryAnchor": "Joel.3.13",
+        "sourceLabel": "圣经研修本 29_约珥书【codex-v3】"
+      },
+      "id": "study-bible-joel-3-13-p009-n035",
+      "primaryAnchor": "Joel.3.13",
+      "searchText": "约珥书 3:13 研修本注释\n过去曾因蝗灾而没有庄稼可收（1:1），现在则是禾场丰满，可以挥镰像割麦子一样收割聚拢一处的列国（赛17:4-5：耶9:22.51:33；弥4:11-12）。酒榨……酒池，列国罪大恶极，连审判的酒池都满溢（赛63:1-6：启14:14-20…\n过去曾因蝗灾而没有庄稼可收（1:1），现在则是禾场丰满，可以挥镰像割麦子一样收割聚拢一处的列国（赛17:4-5：耶9:22.51:33；弥4:11-12）。酒榨……酒池，列国罪大恶极，连审判的酒池都满溢（赛63:1-6：启14:14-20）。2:24曾应许禾场和酒榨都必满溢，真是莫大的讽刺！\n3:13\n圣经研修本 29_约珥书【codex-v3】",
+      "source": "圣经研修本 29_约珥书【codex-v3】",
+      "summary": "过去曾因蝗灾而没有庄稼可收（1:1），现在则是禾场丰满，可以挥镰像割麦子一样收割聚拢一处的列国（赛17:4-5：耶9:22.51:33；弥4:11-12）。酒榨……酒池，列国罪大恶极，连审判的酒池都满溢（赛63:1-6：启14:14-20…",
+      "title": "约珥书 3:13 研修本注释",
+      "type": "commentary",
+      "verses": [
+        "Joel.3.13"
+      ]
+    },
+    {
+      "body": "许多许多的人，世上所有人都要站在上帝面前接受审判。断定谷指约沙法谷（2、12节），是上帝施行审判的地方，也只有上帝能做判断，他的法度是完全的。耶和华的日子临近，虽然那日子曾临近以色列（1:15,2:1），但因上帝立约的爱和百姓的悔改，审判停了下来。",
+      "debugMeta": {
+        "coverageRanges": [
+          {
+            "end": "Joel.3.14",
+            "start": "Joel.3.14"
+          }
+        ],
+        "page": 9,
+        "primaryAnchor": "Joel.3.14",
+        "sourceLabel": "圣经研修本 29_约珥书【codex-v3】"
+      },
+      "id": "study-bible-joel-3-14-p009-n036",
+      "primaryAnchor": "Joel.3.14",
+      "searchText": "约珥书 3:14 研修本注释\n许多许多的人，世上所有人都要站在上帝面前接受审判。断定谷指约沙法谷（2、12节），是上帝施行审判的地方，也只有上帝能做判断，他的法度是完全的。耶和华的日子临近，虽然那日子曾临近以色列（1:15,2:1），但因上帝立约的爱和百姓的悔改，审判…\n许多许多的人，世上所有人都要站在上帝面前接受审判。断定谷指约沙法谷（2、12节），是上帝施行审判的地方，也只有上帝能做判断，他的法度是完全的。耶和华的日子临近，虽然那日子曾临近以色列（1:15,2:1），但因上帝立约的爱和百姓的悔改，审判停了下来。\n3:14\n圣经研修本 29_约珥书【codex-v3】",
+      "source": "圣经研修本 29_约珥书【codex-v3】",
+      "summary": "许多许多的人，世上所有人都要站在上帝面前接受审判。断定谷指约沙法谷（2、12节），是上帝施行审判的地方，也只有上帝能做判断，他的法度是完全的。耶和华的日子临近，虽然那日子曾临近以色列（1:15,2:1），但因上帝立约的爱和百姓的悔改，审判…",
+      "title": "约珥书 3:14 研修本注释",
+      "type": "commentary",
+      "verses": [
+        "Joel.3.14"
+      ]
+    },
+    {
+      "body": "昏暗，见2:10注。25:30-31：珥2:11及注释）。避难所，参诗73:28.91:2.9。保障，参诗27:1.37:39（\"营寨，赛25:4。尽管天地混沌，地上有战争，但上帝的百姓得蒙保守，免遭毁灭。",
+      "debugMeta": {
+        "coverageRanges": [
+          {
+            "end": "Joel.3.15",
+            "start": "Joel.3.15"
+          }
+        ],
+        "page": 9,
+        "primaryAnchor": "Joel.3.15",
+        "sourceLabel": "圣经研修本 29_约珥书【codex-v3】"
+      },
+      "id": "study-bible-joel-3-15-p009-n064",
+      "primaryAnchor": "Joel.3.15",
+      "searchText": "约珥书 3:15 研修本注释：昏暗，见2:10注\n昏暗，见2:10注。25:30-31：珥2:11及注释）。避难所，参诗73:28.91:2.9。保障，参诗27:1.37:39（\"营寨，赛25:4。尽管天地混沌，地上有战争，但上帝的百姓得蒙保守，免遭毁灭。\n昏暗，见2:10注。25:30-31：珥2:11及注释）。避难所，参诗73:28.91:2.9。保障，参诗27:1.37:39（\"营寨，赛25:4。尽管天地混沌，地上有战争，但上帝的百姓得蒙保守，免遭毁灭。\n3:15\n圣经研修本 29_约珥书【codex-v3】",
+      "source": "圣经研修本 29_约珥书【codex-v3】",
+      "summary": "昏暗，见2:10注。25:30-31：珥2:11及注释）。避难所，参诗73:28.91:2.9。保障，参诗27:1.37:39（\"营寨，赛25:4。尽管天地混沌，地上有战争，但上帝的百姓得蒙保守，免遭毁灭。",
+      "title": "约珥书 3:15 研修本注释：昏暗，见2:10注",
+      "type": "commentary",
+      "verses": [
+        "Joel.3.15"
+      ]
+    },
+    {
+      "body": "你们就知道我是耶和华你们的上帝，上帝的审判和拯救使人认识立约的上帝、他的同在，以及他除去百姓的羞耻（见2:27）。锡安（参3:21）是最初的保障（见2:1注），这里指上帝应许与他的百姓亲密同住（参启21:3）。耶路撒冷必成为圣，上帝在那里与人同在，一切都被洁净，连日常的行为也成为圣洁的敬拜。在这么圣洁的地方，没有任何事不蒙悦纳（参赛35:852:1；鸿1:15：亚14:21）。外邦人（《和修》\"陌生人\"指不散拜上帝的人。",
+      "debugMeta": {
+        "coverageRanges": [
+          {
+            "end": "Joel.3.17",
+            "start": "Joel.3.17"
+          }
+        ],
+        "page": 9,
+        "primaryAnchor": "Joel.3.17",
+        "sourceLabel": "圣经研修本 29_约珥书【codex-v3】"
+      },
+      "id": "study-bible-joel-3-17-p009-n063",
+      "primaryAnchor": "Joel.3.17",
+      "searchText": "约珥书 3:17 研修本注释\n你们就知道我是耶和华你们的上帝，上帝的审判和拯救使人认识立约的上帝、他的同在，以及他除去百姓的羞耻（见2:27）。锡安（参3:21）是最初的保障（见2:1注），这里指上帝应许与他的百姓亲密同住（参启21:3）。耶路撒冷必成为圣，上帝在那里…\n你们就知道我是耶和华你们的上帝，上帝的审判和拯救使人认识立约的上帝、他的同在，以及他除去百姓的羞耻（见2:27）。锡安（参3:21）是最初的保障（见2:1注），这里指上帝应许与他的百姓亲密同住（参启21:3）。耶路撒冷必成为圣，上帝在那里与人同在，一切都被洁净，连日常的行为也成为圣洁的敬拜。在这么圣洁的地方，没有任何事不蒙悦纳（参赛35:852:1；鸿1:15：亚14:21）。外邦人（《和修》\"陌生人\"指不散拜上帝的人。\n3:17\n圣经研修本 29_约珥书【codex-v3】",
+      "source": "圣经研修本 29_约珥书【codex-v3】",
+      "summary": "你们就知道我是耶和华你们的上帝，上帝的审判和拯救使人认识立约的上帝、他的同在，以及他除去百姓的羞耻（见2:27）。锡安（参3:21）是最初的保障（见2:1注），这里指上帝应许与他的百姓亲密同住（参启21:3）。耶路撒冷必成为圣，上帝在那里…",
+      "title": "约珥书 3:17 研修本注释",
+      "type": "commentary",
+      "verses": [
+        "Joel.3.17"
+      ]
+    },
+    {
+      "body": "到那日，即主的日子（2:2.3：）。酒……奶……（参摩9:13），这里和书中其他描述上帝供应的经文（2:19，22-26），都让人想起以前的缺乏（1:5.9.12,16-20）。有泉源从耶和华的殿中，参结47:1-13：亚14:8；启22:1-2。水源十分充足，连旱地的皂荚树（什亭）都得到滋润。这个\"泉源\"可能位于纳尔谷（又称汲沦个河谷从汲沦溪一直延伸到死海。",
+      "debugMeta": {
+        "coverageRanges": [
+          {
+            "end": "Joel.3.18",
+            "start": "Joel.3.18"
+          }
+        ],
+        "page": 9,
+        "primaryAnchor": "Joel.3.18",
+        "sourceLabel": "圣经研修本 29_约珥书【codex-v3】"
+      },
+      "id": "study-bible-joel-3-18-p009-n066",
+      "primaryAnchor": "Joel.3.18",
+      "searchText": "约珥书 3:18 研修本注释：到那日，即主的日子（2:2.3\n到那日，即主的日子（2:2.3：）。酒……奶……（参摩9:13），这里和书中其他描述上帝供应的经文（2:19，22-26），都让人想起以前的缺乏（1:5.9.12,16-20）。有泉源从耶和华的殿中，参结47:1-13：亚14:8；启22…\n到那日，即主的日子（2:2.3：）。酒……奶……（参摩9:13），这里和书中其他描述上帝供应的经文（2:19，22-26），都让人想起以前的缺乏（1:5.9.12,16-20）。有泉源从耶和华的殿中，参结47:1-13：亚14:8；启22:1-2。水源十分充足，连旱地的皂荚树（什亭）都得到滋润。这个\"泉源\"可能位于纳尔谷（又称汲沦个河谷从汲沦溪一直延伸到死海。\n3:18\n圣经研修本 29_约珥书【codex-v3】",
+      "source": "圣经研修本 29_约珥书【codex-v3】",
+      "summary": "到那日，即主的日子（2:2.3：）。酒……奶……（参摩9:13），这里和书中其他描述上帝供应的经文（2:19，22-26），都让人想起以前的缺乏（1:5.9.12,16-20）。有泉源从耶和华的殿中，参结47:1-13：亚14:8；启22…",
+      "title": "约珥书 3:18 研修本注释：到那日，即主的日子（2:2.3",
+      "type": "commentary",
+      "verses": [
+        "Joel.3.18"
+      ]
+    },
+    {
+      "body": "上帝的百姓复兴（18节）与列国受审判（2:19-20.31-3），形成鲜明的对比。埃及和以东是以色列的宿敌，代表所有与上帝百姓为敌的势力（参王上14:25-26；王下23:29-34：赛34:5-17：俄1-21节）。荒凉，预言埃及（结29:10.12,32:15）和以东（结35:3，4.7.9.14,15）将来的结局。流，列国\"流\"（希伯来原文shapak）血，上帝却要将他的灵\"浇灌下来\"（希伯来原文shapak:2:28-29）。",
+      "debugMeta": {
+        "coverageRanges": [
+          {
+            "end": "Joel.3.19",
+            "start": "Joel.3.19"
+          }
+        ],
+        "page": 9,
+        "primaryAnchor": "Joel.3.19",
+        "sourceLabel": "圣经研修本 29_约珥书【codex-v3】"
+      },
+      "id": "study-bible-joel-3-19-p009-n068",
+      "primaryAnchor": "Joel.3.19",
+      "searchText": "约珥书 3:19 研修本注释\n上帝的百姓复兴（18节）与列国受审判（2:19-20.31-3），形成鲜明的对比。埃及和以东是以色列的宿敌，代表所有与上帝百姓为敌的势力（参王上14:25-26；王下23:29-34：赛34:5-17：俄1-21节）。荒凉，预言埃及（结2…\n上帝的百姓复兴（18节）与列国受审判（2:19-20.31-3），形成鲜明的对比。埃及和以东是以色列的宿敌，代表所有与上帝百姓为敌的势力（参王上14:25-26；王下23:29-34：赛34:5-17：俄1-21节）。荒凉，预言埃及（结29:10.12,32:15）和以东（结35:3，4.7.9.14,15）将来的结局。流，列国\"流\"（希伯来原文shapak）血，上帝却要将他的灵\"浇灌下来\"（希伯来原文shapak:2:28-29）。\n3:19\n圣经研修本 29_约珥书【codex-v3】",
+      "source": "圣经研修本 29_约珥书【codex-v3】",
+      "summary": "上帝的百姓复兴（18节）与列国受审判（2:19-20.31-3），形成鲜明的对比。埃及和以东是以色列的宿敌，代表所有与上帝百姓为敌的势力（参王上14:25-26；王下23:29-34：赛34:5-17：俄1-21节）。荒凉，预言埃及（结2…",
+      "title": "约珥书 3:19 研修本注释",
+      "type": "commentary",
+      "verses": [
+        "Joel.3.19"
+      ]
+    },
+    {
+      "body": "上帝住在锡安（17、21节），直接使他的百姓能在他所赐的土地上永远安居。",
+      "debugMeta": {
+        "coverageRanges": [
+          {
+            "end": "Joel.3.20",
+            "start": "Joel.3.20"
+          }
+        ],
+        "page": 10,
+        "primaryAnchor": "Joel.3.20",
+        "sourceLabel": "圣经研修本 29_约珥书【codex-v3】"
+      },
+      "id": "study-bible-joel-3-20-p010-n070",
+      "primaryAnchor": "Joel.3.20",
+      "searchText": "约珥书 3:20 研修本注释\n上帝住在锡安（17、21节），直接使他的百姓能在他所赐的土地上永远安居。\n上帝住在锡安（17、21节），直接使他的百姓能在他所赐的土地上永远安居。\n3:20\n圣经研修本 29_约珥书【codex-v3】",
+      "source": "圣经研修本 29_约珥书【codex-v3】",
+      "summary": "上帝住在锡安（17、21节），直接使他的百姓能在他所赐的土地上永远安居。",
+      "title": "约珥书 3:20 研修本注释",
+      "type": "commentary",
+      "verses": [
+        "Joel.3.20"
+      ]
+    },
+    {
+      "body": "这节经文的前两行比较难解，可能指上帝要报复他未曾报复的：或者像《和修》的译法，上帝要\"免除\"曾免除\"的。根据上下文.《和修》的译法似乎比较准确流血的罪，这是19节犹大人\"流无辜人的血\"的注本节涵盖了《约珥书》的两个重要主题：在耶和华日子的审判，以及耶和华住在锡安（2:27，3:17）。",
+      "debugMeta": {
+        "coverageRanges": [
+          {
+            "end": "Joel.3.21",
+            "start": "Joel.3.21"
+          }
+        ],
+        "page": 10,
+        "primaryAnchor": "Joel.3.21",
+        "sourceLabel": "圣经研修本 29_约珥书【codex-v3】"
+      },
+      "id": "study-bible-joel-3-21-p010-n069",
+      "primaryAnchor": "Joel.3.21",
+      "searchText": "约珥书 3:21 研修本注释\n这节经文的前两行比较难解，可能指上帝要报复他未曾报复的：或者像《和修》的译法，上帝要\"免除\"曾免除\"的。根据上下文.《和修》的译法似乎比较准确流血的罪，这是19节犹大人\"流无辜人的血\"的注本节涵盖了《约珥书》的两个重要主题：在耶和华日子的…\n这节经文的前两行比较难解，可能指上帝要报复他未曾报复的：或者像《和修》的译法，上帝要\"免除\"曾免除\"的。根据上下文.《和修》的译法似乎比较准确流血的罪，这是19节犹大人\"流无辜人的血\"的注本节涵盖了《约珥书》的两个重要主题：在耶和华日子的审判，以及耶和华住在锡安（2:27，3:17）。\n3:21\n圣经研修本 29_约珥书【codex-v3】",
+      "source": "圣经研修本 29_约珥书【codex-v3】",
+      "summary": "这节经文的前两行比较难解，可能指上帝要报复他未曾报复的：或者像《和修》的译法，上帝要\"免除\"曾免除\"的。根据上下文.《和修》的译法似乎比较准确流血的罪，这是19节犹大人\"流无辜人的血\"的注本节涵盖了《约珥书》的两个重要主题：在耶和华日子的…",
+      "title": "约珥书 3:21 研修本注释",
+      "type": "commentary",
+      "verses": [
+        "Joel.3.21"
+      ]
+    },
+    {
+      "body": "\"毗土珥的儿子约珥\"，\"约珥\"的希伯来文意为\"耶和华是上帝\"，本书除了本书提供的资料以外，我们对约珥所知不多。从他对犹大（3:1,6,8.18,19,20）和耶路撒冷（2:32，3:1,6,16,17,20）的记述，：以及他对祭司侍奉和圣殿各项活动的了解（1:9，13-14，16,2:14-17），可以知道他来自犹大甚或以他的名字命名。耶路撒冷。他论到祭司（1:9，13，2:17）和长老（1:2\"老年人\"，14\"长老\"，2:16\"老者\"）所说的话，很可能表明他不属于这两者。",
+      "debugMeta": {
+        "coverageRanges": [
+          {
+            "end": "Joel.1.1",
+            "start": "Joel.1.1"
+          }
+        ],
+        "page": 1,
+        "primaryAnchor": "Joel.1.1",
+        "sourceLabel": "圣经研修本 29_约珥书【codex-v3】"
+      },
+      "id": "study-bible-joel-intro-p001-n001",
+      "primaryAnchor": "Joel.1.1",
+      "searchText": "约珥书 导论：作者和书名\n\"毗土珥的儿子约珥\"，\"约珥\"的希伯来文意为\"耶和华是上帝\"，本书除了本书提供的资料以外，我们对约珥所知不多。从他对犹大（3:1,6,8.18,19,20）和耶路撒冷（2:32，3:1,6,16,17,20）的记述，：以及他对祭司侍奉和圣…\n\"毗土珥的儿子约珥\"，\"约珥\"的希伯来文意为\"耶和华是上帝\"，本书除了本书提供的资料以外，我们对约珥所知不多。从他对犹大（3:1,6,8.18,19,20）和耶路撒冷（2:32，3:1,6,16,17,20）的记述，：以及他对祭司侍奉和圣殿各项活动的了解（1:9，13-14，16,2:14-17），可以知道他来自犹大甚或以他的名字命名。耶路撒冷。他论到祭司（1:9，13，2:17）和长老（1:2\"老年人\"，14\"长老\"，2:16\"老者\"）所说的话，很可能表明他不属于这两者。\n导论：作者和书名\n圣经研修本 29_约珥书【codex-v3】",
+      "source": "圣经研修本 29_约珥书【codex-v3】",
+      "summary": "\"毗土珥的儿子约珥\"，\"约珥\"的希伯来文意为\"耶和华是上帝\"，本书除了本书提供的资料以外，我们对约珥所知不多。从他对犹大（3:1,6,8.18,19,20）和耶路撒冷（2:32，3:1,6,16,17,20）的记述，：以及他对祭司侍奉和圣…",
+      "title": "约珥书 导论：作者和书名",
+      "type": "commentary",
+      "verses": [
+        "Joel.1.1"
+      ]
+    },
+    {
+      "body": "《约珥书》大概成书于主前9世纪一主前4世纪。大多数学者主张本书写于犹大国被掳像《何西阿书》和《阿摩司书》那样谴责拜偶（主前586年）之后，理由如下：本书（1）将被掳视为已经发生的事（3:2-3）；（2）提到耶路撒冷的陷落（3:17）；（3）没有提到任何一位君王；（4）圣殿仍然发挥积极作用，先知没有像和宗教融合；（5）提到对以东的怒气，最好的解释是因为在巴比伦入侵期间，以东对犹大国所做的恶事（珥3:19；俄1-21节）。",
+      "debugMeta": {
+        "coverageRanges": [
+          {
+            "end": "Joel.1.1",
+            "start": "Joel.1.1"
+          }
+        ],
+        "page": 1,
+        "primaryAnchor": "Joel.1.1",
+        "sourceLabel": "圣经研修本 29_约珥书【codex-v3】"
+      },
+      "id": "study-bible-joel-intro-p001-n002",
+      "primaryAnchor": "Joel.1.1",
+      "searchText": "约珥书 导论：写作时间\n《约珥书》大概成书于主前9世纪一主前4世纪。大多数学者主张本书写于犹大国被掳像《何西阿书》和《阿摩司书》那样谴责拜偶（主前586年）之后，理由如下：本书（1）将被掳视为已经发生的事（3:2-3）；（2）提到耶路撒冷的陷落（3:17）；（3…\n《约珥书》大概成书于主前9世纪一主前4世纪。大多数学者主张本书写于犹大国被掳像《何西阿书》和《阿摩司书》那样谴责拜偶（主前586年）之后，理由如下：本书（1）将被掳视为已经发生的事（3:2-3）；（2）提到耶路撒冷的陷落（3:17）；（3）没有提到任何一位君王；（4）圣殿仍然发挥积极作用，先知没有像和宗教融合；（5）提到对以东的怒气，最好的解释是因为在巴比伦入侵期间，以东对犹大国所做的恶事（珥3:19；俄1-21节）。\n导论：写作时间\n圣经研修本 29_约珥书【codex-v3】",
+      "source": "圣经研修本 29_约珥书【codex-v3】",
+      "summary": "《约珥书》大概成书于主前9世纪一主前4世纪。大多数学者主张本书写于犹大国被掳像《何西阿书》和《阿摩司书》那样谴责拜偶（主前586年）之后，理由如下：本书（1）将被掳视为已经发生的事（3:2-3）；（2）提到耶路撒冷的陷落（3:17）；（3…",
+      "title": "约珥书 导论：写作时间",
+      "type": "commentary",
+      "verses": [
+        "Joel.1.1"
+      ]
+    },
+    {
+      "body": "\"耶和华的日子\"是《约珥书》的中心主题。列国（3:2-3）和以色列（1:15，2:1-2）都要经历这次审判。然而，对于悔改的群体，那\"日子\"也承载了对复兴的盼望（2:12-14）。归根结底，上帝应许赐下丰足和保护，就表明他信实守约（2:23-26，3:1），也证明他住在他的百姓中间（2:27.3:17,21）。上帝要将\"我的灵\"浇灌\"凡有血气的\"（2:28，29；参徒2:17-21）这伟大的应许，概括性地体现了上帝的信实。",
+      "debugMeta": {
+        "coverageRanges": [
+          {
+            "end": "Joel.2.28",
+            "start": "Joel.2.28"
+          }
+        ],
+        "page": 1,
+        "primaryAnchor": "Joel.2.28",
+        "sourceLabel": "圣经研修本 29_约珥书【codex-v3】"
+      },
+      "id": "study-bible-joel-intro-p001-n003",
+      "primaryAnchor": "Joel.2.28",
+      "searchText": "约珥书 导论：主题\n\"耶和华的日子\"是《约珥书》的中心主题。列国（3:2-3）和以色列（1:15，2:1-2）都要经历这次审判。然而，对于悔改的群体，那\"日子\"也承载了对复兴的盼望（2:12-14）。归根结底，上帝应许赐下丰足和保护，就表明他信实守约（2:2…\n\"耶和华的日子\"是《约珥书》的中心主题。列国（3:2-3）和以色列（1:15，2:1-2）都要经历这次审判。然而，对于悔改的群体，那\"日子\"也承载了对复兴的盼望（2:12-14）。归根结底，上帝应许赐下丰足和保护，就表明他信实守约（2:23-26，3:1），也证明他住在他的百姓中间（2:27.3:17,21）。上帝要将\"我的灵\"浇灌\"凡有血气的\"（2:28，29；参徒2:17-21）这伟大的应许，概括性地体现了上帝的信实。\n导论：主题\n圣经研修本 29_约珥书【codex-v3】",
+      "source": "圣经研修本 29_约珥书【codex-v3】",
+      "summary": "\"耶和华的日子\"是《约珥书》的中心主题。列国（3:2-3）和以色列（1:15，2:1-2）都要经历这次审判。然而，对于悔改的群体，那\"日子\"也承载了对复兴的盼望（2:12-14）。归根结底，上帝应许赐下丰足和保护，就表明他信实守约（2:2…",
+      "title": "约珥书 导论：主题",
+      "type": "commentary",
+      "verses": [
+        "Joel.2.28"
+      ]
+    },
+    {
+      "body": "约珥呼召所有居住在犹大和耶路撒冷的百姓，在国家遭受灾难时哀号并归向上帝。这个危机以一场蝗灾作为预兆，蝗群吃尽了所有葡萄树（1:5,7,12）和谷物（1:10），以致上帝的百姓无法在圣殿中献祭（1:9,13,16）。因此，《约珥书》可以作为上帝的百姓在国家发生灾难时的哀歌。",
+      "debugMeta": {
+        "coverageRanges": [
+          {
+            "end": "Joel.1.14",
+            "start": "Joel.1.14"
+          }
+        ],
+        "page": 1,
+        "primaryAnchor": "Joel.1.14",
+        "sourceLabel": "圣经研修本 29_约珥书【codex-v3】"
+      },
+      "id": "study-bible-joel-intro-p001-n004",
+      "primaryAnchor": "Joel.1.14",
+      "searchText": "约珥书 导论：写作目的、缘起和背景\n约珥呼召所有居住在犹大和耶路撒冷的百姓，在国家遭受灾难时哀号并归向上帝。这个危机以一场蝗灾作为预兆，蝗群吃尽了所有葡萄树（1:5,7,12）和谷物（1:10），以致上帝的百姓无法在圣殿中献祭（1:9,13,16）。因此，《约珥书》可以作为…\n约珥呼召所有居住在犹大和耶路撒冷的百姓，在国家遭受灾难时哀号并归向上帝。这个危机以一场蝗灾作为预兆，蝗群吃尽了所有葡萄树（1:5,7,12）和谷物（1:10），以致上帝的百姓无法在圣殿中献祭（1:9,13,16）。因此，《约珥书》可以作为上帝的百姓在国家发生灾难时的哀歌。\n导论：写作目的、缘起和背景\n圣经研修本 29_约珥书【codex-v3】",
+      "source": "圣经研修本 29_约珥书【codex-v3】",
+      "summary": "约珥呼召所有居住在犹大和耶路撒冷的百姓，在国家遭受灾难时哀号并归向上帝。这个危机以一场蝗灾作为预兆，蝗群吃尽了所有葡萄树（1:5,7,12）和谷物（1:10），以致上帝的百姓无法在圣殿中献祭（1:9,13,16）。因此，《约珥书》可以作为…",
+      "title": "约珥书 导论：写作目的、缘起和背景",
+      "type": "commentary",
+      "verses": [
+        "Joel.1.14"
+      ]
+    },
+    {
+      "body": "1.耶和华的日子。这是《约珥书》的重要主题。\"耶和华的日子\"（希伯来原文yomyhwh）在本书共出现五次（1:15,2:1,11,31，3:14），在另外七卷先知书共出现13次（赛13:6，9；耶46:10：结13:5,30:3；摩5:18-20；俄15节；番1:7，14；玛4:5；见摩5:18-20注）。先知文学还有其他指称该\"日子\"的方式，如\"一个日子\"、\"那些日子\"、\"那日子\"、\"那日\"，约珥也有采用（2:2,3:1,18）。在本书中，该\"日子\"不是单指上帝最后审判列国的日子（3:1-2），还指上帝在过去和将来对以色列的持续审判（1:15，2:2，11），以及他对以色列和列国之间事务的介入（3:1-2,12,14,16）。在每一种情况中，\"耶和华的日子\"都是指上帝的临在带来的审判；至于这日子是否同时是拯救和赐福的时刻，就视当时的情况而定（见1:15注）。因此，虽然该\"日子\"是预告列国的毁灭，但它同时是上帝的百姓得着拯救的时间；在审判的混乱中，上帝仍然是他百姓的避难所（3:15-16）。2.悔改。如果全体百姓向上帝呼求（1:13-20），仰望他，并且不只是外表的行动，而是发自全人的挚诚（2:12-13），那么他们或许可以免受审判。当然，上帝不会受百姓的行动所限（2:14），他有权发出或收回蝗虫之灾（1:15），正如他有权指挥军队一样（2:11）。3.耶和华在百姓中间。当然，百姓有活泼的信心并悔改是关键：但是，上帝从审判转为赐福，原因是要表明他是守约的上帝（2:13，18-26,3:18）。上帝要住在他的百姓中间，这个应许不止出现在本书中（2:27,3:17,21），而是贯穿整部《旧约》（民35:34；申6:15,7:21：赛12:6；何11:9；番3:15,17；该2:5：亚2:10-11，8:3）。上帝将蝗虫带来的破坏复原（2:27），以解经难题：蝗虫人侵对读者来说，理解蝗灾和旱灾（1:1-20）与耶和华军队的猛攻（2:1-11）之间的关系，具下：如果第1章… 那么第2章…1.描述真实的蝗灾， 更绘声绘色地描述同一次侵扰。2.描述真实的蝗灾. 警告将有军事人侵。3.描述真实的蝗灾，作为先知预言的先兆，用比喻描述在耶和华的日子必有人类军队参与关键的战斗。4.以蝗虫的侵扰来隐喻军事人侵， 表明将有敌军人侵犹大，而一般认这支敌军是亚述人或巴比伦人。虽然每柙可能性都有其正确合理的论据，但第三种理解最符合总体语境。约珥使用惊心动魄的蝗灾和军事比喻（2:4-9），描述将要在耶和华的大日来到的上帝军旅（2:11）。第1章的动词基本上是命令式和过去式，呼吁百姓反思过去并作出回应。第2章的动词是未完成式和命令式，为要强调：即使审判临近，人仍然有，决及他在天地震动时依然保护以色列（3:16-17），两者有相同的目的，就是让世人知道他的临在。这个主题是本书的总结（3:21），凸显它在本书中的重要性。4.耶和华的日子、悔改、上帝住在百姓中间等主题，全都包含在圣灵在末后的日子要浇灌下来的应许（2:28-32）中。这种浇灌与耶和华的日子相关（2:31），既显明审判（2:30-31；参2:10.3:15），又彰显拯救（2:32）。这种浇灌也与悔改相关，因为求告\"耶和华名\"（2:32的人才会得拯救。最后，圣灵的赐下是超越性别、世代、社会阶层和国籍等界限的（2:28-29），是上帝\"在他们中间\"的终极明证（赛63:11；见该2:5）。有很大的挑战。学者提出几种可能性，表列如归向上帝的可能。1:15-20的哀歌明显是指着蝗灾的后果而言：2:17的祷告不是关注蝗虫肆虐，而是关注上帝的百姓在外邦统治的威胁之下备受压迫。\"北方来的\"是《旧约》对仇敌的常用称呼（见2:20注），如果说用来指称蝗虫，这种用法并不寻常。如果第2章是描述军队和大战，那么3:1-21对列国的审判就更加合理。",
+      "debugMeta": {
+        "coverageRanges": [
+          {
+            "end": "Joel.2.28",
+            "start": "Joel.2.28"
+          }
+        ],
+        "page": 1,
+        "primaryAnchor": "Joel.2.28",
+        "sourceLabel": "圣经研修本 29_约珥书【codex-v3】"
+      },
+      "id": "study-bible-joel-intro-p001-n005",
+      "primaryAnchor": "Joel.2.28",
+      "searchText": "约珥书 导论：关键主题\n1.耶和华的日子。这是《约珥书》的重要主题。\"耶和华的日子\"（希伯来原文yomyhwh）在本书共出现五次（1:15,2:1,11,31，3:14），在另外七卷先知书共出现13次（赛13:6，9；耶46:10：结13:5,30:3；摩5:1…\n1.耶和华的日子。这是《约珥书》的重要主题。\"耶和华的日子\"（希伯来原文yomyhwh）在本书共出现五次（1:15,2:1,11,31，3:14），在另外七卷先知书共出现13次（赛13:6，9；耶46:10：结13:5,30:3；摩5:18-20；俄15节；番1:7，14；玛4:5；见摩5:18-20注）。先知文学还有其他指称该\"日子\"的方式，如\"一个日子\"、\"那些日子\"、\"那日子\"、\"那日\"，约珥也有采用（2:2,3:1,18）。在本书中，该\"日子\"不是单指上帝最后审判列国的日子（3:1-2），还指上帝在过去和将来对以色列的持续审判（1:15，2:2，11），以及他对以色列和列国之间事务的介入（3:1-2,12,14,16）。在每一种情况中，\"耶和华的日子\"都是指上帝的临在带来的审判；至于这日子是否同时是拯救和赐福的时刻，就视当时的情况而定（见1:15注）。因此，虽然该\"日子\"是预告列国的毁灭，但它同时是上帝的百姓得着拯救的时间；在审判的混乱中，上帝仍然是他百姓的避难所（3:15-16）。2.悔改。如果全体百姓向上帝呼求（1:13-20），仰望他，并且不只是外表的行动，而是发自全人的挚诚（2:12-13），那么他们或许可以免受审判。当然，上帝不会受百姓的行动所限（2:14），他有权发出或收回蝗虫之灾（1:15），正如他有权指挥军队一样（2:11）。3.耶和华在百姓中间。当然，百姓有活泼的信心并悔改是关键：但是，上帝从审判转为赐福，原因是要表明他是守约的上帝（2:13，18-26,3:18）。上帝要住在他的百姓中间，这个应许不止出现在本书中（2:27,3:17,21），而是贯穿整部《旧约》（民35:34；申6:15,7:21：赛12:6；何11:9；番3:15,17；该2:5：亚2:10-11，8:3）。上帝将蝗虫带来的破坏复原（2:27），以解经难题：蝗虫人侵对读者来说，理解蝗灾和旱灾（1:1-20）与耶和华军队的猛攻（2:1-11）之间的关系，具下：如果第1章… 那么第2章…1.描述真实的蝗灾， 更绘声绘色地描述同一次侵扰。2.描述真实的蝗灾. 警告将有军事人侵。3.描述真实的蝗灾，作为先知预言的先兆，用比喻描述在耶和华的日子必有人类军队参与关键的战斗。4.以蝗虫的侵扰来隐喻军事人侵， 表明将有敌军人侵犹大，而一般认这支敌军是亚述人或巴比伦人。虽然每柙可能性都有其正确合理的论据，但第三种理解最符合总体语境。约珥使用惊心动魄的蝗灾和军事比喻（2:4-9），描述将要在耶和华的大日来到的上帝军旅（2:11）。第1章的动词基本上是命令式和过去式，呼吁百姓反思过去并作出回应。第2章的动词是未完成式和命令式，为要强调：即使审判临近，人仍然有，决及他在天地震动时依然保护以色列（3:16-17），两者有相同的目的，就是让世人知道他的临在。这个主题是本书的总结（3:21），凸显它在本书中的重要性。4.耶和华的日子、悔改、上帝住在百姓中间等主题，全都包含在圣灵在末后的日子要浇灌下来的应许（2:28-32）中。这种浇灌与耶和华的日子相关（2:31），既显明审判（2:30-31；参2:10.3:15），又彰显拯救（2:32）。这种浇灌也与悔改相关，因为求告\"耶和华名\"（2:32的人才会得拯救。最后，圣灵的赐下是超越性别、世代、社会阶层和国籍等界限的（2:28-29），是上帝\"在他们中间\"的终极明证（赛63:11；见该2:5）。有很大的挑战。学者提出几种可能性，表列如归向上帝的可能。1:15-20的哀歌明显是指着蝗灾的后果而言：2:17的祷告不是关注蝗虫肆虐，而是关注上帝的百姓在外邦统治的威胁之下备受压迫。\"北方来的\"是《旧约》对仇敌的常用称呼（见2:20注），如果说用来指称蝗虫，这种用法并不寻常。如果第2章是描述军队和大战，那么3:1-21对列国的审判就更加合理。\n导论：关键主题\n圣经研修本 29_约珥书【codex-v3】",
+      "source": "圣经研修本 29_约珥书【codex-v3】",
+      "summary": "1.耶和华的日子。这是《约珥书》的重要主题。\"耶和华的日子\"（希伯来原文yomyhwh）在本书共出现五次（1:15,2:1,11,31，3:14），在另外七卷先知书共出现13次（赛13:6，9；耶46:10：结13:5,30:3；摩5:1…",
+      "title": "约珥书 导论：关键主题",
+      "type": "commentary",
+      "verses": [
+        "Joel.2.28"
+      ]
+    },
+    {
+      "body": "上帝以慈爱和怜悯呼召他古时的百姓，保守他们成为他施恩的器皿，藉此将他的灵浇灌世上各种各样的人（2:28-32），并且他要拯救他们脱离所有想要毁灭他们之人的手（3章）。上帝百般关怀他的百姓，目的是要使他们不只撕裂衣服，而是\"撕裂\"心肠（2:12-从而他们能够全心全意爱他。关于\"救恩历史\"的解释，见《圣经文集》中的《〈圣经〉概述》和《〈旧约》中的救恩历史：为基督预备道路》。",
+      "debugMeta": {
+        "coverageRanges": [
+          {
+            "end": "Joel.1.1",
+            "start": "Joel.1.1"
+          }
+        ],
+        "page": 2,
+        "primaryAnchor": "Joel.1.1",
+        "sourceLabel": "圣经研修本 29_约珥书【codex-v3】"
+      },
+      "id": "study-bible-joel-intro-p002-n006",
+      "primaryAnchor": "Joel.1.1",
+      "searchText": "约珥书 导论：救恩历史概要\n上帝以慈爱和怜悯呼召他古时的百姓，保守他们成为他施恩的器皿，藉此将他的灵浇灌世上各种各样的人（2:28-32），并且他要拯救他们脱离所有想要毁灭他们之人的手（3章）。上帝百般关怀他的百姓，目的是要使他们不只撕裂衣服，而是\"撕裂\"心肠（2:…\n上帝以慈爱和怜悯呼召他古时的百姓，保守他们成为他施恩的器皿，藉此将他的灵浇灌世上各种各样的人（2:28-32），并且他要拯救他们脱离所有想要毁灭他们之人的手（3章）。上帝百般关怀他的百姓，目的是要使他们不只撕裂衣服，而是\"撕裂\"心肠（2:12-从而他们能够全心全意爱他。关于\"救恩历史\"的解释，见《圣经文集》中的《〈圣经〉概述》和《〈旧约》中的救恩历史：为基督预备道路》。\n导论：救恩历史概要\n圣经研修本 29_约珥书【codex-v3】",
+      "source": "圣经研修本 29_约珥书【codex-v3】",
+      "summary": "上帝以慈爱和怜悯呼召他古时的百姓，保守他们成为他施恩的器皿，藉此将他的灵浇灌世上各种各样的人（2:28-32），并且他要拯救他们脱离所有想要毁灭他们之人的手（3章）。上帝百般关怀他的百姓，目的是要使他们不只撕裂衣服，而是\"撕裂\"心肠（2:…",
+      "title": "约珥书 导论：救恩历史概要",
+      "type": "commentary",
+      "verses": [
+        "Joel.1.1"
+      ]
+    },
+    {
+      "body": "作为一部预言作品，《约珥书》主要围绕着审判神谕和救恩神谕。书中有许多诗歌，显示作者善于描述。当作者将杀人的蝗虫想象成一种非笔墨所能描绘的生物，本书仿佛变成一个恐怖故事。前两章特别运用了顿呼的技巧，直接向某些虚构的事物说话，仿佛它们能够听到和回应。纵然作者是一位先知而非专门描绘大自然的作家，但是书中包含了多幅描绘大自的图画，因此《约珥书》足可称为一部具有先知书风格的自然文学著作。本书最突出的文学手法，就是将真实的蝗灾意象化为世界末日般的可怖景象，即上帝审判人类所犯罪恶的图景。当然，约珥的意象也超越时代，成为上帝审判人类邪恶的一幅普适图画。",
+      "debugMeta": {
+        "coverageRanges": [
+          {
+            "end": "Joel.1.1",
+            "start": "Joel.1.1"
+          }
+        ],
+        "page": 2,
+        "primaryAnchor": "Joel.1.1",
+        "sourceLabel": "圣经研修本 29_约珥书【codex-v3】"
+      },
+      "id": "study-bible-joel-intro-p002-n007",
+      "primaryAnchor": "Joel.1.1",
+      "searchText": "约珥书 导论：文学特征\n作为一部预言作品，《约珥书》主要围绕着审判神谕和救恩神谕。书中有许多诗歌，显示作者善于描述。当作者将杀人的蝗虫想象成一种非笔墨所能描绘的生物，本书仿佛变成一个恐怖故事。前两章特别运用了顿呼的技巧，直接向某些虚构的事物说话，仿佛它们能够听到…\n作为一部预言作品，《约珥书》主要围绕着审判神谕和救恩神谕。书中有许多诗歌，显示作者善于描述。当作者将杀人的蝗虫想象成一种非笔墨所能描绘的生物，本书仿佛变成一个恐怖故事。前两章特别运用了顿呼的技巧，直接向某些虚构的事物说话，仿佛它们能够听到和回应。纵然作者是一位先知而非专门描绘大自然的作家，但是书中包含了多幅描绘大自的图画，因此《约珥书》足可称为一部具有先知书风格的自然文学著作。本书最突出的文学手法，就是将真实的蝗灾意象化为世界末日般的可怖景象，即上帝审判人类所犯罪恶的图景。当然，约珥的意象也超越时代，成为上帝审判人类邪恶的一幅普适图画。\n导论：文学特征\n圣经研修本 29_约珥书【codex-v3】",
+      "source": "圣经研修本 29_约珥书【codex-v3】",
+      "summary": "作为一部预言作品，《约珥书》主要围绕着审判神谕和救恩神谕。书中有许多诗歌，显示作者善于描述。当作者将杀人的蝗虫想象成一种非笔墨所能描绘的生物，本书仿佛变成一个恐怖故事。前两章特别运用了顿呼的技巧，直接向某些虚构的事物说话，仿佛它们能够听到…",
+      "title": "约珥书 导论：文学特征",
+      "type": "commentary",
+      "verses": [
+        "Joel.1.1"
+      ]
+    },
+    {
+      "body": "一、犹大受审判与耶和华的日子（11-2:17）（一）蝗虫入侵：耶和华日子的先兆（1:1-20）（二）军队入侵：耶和华的日子来到（2:1-17）二、耶和华的怜悯和列国受审判（2:18-3:21）（一）怜悯：耶和华以复兴他的百姓作为回应（2:18-32）（二）审判：耶和华审判列国，并住在他的百姓中间（3:1-21）",
+      "debugMeta": {
+        "coverageRanges": [
+          {
+            "end": "Joel.1.1",
+            "start": "Joel.1.1"
+          }
+        ],
+        "page": 3,
+        "primaryAnchor": "Joel.1.1",
+        "sourceLabel": "圣经研修本 29_约珥书【codex-v3】"
+      },
+      "id": "study-bible-joel-intro-p003-n008",
+      "primaryAnchor": "Joel.1.1",
+      "searchText": "约珥书 导论：大纲\n一、犹大受审判与耶和华的日子（11-2:17）（一）蝗虫入侵：耶和华日子的先兆（1:1-20）（二）军队入侵：耶和华的日子来到（2:1-17）二、耶和华的怜悯和列国受审判（2:18-3:21）（一）怜悯：耶和华以复兴他的百姓作为回应（2:…\n一、犹大受审判与耶和华的日子（11-2:17）（一）蝗虫入侵：耶和华日子的先兆（1:1-20）（二）军队入侵：耶和华的日子来到（2:1-17）二、耶和华的怜悯和列国受审判（2:18-3:21）（一）怜悯：耶和华以复兴他的百姓作为回应（2:18-32）（二）审判：耶和华审判列国，并住在他的百姓中间（3:1-21）\n导论：大纲\n圣经研修本 29_约珥书【codex-v3】",
+      "source": "圣经研修本 29_约珥书【codex-v3】",
+      "summary": "一、犹大受审判与耶和华的日子（11-2:17）（一）蝗虫入侵：耶和华日子的先兆（1:1-20）（二）军队入侵：耶和华的日子来到（2:1-17）二、耶和华的怜悯和列国受审判（2:18-3:21）（一）怜悯：耶和华以复兴他的百姓作为回应（2:…",
+      "title": "约珥书 导论：大纲",
+      "type": "commentary",
+      "verses": [
+        "Joel.1.1"
+      ]
+    }
+  ]
+}

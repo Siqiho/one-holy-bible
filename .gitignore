@@ -22,3 +22,9 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Private source resources and stale workbench exports
+public/resources/
+src/assets/resources/
+src/data/generated/workbench*.json
+!src/data/generated/workbenchSyncedResources【codex-v4】.json

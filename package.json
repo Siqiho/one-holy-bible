@@ -6,10 +6,12 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
+    "generate:public-data": "node scripts/generatePublicBibleData.mjs --bible src/data/generated/bibleLibrary.json --resources src/data/generated/workbenchSyncedResources【codex-v4】.json --output public/data --release-version 0.1.0",
     "preview": "vite preview",
     "test": "vitest run",
     "test:watch": "vitest",
-    "tauri": "tauri"
+    "tauri": "tauri",
+    "validate:public-data": "node scripts/generatePublicBibleData.mjs --validate-only public/data"
   },
   "dependencies": {
     "@dnd-kit/core": "^6.3.1",

@@ -25,4 +25,4 @@ npm run build
 
 Keep pull requests focused. Add or update tests for behavior changes, explain any data-source or rights implications, and do not commit local paths, private source files, generated image libraries, credentials, or service endpoints.
 
-Generated `public/data` changes must be produced by the checked-in generator and committed together with their source-code changes. The private source inputs named by `npm run generate:public-data` are maintainer-side release inputs and are not part of the public repository.
+Generated `public/data` changes must be produced by the checked-in generator and committed together with their source-code changes. Maintainers pass release inputs explicitly after `npm run generate:public-data --`; source datasets are not part of the public repository.

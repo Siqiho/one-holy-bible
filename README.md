@@ -52,10 +52,10 @@ npx tsc --noEmit
 npm run build
 ```
 
-Maintainers can regenerate `public/data` after placing the separately maintained source datasets at the input paths configured in `package.json`:
+Maintainers can regenerate `public/data` by passing separately maintained source datasets explicitly on the command line:
 
 ```bash
-npm run generate:public-data
+npm run generate:public-data -- --bible path/to/bible.json --resources path/to/resources.json --output public/data --release-version 0.1.0
 ```
 
 The source-import pipeline is intentionally kept outside this public repository. Contributors can use the checked-in, book-scoped packages and run `npm run validate:public-data` to verify their schemas, hashes, counts, and release hygiene.

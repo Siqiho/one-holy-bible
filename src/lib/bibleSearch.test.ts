@@ -1,21 +1,198 @@
 import { describe, expect, it } from "vitest";
-import { cuvGenesis1, kjvGenesis1, sampleResources } from "../data/sampleLibrary";
-import { searchBibleText } from "./bibleSearch";
+import { cuvBible, kjvBible } from "../data/bibleLibrary";
+import { sampleResources } from "../data/sampleLibrary";
+import { createBibleSearchIndex, searchBibleText } from "./bibleSearch";
+import type { PublicScriptureSearchEntry } from "../data/publicData";
 
 describe("searchBibleText", () => {
+  it("keeps existing result shape compatible", () => {
+    expect(searchBibleText([cuvBible, kjvBible], "created")[0]).toEqual({
+      verseId: "Gen.1.1",
+      versionId: "kjv",
+      versionLabel: "KJV",
+      text: "In the beginning God created the heaven and the earth.",
+    });
+  });
+
   it("searches Chinese and KJV Bible text", () => {
-    expect(searchBibleText([cuvGenesis1, kjvGenesis1], "created")).toEqual([
-      {
-        verseId: "Gen.1.1",
-        versionId: "kjv",
-        versionLabel: "KJV",
-        text: "In the beginning God created the heaven and the earth.",
-      },
-    ]);
+    expect(searchBibleText([cuvBible, kjvBible], "created")).toContainEqual({
+      verseId: "Gen.1.1",
+      versionId: "kjv",
+      versionLabel: "KJV",
+      text: "In the beginning God created the heaven and the earth.",
+    });
   });
 
   it("does not search resource bodies", () => {
-    expect(sampleResources[0].body).toContain("宇宙");
-    expect(searchBibleText([cuvGenesis1, kjvGenesis1], "宇宙")).toEqual([]);
+    const htmlResource = sampleResources.find((resource) => resource.id === "gen-1-1-html");
+    expect(htmlResource?.body).toContain("词语关系图");
+    expect(searchBibleText([cuvBible, kjvBible], "词语关系图")).toEqual([]);
+  });
+
+  it("searches non-Genesis verses in the full Bible library", () => {
+    expect(searchBibleText([cuvBible, kjvBible], "For God so loved the world")).toContainEqual({
+      verseId: "John.3.16",
+      versionId: "kjv",
+      versionLabel: "KJV",
+      text: expect.stringContaining("For God so loved the world"),
+    });
+
+    expect(searchBibleText([cuvBible, kjvBible], "神爱世人")).toContainEqual({
+      verseId: "John.3.16",
+      versionId: "cuv",
+      versionLabel: "和合本",
+      text: expect.stringContaining("神爱世人"),
+    });
+
+    expect(searchBibleText([cuvBible, kjvBible], "愿主耶稣的恩惠")).toContainEqual({
+      verseId: "Rev.22.21",
+      versionId: "cuv",
+      versionLabel: "和合本",
+      text: expect.stringContaining("愿主耶稣的恩惠"),
+    });
+  });
+});
+
+describe("createBibleSearchIndex", () => {
+  it("reuses an index per versions array and does not reread verse text per query", () => {
+    let textReads = 0;
+    const versions = [
+      {
+        id: "test",
+        label: "Test",
+        language: "en",
+        verses: [
+          {
+            id: "Gen.1.1" as const,
+            book: "Gen",
+            chapter: 1,
+            verse: 1,
+            get text() {
+              textReads += 1;
+              return "Alpha beta alpha";
+            },
+          },
+        ],
+      },
+    ];
+
+    const index = createBibleSearchIndex(versions);
+    const readsAfterIndexing = textReads;
+
+    expect(createBibleSearchIndex(versions)).toBe(index);
+    expect(index.search("alpha").totalCount).toBe(1);
+    expect(index.search("beta").totalCount).toBe(1);
+    expect(textReads).toBe(readsAfterIndexing);
+  });
+
+  it("searches CUV and KJV Bible text with metadata and counts", () => {
+    const index = createBibleSearchIndex([cuvBible, kjvBible]);
+
+    const english = index.search("created");
+    expect(english.totalCount).toBeGreaterThan(0);
+    expect(english.results[0]).toMatchObject({
+      verseId: "Gen.1.1",
+      versionId: "kjv",
+      versionLabel: "KJV",
+      book: "Gen",
+      chapter: 1,
+      verse: 1,
+      text: "In the beginning God created the heaven and the earth.",
+      matchRanges: [{ start: 21, end: 28 }],
+    });
+
+    const chinese = index.search("神爱世人");
+    expect(chinese.totalCount).toBeGreaterThan(0);
+    expect(chinese.results).toContainEqual(
+      expect.objectContaining({
+        verseId: "John.3.16",
+        versionId: "cuv",
+        versionLabel: "和合本",
+        book: "John",
+        chapter: 3,
+        verse: 16,
+        text: expect.stringContaining("神爱世人"),
+        matchRanges: expect.arrayContaining([expect.objectContaining({ start: expect.any(Number), end: expect.any(Number) })]),
+      }),
+    );
+  });
+
+  it("does not search resource bodies", () => {
+    const htmlResource = sampleResources.find((resource) => resource.id === "gen-1-1-html");
+    expect(htmlResource?.body).toContain("词语关系图");
+
+    const index = createBibleSearchIndex([cuvBible, kjvBible]);
+    expect(index.search("词语关系图")).toEqual({ totalCount: 0, results: [] });
+  });
+
+  it("filters by version", () => {
+    const index = createBibleSearchIndex([cuvBible, kjvBible]);
+
+    expect(index.search("God", { version: "kjv" }).results.every((result) => result.versionId === "kjv")).toBe(true);
+    expect(index.search("God", { version: "cuv" })).toEqual({ totalCount: 0, results: [] });
+  });
+
+  it("filters by old testament, new testament, and exact book", () => {
+    const index = createBibleSearchIndex([cuvBible, kjvBible]);
+
+    expect(index.search("God", { scope: "old" }).results.every((result) => result.book !== "John")).toBe(true);
+    expect(index.search("For God so loved the world", { scope: "old" })).toEqual({ totalCount: 0, results: [] });
+    expect(index.search("For God so loved the world", { scope: "new" }).results).toContainEqual(
+      expect.objectContaining({ verseId: "John.3.16", book: "John" }),
+    );
+    expect(index.search("created", { scope: "John" })).toEqual({ totalCount: 0, results: [] });
+    expect(index.search("For God so loved the world", { scope: "John" }).results).toContainEqual(
+      expect.objectContaining({ verseId: "John.3.16", book: "John" }),
+    );
+  });
+
+  it("returns all match ranges for a repeated Chinese query", () => {
+    const repeatedCuv = {
+      ...cuvBible,
+      verses: [
+        {
+          id: "Gen.1.1" as const,
+          book: "Gen",
+          chapter: 1,
+          verse: 1,
+          text: "神说神爱神",
+        },
+      ],
+    };
+    const index = createBibleSearchIndex([repeatedCuv]);
+
+    expect(index.search("神").results[0]).toMatchObject({
+      matchRanges: [
+        { start: 0, end: 1 },
+        { start: 2, end: 3 },
+        { start: 4, end: 5 },
+      ],
+    });
+  });
+
+  it("limits returned results while preserving total count", () => {
+    const index = createBibleSearchIndex([cuvBible, kjvBible]);
+
+    const unbounded = index.search("God");
+    const limited = index.search("God", { maxResults: 3 });
+
+    expect(unbounded.totalCount).toBeGreaterThan(3);
+    expect(limited.results).toHaveLength(3);
+    expect(limited.totalCount).toBe(unbounded.totalCount);
+  });
+});
+
+describe("createPublicScriptureSearchIndex", () => {
+  it("searches a lightweight whole-Bible index without loading book payloads", async () => {
+    const { createPublicScriptureSearchIndex } = await import("./bibleSearch");
+    const entries: PublicScriptureSearchEntry[] = [
+      { verseId: "Gen.1.1", versionId: "kjv", versionLabel: "KJV", book: "Gen", chapter: 1, verse: 1, text: "In the beginning" },
+      { verseId: "John.3.16", versionId: "kjv", versionLabel: "KJV", book: "John", chapter: 3, verse: 16, text: "For God so loved the world" },
+    ];
+
+    expect(createPublicScriptureSearchIndex(entries).search("loved", { scope: "new" })).toEqual({
+      totalCount: 1,
+      results: [expect.objectContaining({ verseId: "John.3.16", book: "John", matchRanges: [{ start: 11, end: 16 }] })],
+    });
   });
 });

@@ -2,7 +2,7 @@
 
 Date: 2026-07-14 (Asia/Shanghai)
 
-Verified source commit: `864bc0c69396414296f3e11d0f844a94fb2b668c`
+Verified source commit: `097c9ea80d54a49f7308f0ddf5ef6091eaaf2e90`
 
 ## Scope
 
@@ -28,14 +28,14 @@ npm audit --omit=dev
 Results:
 
 - Public data: 66 books; 31,102 CUV verses; 31,102 KJV verses; 11,124 explanatory text cards; 62,204 search entries; 0 image cards; 0 unsafe matches.
-- Repository hygiene: 146 source-commit files; 54,966,350 bytes; 0 files over 50 MiB; 0 forbidden matches.
-- Tests: 15 files and 224 tests passed, including 17 generator determinism, sanitization, and tamper-rejection tests.
+- Repository hygiene: 146 source-commit files; 54,975,764 bytes; 0 files over 50 MiB; 0 forbidden matches.
+- Tests: 15 files and 230 tests passed, including 23 generator determinism, sanitization, tamper-rejection, output-boundary, symlink, and failure-preservation tests.
 - Type checks: application and Node/Vite configuration passed.
 - Production build: passed; 73 files, including exactly 66 book packages; 59,888 KiB total; no private resource directory.
 - Production dependency audit: 0 vulnerabilities.
 - Full development dependency audit: 2 low and 2 high advisories remain in build/test tooling; no production advisory was reported.
 
-The hygiene test and command reject forbidden tracked directories, personal local paths, known local-only service addresses, private payload/field names, high-confidence credential patterns, and individual files larger than 50 MiB. The public-data validator also reconciles each manifest count, byte size, SHA-256 digest, scripture coordinate, text-card schema, and search-index entry. Generator input paths are supplied explicitly through CLI arguments; no private source location is embedded in repository metadata or scripts.
+The hygiene test and command reject forbidden tracked directories, personal local paths, known local-only service addresses, private payload/field names, high-confidence credential patterns, and individual files larger than 50 MiB. The public-data validator also reconciles each manifest count, byte size, SHA-256 digest, scripture coordinate, text-card schema, and search-index entry. Generator input paths are supplied explicitly through CLI arguments; no private source location is embedded in repository metadata or scripts. Before replacement, the generator resolves protected and input paths, rejects overlaps and symbolic links, requires an existing target to have the public-data structure, builds into a unique bounded sibling, validates it, and only then swaps it into place. A late generation failure leaves the previous valid output unchanged.
 
 ## Main and failure paths
 

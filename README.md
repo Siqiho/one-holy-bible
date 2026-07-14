@@ -58,6 +58,8 @@ Maintainers can regenerate `public/data` by passing separately maintained source
 npm run generate:public-data -- --bible path/to/bible.json --resources path/to/resources.json --output public/data --release-version 0.1.0
 ```
 
+The output must be a new directory or an existing generator-owned public-data directory. Protected roots, source overlaps, symbolic links, and unrelated existing directories are rejected; replacement is assembled in a temporary sibling before the previous valid output is swapped out.
+
 The source-import pipeline is intentionally kept outside this public repository. Contributors can use the checked-in, book-scoped packages and run `npm run validate:public-data` to verify their schemas, hashes, counts, and release hygiene.
 
 ## Tauri status

@@ -53,6 +53,27 @@ function jsonResponse(value: unknown, status = 200): Response {
   });
 }
 
+function deferred<T>() {
+  let resolve!: (value: T | PromiseLike<T>) => void;
+  let reject!: (reason?: unknown) => void;
+  const promise = new Promise<T>((resolvePromise, rejectPromise) => {
+    resolve = resolvePromise;
+    reject = rejectPromise;
+  });
+  return { promise, reject, resolve };
+}
+
+const unsafePublicUrls = [
+  "/data/../api/private",
+  "/data/%2e%2e/api/private",
+  "/data/%2E%2E/api/private",
+  "/data/%252e%252e/api/private",
+  "/data/..\\api/private",
+  "//evil.example/data/books/Gen.json",
+  "/data/books/Gen.json?next=/../api/private",
+  "/data/books/Gen.json#../api/private",
+];
+
 describe("public Bible data loading", () => {
   beforeEach(() => {
     resetPublicDataCache();
@@ -180,6 +201,93 @@ describe("public Bible data loading", () => {
     expect(serializedLogs).not.toContain("In the beginning");
     expect(serializedLogs).not.toContain("/Users/");
     expect(serializedLogs).not.toContain("/data/books/Gen.json");
+  });
+
+  it.each(unsafePublicUrls)("rejects unsafe normalized book URL %s before payload fetch", async (url) => {
+    const fetcher = vi.fn().mockResolvedValueOnce(jsonResponse({
+      ...validManifest,
+      books: [{ ...validManifest.books[0], url }],
+    }));
+
+    await expect(loadPublicBook("Gen", { fetcher })).rejects.toThrow(/rooted at \/data\//);
+    expect(fetcher).toHaveBeenCalledTimes(1);
+  });
+
+  it.each(unsafePublicUrls)("rejects unsafe normalized search URL %s before index fetch", async (url) => {
+    const fetcher = vi.fn().mockResolvedValueOnce(jsonResponse({
+      ...validManifest,
+      searchIndexUrl: url,
+    }));
+
+    await expect(loadPublicSearchIndex({ fetcher })).rejects.toThrow(/rooted at \/data\//);
+    expect(fetcher).toHaveBeenCalledTimes(1);
+  });
+
+  it("does not let a stale rejected manifest promise evict its post-reset replacement", async () => {
+    const firstResponse = deferred<Response>();
+    const secondResponse = deferred<Response>();
+    const firstFetcher = vi.fn(() => firstResponse.promise);
+    const secondFetcher = vi.fn(() => secondResponse.promise);
+
+    const first = loadPublicManifest({ fetcher: firstFetcher });
+    resetPublicDataCache();
+    const second = loadPublicManifest({ fetcher: secondFetcher });
+    firstResponse.reject(new Error("stale manifest failure"));
+    await expect(first).rejects.toThrow("stale manifest failure");
+
+    const third = loadPublicManifest({ fetcher: secondFetcher });
+    expect(third).toBe(second);
+    expect(secondFetcher).toHaveBeenCalledTimes(1);
+    secondResponse.resolve(jsonResponse(validManifest));
+    await expect(second).resolves.toEqual(validManifest);
+  });
+
+  it("does not let a stale rejected search promise evict its post-reset replacement", async () => {
+    await loadPublicManifest({ fetcher: vi.fn().mockResolvedValue(jsonResponse(validManifest)) });
+    const firstResponse = deferred<Response>();
+    const secondResponse = deferred<Response>();
+    const firstFetcher = vi.fn(() => firstResponse.promise);
+    const secondFetcher = vi.fn()
+      .mockResolvedValueOnce(jsonResponse(validManifest))
+      .mockImplementationOnce(() => secondResponse.promise);
+
+    const first = loadPublicSearchIndex({ fetcher: firstFetcher });
+    await vi.waitFor(() => expect(firstFetcher).toHaveBeenCalledTimes(1));
+    resetPublicDataCache();
+    const second = loadPublicSearchIndex({ fetcher: secondFetcher });
+    await vi.waitFor(() => expect(secondFetcher).toHaveBeenCalledTimes(2));
+    firstResponse.reject(new Error("stale search failure"));
+    await expect(first).rejects.toThrow("stale search failure");
+
+    const third = loadPublicSearchIndex({ fetcher: secondFetcher });
+    expect(third).toBe(second);
+    expect(secondFetcher).toHaveBeenCalledTimes(2);
+    secondResponse.resolve(jsonResponse(validSearchIndex));
+    await expect(second).resolves.toEqual(validSearchIndex);
+  });
+
+  it("does not let a stale rejected book promise evict its post-reset replacement", async () => {
+    await loadPublicManifest({ fetcher: vi.fn().mockResolvedValue(jsonResponse(validManifest)) });
+    const firstResponse = deferred<Response>();
+    const secondResponse = deferred<Response>();
+    const firstFetcher = vi.fn(() => firstResponse.promise);
+    const secondFetcher = vi.fn()
+      .mockResolvedValueOnce(jsonResponse(validManifest))
+      .mockImplementationOnce(() => secondResponse.promise);
+
+    const first = loadPublicBook("Gen", { fetcher: firstFetcher });
+    await vi.waitFor(() => expect(firstFetcher).toHaveBeenCalledTimes(1));
+    resetPublicDataCache();
+    const second = loadPublicBook("Gen", { fetcher: secondFetcher });
+    await vi.waitFor(() => expect(secondFetcher).toHaveBeenCalledTimes(2));
+    firstResponse.reject(new Error("stale book failure"));
+    await expect(first).rejects.toThrow("stale book failure");
+
+    const third = loadPublicBook("Gen", { fetcher: secondFetcher });
+    expect(third).toBe(second);
+    expect(secondFetcher).toHaveBeenCalledTimes(2);
+    secondResponse.resolve(jsonResponse(validGenesis));
+    await expect(second).resolves.toEqual(validGenesis);
   });
 });
 

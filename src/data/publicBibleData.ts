@@ -9,6 +9,7 @@ import {
 
 const MANIFEST_URL = "/data/manifest.json";
 const PUBLIC_DATA_URL_PREFIX = "/data/";
+const PUBLIC_DATA_URL_BASE = new URL("https://ohb.invalid/");
 const SEARCH_ENTRY_KEYS = new Set([
   "verseId",
   "versionId",
@@ -62,10 +63,40 @@ function failureKind(error: unknown): string {
 }
 
 function requirePublicDataUrl(url: string, label: string): string {
-  if (!url.startsWith(PUBLIC_DATA_URL_PREFIX)) {
+  let candidate = url;
+  const maximumDecodePasses = url.length + 1;
+
+  try {
+    for (let pass = 0; candidate.includes("%"); pass += 1) {
+      if (pass >= maximumDecodePasses) {
+        throw new Error("too many URL decoding passes");
+      }
+      candidate = decodeURIComponent(candidate);
+    }
+  } catch {
     throw new Error(`Unsafe public data: ${label} must be rooted at /data/`);
   }
-  return url;
+
+  if (
+    !candidate.startsWith("/")
+    || candidate.includes("\\")
+    || candidate.includes("?")
+    || candidate.includes("#")
+  ) {
+    throw new Error(`Unsafe public data: ${label} must be rooted at /data/`);
+  }
+
+  const normalized = new URL(candidate, PUBLIC_DATA_URL_BASE);
+  if (
+    normalized.origin !== PUBLIC_DATA_URL_BASE.origin
+    || !normalized.pathname.startsWith(PUBLIC_DATA_URL_PREFIX)
+    || normalized.search !== ""
+    || normalized.hash !== ""
+  ) {
+    throw new Error(`Unsafe public data: ${label} must be rooted at /data/`);
+  }
+
+  return normalized.pathname;
 }
 
 async function fetchJson(url: string, fetcher: PublicDataFetcher): Promise<unknown> {
@@ -132,7 +163,7 @@ export function loadPublicManifest(options: PublicDataLoadOptions = {}): Promise
   const startedAt = now();
   logDevelopmentEvent("[public-data] manifest load started", {});
 
-  manifestPromise = fetchJson(MANIFEST_URL, fetcher)
+  const request = fetchJson(MANIFEST_URL, fetcher)
     .then(validatePublicManifest)
     .then((manifest) => {
       requirePublicDataUrl(manifest.searchIndexUrl, "manifest.searchIndexUrl");
@@ -147,7 +178,9 @@ export function loadPublicManifest(options: PublicDataLoadOptions = {}): Promise
       return manifest;
     })
     .catch((error: unknown) => {
-      manifestPromise = null;
+      if (manifestPromise === request) {
+        manifestPromise = null;
+      }
       logDevelopmentEvent("[public-data] manifest load failed", {
         durationMs: durationSince(startedAt),
         errorKind: failureKind(error),
@@ -155,7 +188,8 @@ export function loadPublicManifest(options: PublicDataLoadOptions = {}): Promise
       throw error;
     });
 
-  return manifestPromise;
+  manifestPromise = request;
+  return request;
 }
 
 export function loadPublicBook(
@@ -198,7 +232,9 @@ export function loadPublicBook(
     });
     return payload;
   })().catch((error: unknown) => {
-    bookPromises.delete(bookId);
+    if (bookPromises.get(bookId) === request) {
+      bookPromises.delete(bookId);
+    }
     logDevelopmentEvent("[public-data] book load failed", {
       bookId,
       durationMs: durationSince(startedAt),
@@ -221,7 +257,7 @@ export function loadPublicSearchIndex(
   const startedAt = now();
   logDevelopmentEvent("[public-data] search index load started", {});
 
-  searchIndexPromise = loadPublicManifest(options)
+  const request = loadPublicManifest(options)
     .then((manifest) => fetchJson(
       requirePublicDataUrl(manifest.searchIndexUrl, "manifest.searchIndexUrl"),
       options.fetcher ?? fetch,
@@ -235,7 +271,9 @@ export function loadPublicSearchIndex(
       return entries;
     })
     .catch((error: unknown) => {
-      searchIndexPromise = null;
+      if (searchIndexPromise === request) {
+        searchIndexPromise = null;
+      }
       logDevelopmentEvent("[public-data] search index load failed", {
         durationMs: durationSince(startedAt),
         errorKind: failureKind(error),
@@ -243,7 +281,8 @@ export function loadPublicSearchIndex(
       throw error;
     });
 
-  return searchIndexPromise;
+  searchIndexPromise = request;
+  return request;
 }
 
 export function resetPublicDataCache(): void {

@@ -1,0 +1,4507 @@
+{
+  "bookId": "Eccl",
+  "cuvVerses": [
+    {
+      "book": "Eccl",
+      "chapter": 1,
+      "id": "Eccl.1.1",
+      "text": "在耶路撒冷作王，大卫的儿子，传道者的言语。",
+      "verse": 1
+    },
+    {
+      "book": "Eccl",
+      "chapter": 1,
+      "id": "Eccl.1.2",
+      "text": "传道者说： “虚空的虚空， 虚空的虚空，凡事都是虚空。 ”",
+      "verse": 2
+    },
+    {
+      "book": "Eccl",
+      "chapter": 1,
+      "id": "Eccl.1.3",
+      "text": "人一切的劳碌， 就是他在日光之下的劳碌，有什么益处呢？",
+      "verse": 3
+    },
+    {
+      "book": "Eccl",
+      "chapter": 1,
+      "id": "Eccl.1.4",
+      "text": "一代过去，一代又来， 地却永远长存。",
+      "verse": 4
+    },
+    {
+      "book": "Eccl",
+      "chapter": 1,
+      "id": "Eccl.1.5",
+      "text": "日头出来，日头落下， 急归所出之地。",
+      "verse": 5
+    },
+    {
+      "book": "Eccl",
+      "chapter": 1,
+      "id": "Eccl.1.6",
+      "text": "风往南刮，又向北转， 不住地旋转，而且返回转行原道。",
+      "verse": 6
+    },
+    {
+      "book": "Eccl",
+      "chapter": 1,
+      "id": "Eccl.1.7",
+      "text": "江河都往海里流，海却不满； 江河从何处流，仍归还何处。",
+      "verse": 7
+    },
+    {
+      "book": "Eccl",
+      "chapter": 1,
+      "id": "Eccl.1.8",
+      "text": "万事令人厌烦（注：或作“万物满有困乏” ） ， 人不能说尽。 眼看，看不饱； 耳听，听不足。",
+      "verse": 8
+    },
+    {
+      "book": "Eccl",
+      "chapter": 1,
+      "id": "Eccl.1.9",
+      "text": "已有的事，后必再有； 已行的事，后必再行。 日光之下，并无新事。",
+      "verse": 9
+    },
+    {
+      "book": "Eccl",
+      "chapter": 1,
+      "id": "Eccl.1.10",
+      "text": "岂有一件事人能指着说这是新的？ 哪知，在我们以前的世代早已有了。",
+      "verse": 10
+    },
+    {
+      "book": "Eccl",
+      "chapter": 1,
+      "id": "Eccl.1.11",
+      "text": "已过的世代，无人记念； 将来的世代，后来的人也不记念。",
+      "verse": 11
+    },
+    {
+      "book": "Eccl",
+      "chapter": 1,
+      "id": "Eccl.1.12",
+      "text": "我传道者在耶路撒冷作过以色列的王。",
+      "verse": 12
+    },
+    {
+      "book": "Eccl",
+      "chapter": 1,
+      "id": "Eccl.1.13",
+      "text": "我专心用智慧寻求查究天下所做的一切事，乃知 神叫世人所经练的是极重的劳苦。",
+      "verse": 13
+    },
+    {
+      "book": "Eccl",
+      "chapter": 1,
+      "id": "Eccl.1.14",
+      "text": "我见日光之下所做的一切事，都是虚空，都是捕风。",
+      "verse": 14
+    },
+    {
+      "book": "Eccl",
+      "chapter": 1,
+      "id": "Eccl.1.15",
+      "text": "弯曲的不能变直； 缺少的不能足数。",
+      "verse": 15
+    },
+    {
+      "book": "Eccl",
+      "chapter": 1,
+      "id": "Eccl.1.16",
+      "text": "我心里议论说： “我得了大智慧， 胜过我以前在耶路撒冷的众人， 而且我心中多经历智慧和知识的事。 ”",
+      "verse": 16
+    },
+    {
+      "book": "Eccl",
+      "chapter": 1,
+      "id": "Eccl.1.17",
+      "text": "我又专心察明智慧、狂妄和愚昧，乃知这也是捕风。",
+      "verse": 17
+    },
+    {
+      "book": "Eccl",
+      "chapter": 1,
+      "id": "Eccl.1.18",
+      "text": "因为多有智慧，就多有愁烦； 加增知识的，就加增忧伤。",
+      "verse": 18
+    },
+    {
+      "book": "Eccl",
+      "chapter": 2,
+      "id": "Eccl.2.1",
+      "text": "我心里说： “来吧！我以喜乐试试你，你好享福。 ”谁知，这也是虚空。",
+      "verse": 1
+    },
+    {
+      "book": "Eccl",
+      "chapter": 2,
+      "id": "Eccl.2.2",
+      "text": "我指嬉笑说： “这是狂妄” ；论喜乐说： “有何功效呢？”",
+      "verse": 2
+    },
+    {
+      "book": "Eccl",
+      "chapter": 2,
+      "id": "Eccl.2.3",
+      "text": "我心里察究，如何用酒使我肉体舒畅，我心却仍以智慧引导我；又如何持住愚昧，等我看明世人，在 天下一生当行何事为美。",
+      "verse": 3
+    },
+    {
+      "book": "Eccl",
+      "chapter": 2,
+      "id": "Eccl.2.4",
+      "text": "我为自己动大工程，建造房屋，栽种葡萄园；",
+      "verse": 4
+    },
+    {
+      "book": "Eccl",
+      "chapter": 2,
+      "id": "Eccl.2.5",
+      "text": "修造园囿，在其中栽种各样果木树；",
+      "verse": 5
+    },
+    {
+      "book": "Eccl",
+      "chapter": 2,
+      "id": "Eccl.2.6",
+      "text": "挖造水池，用以浇灌嫩小的树木。",
+      "verse": 6
+    },
+    {
+      "book": "Eccl",
+      "chapter": 2,
+      "id": "Eccl.2.7",
+      "text": "我买了仆婢，也有生在家中的仆婢；又有许多牛群羊群，胜过以前在耶路撒冷众人所有的。",
+      "verse": 7
+    },
+    {
+      "book": "Eccl",
+      "chapter": 2,
+      "id": "Eccl.2.8",
+      "text": "我又为自己积蓄金银和君王的财宝，并各省的财宝；又得唱歌的男女和世人所喜爱的物，并许多的妃 嫔。",
+      "verse": 8
+    },
+    {
+      "book": "Eccl",
+      "chapter": 2,
+      "id": "Eccl.2.9",
+      "text": "这样，我就日见昌盛，胜过以前在耶路撒冷的众人。我的智慧仍然存留。",
+      "verse": 9
+    },
+    {
+      "book": "Eccl",
+      "chapter": 2,
+      "id": "Eccl.2.10",
+      "text": "凡我眼所求的，我没有留下不给他的；我心所乐的，我没有禁止不享受的；因我的心为我一切所劳 碌的快乐，这就是我从劳碌中所得的分。",
+      "verse": 10
+    },
+    {
+      "book": "Eccl",
+      "chapter": 2,
+      "id": "Eccl.2.11",
+      "text": "后来，我察看我手所经营的一切事和我劳碌所成的功，谁知都是虚空，都是捕风，在日光之下毫无 益处。",
+      "verse": 11
+    },
+    {
+      "book": "Eccl",
+      "chapter": 2,
+      "id": "Eccl.2.12",
+      "text": "我转念观看智慧、狂妄和愚昧。在王以后而来的人还能做什么呢？也不过行早先所行的就是了。",
+      "verse": 12
+    },
+    {
+      "book": "Eccl",
+      "chapter": 2,
+      "id": "Eccl.2.13",
+      "text": "我便看出智慧胜过愚昧，如同光明胜过黑暗。",
+      "verse": 13
+    },
+    {
+      "book": "Eccl",
+      "chapter": 2,
+      "id": "Eccl.2.14",
+      "text": "智慧人的眼目光明（注：原文作“在他头上” ） ；愚昧人在黑暗里行。我却看明有一件事，这两等人 都必遇见。",
+      "verse": 14
+    },
+    {
+      "book": "Eccl",
+      "chapter": 2,
+      "id": "Eccl.2.15",
+      "text": "我就心里说： “愚昧人所遇见的，我也必遇见，我为何更有智慧呢？”我心里说： “这也是虚空。 ”",
+      "verse": 15
+    },
+    {
+      "book": "Eccl",
+      "chapter": 2,
+      "id": "Eccl.2.16",
+      "text": "智慧人和愚昧人一样，永远无人记念，因为日后都被忘记；可叹智慧人死亡，与愚昧人无异。",
+      "verse": 16
+    },
+    {
+      "book": "Eccl",
+      "chapter": 2,
+      "id": "Eccl.2.17",
+      "text": "我所以恨恶生命，因为在日光之下所行的事，我都以为烦恼，都是虚空，都是捕风。",
+      "verse": 17
+    },
+    {
+      "book": "Eccl",
+      "chapter": 2,
+      "id": "Eccl.2.18",
+      "text": "我恨恶一切的劳碌，就是我在日光之下的劳碌，因为我得来的必留给我以后的人。",
+      "verse": 18
+    },
+    {
+      "book": "Eccl",
+      "chapter": 2,
+      "id": "Eccl.2.19",
+      "text": "那人是智慧是愚昧，谁能知道？他竟要管理我劳碌所得的，就是我在日光之下用智慧所得的。这也 是虚空。",
+      "verse": 19
+    },
+    {
+      "book": "Eccl",
+      "chapter": 2,
+      "id": "Eccl.2.20",
+      "text": "故此，我转想我在日光之下所劳碌的一切工作，心便绝望。",
+      "verse": 20
+    },
+    {
+      "book": "Eccl",
+      "chapter": 2,
+      "id": "Eccl.2.21",
+      "text": "因为有人用智慧、知识、灵巧所劳碌得来的，却要留给未曾劳碌的人为分。这也是虚空，也是大患！",
+      "verse": 21
+    },
+    {
+      "book": "Eccl",
+      "chapter": 2,
+      "id": "Eccl.2.22",
+      "text": "人在日光之下劳碌累心，在他一切的劳碌上得着什么呢？",
+      "verse": 22
+    },
+    {
+      "book": "Eccl",
+      "chapter": 2,
+      "id": "Eccl.2.23",
+      "text": "因为他日日忧虑，他的劳苦成为愁烦，连夜间心也不安。这也是虚空。",
+      "verse": 23
+    },
+    {
+      "book": "Eccl",
+      "chapter": 2,
+      "id": "Eccl.2.24",
+      "text": "人莫强如吃喝，且在劳碌中享福，我看这也是出于 神的手。",
+      "verse": 24
+    },
+    {
+      "book": "Eccl",
+      "chapter": 2,
+      "id": "Eccl.2.25",
+      "text": "论到吃用、享福，谁能胜过我呢？",
+      "verse": 25
+    },
+    {
+      "book": "Eccl",
+      "chapter": 2,
+      "id": "Eccl.2.26",
+      "text": "神喜悦谁，就给谁智慧、知识和喜乐，惟有罪人， 神使他劳苦，叫他将所收聚的、所堆积的归给 神所喜悦的人。这也是虚空，也是捕风。",
+      "verse": 26
+    },
+    {
+      "book": "Eccl",
+      "chapter": 3,
+      "id": "Eccl.3.1",
+      "text": "凡事都有定期， 天下万务都有定时。",
+      "verse": 1
+    },
+    {
+      "book": "Eccl",
+      "chapter": 3,
+      "id": "Eccl.3.2",
+      "text": "生有时，死有时； 栽种有时，拔出所栽种的也有时；",
+      "verse": 2
+    },
+    {
+      "book": "Eccl",
+      "chapter": 3,
+      "id": "Eccl.3.3",
+      "text": "杀戮有时，医治有时； 拆毁有时，建造有时；",
+      "verse": 3
+    },
+    {
+      "book": "Eccl",
+      "chapter": 3,
+      "id": "Eccl.3.4",
+      "text": "哭有时，笑有时； 哀恸有时，跳舞有时；",
+      "verse": 4
+    },
+    {
+      "book": "Eccl",
+      "chapter": 3,
+      "id": "Eccl.3.5",
+      "text": "抛掷石头有时，堆聚石头有时； 怀抱有时，不怀抱有时；",
+      "verse": 5
+    },
+    {
+      "book": "Eccl",
+      "chapter": 3,
+      "id": "Eccl.3.6",
+      "text": "寻找有时，失落有时； 保守有时，舍弃有时；",
+      "verse": 6
+    },
+    {
+      "book": "Eccl",
+      "chapter": 3,
+      "id": "Eccl.3.7",
+      "text": "撕裂有时，缝补有时； 静默有时，言语有时；",
+      "verse": 7
+    },
+    {
+      "book": "Eccl",
+      "chapter": 3,
+      "id": "Eccl.3.8",
+      "text": "喜爱有时，恨恶有时； 争战有时，和好有时。",
+      "verse": 8
+    },
+    {
+      "book": "Eccl",
+      "chapter": 3,
+      "id": "Eccl.3.9",
+      "text": "这样看来，做事的人在他的劳碌上有什么益处呢？",
+      "verse": 9
+    },
+    {
+      "book": "Eccl",
+      "chapter": 3,
+      "id": "Eccl.3.10",
+      "text": "我见 神叫世人劳苦，使他们在其中受经练。",
+      "verse": 10
+    },
+    {
+      "book": "Eccl",
+      "chapter": 3,
+      "id": "Eccl.3.11",
+      "text": "神造万物，各按其时成为美好，又将永生安置在世人心里（注： “永生”原文作“永远”)。然而 神 从始至终的作为，人不能参透。",
+      "verse": 11
+    },
+    {
+      "book": "Eccl",
+      "chapter": 3,
+      "id": "Eccl.3.12",
+      "text": "我知道世人，莫强如终身喜乐行善，",
+      "verse": 12
+    },
+    {
+      "book": "Eccl",
+      "chapter": 3,
+      "id": "Eccl.3.13",
+      "text": "并且人人吃喝，在他一切劳碌中享福，这也是 神的恩赐。",
+      "verse": 13
+    },
+    {
+      "book": "Eccl",
+      "chapter": 3,
+      "id": "Eccl.3.14",
+      "text": "我知道 神一切所做的都必永存， 无所增添， 无所减少。 神这样行， 是要人在他面前存敬畏的心。",
+      "verse": 14
+    },
+    {
+      "book": "Eccl",
+      "chapter": 3,
+      "id": "Eccl.3.15",
+      "text": "现今的事早先就有了，将来的事早已也有了，并且 神使已过的事重新再来（注：或作“并且 神 再寻回已过的事” ） 。",
+      "verse": 15
+    },
+    {
+      "book": "Eccl",
+      "chapter": 3,
+      "id": "Eccl.3.16",
+      "text": "我又见日光之下：在审判之处有奸恶，在公义之处也有奸恶。",
+      "verse": 16
+    },
+    {
+      "book": "Eccl",
+      "chapter": 3,
+      "id": "Eccl.3.17",
+      "text": "我心里说： “ 神必审判义人和恶人，因为在那里，各样事务，一切工作，都有定时。 ”",
+      "verse": 17
+    },
+    {
+      "book": "Eccl",
+      "chapter": 3,
+      "id": "Eccl.3.18",
+      "text": "我心里说： “这乃为世人的缘故，是 神要试验他们，使他们觉得自己不过像兽一样。",
+      "verse": 18
+    },
+    {
+      "book": "Eccl",
+      "chapter": 3,
+      "id": "Eccl.3.19",
+      "text": "因为世人遭遇的，兽也遭遇，所遭遇的都是一样：这个怎样死，那个也怎样死，气息都是一样。人 不能强于兽，都是虚空。",
+      "verse": 19
+    },
+    {
+      "book": "Eccl",
+      "chapter": 3,
+      "id": "Eccl.3.20",
+      "text": "都归一处，都是出于尘土，也都归于尘土。",
+      "verse": 20
+    },
+    {
+      "book": "Eccl",
+      "chapter": 3,
+      "id": "Eccl.3.21",
+      "text": "谁知道人的灵是往上升，兽的魂是下入地呢？”",
+      "verse": 21
+    },
+    {
+      "book": "Eccl",
+      "chapter": 3,
+      "id": "Eccl.3.22",
+      "text": "故此，我见人莫强如在他经营的事上喜乐，因为这是他的分；他身后的事，谁能使他回来得见呢？",
+      "verse": 22
+    },
+    {
+      "book": "Eccl",
+      "chapter": 4,
+      "id": "Eccl.4.1",
+      "text": "我又转念，见日光之下所行的一切欺压：看哪，受欺压的流泪，且无人安慰；欺压他们的有势力， 也无人安慰他们。",
+      "verse": 1
+    },
+    {
+      "book": "Eccl",
+      "chapter": 4,
+      "id": "Eccl.4.2",
+      "text": "因此，我赞叹那早已死的死人，胜过那还活着的活人。",
+      "verse": 2
+    },
+    {
+      "book": "Eccl",
+      "chapter": 4,
+      "id": "Eccl.4.3",
+      "text": "并且我以为那未曾生的，就是未见过日光之下恶事的，比这两等人更强。",
+      "verse": 3
+    },
+    {
+      "book": "Eccl",
+      "chapter": 4,
+      "id": "Eccl.4.4",
+      "text": "我又见人为一切的劳碌和各样灵巧的工作，就被邻舍嫉妒。这也是虚空，也是捕风。",
+      "verse": 4
+    },
+    {
+      "book": "Eccl",
+      "chapter": 4,
+      "id": "Eccl.4.5",
+      "text": "愚昧人抱着手，吃自己的肉。",
+      "verse": 5
+    },
+    {
+      "book": "Eccl",
+      "chapter": 4,
+      "id": "Eccl.4.6",
+      "text": "满了一把，得享安静，强如满了两把，劳碌捕风。",
+      "verse": 6
+    },
+    {
+      "book": "Eccl",
+      "chapter": 4,
+      "id": "Eccl.4.7",
+      "text": "我又转念，见日光之下有一件虚空的事：",
+      "verse": 7
+    },
+    {
+      "book": "Eccl",
+      "chapter": 4,
+      "id": "Eccl.4.8",
+      "text": "有人孤单无二，无子无兄，竟劳碌不息，眼目也不以钱财为足。他说： “我劳劳碌碌，刻苦自己，不 享福乐，到底是为谁呢？”这也是虚空，是极重的劳苦。",
+      "verse": 8
+    },
+    {
+      "book": "Eccl",
+      "chapter": 4,
+      "id": "Eccl.4.9",
+      "text": "两个人总比一个人好，因为二人劳碌同得美好的果效。",
+      "verse": 9
+    },
+    {
+      "book": "Eccl",
+      "chapter": 4,
+      "id": "Eccl.4.10",
+      "text": "若是跌倒，这人可以扶起他的同伴；若是孤身跌倒，没有别人扶起他来，这人就有祸了！",
+      "verse": 10
+    },
+    {
+      "book": "Eccl",
+      "chapter": 4,
+      "id": "Eccl.4.11",
+      "text": "再者，二人同睡，就都暖和；一人独睡，怎能暖和呢？",
+      "verse": 11
+    },
+    {
+      "book": "Eccl",
+      "chapter": 4,
+      "id": "Eccl.4.12",
+      "text": "有人攻胜孤身一人，若有二人便能敌挡他；三股合成的绳子不容易折断。",
+      "verse": 12
+    },
+    {
+      "book": "Eccl",
+      "chapter": 4,
+      "id": "Eccl.4.13",
+      "text": "贫穷而有智慧的少年人，胜过年老不肯纳谏的愚昧王。",
+      "verse": 13
+    },
+    {
+      "book": "Eccl",
+      "chapter": 4,
+      "id": "Eccl.4.14",
+      "text": "这人是从监牢中出来作王；在他国中，生来原是贫穷的。",
+      "verse": 14
+    },
+    {
+      "book": "Eccl",
+      "chapter": 4,
+      "id": "Eccl.4.15",
+      "text": "我见日光之下一切行动的活人，都随从那第二位，就是起来代替老王的少年人。",
+      "verse": 15
+    },
+    {
+      "book": "Eccl",
+      "chapter": 4,
+      "id": "Eccl.4.16",
+      "text": "他所治理的众人，就是他的百姓，多得无数。在他后来的人，尚且不喜悦他。这真是虚空，也是捕 风。",
+      "verse": 16
+    },
+    {
+      "book": "Eccl",
+      "chapter": 5,
+      "id": "Eccl.5.1",
+      "text": "你到 神的殿要谨慎脚步。因为近前听，胜过愚昧人献祭（注：或作“胜过献愚昧人的祭” ） ，他 们本不知道所做的是恶。",
+      "verse": 1
+    },
+    {
+      "book": "Eccl",
+      "chapter": 5,
+      "id": "Eccl.5.2",
+      "text": "你在 神面前不可冒失开口，也不可心急发言。因为 神在天上，你在地下，所以你的言语要寡少。",
+      "verse": 2
+    },
+    {
+      "book": "Eccl",
+      "chapter": 5,
+      "id": "Eccl.5.3",
+      "text": "事务多，就令人做梦；言语多，就显出愚昧。",
+      "verse": 3
+    },
+    {
+      "book": "Eccl",
+      "chapter": 5,
+      "id": "Eccl.5.4",
+      "text": "你向 神许愿，偿还不可迟延，因他不喜悦愚昧人，所以你许的愿应当偿还。",
+      "verse": 4
+    },
+    {
+      "book": "Eccl",
+      "chapter": 5,
+      "id": "Eccl.5.5",
+      "text": "你许愿不还，不如不许。",
+      "verse": 5
+    },
+    {
+      "book": "Eccl",
+      "chapter": 5,
+      "id": "Eccl.5.6",
+      "text": "不可任你的口使肉体犯罪，也不可在祭司（注：原文作“使者” ）面前说是错许了。为何使 神因你 的声音发怒，败坏你手所做的呢？",
+      "verse": 6
+    },
+    {
+      "book": "Eccl",
+      "chapter": 5,
+      "id": "Eccl.5.7",
+      "text": "多梦和多言，其中多有虚幻。你只要敬畏 神。",
+      "verse": 7
+    },
+    {
+      "book": "Eccl",
+      "chapter": 5,
+      "id": "Eccl.5.8",
+      "text": "你若在一省之中见穷人受欺压，并夺去公义公平的事，不要因此诧异。因有一位高过居高位的鉴察， 在他们以上还有更高的。",
+      "verse": 8
+    },
+    {
+      "book": "Eccl",
+      "chapter": 5,
+      "id": "Eccl.5.9",
+      "text": "况且地的益处归众人，就是君王也受田地的供应。",
+      "verse": 9
+    },
+    {
+      "book": "Eccl",
+      "chapter": 5,
+      "id": "Eccl.5.10",
+      "text": "贪爱银子的，不因得银子知足；贪爱丰富的，也不因得利益知足。这也是虚空。",
+      "verse": 10
+    },
+    {
+      "book": "Eccl",
+      "chapter": 5,
+      "id": "Eccl.5.11",
+      "text": "货物增添，吃的人也增添，物主得什么益处呢？不过眼看而已。",
+      "verse": 11
+    },
+    {
+      "book": "Eccl",
+      "chapter": 5,
+      "id": "Eccl.5.12",
+      "text": "劳碌的人不拘吃多吃少，睡得香甜；富足人的丰满，却不容他睡觉。",
+      "verse": 12
+    },
+    {
+      "book": "Eccl",
+      "chapter": 5,
+      "id": "Eccl.5.13",
+      "text": "我见日光之下，有一宗大祸患：就是财主积存资财，反害自己。",
+      "verse": 13
+    },
+    {
+      "book": "Eccl",
+      "chapter": 5,
+      "id": "Eccl.5.14",
+      "text": "因遭遇祸患，这些资财就消灭；那人若生了儿子，手里也一无所有。",
+      "verse": 14
+    },
+    {
+      "book": "Eccl",
+      "chapter": 5,
+      "id": "Eccl.5.15",
+      "text": "他怎样从母胎赤身而来，也必照样赤身而去；他所劳碌得来的，手中分毫不能带去。",
+      "verse": 15
+    },
+    {
+      "book": "Eccl",
+      "chapter": 5,
+      "id": "Eccl.5.16",
+      "text": "他来的情形怎样，他去的情形也怎样。这也是一宗大祸患。他为风劳碌有什么益处呢？",
+      "verse": 16
+    },
+    {
+      "book": "Eccl",
+      "chapter": 5,
+      "id": "Eccl.5.17",
+      "text": "并且他终身在黑暗中吃喝，多有烦恼，又有病患呕气。",
+      "verse": 17
+    },
+    {
+      "book": "Eccl",
+      "chapter": 5,
+      "id": "Eccl.5.18",
+      "text": "我所见为善为美的，就是人在 神赐他一生的日子吃喝，享受日光之下劳碌得来的好处，因为这是 他的分。",
+      "verse": 18
+    },
+    {
+      "book": "Eccl",
+      "chapter": 5,
+      "id": "Eccl.5.19",
+      "text": "神赐人资财丰富，使他能以吃用，能取自己的分，在他劳碌中喜乐，这乃是 神的恩赐。",
+      "verse": 19
+    },
+    {
+      "book": "Eccl",
+      "chapter": 5,
+      "id": "Eccl.5.20",
+      "text": "他不多思念自己一生的年日，因为 神应他的心使他喜乐。",
+      "verse": 20
+    },
+    {
+      "book": "Eccl",
+      "chapter": 6,
+      "id": "Eccl.6.1",
+      "text": "我见日光之下有一宗祸患重压在人身上，",
+      "verse": 1
+    },
+    {
+      "book": "Eccl",
+      "chapter": 6,
+      "id": "Eccl.6.2",
+      "text": "就是人蒙 神赐他资财、丰富、尊荣，以致他心里所愿的一样都不缺，只是 神使他不能吃用， 反有外人来吃用。这是虚空，也是祸患。",
+      "verse": 2
+    },
+    {
+      "book": "Eccl",
+      "chapter": 6,
+      "id": "Eccl.6.3",
+      "text": "人若生一百个儿子，活许多岁数，以致他的年日甚多，心里却不得满享福乐，又不得埋葬；据我说， 那不到期而落的胎比他倒好。",
+      "verse": 3
+    },
+    {
+      "book": "Eccl",
+      "chapter": 6,
+      "id": "Eccl.6.4",
+      "text": "因为虚虚而来，暗暗而去，名字被黑暗遮蔽，",
+      "verse": 4
+    },
+    {
+      "book": "Eccl",
+      "chapter": 6,
+      "id": "Eccl.6.5",
+      "text": "并且没有见过天日，也毫无知觉，这胎比那人倒享安息。",
+      "verse": 5
+    },
+    {
+      "book": "Eccl",
+      "chapter": 6,
+      "id": "Eccl.6.6",
+      "text": "那人虽然活千年，再活千年，却不享福，众人岂不都归一个地方去吗？",
+      "verse": 6
+    },
+    {
+      "book": "Eccl",
+      "chapter": 6,
+      "id": "Eccl.6.7",
+      "text": "人的劳碌都为口腹，心里却不知足。",
+      "verse": 7
+    },
+    {
+      "book": "Eccl",
+      "chapter": 6,
+      "id": "Eccl.6.8",
+      "text": "这样看来，智慧人比愚昧人，有什么长处呢？穷人在众人面前知道如何行，有什么长处呢？",
+      "verse": 8
+    },
+    {
+      "book": "Eccl",
+      "chapter": 6,
+      "id": "Eccl.6.9",
+      "text": "眼睛所看的，比心里妄想的倒好。这也是虚空，也是捕风。",
+      "verse": 9
+    },
+    {
+      "book": "Eccl",
+      "chapter": 6,
+      "id": "Eccl.6.10",
+      "text": "先前所有的，早已起了名，并知道何为人，他也不能与那比自己力大的相争。",
+      "verse": 10
+    },
+    {
+      "book": "Eccl",
+      "chapter": 6,
+      "id": "Eccl.6.11",
+      "text": "加增虚浮的事既多，这与人有什么益处呢？",
+      "verse": 11
+    },
+    {
+      "book": "Eccl",
+      "chapter": 6,
+      "id": "Eccl.6.12",
+      "text": "人一生虚度的日子，就如影儿经过，谁知道什么与他有益呢？谁能告诉他身后在日光之下有什么事 呢？",
+      "verse": 12
+    },
+    {
+      "book": "Eccl",
+      "chapter": 7,
+      "id": "Eccl.7.1",
+      "text": "名誉强如美好的膏油； 人死的日子，胜过人生的日子。",
+      "verse": 1
+    },
+    {
+      "book": "Eccl",
+      "chapter": 7,
+      "id": "Eccl.7.2",
+      "text": "往遭丧的家去， 强如往宴乐的家去， 因为死是众人的结局， 活人也必将这事放在心上。",
+      "verse": 2
+    },
+    {
+      "book": "Eccl",
+      "chapter": 7,
+      "id": "Eccl.7.3",
+      "text": "忧愁强如喜笑， 因为面带愁容，终必使心喜乐。",
+      "verse": 3
+    },
+    {
+      "book": "Eccl",
+      "chapter": 7,
+      "id": "Eccl.7.4",
+      "text": "智慧人的心，在遭丧之家； 愚昧人的心，在快乐之家。",
+      "verse": 4
+    },
+    {
+      "book": "Eccl",
+      "chapter": 7,
+      "id": "Eccl.7.5",
+      "text": "听智慧人的责备， 强如听愚昧人的歌唱。",
+      "verse": 5
+    },
+    {
+      "book": "Eccl",
+      "chapter": 7,
+      "id": "Eccl.7.6",
+      "text": "愚昧人的笑声， 好像锅下烧荆棘的爆声， 这也是虚空。",
+      "verse": 6
+    },
+    {
+      "book": "Eccl",
+      "chapter": 7,
+      "id": "Eccl.7.7",
+      "text": "勒索使智慧人变为愚妄， 贿赂能败坏人的慧心。",
+      "verse": 7
+    },
+    {
+      "book": "Eccl",
+      "chapter": 7,
+      "id": "Eccl.7.8",
+      "text": "事情的终局，强如事情的起头； 存心忍耐的，胜过居心骄傲的。",
+      "verse": 8
+    },
+    {
+      "book": "Eccl",
+      "chapter": 7,
+      "id": "Eccl.7.9",
+      "text": "你不要心里急躁恼怒， 因为恼怒存在愚昧人的怀中。",
+      "verse": 9
+    },
+    {
+      "book": "Eccl",
+      "chapter": 7,
+      "id": "Eccl.7.10",
+      "text": "不要说： “先前的日子强过如今的日子， 是什么缘故呢？” 你这样问，不是出于智慧。",
+      "verse": 10
+    },
+    {
+      "book": "Eccl",
+      "chapter": 7,
+      "id": "Eccl.7.11",
+      "text": "智慧和产业并好， 而且见天日的人，得智慧更为有益。",
+      "verse": 11
+    },
+    {
+      "book": "Eccl",
+      "chapter": 7,
+      "id": "Eccl.7.12",
+      "text": "因为智慧护庇人， 好像银钱护庇人一样。 惟独智慧能保全智慧人的生命。 这就是知识的益处。",
+      "verse": 12
+    },
+    {
+      "book": "Eccl",
+      "chapter": 7,
+      "id": "Eccl.7.13",
+      "text": "你要察看 神的作为， 因 神使为曲的，谁能变为直呢？",
+      "verse": 13
+    },
+    {
+      "book": "Eccl",
+      "chapter": 7,
+      "id": "Eccl.7.14",
+      "text": "遇亨通的日子，你当喜乐；遭患难的日子，你当思想。因为 神使这两样并列，为的是叫人查不出 身后有什么事。",
+      "verse": 14
+    },
+    {
+      "book": "Eccl",
+      "chapter": 7,
+      "id": "Eccl.7.15",
+      "text": "有义人行义，反致灭亡；有恶人行恶，倒享长寿。这都是我在虚度之日中所见过的。",
+      "verse": 15
+    },
+    {
+      "book": "Eccl",
+      "chapter": 7,
+      "id": "Eccl.7.16",
+      "text": "不要行义过分，也不要过于自逞智慧，何必自取败亡呢？",
+      "verse": 16
+    },
+    {
+      "book": "Eccl",
+      "chapter": 7,
+      "id": "Eccl.7.17",
+      "text": "不要行恶过分，也不要为人愚昧，何必不到期而死呢？",
+      "verse": 17
+    },
+    {
+      "book": "Eccl",
+      "chapter": 7,
+      "id": "Eccl.7.18",
+      "text": "你持守这个为美，那个也不要松手；因为敬畏 神的人，必从这两样出来。",
+      "verse": 18
+    },
+    {
+      "book": "Eccl",
+      "chapter": 7,
+      "id": "Eccl.7.19",
+      "text": "智慧使有智慧的人比城中十个官长更有能力。",
+      "verse": 19
+    },
+    {
+      "book": "Eccl",
+      "chapter": 7,
+      "id": "Eccl.7.20",
+      "text": "时常行善而不犯罪的义人，世上实在没有。",
+      "verse": 20
+    },
+    {
+      "book": "Eccl",
+      "chapter": 7,
+      "id": "Eccl.7.21",
+      "text": "人所说的一切话，你不要放在心上，恐怕听见你的仆人咒诅你。",
+      "verse": 21
+    },
+    {
+      "book": "Eccl",
+      "chapter": 7,
+      "id": "Eccl.7.22",
+      "text": "因为你心里知道，自己也曾屡次咒诅别人。",
+      "verse": 22
+    },
+    {
+      "book": "Eccl",
+      "chapter": 7,
+      "id": "Eccl.7.23",
+      "text": "我曾用智慧试验这一切事，我说“要得智慧” ，智慧却离我远。",
+      "verse": 23
+    },
+    {
+      "book": "Eccl",
+      "chapter": 7,
+      "id": "Eccl.7.24",
+      "text": "万事之理，离我甚远，而且最深，谁能测透呢？",
+      "verse": 24
+    },
+    {
+      "book": "Eccl",
+      "chapter": 7,
+      "id": "Eccl.7.25",
+      "text": "我转念，一心要知道，要考察，要寻求智慧和万事的理由，又要知道邪恶为愚昧，愚昧为狂妄。",
+      "verse": 25
+    },
+    {
+      "book": "Eccl",
+      "chapter": 7,
+      "id": "Eccl.7.26",
+      "text": "我得知有等妇人，比死还苦，她的心是网罗，手是锁链。凡蒙 神喜悦的人，必能躲避她；有罪的 人，却被她缠住了。",
+      "verse": 26
+    },
+    {
+      "book": "Eccl",
+      "chapter": 7,
+      "id": "Eccl.7.27",
+      "text": "有罪的人，却被她缠住了。",
+      "verse": 27
+    },
+    {
+      "book": "Eccl",
+      "chapter": 7,
+      "id": "Eccl.7.28",
+      "text": "传道者说，看哪，一千男子中，我找到一个正直人。但众女子中，没有找到一个。我将这事一一比 较，要寻求其理，我心仍要寻找，却未曾找到。",
+      "verse": 28
+    },
+    {
+      "book": "Eccl",
+      "chapter": 7,
+      "id": "Eccl.7.29",
+      "text": "我所找到的只有一件：就是 神造人原是正直，但他们寻出许多巧计。 ”",
+      "verse": 29
+    },
+    {
+      "book": "Eccl",
+      "chapter": 8,
+      "id": "Eccl.8.1",
+      "text": "谁如智慧人呢？ 谁知道事情的解释呢？ 人的智慧使他的脸发光， 并使他脸上的暴气改变。",
+      "verse": 1
+    },
+    {
+      "book": "Eccl",
+      "chapter": 8,
+      "id": "Eccl.8.2",
+      "text": "我劝你遵守王的命令，既指 神起誓，理当如此。",
+      "verse": 2
+    },
+    {
+      "book": "Eccl",
+      "chapter": 8,
+      "id": "Eccl.8.3",
+      "text": "不要急躁离开王的面前，不要固执行恶，因为他凡事都随自己的心意而行。",
+      "verse": 3
+    },
+    {
+      "book": "Eccl",
+      "chapter": 8,
+      "id": "Eccl.8.4",
+      "text": "王的话本有权力，谁敢问他说： “你做什么呢？”",
+      "verse": 4
+    },
+    {
+      "book": "Eccl",
+      "chapter": 8,
+      "id": "Eccl.8.5",
+      "text": "凡遵守命令的，必不经历祸患；智慧人的心，能辨明时候和定理（注：原文作“审判” 。下节同） 。",
+      "verse": 5
+    },
+    {
+      "book": "Eccl",
+      "chapter": 8,
+      "id": "Eccl.8.6",
+      "text": "各样事务成就，都有时候和定理，因为人的苦难重压在他身上。",
+      "verse": 6
+    },
+    {
+      "book": "Eccl",
+      "chapter": 8,
+      "id": "Eccl.8.7",
+      "text": "他不知道将来的事，因为将来如何，谁能告诉他呢？",
+      "verse": 7
+    },
+    {
+      "book": "Eccl",
+      "chapter": 8,
+      "id": "Eccl.8.8",
+      "text": "无人有权力掌管生命，将生命留住；也无人有权力掌管死期。这场争战，无人能免，邪恶也不能救那 好行邪恶的人。",
+      "verse": 8
+    },
+    {
+      "book": "Eccl",
+      "chapter": 8,
+      "id": "Eccl.8.9",
+      "text": "这一切我都见过，也专心查考日光之下所做的一切事。有时这人管辖那人，令人受害。",
+      "verse": 9
+    },
+    {
+      "book": "Eccl",
+      "chapter": 8,
+      "id": "Eccl.8.10",
+      "text": "我见恶人埋葬，归入坟墓；又见行正直事的离开圣地，在城中被人忘记。这也是虚空。",
+      "verse": 10
+    },
+    {
+      "book": "Eccl",
+      "chapter": 8,
+      "id": "Eccl.8.11",
+      "text": "因为断定罪名，不立刻施刑，所以世人满心作恶。",
+      "verse": 11
+    },
+    {
+      "book": "Eccl",
+      "chapter": 8,
+      "id": "Eccl.8.12",
+      "text": "罪人虽然作恶百次，倒享长久的年日。然而我准知道，敬畏 神的，就是在他面前敬畏的人，终久 必得福乐。",
+      "verse": 12
+    },
+    {
+      "book": "Eccl",
+      "chapter": 8,
+      "id": "Eccl.8.13",
+      "text": "恶人却不得福乐，也不得长久的年日；这年日好像影儿，因他不敬畏 神。",
+      "verse": 13
+    },
+    {
+      "book": "Eccl",
+      "chapter": 8,
+      "id": "Eccl.8.14",
+      "text": "世上有一件虚空的事， 就是义人所遭遇的， 反照恶人所行的； 又有恶人所遭遇的， 反照义人所行的。 我说，这也是虚空。",
+      "verse": 14
+    },
+    {
+      "book": "Eccl",
+      "chapter": 8,
+      "id": "Eccl.8.15",
+      "text": "我就称赞快乐，原来人在日光之下，莫强如吃喝快乐，因为他在日光之下， 神赐他一生的年日， 要从劳碌中时常享受所得的。",
+      "verse": 15
+    },
+    {
+      "book": "Eccl",
+      "chapter": 8,
+      "id": "Eccl.8.16",
+      "text": "我专心求智慧，要看世上所做的事。 （有昼夜不睡觉，不合眼的。 ）",
+      "verse": 16
+    },
+    {
+      "book": "Eccl",
+      "chapter": 8,
+      "id": "Eccl.8.17",
+      "text": "我就看明 神一切的作为，知道人查不出日光之下所做的事；任凭他费多少力寻查，都查不出来， 就是智慧人虽想知道，也是查不出来。",
+      "verse": 17
+    },
+    {
+      "book": "Eccl",
+      "chapter": 9,
+      "id": "Eccl.9.1",
+      "text": "我将这一切事放在心上，详细考究，就知道义人和智慧人并他们的作为都在 神手中；或是爱或 是恨，都在他们的前面，人不能知道。",
+      "verse": 1
+    },
+    {
+      "book": "Eccl",
+      "chapter": 9,
+      "id": "Eccl.9.2",
+      "text": "凡临到众人的事都是一样：义人和恶人都遭遇一样的事；好人、洁净人和不洁净人、献祭的与不献祭 的，也是一样。好人如何，罪人也如何；起誓的如何，怕起誓的也如何。",
+      "verse": 2
+    },
+    {
+      "book": "Eccl",
+      "chapter": 9,
+      "id": "Eccl.9.3",
+      "text": "在日光之下所行的一切事上，有一件祸患，就是众人所遭遇的都是一样，并且世人的心充满了恶。活 着的时候心里狂妄，后来就归死人那里去了。",
+      "verse": 3
+    },
+    {
+      "book": "Eccl",
+      "chapter": 9,
+      "id": "Eccl.9.4",
+      "text": "与一切活人相连的，那人还有指望，因为活着的狗比死了的狮子更强。",
+      "verse": 4
+    },
+    {
+      "book": "Eccl",
+      "chapter": 9,
+      "id": "Eccl.9.5",
+      "text": "活着的人知道必死，死了的人毫无所知，也不再得赏赐，他们的名无人记念。",
+      "verse": 5
+    },
+    {
+      "book": "Eccl",
+      "chapter": 9,
+      "id": "Eccl.9.6",
+      "text": "他们的爱，他们的恨，他们的嫉妒，早都消灭了。在日光之下所行的一切事上，他们永不再有分了。",
+      "verse": 6
+    },
+    {
+      "book": "Eccl",
+      "chapter": 9,
+      "id": "Eccl.9.7",
+      "text": "你只管去欢欢喜喜吃你的饭，心中快乐喝你的酒，因为 神已经悦纳你的作为。",
+      "verse": 7
+    },
+    {
+      "book": "Eccl",
+      "chapter": 9,
+      "id": "Eccl.9.8",
+      "text": "你的衣服当时常洁白，你头上也不要缺少膏油。",
+      "verse": 8
+    },
+    {
+      "book": "Eccl",
+      "chapter": 9,
+      "id": "Eccl.9.9",
+      "text": "在你一生虚空的年日，就是 神赐你在日光之下虚空的年日，当同你所爱的妻快活度日，因为那是你 生前在日光之下劳碌的事上所得的分。",
+      "verse": 9
+    },
+    {
+      "book": "Eccl",
+      "chapter": 9,
+      "id": "Eccl.9.10",
+      "text": "凡你手所当做的事，要尽力去做，因为在你所必去的阴间，没有工作，没有谋算，没有知识，也没 有智慧。",
+      "verse": 10
+    },
+    {
+      "book": "Eccl",
+      "chapter": 9,
+      "id": "Eccl.9.11",
+      "text": "我又转念，见日光之下，快跑的未必能赢；力战的未必得胜；智慧的未必得粮食，明哲的未必得资 财，灵巧的未必得喜悦；所临到众人的，是在乎当时的机会。",
+      "verse": 11
+    },
+    {
+      "book": "Eccl",
+      "chapter": 9,
+      "id": "Eccl.9.12",
+      "text": "原来人也不知道自己的定期， 鱼被恶网圈住， 鸟被网罗捉住， 祸患忽然临到的时候， 世人陷在其中， 也是如此。",
+      "verse": 12
+    },
+    {
+      "book": "Eccl",
+      "chapter": 9,
+      "id": "Eccl.9.13",
+      "text": "我见日光之下有一样智慧，据我看乃是广大。",
+      "verse": 13
+    },
+    {
+      "book": "Eccl",
+      "chapter": 9,
+      "id": "Eccl.9.14",
+      "text": "就是有一小城，其中的人数稀少，有大君王来攻击，修筑营垒，将城围困。",
+      "verse": 14
+    },
+    {
+      "book": "Eccl",
+      "chapter": 9,
+      "id": "Eccl.9.15",
+      "text": "城中有一个贫穷的智慧人，他用智慧救了那城，却没有人记念那穷人。",
+      "verse": 15
+    },
+    {
+      "book": "Eccl",
+      "chapter": 9,
+      "id": "Eccl.9.16",
+      "text": "我就说： “智慧胜过勇力。 ”然而那贫穷人的智慧被人藐视，他的话也无人听从。",
+      "verse": 16
+    },
+    {
+      "book": "Eccl",
+      "chapter": 9,
+      "id": "Eccl.9.17",
+      "text": "宁可在安静之中听智慧人的言语，不听掌管愚昧人的喊声。",
+      "verse": 17
+    },
+    {
+      "book": "Eccl",
+      "chapter": 9,
+      "id": "Eccl.9.18",
+      "text": "智慧胜过打仗的兵器，但一个罪人能败坏许多善事。",
+      "verse": 18
+    },
+    {
+      "book": "Eccl",
+      "chapter": 10,
+      "id": "Eccl.10.1",
+      "text": "死苍蝇使做香的膏油发出臭气。这样，一点愚昧，也能败坏智慧和尊荣。",
+      "verse": 1
+    },
+    {
+      "book": "Eccl",
+      "chapter": 10,
+      "id": "Eccl.10.2",
+      "text": "智慧人的心居右， 愚昧人的心居左。",
+      "verse": 2
+    },
+    {
+      "book": "Eccl",
+      "chapter": 10,
+      "id": "Eccl.10.3",
+      "text": "并且愚昧人行路显出无知， 对众人说，他是愚昧人。",
+      "verse": 3
+    },
+    {
+      "book": "Eccl",
+      "chapter": 10,
+      "id": "Eccl.10.4",
+      "text": "掌权者的心若向你发怒， 不要离开你的本位，因为柔和能免大过。",
+      "verse": 4
+    },
+    {
+      "book": "Eccl",
+      "chapter": 10,
+      "id": "Eccl.10.5",
+      "text": "我见日光之下有一件祸患， 似乎出于掌权的错误，",
+      "verse": 5
+    },
+    {
+      "book": "Eccl",
+      "chapter": 10,
+      "id": "Eccl.10.6",
+      "text": "就是愚昧人立在高位， 富足人坐在低位。",
+      "verse": 6
+    },
+    {
+      "book": "Eccl",
+      "chapter": 10,
+      "id": "Eccl.10.7",
+      "text": "我见过仆人骑马， 王子像仆人在地上步行。",
+      "verse": 7
+    },
+    {
+      "book": "Eccl",
+      "chapter": 10,
+      "id": "Eccl.10.8",
+      "text": "挖陷坑的，自己必掉在其中； 拆墙垣的，必为蛇所咬。",
+      "verse": 8
+    },
+    {
+      "book": "Eccl",
+      "chapter": 10,
+      "id": "Eccl.10.9",
+      "text": "凿开（注：或作“挪移” ）石头的，必受损伤； 劈开木头的，必遭危险。",
+      "verse": 9
+    },
+    {
+      "book": "Eccl",
+      "chapter": 10,
+      "id": "Eccl.10.10",
+      "text": "铁器钝了，若不将刃磨快，就必多费气力， 但得智慧指教，便有益处。",
+      "verse": 10
+    },
+    {
+      "book": "Eccl",
+      "chapter": 10,
+      "id": "Eccl.10.11",
+      "text": "未行法术以先，蛇若咬人， 后行法术也是无益。",
+      "verse": 11
+    },
+    {
+      "book": "Eccl",
+      "chapter": 10,
+      "id": "Eccl.10.12",
+      "text": "智慧人的口说出恩言； 愚昧人的嘴吞灭自己。",
+      "verse": 12
+    },
+    {
+      "book": "Eccl",
+      "chapter": 10,
+      "id": "Eccl.10.13",
+      "text": "他口中的言语起头是愚昧； 他话的末尾是奸恶的狂妄。",
+      "verse": 13
+    },
+    {
+      "book": "Eccl",
+      "chapter": 10,
+      "id": "Eccl.10.14",
+      "text": "愚昧人多有言语。 人却不知将来有什么事； 他身后的事，谁能告诉他呢？",
+      "verse": 14
+    },
+    {
+      "book": "Eccl",
+      "chapter": 10,
+      "id": "Eccl.10.15",
+      "text": "凡愚昧人，他的劳碌使自己困乏， 因为连进城的路，他也不知道。",
+      "verse": 15
+    },
+    {
+      "book": "Eccl",
+      "chapter": 10,
+      "id": "Eccl.10.16",
+      "text": "邦国啊，你的王若是孩童， 你的群臣早晨宴乐， 你就有祸了！",
+      "verse": 16
+    },
+    {
+      "book": "Eccl",
+      "chapter": 10,
+      "id": "Eccl.10.17",
+      "text": "邦国啊，你的王若是贵胄之子， 你的群臣按时吃喝， 为要补力，不为酒醉， 你就有福了！",
+      "verse": 17
+    },
+    {
+      "book": "Eccl",
+      "chapter": 10,
+      "id": "Eccl.10.18",
+      "text": "因人懒惰，房顶塌下； 因人手懒，房屋滴漏。",
+      "verse": 18
+    },
+    {
+      "book": "Eccl",
+      "chapter": 10,
+      "id": "Eccl.10.19",
+      "text": "设摆筵席，是为喜笑。 酒能使人快活，钱能叫万事应心。",
+      "verse": 19
+    },
+    {
+      "book": "Eccl",
+      "chapter": 10,
+      "id": "Eccl.10.20",
+      "text": "你不可咒诅君王， 也不可心怀此念， 在你卧房也不可咒诅富户， 因为空中的鸟必传扬这声音， 有翅膀的也必述说这事。",
+      "verse": 20
+    },
+    {
+      "book": "Eccl",
+      "chapter": 11,
+      "id": "Eccl.11.1",
+      "text": "当将你的粮食撒在水面， 因为日久必能得着。",
+      "verse": 1
+    },
+    {
+      "book": "Eccl",
+      "chapter": 11,
+      "id": "Eccl.11.2",
+      "text": "你要分给七人，或分给八人， 因为你不知道将来有什么灾祸临到地上。",
+      "verse": 2
+    },
+    {
+      "book": "Eccl",
+      "chapter": 11,
+      "id": "Eccl.11.3",
+      "text": "云若满了雨，就必倾倒在地上； 树若向南倒，或向北倒， 树倒在何处，就存在何处。",
+      "verse": 3
+    },
+    {
+      "book": "Eccl",
+      "chapter": 11,
+      "id": "Eccl.11.4",
+      "text": "看风的必不撒种； 望云的必不收割。",
+      "verse": 4
+    },
+    {
+      "book": "Eccl",
+      "chapter": 11,
+      "id": "Eccl.11.5",
+      "text": "风从何道来，骨头在怀孕妇人的胎中如何长成，你尚且不得知道，这样，行万事之 神的作为，你 更不得知道。",
+      "verse": 5
+    },
+    {
+      "book": "Eccl",
+      "chapter": 11,
+      "id": "Eccl.11.6",
+      "text": "早晨要撒你的种，晚上也不要歇你的手，因为你不知道哪一样发旺：或是早撒的，或是晚撒的，或 是两样都好。",
+      "verse": 6
+    },
+    {
+      "book": "Eccl",
+      "chapter": 11,
+      "id": "Eccl.11.7",
+      "text": "光本是佳美的，眼见日光也是可悦的。",
+      "verse": 7
+    },
+    {
+      "book": "Eccl",
+      "chapter": 11,
+      "id": "Eccl.11.8",
+      "text": "人活多年，就当快乐多年；然而也当想到黑暗的日子。因为这日子必多，所要来的都是虚空。",
+      "verse": 8
+    },
+    {
+      "book": "Eccl",
+      "chapter": 11,
+      "id": "Eccl.11.9",
+      "text": "少年人哪，你在幼年时当快乐。在幼年的日子，使你的心欢畅，行你心所愿行的，看你眼所爱看的； 却要知道，为这一切的事， 神必审问你。",
+      "verse": 9
+    },
+    {
+      "book": "Eccl",
+      "chapter": 11,
+      "id": "Eccl.11.10",
+      "text": "所以你当从心中除掉愁烦，从肉体克去邪恶，因为一生的开端和幼年之时，都是虚空的。",
+      "verse": 10
+    },
+    {
+      "book": "Eccl",
+      "chapter": 12,
+      "id": "Eccl.12.1",
+      "text": "你趁着年幼，衰败的日子尚未来到，就是你所说“我毫无喜乐”的那些年日未曾临近之先，当 记念造你的主！",
+      "verse": 1
+    },
+    {
+      "book": "Eccl",
+      "chapter": 12,
+      "id": "Eccl.12.2",
+      "text": "不要等到日头、光明、月亮、星宿变为黑暗，雨后云彩反回；",
+      "verse": 2
+    },
+    {
+      "book": "Eccl",
+      "chapter": 12,
+      "id": "Eccl.12.3",
+      "text": "看守房屋的发颤，有力的屈身，推磨的稀少就止息；从窗户往外看的都昏暗，",
+      "verse": 3
+    },
+    {
+      "book": "Eccl",
+      "chapter": 12,
+      "id": "Eccl.12.4",
+      "text": "街门关闭，推磨的响声微小，雀鸟一叫，人就起来，歌唱的女子也都衰微。",
+      "verse": 4
+    },
+    {
+      "book": "Eccl",
+      "chapter": 12,
+      "id": "Eccl.12.5",
+      "text": "人怕高处，路上有惊慌；杏树开花，蚱蜢成为重担；人所愿的也都废掉。因为人归他永远的家，吊 丧的在街上往来。",
+      "verse": 5
+    },
+    {
+      "book": "Eccl",
+      "chapter": 12,
+      "id": "Eccl.12.6",
+      "text": "银链折断，金罐破裂，瓶子在泉旁损坏，水轮在井口破烂；",
+      "verse": 6
+    },
+    {
+      "book": "Eccl",
+      "chapter": 12,
+      "id": "Eccl.12.7",
+      "text": "尘土仍归于地，灵仍归于赐灵的 神。",
+      "verse": 7
+    },
+    {
+      "book": "Eccl",
+      "chapter": 12,
+      "id": "Eccl.12.8",
+      "text": "传道者说： “虚空的虚空，凡事都是虚空。 ”",
+      "verse": 8
+    },
+    {
+      "book": "Eccl",
+      "chapter": 12,
+      "id": "Eccl.12.9",
+      "text": "再者，传道者因有智慧，仍将知识教训众人；又默想，又考查，又陈说许多箴言。",
+      "verse": 9
+    },
+    {
+      "book": "Eccl",
+      "chapter": 12,
+      "id": "Eccl.12.10",
+      "text": "传道者专心寻求可喜悦的言语，是凭正直写的诚实话。",
+      "verse": 10
+    },
+    {
+      "book": "Eccl",
+      "chapter": 12,
+      "id": "Eccl.12.11",
+      "text": "智慧人的言语好像刺棍；会中之师的言语又像钉稳的钉子，都是一个牧者所赐的。",
+      "verse": 11
+    },
+    {
+      "book": "Eccl",
+      "chapter": 12,
+      "id": "Eccl.12.12",
+      "text": "我儿，还有一层，你当受劝戒：著书多，没有穷尽；读书多，身体疲倦。",
+      "verse": 12
+    },
+    {
+      "book": "Eccl",
+      "chapter": 12,
+      "id": "Eccl.12.13",
+      "text": "这些事都已听见了，总意就是敬畏 神，谨守他的诫命，这是人所当尽的本分（注：或作“这是众 人的本分” ） 。",
+      "verse": 13
+    },
+    {
+      "book": "Eccl",
+      "chapter": 12,
+      "id": "Eccl.12.14",
+      "text": "因为人所做的事，连一切隐藏的事，无论是善是恶， 神都必审问。",
+      "verse": 14
+    }
+  ],
+  "kjvVerses": [
+    {
+      "book": "Eccl",
+      "chapter": 1,
+      "id": "Eccl.1.1",
+      "text": "The words of the Preacher, the son of David, king in Jerusalem.",
+      "verse": 1
+    },
+    {
+      "book": "Eccl",
+      "chapter": 1,
+      "id": "Eccl.1.2",
+      "text": "Vanity of vanities, saith the Preacher, vanity of vanities; all [is] vanity.",
+      "verse": 2
+    },
+    {
+      "book": "Eccl",
+      "chapter": 1,
+      "id": "Eccl.1.3",
+      "text": "What profit hath a man of all his labour which he taketh under the sun?",
+      "verse": 3
+    },
+    {
+      "book": "Eccl",
+      "chapter": 1,
+      "id": "Eccl.1.4",
+      "text": "[One] generation passeth away, and [another] generation cometh: but the earth abideth for ever.",
+      "verse": 4
+    },
+    {
+      "book": "Eccl",
+      "chapter": 1,
+      "id": "Eccl.1.5",
+      "text": "The sun also ariseth, and the sun goeth down, and hasteth to his place where he arose.",
+      "verse": 5
+    },
+    {
+      "book": "Eccl",
+      "chapter": 1,
+      "id": "Eccl.1.6",
+      "text": "The wind goeth toward the south, and turneth about unto the north; it whirleth about continually, and the wind returneth again according to his circuits.",
+      "verse": 6
+    },
+    {
+      "book": "Eccl",
+      "chapter": 1,
+      "id": "Eccl.1.7",
+      "text": "All the rivers run into the sea; yet the sea [is] not full; unto the place from whence the rivers come, thither they return again.",
+      "verse": 7
+    },
+    {
+      "book": "Eccl",
+      "chapter": 1,
+      "id": "Eccl.1.8",
+      "text": "All things [are] full of labour; man cannot utter [it:] the eye is not satisfied with seeing, nor the ear filled with hearing.",
+      "verse": 8
+    },
+    {
+      "book": "Eccl",
+      "chapter": 1,
+      "id": "Eccl.1.9",
+      "text": "The thing that hath been, it [is that] which shall be; and that which is done [is] that which shall be done: and [there is] no new [thing] under the sun.",
+      "verse": 9
+    },
+    {
+      "book": "Eccl",
+      "chapter": 1,
+      "id": "Eccl.1.10",
+      "text": "Is there [any] thing whereof it may be said, See, this [is] new? it hath been already of old time, which was before us.",
+      "verse": 10
+    },
+    {
+      "book": "Eccl",
+      "chapter": 1,
+      "id": "Eccl.1.11",
+      "text": "[There is] no remembrance of former [things;] neither shall there be [any] remembrance of [things] that are to come with [those] that shall come after.",
+      "verse": 11
+    },
+    {
+      "book": "Eccl",
+      "chapter": 1,
+      "id": "Eccl.1.12",
+      "text": "I the Preacher was king over Israel in Jerusalem.",
+      "verse": 12
+    },
+    {
+      "book": "Eccl",
+      "chapter": 1,
+      "id": "Eccl.1.13",
+      "text": "And I gave my heart to seek and search out by wisdom concerning all [things] that are done under heaven: this sore travail hath God given to the sons of man to be exercised therewith.",
+      "verse": 13
+    },
+    {
+      "book": "Eccl",
+      "chapter": 1,
+      "id": "Eccl.1.14",
+      "text": "I have seen all the works that are done under the sun; and, behold, all [is] vanity and vexation of spirit.",
+      "verse": 14
+    },
+    {
+      "book": "Eccl",
+      "chapter": 1,
+      "id": "Eccl.1.15",
+      "text": "[That which is] crooked cannot be made straight: and that which is wanting cannot be numbered.",
+      "verse": 15
+    },
+    {
+      "book": "Eccl",
+      "chapter": 1,
+      "id": "Eccl.1.16",
+      "text": "I communed with mine own heart, saying, Lo, I am come to great estate, and have gotten more wisdom than all [they] that have been before me in Jerusalem: yea, my heart had great experience of wisdom and knowledge.",
+      "verse": 16
+    },
+    {
+      "book": "Eccl",
+      "chapter": 1,
+      "id": "Eccl.1.17",
+      "text": "And I gave my heart to know wisdom, and to know madness and folly: I perceived that this also is vexation of spirit.",
+      "verse": 17
+    },
+    {
+      "book": "Eccl",
+      "chapter": 1,
+      "id": "Eccl.1.18",
+      "text": "For in much wisdom [is] much grief: and he that increaseth knowledge increaseth sorrow.",
+      "verse": 18
+    },
+    {
+      "book": "Eccl",
+      "chapter": 2,
+      "id": "Eccl.2.1",
+      "text": "I said in mine heart, Go to now, I will prove thee with mirth, therefore enjoy pleasure: and, behold, this also [is] vanity.",
+      "verse": 1
+    },
+    {
+      "book": "Eccl",
+      "chapter": 2,
+      "id": "Eccl.2.2",
+      "text": "I said of laughter, [It is] mad: and of mirth, What doeth it?",
+      "verse": 2
+    },
+    {
+      "book": "Eccl",
+      "chapter": 2,
+      "id": "Eccl.2.3",
+      "text": "I sought in mine heart to give myself unto wine, yet acquainting mine heart with wisdom; and to lay hold on folly, till I might see what [was] that good for the sons of men, which they should do under the heaven all the days of their life.",
+      "verse": 3
+    },
+    {
+      "book": "Eccl",
+      "chapter": 2,
+      "id": "Eccl.2.4",
+      "text": "I made me great works; I builded me houses; I planted me vineyards:",
+      "verse": 4
+    },
+    {
+      "book": "Eccl",
+      "chapter": 2,
+      "id": "Eccl.2.5",
+      "text": "I made me gardens and orchards, and I planted trees in them of all [kind of] fruits:",
+      "verse": 5
+    },
+    {
+      "book": "Eccl",
+      "chapter": 2,
+      "id": "Eccl.2.6",
+      "text": "I made me pools of water, to water therewith the wood that bringeth forth trees:",
+      "verse": 6
+    },
+    {
+      "book": "Eccl",
+      "chapter": 2,
+      "id": "Eccl.2.7",
+      "text": "I got [me] servants and maidens, and had servants born in my house; also I had great possessions of great and small cattle above all that were in Jerusalem before me:",
+      "verse": 7
+    },
+    {
+      "book": "Eccl",
+      "chapter": 2,
+      "id": "Eccl.2.8",
+      "text": "I gathered me also silver and gold, and the peculiar treasure of kings and of the provinces: I gat me men singers and women singers, and the delights of the sons of men, [as] musical instruments, and that of all sorts.",
+      "verse": 8
+    },
+    {
+      "book": "Eccl",
+      "chapter": 2,
+      "id": "Eccl.2.9",
+      "text": "So I was great, and increased more than all that were before me in Jerusalem: also my wisdom remained with me.",
+      "verse": 9
+    },
+    {
+      "book": "Eccl",
+      "chapter": 2,
+      "id": "Eccl.2.10",
+      "text": "And whatsoever mine eyes desired I kept not from them, I withheld not my heart from any joy; for my heart rejoiced in all my labour: and this was my portion of all my labour.",
+      "verse": 10
+    },
+    {
+      "book": "Eccl",
+      "chapter": 2,
+      "id": "Eccl.2.11",
+      "text": "Then I looked on all the works that my hands had wrought, and on the labour that I had laboured to do: and, behold, all [was] vanity and vexation of spirit, and [there was] no profit under the sun.",
+      "verse": 11
+    },
+    {
+      "book": "Eccl",
+      "chapter": 2,
+      "id": "Eccl.2.12",
+      "text": "And I turned myself to behold wisdom, and madness, and folly: for what [can] the man [do] that cometh after the king? [even] that which hath been already done.",
+      "verse": 12
+    },
+    {
+      "book": "Eccl",
+      "chapter": 2,
+      "id": "Eccl.2.13",
+      "text": "Then I saw that wisdom excelleth folly, as far as light excelleth darkness.",
+      "verse": 13
+    },
+    {
+      "book": "Eccl",
+      "chapter": 2,
+      "id": "Eccl.2.14",
+      "text": "The wise man’s eyes [are] in his head; but the fool walketh in darkness: and I myself perceived also that one event happeneth to them all.",
+      "verse": 14
+    },
+    {
+      "book": "Eccl",
+      "chapter": 2,
+      "id": "Eccl.2.15",
+      "text": "Then said I in my heart, As it happeneth to the fool, so it happeneth even to me; and why was I then more wise? Then I said in my heart, that this also [is] vanity.",
+      "verse": 15
+    },
+    {
+      "book": "Eccl",
+      "chapter": 2,
+      "id": "Eccl.2.16",
+      "text": "For [there is] no remembrance of the wise more than of the fool for ever; seeing that which now [is] in the days to come shall all be forgotten. And how dieth the wise [man?] as the fool.",
+      "verse": 16
+    },
+    {
+      "book": "Eccl",
+      "chapter": 2,
+      "id": "Eccl.2.17",
+      "text": "Therefore I hated life; because the work that is wrought under the sun is grievous unto me: for all [is] vanity and vexation of spirit.",
+      "verse": 17
+    },
+    {
+      "book": "Eccl",
+      "chapter": 2,
+      "id": "Eccl.2.18",
+      "text": "Yea, I hated all my labour which I had taken under the sun: because I should leave it unto the man that shall be after me.",
+      "verse": 18
+    },
+    {
+      "book": "Eccl",
+      "chapter": 2,
+      "id": "Eccl.2.19",
+      "text": "And who knoweth whether he shall be a wise [man] or a fool? yet shall he have rule over all my labour wherein I have laboured, and wherein I have shewed myself wise under the sun. This [is] also vanity.",
+      "verse": 19
+    },
+    {
+      "book": "Eccl",
+      "chapter": 2,
+      "id": "Eccl.2.20",
+      "text": "Therefore I went about to cause my heart to despair of all the labour which I took under the sun.",
+      "verse": 20
+    },
+    {
+      "book": "Eccl",
+      "chapter": 2,
+      "id": "Eccl.2.21",
+      "text": "For there is a man whose labour [is] in wisdom, and in knowledge, and in equity; yet to a man that hath not laboured therein shall he leave it [for] his portion. This also [is] vanity and a great evil.",
+      "verse": 21
+    },
+    {
+      "book": "Eccl",
+      "chapter": 2,
+      "id": "Eccl.2.22",
+      "text": "For what hath man of all his labour, and of the vexation of his heart, wherein he hath laboured under the sun?",
+      "verse": 22
+    },
+    {
+      "book": "Eccl",
+      "chapter": 2,
+      "id": "Eccl.2.23",
+      "text": "For all his days [are] sorrows, and his travail grief; yea, his heart taketh not rest in the night. This is also vanity.",
+      "verse": 23
+    },
+    {
+      "book": "Eccl",
+      "chapter": 2,
+      "id": "Eccl.2.24",
+      "text": "[There is] nothing better for a man, [than] that he should eat and drink, and [that] he should make his soul enjoy good in his labour. This also I saw, that it [was] from the hand of God.",
+      "verse": 24
+    },
+    {
+      "book": "Eccl",
+      "chapter": 2,
+      "id": "Eccl.2.25",
+      "text": "For who can eat, or who else can hasten [hereunto,] more than I?",
+      "verse": 25
+    },
+    {
+      "book": "Eccl",
+      "chapter": 2,
+      "id": "Eccl.2.26",
+      "text": "For [God] giveth to a man that [is] good in his sight wisdom, and knowledge, and joy: but to the sinner he giveth travail, to gather and to heap up, that he may give to [him that is] good before God. This also [is] vanity and vexation of spirit.",
+      "verse": 26
+    },
+    {
+      "book": "Eccl",
+      "chapter": 3,
+      "id": "Eccl.3.1",
+      "text": "To every [thing there is] a season, and a time to every purpose under the heaven:",
+      "verse": 1
+    },
+    {
+      "book": "Eccl",
+      "chapter": 3,
+      "id": "Eccl.3.2",
+      "text": "A time to be born, and a time to die; a time to plant, and a time to pluck up [that which is] planted;",
+      "verse": 2
+    },
+    {
+      "book": "Eccl",
+      "chapter": 3,
+      "id": "Eccl.3.3",
+      "text": "A time to kill, and a time to heal; a time to break down, and a time to build up;",
+      "verse": 3
+    },
+    {
+      "book": "Eccl",
+      "chapter": 3,
+      "id": "Eccl.3.4",
+      "text": "A time to weep, and a time to laugh; a time to mourn, and a time to dance;",
+      "verse": 4
+    },
+    {
+      "book": "Eccl",
+      "chapter": 3,
+      "id": "Eccl.3.5",
+      "text": "A time to cast away stones, and a time to gather stones together; a time to embrace, and a time to refrain from embracing;",
+      "verse": 5
+    },
+    {
+      "book": "Eccl",
+      "chapter": 3,
+      "id": "Eccl.3.6",
+      "text": "A time to get, and a time to lose; a time to keep, and a time to cast away;",
+      "verse": 6
+    },
+    {
+      "book": "Eccl",
+      "chapter": 3,
+      "id": "Eccl.3.7",
+      "text": "A time to rend, and a time to sew; a time to keep silence, and a time to speak;",
+      "verse": 7
+    },
+    {
+      "book": "Eccl",
+      "chapter": 3,
+      "id": "Eccl.3.8",
+      "text": "A time to love, and a time to hate; a time of war, and a time of peace.",
+      "verse": 8
+    },
+    {
+      "book": "Eccl",
+      "chapter": 3,
+      "id": "Eccl.3.9",
+      "text": "What profit hath he that worketh in that wherein he laboureth?",
+      "verse": 9
+    },
+    {
+      "book": "Eccl",
+      "chapter": 3,
+      "id": "Eccl.3.10",
+      "text": "I have seen the travail, which God hath given to the sons of men to be exercised in it.",
+      "verse": 10
+    },
+    {
+      "book": "Eccl",
+      "chapter": 3,
+      "id": "Eccl.3.11",
+      "text": "He hath made every [thing] beautiful in his time: also he hath set the world in their heart, so that no man can find out the work that God maketh from the beginning to the end.",
+      "verse": 11
+    },
+    {
+      "book": "Eccl",
+      "chapter": 3,
+      "id": "Eccl.3.12",
+      "text": "I know that [there is] no good in them, but for [a man] to rejoice, and to do good in his life.",
+      "verse": 12
+    },
+    {
+      "book": "Eccl",
+      "chapter": 3,
+      "id": "Eccl.3.13",
+      "text": "And also that every man should eat and drink, and enjoy the good of all his labour, it [is] the gift of God.",
+      "verse": 13
+    },
+    {
+      "book": "Eccl",
+      "chapter": 3,
+      "id": "Eccl.3.14",
+      "text": "I know that, whatsoever God doeth, it shall be for ever: nothing can be put to it, nor any thing taken from it: and God doeth [it,] that [men] should fear before him.",
+      "verse": 14
+    },
+    {
+      "book": "Eccl",
+      "chapter": 3,
+      "id": "Eccl.3.15",
+      "text": "That which hath been is now; and that which is to be hath already been; and God requireth that which is past.",
+      "verse": 15
+    },
+    {
+      "book": "Eccl",
+      "chapter": 3,
+      "id": "Eccl.3.16",
+      "text": "And moreover I saw under the sun the place of judgment, [that] wickedness [was] there; and the place of righteousness, [that] iniquity [was] there.",
+      "verse": 16
+    },
+    {
+      "book": "Eccl",
+      "chapter": 3,
+      "id": "Eccl.3.17",
+      "text": "I said in mine heart, God shall judge the righteous and the wicked: for [there is] a time there for every purpose and for every work.",
+      "verse": 17
+    },
+    {
+      "book": "Eccl",
+      "chapter": 3,
+      "id": "Eccl.3.18",
+      "text": "I said in mine heart concerning the estate of the sons of men, that God might manifest them, and that they might see that they themselves are beasts.",
+      "verse": 18
+    },
+    {
+      "book": "Eccl",
+      "chapter": 3,
+      "id": "Eccl.3.19",
+      "text": "For that which befalleth the sons of men befalleth beasts; even one thing befalleth them: as the one dieth, so dieth the other; yea, they have all one breath; so that a man hath no preeminence above a beast: for all [is] vanity.",
+      "verse": 19
+    },
+    {
+      "book": "Eccl",
+      "chapter": 3,
+      "id": "Eccl.3.20",
+      "text": "All go unto one place; all are of the dust, and all turn to dust again.",
+      "verse": 20
+    },
+    {
+      "book": "Eccl",
+      "chapter": 3,
+      "id": "Eccl.3.21",
+      "text": "Who knoweth the spirit of man that goeth upward, and the spirit of the beast that goeth downward to the earth?",
+      "verse": 21
+    },
+    {
+      "book": "Eccl",
+      "chapter": 3,
+      "id": "Eccl.3.22",
+      "text": "Wherefore I perceive that [there is] nothing better, than that a man should rejoice in his own works; for that [is] his portion: for who shall bring him to see what shall be after him?",
+      "verse": 22
+    },
+    {
+      "book": "Eccl",
+      "chapter": 4,
+      "id": "Eccl.4.1",
+      "text": "So I returned, and considered all the oppressions that are done under the sun: and behold the tears of [such as were] oppressed, and they had no comforter; and on the side of their oppressors [there was] power; but they had no comforter.",
+      "verse": 1
+    },
+    {
+      "book": "Eccl",
+      "chapter": 4,
+      "id": "Eccl.4.2",
+      "text": "Wherefore I praised the dead which are already dead more than the living which are yet alive.",
+      "verse": 2
+    },
+    {
+      "book": "Eccl",
+      "chapter": 4,
+      "id": "Eccl.4.3",
+      "text": "Yea, better [is he] than both they, which hath not yet been, who hath not seen the evil work that is done under the sun.",
+      "verse": 3
+    },
+    {
+      "book": "Eccl",
+      "chapter": 4,
+      "id": "Eccl.4.4",
+      "text": "Again, I considered all travail, and every right work, that for this a man is envied of his neighbour. This [is] also vanity and vexation of spirit.",
+      "verse": 4
+    },
+    {
+      "book": "Eccl",
+      "chapter": 4,
+      "id": "Eccl.4.5",
+      "text": "The fool foldeth his hands together, and eateth his own flesh.",
+      "verse": 5
+    },
+    {
+      "book": "Eccl",
+      "chapter": 4,
+      "id": "Eccl.4.6",
+      "text": "Better [is] an handful [with] quietness, than both the hands full [with] travail and vexation of spirit.",
+      "verse": 6
+    },
+    {
+      "book": "Eccl",
+      "chapter": 4,
+      "id": "Eccl.4.7",
+      "text": "Then I returned, and I saw vanity under the sun.",
+      "verse": 7
+    },
+    {
+      "book": "Eccl",
+      "chapter": 4,
+      "id": "Eccl.4.8",
+      "text": "There is one [alone,] and [there is] not a second; yea, he hath neither child nor brother: yet [is there] no end of all his labour; neither is his eye satisfied with riches; neither [saith he,] For whom do I labour, and bereave my soul of good? This [is] also vanity, yea, it [is] a sore travail.",
+      "verse": 8
+    },
+    {
+      "book": "Eccl",
+      "chapter": 4,
+      "id": "Eccl.4.9",
+      "text": "Two [are] better than one; because they have a good reward for their labour.",
+      "verse": 9
+    },
+    {
+      "book": "Eccl",
+      "chapter": 4,
+      "id": "Eccl.4.10",
+      "text": "For if they fall, the one will lift up his fellow: but woe to him [that is] alone when he falleth; for [he hath] not another to help him up.",
+      "verse": 10
+    },
+    {
+      "book": "Eccl",
+      "chapter": 4,
+      "id": "Eccl.4.11",
+      "text": "Again, if two lie together, then they have heat: but how can one be warm [alone? ]",
+      "verse": 11
+    },
+    {
+      "book": "Eccl",
+      "chapter": 4,
+      "id": "Eccl.4.12",
+      "text": "And if one prevail against him, two shall withstand him; and a threefold cord is not quickly broken.",
+      "verse": 12
+    },
+    {
+      "book": "Eccl",
+      "chapter": 4,
+      "id": "Eccl.4.13",
+      "text": "Better [is] a poor and a wise child than an old and foolish king, who will no more be admonished.",
+      "verse": 13
+    },
+    {
+      "book": "Eccl",
+      "chapter": 4,
+      "id": "Eccl.4.14",
+      "text": "For out of prison he cometh to reign; whereas also [he that is] born in his kingdom becometh poor.",
+      "verse": 14
+    },
+    {
+      "book": "Eccl",
+      "chapter": 4,
+      "id": "Eccl.4.15",
+      "text": "I considered all the living which walk under the sun, with the second child that shall stand up in his stead.",
+      "verse": 15
+    },
+    {
+      "book": "Eccl",
+      "chapter": 4,
+      "id": "Eccl.4.16",
+      "text": "[There is] no end of all the people, [even] of all that have been before them: they also that come after shall not rejoice in him. Surely this also [is] vanity and vexation of spirit.",
+      "verse": 16
+    },
+    {
+      "book": "Eccl",
+      "chapter": 5,
+      "id": "Eccl.5.1",
+      "text": "Keep thy foot when thou goest to the house of God, and be more ready to hear, than to give the sacrifice of fools: for they consider not that they do evil.",
+      "verse": 1
+    },
+    {
+      "book": "Eccl",
+      "chapter": 5,
+      "id": "Eccl.5.2",
+      "text": "Be not rash with thy mouth, and let not thine heart be hasty to utter [any] thing before God: for God [is] in heaven, and thou upon earth: therefore let thy words be few.",
+      "verse": 2
+    },
+    {
+      "book": "Eccl",
+      "chapter": 5,
+      "id": "Eccl.5.3",
+      "text": "For a dream cometh through the multitude of business; and a fool’s voice [is known] by multitude of words.",
+      "verse": 3
+    },
+    {
+      "book": "Eccl",
+      "chapter": 5,
+      "id": "Eccl.5.4",
+      "text": "When thou vowest a vow unto God, defer not to pay it; for [he hath] no pleasure in fools: pay that which thou hast vowed.",
+      "verse": 4
+    },
+    {
+      "book": "Eccl",
+      "chapter": 5,
+      "id": "Eccl.5.5",
+      "text": "Better [is it] that thou shouldest not vow, than that thou shouldest vow and not pay.",
+      "verse": 5
+    },
+    {
+      "book": "Eccl",
+      "chapter": 5,
+      "id": "Eccl.5.6",
+      "text": "Suffer not thy mouth to cause thy flesh to sin; neither say thou before the angel, that it [was] an error: wherefore should God be angry at thy voice, and destroy the work of thine hands?",
+      "verse": 6
+    },
+    {
+      "book": "Eccl",
+      "chapter": 5,
+      "id": "Eccl.5.7",
+      "text": "For in the multitude of dreams and many words [there are] also [divers] vanities: but fear thou God.",
+      "verse": 7
+    },
+    {
+      "book": "Eccl",
+      "chapter": 5,
+      "id": "Eccl.5.8",
+      "text": "If thou seest the oppression of the poor, and violent perverting of judgment and justice in a province, marvel not at the matter: for [he that is] higher than the highest regardeth; and [there be] higher than they.",
+      "verse": 8
+    },
+    {
+      "book": "Eccl",
+      "chapter": 5,
+      "id": "Eccl.5.9",
+      "text": "Moreover the profit of the earth is for all: the king [himself] is served by the field.",
+      "verse": 9
+    },
+    {
+      "book": "Eccl",
+      "chapter": 5,
+      "id": "Eccl.5.10",
+      "text": "He that loveth silver shall not be satisfied with silver; nor he that loveth abundance with increase: this [is] also vanity.",
+      "verse": 10
+    },
+    {
+      "book": "Eccl",
+      "chapter": 5,
+      "id": "Eccl.5.11",
+      "text": "When goods increase, they are increased that eat them: and what good [is there] to the owners thereof, saving the beholding [of them] with their eyes?",
+      "verse": 11
+    },
+    {
+      "book": "Eccl",
+      "chapter": 5,
+      "id": "Eccl.5.12",
+      "text": "The sleep of a labouring man [is] sweet, whether he eat little or much: but the abundance of the rich will not suffer him to sleep.",
+      "verse": 12
+    },
+    {
+      "book": "Eccl",
+      "chapter": 5,
+      "id": "Eccl.5.13",
+      "text": "There is a sore evil [which] I have seen under the sun, [namely,] riches kept for the owners thereof to their hurt.",
+      "verse": 13
+    },
+    {
+      "book": "Eccl",
+      "chapter": 5,
+      "id": "Eccl.5.14",
+      "text": "But those riches perish by evil travail: and he begetteth a son, and [there is] nothing in his hand.",
+      "verse": 14
+    },
+    {
+      "book": "Eccl",
+      "chapter": 5,
+      "id": "Eccl.5.15",
+      "text": "As he came forth of his mother’s womb, naked shall he return to go as he came, and shall take nothing of his labour, which he may carry away in his hand.",
+      "verse": 15
+    },
+    {
+      "book": "Eccl",
+      "chapter": 5,
+      "id": "Eccl.5.16",
+      "text": "And this also [is] a sore evil, [that] in all points as he came, so shall he go: and what profit hath he that hath laboured for the wind?",
+      "verse": 16
+    },
+    {
+      "book": "Eccl",
+      "chapter": 5,
+      "id": "Eccl.5.17",
+      "text": "All his days also he eateth in darkness, and [he hath] much sorrow and wrath with his sickness.",
+      "verse": 17
+    },
+    {
+      "book": "Eccl",
+      "chapter": 5,
+      "id": "Eccl.5.18",
+      "text": "Behold [that] which I have seen: [it is] good and comely [for one] to eat and to drink, and to enjoy the good of all his labour that he taketh under the sun all the days of his life, which God giveth him: for it [is] his portion.",
+      "verse": 18
+    },
+    {
+      "book": "Eccl",
+      "chapter": 5,
+      "id": "Eccl.5.19",
+      "text": "Every man also to whom God hath given riches and wealth, and hath given him power to eat thereof, and to take his portion, and to rejoice in his labour; this [is] the gift of God.",
+      "verse": 19
+    },
+    {
+      "book": "Eccl",
+      "chapter": 5,
+      "id": "Eccl.5.20",
+      "text": "For he shall not much remember the days of his life; because God answereth [him] in the joy of his heart.",
+      "verse": 20
+    },
+    {
+      "book": "Eccl",
+      "chapter": 6,
+      "id": "Eccl.6.1",
+      "text": "There is an evil which I have seen under the sun, and it [is] common among men:",
+      "verse": 1
+    },
+    {
+      "book": "Eccl",
+      "chapter": 6,
+      "id": "Eccl.6.2",
+      "text": "A man to whom God hath given riches, wealth, and honour, so that he wanteth nothing for his soul of all that he desireth, yet God giveth him not power to eat thereof, but a stranger eateth it: this [is] vanity, and it [is] an evil disease.",
+      "verse": 2
+    },
+    {
+      "book": "Eccl",
+      "chapter": 6,
+      "id": "Eccl.6.3",
+      "text": "If a man beget an hundred [children,] and live many years, so that the days of his years be many, and his soul be not filled with good, and also [that] he have no burial; I say, [that] an untimely birth [is] better than he.",
+      "verse": 3
+    },
+    {
+      "book": "Eccl",
+      "chapter": 6,
+      "id": "Eccl.6.4",
+      "text": "For he cometh in with vanity, and departeth in darkness, and his name shall be covered with darkness.",
+      "verse": 4
+    },
+    {
+      "book": "Eccl",
+      "chapter": 6,
+      "id": "Eccl.6.5",
+      "text": "Moreover he hath not seen the sun, nor known [any thing:] this hath more rest than the other.",
+      "verse": 5
+    },
+    {
+      "book": "Eccl",
+      "chapter": 6,
+      "id": "Eccl.6.6",
+      "text": "Yea, though he live a thousand years twice [told,] yet hath he seen no good: do not all go to one place?",
+      "verse": 6
+    },
+    {
+      "book": "Eccl",
+      "chapter": 6,
+      "id": "Eccl.6.7",
+      "text": "All the labour of man [is] for his mouth, and yet the appetite is not filled.",
+      "verse": 7
+    },
+    {
+      "book": "Eccl",
+      "chapter": 6,
+      "id": "Eccl.6.8",
+      "text": "For what hath the wise more than the fool? what hath the poor, that knoweth to walk before the living?",
+      "verse": 8
+    },
+    {
+      "book": "Eccl",
+      "chapter": 6,
+      "id": "Eccl.6.9",
+      "text": "Better [is] the sight of the eyes than the wandering of the desire: this [is] also vanity and vexation of spirit.",
+      "verse": 9
+    },
+    {
+      "book": "Eccl",
+      "chapter": 6,
+      "id": "Eccl.6.10",
+      "text": "That which hath been is named already, and it is known that it [is] man: neither may he contend with him that is mightier than he.",
+      "verse": 10
+    },
+    {
+      "book": "Eccl",
+      "chapter": 6,
+      "id": "Eccl.6.11",
+      "text": "Seeing there be many things that increase vanity, what [is] man the better?",
+      "verse": 11
+    },
+    {
+      "book": "Eccl",
+      "chapter": 6,
+      "id": "Eccl.6.12",
+      "text": "For who knoweth what [is] good for man in [this] life, all the days of his vain life which he spendeth as a shadow? for who can tell a man what shall be after him under the sun?",
+      "verse": 12
+    },
+    {
+      "book": "Eccl",
+      "chapter": 7,
+      "id": "Eccl.7.1",
+      "text": "A good name [is] better than precious ointment; and the day of death than the day of one’s birth.",
+      "verse": 1
+    },
+    {
+      "book": "Eccl",
+      "chapter": 7,
+      "id": "Eccl.7.2",
+      "text": "[It is] better to go to the house of mourning, than to go to the house of feasting: for that is the end of all men; and the living will lay [it] to his heart.",
+      "verse": 2
+    },
+    {
+      "book": "Eccl",
+      "chapter": 7,
+      "id": "Eccl.7.3",
+      "text": "Sorrow [is] better than laughter: for by the sadness of the countenance the heart is made better.",
+      "verse": 3
+    },
+    {
+      "book": "Eccl",
+      "chapter": 7,
+      "id": "Eccl.7.4",
+      "text": "The heart of the wise [is] in the house of mourning; but the heart of fools [is] in the house of mirth.",
+      "verse": 4
+    },
+    {
+      "book": "Eccl",
+      "chapter": 7,
+      "id": "Eccl.7.5",
+      "text": "[It is] better to hear the rebuke of the wise, than for a man to hear the song of fools.",
+      "verse": 5
+    },
+    {
+      "book": "Eccl",
+      "chapter": 7,
+      "id": "Eccl.7.6",
+      "text": "For as the crackling of thorns under a pot, so [is] the laughter of the fool: this also [is] vanity.",
+      "verse": 6
+    },
+    {
+      "book": "Eccl",
+      "chapter": 7,
+      "id": "Eccl.7.7",
+      "text": "Surely oppression maketh a wise man mad; and a gift destroyeth the heart.",
+      "verse": 7
+    },
+    {
+      "book": "Eccl",
+      "chapter": 7,
+      "id": "Eccl.7.8",
+      "text": "Better [is] the end of a thing than the beginning thereof: [and] the patient in spirit [is] better than the proud in spirit.",
+      "verse": 8
+    },
+    {
+      "book": "Eccl",
+      "chapter": 7,
+      "id": "Eccl.7.9",
+      "text": "Be not hasty in thy spirit to be angry: for anger resteth in the bosom of fools.",
+      "verse": 9
+    },
+    {
+      "book": "Eccl",
+      "chapter": 7,
+      "id": "Eccl.7.10",
+      "text": "Say not thou, What is [the cause] that the former days were better than these? for thou dost not enquire wisely concerning this.",
+      "verse": 10
+    },
+    {
+      "book": "Eccl",
+      "chapter": 7,
+      "id": "Eccl.7.11",
+      "text": "Wisdom [is] good with an inheritance: and [by it there is] profit to them that see the sun.",
+      "verse": 11
+    },
+    {
+      "book": "Eccl",
+      "chapter": 7,
+      "id": "Eccl.7.12",
+      "text": "For wisdom [is] a defence, [and] money [is] a defence: but the excellency of knowledge [is, that] wisdom giveth life to them that have it.",
+      "verse": 12
+    },
+    {
+      "book": "Eccl",
+      "chapter": 7,
+      "id": "Eccl.7.13",
+      "text": "Consider the work of God: for who can make [that] straight, which he hath made crooked?",
+      "verse": 13
+    },
+    {
+      "book": "Eccl",
+      "chapter": 7,
+      "id": "Eccl.7.14",
+      "text": "In the day of prosperity be joyful, but in the day of adversity consider: God also hath set the one over against the other, to the end that man should find nothing after him.",
+      "verse": 14
+    },
+    {
+      "book": "Eccl",
+      "chapter": 7,
+      "id": "Eccl.7.15",
+      "text": "All [things] have I seen in the days of my vanity: there is a just [man] that perisheth in his righteousness, and there is a wicked [man] that prolongeth [his life] in his wickedness.",
+      "verse": 15
+    },
+    {
+      "book": "Eccl",
+      "chapter": 7,
+      "id": "Eccl.7.16",
+      "text": "Be not righteous over much; neither make thyself over wise: why shouldest thou destroy thyself?",
+      "verse": 16
+    },
+    {
+      "book": "Eccl",
+      "chapter": 7,
+      "id": "Eccl.7.17",
+      "text": "Be not over much wicked, neither be thou foolish: why shouldest thou die before thy time?",
+      "verse": 17
+    },
+    {
+      "book": "Eccl",
+      "chapter": 7,
+      "id": "Eccl.7.18",
+      "text": "[It is] good that thou shouldest take hold of this; yea, also from this withdraw not thine hand: for he that feareth God shall come forth of them all.",
+      "verse": 18
+    },
+    {
+      "book": "Eccl",
+      "chapter": 7,
+      "id": "Eccl.7.19",
+      "text": "Wisdom strengtheneth the wise more than ten mighty [men] which are in the city.",
+      "verse": 19
+    },
+    {
+      "book": "Eccl",
+      "chapter": 7,
+      "id": "Eccl.7.20",
+      "text": "For [there is] not a just man upon earth, that doeth good, and sinneth not.",
+      "verse": 20
+    },
+    {
+      "book": "Eccl",
+      "chapter": 7,
+      "id": "Eccl.7.21",
+      "text": "Also take no heed unto all words that are spoken; lest thou hear thy servant curse thee:",
+      "verse": 21
+    },
+    {
+      "book": "Eccl",
+      "chapter": 7,
+      "id": "Eccl.7.22",
+      "text": "For oftentimes also thine own heart knoweth that thou thyself likewise hast cursed others.",
+      "verse": 22
+    },
+    {
+      "book": "Eccl",
+      "chapter": 7,
+      "id": "Eccl.7.23",
+      "text": "All this have I proved by wisdom: I said, I will be wise; but it [was] far from me.",
+      "verse": 23
+    },
+    {
+      "book": "Eccl",
+      "chapter": 7,
+      "id": "Eccl.7.24",
+      "text": "That which is far off, and exceeding deep, who can find it out?",
+      "verse": 24
+    },
+    {
+      "book": "Eccl",
+      "chapter": 7,
+      "id": "Eccl.7.25",
+      "text": "I applied mine heart to know, and to search, and to seek out wisdom, and the reason [of things,] and to know the wickedness of folly, even of foolishness [and] madness:",
+      "verse": 25
+    },
+    {
+      "book": "Eccl",
+      "chapter": 7,
+      "id": "Eccl.7.26",
+      "text": "And I find more bitter than death the woman, whose heart [is] snares and nets, [and] her hands [as] bands: whoso pleaseth God shall escape from her; but the sinner shall be taken by her.",
+      "verse": 26
+    },
+    {
+      "book": "Eccl",
+      "chapter": 7,
+      "id": "Eccl.7.27",
+      "text": "Behold, this have I found, saith the preacher, [counting] one by one, to find out the account:",
+      "verse": 27
+    },
+    {
+      "book": "Eccl",
+      "chapter": 7,
+      "id": "Eccl.7.28",
+      "text": "Which yet my soul seeketh, but I find not: one man among a thousand have I found; but a woman among all those have I not found.",
+      "verse": 28
+    },
+    {
+      "book": "Eccl",
+      "chapter": 7,
+      "id": "Eccl.7.29",
+      "text": "Lo, this only have I found, that God hath made man upright; but they have sought out many inventions.",
+      "verse": 29
+    },
+    {
+      "book": "Eccl",
+      "chapter": 8,
+      "id": "Eccl.8.1",
+      "text": "Who [is] as the wise [man?] and who knoweth the interpretation of a thing? a man’s wisdom maketh his face to shine, and the boldness of his face shall be changed.",
+      "verse": 1
+    },
+    {
+      "book": "Eccl",
+      "chapter": 8,
+      "id": "Eccl.8.2",
+      "text": "I [counsel thee] to keep the king’s commandment, and [that] in regard of the oath of God.",
+      "verse": 2
+    },
+    {
+      "book": "Eccl",
+      "chapter": 8,
+      "id": "Eccl.8.3",
+      "text": "Be not hasty to go out of his sight: stand not in an evil thing; for he doeth whatsoever pleaseth him.",
+      "verse": 3
+    },
+    {
+      "book": "Eccl",
+      "chapter": 8,
+      "id": "Eccl.8.4",
+      "text": "Where the word of a king [is, there is] power: and who may say unto him, What doest thou?",
+      "verse": 4
+    },
+    {
+      "book": "Eccl",
+      "chapter": 8,
+      "id": "Eccl.8.5",
+      "text": "Whoso keepeth the commandment shall feel no evil thing: and a wise man’s heart discerneth both time and judgment.",
+      "verse": 5
+    },
+    {
+      "book": "Eccl",
+      "chapter": 8,
+      "id": "Eccl.8.6",
+      "text": "Because to every purpose there is time and judgment, therefore the misery of man [is] great upon him.",
+      "verse": 6
+    },
+    {
+      "book": "Eccl",
+      "chapter": 8,
+      "id": "Eccl.8.7",
+      "text": "For he knoweth not that which shall be: for who can tell him when it shall be?",
+      "verse": 7
+    },
+    {
+      "book": "Eccl",
+      "chapter": 8,
+      "id": "Eccl.8.8",
+      "text": "[There is] no man that hath power over the spirit to retain the spirit; neither [hath he] power in the day of death: and [there is] no discharge in [that] war; neither shall wickedness deliver those that are given to it.",
+      "verse": 8
+    },
+    {
+      "book": "Eccl",
+      "chapter": 8,
+      "id": "Eccl.8.9",
+      "text": "All this have I seen, and applied my heart unto every work that is done under the sun: [there is] a time wherein one man ruleth over another to his own hurt.",
+      "verse": 9
+    },
+    {
+      "book": "Eccl",
+      "chapter": 8,
+      "id": "Eccl.8.10",
+      "text": "And so I saw the wicked buried, who had come and gone from the place of the holy, and they were forgotten in the city where they had so done: this [is] also vanity.",
+      "verse": 10
+    },
+    {
+      "book": "Eccl",
+      "chapter": 8,
+      "id": "Eccl.8.11",
+      "text": "Because sentence against an evil work is not executed speedily, therefore the heart of the sons of men is fully set in them to do evil.",
+      "verse": 11
+    },
+    {
+      "book": "Eccl",
+      "chapter": 8,
+      "id": "Eccl.8.12",
+      "text": "Though a sinner do evil an hundred times, and his [days] be prolonged, yet surely I know that it shall be well with them that fear God, which fear before him:",
+      "verse": 12
+    },
+    {
+      "book": "Eccl",
+      "chapter": 8,
+      "id": "Eccl.8.13",
+      "text": "But it shall not be well with the wicked, neither shall he prolong [his] days, [which are] as a shadow; because he feareth not before God.",
+      "verse": 13
+    },
+    {
+      "book": "Eccl",
+      "chapter": 8,
+      "id": "Eccl.8.14",
+      "text": "There is a vanity which is done upon the earth; that there be just [men,] unto whom it happeneth according to the work of the wicked; again, there be wicked [men,] to whom it happeneth according to the work of the righteous: I said that this also [is] vanity.",
+      "verse": 14
+    },
+    {
+      "book": "Eccl",
+      "chapter": 8,
+      "id": "Eccl.8.15",
+      "text": "Then I commended mirth, because a man hath no better thing under the sun, than to eat, and to drink, and to be merry: for that shall abide with him of his labour the days of his life, which God giveth him under the sun.",
+      "verse": 15
+    },
+    {
+      "book": "Eccl",
+      "chapter": 8,
+      "id": "Eccl.8.16",
+      "text": "When I applied mine heart to know wisdom, and to see the business that is done upon the earth: (for also [there is that] neither day nor night seeth sleep with his eyes:)",
+      "verse": 16
+    },
+    {
+      "book": "Eccl",
+      "chapter": 8,
+      "id": "Eccl.8.17",
+      "text": "Then I beheld all the work of God, that a man cannot find out the work that is done under the sun: because though a man labour to seek [it] out, yet he shall not find [it;] yea further; though a wise [man] think to know [it,] yet shall he not be able to find [it. ]",
+      "verse": 17
+    },
+    {
+      "book": "Eccl",
+      "chapter": 9,
+      "id": "Eccl.9.1",
+      "text": "For all this I considered in my heart even to declare all this, that the righteous, and the wise, and their works, are in the hand of God: no man knoweth either love or hatred [by] all [that is] before them.",
+      "verse": 1
+    },
+    {
+      "book": "Eccl",
+      "chapter": 9,
+      "id": "Eccl.9.2",
+      "text": "All [things come] alike to all: [there is] one event to the righteous, and to the wicked; to the good and to the clean, and to the unclean; to him that sacrificeth, and to him that sacrificeth not: as [is] the good, so [is] the sinner; [and] he that sweareth, as [he] that feareth an oath.",
+      "verse": 2
+    },
+    {
+      "book": "Eccl",
+      "chapter": 9,
+      "id": "Eccl.9.3",
+      "text": "This [is] an evil among all [things] that are done under the sun, that [there is] one event unto all: yea, also the heart of the sons of men is full of evil, and madness is in their heart while they live, and after that [they go] to the dead.",
+      "verse": 3
+    },
+    {
+      "book": "Eccl",
+      "chapter": 9,
+      "id": "Eccl.9.4",
+      "text": "For to him that is joined to all the living there is hope: for a living dog is better than a dead lion.",
+      "verse": 4
+    },
+    {
+      "book": "Eccl",
+      "chapter": 9,
+      "id": "Eccl.9.5",
+      "text": "For the living know that they shall die: but the dead know not any thing, neither have they any more a reward; for the memory of them is forgotten.",
+      "verse": 5
+    },
+    {
+      "book": "Eccl",
+      "chapter": 9,
+      "id": "Eccl.9.6",
+      "text": "Also their love, and their hatred, and their envy, is now perished; neither have they any more a portion for ever in any [thing] that is done under the sun.",
+      "verse": 6
+    },
+    {
+      "book": "Eccl",
+      "chapter": 9,
+      "id": "Eccl.9.7",
+      "text": "Go thy way, eat thy bread with joy, and drink thy wine with a merry heart; for God now accepteth thy works.",
+      "verse": 7
+    },
+    {
+      "book": "Eccl",
+      "chapter": 9,
+      "id": "Eccl.9.8",
+      "text": "Let thy garments be always white; and let thy head lack no ointment.",
+      "verse": 8
+    },
+    {
+      "book": "Eccl",
+      "chapter": 9,
+      "id": "Eccl.9.9",
+      "text": "Live joyfully with the wife whom thou lovest all the days of the life of thy vanity, which he hath given thee under the sun, all the days of thy vanity: for that [is] thy portion in [this] life, and in thy labour which thou takest under the sun.",
+      "verse": 9
+    },
+    {
+      "book": "Eccl",
+      "chapter": 9,
+      "id": "Eccl.9.10",
+      "text": "Whatsoever thy hand findeth to do, do [it] with thy might; for [there is] no work, nor device, nor knowledge, nor wisdom, in the grave, whither thou goest.",
+      "verse": 10
+    },
+    {
+      "book": "Eccl",
+      "chapter": 9,
+      "id": "Eccl.9.11",
+      "text": "I returned, and saw under the sun, that the race [is] not to the swift, nor the battle to the strong, neither yet bread to the wise, nor yet riches to men of understanding, nor yet favour to men of skill; but time and chance happeneth to them all.",
+      "verse": 11
+    },
+    {
+      "book": "Eccl",
+      "chapter": 9,
+      "id": "Eccl.9.12",
+      "text": "For man also knoweth not his time: as the fishes that are taken in an evil net, and as the birds that are caught in the snare; so [are] the sons of men snared in an evil time, when it falleth suddenly upon them.",
+      "verse": 12
+    },
+    {
+      "book": "Eccl",
+      "chapter": 9,
+      "id": "Eccl.9.13",
+      "text": "This wisdom have I seen also under the sun, and it [seemed] great unto me:",
+      "verse": 13
+    },
+    {
+      "book": "Eccl",
+      "chapter": 9,
+      "id": "Eccl.9.14",
+      "text": "[There was] a little city, and few men within it; and there came a great king against it, and besieged it, and built great bulwarks against it:",
+      "verse": 14
+    },
+    {
+      "book": "Eccl",
+      "chapter": 9,
+      "id": "Eccl.9.15",
+      "text": "Now there was found in it a poor wise man, and he by his wisdom delivered the city; yet no man remembered that same poor man.",
+      "verse": 15
+    },
+    {
+      "book": "Eccl",
+      "chapter": 9,
+      "id": "Eccl.9.16",
+      "text": "Then said I, Wisdom [is] better than strength: nevertheless the poor man’s wisdom [is] despised, and his words are not heard.",
+      "verse": 16
+    },
+    {
+      "book": "Eccl",
+      "chapter": 9,
+      "id": "Eccl.9.17",
+      "text": "The words of wise [men are] heard in quiet more than the cry of him that ruleth among fools.",
+      "verse": 17
+    },
+    {
+      "book": "Eccl",
+      "chapter": 9,
+      "id": "Eccl.9.18",
+      "text": "Wisdom [is] better than weapons of war: but one sinner destroyeth much good.",
+      "verse": 18
+    },
+    {
+      "book": "Eccl",
+      "chapter": 10,
+      "id": "Eccl.10.1",
+      "text": "Dead flies cause the ointment of the apothecary to send forth a stinking savour: [so doth] a little folly him that is in reputation for wisdom [and] honour.",
+      "verse": 1
+    },
+    {
+      "book": "Eccl",
+      "chapter": 10,
+      "id": "Eccl.10.2",
+      "text": "A wise man’s heart [is] at his right hand; but a fool’s heart at his left.",
+      "verse": 2
+    },
+    {
+      "book": "Eccl",
+      "chapter": 10,
+      "id": "Eccl.10.3",
+      "text": "Yea also, when he that is a fool walketh by the way, his wisdom faileth [him,] and he saith to every one [that] he [is] a fool.",
+      "verse": 3
+    },
+    {
+      "book": "Eccl",
+      "chapter": 10,
+      "id": "Eccl.10.4",
+      "text": "If the spirit of the ruler rise up against thee, leave not thy place; for yielding pacifieth great offences.",
+      "verse": 4
+    },
+    {
+      "book": "Eccl",
+      "chapter": 10,
+      "id": "Eccl.10.5",
+      "text": "There is an evil [which] I have seen under the sun, as an error [which] proceedeth from the ruler:",
+      "verse": 5
+    },
+    {
+      "book": "Eccl",
+      "chapter": 10,
+      "id": "Eccl.10.6",
+      "text": "Folly is set in great dignity, and the rich sit in low place.",
+      "verse": 6
+    },
+    {
+      "book": "Eccl",
+      "chapter": 10,
+      "id": "Eccl.10.7",
+      "text": "I have seen servants upon horses, and princes walking as servants upon the earth.",
+      "verse": 7
+    },
+    {
+      "book": "Eccl",
+      "chapter": 10,
+      "id": "Eccl.10.8",
+      "text": "He that diggeth a pit shall fall into it; and whoso breaketh an hedge, a serpent shall bite him.",
+      "verse": 8
+    },
+    {
+      "book": "Eccl",
+      "chapter": 10,
+      "id": "Eccl.10.9",
+      "text": "Whoso removeth stones shall be hurt therewith; [and] he that cleaveth wood shall be endangered thereby.",
+      "verse": 9
+    },
+    {
+      "book": "Eccl",
+      "chapter": 10,
+      "id": "Eccl.10.10",
+      "text": "If the iron be blunt, and he do not whet the edge, then must he put to more strength: but wisdom [is] profitable to direct.",
+      "verse": 10
+    },
+    {
+      "book": "Eccl",
+      "chapter": 10,
+      "id": "Eccl.10.11",
+      "text": "Surely the serpent will bite without enchantment; and a babbler is no better.",
+      "verse": 11
+    },
+    {
+      "book": "Eccl",
+      "chapter": 10,
+      "id": "Eccl.10.12",
+      "text": "The words of a wise man’s mouth [are] gracious; but the lips of a fool will swallow up himself.",
+      "verse": 12
+    },
+    {
+      "book": "Eccl",
+      "chapter": 10,
+      "id": "Eccl.10.13",
+      "text": "The beginning of the words of his mouth [is] foolishness: and the end of his talk [is] mischievous madness.",
+      "verse": 13
+    },
+    {
+      "book": "Eccl",
+      "chapter": 10,
+      "id": "Eccl.10.14",
+      "text": "A fool also is full of words: a man cannot tell what shall be; and what shall be after him, who can tell him?",
+      "verse": 14
+    },
+    {
+      "book": "Eccl",
+      "chapter": 10,
+      "id": "Eccl.10.15",
+      "text": "The labour of the foolish wearieth every one of them, because he knoweth not how to go to the city.",
+      "verse": 15
+    },
+    {
+      "book": "Eccl",
+      "chapter": 10,
+      "id": "Eccl.10.16",
+      "text": "Woe to thee, O land, when thy king [is] a child, and thy princes eat in the morning!",
+      "verse": 16
+    },
+    {
+      "book": "Eccl",
+      "chapter": 10,
+      "id": "Eccl.10.17",
+      "text": "Blessed [art] thou, O land, when thy king [is] the son of nobles, and thy princes eat in due season, for strength, and not for drunkenness!",
+      "verse": 17
+    },
+    {
+      "book": "Eccl",
+      "chapter": 10,
+      "id": "Eccl.10.18",
+      "text": "By much slothfulness the building decayeth; and through idleness of the hands the house droppeth through.",
+      "verse": 18
+    },
+    {
+      "book": "Eccl",
+      "chapter": 10,
+      "id": "Eccl.10.19",
+      "text": "A feast is made for laughter, and wine maketh merry: but money answereth all [things. ]",
+      "verse": 19
+    },
+    {
+      "book": "Eccl",
+      "chapter": 10,
+      "id": "Eccl.10.20",
+      "text": "Curse not the king, no not in thy thought; and curse not the rich in thy bedchamber: for a bird of the air shall carry the voice, and that which hath wings shall tell the matter.",
+      "verse": 20
+    },
+    {
+      "book": "Eccl",
+      "chapter": 11,
+      "id": "Eccl.11.1",
+      "text": "Cast thy bread upon the waters: for thou shalt find it after many days.",
+      "verse": 1
+    },
+    {
+      "book": "Eccl",
+      "chapter": 11,
+      "id": "Eccl.11.2",
+      "text": "Give a portion to seven, and also to eight; for thou knowest not what evil shall be upon the earth.",
+      "verse": 2
+    },
+    {
+      "book": "Eccl",
+      "chapter": 11,
+      "id": "Eccl.11.3",
+      "text": "If the clouds be full of rain, they empty [themselves] upon the earth: and if the tree fall toward the south, or toward the north, in the place where the tree falleth, there it shall be.",
+      "verse": 3
+    },
+    {
+      "book": "Eccl",
+      "chapter": 11,
+      "id": "Eccl.11.4",
+      "text": "He that observeth the wind shall not sow; and he that regardeth the clouds shall not reap.",
+      "verse": 4
+    },
+    {
+      "book": "Eccl",
+      "chapter": 11,
+      "id": "Eccl.11.5",
+      "text": "As thou knowest not what [is] the way of the spirit, [nor] how the bones [do grow] in the womb of her that is with child: even so thou knowest not the works of God who maketh all.",
+      "verse": 5
+    },
+    {
+      "book": "Eccl",
+      "chapter": 11,
+      "id": "Eccl.11.6",
+      "text": "In the morning sow thy seed, and in the evening withhold not thine hand: for thou knowest not whether shall prosper, either this or that, or whether they both [shall be] alike good.",
+      "verse": 6
+    },
+    {
+      "book": "Eccl",
+      "chapter": 11,
+      "id": "Eccl.11.7",
+      "text": "Truly the light [is] sweet, and a pleasant [thing it is] for the eyes to behold the sun:",
+      "verse": 7
+    },
+    {
+      "book": "Eccl",
+      "chapter": 11,
+      "id": "Eccl.11.8",
+      "text": "But if a man live many years, [and] rejoice in them all; yet let him remember the days of darkness; for they shall be many. All that cometh [is] vanity.",
+      "verse": 8
+    },
+    {
+      "book": "Eccl",
+      "chapter": 11,
+      "id": "Eccl.11.9",
+      "text": "Rejoice, O young man, in thy youth; and let thy heart cheer thee in the days of thy youth, and walk in the ways of thine heart, and in the sight of thine eyes: but know thou, that for all these [things] God will bring thee into judgment.",
+      "verse": 9
+    },
+    {
+      "book": "Eccl",
+      "chapter": 11,
+      "id": "Eccl.11.10",
+      "text": "Therefore remove sorrow from thy heart, and put away evil from thy flesh: for childhood and youth [are] vanity.",
+      "verse": 10
+    },
+    {
+      "book": "Eccl",
+      "chapter": 12,
+      "id": "Eccl.12.1",
+      "text": "Remember now thy Creator in the days of thy youth, while the evil days come not, nor the years draw nigh, when thou shalt say, I have no pleasure in them;",
+      "verse": 1
+    },
+    {
+      "book": "Eccl",
+      "chapter": 12,
+      "id": "Eccl.12.2",
+      "text": "While the sun, or the light, or the moon, or the stars, be not darkened, nor the clouds return after the rain:",
+      "verse": 2
+    },
+    {
+      "book": "Eccl",
+      "chapter": 12,
+      "id": "Eccl.12.3",
+      "text": "In the day when the keepers of the house shall tremble, and the strong men shall bow themselves, and the grinders cease because they are few, and those that look out of the windows be darkened,",
+      "verse": 3
+    },
+    {
+      "book": "Eccl",
+      "chapter": 12,
+      "id": "Eccl.12.4",
+      "text": "And the doors shall be shut in the streets, when the sound of the grinding is low, and he shall rise up at the voice of the bird, and all the daughters of musick shall be brought low;",
+      "verse": 4
+    },
+    {
+      "book": "Eccl",
+      "chapter": 12,
+      "id": "Eccl.12.5",
+      "text": "Also [when] they shall be afraid of [that which is] high, and fears [shall be] in the way, and the almond tree shall flourish, and the grasshopper shall be a burden, and desire shall fail: because man goeth to his long home, and the mourners go about the streets:",
+      "verse": 5
+    },
+    {
+      "book": "Eccl",
+      "chapter": 12,
+      "id": "Eccl.12.6",
+      "text": "Or ever the silver cord be loosed, or the golden bowl be broken, or the pitcher be broken at the fountain, or the wheel broken at the cistern.",
+      "verse": 6
+    },
+    {
+      "book": "Eccl",
+      "chapter": 12,
+      "id": "Eccl.12.7",
+      "text": "Then shall the dust return to the earth as it was: and the spirit shall return unto God who gave it.",
+      "verse": 7
+    },
+    {
+      "book": "Eccl",
+      "chapter": 12,
+      "id": "Eccl.12.8",
+      "text": "Vanity of vanities, saith the preacher; all [is] vanity.",
+      "verse": 8
+    },
+    {
+      "book": "Eccl",
+      "chapter": 12,
+      "id": "Eccl.12.9",
+      "text": "And moreover, because the preacher was wise, he still taught the people knowledge; yea, he gave good heed, and sought out, [and] set in order many proverbs.",
+      "verse": 9
+    },
+    {
+      "book": "Eccl",
+      "chapter": 12,
+      "id": "Eccl.12.10",
+      "text": "The preacher sought to find out acceptable words: and [that which was] written [was] upright, [even] words of truth.",
+      "verse": 10
+    },
+    {
+      "book": "Eccl",
+      "chapter": 12,
+      "id": "Eccl.12.11",
+      "text": "The words of the wise [are] as goads, and as nails fastened by the masters of assemblies, [which] are given from one shepherd.",
+      "verse": 11
+    },
+    {
+      "book": "Eccl",
+      "chapter": 12,
+      "id": "Eccl.12.12",
+      "text": "And further, by these, my son, be admonished: of making many books [there is] no end; and much study [is] a weariness of the flesh.",
+      "verse": 12
+    },
+    {
+      "book": "Eccl",
+      "chapter": 12,
+      "id": "Eccl.12.13",
+      "text": "Let us hear the conclusion of the whole matter: Fear God, and keep his commandments: for this [is] the whole [duty] of man.",
+      "verse": 13
+    },
+    {
+      "book": "Eccl",
+      "chapter": 12,
+      "id": "Eccl.12.14",
+      "text": "For God shall bring every work into judgment, with every secret thing, whether [it be] good, or whether [it be] evil.",
+      "verse": 14
+    }
+  ],
+  "schemaVersion": 1,
+  "textCards": [
+    {
+      "body": "《传道书》的希伯来名是「召集人 n？？ /ko-heh'•leth」，意思是「聚会的召集\n者、演讲者」，和合本圣经译为「传道者」（一1）。希腊文《七十士译本》的书名\n（EKKAnolaothis/ Ekklesiastes）译自希伯来书名，而英文书名 （Ecclesiastes）是\n拉丁文转译的希腊文书名。\n\n在希伯来圣经《塔纳赫》（7\"］n/ Tanakh）中，《传道书》是《五小卷》的第四\n卷。《塔纳赫》的名字Tanakh由三个单词的开头字母组成，代表以下三部分、24卷书：\n•《妥拉》（Torah/nIn）：意思是「指导、教导」，共5卷。顺序是：创世记、\n出埃及记、利未记、民数记和申命记。\n•《先知书》（Navim/D'/21）：意思是「先知们」，共8卷。现代顺序是：早期\n先知书（约书亚记、士师记、撒母耳记、列王纪）、后期先知书（以赛亚书、耶利米\n书、以西结书、十二先知书）。\n\n• 《圣卷》（Ketuvim /D2In2）：意思是「作品集」，共11卷。现代顺序是：诗\n歌（诗篇、箴言、约伯记），五小卷（雅歌、路得记、耶利米哀歌、传道书、以斯帖\n记，历史书（但以理书、以斯拉记-尼希米记、历代志）。",
+      "debugMeta": {
+        "coverageRanges": [
+          {
+            "end": "Eccl.1.1",
+            "start": "Eccl.1.1"
+          }
+        ],
+        "page": 3,
+        "primaryAnchor": "Eccl.1.1",
+        "sourceLabel": "image-text-ocr-conversion"
+      },
+      "id": "image-text-21-传道书-codex-pdf-p003-img002",
+      "primaryAnchor": "Eccl.1.1",
+      "searchText": "《传道书》的希伯来名是「召集人 n？\n《传道书》的希伯来名是「召集人 n？？ /ko-heh'•leth」，意思是「聚会的召集\n者、演讲者」，和合本圣经译为「传道者」（一1）。希腊文《七十士译本》的书名\n（EKKAnolaothis/ Ekklesiastes）译自希伯来书名，而英文书名 （Ecclesiastes）是\n拉丁文转译的希腊文书名。\n\n在希伯来圣经《塔纳赫》（7\"］n/ Tanakh）中，《传道书》是《五小卷》的第四\n卷。《塔纳赫》的名字Tanakh由三个单词的开头字母组成，代表以下三部分、24卷书：\n•《妥拉》（Torah/nIn）：意思是「指导、教导」，共5卷。顺序是：创世记、\n出埃及记、利未记、民数记和申命记。\n•《先知书》（Navim/D'/21）：意思是「先知们」，共8卷。现代顺序是：早期\n先知书（约书亚记、士师记、撒母耳记、列王纪）、后期先知书（以赛亚书、耶利米\n书、以西结书、十二先知书）。\n\n• 《圣卷》（Ketuvim /D2In2）：意思是「作品集」，共11卷。现代顺序是：诗\n歌（诗篇、箴言、约伯记），五小卷（雅歌、路得记、耶利米哀歌、传道书、以斯帖\n记，历史书（但以理书、以斯拉记-尼希米记、历代志）。",
+      "source": "image-text-ocr-conversion",
+      "title": "《传道书》的希伯来名是「召集人 n？",
+      "type": "commentary",
+      "verses": [
+        "Eccl.1.1"
+      ]
+    },
+    {
+      "body": "传道者首先向所有的人发出了一个挑战：「你活着有意思吗？」（一2-11），然后分享了自己在日光之下的人生旅程。传道者的人生丰富多彩，比常人经历了更多的智慧知识、物质享受、爱情欢乐、劳碌经营、建功立业，最后却发现日光之下「凡事都是虚空」（一2、9），没有希望（二11）、令人厌烦（一17-18）。忽然，传道者提到了「神的手」（二24），一切都改变了。日光之下的一切都淡化为背景，取而代之的是神的恩赐（二26；三13；五19）和人的喜乐（三12；五18、20；九7；十一 7-9）。本书原文十二次提到神的「给 IDg/na-than'」（一13；二26×2；三10、 11；五18、19；六2；八15；九9；十二7、11），七次提到人从神所得喜乐的「分\nP2 /kha' lek」（二10、21；=22；五18、19；九6、9），引导读者从两个全然不同的角度来看人生：虽然日光之下的一切都是虚空，但只要看见神的身影，就可以感恩喜乐，用积极的态度来度过虚空的年日。",
+      "debugMeta": {
+        "coverageRanges": [
+          {
+            "end": "Eccl.1.2",
+            "start": "Eccl.1.2"
+          }
+        ],
+        "page": 4,
+        "primaryAnchor": "Eccl.1.2",
+        "sourceLabel": "image-text-ocr-conversion"
+      },
+      "id": "image-text-21-传道书-codex-pdf-p004-img005",
+      "primaryAnchor": "Eccl.1.2",
+      "searchText": "传道者首先向所有的人发出了一个挑战：「你活着有意思吗？」（一2-11），然后分享了自己在日光之下的人生旅程。 传道者首先向所有的人发出了一个挑战：「你活着有意思吗？」（一2-11），然后分享了自己在日光之下的人生旅程。传道者的人生丰富多彩，比常人经历了更多的智慧知识、物质享受、爱情欢乐、劳碌经营、建功立业，最后却发现日光之下「凡事都是虚空」（一2、9），没有希望（二11）、令人厌烦（一17-18）。忽然，传道者提到了「神的手」（二24），一切都改变了。日光之下的一切都淡化为背景，取而代之的是神的恩赐（二26；三13；五19）和人的喜乐（三12；五18、20；九7；十一 7-9）。本书原文十二次提到神的「给 IDg/na-than'」（一13；二26×2；三10、 11；五18、19；六2；八15；九9；十二7、11），七次提到人从神所得喜乐的「分\nP2 /kha' lek」（二10、21；=22；五18、19；九6、9），引导读者从两个全然不同的角度来看人生：虽然日光之下的一切都是虚空，但只要看见神的身影，就可以感恩喜乐，用积极的态度来度过虚空的年日。",
+      "source": "image-text-ocr-conversion",
+      "title": "传道者首先向所有的人发出了一个挑战：「你活着有意思吗？」（一2-11），然后分享了自己在日光之下的人生旅程。",
+      "type": "commentary",
+      "verses": [
+        "Eccl.1.2"
+      ]
+    },
+    {
+      "body": "•「知识 ny/dah’•ath」（16节）原文的意思是「知识、洞察力、智慧」，与\n「分别善恶」（创二9、17）的「分别」是同一个词，在圣经中也被译为「知道」\n（伯十7）、「认识」（赛五十三11）、「明白」（赛五十八2）。「知识」包括两\n个要素：首先是知道一件事、或者知道去哪里找；其次是懂得如何分辨。",
+      "debugMeta": {
+        "coverageRanges": [
+          {
+            "end": "Eccl.1.16",
+            "start": "Eccl.1.16"
+          }
+        ],
+        "page": 15,
+        "primaryAnchor": "Eccl.1.16",
+        "sourceLabel": "image-text-ocr-conversion"
+      },
+      "id": "image-text-21-传道书-codex-pdf-p015-img012",
+      "primaryAnchor": "Eccl.1.16",
+      "searchText": "•「知识 ny/dah’•ath」（16节）原文的意思是「知识、洞察力、智慧」，与 •「知识 ny/dah’•ath」（16节）原文的意思是「知识、洞察力、智慧」，与\n「分别善恶」（创二9、17）的「分别」是同一个词，在圣经中也被译为「知道」\n（伯十7）、「认识」（赛五十三11）、「明白」（赛五十八2）。「知识」包括两\n个要素：首先是知道一件事、或者知道去哪里找；其次是懂得如何分辨。",
+      "source": "image-text-ocr-conversion",
+      "title": "•「知识 ny/dah’•ath」（16节）原文的意思是「知识、洞察力、智慧」，与",
+      "type": "commentary",
+      "verses": [
+        "Eccl.1.16"
+      ]
+    },
+    {
+      "body": "在耶路撒冷作王，大卫的儿子，传道者，见\"导论：作者、书名和写作时间\"。",
+      "debugMeta": {
+        "coverageRanges": [
+          {
+            "end": "Eccl.1.1",
+            "start": "Eccl.1.1"
+          }
+        ],
+        "page": 5,
+        "primaryAnchor": "Eccl.1.1",
+        "sourceLabel": "圣经研修本 21_传道书【codex-v3】"
+      },
+      "id": "study-bible-eccl-1-1-p005-n006",
+      "primaryAnchor": "Eccl.1.1",
+      "searchText": "传道书 1:1 研修本注释：在耶路撒冷作王，大卫的儿子，传道者，见\"导论\n在耶路撒冷作王，大卫的儿子，传道者，见\"导论：作者、书名和写作时间\"。\n在耶路撒冷作王，大卫的儿子，传道者，见\"导论：作者、书名和写作时间\"。\n1:1\n圣经研修本 21_传道书【codex-v3】",
+      "source": "圣经研修本 21_传道书【codex-v3】",
+      "summary": "在耶路撒冷作王，大卫的儿子，传道者，见\"导论：作者、书名和写作时间\"。",
+      "title": "传道书 1:1 研修本注释：在耶路撒冷作王，大卫的儿子，传道者，见\"导论",
+      "type": "commentary",
+      "verses": [
+        "Eccl.1.1"
+      ]
+    },
+    {
+      "body": "虚空的虚空，凡事都是虚空，\"虚空\"是极为重要的主题词（希伯来原文hebel，宇面意力\"烟等\"，喻愆〝虚空\"，在本书中反复出现。开始，传道者对它并未加以解释，但随着内容的展开，这个词的意思越来越清楚（有关词义的进.步讨论.见\"导论：关键主题。",
+      "debugMeta": {
+        "coverageRanges": [
+          {
+            "end": "Eccl.1.2",
+            "start": "Eccl.1.2"
+          }
+        ],
+        "page": 5,
+        "primaryAnchor": "Eccl.1.2",
+        "sourceLabel": "圣经研修本 21_传道书【codex-v3】"
+      },
+      "id": "study-bible-eccl-1-2-p005-n012",
+      "primaryAnchor": "Eccl.1.2",
+      "searchText": "传道书 1:2 研修本注释\n虚空的虚空，凡事都是虚空，\"虚空\"是极为重要的主题词（希伯来原文hebel，宇面意力\"烟等\"，喻愆〝虚空\"，在本书中反复出现。开始，传道者对它并未加以解释，但随着内容的展开，这个词的意思越来越清楚（有关词义的进.步讨论.见\"导论：关键主题。\n虚空的虚空，凡事都是虚空，\"虚空\"是极为重要的主题词（希伯来原文hebel，宇面意力\"烟等\"，喻愆〝虚空\"，在本书中反复出现。开始，传道者对它并未加以解释，但随着内容的展开，这个词的意思越来越清楚（有关词义的进.步讨论.见\"导论：关键主题。\n1:2\n圣经研修本 21_传道书【codex-v3】",
+      "source": "圣经研修本 21_传道书【codex-v3】",
+      "summary": "虚空的虚空，凡事都是虚空，\"虚空\"是极为重要的主题词（希伯来原文hebel，宇面意力\"烟等\"，喻愆〝虚空\"，在本书中反复出现。开始，传道者对它并未加以解释，但随着内容的展开，这个词的意思越来越清楚（有关词义的进.步讨论.见\"导论：关键主题。",
+      "title": "传道书 1:2 研修本注释",
+      "type": "commentary",
+      "verses": [
+        "Eccl.1.2"
+      ]
+    },
+    {
+      "body": "有什么益处呢？传道者发现\"凡事都是虚空\"（1:2），因而反复提出这个问题（3:9.5:15.参2:11,6:11.10:11）。如果人生通常都是毫无意义的，其中的乐趣和成就又只是\"昙花一现\"，那么人的存在还有什么意义呢？这里的日光之下，并非带有世俗的含义（传道者经常在提到上帝时引用这短语，因此就排除了这种意思），而是指目前处在堕落光景下的世界和人类，和《新约》中的\"这世代\"或\"现今的世代\"意思很接近。",
+      "debugMeta": {
+        "coverageRanges": [
+          {
+            "end": "Eccl.1.3",
+            "start": "Eccl.1.3"
+          }
+        ],
+        "page": 5,
+        "primaryAnchor": "Eccl.1.3",
+        "sourceLabel": "圣经研修本 21_传道书【codex-v3】"
+      },
+      "id": "study-bible-eccl-1-3-p005-n013",
+      "primaryAnchor": "Eccl.1.3",
+      "searchText": "传道书 1:3 研修本注释\n有什么益处呢？传道者发现\"凡事都是虚空\"（1:2），因而反复提出这个问题（3:9.5:15.参2:11,6:11.10:11）。如果人生通常都是毫无意义的，其中的乐趣和成就又只是\"昙花一现\"，那么人的存在还有什么意义呢？这里的日光之下，并…\n有什么益处呢？传道者发现\"凡事都是虚空\"（1:2），因而反复提出这个问题（3:9.5:15.参2:11,6:11.10:11）。如果人生通常都是毫无意义的，其中的乐趣和成就又只是\"昙花一现\"，那么人的存在还有什么意义呢？这里的日光之下，并非带有世俗的含义（传道者经常在提到上帝时引用这短语，因此就排除了这种意思），而是指目前处在堕落光景下的世界和人类，和《新约》中的\"这世代\"或\"现今的世代\"意思很接近。\n1:3\n圣经研修本 21_传道书【codex-v3】",
+      "source": "圣经研修本 21_传道书【codex-v3】",
+      "summary": "有什么益处呢？传道者发现\"凡事都是虚空\"（1:2），因而反复提出这个问题（3:9.5:15.参2:11,6:11.10:11）。如果人生通常都是毫无意义的，其中的乐趣和成就又只是\"昙花一现\"，那么人的存在还有什么意义呢？这里的日光之下，并…",
+      "title": "传道书 1:3 研修本注释",
+      "type": "commentary",
+      "verses": [
+        "Eccl.1.3"
+      ]
+    },
+    {
+      "body": "已过的世代，无人记念；将来的世代……也不记念，这里的\"世代\"希伯来原文也可译作：人（见利26:45：申19:14：传4:16）。随着世代更换（1:4），只有极少数的人可以在世界历史的进程中留下举足轻重的影响，大部分人都是默默无闻地出生，义默默无闻地死去。这看似无休小的世代进程，和自然界的循环往复一样，也显得没有意义。",
+      "debugMeta": {
+        "coverageRanges": [
+          {
+            "end": "Eccl.1.11",
+            "start": "Eccl.1.11"
+          }
+        ],
+        "page": 5,
+        "primaryAnchor": "Eccl.1.11",
+        "sourceLabel": "圣经研修本 21_传道书【codex-v3】"
+      },
+      "id": "study-bible-eccl-1-11-p005-n011",
+      "primaryAnchor": "Eccl.1.11",
+      "searchText": "传道书 1:11 研修本注释\n已过的世代，无人记念；将来的世代……也不记念，这里的\"世代\"希伯来原文也可译作：人（见利26:45：申19:14：传4:16）。随着世代更换（1:4），只有极少数的人可以在世界历史的进程中留下举足轻重的影响，大部分人都是默默无闻地出生，义…\n已过的世代，无人记念；将来的世代……也不记念，这里的\"世代\"希伯来原文也可译作：人（见利26:45：申19:14：传4:16）。随着世代更换（1:4），只有极少数的人可以在世界历史的进程中留下举足轻重的影响，大部分人都是默默无闻地出生，义默默无闻地死去。这看似无休小的世代进程，和自然界的循环往复一样，也显得没有意义。\n1:11\n圣经研修本 21_传道书【codex-v3】",
+      "source": "圣经研修本 21_传道书【codex-v3】",
+      "summary": "已过的世代，无人记念；将来的世代……也不记念，这里的\"世代\"希伯来原文也可译作：人（见利26:45：申19:14：传4:16）。随着世代更换（1:4），只有极少数的人可以在世界历史的进程中留下举足轻重的影响，大部分人都是默默无闻地出生，义…",
+      "title": "传道书 1:11 研修本注释",
+      "type": "commentary",
+      "verses": [
+        "Eccl.1.11"
+      ]
+    },
+    {
+      "body": "我传道者…作过以色列的王，见\"导论：作者、书名和写作时间\"",
+      "debugMeta": {
+        "coverageRanges": [
+          {
+            "end": "Eccl.1.12",
+            "start": "Eccl.1.12"
+          }
+        ],
+        "page": 5,
+        "primaryAnchor": "Eccl.1.12",
+        "sourceLabel": "圣经研修本 21_传道书【codex-v3】"
+      },
+      "id": "study-bible-eccl-1-12-p005-n009",
+      "primaryAnchor": "Eccl.1.12",
+      "searchText": "传道书 1:12 研修本注释：我传道者…作过以色列的王，见\"导论\n我传道者…作过以色列的王，见\"导论：作者、书名和写作时间\"\n我传道者…作过以色列的王，见\"导论：作者、书名和写作时间\"\n1:12\n圣经研修本 21_传道书【codex-v3】",
+      "source": "圣经研修本 21_传道书【codex-v3】",
+      "summary": "我传道者…作过以色列的王，见\"导论：作者、书名和写作时间\"",
+      "title": "传道书 1:12 研修本注释：我传道者…作过以色列的王，见\"导论",
+      "type": "commentary",
+      "verses": [
+        "Eccl.1.12"
+      ]
+    },
+    {
+      "body": "传道者发现，在这个世界上，上帝叫世人经受极重的劳苦，意即愁烦或重担。在希伯来原文中，4:8和5:14（\"患\"）也使用了这个短语，指那些生活在天下（与\"日光之下\"的意思一样：参1:14）的人所经受的重担和磨难。因为世人无法参透的某种原因，上帝命定人要在现今的堕落世界中经历痛苦。",
+      "debugMeta": {
+        "coverageRanges": [
+          {
+            "end": "Eccl.1.13",
+            "start": "Eccl.1.13"
+          }
+        ],
+        "page": 5,
+        "primaryAnchor": "Eccl.1.13",
+        "sourceLabel": "圣经研修本 21_传道书【codex-v3】"
+      },
+      "id": "study-bible-eccl-1-13-p005-n011",
+      "primaryAnchor": "Eccl.1.13",
+      "searchText": "传道书 1:13 研修本注释\n传道者发现，在这个世界上，上帝叫世人经受极重的劳苦，意即愁烦或重担。在希伯来原文中，4:8和5:14（\"患\"）也使用了这个短语，指那些生活在天下（与\"日光之下\"的意思一样：参1:14）的人所经受的重担和磨难。因为世人无法参透的某种原因，上…\n传道者发现，在这个世界上，上帝叫世人经受极重的劳苦，意即愁烦或重担。在希伯来原文中，4:8和5:14（\"患\"）也使用了这个短语，指那些生活在天下（与\"日光之下\"的意思一样：参1:14）的人所经受的重担和磨难。因为世人无法参透的某种原因，上帝命定人要在现今的堕落世界中经历痛苦。\n1:13\n圣经研修本 21_传道书【codex-v3】",
+      "source": "圣经研修本 21_传道书【codex-v3】",
+      "summary": "传道者发现，在这个世界上，上帝叫世人经受极重的劳苦，意即愁烦或重担。在希伯来原文中，4:8和5:14（\"患\"）也使用了这个短语，指那些生活在天下（与\"日光之下\"的意思一样：参1:14）的人所经受的重担和磨难。因为世人无法参透的某种原因，上…",
+      "title": "传道书 1:13 研修本注释",
+      "type": "commentary",
+      "verses": [
+        "Eccl.1.13"
+      ]
+    },
+    {
+      "body": "传道者继续他在13节开始做的事，考察日光之下的虚空（见1:2注），都是捕风。 \"虚空\"几乎总是一起出现（见2:11.17.26.4:4,6:9）。",
+      "debugMeta": {
+        "coverageRanges": [
+          {
+            "end": "Eccl.1.14",
+            "start": "Eccl.1.14"
+          }
+        ],
+        "page": 5,
+        "primaryAnchor": "Eccl.1.14",
+        "sourceLabel": "圣经研修本 21_传道书【codex-v3】"
+      },
+      "id": "study-bible-eccl-1-14-p005-n015",
+      "primaryAnchor": "Eccl.1.14",
+      "searchText": "传道书 1:14 研修本注释\n传道者继续他在13节开始做的事，考察日光之下的虚空（见1:2注），都是捕风。 \"虚空\"几乎总是一起出现（见2:11.17.26.4:4,6:9）。\n传道者继续他在13节开始做的事，考察日光之下的虚空（见1:2注），都是捕风。 \"虚空\"几乎总是一起出现（见2:11.17.26.4:4,6:9）。\n1:14\n圣经研修本 21_传道书【codex-v3】",
+      "source": "圣经研修本 21_传道书【codex-v3】",
+      "summary": "传道者继续他在13节开始做的事，考察日光之下的虚空（见1:2注），都是捕风。 \"虚空\"几乎总是一起出现（见2:11.17.26.4:4,6:9）。",
+      "title": "传道书 1:14 研修本注释",
+      "type": "commentary",
+      "verses": [
+        "Eccl.1.14"
+      ]
+    },
+    {
+      "body": "弯曲的，这里应当理解为\"不能明白的\"，并非指道德上的\"败坏\"或\"邪恶\"\"。在堕落的世界中，人生经常会出现一些不能明白的事情，因为上帝没有把全部答案都",
+      "debugMeta": {
+        "coverageRanges": [
+          {
+            "end": "Eccl.1.15",
+            "start": "Eccl.1.15"
+          }
+        ],
+        "page": 6,
+        "primaryAnchor": "Eccl.1.15",
+        "sourceLabel": "圣经研修本 21_传道书【codex-v3】"
+      },
+      "id": "study-bible-eccl-1-15-p006-n017",
+      "primaryAnchor": "Eccl.1.15",
+      "searchText": "传道书 1:15 研修本注释\n弯曲的，这里应当理解为\"不能明白的\"，并非指道德上的\"败坏\"或\"邪恶\"\"。在堕落的世界中，人生经常会出现一些不能明白的事情，因为上帝没有把全部答案都\n弯曲的，这里应当理解为\"不能明白的\"，并非指道德上的\"败坏\"或\"邪恶\"\"。在堕落的世界中，人生经常会出现一些不能明白的事情，因为上帝没有把全部答案都\n1:15\n圣经研修本 21_传道书【codex-v3】",
+      "source": "圣经研修本 21_传道书【codex-v3】",
+      "summary": "弯曲的，这里应当理解为\"不能明白的\"，并非指道德上的\"败坏\"或\"邪恶\"\"。在堕落的世界中，人生经常会出现一些不能明白的事情，因为上帝没有把全部答案都",
+      "title": "传道书 1:15 研修本注释",
+      "type": "commentary",
+      "verses": [
+        "Eccl.1.15"
+      ]
+    },
+    {
+      "body": "胜过我以前在耶路撒冷的众人，如果曾经有人拥有智慧，明白生命的意义，那么这人便是传道者本人。",
+      "debugMeta": {
+        "coverageRanges": [
+          {
+            "end": "Eccl.1.16",
+            "start": "Eccl.1.16"
+          }
+        ],
+        "page": 6,
+        "primaryAnchor": "Eccl.1.16",
+        "sourceLabel": "圣经研修本 21_传道书【codex-v3】"
+      },
+      "id": "study-bible-eccl-1-16-p006-n019",
+      "primaryAnchor": "Eccl.1.16",
+      "searchText": "传道书 1:16 研修本注释\n胜过我以前在耶路撒冷的众人，如果曾经有人拥有智慧，明白生命的意义，那么这人便是传道者本人。\n胜过我以前在耶路撒冷的众人，如果曾经有人拥有智慧，明白生命的意义，那么这人便是传道者本人。\n1:16\n圣经研修本 21_传道书【codex-v3】",
+      "source": "圣经研修本 21_传道书【codex-v3】",
+      "summary": "胜过我以前在耶路撒冷的众人，如果曾经有人拥有智慧，明白生命的意义，那么这人便是传道者本人。",
+      "title": "传道书 1:16 研修本注释",
+      "type": "commentary",
+      "verses": [
+        "Eccl.1.16"
+      ]
+    },
+    {
+      "body": "传道者不仅寻求明智慧，还想要明白狂妄和愚昧（另见2:3.12.7:25）。这不是说，他确实认为后者也是一种达到智慧的途径（参2:13-14.93,10:1.13），而是他想要藉着同时察明智慧的对立面（愚昧），来进一步明白智慧：参上帝知道\"善恶\"（创3:22，另见创2:9.17）。",
+      "debugMeta": {
+        "coverageRanges": [
+          {
+            "end": "Eccl.1.17",
+            "start": "Eccl.1.17"
+          }
+        ],
+        "page": 6,
+        "primaryAnchor": "Eccl.1.17",
+        "sourceLabel": "圣经研修本 21_传道书【codex-v3】"
+      },
+      "id": "study-bible-eccl-1-17-p006-n020",
+      "primaryAnchor": "Eccl.1.17",
+      "searchText": "传道书 1:17 研修本注释\n传道者不仅寻求明智慧，还想要明白狂妄和愚昧（另见2:3.12.7:25）。这不是说，他确实认为后者也是一种达到智慧的途径（参2:13-14.93,10:1.13），而是他想要藉着同时察明智慧的对立面（愚昧），来进一步明白智慧：参上帝知道\"…\n传道者不仅寻求明智慧，还想要明白狂妄和愚昧（另见2:3.12.7:25）。这不是说，他确实认为后者也是一种达到智慧的途径（参2:13-14.93,10:1.13），而是他想要藉着同时察明智慧的对立面（愚昧），来进一步明白智慧：参上帝知道\"善恶\"（创3:22，另见创2:9.17）。\n1:17\n圣经研修本 21_传道书【codex-v3】",
+      "source": "圣经研修本 21_传道书【codex-v3】",
+      "summary": "传道者不仅寻求明智慧，还想要明白狂妄和愚昧（另见2:3.12.7:25）。这不是说，他确实认为后者也是一种达到智慧的途径（参2:13-14.93,10:1.13），而是他想要藉着同时察明智慧的对立面（愚昧），来进一步明白智慧：参上帝知道\"…",
+      "title": "传道书 1:17 研修本注释",
+      "type": "commentary",
+      "verses": [
+        "Eccl.1.17"
+      ]
+    },
+    {
+      "body": "智慧是喜忧参半的祝福：在这个被罪玷污的世界，得智慧就是对人生的各种悲剧看得更加清楚。",
+      "debugMeta": {
+        "coverageRanges": [
+          {
+            "end": "Eccl.1.18",
+            "start": "Eccl.1.18"
+          }
+        ],
+        "page": 6,
+        "primaryAnchor": "Eccl.1.18",
+        "sourceLabel": "圣经研修本 21_传道书【codex-v3】"
+      },
+      "id": "study-bible-eccl-1-18-p006-n020",
+      "primaryAnchor": "Eccl.1.18",
+      "searchText": "传道书 1:18 研修本注释：智慧是喜忧参半的祝福\n智慧是喜忧参半的祝福：在这个被罪玷污的世界，得智慧就是对人生的各种悲剧看得更加清楚。\n智慧是喜忧参半的祝福：在这个被罪玷污的世界，得智慧就是对人生的各种悲剧看得更加清楚。\n1:18\n圣经研修本 21_传道书【codex-v3】",
+      "source": "圣经研修本 21_传道书【codex-v3】",
+      "summary": "智慧是喜忧参半的祝福：在这个被罪玷污的世界，得智慧就是对人生的各种悲剧看得更加清楚。",
+      "title": "传道书 1:18 研修本注释：智慧是喜忧参半的祝福",
+      "type": "commentary",
+      "verses": [
+        "Eccl.1.18"
+      ]
+    },
+    {
+      "body": "我心却仍以智慧引导我，传道者没有放纵饮酒，免得失去慎思明辨的能力。关于他试图持住愚昧（《和修》\"抓住愚昧》，见1:17注。",
+      "debugMeta": {
+        "coverageRanges": [
+          {
+            "end": "Eccl.2.3",
+            "start": "Eccl.2.3"
+          }
+        ],
+        "page": 6,
+        "primaryAnchor": "Eccl.2.3",
+        "sourceLabel": "圣经研修本 21_传道书【codex-v3】"
+      },
+      "id": "study-bible-eccl-2-3-p006-n023",
+      "primaryAnchor": "Eccl.2.3",
+      "searchText": "传道书 2:3 研修本注释\n我心却仍以智慧引导我，传道者没有放纵饮酒，免得失去慎思明辨的能力。关于他试图持住愚昧（《和修》\"抓住愚昧》，见1:17注。\n我心却仍以智慧引导我，传道者没有放纵饮酒，免得失去慎思明辨的能力。关于他试图持住愚昧（《和修》\"抓住愚昧》，见1:17注。\n2:3\n圣经研修本 21_传道书【codex-v3】",
+      "source": "圣经研修本 21_传道书【codex-v3】",
+      "summary": "我心却仍以智慧引导我，传道者没有放纵饮酒，免得失去慎思明辨的能力。关于他试图持住愚昧（《和修》\"抓住愚昧》，见1:17注。",
+      "title": "传道书 2:3 研修本注释",
+      "type": "commentary",
+      "verses": [
+        "Eccl.2.3"
+      ]
+    },
+    {
+      "body": "传道者作王，超越其他所有的人（1:16.2:7.9），所以任何在王以后而来的人，最多只是重复早先所行的。他可以确定，即使自己这样出色的治理也是\"虚空\"（1-11节），于是再去查究智慧的价值（参1:12-18）。关于狂妄和愚昧，见1:17注。",
+      "debugMeta": {
+        "coverageRanges": [
+          {
+            "end": "Eccl.2.12",
+            "start": "Eccl.2.12"
+          }
+        ],
+        "page": 6,
+        "primaryAnchor": "Eccl.2.12",
+        "sourceLabel": "圣经研修本 21_传道书【codex-v3】"
+      },
+      "id": "study-bible-eccl-2-12-p006-n017",
+      "primaryAnchor": "Eccl.2.12",
+      "searchText": "传道书 2:12 研修本注释\n传道者作王，超越其他所有的人（1:16.2:7.9），所以任何在王以后而来的人，最多只是重复早先所行的。他可以确定，即使自己这样出色的治理也是\"虚空\"（1-11节），于是再去查究智慧的价值（参1:12-18）。关于狂妄和愚昧，见1:17注。\n传道者作王，超越其他所有的人（1:16.2:7.9），所以任何在王以后而来的人，最多只是重复早先所行的。他可以确定，即使自己这样出色的治理也是\"虚空\"（1-11节），于是再去查究智慧的价值（参1:12-18）。关于狂妄和愚昧，见1:17注。\n2:12\n圣经研修本 21_传道书【codex-v3】",
+      "source": "圣经研修本 21_传道书【codex-v3】",
+      "summary": "传道者作王，超越其他所有的人（1:16.2:7.9），所以任何在王以后而来的人，最多只是重复早先所行的。他可以确定，即使自己这样出色的治理也是\"虚空\"（1-11节），于是再去查究智慧的价值（参1:12-18）。关于狂妄和愚昧，见1:17注。",
+      "title": "传道书 2:12 研修本注释",
+      "type": "commentary",
+      "verses": [
+        "Eccl.2.12"
+      ]
+    },
+    {
+      "body": "智慧胜过愚昧，智慧是把双刃剑（1:18），带着令人痛苦的局限（如：2:14-16），但绝对胜过愚昧的人生。",
+      "debugMeta": {
+        "coverageRanges": [
+          {
+            "end": "Eccl.2.13",
+            "start": "Eccl.2.13"
+          }
+        ],
+        "page": 6,
+        "primaryAnchor": "Eccl.2.13",
+        "sourceLabel": "圣经研修本 21_传道书【codex-v3】"
+      },
+      "id": "study-bible-eccl-2-13-p006-n019",
+      "primaryAnchor": "Eccl.2.13",
+      "searchText": "传道书 2:13 研修本注释\n智慧胜过愚昧，智慧是把双刃剑（1:18），带着令人痛苦的局限（如：2:14-16），但绝对胜过愚昧的人生。\n智慧胜过愚昧，智慧是把双刃剑（1:18），带着令人痛苦的局限（如：2:14-16），但绝对胜过愚昧的人生。\n2:13\n圣经研修本 21_传道书【codex-v3】",
+      "source": "圣经研修本 21_传道书【codex-v3】",
+      "summary": "智慧胜过愚昧，智慧是把双刃剑（1:18），带着令人痛苦的局限（如：2:14-16），但绝对胜过愚昧的人生。",
+      "title": "传道书 2:13 研修本注释",
+      "type": "commentary",
+      "verses": [
+        "Eccl.2.13"
+      ]
+    },
+    {
+      "body": "第14-16节提到智慧的局限，所以传道者在这里说，他恨恶生命。但在其他经文中，他又说活着比死了强（9:4-5），并且夸赞生命中的福乐（如：3:12-13.9:9），可见这里表达的不是彻底的绝望。相反，他这里使用\"恨恶\"是一种常见的修辞手法，以绝对的用词表达一种对的反差（见创29:30-31\"失宠\"：申21:15〝所恶\"：路14:26注）。传道者\"恨恶\"生命，意思是在生命的某些重要方面，他感到深深的失望；对他来说，生命的甘甜已经所剩无几。",
+      "debugMeta": {
+        "coverageRanges": [
+          {
+            "end": "Eccl.2.17",
+            "start": "Eccl.2.17"
+          }
+        ],
+        "page": 6,
+        "primaryAnchor": "Eccl.2.17",
+        "sourceLabel": "圣经研修本 21_传道书【codex-v3】"
+      },
+      "id": "study-bible-eccl-2-17-p006-n023",
+      "primaryAnchor": "Eccl.2.17",
+      "searchText": "传道书 2:17 研修本注释\n第14-16节提到智慧的局限，所以传道者在这里说，他恨恶生命。但在其他经文中，他又说活着比死了强（9:4-5），并且夸赞生命中的福乐（如：3:12-13.9:9），可见这里表达的不是彻底的绝望。相反，他这里使用\"恨恶\"是一种常见的修辞手法…\n第14-16节提到智慧的局限，所以传道者在这里说，他恨恶生命。但在其他经文中，他又说活着比死了强（9:4-5），并且夸赞生命中的福乐（如：3:12-13.9:9），可见这里表达的不是彻底的绝望。相反，他这里使用\"恨恶\"是一种常见的修辞手法，以绝对的用词表达一种对的反差（见创29:30-31\"失宠\"：申21:15〝所恶\"：路14:26注）。传道者\"恨恶\"生命，意思是在生命的某些重要方面，他感到深深的失望；对他来说，生命的甘甜已经所剩无几。\n2:17\n圣经研修本 21_传道书【codex-v3】",
+      "source": "圣经研修本 21_传道书【codex-v3】",
+      "summary": "第14-16节提到智慧的局限，所以传道者在这里说，他恨恶生命。但在其他经文中，他又说活着比死了强（9:4-5），并且夸赞生命中的福乐（如：3:12-13.9:9），可见这里表达的不是彻底的绝望。相反，他这里使用\"恨恶\"是一种常见的修辞手法…",
+      "title": "传道书 2:17 研修本注释",
+      "type": "commentary",
+      "verses": [
+        "Eccl.2.17"
+      ]
+    },
+    {
+      "body": "失落有时，指放弃寻找已经失落的东西。",
+      "debugMeta": {
+        "coverageRanges": [
+          {
+            "end": "Eccl.3.6",
+            "start": "Eccl.3.6"
+          }
+        ],
+        "page": 7,
+        "primaryAnchor": "Eccl.3.6",
+        "sourceLabel": "圣经研修本 21_传道书【codex-v3】"
+      },
+      "id": "study-bible-eccl-3-6-p007-n028",
+      "primaryAnchor": "Eccl.3.6",
+      "searchText": "传道书 3:6 研修本注释：失落有时，指放弃寻找已经失落的东西\n失落有时，指放弃寻找已经失落的东西。\n失落有时，指放弃寻找已经失落的东西。\n3:6\n圣经研修本 21_传道书【codex-v3】",
+      "source": "圣经研修本 21_传道书【codex-v3】",
+      "summary": "失落有时，指放弃寻找已经失落的东西。",
+      "title": "传道书 3:6 研修本注释：失落有时，指放弃寻找已经失落的东西",
+      "type": "commentary",
+      "verses": [
+        "Eccl.3.6"
+      ]
+    },
+    {
+      "body": "恨恶有时，《圣经》的伦理标准是爱邻舍（利19:18：加5:14；雅2:8），但同样也有义怒，并且在某些情况下22）。",
+      "debugMeta": {
+        "coverageRanges": [
+          {
+            "end": "Eccl.3.8",
+            "start": "Eccl.3.8"
+          }
+        ],
+        "page": 7,
+        "primaryAnchor": "Eccl.3.8",
+        "sourceLabel": "圣经研修本 21_传道书【codex-v3】"
+      },
+      "id": "study-bible-eccl-3-8-p007-n036",
+      "primaryAnchor": "Eccl.3.8",
+      "searchText": "传道书 3:8 研修本注释：恨恶有时，《圣经》的伦理标准是爱邻舍（利19:18\n恨恶有时，《圣经》的伦理标准是爱邻舍（利19:18：加5:14；雅2:8），但同样也有义怒，并且在某些情况下22）。\n恨恶有时，《圣经》的伦理标准是爱邻舍（利19:18：加5:14；雅2:8），但同样也有义怒，并且在某些情况下22）。\n3:8\n圣经研修本 21_传道书【codex-v3】",
+      "source": "圣经研修本 21_传道书【codex-v3】",
+      "summary": "恨恶有时，《圣经》的伦理标准是爱邻舍（利19:18：加5:14；雅2:8），但同样也有义怒，并且在某些情况下22）。",
+      "title": "传道书 3:8 研修本注释：恨恶有时，《圣经》的伦理标准是爱邻舍（利19:18",
+      "type": "commentary",
+      "verses": [
+        "Eccl.3.8"
+      ]
+    },
+    {
+      "body": "自然界总在循环重复（1:4-11），然而传道者看到，上帝造万物，各按其时成为美好。问题在于；上帝已将永生（即感悟在今生之后，生命依然延续）安置在世人心里，然而上帝从始至终的作为，人不能参透。\"参透\"发现\"（希伯来原文matsa\"），在本节和本书其他经文中（7:14,24,26.27-28. 29.8:17）含有\"弄明白：藉着研究来明白\"的意思。传道者意识到：他想要明白人生的全部，以及他终究不能明白人生的全部，都是上帝命定的。",
+      "debugMeta": {
+        "coverageRanges": [
+          {
+            "end": "Eccl.3.11",
+            "start": "Eccl.3.11"
+          }
+        ],
+        "page": 7,
+        "primaryAnchor": "Eccl.3.11",
+        "sourceLabel": "圣经研修本 21_传道书【codex-v3】"
+      },
+      "id": "study-bible-eccl-3-11-p007-n031",
+      "primaryAnchor": "Eccl.3.11",
+      "searchText": "传道书 3:11 研修本注释\n自然界总在循环重复（1:4-11），然而传道者看到，上帝造万物，各按其时成为美好。问题在于；上帝已将永生（即感悟在今生之后，生命依然延续）安置在世人心里，然而上帝从始至终的作为，人不能参透。\"参透\"发现\"（希伯来原文matsa\"），在本节…\n自然界总在循环重复（1:4-11），然而传道者看到，上帝造万物，各按其时成为美好。问题在于；上帝已将永生（即感悟在今生之后，生命依然延续）安置在世人心里，然而上帝从始至终的作为，人不能参透。\"参透\"发现\"（希伯来原文matsa\"），在本节和本书其他经文中（7:14,24,26.27-28. 29.8:17）含有\"弄明白：藉着研究来明白\"的意思。传道者意识到：他想要明白人生的全部，以及他终究不能明白人生的全部，都是上帝命定的。\n3:11\n圣经研修本 21_传道书【codex-v3】",
+      "source": "圣经研修本 21_传道书【codex-v3】",
+      "summary": "自然界总在循环重复（1:4-11），然而传道者看到，上帝造万物，各按其时成为美好。问题在于；上帝已将永生（即感悟在今生之后，生命依然延续）安置在世人心里，然而上帝从始至终的作为，人不能参透。\"参透\"发现\"（希伯来原文matsa\"），在本节…",
+      "title": "传道书 3:11 研修本注释",
+      "type": "commentary",
+      "verses": [
+        "Eccl.3.11"
+      ]
+    },
+    {
+      "body": "这世界上各种短暂的\"虚空\"'.更加清楚地显明上帝永存的工作无所增添。上帝的至高主权和他的旨意，是要叫人谦卑敬畏他，并尊崇他：上帝这样行，是要人在他面前存敬畏的心（参5:7,12:13，另参徒9:31注）；见\"导论：关键主题\"。",
+      "debugMeta": {
+        "coverageRanges": [
+          {
+            "end": "Eccl.3.14",
+            "start": "Eccl.3.14"
+          }
+        ],
+        "page": 7,
+        "primaryAnchor": "Eccl.3.14",
+        "sourceLabel": "圣经研修本 21_传道书【codex-v3】"
+      },
+      "id": "study-bible-eccl-3-14-p007-n027",
+      "primaryAnchor": "Eccl.3.14",
+      "searchText": "传道书 3:14 研修本注释\n这世界上各种短暂的\"虚空\"'.更加清楚地显明上帝永存的工作无所增添。上帝的至高主权和他的旨意，是要叫人谦卑敬畏他，并尊崇他：上帝这样行，是要人在他面前存敬畏的心（参5:7,12:13，另参徒9:31注）；见\"导论：关键主题\"。\n这世界上各种短暂的\"虚空\"'.更加清楚地显明上帝永存的工作无所增添。上帝的至高主权和他的旨意，是要叫人谦卑敬畏他，并尊崇他：上帝这样行，是要人在他面前存敬畏的心（参5:7,12:13，另参徒9:31注）；见\"导论：关键主题\"。\n3:14\n圣经研修本 21_传道书【codex-v3】",
+      "source": "圣经研修本 21_传道书【codex-v3】",
+      "summary": "这世界上各种短暂的\"虚空\"'.更加清楚地显明上帝永存的工作无所增添。上帝的至高主权和他的旨意，是要叫人谦卑敬畏他，并尊崇他：上帝这样行，是要人在他面前存敬畏的心（参5:7,12:13，另参徒9:31注）；见\"导论：关键主题\"。",
+      "title": "传道书 3:14 研修本注释",
+      "type": "commentary",
+      "verses": [
+        "Eccl.3.14"
+      ]
+    },
+    {
+      "body": "谁知道人的灵是往上升，对传道者来说，人的灵是个奥秘。他宣称，虽然他不知道灵最初怎样进人人的身体里（11:5）.但人死的时候，这灵要归回上帝那里（12:7）。，既有明白、完全理解的意思（如：1:17，7:25.8:16），也指察觉、观察（如：2:14，3:12,14）。",
+      "debugMeta": {
+        "coverageRanges": [
+          {
+            "end": "Eccl.3.21",
+            "start": "Eccl.3.21"
+          }
+        ],
+        "page": 8,
+        "primaryAnchor": "Eccl.3.21",
+        "sourceLabel": "圣经研修本 21_传道书【codex-v3】"
+      },
+      "id": "study-bible-eccl-3-21-p008-n034",
+      "primaryAnchor": "Eccl.3.21",
+      "searchText": "传道书 3:21 研修本注释\n谁知道人的灵是往上升，对传道者来说，人的灵是个奥秘。他宣称，虽然他不知道灵最初怎样进人人的身体里（11:5）.但人死的时候，这灵要归回上帝那里（12:7）。，既有明白、完全理解的意思（如：1:17，7:25.8:16），也指察觉、观察（如…\n谁知道人的灵是往上升，对传道者来说，人的灵是个奥秘。他宣称，虽然他不知道灵最初怎样进人人的身体里（11:5）.但人死的时候，这灵要归回上帝那里（12:7）。，既有明白、完全理解的意思（如：1:17，7:25.8:16），也指察觉、观察（如：2:14，3:12,14）。\n3:21\n圣经研修本 21_传道书【codex-v3】",
+      "source": "圣经研修本 21_传道书【codex-v3】",
+      "summary": "谁知道人的灵是往上升，对传道者来说，人的灵是个奥秘。他宣称，虽然他不知道灵最初怎样进人人的身体里（11:5）.但人死的时候，这灵要归回上帝那里（12:7）。，既有明白、完全理解的意思（如：1:17，7:25.8:16），也指察觉、观察（如…",
+      "title": "传道书 3:21 研修本注释",
+      "type": "commentary",
+      "verses": [
+        "Eccl.3.21"
+      ]
+    },
+    {
+      "body": "二人劳碌同得美好的果效，智慧人会寻求合作，不会因为嫉贤妒能和争强好胜（对比8、10、11节）.使自己孤立起来。",
+      "debugMeta": {
+        "coverageRanges": [
+          {
+            "end": "Eccl.4.9",
+            "start": "Eccl.4.9"
+          }
+        ],
+        "page": 8,
+        "primaryAnchor": "Eccl.4.9",
+        "sourceLabel": "圣经研修本 21_传道书【codex-v3】"
+      },
+      "id": "study-bible-eccl-4-9-p008-n044",
+      "primaryAnchor": "Eccl.4.9",
+      "searchText": "传道书 4:9 研修本注释\n二人劳碌同得美好的果效，智慧人会寻求合作，不会因为嫉贤妒能和争强好胜（对比8、10、11节）.使自己孤立起来。\n二人劳碌同得美好的果效，智慧人会寻求合作，不会因为嫉贤妒能和争强好胜（对比8、10、11节）.使自己孤立起来。\n4:9\n圣经研修本 21_传道书【codex-v3】",
+      "source": "圣经研修本 21_传道书【codex-v3】",
+      "summary": "二人劳碌同得美好的果效，智慧人会寻求合作，不会因为嫉贤妒能和争强好胜（对比8、10、11节）.使自己孤立起来。",
+      "title": "传道书 4:9 研修本注释",
+      "type": "commentary",
+      "verses": [
+        "Eccl.4.9"
+      ]
+    },
+    {
+      "body": "三股合成的绳子，强调\"多数\"（大于一，甚至大于非常宝贵，比孤独一人（7-11节）强得多。",
+      "debugMeta": {
+        "coverageRanges": [
+          {
+            "end": "Eccl.4.12",
+            "start": "Eccl.4.12"
+          }
+        ],
+        "page": 8,
+        "primaryAnchor": "Eccl.4.12",
+        "sourceLabel": "圣经研修本 21_传道书【codex-v3】"
+      },
+      "id": "study-bible-eccl-4-12-p008-n036",
+      "primaryAnchor": "Eccl.4.12",
+      "searchText": "传道书 4:12 研修本注释\n三股合成的绳子，强调\"多数\"（大于一，甚至大于非常宝贵，比孤独一人（7-11节）强得多。\n三股合成的绳子，强调\"多数\"（大于一，甚至大于非常宝贵，比孤独一人（7-11节）强得多。\n4:12\n圣经研修本 21_传道书【codex-v3】",
+      "source": "圣经研修本 21_传道书【codex-v3】",
+      "summary": "三股合成的绳子，强调\"多数\"（大于一，甚至大于非常宝贵，比孤独一人（7-11节）强得多。",
+      "title": "传道书 4:12 研修本注释",
+      "type": "commentary",
+      "verses": [
+        "Eccl.4.12"
+      ]
+    },
+    {
+      "body": "你向上帝许愿，传道者盼望，人在敬拜上帝时，不要说一些轻率或无意义的话（1-2节），尤其不要误把鲁莽的许愿当作虔诚（参申23:21-23）。人许愿，通常表示如果上帝回应了他的具体祈求（创28:20-22：士11:30-31；撒上1:11）.他就会用具体的行动来还愿（例如献祭）。然而.因为献祭是昂贵的，所以人经常找借口逃避（如：5:6）。5:7你只要敬畏上帝，参3:14.12:13；另见\"导论：关键主题\"。",
+      "debugMeta": {
+        "coverageRanges": [
+          {
+            "end": "Eccl.5.4",
+            "start": "Eccl.5.4"
+          }
+        ],
+        "page": 9,
+        "primaryAnchor": "Eccl.5.4",
+        "sourceLabel": "圣经研修本 21_传道书【codex-v3】"
+      },
+      "id": "study-bible-eccl-5-4-p009-n043",
+      "primaryAnchor": "Eccl.5.4",
+      "searchText": "传道书 5:4 研修本注释\n你向上帝许愿，传道者盼望，人在敬拜上帝时，不要说一些轻率或无意义的话（1-2节），尤其不要误把鲁莽的许愿当作虔诚（参申23:21-23）。人许愿，通常表示如果上帝回应了他的具体祈求（创28:20-22：士11:30-31；撒上1:11）.…\n你向上帝许愿，传道者盼望，人在敬拜上帝时，不要说一些轻率或无意义的话（1-2节），尤其不要误把鲁莽的许愿当作虔诚（参申23:21-23）。人许愿，通常表示如果上帝回应了他的具体祈求（创28:20-22：士11:30-31；撒上1:11）.他就会用具体的行动来还愿（例如献祭）。然而.因为献祭是昂贵的，所以人经常找借口逃避（如：5:6）。5:7你只要敬畏上帝，参3:14.12:13；另见\"导论：关键主题\"。\n5:4\n圣经研修本 21_传道书【codex-v3】",
+      "source": "圣经研修本 21_传道书【codex-v3】",
+      "summary": "你向上帝许愿，传道者盼望，人在敬拜上帝时，不要说一些轻率或无意义的话（1-2节），尤其不要误把鲁莽的许愿当作虔诚（参申23:21-23）。人许愿，通常表示如果上帝回应了他的具体祈求（创28:20-22：士11:30-31；撒上1:11）.…",
+      "title": "传道书 5:4 研修本注释",
+      "type": "commentary",
+      "verses": [
+        "Eccl.5.4"
+      ]
+    },
+    {
+      "body": "本节继续讲述13节开始的故事。人的自私和可怕的贪婪，导致他一生凄惨。",
+      "debugMeta": {
+        "coverageRanges": [
+          {
+            "end": "Eccl.5.17",
+            "start": "Eccl.5.17"
+          }
+        ],
+        "page": 9,
+        "primaryAnchor": "Eccl.5.17",
+        "sourceLabel": "圣经研修本 21_传道书【codex-v3】"
+      },
+      "id": "study-bible-eccl-5-17-p009-n044",
+      "primaryAnchor": "Eccl.5.17",
+      "searchText": "传道书 5:17 研修本注释：本节继续讲述13节开始的故事\n本节继续讲述13节开始的故事。人的自私和可怕的贪婪，导致他一生凄惨。\n本节继续讲述13节开始的故事。人的自私和可怕的贪婪，导致他一生凄惨。\n5:17\n圣经研修本 21_传道书【codex-v3】",
+      "source": "圣经研修本 21_传道书【codex-v3】",
+      "summary": "本节继续讲述13节开始的故事。人的自私和可怕的贪婪，导致他一生凄惨。",
+      "title": "传道书 5:17 研修本注释：本节继续讲述13节开始的故事",
+      "type": "commentary",
+      "verses": [
+        "Eccl.5.17"
+      ]
+    },
+    {
+      "body": "他不多思念自己一生，不是指他不反思应该如何生活，而是指上帝使这人知足，他没有因人性的黑暗而忘却属天的祝福。",
+      "debugMeta": {
+        "coverageRanges": [
+          {
+            "end": "Eccl.5.20",
+            "start": "Eccl.5.20"
+          }
+        ],
+        "page": 9,
+        "primaryAnchor": "Eccl.5.20",
+        "sourceLabel": "圣经研修本 21_传道书【codex-v3】"
+      },
+      "id": "study-bible-eccl-5-20-p009-n056",
+      "primaryAnchor": "Eccl.5.20",
+      "searchText": "传道书 5:20 研修本注释\n他不多思念自己一生，不是指他不反思应该如何生活，而是指上帝使这人知足，他没有因人性的黑暗而忘却属天的祝福。\n他不多思念自己一生，不是指他不反思应该如何生活，而是指上帝使这人知足，他没有因人性的黑暗而忘却属天的祝福。\n5:20\n圣经研修本 21_传道书【codex-v3】",
+      "source": "圣经研修本 21_传道书【codex-v3】",
+      "summary": "他不多思念自己一生，不是指他不反思应该如何生活，而是指上帝使这人知足，他没有因人性的黑暗而忘却属天的祝福。",
+      "title": "传道书 5:20 研修本注释",
+      "type": "commentary",
+      "verses": [
+        "Eccl.5.20"
+      ]
+    },
+    {
+      "body": "谁知道什么与他有益呢？接下来的一段箴言（7:1-24），用\"强如\"、\"强过\"\"美\"和\"善\"等字词联系到一起（7:1.2.3.5.8,10.11.14［原文］，18.20），作者尝试提供部分答案。从某个角度说，即便是最伟大的智者，也无法完全知道会有什么事发生，从而提出完美的建议。尽管如此，智慧人的敬虔建议对人的日常生活仍然具有指导意义。",
+      "debugMeta": {
+        "coverageRanges": [
+          {
+            "end": "Eccl.6.12",
+            "start": "Eccl.6.12"
+          }
+        ],
+        "page": 10,
+        "primaryAnchor": "Eccl.6.12",
+        "sourceLabel": "圣经研修本 21_传道书【codex-v3】"
+      },
+      "id": "study-bible-eccl-6-12-p010-n050",
+      "primaryAnchor": "Eccl.6.12",
+      "searchText": "传道书 6:12 研修本注释\n谁知道什么与他有益呢？接下来的一段箴言（7:1-24），用\"强如\"、\"强过\"\"美\"和\"善\"等字词联系到一起（7:1.2.3.5.8,10.11.14［原文］，18.20），作者尝试提供部分答案。从某个角度说，即便是最伟大的智者，也无法完全…\n谁知道什么与他有益呢？接下来的一段箴言（7:1-24），用\"强如\"、\"强过\"\"美\"和\"善\"等字词联系到一起（7:1.2.3.5.8,10.11.14［原文］，18.20），作者尝试提供部分答案。从某个角度说，即便是最伟大的智者，也无法完全知道会有什么事发生，从而提出完美的建议。尽管如此，智慧人的敬虔建议对人的日常生活仍然具有指导意义。\n6:12\n圣经研修本 21_传道书【codex-v3】",
+      "source": "圣经研修本 21_传道书【codex-v3】",
+      "summary": "谁知道什么与他有益呢？接下来的一段箴言（7:1-24），用\"强如\"、\"强过\"\"美\"和\"善\"等字词联系到一起（7:1.2.3.5.8,10.11.14［原文］，18.20），作者尝试提供部分答案。从某个角度说，即便是最伟大的智者，也无法完全…",
+      "title": "传道书 6:12 研修本注释",
+      "type": "commentary",
+      "verses": [
+        "Eccl.6.12"
+      ]
+    },
+    {
+      "body": "美好的裔油，在古代以色列是昂贵的奢侈品（见斯2:12诗45:8：摩6:6太26:7）。从接下来的经文（尤其7:2.4）可以知道，这里人死的日子不是指自己去世，而是指其他人死亡。丧亲虽然痛苦，但比新生儿带来的喜悦更能激励人属灵智慧的增长，使人更加成熟。",
+      "debugMeta": {
+        "coverageRanges": [
+          {
+            "end": "Eccl.7.1",
+            "start": "Eccl.7.1"
+          }
+        ],
+        "page": 10,
+        "primaryAnchor": "Eccl.7.1",
+        "sourceLabel": "圣经研修本 21_传道书【codex-v3】"
+      },
+      "id": "study-bible-eccl-7-1-p010-n052",
+      "primaryAnchor": "Eccl.7.1",
+      "searchText": "传道书 7:1 研修本注释\n美好的裔油，在古代以色列是昂贵的奢侈品（见斯2:12诗45:8：摩6:6太26:7）。从接下来的经文（尤其7:2.4）可以知道，这里人死的日子不是指自己去世，而是指其他人死亡。丧亲虽然痛苦，但比新生儿带来的喜悦更能激励人属灵智慧的增长，使…\n美好的裔油，在古代以色列是昂贵的奢侈品（见斯2:12诗45:8：摩6:6太26:7）。从接下来的经文（尤其7:2.4）可以知道，这里人死的日子不是指自己去世，而是指其他人死亡。丧亲虽然痛苦，但比新生儿带来的喜悦更能激励人属灵智慧的增长，使人更加成熟。\n7:1\n圣经研修本 21_传道书【codex-v3】",
+      "source": "圣经研修本 21_传道书【codex-v3】",
+      "summary": "美好的裔油，在古代以色列是昂贵的奢侈品（见斯2:12诗45:8：摩6:6太26:7）。从接下来的经文（尤其7:2.4）可以知道，这里人死的日子不是指自己去世，而是指其他人死亡。丧亲虽然痛苦，但比新生儿带来的喜悦更能激励人属灵智慧的增长，使…",
+      "title": "传道书 7:1 研修本注释",
+      "type": "commentary",
+      "verses": [
+        "Eccl.7.1"
+      ]
+    },
+    {
+      "body": "锅下烧荆棘的爆声，指火焰的响声没有意义。",
+      "debugMeta": {
+        "coverageRanges": [
+          {
+            "end": "Eccl.7.6",
+            "start": "Eccl.7.6"
+          }
+        ],
+        "page": 10,
+        "primaryAnchor": "Eccl.7.6",
+        "sourceLabel": "圣经研修本 21_传道书【codex-v3】"
+      },
+      "id": "study-bible-eccl-7-6-p010-n053",
+      "primaryAnchor": "Eccl.7.6",
+      "searchText": "传道书 7:6 研修本注释：锅下烧荆棘的爆声，指火焰的响声没有意义\n锅下烧荆棘的爆声，指火焰的响声没有意义。\n锅下烧荆棘的爆声，指火焰的响声没有意义。\n7:6\n圣经研修本 21_传道书【codex-v3】",
+      "source": "圣经研修本 21_传道书【codex-v3】",
+      "summary": "锅下烧荆棘的爆声，指火焰的响声没有意义。",
+      "title": "传道书 7:6 研修本注释：锅下烧荆棘的爆声，指火焰的响声没有意义",
+      "type": "commentary",
+      "verses": [
+        "Eccl.7.6"
+      ]
+    },
+    {
+      "body": "勒索（原文直译：欺压），指恐吓取财或敲诈（见利",
+      "debugMeta": {
+        "coverageRanges": [
+          {
+            "end": "Eccl.7.7",
+            "start": "Eccl.7.7"
+          }
+        ],
+        "page": 10,
+        "primaryAnchor": "Eccl.7.7",
+        "sourceLabel": "圣经研修本 21_传道书【codex-v3】"
+      },
+      "id": "study-bible-eccl-7-7-p010-n056",
+      "primaryAnchor": "Eccl.7.7",
+      "searchText": "传道书 7:7 研修本注释：勒索（原文直译\n勒索（原文直译：欺压），指恐吓取财或敲诈（见利\n勒索（原文直译：欺压），指恐吓取财或敲诈（见利\n7:7\n圣经研修本 21_传道书【codex-v3】",
+      "source": "圣经研修本 21_传道书【codex-v3】",
+      "summary": "勒索（原文直译：欺压），指恐吓取财或敲诈（见利",
+      "title": "传道书 7:7 研修本注释：勒索（原文直译",
+      "type": "commentary",
+      "verses": [
+        "Eccl.7.7"
+      ]
+    },
+    {
+      "body": "义人…恶人行恶，《旧约》中的\"义人不单指道德行为，也指在某个人的诉讼中（如法律案件中：见申25:1）是正确的或正义的，传道者在这里指的应该是后者。他发现，有些时候人做了法律上对的事，却败诉；有人确实做了错事，反而胜诉（参8:14）。",
+      "debugMeta": {
+        "coverageRanges": [
+          {
+            "end": "Eccl.7.15",
+            "start": "Eccl.7.15"
+          }
+        ],
+        "page": 10,
+        "primaryAnchor": "Eccl.7.15",
+        "sourceLabel": "圣经研修本 21_传道书【codex-v3】"
+      },
+      "id": "study-bible-eccl-7-15-p010-n063",
+      "primaryAnchor": "Eccl.7.15",
+      "searchText": "传道书 7:15 研修本注释\n义人…恶人行恶，《旧约》中的\"义人不单指道德行为，也指在某个人的诉讼中（如法律案件中：见申25:1）是正确的或正义的，传道者在这里指的应该是后者。他发现，有些时候人做了法律上对的事，却败诉；有人确实做了错事，反而胜诉（参8:14）。\n义人…恶人行恶，《旧约》中的\"义人不单指道德行为，也指在某个人的诉讼中（如法律案件中：见申25:1）是正确的或正义的，传道者在这里指的应该是后者。他发现，有些时候人做了法律上对的事，却败诉；有人确实做了错事，反而胜诉（参8:14）。\n7:15\n圣经研修本 21_传道书【codex-v3】",
+      "source": "圣经研修本 21_传道书【codex-v3】",
+      "summary": "义人…恶人行恶，《旧约》中的\"义人不单指道德行为，也指在某个人的诉讼中（如法律案件中：见申25:1）是正确的或正义的，传道者在这里指的应该是后者。他发现，有些时候人做了法律上对的事，却败诉；有人确实做了错事，反而胜诉（参8:14）。",
+      "title": "传道书 7:15 研修本注释",
+      "type": "commentary",
+      "verses": [
+        "Eccl.7.15"
+      ]
+    },
+    {
+      "body": "行义过分，传道者不是在鼓欧降低道德水平（参8:12-13）。请记住，这里的\"义\"是指在诉讼中是正确（见7:15注）。传道者的劝告是：在辩论或争论中，不要总是企图证明自己是对的。在这类事上过于执着，终究会自取败亡。如果每次争辩他都要赢，那么身边的人最终必远离他；见林前6:7保罗的建议。",
+      "debugMeta": {
+        "coverageRanges": [
+          {
+            "end": "Eccl.7.16",
+            "start": "Eccl.7.16"
+          }
+        ],
+        "page": 10,
+        "primaryAnchor": "Eccl.7.16",
+        "sourceLabel": "圣经研修本 21_传道书【codex-v3】"
+      },
+      "id": "study-bible-eccl-7-16-p010-n055-2-2-2-2",
+      "primaryAnchor": "Eccl.7.16",
+      "searchText": "传道书 7:16 研修本注释\n行义过分，传道者不是在鼓欧降低道德水平（参8:12-13）。请记住，这里的\"义\"是指在诉讼中是正确（见7:15注）。传道者的劝告是：在辩论或争论中，不要总是企图证明自己是对的。在这类事上过于执着，终究会自取败亡。如果每次争辩他都要赢，那么…\n行义过分，传道者不是在鼓欧降低道德水平（参8:12-13）。请记住，这里的\"义\"是指在诉讼中是正确（见7:15注）。传道者的劝告是：在辩论或争论中，不要总是企图证明自己是对的。在这类事上过于执着，终究会自取败亡。如果每次争辩他都要赢，那么身边的人最终必远离他；见林前6:7保罗的建议。\n7:16\n圣经研修本 21_传道书【codex-v3】",
+      "source": "圣经研修本 21_传道书【codex-v3】",
+      "summary": "行义过分，传道者不是在鼓欧降低道德水平（参8:12-13）。请记住，这里的\"义\"是指在诉讼中是正确（见7:15注）。传道者的劝告是：在辩论或争论中，不要总是企图证明自己是对的。在这类事上过于执着，终究会自取败亡。如果每次争辩他都要赢，那么…",
+      "title": "传道书 7:16 研修本注释",
+      "type": "commentary",
+      "verses": [
+        "Eccl.7.16"
+      ]
+    },
+    {
+      "body": "知道邪恶为愚昧，见1:17注。",
+      "debugMeta": {
+        "coverageRanges": [
+          {
+            "end": "Eccl.7.25",
+            "start": "Eccl.7.25"
+          }
+        ],
+        "page": 11,
+        "primaryAnchor": "Eccl.7.25",
+        "sourceLabel": "圣经研修本 21_传道书【codex-v3】"
+      },
+      "id": "study-bible-eccl-7-25-p011-n059",
+      "primaryAnchor": "Eccl.7.25",
+      "searchText": "传道书 7:25 研修本注释：知道邪恶为愚昧，见1:17注\n知道邪恶为愚昧，见1:17注。\n知道邪恶为愚昧，见1:17注。\n7:25\n圣经研修本 21_传道书【codex-v3】",
+      "source": "圣经研修本 21_传道书【codex-v3】",
+      "summary": "知道邪恶为愚昧，见1:17注。",
+      "title": "传道书 7:25 研修本注释：知道邪恶为愚昧，见1:17注",
+      "type": "commentary",
+      "verses": [
+        "Eccl.7.25"
+      ]
+    },
+    {
+      "body": "谁如……谁知道……？这些反问不是否定有这样的智慧人存在，而是用夸张的手法暗示只有极少数人具有真智慧（伯28:12.20：箴2:1-4）。拥有这种智慧的人，智慧使他的脸发光.这是形容智慧明显可见.好像\"写在他的脸一样；同样，愚昧人的愚昧也是这样显而易见（10:3）。",
+      "debugMeta": {
+        "coverageRanges": [
+          {
+            "end": "Eccl.8.1",
+            "start": "Eccl.8.1"
+          }
+        ],
+        "page": 11,
+        "primaryAnchor": "Eccl.8.1",
+        "sourceLabel": "圣经研修本 21_传道书【codex-v3】"
+      },
+      "id": "study-bible-eccl-8-1-p011-n065",
+      "primaryAnchor": "Eccl.8.1",
+      "searchText": "传道书 8:1 研修本注释\n谁如……谁知道……？这些反问不是否定有这样的智慧人存在，而是用夸张的手法暗示只有极少数人具有真智慧（伯28:12.20：箴2:1-4）。拥有这种智慧的人，智慧使他的脸发光.这是形容智慧明显可见.好像\"写在他的脸一样；同样，愚昧人的愚昧也是…\n谁如……谁知道……？这些反问不是否定有这样的智慧人存在，而是用夸张的手法暗示只有极少数人具有真智慧（伯28:12.20：箴2:1-4）。拥有这种智慧的人，智慧使他的脸发光.这是形容智慧明显可见.好像\"写在他的脸一样；同样，愚昧人的愚昧也是这样显而易见（10:3）。\n8:1\n圣经研修本 21_传道书【codex-v3】",
+      "source": "圣经研修本 21_传道书【codex-v3】",
+      "summary": "谁如……谁知道……？这些反问不是否定有这样的智慧人存在，而是用夸张的手法暗示只有极少数人具有真智慧（伯28:12.20：箴2:1-4）。拥有这种智慧的人，智慧使他的脸发光.这是形容智慧明显可见.好像\"写在他的脸一样；同样，愚昧人的愚昧也是…",
+      "title": "传道书 8:1 研修本注释",
+      "type": "commentary",
+      "verses": [
+        "Eccl.8.1"
+      ]
+    },
+    {
+      "body": "遵守王的命令，希伯来原文直译：保持王的口；动词\"保持\"在这里不是指顺服，而更多是指保护、看守、看管（参箴21:23：弥7:5）。传道者提醒说，王的谋士因为曾指上帝起誓，意即他奉上帝的名起誓侍奉王（参出22:11：撒下21:7；王上2:43），所以必须帮助王，阻止他作出愚蠢的决定。",
+      "debugMeta": {
+        "coverageRanges": [
+          {
+            "end": "Eccl.8.2",
+            "start": "Eccl.8.2"
+          }
+        ],
+        "page": 11,
+        "primaryAnchor": "Eccl.8.2",
+        "sourceLabel": "圣经研修本 21_传道书【codex-v3】"
+      },
+      "id": "study-bible-eccl-8-2-p011-n071",
+      "primaryAnchor": "Eccl.8.2",
+      "searchText": "传道书 8:2 研修本注释：遵守王的命令，希伯来原文直译\n遵守王的命令，希伯来原文直译：保持王的口；动词\"保持\"在这里不是指顺服，而更多是指保护、看守、看管（参箴21:23：弥7:5）。传道者提醒说，王的谋士因为曾指上帝起誓，意即他奉上帝的名起誓侍奉王（参出22:11：撒下21:7；王上2:43…\n遵守王的命令，希伯来原文直译：保持王的口；动词\"保持\"在这里不是指顺服，而更多是指保护、看守、看管（参箴21:23：弥7:5）。传道者提醒说，王的谋士因为曾指上帝起誓，意即他奉上帝的名起誓侍奉王（参出22:11：撒下21:7；王上2:43），所以必须帮助王，阻止他作出愚蠢的决定。\n8:2\n圣经研修本 21_传道书【codex-v3】",
+      "source": "圣经研修本 21_传道书【codex-v3】",
+      "summary": "遵守王的命令，希伯来原文直译：保持王的口；动词\"保持\"在这里不是指顺服，而更多是指保护、看守、看管（参箴21:23：弥7:5）。传道者提醒说，王的谋士因为曾指上帝起誓，意即他奉上帝的名起誓侍奉王（参出22:11：撒下21:7；王上2:43…",
+      "title": "传道书 8:2 研修本注释：遵守王的命令，希伯来原文直译",
+      "type": "commentary",
+      "verses": [
+        "Eccl.8.2"
+      ]
+    },
+    {
+      "body": "在堕落的世界中，即便愚蠢的王下达了轻率不智的命令，谋士也不能因此就离开王。然而，他也不能不计后果地顺服，与王一同行恶.",
+      "debugMeta": {
+        "coverageRanges": [
+          {
+            "end": "Eccl.8.3",
+            "start": "Eccl.8.3"
+          }
+        ],
+        "page": 11,
+        "primaryAnchor": "Eccl.8.3",
+        "sourceLabel": "圣经研修本 21_传道书【codex-v3】"
+      },
+      "id": "study-bible-eccl-8-3-p011-n061",
+      "primaryAnchor": "Eccl.8.3",
+      "searchText": "传道书 8:3 研修本注释\n在堕落的世界中，即便愚蠢的王下达了轻率不智的命令，谋士也不能因此就离开王。然而，他也不能不计后果地顺服，与王一同行恶.\n在堕落的世界中，即便愚蠢的王下达了轻率不智的命令，谋士也不能因此就离开王。然而，他也不能不计后果地顺服，与王一同行恶.\n8:3\n圣经研修本 21_传道书【codex-v3】",
+      "source": "圣经研修本 21_传道书【codex-v3】",
+      "summary": "在堕落的世界中，即便愚蠢的王下达了轻率不智的命令，谋士也不能因此就离开王。然而，他也不能不计后果地顺服，与王一同行恶.",
+      "title": "传道书 8:3 研修本注释",
+      "type": "commentary",
+      "verses": [
+        "Eccl.8.3"
+      ]
+    },
+    {
+      "body": "人查不出日光之下所作的事，真智慧包括谦卑地承认，人无法完全参透（见3:11注）堕落世界中的所有事实。",
+      "debugMeta": {
+        "coverageRanges": [
+          {
+            "end": "Eccl.8.17",
+            "start": "Eccl.8.17"
+          }
+        ],
+        "page": 12,
+        "primaryAnchor": "Eccl.8.17",
+        "sourceLabel": "圣经研修本 21_传道书【codex-v3】"
+      },
+      "id": "study-bible-eccl-8-17-p012-n068",
+      "primaryAnchor": "Eccl.8.17",
+      "searchText": "传道书 8:17 研修本注释\n人查不出日光之下所作的事，真智慧包括谦卑地承认，人无法完全参透（见3:11注）堕落世界中的所有事实。\n人查不出日光之下所作的事，真智慧包括谦卑地承认，人无法完全参透（见3:11注）堕落世界中的所有事实。\n8:17\n圣经研修本 21_传道书【codex-v3】",
+      "source": "圣经研修本 21_传道书【codex-v3】",
+      "summary": "人查不出日光之下所作的事，真智慧包括谦卑地承认，人无法完全参透（见3:11注）堕落世界中的所有事实。",
+      "title": "传道书 8:17 研修本注释",
+      "type": "commentary",
+      "verses": [
+        "Eccl.8.17"
+      ]
+    },
+    {
+      "body": "右……左，在《旧约》中，\"右手\"总是与力量和祝福相关（如：出15:6.12：诗16:11，17:7：赛41:10等）。传道者可能是用\"左手\"表示对应的负面含义（创48:14：士3:15），或者是要直接指出，人的行为能明确显出他的智慧或愚昧（参10:3；另见8:1注）。",
+      "debugMeta": {
+        "coverageRanges": [
+          {
+            "end": "Eccl.10.2",
+            "start": "Eccl.10.2"
+          }
+        ],
+        "page": 13,
+        "primaryAnchor": "Eccl.10.2",
+        "sourceLabel": "圣经研修本 21_传道书【codex-v3】"
+      },
+      "id": "study-bible-eccl-10-2-p013-n092",
+      "primaryAnchor": "Eccl.10.2",
+      "searchText": "传道书 10:2 研修本注释\n右……左，在《旧约》中，\"右手\"总是与力量和祝福相关（如：出15:6.12：诗16:11，17:7：赛41:10等）。传道者可能是用\"左手\"表示对应的负面含义（创48:14：士3:15），或者是要直接指出，人的行为能明确显出他的智慧或愚昧…\n右……左，在《旧约》中，\"右手\"总是与力量和祝福相关（如：出15:6.12：诗16:11，17:7：赛41:10等）。传道者可能是用\"左手\"表示对应的负面含义（创48:14：士3:15），或者是要直接指出，人的行为能明确显出他的智慧或愚昧（参10:3；另见8:1注）。\n10:2\n圣经研修本 21_传道书【codex-v3】",
+      "source": "圣经研修本 21_传道书【codex-v3】",
+      "summary": "右……左，在《旧约》中，\"右手\"总是与力量和祝福相关（如：出15:6.12：诗16:11，17:7：赛41:10等）。传道者可能是用\"左手\"表示对应的负面含义（创48:14：士3:15），或者是要直接指出，人的行为能明确显出他的智慧或愚昧…",
+      "title": "传道书 10:2 研修本注释",
+      "type": "commentary",
+      "verses": [
+        "Eccl.10.2"
+      ]
+    },
+    {
+      "body": "人却不知将来有什么事，即使这样，也不能使愚昧人不对将来多发言语，做出种种无根据的猜测。",
+      "debugMeta": {
+        "coverageRanges": [
+          {
+            "end": "Eccl.10.14",
+            "start": "Eccl.10.14"
+          }
+        ],
+        "page": 13,
+        "primaryAnchor": "Eccl.10.14",
+        "sourceLabel": "圣经研修本 21_传道书【codex-v3】"
+      },
+      "id": "study-bible-eccl-10-14-p013-n075",
+      "primaryAnchor": "Eccl.10.14",
+      "searchText": "传道书 10:14 研修本注释\n人却不知将来有什么事，即使这样，也不能使愚昧人不对将来多发言语，做出种种无根据的猜测。\n人却不知将来有什么事，即使这样，也不能使愚昧人不对将来多发言语，做出种种无根据的猜测。\n10:14\n圣经研修本 21_传道书【codex-v3】",
+      "source": "圣经研修本 21_传道书【codex-v3】",
+      "summary": "人却不知将来有什么事，即使这样，也不能使愚昧人不对将来多发言语，做出种种无根据的猜测。",
+      "title": "传道书 10:14 研修本注释",
+      "type": "commentary",
+      "verses": [
+        "Eccl.10.14"
+      ]
+    },
+    {
+      "body": "愚昧人在田里劳碌比别人更累，因为他对一些能使工作变轻松的基本、重要情况都不知道，比如进城的道路",
+      "debugMeta": {
+        "coverageRanges": [
+          {
+            "end": "Eccl.10.15",
+            "start": "Eccl.10.15"
+          }
+        ],
+        "page": 13,
+        "primaryAnchor": "Eccl.10.15",
+        "sourceLabel": "圣经研修本 21_传道书【codex-v3】"
+      },
+      "id": "study-bible-eccl-10-15-p013-n093",
+      "primaryAnchor": "Eccl.10.15",
+      "searchText": "传道书 10:15 研修本注释\n愚昧人在田里劳碌比别人更累，因为他对一些能使工作变轻松的基本、重要情况都不知道，比如进城的道路\n愚昧人在田里劳碌比别人更累，因为他对一些能使工作变轻松的基本、重要情况都不知道，比如进城的道路\n10:15\n圣经研修本 21_传道书【codex-v3】",
+      "source": "圣经研修本 21_传道书【codex-v3】",
+      "summary": "愚昧人在田里劳碌比别人更累，因为他对一些能使工作变轻松的基本、重要情况都不知道，比如进城的道路",
+      "title": "传道书 10:15 研修本注释",
+      "type": "commentary",
+      "verses": [
+        "Eccl.10.15"
+      ]
+    },
+    {
+      "body": "筵席…酒…钱，传道者看这些事物都是好的.但他的结论是钱能叫万事应心，指的是钱可以自由流通，影响事情的发展，最终产生人想要的结果。然而，钱永远不能给人带来满足（参5:10）。",
+      "debugMeta": {
+        "coverageRanges": [
+          {
+            "end": "Eccl.10.19",
+            "start": "Eccl.10.19"
+          }
+        ],
+        "page": 13,
+        "primaryAnchor": "Eccl.10.19",
+        "sourceLabel": "圣经研修本 21_传道书【codex-v3】"
+      },
+      "id": "study-bible-eccl-10-19-p013-n094",
+      "primaryAnchor": "Eccl.10.19",
+      "searchText": "传道书 10:19 研修本注释\n筵席…酒…钱，传道者看这些事物都是好的.但他的结论是钱能叫万事应心，指的是钱可以自由流通，影响事情的发展，最终产生人想要的结果。然而，钱永远不能给人带来满足（参5:10）。\n筵席…酒…钱，传道者看这些事物都是好的.但他的结论是钱能叫万事应心，指的是钱可以自由流通，影响事情的发展，最终产生人想要的结果。然而，钱永远不能给人带来满足（参5:10）。\n10:19\n圣经研修本 21_传道书【codex-v3】",
+      "source": "圣经研修本 21_传道书【codex-v3】",
+      "summary": "筵席…酒…钱，传道者看这些事物都是好的.但他的结论是钱能叫万事应心，指的是钱可以自由流通，影响事情的发展，最终产生人想要的结果。然而，钱永远不能给人带来满足（参5:10）。",
+      "title": "传道书 10:19 研修本注释",
+      "type": "commentary",
+      "verses": [
+        "Eccl.10.19"
+      ]
+    },
+    {
+      "body": "将 …粮食撒在水面这比喻，解经家在当代文献中找不到任何对应的表达，所以未能确定这个比喻的意思。有三种常见的解释：（1）指海上贸易：（2）指将财富分散投资在多个须域：（3）早期的犹太人和基督徒认为，这里指将财富分给穷人，\"必能得奢\"指别人会报答。",
+      "debugMeta": {
+        "coverageRanges": [
+          {
+            "end": "Eccl.11.1",
+            "start": "Eccl.11.1"
+          }
+        ],
+        "page": 13,
+        "primaryAnchor": "Eccl.11.1",
+        "sourceLabel": "圣经研修本 21_传道书【codex-v3】"
+      },
+      "id": "study-bible-eccl-11-1-p013-n097",
+      "primaryAnchor": "Eccl.11.1",
+      "searchText": "传道书 11:1 研修本注释\n将 …粮食撒在水面这比喻，解经家在当代文献中找不到任何对应的表达，所以未能确定这个比喻的意思。有三种常见的解释：（1）指海上贸易：（2）指将财富分散投资在多个须域：（3）早期的犹太人和基督徒认为，这里指将财富分给穷人，\"必能得奢\"指别人会…\n将 …粮食撒在水面这比喻，解经家在当代文献中找不到任何对应的表达，所以未能确定这个比喻的意思。有三种常见的解释：（1）指海上贸易：（2）指将财富分散投资在多个须域：（3）早期的犹太人和基督徒认为，这里指将财富分给穷人，\"必能得奢\"指别人会报答。\n11:1\n圣经研修本 21_传道书【codex-v3】",
+      "source": "圣经研修本 21_传道书【codex-v3】",
+      "summary": "将 …粮食撒在水面这比喻，解经家在当代文献中找不到任何对应的表达，所以未能确定这个比喻的意思。有三种常见的解释：（1）指海上贸易：（2）指将财富分散投资在多个须域：（3）早期的犹太人和基督徒认为，这里指将财富分给穷人，\"必能得奢\"指别人会…",
+      "title": "传道书 11:1 研修本注释",
+      "type": "commentary",
+      "verses": [
+        "Eccl.11.1"
+      ]
+    },
+    {
+      "body": "与其揣测无法确知的事（见11:1-6注），更审慎的理财方法是，不如探索更多的投资方向，以维持生活或运用自己的资源（2、6节），包括把一部分财产放到几个不同的领域（七人，或分给八人），因为分散投资能使投资的人抵御在一两个领域发生的意外灾祸。",
+      "debugMeta": {
+        "coverageRanges": [
+          {
+            "end": "Eccl.11.2",
+            "start": "Eccl.11.2"
+          }
+        ],
+        "page": 13,
+        "primaryAnchor": "Eccl.11.2",
+        "sourceLabel": "圣经研修本 21_传道书【codex-v3】"
+      },
+      "id": "study-bible-eccl-11-2-p013-n098",
+      "primaryAnchor": "Eccl.11.2",
+      "searchText": "传道书 11:2 研修本注释\n与其揣测无法确知的事（见11:1-6注），更审慎的理财方法是，不如探索更多的投资方向，以维持生活或运用自己的资源（2、6节），包括把一部分财产放到几个不同的领域（七人，或分给八人），因为分散投资能使投资的人抵御在一两个领域发生的意外灾祸。\n与其揣测无法确知的事（见11:1-6注），更审慎的理财方法是，不如探索更多的投资方向，以维持生活或运用自己的资源（2、6节），包括把一部分财产放到几个不同的领域（七人，或分给八人），因为分散投资能使投资的人抵御在一两个领域发生的意外灾祸。\n11:2\n圣经研修本 21_传道书【codex-v3】",
+      "source": "圣经研修本 21_传道书【codex-v3】",
+      "summary": "与其揣测无法确知的事（见11:1-6注），更审慎的理财方法是，不如探索更多的投资方向，以维持生活或运用自己的资源（2、6节），包括把一部分财产放到几个不同的领域（七人，或分给八人），因为分散投资能使投资的人抵御在一两个领域发生的意外灾祸。",
+      "title": "传道书 11:2 研修本注释",
+      "type": "commentary",
+      "verses": [
+        "Eccl.11.2"
+      ]
+    },
+    {
+      "body": "人花费过多时间\"看天\"，便会无法专注自己手中的事情。那些总是等候\"完美时刻\"才行动的人，必不撒种、也必不收割。",
+      "debugMeta": {
+        "coverageRanges": [
+          {
+            "end": "Eccl.11.4",
+            "start": "Eccl.11.4"
+          }
+        ],
+        "page": 14,
+        "primaryAnchor": "Eccl.11.4",
+        "sourceLabel": "圣经研修本 21_传道书【codex-v3】"
+      },
+      "id": "study-bible-eccl-11-4-p014-n076",
+      "primaryAnchor": "Eccl.11.4",
+      "searchText": "传道书 11:4 研修本注释\n人花费过多时间\"看天\"，便会无法专注自己手中的事情。那些总是等候\"完美时刻\"才行动的人，必不撒种、也必不收割。\n人花费过多时间\"看天\"，便会无法专注自己手中的事情。那些总是等候\"完美时刻\"才行动的人，必不撒种、也必不收割。\n11:4\n圣经研修本 21_传道书【codex-v3】",
+      "source": "圣经研修本 21_传道书【codex-v3】",
+      "summary": "人花费过多时间\"看天\"，便会无法专注自己手中的事情。那些总是等候\"完美时刻\"才行动的人，必不撒种、也必不收割。",
+      "title": "传道书 11:4 研修本注释",
+      "type": "commentary",
+      "verses": [
+        "Eccl.11.4"
+      ]
+    },
+    {
+      "body": "风从何道来，骨头在怀孕妇人的胎中如何长成，你尚且不得知道，有些希伯来文抄本和亚兰文《他尔根译本》作：\"你不知道灵如何进入孕妇子宫内的骨头里\"'，见3:21注。",
+      "debugMeta": {
+        "coverageRanges": [
+          {
+            "end": "Eccl.11.5",
+            "start": "Eccl.11.5"
+          }
+        ],
+        "page": 14,
+        "primaryAnchor": "Eccl.11.5",
+        "sourceLabel": "圣经研修本 21_传道书【codex-v3】"
+      },
+      "id": "study-bible-eccl-11-5-p014-n077",
+      "primaryAnchor": "Eccl.11.5",
+      "searchText": "传道书 11:5 研修本注释\n风从何道来，骨头在怀孕妇人的胎中如何长成，你尚且不得知道，有些希伯来文抄本和亚兰文《他尔根译本》作：\"你不知道灵如何进入孕妇子宫内的骨头里\"'，见3:21注。\n风从何道来，骨头在怀孕妇人的胎中如何长成，你尚且不得知道，有些希伯来文抄本和亚兰文《他尔根译本》作：\"你不知道灵如何进入孕妇子宫内的骨头里\"'，见3:21注。\n11:5\n圣经研修本 21_传道书【codex-v3】",
+      "source": "圣经研修本 21_传道书【codex-v3】",
+      "summary": "风从何道来，骨头在怀孕妇人的胎中如何长成，你尚且不得知道，有些希伯来文抄本和亚兰文《他尔根译本》作：\"你不知道灵如何进入孕妇子宫内的骨头里\"'，见3:21注。",
+      "title": "传道书 11:5 研修本注释",
+      "type": "commentary",
+      "verses": [
+        "Eccl.11.5"
+      ]
+    },
+    {
+      "body": "适当的生活享受是可以接受的，但必须在上帝设立的道德界限之内，因为人的所有行为都要受到上帝的公义审问（参12:13-14）。",
+      "debugMeta": {
+        "coverageRanges": [
+          {
+            "end": "Eccl.11.9",
+            "start": "Eccl.11.9"
+          }
+        ],
+        "page": 14,
+        "primaryAnchor": "Eccl.11.9",
+        "sourceLabel": "圣经研修本 21_传道书【codex-v3】"
+      },
+      "id": "study-bible-eccl-11-9-p014-n080",
+      "primaryAnchor": "Eccl.11.9",
+      "searchText": "传道书 11:9 研修本注释\n适当的生活享受是可以接受的，但必须在上帝设立的道德界限之内，因为人的所有行为都要受到上帝的公义审问（参12:13-14）。\n适当的生活享受是可以接受的，但必须在上帝设立的道德界限之内，因为人的所有行为都要受到上帝的公义审问（参12:13-14）。\n11:9\n圣经研修本 21_传道书【codex-v3】",
+      "source": "圣经研修本 21_传道书【codex-v3】",
+      "summary": "适当的生活享受是可以接受的，但必须在上帝设立的道德界限之内，因为人的所有行为都要受到上帝的公义审问（参12:13-14）。",
+      "title": "传道书 11:9 研修本注释",
+      "type": "commentary",
+      "verses": [
+        "Eccl.11.9"
+      ]
+    },
+    {
+      "body": "除掉愁烦… 克去邪恶（《和修》\"人无论遇到什么灾祸或病痛，都不应该深陷其中不能自拔。",
+      "debugMeta": {
+        "coverageRanges": [
+          {
+            "end": "Eccl.11.10",
+            "start": "Eccl.11.10"
+          }
+        ],
+        "page": 14,
+        "primaryAnchor": "Eccl.11.10",
+        "sourceLabel": "圣经研修本 21_传道书【codex-v3】"
+      },
+      "id": "study-bible-eccl-11-10-p014-n081",
+      "primaryAnchor": "Eccl.11.10",
+      "searchText": "传道书 11:10 研修本注释\n除掉愁烦… 克去邪恶（《和修》\"人无论遇到什么灾祸或病痛，都不应该深陷其中不能自拔。\n除掉愁烦… 克去邪恶（《和修》\"人无论遇到什么灾祸或病痛，都不应该深陷其中不能自拔。\n11:10\n圣经研修本 21_传道书【codex-v3】",
+      "source": "圣经研修本 21_传道书【codex-v3】",
+      "summary": "除掉愁烦… 克去邪恶（《和修》\"人无论遇到什么灾祸或病痛，都不应该深陷其中不能自拔。",
+      "title": "传道书 11:10 研修本注释",
+      "type": "commentary",
+      "verses": [
+        "Eccl.11.10"
+      ]
+    },
+    {
+      "body": "从上下文可知，衰败的日子（原文直译：祸患的日子）在这里不是指邪恶生活的结果，而是指人年老力衰带来的不适（见2-7节）。",
+      "debugMeta": {
+        "coverageRanges": [
+          {
+            "end": "Eccl.12.1",
+            "start": "Eccl.12.1"
+          }
+        ],
+        "page": 14,
+        "primaryAnchor": "Eccl.12.1",
+        "sourceLabel": "圣经研修本 21_传道书【codex-v3】"
+      },
+      "id": "study-bible-eccl-12-1-p014-n082",
+      "primaryAnchor": "Eccl.12.1",
+      "searchText": "传道书 12:1 研修本注释：从上下文可知，衰败的日子（原文直译\n从上下文可知，衰败的日子（原文直译：祸患的日子）在这里不是指邪恶生活的结果，而是指人年老力衰带来的不适（见2-7节）。\n从上下文可知，衰败的日子（原文直译：祸患的日子）在这里不是指邪恶生活的结果，而是指人年老力衰带来的不适（见2-7节）。\n12:1\n圣经研修本 21_传道书【codex-v3】",
+      "source": "圣经研修本 21_传道书【codex-v3】",
+      "summary": "从上下文可知，衰败的日子（原文直译：祸患的日子）在这里不是指邪恶生活的结果，而是指人年老力衰带来的不适（见2-7节）。",
+      "title": "传道书 12:1 研修本注释：从上下文可知，衰败的日子（原文直译",
+      "type": "commentary",
+      "verses": [
+        "Eccl.12.1"
+      ]
+    },
+    {
+      "body": "智慧人的言语好像刺棍，指这些话语能帮助人走正道。\"刺棍\"是又长又尖的棍子，在耕作时驱赶和引导耕牛行走。另外，智慧人的话还像钉稳的钉子一样，能使除去痛苦），人拥有理智和持守道德。归根结底，这些智慧都是一个牧者所赐的，这个牧者就是上帝（见\"导论：作者、书名和写作时间\"）。",
+      "debugMeta": {
+        "coverageRanges": [
+          {
+            "end": "Eccl.12.11",
+            "start": "Eccl.12.11"
+          }
+        ],
+        "page": 14,
+        "primaryAnchor": "Eccl.12.11",
+        "sourceLabel": "圣经研修本 21_传道书【codex-v3】"
+      },
+      "id": "study-bible-eccl-12-11-p014-n106",
+      "primaryAnchor": "Eccl.12.11",
+      "searchText": "传道书 12:11 研修本注释\n智慧人的言语好像刺棍，指这些话语能帮助人走正道。\"刺棍\"是又长又尖的棍子，在耕作时驱赶和引导耕牛行走。另外，智慧人的话还像钉稳的钉子一样，能使除去痛苦），人拥有理智和持守道德。归根结底，这些智慧都是一个牧者所赐的，这个牧者就是上帝（见\"导…\n智慧人的言语好像刺棍，指这些话语能帮助人走正道。\"刺棍\"是又长又尖的棍子，在耕作时驱赶和引导耕牛行走。另外，智慧人的话还像钉稳的钉子一样，能使除去痛苦），人拥有理智和持守道德。归根结底，这些智慧都是一个牧者所赐的，这个牧者就是上帝（见\"导论：作者、书名和写作时间\"）。\n12:11\n圣经研修本 21_传道书【codex-v3】",
+      "source": "圣经研修本 21_传道书【codex-v3】",
+      "summary": "智慧人的言语好像刺棍，指这些话语能帮助人走正道。\"刺棍\"是又长又尖的棍子，在耕作时驱赶和引导耕牛行走。另外，智慧人的话还像钉稳的钉子一样，能使除去痛苦），人拥有理智和持守道德。归根结底，这些智慧都是一个牧者所赐的，这个牧者就是上帝（见\"导…",
+      "title": "传道书 12:11 研修本注释",
+      "type": "commentary",
+      "verses": [
+        "Eccl.12.11"
+      ]
+    },
+    {
+      "body": "中文书名《传道书》译自英文astes\"，这个词源自拉丁文《武加大译本》的标题（LiberEcclesiastes），也是对1:1提到的说话人的称呼（希腊原文ekklesiastes；希伯来原文Qoheleth）的传统英译。这个希伯来词与会\"（希伯来原文qahal）有关，可指在集会中发言的人（因此常被译为\"传道者\"）；也可指在集会中担任其他领导角色的人。Qoheleth究竟是人名还是称谓，学者意见不一；在12:8.这个词前面有一个定冠词，因此它很可能是称谓。本书没有记载作者的名字，因此严格地说，这是一部供名作品。然而，传统犹太教和基督教学者都认为本书的作者是所罗门（主前10世纪），因为书中描述传道者是\"在耶路撒冷作王，大卫的儿子\"（1:1），拥有非凡的智慧（1:16）和兴盛的王朝（2:1-9：参王上3-4章）。然而有些人根据一些证据认为所罗门不是本书的作者：（1）\"大卫的儿子\"可指大卫的任何一位后裔，例如：约瑟被称为\"大卫的儿子\"（太1:20），并且《新约》多处这样称呼耶稣基督（《和》译作\"大卫的子孙\"）。（2）学者普遍认为，本书所用的希伯来文所反映的时期要比主前10世纪晚得多；\"Ecclesi-然而这种语言特点也是可以解释的，例伯来文后来现代化了，或者受到腓尼基文、亚兰文等外来语的影响，或者受到地区方言的影响。（3）传道者的话语所暗示的历史背景，似\"集乎与所罗门时期非常不同，例如：在他以前已有多人在耶路撒冷作王（如：传1:16,2:7，9；虽然这也可以包括非以色列人的王），随处可见不义和欺压的事情（3:16-17，4:1-3,8:10-11），他亲眼看到众王的愚昧（4:13-16,10:5-6）和他们滥用君王的权力（8:2-9）。另一方面，认为作者是其他人也有困难之处，因为除了所罗门之外，再没有另一位后来\"在耶路撒冷作王\"（1:1）的人，可以自称\"了大智慧，胜过我以前在耶路撒冷的众人\"（1:16），或者拥有极多的财富，\"胜过以前在耶路撒冷众人所有的\"（2:7）。由于本书没有记载作者的名字，而语言学方面的证据也难以确定其写作时间，因此虽然有些学者主张本书出自一位比所罗门更晚的作者，但学者一般认为所罗门就是《传道书》的作者，这是最好的结论。无论如何，本书宣称智慧最终来自那\"一位者\"（12:11），即从上帝而来（创48:15；诗23:1.28:9,80:1）。",
+      "debugMeta": {
+        "coverageRanges": [
+          {
+            "end": "Eccl.1.1",
+            "start": "Eccl.1.1"
+          }
+        ],
+        "page": 1,
+        "primaryAnchor": "Eccl.1.1",
+        "sourceLabel": "圣经研修本 21_传道书【codex-v3】"
+      },
+      "id": "study-bible-eccl-intro-p001-n001",
+      "primaryAnchor": "Eccl.1.1",
+      "searchText": "传道书 导论：作者、书名和写作时间\n中文书名《传道书》译自英文astes\"，这个词源自拉丁文《武加大译本》的标题（LiberEcclesiastes），也是对1:1提到的说话人的称呼（希腊原文ekklesiastes；希伯来原文Qoheleth）的传统英译。这个希伯来词与会…\n中文书名《传道书》译自英文astes\"，这个词源自拉丁文《武加大译本》的标题（LiberEcclesiastes），也是对1:1提到的说话人的称呼（希腊原文ekklesiastes；希伯来原文Qoheleth）的传统英译。这个希伯来词与会\"（希伯来原文qahal）有关，可指在集会中发言的人（因此常被译为\"传道者\"）；也可指在集会中担任其他领导角色的人。Qoheleth究竟是人名还是称谓，学者意见不一；在12:8.这个词前面有一个定冠词，因此它很可能是称谓。本书没有记载作者的名字，因此严格地说，这是一部供名作品。然而，传统犹太教和基督教学者都认为本书的作者是所罗门（主前10世纪），因为书中描述传道者是\"在耶路撒冷作王，大卫的儿子\"（1:1），拥有非凡的智慧（1:16）和兴盛的王朝（2:1-9：参王上3-4章）。然而有些人根据一些证据认为所罗门不是本书的作者：（1）\"大卫的儿子\"可指大卫的任何一位后裔，例如：约瑟被称为\"大卫的儿子\"（太1:20），并且《新约》多处这样称呼耶稣基督（《和》译作\"大卫的子孙\"）。（2）学者普遍认为，本书所用的希伯来文所反映的时期要比主前10世纪晚得多；\"Ecclesi-然而这种语言特点也是可以解释的，例伯来文后来现代化了，或者受到腓尼基文、亚兰文等外来语的影响，或者受到地区方言的影响。（3）传道者的话语所暗示的历史背景，似\"集乎与所罗门时期非常不同，例如：在他以前已有多人在耶路撒冷作王（如：传1:16,2:7，9；虽然这也可以包括非以色列人的王），随处可见不义和欺压的事情（3:16-17，4:1-3,8:10-11），他亲眼看到众王的愚昧（4:13-16,10:5-6）和他们滥用君王的权力（8:2-9）。另一方面，认为作者是其他人也有困难之处，因为除了所罗门之外，再没有另一位后来\"在耶路撒冷作王\"（1:1）的人，可以自称\"了大智慧，胜过我以前在耶路撒冷的众人\"（1:16），或者拥有极多的财富，\"胜过以前在耶路撒冷众人所有的\"（2:7）。由于本书没有记载作者的名字，而语言学方面的证据也难以确定其写作时间，因此虽然有些学者主张本书出自一位比所罗门更晚的作者，但学者一般认为所罗门就是《传道书》的作者，这是最好的结论。无论如何，本书宣称智慧最终来自那\"一位者\"（12:11），即从上帝而来（创48:15；诗23:1.28:9,80:1）。\n导论：作者、书名和写作时间\n圣经研修本 21_传道书【codex-v3】",
+      "source": "圣经研修本 21_传道书【codex-v3】",
+      "summary": "中文书名《传道书》译自英文astes\"，这个词源自拉丁文《武加大译本》的标题（LiberEcclesiastes），也是对1:1提到的说话人的称呼（希腊原文ekklesiastes；希伯来原文Qoheleth）的传统英译。这个希伯来词与会…",
+      "title": "传道书 导论：作者、书名和写作时间",
+      "type": "commentary",
+      "verses": [
+        "Eccl.1.1"
+      ]
+    },
+    {
+      "body": "《传道书》的主题是：在这个因堕落而经常令人感到迷惘和沮丧的世界中，人必须敬畏上帝。本书的独特人物角色，尝试以非常不同的多种思路来解释这个主题，包括悲观主义、乐观主义、宗教及哲学怀疑主义（这可能是传道者的个人观点，或者他只是引用别人的观点，为要阐明某种不敬虔的观点是轻浮无益的）、非正统和正统的虔诚信仰，等等。本书的几个特点让人产生这种矛盾的印象：（1）本书的叠句\"虚空的虚空\"可以有非常不同的解释（见\"导论：关键主题\"），读者对这个重要主题声明的理解，将大大影响他对全书的解释。（2）书中有许多看似互相矛盾的地方，如：7:12声称智慧可以\"保存生命\"，2:16却说不能：4:2说生活悲惨的人倒不如死了，9:4-6却又说活着比死强，所以不容易从书中找到一个前后一致的信息。（3）传道者的有些声明从表面看来是完全不合正统的（如：7:16），与《圣经》的其他教导不一致（如：比较2:16与箴3:18.或11:9与民15:39）。虽然本书的结语（12:9-12）肯定了传道者的智慧，但是很多学者认为，这些经文是后来加上去的，目的是让本书的原读者更容易接受其中的非正统信息，但其实这种看法误解了传道者的教导和写作目的。根据这里的基本解释方法，传道者不应该被视为反传统的怀疑论者，相反，他是一位正统的教师。他对于上帝和人类现况的所思所悟，与传统是一致的，与圣经智慧传统一脉相承。结语部分简要地引出全书最重要的主题（见\"导论：关键主题〞\"，以及12:13-14注）。本书的许多内容与其他智慧文学的主题一致（比较5:2与箴10:19；5:15与伯1:21:7:1与箴22:1:8:12与箴1:7；10:3与箴13:16），特别是华\"的重要性（见以下经文注释：3:14,5:7.12:13-14），这也表明本书与《圣经》的总体信息一致。然而，传道者的思想和表达方法又确实别具一格和创意十足，他不是单纯地重复其他智者的教导。作为一位真正的智慧教师，他拥有敏锐的洞察力，以深刻和具挑战性的文笔，鞭策读者深入地思考和反省。至于书中许多疑难或矛盾的地方，可以这样作出合理的解释：（1）作者的风格激进；（2）这是教导智慧的一般方法，陈述明显矛盾的原则（如：箴26:4-5），让读者自行应用在具体处境中；（3）传道者无意描述适合大部分情况的普遍真理（这是《箴言》采用的教导手法），而是专注于考察特殊的情况（如：4:7-8,5:13-14,9:13-16），这些情况与一般人的期望不同（如：4:13-16，9:1）。因此，传道者虽然没有否定智慧文学对现实的一般描述的正确性，但也更加深刻地意识到在堕落世界中的人生非常复杂，因此提出了许多与圣经智慧有别的个别\"法则\"。\"敬畏耶和从传道者如何使用\"参透\"一词（见3:11注），读者可以看出这是他最独特的贡献。所有人都希望发现和明白上帝在世界中的所有作为，但这是不可能的，因为人不是上帝。然而，信徒不会因此失望，相反，他们会紧紧依靠那位值得信靠的上帝。当他们寻求明白\"敬畏上帝并遵守他的诫命\"的真正含义，就能够把完全交托给上帝，即使他们看不到他的作为。这就是真正的智慧。",
+      "debugMeta": {
+        "coverageRanges": [
+          {
+            "end": "Eccl.12.13",
+            "start": "Eccl.12.13"
+          }
+        ],
+        "page": 1,
+        "primaryAnchor": "Eccl.12.13",
+        "sourceLabel": "圣经研修本 21_传道书【codex-v3】"
+      },
+      "id": "study-bible-eccl-intro-p001-n002",
+      "primaryAnchor": "Eccl.12.13",
+      "searchText": "传道书 导论：《传道书》的主题和解释\n《传道书》的主题是：在这个因堕落而经常令人感到迷惘和沮丧的世界中，人必须敬畏上帝。本书的独特人物角色，尝试以非常不同的多种思路来解释这个主题，包括悲观主义、乐观主义、宗教及哲学怀疑主义（这可能是传道者的个人观点，或者他只是引用别人的观点，…\n《传道书》的主题是：在这个因堕落而经常令人感到迷惘和沮丧的世界中，人必须敬畏上帝。本书的独特人物角色，尝试以非常不同的多种思路来解释这个主题，包括悲观主义、乐观主义、宗教及哲学怀疑主义（这可能是传道者的个人观点，或者他只是引用别人的观点，为要阐明某种不敬虔的观点是轻浮无益的）、非正统和正统的虔诚信仰，等等。本书的几个特点让人产生这种矛盾的印象：（1）本书的叠句\"虚空的虚空\"可以有非常不同的解释（见\"导论：关键主题\"），读者对这个重要主题声明的理解，将大大影响他对全书的解释。（2）书中有许多看似互相矛盾的地方，如：7:12声称智慧可以\"保存生命\"，2:16却说不能：4:2说生活悲惨的人倒不如死了，9:4-6却又说活着比死强，所以不容易从书中找到一个前后一致的信息。（3）传道者的有些声明从表面看来是完全不合正统的（如：7:16），与《圣经》的其他教导不一致（如：比较2:16与箴3:18.或11:9与民15:39）。虽然本书的结语（12:9-12）肯定了传道者的智慧，但是很多学者认为，这些经文是后来加上去的，目的是让本书的原读者更容易接受其中的非正统信息，但其实这种看法误解了传道者的教导和写作目的。根据这里的基本解释方法，传道者不应该被视为反传统的怀疑论者，相反，他是一位正统的教师。他对于上帝和人类现况的所思所悟，与传统是一致的，与圣经智慧传统一脉相承。结语部分简要地引出全书最重要的主题（见\"导论：关键主题〞\"，以及12:13-14注）。本书的许多内容与其他智慧文学的主题一致（比较5:2与箴10:19；5:15与伯1:21:7:1与箴22:1:8:12与箴1:7；10:3与箴13:16），特别是华\"的重要性（见以下经文注释：3:14,5:7.12:13-14），这也表明本书与《圣经》的总体信息一致。然而，传道者的思想和表达方法又确实别具一格和创意十足，他不是单纯地重复其他智者的教导。作为一位真正的智慧教师，他拥有敏锐的洞察力，以深刻和具挑战性的文笔，鞭策读者深入地思考和反省。至于书中许多疑难或矛盾的地方，可以这样作出合理的解释：（1）作者的风格激进；（2）这是教导智慧的一般方法，陈述明显矛盾的原则（如：箴26:4-5），让读者自行应用在具体处境中；（3）传道者无意描述适合大部分情况的普遍真理（这是《箴言》采用的教导手法），而是专注于考察特殊的情况（如：4:7-8,5:13-14,9:13-16），这些情况与一般人的期望不同（如：4:13-16，9:1）。因此，传道者虽然没有否定智慧文学对现实的一般描述的正确性，但也更加深刻地意识到在堕落世界中的人生非常复杂，因此提出了许多与圣经智慧有别的个别\"法则\"。\"敬畏耶和从传道者如何使用\"参透\"一词（见3:11注），读者可以看出这是他最独特的贡献。所有人都希望发现和明白上帝在世界中的所有作为，但这是不可能的，因为人不是上帝。然而，信徒不会因此失望，相反，他们会紧紧依靠那位值得信靠的上帝。当他们寻求明白\"敬畏上帝并遵守他的诫命\"的真正含义，就能够把完全交托给上帝，即使他们看不到他的作为。这就是真正的智慧。\n导论：《传道书》的主题和解释\n圣经研修本 21_传道书【codex-v3】",
+      "source": "圣经研修本 21_传道书【codex-v3】",
+      "summary": "《传道书》的主题是：在这个因堕落而经常令人感到迷惘和沮丧的世界中，人必须敬畏上帝。本书的独特人物角色，尝试以非常不同的多种思路来解释这个主题，包括悲观主义、乐观主义、宗教及哲学怀疑主义（这可能是传道者的个人观点，或者他只是引用别人的观点，…",
+      "title": "传道书 导论：《传道书》的主题和解释",
+      "type": "commentary",
+      "verses": [
+        "Eccl.12.13"
+      ]
+    },
+    {
+      "body": "与《圣经》中的其他智慧文学一样，《传道书》旨在向上帝的子民传授智慧和知识（12:9-11），并教导他们敬畏上帝。从对说话人的称呼来看，他正在某个集会上演说（见\"导论：作者、书名和写作时间\"），而作者在5:1-7的一番劝言，似乎显示地点是在圣殿外面。从传道者讲论的内容来看，听众来自不同的社会和经济阶层，上至王宫官员（如：8:1-9），下至普通农夫（如：11:6）。",
+      "debugMeta": {
+        "coverageRanges": [
+          {
+            "end": "Eccl.12.13",
+            "start": "Eccl.12.13"
+          }
+        ],
+        "page": 2,
+        "primaryAnchor": "Eccl.12.13",
+        "sourceLabel": "圣经研修本 21_传道书【codex-v3】"
+      },
+      "id": "study-bible-eccl-intro-p002-n003",
+      "primaryAnchor": "Eccl.12.13",
+      "searchText": "传道书 导论：写作目的、缘起和背景\n与《圣经》中的其他智慧文学一样，《传道书》旨在向上帝的子民传授智慧和知识（12:9-11），并教导他们敬畏上帝。从对说话人的称呼来看，他正在某个集会上演说（见\"导论：作者、书名和写作时间\"），而作者在5:1-7的一番劝言，似乎显示地点是在…\n与《圣经》中的其他智慧文学一样，《传道书》旨在向上帝的子民传授智慧和知识（12:9-11），并教导他们敬畏上帝。从对说话人的称呼来看，他正在某个集会上演说（见\"导论：作者、书名和写作时间\"），而作者在5:1-7的一番劝言，似乎显示地点是在圣殿外面。从传道者讲论的内容来看，听众来自不同的社会和经济阶层，上至王宫官员（如：8:1-9），下至普通农夫（如：11:6）。\n导论：写作目的、缘起和背景\n圣经研修本 21_传道书【codex-v3】",
+      "source": "圣经研修本 21_传道书【codex-v3】",
+      "summary": "与《圣经》中的其他智慧文学一样，《传道书》旨在向上帝的子民传授智慧和知识（12:9-11），并教导他们敬畏上帝。从对说话人的称呼来看，他正在某个集会上演说（见\"导论：作者、书名和写作时间\"），而作者在5:1-7的一番劝言，似乎显示地点是在…",
+      "title": "传道书 导论：写作目的、缘起和背景",
+      "type": "commentary",
+      "verses": [
+        "Eccl.12.13"
+      ]
+    },
+    {
+      "body": "1.堕落世界的悲惨现实。传道者意识到，受造界\"服在虚空之下\"，并且\"一同叹息、劳苦\"（罗8:20，22），因此深感痛苦；沉思使他更觉困惑，可以视为\"心里叹息\"、迫切等候复兴之人的呼喊（参罗8:23）。尤其值得注意的是，当保罗论到受造物都\"服在虚空之下\"的时候，他所用的希腊词（mataiotes），正是希腊《七十子译本》的《传道书》中翻译为\"虚空\"（希伯来文hebe/）的同一个词，这个词在希腊文《传道书》中出现了38次之多，表明《传道书》是保罗在写罗8:18-25时的思想背景。本书强调堕落及其灾难性的影响，这与下文论述的其他关键主题有着密切的关系。2.人生的\"虚空\"本书的开头和结尾都是一个感叹，\"虚空的虚空，凡事都是虚空\"（1:2.12:8）。虽然\"虚空\"明显是本书的一个关键词（在希腊文旧约《七十子译本》的《传道书》中共出现38次，占在《旧约》中出现的总次数的一半以上），但是这个词却很难翻译。这个词的字面意思是\"烟雾\"或\"气\"，使人联想到一幅转瞬即逝、短暂、难以捉摸的画面。具体意思要根据上下文来确定。当这个词应用在人的各种活动上，或者人在地上生活的欢愉和乐趣上，是表明\"这世界的样子将要过去了\"（林前7:31）当应用在堕落世界的黑暗现实上（如：死亡），则是表达沮丧、愤怒或哀伤；当应用在传道者文旧约寻求认识所有事物上，是指一些不能理解或测度的事情（如：1:14-15）。最后一个用法尤其重要，因为本书正是要\"查究\"生命的真谛（尤见1:12-18）。3.罪与死亡。人类丧失了在上帝面前原本拥有的义（7:29），因此所有人都是罪人（7:20）。《创世记》的前几章已经清楚指出，死亡是人类堕落后的结果（创2:16-17,3:19），传道者深知这可怕的事实对每一个人的影响（如：2:14-17，3:18-21，6:6）。4.工作的喜乐与沮丧。上帝在亚当堕落之前，已经给他委派了工作（创2:15），但亚当犯罪后受到的惩罚之一，就是使他的工作成为痛苦的劳役（创3:17-19）。传道者同时经历了这两个有关工作的事实，就是人在工作中既可获得满足（2:10，24，3:22,5:18-20.9:9-10），也所有赐福。会感到苦恼（2:18-23,4:4）。5.怀看感恩享受上帝良善的思赐。传道者花了许多篇幅评述堕落世界的扭曲现况，但这并没有使他看不到上帝所创造世界的美好（3:11），或使他藐视上帝美善的恩赐，如天伦之乐、食物、饮料，以及令人满足的工作（2:24-26，3:12-13,5:18-20,7:14,8:15,9:7,9）。人应该存着完全谦卑和喜乐的心，领受从上帝而来的6.敬畏上帝。\"尽都虚空\"的事实促使人寻求上帝的帮助，因为上帝作工的果效永远长行（3:14），他也是\"磐石\"，荫庇所有寻求他的人（如：诗18:2，62:8，994:22）。换句话说，这个事实教导人要\"敬畏\"或\"崇敬\"上帝（见以下经文注释：3:14，5:7,12:13-14；另参7:18.8:12-13）。",
+      "debugMeta": {
+        "coverageRanges": [
+          {
+            "end": "Eccl.12.13",
+            "start": "Eccl.12.13"
+          }
+        ],
+        "page": 2,
+        "primaryAnchor": "Eccl.12.13",
+        "sourceLabel": "圣经研修本 21_传道书【codex-v3】"
+      },
+      "id": "study-bible-eccl-intro-p002-n004",
+      "primaryAnchor": "Eccl.12.13",
+      "searchText": "传道书 导论：关键主题\n1.堕落世界的悲惨现实。传道者意识到，受造界\"服在虚空之下\"，并且\"一同叹息、劳苦\"（罗8:20，22），因此深感痛苦；沉思使他更觉困惑，可以视为\"心里叹息\"、迫切等候复兴之人的呼喊（参罗8:23）。尤其值得注意的是，当保罗论到受造物都\"…\n1.堕落世界的悲惨现实。传道者意识到，受造界\"服在虚空之下\"，并且\"一同叹息、劳苦\"（罗8:20，22），因此深感痛苦；沉思使他更觉困惑，可以视为\"心里叹息\"、迫切等候复兴之人的呼喊（参罗8:23）。尤其值得注意的是，当保罗论到受造物都\"服在虚空之下\"的时候，他所用的希腊词（mataiotes），正是希腊《七十子译本》的《传道书》中翻译为\"虚空\"（希伯来文hebe/）的同一个词，这个词在希腊文《传道书》中出现了38次之多，表明《传道书》是保罗在写罗8:18-25时的思想背景。本书强调堕落及其灾难性的影响，这与下文论述的其他关键主题有着密切的关系。2.人生的\"虚空\"本书的开头和结尾都是一个感叹，\"虚空的虚空，凡事都是虚空\"（1:2.12:8）。虽然\"虚空\"明显是本书的一个关键词（在希腊文旧约《七十子译本》的《传道书》中共出现38次，占在《旧约》中出现的总次数的一半以上），但是这个词却很难翻译。这个词的字面意思是\"烟雾\"或\"气\"，使人联想到一幅转瞬即逝、短暂、难以捉摸的画面。具体意思要根据上下文来确定。当这个词应用在人的各种活动上，或者人在地上生活的欢愉和乐趣上，是表明\"这世界的样子将要过去了\"（林前7:31）当应用在堕落世界的黑暗现实上（如：死亡），则是表达沮丧、愤怒或哀伤；当应用在传道者文旧约寻求认识所有事物上，是指一些不能理解或测度的事情（如：1:14-15）。最后一个用法尤其重要，因为本书正是要\"查究\"生命的真谛（尤见1:12-18）。3.罪与死亡。人类丧失了在上帝面前原本拥有的义（7:29），因此所有人都是罪人（7:20）。《创世记》的前几章已经清楚指出，死亡是人类堕落后的结果（创2:16-17,3:19），传道者深知这可怕的事实对每一个人的影响（如：2:14-17，3:18-21，6:6）。4.工作的喜乐与沮丧。上帝在亚当堕落之前，已经给他委派了工作（创2:15），但亚当犯罪后受到的惩罚之一，就是使他的工作成为痛苦的劳役（创3:17-19）。传道者同时经历了这两个有关工作的事实，就是人在工作中既可获得满足（2:10，24，3:22,5:18-20.9:9-10），也所有赐福。会感到苦恼（2:18-23,4:4）。5.怀看感恩享受上帝良善的思赐。传道者花了许多篇幅评述堕落世界的扭曲现况，但这并没有使他看不到上帝所创造世界的美好（3:11），或使他藐视上帝美善的恩赐，如天伦之乐、食物、饮料，以及令人满足的工作（2:24-26，3:12-13,5:18-20,7:14,8:15,9:7,9）。人应该存着完全谦卑和喜乐的心，领受从上帝而来的6.敬畏上帝。\"尽都虚空\"的事实促使人寻求上帝的帮助，因为上帝作工的果效永远长行（3:14），他也是\"磐石\"，荫庇所有寻求他的人（如：诗18:2，62:8，994:22）。换句话说，这个事实教导人要\"敬畏\"或\"崇敬\"上帝（见以下经文注释：3:14，5:7,12:13-14；另参7:18.8:12-13）。\n导论：关键主题\n圣经研修本 21_传道书【codex-v3】",
+      "source": "圣经研修本 21_传道书【codex-v3】",
+      "summary": "1.堕落世界的悲惨现实。传道者意识到，受造界\"服在虚空之下\"，并且\"一同叹息、劳苦\"（罗8:20，22），因此深感痛苦；沉思使他更觉困惑，可以视为\"心里叹息\"、迫切等候复兴之人的呼喊（参罗8:23）。尤其值得注意的是，当保罗论到受造物都\"…",
+      "title": "传道书 导论：关键主题",
+      "type": "commentary",
+      "verses": [
+        "Eccl.12.13"
+      ]
+    },
+    {
+      "body": "上帝拯救的作为是贯穿整本《圣经》最伟大的事件，让领受救恩的人生命合而为一。它召唤上帝的每个子民降服于这作为，使他们有份参与传扬这作为，从而成为尊贵。然而，没有人能完全知道他的抉择对上帝这个宏大的计划有什么影响；《传道书》让人看到，他们根本不需要明白其中原因。每一个忠心的信徒，藉着\"敬畏上帝，谨守他的诫命\"（12:13），以他自己不能\"查明\"的方式参与上帝的计划，信靠他必完成这个伟大的计划。虽然传道者是一位伟大的君王和有真智慧的教师，但这个形象却最终超越所罗门和其他人（1:16,2:7.9）。从基督教神学的角度阅读整个圣经故事的发展，读者可以看到传道者与耶稣基督有许多相似之处：耶稣是\"大卫的子孙\"（太1:1）、君王（太2:2：徒17:7；启17:14,19:16）、\"上帝的智慧\"（林前1:24，30），以及\"牧人\"（结34:23.37:24：约10:11，16），他的事工已经开展，且\"比所罗门更大\"（路11:31）。关于\"救恩历史\"的解释，见《圣经文集》中的《概述》和《〈旧约》中的救恩历史：为基督预备道路》。",
+      "debugMeta": {
+        "coverageRanges": [
+          {
+            "end": "Eccl.12.14",
+            "start": "Eccl.12.14"
+          }
+        ],
+        "page": 3,
+        "primaryAnchor": "Eccl.12.14",
+        "sourceLabel": "圣经研修本 21_传道书【codex-v3】"
+      },
+      "id": "study-bible-eccl-intro-p003-n005",
+      "primaryAnchor": "Eccl.12.14",
+      "searchText": "传道书 导论：救恩历史概要\n上帝拯救的作为是贯穿整本《圣经》最伟大的事件，让领受救恩的人生命合而为一。它召唤上帝的每个子民降服于这作为，使他们有份参与传扬这作为，从而成为尊贵。然而，没有人能完全知道他的抉择对上帝这个宏大的计划有什么影响；《传道书》让人看到，他们根本…\n上帝拯救的作为是贯穿整本《圣经》最伟大的事件，让领受救恩的人生命合而为一。它召唤上帝的每个子民降服于这作为，使他们有份参与传扬这作为，从而成为尊贵。然而，没有人能完全知道他的抉择对上帝这个宏大的计划有什么影响；《传道书》让人看到，他们根本不需要明白其中原因。每一个忠心的信徒，藉着\"敬畏上帝，谨守他的诫命\"（12:13），以他自己不能\"查明\"的方式参与上帝的计划，信靠他必完成这个伟大的计划。虽然传道者是一位伟大的君王和有真智慧的教师，但这个形象却最终超越所罗门和其他人（1:16,2:7.9）。从基督教神学的角度阅读整个圣经故事的发展，读者可以看到传道者与耶稣基督有许多相似之处：耶稣是\"大卫的子孙\"（太1:1）、君王（太2:2：徒17:7；启17:14,19:16）、\"上帝的智慧\"（林前1:24，30），以及\"牧人\"（结34:23.37:24：约10:11，16），他的事工已经开展，且\"比所罗门更大\"（路11:31）。关于\"救恩历史\"的解释，见《圣经文集》中的《概述》和《〈旧约》中的救恩历史：为基督预备道路》。\n导论：救恩历史概要\n圣经研修本 21_传道书【codex-v3】",
+      "source": "圣经研修本 21_传道书【codex-v3】",
+      "summary": "上帝拯救的作为是贯穿整本《圣经》最伟大的事件，让领受救恩的人生命合而为一。它召唤上帝的每个子民降服于这作为，使他们有份参与传扬这作为，从而成为尊贵。然而，没有人能完全知道他的抉择对上帝这个宏大的计划有什么影响；《传道书》让人看到，他们根本…",
+      "title": "传道书 导论：救恩历史概要",
+      "type": "commentary",
+      "verses": [
+        "Eccl.12.14"
+      ]
+    },
+    {
+      "body": "《传道书》虽然是智慧文学，但不像典型的箴言合集。《传道书》中的箴言以分组的方式排列，并且有一条情节主线将各个单元联结起来。单元一般属于以下三类：回忆、反省和心境。所有这些单元都由一位叙事者表达，实际上他是在描述自己寻求生命满足的故事；而这个寻求是从某个已经寻得满足的人的观点重新建构的。各个单元之间的过渡经常采用作者的寻求：\"我转念观看\"，\"我又转念\"，\"我便看出\"等。随着寻求慢慢展开，读者将会发现，作者在当前的观点与他过去的虚空的寻求之间，始终存在差异。实际上，传道者是在回忆自己过去怎样在没有出路的迷宫里盲目追寻，生动形象地重现他躁动不安的过去，但这是他从成熟的观点来描述过去的。作者以叙事为主线，同时在许多内容上运用观察剖析的模式，给本书添加一些默想的味道。这部小型文集反复出现一些词语和主题，使全书读起来非常连贯。\"日光之下\"或者意思相同的短语，在书中出现了超过30次。\"虚空（希伯来原文hebel；见\"导论：关键主题\"第2点）和\"参透\"（希伯来原文matsa'；见\"《传道书》的主题和解释\"）这两个用词贯穿全书，强调人对事情全部意义的理解其实都是不可靠的。为使读者扎根在真实的世界，作者反复使用饮食、劳作、睡觉、死亡、自然界的循环等事物来设喻。箴言是本书的基本建构成分。虽然所有智慧文学都倾向以诗歌体为写作体裁，包括运用排比法，但《传道书》比一般智慧文学更在意展示其韵文技巧。作者可谓是意象、隐喻和明喻的大师。本书部分内容以观察和描述的形式来表达，读者需要以默想的方式来阅读这些经文，反思作者笔下所形容的现象。本书也具有感性的一面，因此读者需要有接纳的心态才能领会其中的信息。",
+      "debugMeta": {
+        "coverageRanges": [
+          {
+            "end": "Eccl.1.2",
+            "start": "Eccl.1.2"
+          }
+        ],
+        "page": 3,
+        "primaryAnchor": "Eccl.1.2",
+        "sourceLabel": "圣经研修本 21_传道书【codex-v3】"
+      },
+      "id": "study-bible-eccl-intro-p003-n006",
+      "primaryAnchor": "Eccl.1.2",
+      "searchText": "传道书 导论：文学特征\n《传道书》虽然是智慧文学，但不像典型的箴言合集。《传道书》中的箴言以分组的方式排列，并且有一条情节主线将各个单元联结起来。单元一般属于以下三类：回忆、反省和心境。所有这些单元都由一位叙事者表达，实际上他是在描述自己寻求生命满足的故事；而这…\n《传道书》虽然是智慧文学，但不像典型的箴言合集。《传道书》中的箴言以分组的方式排列，并且有一条情节主线将各个单元联结起来。单元一般属于以下三类：回忆、反省和心境。所有这些单元都由一位叙事者表达，实际上他是在描述自己寻求生命满足的故事；而这个寻求是从某个已经寻得满足的人的观点重新建构的。各个单元之间的过渡经常采用作者的寻求：\"我转念观看\"，\"我又转念\"，\"我便看出\"等。随着寻求慢慢展开，读者将会发现，作者在当前的观点与他过去的虚空的寻求之间，始终存在差异。实际上，传道者是在回忆自己过去怎样在没有出路的迷宫里盲目追寻，生动形象地重现他躁动不安的过去，但这是他从成熟的观点来描述过去的。作者以叙事为主线，同时在许多内容上运用观察剖析的模式，给本书添加一些默想的味道。这部小型文集反复出现一些词语和主题，使全书读起来非常连贯。\"日光之下\"或者意思相同的短语，在书中出现了超过30次。\"虚空（希伯来原文hebel；见\"导论：关键主题\"第2点）和\"参透\"（希伯来原文matsa'；见\"《传道书》的主题和解释\"）这两个用词贯穿全书，强调人对事情全部意义的理解其实都是不可靠的。为使读者扎根在真实的世界，作者反复使用饮食、劳作、睡觉、死亡、自然界的循环等事物来设喻。箴言是本书的基本建构成分。虽然所有智慧文学都倾向以诗歌体为写作体裁，包括运用排比法，但《传道书》比一般智慧文学更在意展示其韵文技巧。作者可谓是意象、隐喻和明喻的大师。本书部分内容以观察和描述的形式来表达，读者需要以默想的方式来阅读这些经文，反思作者笔下所形容的现象。本书也具有感性的一面，因此读者需要有接纳的心态才能领会其中的信息。\n导论：文学特征\n圣经研修本 21_传道书【codex-v3】",
+      "source": "圣经研修本 21_传道书【codex-v3】",
+      "summary": "《传道书》虽然是智慧文学，但不像典型的箴言合集。《传道书》中的箴言以分组的方式排列，并且有一条情节主线将各个单元联结起来。单元一般属于以下三类：回忆、反省和心境。所有这些单元都由一位叙事者表达，实际上他是在描述自己寻求生命满足的故事；而这…",
+      "title": "传道书 导论：文学特征",
+      "type": "commentary",
+      "verses": [
+        "Eccl.1.2"
+      ]
+    },
+    {
+      "body": "一、序言和主题（1:1-3）二、第一类\"虚空\"（1:4-2:26）（一）自然界的\"虚空\"（1:4-11）（二）智慧和知识的\"虚空\"（1:12-18）（三）享乐、财富和成就都是\"虚空\"（2:1-11*）（四）继续论述智慧是\"虚空\"（2:12*-17）（五）劳碌是\"虚空\"（2:18-26）三、诗歌：万事均有定时（3:1-8）四、敬畏至高的独一上帝（3:9-15）五、第二类\"虚空\"（3:16-4:16）（一）人生命的\"虚空\"（3:16-4:3）（二）继续讲述劳碌的\"虚空\"（4:4-12）（三）继续阐明智慧的“虚空”（4:13-16）六、敬畏圣洁公义的上帝（5:1-7）七、“日光之下”的生活（5:8-7:24*）（一）不公义（5:8-9）（二）贪婪与知足（5:10-6:9）（三）\"日光之下\"生活的智慧（6:10-7:24*）八、问题的核心：罪（7:25*-29）九、继续阐述\"日光之下\"的生活（8:1-12:7*）（一）有智慧地与愚昧的掌权者打交道（8:1-9）（二）敬畏上帝的重要（8:10-13）（三）知识的有限（8:14-17）（四）生无法预测，死确凿无疑（9:1-6）（五）享受当下（9:7-10）（六）继续阐述人生无常（9:11-12）（七）智慧与愚昧的道路（9:13-11:6）1.智慧的力量（9:13-18）2.有关智慧和愚昧的箴言（10:1-20）3.面对生命无常时的明智行为（11:1-6）（八）衰老和人生的“虚空”（11:7-12:7*）十、最后结论和结语（12:8*-14）*大纲分段与《和合本》不同。",
+      "debugMeta": {
+        "coverageRanges": [
+          {
+            "end": "Eccl.1.1",
+            "start": "Eccl.1.1"
+          }
+        ],
+        "page": 3,
+        "primaryAnchor": "Eccl.1.1",
+        "sourceLabel": "圣经研修本 21_传道书【codex-v3】"
+      },
+      "id": "study-bible-eccl-intro-p003-n007",
+      "primaryAnchor": "Eccl.1.1",
+      "searchText": "传道书 导论：大纲\n一、序言和主题（1:1-3）二、第一类\"虚空\"（1:4-2:26）（一）自然界的\"虚空\"（1:4-11）（二）智慧和知识的\"虚空\"（1:12-18）（三）享乐、财富和成就都是\"虚空\"（2:1-11*）（四）继续论述智慧是\"虚空\"（2:12…\n一、序言和主题（1:1-3）二、第一类\"虚空\"（1:4-2:26）（一）自然界的\"虚空\"（1:4-11）（二）智慧和知识的\"虚空\"（1:12-18）（三）享乐、财富和成就都是\"虚空\"（2:1-11*）（四）继续论述智慧是\"虚空\"（2:12*-17）（五）劳碌是\"虚空\"（2:18-26）三、诗歌：万事均有定时（3:1-8）四、敬畏至高的独一上帝（3:9-15）五、第二类\"虚空\"（3:16-4:16）（一）人生命的\"虚空\"（3:16-4:3）（二）继续讲述劳碌的\"虚空\"（4:4-12）（三）继续阐明智慧的“虚空”（4:13-16）六、敬畏圣洁公义的上帝（5:1-7）七、“日光之下”的生活（5:8-7:24*）（一）不公义（5:8-9）（二）贪婪与知足（5:10-6:9）（三）\"日光之下\"生活的智慧（6:10-7:24*）八、问题的核心：罪（7:25*-29）九、继续阐述\"日光之下\"的生活（8:1-12:7*）（一）有智慧地与愚昧的掌权者打交道（8:1-9）（二）敬畏上帝的重要（8:10-13）（三）知识的有限（8:14-17）（四）生无法预测，死确凿无疑（9:1-6）（五）享受当下（9:7-10）（六）继续阐述人生无常（9:11-12）（七）智慧与愚昧的道路（9:13-11:6）1.智慧的力量（9:13-18）2.有关智慧和愚昧的箴言（10:1-20）3.面对生命无常时的明智行为（11:1-6）（八）衰老和人生的“虚空”（11:7-12:7*）十、最后结论和结语（12:8*-14）*大纲分段与《和合本》不同。\n导论：大纲\n圣经研修本 21_传道书【codex-v3】",
+      "source": "圣经研修本 21_传道书【codex-v3】",
+      "summary": "一、序言和主题（1:1-3）二、第一类\"虚空\"（1:4-2:26）（一）自然界的\"虚空\"（1:4-11）（二）智慧和知识的\"虚空\"（1:12-18）（三）享乐、财富和成就都是\"虚空\"（2:1-11*）（四）继续论述智慧是\"虚空\"（2:12…",
+      "title": "传道书 导论：大纲",
+      "type": "commentary",
+      "verses": [
+        "Eccl.1.1"
+      ]
+    }
+  ]
+}

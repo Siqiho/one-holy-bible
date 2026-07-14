@@ -1,0 +1,2840 @@
+{
+  "bookId": "1Thess",
+  "cuvVerses": [
+    {
+      "book": "1Thess",
+      "chapter": 1,
+      "id": "1Thess.1.1",
+      "text": "保罗、西拉、提摩太，写信给帖撒罗尼迦在父 神和主耶稣基督里的教会：愿恩惠、平安归与你 们！",
+      "verse": 1
+    },
+    {
+      "book": "1Thess",
+      "chapter": 1,
+      "id": "1Thess.1.2",
+      "text": "我们为你们众人常常感谢 神，祷告的时候提到你们，",
+      "verse": 2
+    },
+    {
+      "book": "1Thess",
+      "chapter": 1,
+      "id": "1Thess.1.3",
+      "text": "在 神我们的父面前，不住地记念你们因信心所做的工夫，因爱心所受的劳苦，因盼望我们主耶稣基 督所存的忍耐。",
+      "verse": 3
+    },
+    {
+      "book": "1Thess",
+      "chapter": 1,
+      "id": "1Thess.1.4",
+      "text": "被 神所爱的弟兄啊，我知道你们是蒙拣选的，",
+      "verse": 4
+    },
+    {
+      "book": "1Thess",
+      "chapter": 1,
+      "id": "1Thess.1.5",
+      "text": "因为我们的福音传到你们那里，不独在乎言语，也在乎权能和圣灵，并充足的信心。正如你们知道我 们在你们那里，为你们的缘故是怎样为人；",
+      "verse": 5
+    },
+    {
+      "book": "1Thess",
+      "chapter": 1,
+      "id": "1Thess.1.6",
+      "text": "并且你们在大难之中蒙了圣灵所赐的喜乐，领受真道，就效法我们，也效法了主，",
+      "verse": 6
+    },
+    {
+      "book": "1Thess",
+      "chapter": 1,
+      "id": "1Thess.1.7",
+      "text": "甚至你们作了马其顿和亚该亚所有信主之人的榜样。",
+      "verse": 7
+    },
+    {
+      "book": "1Thess",
+      "chapter": 1,
+      "id": "1Thess.1.8",
+      "text": "因为主的道从你们那里已经传扬出来，你们向 神的信心不但在马其顿和亚该亚，就是在各处，也都 传开了，所以不用我们说什么话。",
+      "verse": 8
+    },
+    {
+      "book": "1Thess",
+      "chapter": 1,
+      "id": "1Thess.1.9",
+      "text": "因为他们自己已经报明我们是怎样进到你们那里，你们是怎样离弃偶像，归向 神，要服事那又真又 活的 神，",
+      "verse": 9
+    },
+    {
+      "book": "1Thess",
+      "chapter": 1,
+      "id": "1Thess.1.10",
+      "text": "等候他儿子从天降临，就是他从死里复活的、那位救我们脱离将来忿怒的耶稣。",
+      "verse": 10
+    },
+    {
+      "book": "1Thess",
+      "chapter": 2,
+      "id": "1Thess.2.1",
+      "text": "弟兄们，你们自己原晓得我们进到你们那里并不是徒然的。",
+      "verse": 1
+    },
+    {
+      "book": "1Thess",
+      "chapter": 2,
+      "id": "1Thess.2.2",
+      "text": "我们从前在腓立比被害受辱， 这是你们知道的； 然而还是靠我们的神放开胆量， 在大争战中把 神 的福音传给你们。",
+      "verse": 2
+    },
+    {
+      "book": "1Thess",
+      "chapter": 2,
+      "id": "1Thess.2.3",
+      "text": "我们的劝勉，不是出于错误，不是出于污秽，也不是用诡诈。",
+      "verse": 3
+    },
+    {
+      "book": "1Thess",
+      "chapter": 2,
+      "id": "1Thess.2.4",
+      "text": "但 神既然验中了我们，把福音托付我们，我们就照样讲，不是要讨人喜欢，乃是要讨那察验我们心 的 神喜欢。",
+      "verse": 4
+    },
+    {
+      "book": "1Thess",
+      "chapter": 2,
+      "id": "1Thess.2.5",
+      "text": "因为我们从来没有用过谄媚的话，这是你们知道的；也没有藏着贪心，这是 神可以作见证的。",
+      "verse": 5
+    },
+    {
+      "book": "1Thess",
+      "chapter": 2,
+      "id": "1Thess.2.6",
+      "text": "我们作基督的使徒，虽然可以叫人尊重，却没有向你们或向别人求荣耀，",
+      "verse": 6
+    },
+    {
+      "book": "1Thess",
+      "chapter": 2,
+      "id": "1Thess.2.7",
+      "text": "只在你们中间存心温柔，如同母亲乳养自己的孩子。",
+      "verse": 7
+    },
+    {
+      "book": "1Thess",
+      "chapter": 2,
+      "id": "1Thess.2.8",
+      "text": "我们既是这样爱你们，不但愿意将 神的福音给你们，连自己的性命也愿意给你们，因你们是我们所 疼爱的。",
+      "verse": 8
+    },
+    {
+      "book": "1Thess",
+      "chapter": 2,
+      "id": "1Thess.2.9",
+      "text": "弟兄们，你们记念我们的辛苦劳碌，昼夜做工，传 神的福音给你们，免得叫你们一人受累。",
+      "verse": 9
+    },
+    {
+      "book": "1Thess",
+      "chapter": 2,
+      "id": "1Thess.2.10",
+      "text": "我们向你们信主的人，是何等圣洁、公义，无可指摘，有你们作见证，也有 神作见证。",
+      "verse": 10
+    },
+    {
+      "book": "1Thess",
+      "chapter": 2,
+      "id": "1Thess.2.11",
+      "text": "你们也晓得我们怎样劝勉你们，安慰你们，嘱咐你们各人，好像父亲待自己的儿女一样。",
+      "verse": 11
+    },
+    {
+      "book": "1Thess",
+      "chapter": 2,
+      "id": "1Thess.2.12",
+      "text": "要叫你们行事对得起那召你们进他国、得他荣耀的 神。",
+      "verse": 12
+    },
+    {
+      "book": "1Thess",
+      "chapter": 2,
+      "id": "1Thess.2.13",
+      "text": "为此，我们也不住地感谢 神，因你们听见我们所传 神的道，就领受了；不以为是人的道，乃以 为是 神的道。这道实在是神的，并且运行在你们信主的人心中。",
+      "verse": 13
+    },
+    {
+      "book": "1Thess",
+      "chapter": 2,
+      "id": "1Thess.2.14",
+      "text": "弟兄们，你们曾效法犹太中，在基督耶稣里 神的各教会，因为你们也受了本地人的苦害，像他们 受了犹太人的苦害一样。",
+      "verse": 14
+    },
+    {
+      "book": "1Thess",
+      "chapter": 2,
+      "id": "1Thess.2.15",
+      "text": "这犹太人杀了主耶稣和先知，又把我们赶出去；他们不得 神的喜悦，且与众人为敌；",
+      "verse": 15
+    },
+    {
+      "book": "1Thess",
+      "chapter": 2,
+      "id": "1Thess.2.16",
+      "text": "不许我们传道给外邦人，使外邦人得救，常常充满自己的罪恶。 神的忿怒临在他们身上已经到了 极处。",
+      "verse": 16
+    },
+    {
+      "book": "1Thess",
+      "chapter": 2,
+      "id": "1Thess.2.17",
+      "text": "弟兄们，我们暂时与你们离别，是面目离别，心里却不离别；我们极力地想法子，很愿意见你们的 面，",
+      "verse": 17
+    },
+    {
+      "book": "1Thess",
+      "chapter": 2,
+      "id": "1Thess.2.18",
+      "text": "所以我们有意到你们那里。我保罗有一两次要去，只是撒但阻挡了我们。",
+      "verse": 18
+    },
+    {
+      "book": "1Thess",
+      "chapter": 2,
+      "id": "1Thess.2.19",
+      "text": "我们的盼望和喜乐并所夸的冠冕是什么呢？岂不是我们主耶稣来的时候，你们在他面前站立得住 吗？",
+      "verse": 19
+    },
+    {
+      "book": "1Thess",
+      "chapter": 2,
+      "id": "1Thess.2.20",
+      "text": "因为你们就是我们的荣耀，我们的喜乐。",
+      "verse": 20
+    },
+    {
+      "book": "1Thess",
+      "chapter": 3,
+      "id": "1Thess.3.1",
+      "text": "我们既不能再忍，就愿意独自等在雅典，",
+      "verse": 1
+    },
+    {
+      "book": "1Thess",
+      "chapter": 3,
+      "id": "1Thess.3.2",
+      "text": "打发我们的兄弟在基督福音上作 神执事的提摩太前去（注： “作神执事的”有古卷作“与 神 同工的” ）坚固你们，并在你们所信的道上劝慰你们，",
+      "verse": 2
+    },
+    {
+      "book": "1Thess",
+      "chapter": 3,
+      "id": "1Thess.3.3",
+      "text": "免得有人被诸般患难摇动，因为你们自己知道，我们受患难原是命定的。",
+      "verse": 3
+    },
+    {
+      "book": "1Thess",
+      "chapter": 3,
+      "id": "1Thess.3.4",
+      "text": "我们在你们那里的时候预先告诉你们，我们必受患难，以后果然应验了，你们也知道。",
+      "verse": 4
+    },
+    {
+      "book": "1Thess",
+      "chapter": 3,
+      "id": "1Thess.3.5",
+      "text": "为此，我既不能再忍，就打发人去，要晓得你们的信心如何，恐怕那诱惑人的到底诱惑了你们，叫我 们的劳苦归于徒然。",
+      "verse": 5
+    },
+    {
+      "book": "1Thess",
+      "chapter": 3,
+      "id": "1Thess.3.6",
+      "text": "但提摩太刚才从你们那里回来，将你们信心和爱心的好消息报给我们，又说你们常常记念我们，切切 地想见我们，如同我们想见你们一样。",
+      "verse": 6
+    },
+    {
+      "book": "1Thess",
+      "chapter": 3,
+      "id": "1Thess.3.7",
+      "text": "所以弟兄们，我们在一切困苦患难之中，因着你们的信心就得了安慰。",
+      "verse": 7
+    },
+    {
+      "book": "1Thess",
+      "chapter": 3,
+      "id": "1Thess.3.8",
+      "text": "你们若靠主站立得稳，我们就活了。",
+      "verse": 8
+    },
+    {
+      "book": "1Thess",
+      "chapter": 3,
+      "id": "1Thess.3.9",
+      "text": "我们在 神面前，因着你们甚是喜乐，为这一切喜乐，可用何等的感谢为你们报答 神呢？",
+      "verse": 9
+    },
+    {
+      "book": "1Thess",
+      "chapter": 3,
+      "id": "1Thess.3.10",
+      "text": "我们昼夜切切地祈求，要见你们的面，补满你们信心的不足。",
+      "verse": 10
+    },
+    {
+      "book": "1Thess",
+      "chapter": 3,
+      "id": "1Thess.3.11",
+      "text": "愿 神我们的父和我们的主耶稣，一直引领我们到你们那里去；",
+      "verse": 11
+    },
+    {
+      "book": "1Thess",
+      "chapter": 3,
+      "id": "1Thess.3.12",
+      "text": "又愿主叫你们彼此相爱的心，并爱众人的心，都能增长、充足，如同我们爱你们一样；",
+      "verse": 12
+    },
+    {
+      "book": "1Thess",
+      "chapter": 3,
+      "id": "1Thess.3.13",
+      "text": "好使你们当我们主耶稣同他众圣徒来的时候，在我们父 神面前心里坚固，成为圣洁，无可责备。",
+      "verse": 13
+    },
+    {
+      "book": "1Thess",
+      "chapter": 4,
+      "id": "1Thess.4.1",
+      "text": "弟兄们，我还有话说：我们靠着主耶稣求你们、劝你们，你们既然受了我们的教训，知道该怎样 行，可以讨 神的喜悦，就要照你们现在所行的，更加勉励。",
+      "verse": 1
+    },
+    {
+      "book": "1Thess",
+      "chapter": 4,
+      "id": "1Thess.4.2",
+      "text": "你们原晓得我们凭主耶稣传给你们什么命令。",
+      "verse": 2
+    },
+    {
+      "book": "1Thess",
+      "chapter": 4,
+      "id": "1Thess.4.3",
+      "text": "神的旨意就是要你们成为圣洁，远避淫行；",
+      "verse": 3
+    },
+    {
+      "book": "1Thess",
+      "chapter": 4,
+      "id": "1Thess.4.4",
+      "text": "要你们各人晓得怎样用圣洁、尊贵守着自己的身体，",
+      "verse": 4
+    },
+    {
+      "book": "1Thess",
+      "chapter": 4,
+      "id": "1Thess.4.5",
+      "text": "不放纵私欲的邪情，像那不认识 神的外邦人。",
+      "verse": 5
+    },
+    {
+      "book": "1Thess",
+      "chapter": 4,
+      "id": "1Thess.4.6",
+      "text": "不要一个人在这事上越分，欺负他的弟兄，因为这一类的事，主必报应，正如我预先对你们说过，又 切切嘱咐你们的。",
+      "verse": 6
+    },
+    {
+      "book": "1Thess",
+      "chapter": 4,
+      "id": "1Thess.4.7",
+      "text": "神召我们，本不是要我们沾染污秽，乃是要我们成为圣洁。",
+      "verse": 7
+    },
+    {
+      "book": "1Thess",
+      "chapter": 4,
+      "id": "1Thess.4.8",
+      "text": "所以，那弃绝的，不是弃绝人，乃是弃绝那赐圣灵给你们的 神。",
+      "verse": 8
+    },
+    {
+      "book": "1Thess",
+      "chapter": 4,
+      "id": "1Thess.4.9",
+      "text": "论到弟兄们相爱，不用人写信给你们，因为你们自己蒙了 神的教训，叫你们彼此相爱。",
+      "verse": 9
+    },
+    {
+      "book": "1Thess",
+      "chapter": 4,
+      "id": "1Thess.4.10",
+      "text": "你们向马其顿全地的众弟兄固然是这样行，但我劝弟兄们要更加勉励。",
+      "verse": 10
+    },
+    {
+      "book": "1Thess",
+      "chapter": 4,
+      "id": "1Thess.4.11",
+      "text": "又要立志作安静人，办自己的事，亲手做工，正如我们从前所吩咐你们的，",
+      "verse": 11
+    },
+    {
+      "book": "1Thess",
+      "chapter": 4,
+      "id": "1Thess.4.12",
+      "text": "叫你们可以向外人行事端正，自己也就没有什么缺乏了。",
+      "verse": 12
+    },
+    {
+      "book": "1Thess",
+      "chapter": 4,
+      "id": "1Thess.4.13",
+      "text": "论到睡了的人，我们不愿意弟兄们不知道，恐怕你们忧伤，像那些没有指望的人一样。",
+      "verse": 13
+    },
+    {
+      "book": "1Thess",
+      "chapter": 4,
+      "id": "1Thess.4.14",
+      "text": "我们若信耶稣死而复活了，那已经在耶稣里睡了的人， 神也必将他与耶稣一同带来。",
+      "verse": 14
+    },
+    {
+      "book": "1Thess",
+      "chapter": 4,
+      "id": "1Thess.4.15",
+      "text": "我们现在照主的话告诉你们一件事：我们这活着还存留到主降临的人，断不能在那已经睡了的人之 先，",
+      "verse": 15
+    },
+    {
+      "book": "1Thess",
+      "chapter": 4,
+      "id": "1Thess.4.16",
+      "text": "因为主必亲自从天降临，有呼叫的声音和天使长的声音，又有 神的号吹响；那在基督里死了的人 必先复活。",
+      "verse": 16
+    },
+    {
+      "book": "1Thess",
+      "chapter": 4,
+      "id": "1Thess.4.17",
+      "text": "以后我们这活着还存留的人必和他们一同被提到云里，在空中与主相遇。这样，我们就要和主永远 同在。",
+      "verse": 17
+    },
+    {
+      "book": "1Thess",
+      "chapter": 4,
+      "id": "1Thess.4.18",
+      "text": "所以，你们当用这些话彼此劝慰。",
+      "verse": 18
+    },
+    {
+      "book": "1Thess",
+      "chapter": 5,
+      "id": "1Thess.5.1",
+      "text": "弟兄们，论到时候、日期，不用写信给你们，",
+      "verse": 1
+    },
+    {
+      "book": "1Thess",
+      "chapter": 5,
+      "id": "1Thess.5.2",
+      "text": "因为你们自己明明晓得，主的日子来到，好像夜间的贼一样。",
+      "verse": 2
+    },
+    {
+      "book": "1Thess",
+      "chapter": 5,
+      "id": "1Thess.5.3",
+      "text": "人正说平安稳妥的时候，灾祸忽然临到他们，如同产难临到怀胎的妇人一样；他们绝不能逃脱。",
+      "verse": 3
+    },
+    {
+      "book": "1Thess",
+      "chapter": 5,
+      "id": "1Thess.5.4",
+      "text": "弟兄们，你们却不在黑暗里，叫那日子临到你们像贼一样。",
+      "verse": 4
+    },
+    {
+      "book": "1Thess",
+      "chapter": 5,
+      "id": "1Thess.5.5",
+      "text": "你们都是光明之子，都是白昼之子；我们不是属黑夜的，也不是属幽暗的。",
+      "verse": 5
+    },
+    {
+      "book": "1Thess",
+      "chapter": 5,
+      "id": "1Thess.5.6",
+      "text": "所以，我们不要睡觉，像别人一样，总要警醒谨守。",
+      "verse": 6
+    },
+    {
+      "book": "1Thess",
+      "chapter": 5,
+      "id": "1Thess.5.7",
+      "text": "因为睡了的人是在夜间睡，醉了的人是在夜间醉。",
+      "verse": 7
+    },
+    {
+      "book": "1Thess",
+      "chapter": 5,
+      "id": "1Thess.5.8",
+      "text": "但我们既然属乎白昼，就应当谨守，把信和爱当作护心镜遮胸，把得救的盼望当作头盔戴上。",
+      "verse": 8
+    },
+    {
+      "book": "1Thess",
+      "chapter": 5,
+      "id": "1Thess.5.9",
+      "text": "因为 神不是预定我们受刑，乃是预定我们藉着我们主耶稣基督得救。",
+      "verse": 9
+    },
+    {
+      "book": "1Thess",
+      "chapter": 5,
+      "id": "1Thess.5.10",
+      "text": "他替我们死，叫我们无论醒着、睡着，都与他同活。",
+      "verse": 10
+    },
+    {
+      "book": "1Thess",
+      "chapter": 5,
+      "id": "1Thess.5.11",
+      "text": "所以，你们该彼此劝慰，互相建立，正如你们素常所行的。",
+      "verse": 11
+    },
+    {
+      "book": "1Thess",
+      "chapter": 5,
+      "id": "1Thess.5.12",
+      "text": "弟兄们，我们劝你们敬重那在你们中间劳苦的人，就是在主里面治理你们、劝戒你们的。",
+      "verse": 12
+    },
+    {
+      "book": "1Thess",
+      "chapter": 5,
+      "id": "1Thess.5.13",
+      "text": "又因他们所做的工，用爱心格外尊重他们。你们也要彼此和睦。",
+      "verse": 13
+    },
+    {
+      "book": "1Thess",
+      "chapter": 5,
+      "id": "1Thess.5.14",
+      "text": "我们又劝弟兄们，要警戒不守规矩的人，勉励灰心的人，扶助软弱的人，也要向众人忍耐。",
+      "verse": 14
+    },
+    {
+      "book": "1Thess",
+      "chapter": 5,
+      "id": "1Thess.5.15",
+      "text": "你们要谨慎，无论是谁都不可以恶报恶；或是彼此相待，或是待众人，常要追求良善。",
+      "verse": 15
+    },
+    {
+      "book": "1Thess",
+      "chapter": 5,
+      "id": "1Thess.5.16",
+      "text": "要常常喜乐，",
+      "verse": 16
+    },
+    {
+      "book": "1Thess",
+      "chapter": 5,
+      "id": "1Thess.5.17",
+      "text": "不住地祷告，",
+      "verse": 17
+    },
+    {
+      "book": "1Thess",
+      "chapter": 5,
+      "id": "1Thess.5.18",
+      "text": "凡事谢恩，因为这是 神在基督耶稣里向你们所定的旨意。",
+      "verse": 18
+    },
+    {
+      "book": "1Thess",
+      "chapter": 5,
+      "id": "1Thess.5.19",
+      "text": "不要消灭圣灵的感动，",
+      "verse": 19
+    },
+    {
+      "book": "1Thess",
+      "chapter": 5,
+      "id": "1Thess.5.20",
+      "text": "不要藐视先知的讲论；",
+      "verse": 20
+    },
+    {
+      "book": "1Thess",
+      "chapter": 5,
+      "id": "1Thess.5.21",
+      "text": "但要凡事察验，善美的要持守，",
+      "verse": 21
+    },
+    {
+      "book": "1Thess",
+      "chapter": 5,
+      "id": "1Thess.5.22",
+      "text": "各样的恶事要禁戒不做。",
+      "verse": 22
+    },
+    {
+      "book": "1Thess",
+      "chapter": 5,
+      "id": "1Thess.5.23",
+      "text": "愿赐平安的 神亲自使你们全然成圣。又愿你们的灵与魂与身子得蒙保守，在我主耶稣基督降临的 时候，完全无可指摘。",
+      "verse": 23
+    },
+    {
+      "book": "1Thess",
+      "chapter": 5,
+      "id": "1Thess.5.24",
+      "text": "那召你们的本是信实的，他必成就这事。",
+      "verse": 24
+    },
+    {
+      "book": "1Thess",
+      "chapter": 5,
+      "id": "1Thess.5.25",
+      "text": "请弟兄们为我们祷告。",
+      "verse": 25
+    },
+    {
+      "book": "1Thess",
+      "chapter": 5,
+      "id": "1Thess.5.26",
+      "text": "与众弟兄亲嘴问安，务要圣洁。",
+      "verse": 26
+    },
+    {
+      "book": "1Thess",
+      "chapter": 5,
+      "id": "1Thess.5.27",
+      "text": "我指着主嘱咐你们，要把这信念给众弟兄听。",
+      "verse": 27
+    },
+    {
+      "book": "1Thess",
+      "chapter": 5,
+      "id": "1Thess.5.28",
+      "text": "愿我主耶稣基督的恩常与你们同在。",
+      "verse": 28
+    }
+  ],
+  "kjvVerses": [
+    {
+      "book": "1Thess",
+      "chapter": 1,
+      "id": "1Thess.1.1",
+      "text": "Paul, and Silvanus, and Timotheus, unto the church of the Thessalonians [which is] in God the Father and [in] the Lord Jesus Christ: Grace [be] unto you, and peace, from God our Father, and the Lord Jesus Christ.",
+      "verse": 1
+    },
+    {
+      "book": "1Thess",
+      "chapter": 1,
+      "id": "1Thess.1.2",
+      "text": "We give thanks to God always for you all, making mention of you in our prayers;",
+      "verse": 2
+    },
+    {
+      "book": "1Thess",
+      "chapter": 1,
+      "id": "1Thess.1.3",
+      "text": "Remembering without ceasing your work of faith, and labour of love, and patience of hope in our Lord Jesus Christ, in the sight of God and our Father;",
+      "verse": 3
+    },
+    {
+      "book": "1Thess",
+      "chapter": 1,
+      "id": "1Thess.1.4",
+      "text": "Knowing, brethren beloved, your election of God.",
+      "verse": 4
+    },
+    {
+      "book": "1Thess",
+      "chapter": 1,
+      "id": "1Thess.1.5",
+      "text": "For our gospel came not unto you in word only, but also in power, and in the Holy Ghost, and in much assurance; as ye know what manner of men we were among you for your sake.",
+      "verse": 5
+    },
+    {
+      "book": "1Thess",
+      "chapter": 1,
+      "id": "1Thess.1.6",
+      "text": "And ye became followers of us, and of the Lord, having received the word in much affliction, with joy of the Holy Ghost:",
+      "verse": 6
+    },
+    {
+      "book": "1Thess",
+      "chapter": 1,
+      "id": "1Thess.1.7",
+      "text": "So that ye were ensamples to all that believe in Macedonia and Achaia.",
+      "verse": 7
+    },
+    {
+      "book": "1Thess",
+      "chapter": 1,
+      "id": "1Thess.1.8",
+      "text": "For from you sounded out the word of the Lord not only in Macedonia and Achaia, but also in every place your faith to God-ward is spread abroad; so that we need not to speak any thing.",
+      "verse": 8
+    },
+    {
+      "book": "1Thess",
+      "chapter": 1,
+      "id": "1Thess.1.9",
+      "text": "For they themselves shew of us what manner of entering in we had unto you, and how ye turned to God from idols to serve the living and true God;",
+      "verse": 9
+    },
+    {
+      "book": "1Thess",
+      "chapter": 1,
+      "id": "1Thess.1.10",
+      "text": "And to wait for his Son from heaven, whom he raised from the dead, [even] Jesus, which delivered us from the wrath to come.",
+      "verse": 10
+    },
+    {
+      "book": "1Thess",
+      "chapter": 2,
+      "id": "1Thess.2.1",
+      "text": "For yourselves, brethren, know our entrance in unto you, that it was not in vain:",
+      "verse": 1
+    },
+    {
+      "book": "1Thess",
+      "chapter": 2,
+      "id": "1Thess.2.2",
+      "text": "But even after that we had suffered before, and were shamefully entreated, as ye know, at Philippi, we were bold in our God to speak unto you the gospel of God with much contention.",
+      "verse": 2
+    },
+    {
+      "book": "1Thess",
+      "chapter": 2,
+      "id": "1Thess.2.3",
+      "text": "For our exhortation [was] not of deceit, nor of uncleanness, nor in guile:",
+      "verse": 3
+    },
+    {
+      "book": "1Thess",
+      "chapter": 2,
+      "id": "1Thess.2.4",
+      "text": "But as we were allowed of God to be put in trust with the gospel, even so we speak; not as pleasing men, but God, which trieth our hearts.",
+      "verse": 4
+    },
+    {
+      "book": "1Thess",
+      "chapter": 2,
+      "id": "1Thess.2.5",
+      "text": "For neither at any time used we flattering words, as ye know, nor a cloke of covetousness; God [is] witness:",
+      "verse": 5
+    },
+    {
+      "book": "1Thess",
+      "chapter": 2,
+      "id": "1Thess.2.6",
+      "text": "Nor of men sought we glory, neither of you, nor [yet] of others, when we might have been burdensome, as the apostles of Christ.",
+      "verse": 6
+    },
+    {
+      "book": "1Thess",
+      "chapter": 2,
+      "id": "1Thess.2.7",
+      "text": "But we were gentle among you, even as a nurse cherisheth her children:",
+      "verse": 7
+    },
+    {
+      "book": "1Thess",
+      "chapter": 2,
+      "id": "1Thess.2.8",
+      "text": "So being affectionately desirous of you, we were willing to have imparted unto you, not the gospel of God only, but also our own souls, because ye were dear unto us.",
+      "verse": 8
+    },
+    {
+      "book": "1Thess",
+      "chapter": 2,
+      "id": "1Thess.2.9",
+      "text": "For ye remember, brethren, our labour and travail: for labouring night and day, because we would not be chargeable unto any of you, we preached unto you the gospel of God.",
+      "verse": 9
+    },
+    {
+      "book": "1Thess",
+      "chapter": 2,
+      "id": "1Thess.2.10",
+      "text": "Ye [are] witnesses, and God [also,] how holily and justly and unblameably we behaved ourselves among you that believe:",
+      "verse": 10
+    },
+    {
+      "book": "1Thess",
+      "chapter": 2,
+      "id": "1Thess.2.11",
+      "text": "As ye know how we exhorted and comforted and charged every one of you, as a father [doth] his children,",
+      "verse": 11
+    },
+    {
+      "book": "1Thess",
+      "chapter": 2,
+      "id": "1Thess.2.12",
+      "text": "That ye would walk worthy of God, who hath called you unto his kingdom and glory.",
+      "verse": 12
+    },
+    {
+      "book": "1Thess",
+      "chapter": 2,
+      "id": "1Thess.2.13",
+      "text": "For this cause also thank we God without ceasing, because, when ye received the word of God which ye heard of us, ye received [it] not [as] the word of men, but as it is in truth, the word of God, which effectually worketh also in you that believe.",
+      "verse": 13
+    },
+    {
+      "book": "1Thess",
+      "chapter": 2,
+      "id": "1Thess.2.14",
+      "text": "For ye, brethren, became followers of the churches of God which in Judaea are in Christ Jesus: for ye also have suffered like things of your own countrymen, even as they [have] of the Jews:",
+      "verse": 14
+    },
+    {
+      "book": "1Thess",
+      "chapter": 2,
+      "id": "1Thess.2.15",
+      "text": "Who both killed the Lord Jesus, and their own prophets, and have persecuted us; and they please not God, and are contrary to all men:",
+      "verse": 15
+    },
+    {
+      "book": "1Thess",
+      "chapter": 2,
+      "id": "1Thess.2.16",
+      "text": "Forbidding us to speak to the Gentiles that they might be saved, to fill up their sins alway: for the wrath is come upon them to the uttermost.",
+      "verse": 16
+    },
+    {
+      "book": "1Thess",
+      "chapter": 2,
+      "id": "1Thess.2.17",
+      "text": "But we, brethren, being taken from you for a short time in presence, not in heart, endeavoured the more abundantly to see your face with great desire.",
+      "verse": 17
+    },
+    {
+      "book": "1Thess",
+      "chapter": 2,
+      "id": "1Thess.2.18",
+      "text": "Wherefore we would have come unto you, even I Paul, once and again; but Satan hindered us.",
+      "verse": 18
+    },
+    {
+      "book": "1Thess",
+      "chapter": 2,
+      "id": "1Thess.2.19",
+      "text": "For what [is] our hope, or joy, or crown of rejoicing? [Are] not even ye in the presence of our Lord Jesus Christ at his coming?",
+      "verse": 19
+    },
+    {
+      "book": "1Thess",
+      "chapter": 2,
+      "id": "1Thess.2.20",
+      "text": "For ye are our glory and joy.",
+      "verse": 20
+    },
+    {
+      "book": "1Thess",
+      "chapter": 3,
+      "id": "1Thess.3.1",
+      "text": "Wherefore when we could no longer forbear, we thought it good to be left at Athens alone;",
+      "verse": 1
+    },
+    {
+      "book": "1Thess",
+      "chapter": 3,
+      "id": "1Thess.3.2",
+      "text": "And sent Timotheus, our brother, and minister of God, and our fellowlabourer in the gospel of Christ, to establish you, and to comfort you concerning your faith:",
+      "verse": 2
+    },
+    {
+      "book": "1Thess",
+      "chapter": 3,
+      "id": "1Thess.3.3",
+      "text": "That no man should be moved by these afflictions: for yourselves know that we are appointed thereunto.",
+      "verse": 3
+    },
+    {
+      "book": "1Thess",
+      "chapter": 3,
+      "id": "1Thess.3.4",
+      "text": "For verily, when we were with you, we told you before that we should suffer tribulation; even as it came to pass, and ye know.",
+      "verse": 4
+    },
+    {
+      "book": "1Thess",
+      "chapter": 3,
+      "id": "1Thess.3.5",
+      "text": "For this cause, when I could no longer forbear, I sent to know your faith, lest by some means the tempter have tempted you, and our labour be in vain.",
+      "verse": 5
+    },
+    {
+      "book": "1Thess",
+      "chapter": 3,
+      "id": "1Thess.3.6",
+      "text": "But now when Timotheus came from you unto us, and brought us good tidings of your faith and charity, and that ye have good remembrance of us always, desiring greatly to see us, as we also [to see] you:",
+      "verse": 6
+    },
+    {
+      "book": "1Thess",
+      "chapter": 3,
+      "id": "1Thess.3.7",
+      "text": "Therefore, brethren, we were comforted over you in all our affliction and distress by your faith:",
+      "verse": 7
+    },
+    {
+      "book": "1Thess",
+      "chapter": 3,
+      "id": "1Thess.3.8",
+      "text": "For now we live, if ye stand fast in the Lord.",
+      "verse": 8
+    },
+    {
+      "book": "1Thess",
+      "chapter": 3,
+      "id": "1Thess.3.9",
+      "text": "For what thanks can we render to God again for you, for all the joy wherewith we joy for your sakes before our God;",
+      "verse": 9
+    },
+    {
+      "book": "1Thess",
+      "chapter": 3,
+      "id": "1Thess.3.10",
+      "text": "Night and day praying exceedingly that we might see your face, and might perfect that which is lacking in your faith?",
+      "verse": 10
+    },
+    {
+      "book": "1Thess",
+      "chapter": 3,
+      "id": "1Thess.3.11",
+      "text": "Now God himself and our Father, and our Lord Jesus Christ, direct our way unto you.",
+      "verse": 11
+    },
+    {
+      "book": "1Thess",
+      "chapter": 3,
+      "id": "1Thess.3.12",
+      "text": "And the Lord make you to increase and abound in love one toward another, and toward all [men,] even as we [do] toward you:",
+      "verse": 12
+    },
+    {
+      "book": "1Thess",
+      "chapter": 3,
+      "id": "1Thess.3.13",
+      "text": "To the end he may stablish your hearts unblameable in holiness before God, even our Father, at the coming of our Lord Jesus Christ with all his saints.",
+      "verse": 13
+    },
+    {
+      "book": "1Thess",
+      "chapter": 4,
+      "id": "1Thess.4.1",
+      "text": "Furthermore then we beseech you, brethren, and exhort [you] by the Lord Jesus, that as ye have received of us how ye ought to walk and to please God, [so] ye would abound more and more.",
+      "verse": 1
+    },
+    {
+      "book": "1Thess",
+      "chapter": 4,
+      "id": "1Thess.4.2",
+      "text": "For ye know what commandments we gave you by the Lord Jesus.",
+      "verse": 2
+    },
+    {
+      "book": "1Thess",
+      "chapter": 4,
+      "id": "1Thess.4.3",
+      "text": "For this is the will of God, [even] your sanctification, that ye should abstain from fornication:",
+      "verse": 3
+    },
+    {
+      "book": "1Thess",
+      "chapter": 4,
+      "id": "1Thess.4.4",
+      "text": "That every one of you should know how to possess his vessel in sanctification and honour;",
+      "verse": 4
+    },
+    {
+      "book": "1Thess",
+      "chapter": 4,
+      "id": "1Thess.4.5",
+      "text": "Not in the lust of concupiscence, even as the Gentiles which know not God:",
+      "verse": 5
+    },
+    {
+      "book": "1Thess",
+      "chapter": 4,
+      "id": "1Thess.4.6",
+      "text": "That no [man] go beyond and defraud his brother in [any] matter: because that the Lord [is] the avenger of all such, as we also have forewarned you and testified.",
+      "verse": 6
+    },
+    {
+      "book": "1Thess",
+      "chapter": 4,
+      "id": "1Thess.4.7",
+      "text": "For God hath not called us unto uncleanness, but unto holiness.",
+      "verse": 7
+    },
+    {
+      "book": "1Thess",
+      "chapter": 4,
+      "id": "1Thess.4.8",
+      "text": "He therefore that despiseth, despiseth not man, but God, who hath also given unto us his holy Spirit.",
+      "verse": 8
+    },
+    {
+      "book": "1Thess",
+      "chapter": 4,
+      "id": "1Thess.4.9",
+      "text": "But as touching brotherly love ye need not that I write unto you: for ye yourselves are taught of God to love one another.",
+      "verse": 9
+    },
+    {
+      "book": "1Thess",
+      "chapter": 4,
+      "id": "1Thess.4.10",
+      "text": "And indeed ye do it toward all the brethren which are in all Macedonia: but we beseech you, brethren, that ye increase more and more;",
+      "verse": 10
+    },
+    {
+      "book": "1Thess",
+      "chapter": 4,
+      "id": "1Thess.4.11",
+      "text": "And that ye study to be quiet, and to do your own business, and to work with your own hands, as we commanded you;",
+      "verse": 11
+    },
+    {
+      "book": "1Thess",
+      "chapter": 4,
+      "id": "1Thess.4.12",
+      "text": "That ye may walk honestly toward them that are without, and [that] ye may have lack of nothing.",
+      "verse": 12
+    },
+    {
+      "book": "1Thess",
+      "chapter": 4,
+      "id": "1Thess.4.13",
+      "text": "But I would not have you to be ignorant, brethren, concerning them which are asleep, that ye sorrow not, even as others which have no hope.",
+      "verse": 13
+    },
+    {
+      "book": "1Thess",
+      "chapter": 4,
+      "id": "1Thess.4.14",
+      "text": "For if we believe that Jesus died and rose again, even so them also which sleep in Jesus will God bring with him.",
+      "verse": 14
+    },
+    {
+      "book": "1Thess",
+      "chapter": 4,
+      "id": "1Thess.4.15",
+      "text": "For this we say unto you by the word of the Lord, that we which are alive [and] remain unto the coming of the Lord shall not prevent them which are asleep.",
+      "verse": 15
+    },
+    {
+      "book": "1Thess",
+      "chapter": 4,
+      "id": "1Thess.4.16",
+      "text": "For the Lord himself shall descend from heaven with a shout, with the voice of the archangel, and with the trump of God: and the dead in Christ shall rise first:",
+      "verse": 16
+    },
+    {
+      "book": "1Thess",
+      "chapter": 4,
+      "id": "1Thess.4.17",
+      "text": "Then we which are alive [and] remain shall be caught up together with them in the clouds, to meet the Lord in the air: and so shall we ever be with the Lord.",
+      "verse": 17
+    },
+    {
+      "book": "1Thess",
+      "chapter": 4,
+      "id": "1Thess.4.18",
+      "text": "Wherefore comfort one another with these words.",
+      "verse": 18
+    },
+    {
+      "book": "1Thess",
+      "chapter": 5,
+      "id": "1Thess.5.1",
+      "text": "But of the times and the seasons, brethren, ye have no need that I write unto you.",
+      "verse": 1
+    },
+    {
+      "book": "1Thess",
+      "chapter": 5,
+      "id": "1Thess.5.2",
+      "text": "For yourselves know perfectly that the day of the Lord so cometh as a thief in the night.",
+      "verse": 2
+    },
+    {
+      "book": "1Thess",
+      "chapter": 5,
+      "id": "1Thess.5.3",
+      "text": "For when they shall say, Peace and safety; then sudden destruction cometh upon them, as travail upon a woman with child; and they shall not escape.",
+      "verse": 3
+    },
+    {
+      "book": "1Thess",
+      "chapter": 5,
+      "id": "1Thess.5.4",
+      "text": "But ye, brethren, are not in darkness, that that day should overtake you as a thief.",
+      "verse": 4
+    },
+    {
+      "book": "1Thess",
+      "chapter": 5,
+      "id": "1Thess.5.5",
+      "text": "Ye are all the children of light, and the children of the day: we are not of the night, nor of darkness.",
+      "verse": 5
+    },
+    {
+      "book": "1Thess",
+      "chapter": 5,
+      "id": "1Thess.5.6",
+      "text": "Therefore let us not sleep, as [do] others; but let us watch and be sober.",
+      "verse": 6
+    },
+    {
+      "book": "1Thess",
+      "chapter": 5,
+      "id": "1Thess.5.7",
+      "text": "For they that sleep sleep in the night; and they that be drunken are drunken in the night.",
+      "verse": 7
+    },
+    {
+      "book": "1Thess",
+      "chapter": 5,
+      "id": "1Thess.5.8",
+      "text": "But let us, who are of the day, be sober, putting on the breastplate of faith and love; and for an helmet, the hope of salvation.",
+      "verse": 8
+    },
+    {
+      "book": "1Thess",
+      "chapter": 5,
+      "id": "1Thess.5.9",
+      "text": "For God hath not appointed us to wrath, but to obtain salvation by our Lord Jesus Christ,",
+      "verse": 9
+    },
+    {
+      "book": "1Thess",
+      "chapter": 5,
+      "id": "1Thess.5.10",
+      "text": "Who died for us, that, whether we wake or sleep, we should live together with him.",
+      "verse": 10
+    },
+    {
+      "book": "1Thess",
+      "chapter": 5,
+      "id": "1Thess.5.11",
+      "text": "Wherefore comfort yourselves together, and edify one another, even as also ye do.",
+      "verse": 11
+    },
+    {
+      "book": "1Thess",
+      "chapter": 5,
+      "id": "1Thess.5.12",
+      "text": "And we beseech you, brethren, to know them which labour among you, and are over you in the Lord, and admonish you;",
+      "verse": 12
+    },
+    {
+      "book": "1Thess",
+      "chapter": 5,
+      "id": "1Thess.5.13",
+      "text": "And to esteem them very highly in love for their work’s sake. [And] be at peace among yourselves.",
+      "verse": 13
+    },
+    {
+      "book": "1Thess",
+      "chapter": 5,
+      "id": "1Thess.5.14",
+      "text": "Now we exhort you, brethren, warn them that are unruly, comfort the feebleminded, support the weak, be patient toward all [men. ]",
+      "verse": 14
+    },
+    {
+      "book": "1Thess",
+      "chapter": 5,
+      "id": "1Thess.5.15",
+      "text": "See that none render evil for evil unto any [man;] but ever follow that which is good, both among yourselves, and to all [men. ]",
+      "verse": 15
+    },
+    {
+      "book": "1Thess",
+      "chapter": 5,
+      "id": "1Thess.5.16",
+      "text": "Rejoice evermore.",
+      "verse": 16
+    },
+    {
+      "book": "1Thess",
+      "chapter": 5,
+      "id": "1Thess.5.17",
+      "text": "Pray without ceasing.",
+      "verse": 17
+    },
+    {
+      "book": "1Thess",
+      "chapter": 5,
+      "id": "1Thess.5.18",
+      "text": "In every thing give thanks: for this is the will of God in Christ Jesus concerning you.",
+      "verse": 18
+    },
+    {
+      "book": "1Thess",
+      "chapter": 5,
+      "id": "1Thess.5.19",
+      "text": "Quench not the Spirit.",
+      "verse": 19
+    },
+    {
+      "book": "1Thess",
+      "chapter": 5,
+      "id": "1Thess.5.20",
+      "text": "Despise not prophesyings.",
+      "verse": 20
+    },
+    {
+      "book": "1Thess",
+      "chapter": 5,
+      "id": "1Thess.5.21",
+      "text": "Prove all things; hold fast that which is good.",
+      "verse": 21
+    },
+    {
+      "book": "1Thess",
+      "chapter": 5,
+      "id": "1Thess.5.22",
+      "text": "Abstain from all appearance of evil.",
+      "verse": 22
+    },
+    {
+      "book": "1Thess",
+      "chapter": 5,
+      "id": "1Thess.5.23",
+      "text": "And the very God of peace sanctify you wholly; and [I pray God] your whole spirit and soul and body be preserved blameless unto the coming of our Lord Jesus Christ.",
+      "verse": 23
+    },
+    {
+      "book": "1Thess",
+      "chapter": 5,
+      "id": "1Thess.5.24",
+      "text": "Faithful [is] he that calleth you, who also will do [it. ]",
+      "verse": 24
+    },
+    {
+      "book": "1Thess",
+      "chapter": 5,
+      "id": "1Thess.5.25",
+      "text": "Brethren, pray for us.",
+      "verse": 25
+    },
+    {
+      "book": "1Thess",
+      "chapter": 5,
+      "id": "1Thess.5.26",
+      "text": "Greet all the brethren with an holy kiss.",
+      "verse": 26
+    },
+    {
+      "book": "1Thess",
+      "chapter": 5,
+      "id": "1Thess.5.27",
+      "text": "I charge you by the Lord that this epistle be read unto all the holy brethren.",
+      "verse": 27
+    },
+    {
+      "book": "1Thess",
+      "chapter": 5,
+      "id": "1Thess.5.28",
+      "text": "The grace of our Lord Jesus Christ be with you. Amen.",
+      "verse": 28
+    }
+  ],
+  "schemaVersion": 1,
+  "textCards": [
+    {
+      "body": "开篇问候。保罗没有提到自己的使徒身份，也许是因为帖撒罗尼迦教会中没有人对此提出质疑。西拉和提摩太是保罗第二次旅行传道的同工。\"西拉的希腊文写法有两个：Silvanus和Silas。西拉是犹太基督徒（徒15:22）。保罗与巴拿巴分开后，西拉便开始与保罗同工（徒15:39-40）。提摩太来自加拉太南部的路司得，母亲是犹太人，父亲是希腊人。保罗在第二次旅行传道之初经过路司得时，拣选了提摩太与他同工（见徒16:1-4；\"提摩太前书导论\"。提摩太刚从帖撒罗尼迦回来（3:6），向保罗汇报了当地教会的情况。提摩太的汇报是保罗写帖撒罗尼迦书信的主要信息来源。虽然保罗在信的开头将西拉和提摩太也列为写信人，但显然保罗才是主要作者（见2:18.3:5,5:27）。在父上帝和主耶稣基督里，信徒与圣父和圣子有着奇妙的联合，因此十分稳妥；灵性方面不会受到伤害。恩惠、平安，见罗1:7注。",
+      "debugMeta": {
+        "coverageRanges": [
+          {
+            "end": "1Thess.1.1",
+            "start": "1Thess.1.1"
+          }
+        ],
+        "page": 5,
+        "primaryAnchor": "1Thess.1.1",
+        "sourceLabel": "圣经研修本 52_帖撒罗尼迦前书【codex-v3】"
+      },
+      "id": "study-bible-1thess-1-1-p005-n010",
+      "primaryAnchor": "1Thess.1.1",
+      "searchText": "帖撒罗尼迦前书 1:1 研修本注释：开篇问候\n开篇问候。保罗没有提到自己的使徒身份，也许是因为帖撒罗尼迦教会中没有人对此提出质疑。西拉和提摩太是保罗第二次旅行传道的同工。\"西拉的希腊文写法有两个：Silvanus和Silas。西拉是犹太基督徒（徒15:22）。保罗与巴拿巴分开后，西拉…\n开篇问候。保罗没有提到自己的使徒身份，也许是因为帖撒罗尼迦教会中没有人对此提出质疑。西拉和提摩太是保罗第二次旅行传道的同工。\"西拉的希腊文写法有两个：Silvanus和Silas。西拉是犹太基督徒（徒15:22）。保罗与巴拿巴分开后，西拉便开始与保罗同工（徒15:39-40）。提摩太来自加拉太南部的路司得，母亲是犹太人，父亲是希腊人。保罗在第二次旅行传道之初经过路司得时，拣选了提摩太与他同工（见徒16:1-4；\"提摩太前书导论\"。提摩太刚从帖撒罗尼迦回来（3:6），向保罗汇报了当地教会的情况。提摩太的汇报是保罗写帖撒罗尼迦书信的主要信息来源。虽然保罗在信的开头将西拉和提摩太也列为写信人，但显然保罗才是主要作者（见2:18.3:5,5:27）。在父上帝和主耶稣基督里，信徒与圣父和圣子有着奇妙的联合，因此十分稳妥；灵性方面不会受到伤害。恩惠、平安，见罗1:7注。\n1:1\n圣经研修本 52_帖撒罗尼迦前书【codex-v3】",
+      "source": "圣经研修本 52_帖撒罗尼迦前书【codex-v3】",
+      "summary": "开篇问候。保罗没有提到自己的使徒身份，也许是因为帖撒罗尼迦教会中没有人对此提出质疑。西拉和提摩太是保罗第二次旅行传道的同工。\"西拉的希腊文写法有两个：Silvanus和Silas。西拉是犹太基督徒（徒15:22）。保罗与巴拿巴分开后，西拉…",
+      "title": "帖撒罗尼迦前书 1:1 研修本注释：开篇问候",
+      "type": "commentary",
+      "verses": [
+        "1Thess.1.1"
+      ]
+    },
+    {
+      "body": "记念，保罗可能想起自己在帖撒罗尼迦传道的经历，但“记念”也可能只是祷告的常用语。信心……爱心……盼望，这是保罗书信中常见的三个词（参5:8；罗5:2-5；林前13:13；加5:5-6；弗4:2-5）。保罗将“盼望”放在末尾的重要位置，看来十分切合本书信多次谈论到末世的主题（1:10，2:12、19-20，3:13，4:13-18，5:1-11、23-24）。工夫……劳苦……忍耐，这是帖撒罗尼迦人悔改信主之后的实际表现。帖撒罗尼迦信徒所做的“工夫”（《和修》“工作”）是出于他们的“信心”，他们的“劳苦”是“爱心”的流露，“忍耐”源于“盼望”。",
+      "debugMeta": {
+        "coverageRanges": [
+          {
+            "end": "1Thess.1.3",
+            "start": "1Thess.1.3"
+          }
+        ],
+        "page": 5,
+        "primaryAnchor": "1Thess.1.3",
+        "sourceLabel": "圣经研修本 52_帖撒罗尼迦前书【codex-v3】"
+      },
+      "id": "study-bible-1thess-1-3-p005-n015",
+      "primaryAnchor": "1Thess.1.3",
+      "searchText": "帖撒罗尼迦前书 1:3 研修本注释\n记念，保罗可能想起自己在帖撒罗尼迦传道的经历，但“记念”也可能只是祷告的常用语。信心……爱心……盼望，这是保罗书信中常见的三个词（参5:8；罗5:2-5；林前13:13；加5:5-6；弗4:2-5）。保罗将“盼望”放在末尾的重要位置，看来…\n记念，保罗可能想起自己在帖撒罗尼迦传道的经历，但“记念”也可能只是祷告的常用语。信心……爱心……盼望，这是保罗书信中常见的三个词（参5:8；罗5:2-5；林前13:13；加5:5-6；弗4:2-5）。保罗将“盼望”放在末尾的重要位置，看来十分切合本书信多次谈论到末世的主题（1:10，2:12、19-20，3:13，4:13-18，5:1-11、23-24）。工夫……劳苦……忍耐，这是帖撒罗尼迦人悔改信主之后的实际表现。帖撒罗尼迦信徒所做的“工夫”（《和修》“工作”）是出于他们的“信心”，他们的“劳苦”是“爱心”的流露，“忍耐”源于“盼望”。\n1:3\n圣经研修本 52_帖撒罗尼迦前书【codex-v3】",
+      "source": "圣经研修本 52_帖撒罗尼迦前书【codex-v3】",
+      "summary": "记念，保罗可能想起自己在帖撒罗尼迦传道的经历，但“记念”也可能只是祷告的常用语。信心……爱心……盼望，这是保罗书信中常见的三个词（参5:8；罗5:2-5；林前13:13；加5:5-6；弗4:2-5）。保罗将“盼望”放在末尾的重要位置，看来…",
+      "title": "帖撒罗尼迦前书 1:3 研修本注释",
+      "type": "commentary",
+      "verses": [
+        "1Thess.1.3"
+      ]
+    },
+    {
+      "body": "保罗肯定帖撒罗尼迦信徒是蒙拣选的，主要因为他们是被上帝所爱的弟兄。上帝的爱是蒙拣选的基础（弗1:4-5；参罗1:7.9:13），蒙拣选是上帝之爱的彰显（罗8:35-39，11:28）。拣选希腊原文是ekloge，意为\"选择.挑选，拣选\"，指上帝在创世之前按照自己的主权指定他所拣选的人得着永生（见以下经文注释：罗10:20-21：弗1:4,1:5.1:11）。保罗根据自己在帖撒罗尼迦传道期间的经历，相信帖撒罗尼迦信徒是蒙拣选的；于是他劝慰他们放心，他们所得的救恩是永远稳妥的。",
+      "debugMeta": {
+        "coverageRanges": [
+          {
+            "end": "1Thess.1.4",
+            "start": "1Thess.1.4"
+          }
+        ],
+        "page": 5,
+        "primaryAnchor": "1Thess.1.4",
+        "sourceLabel": "圣经研修本 52_帖撒罗尼迦前书【codex-v3】"
+      },
+      "id": "study-bible-1thess-1-4-p005-n011",
+      "primaryAnchor": "1Thess.1.4",
+      "searchText": "帖撒罗尼迦前书 1:4 研修本注释\n保罗肯定帖撒罗尼迦信徒是蒙拣选的，主要因为他们是被上帝所爱的弟兄。上帝的爱是蒙拣选的基础（弗1:4-5；参罗1:7.9:13），蒙拣选是上帝之爱的彰显（罗8:35-39，11:28）。拣选希腊原文是ekloge，意为\"选择.挑选，拣选\"，…\n保罗肯定帖撒罗尼迦信徒是蒙拣选的，主要因为他们是被上帝所爱的弟兄。上帝的爱是蒙拣选的基础（弗1:4-5；参罗1:7.9:13），蒙拣选是上帝之爱的彰显（罗8:35-39，11:28）。拣选希腊原文是ekloge，意为\"选择.挑选，拣选\"，指上帝在创世之前按照自己的主权指定他所拣选的人得着永生（见以下经文注释：罗10:20-21：弗1:4,1:5.1:11）。保罗根据自己在帖撒罗尼迦传道期间的经历，相信帖撒罗尼迦信徒是蒙拣选的；于是他劝慰他们放心，他们所得的救恩是永远稳妥的。\n1:4\n圣经研修本 52_帖撒罗尼迦前书【codex-v3】",
+      "source": "圣经研修本 52_帖撒罗尼迦前书【codex-v3】",
+      "summary": "保罗肯定帖撒罗尼迦信徒是蒙拣选的，主要因为他们是被上帝所爱的弟兄。上帝的爱是蒙拣选的基础（弗1:4-5；参罗1:7.9:13），蒙拣选是上帝之爱的彰显（罗8:35-39，11:28）。拣选希腊原文是ekloge，意为\"选择.挑选，拣选\"，…",
+      "title": "帖撒罗尼迦前书 1:4 研修本注释",
+      "type": "commentary",
+      "verses": [
+        "1Thess.1.4"
+      ]
+    },
+    {
+      "body": "你们在大难之中…领受真道，见徒17:5-9：帖前2:14。对于那些预定最终要得救的人来说，遭受患难是一件很正常的事情（见罗8:17-18：彼前4:12-14）。蒙了圣灵所赐的喜乐，帖撒罗尼迦信徒在患难中仍有极大的喜乐，这是效法耶稣和保罗的榜样。效法我们，帖撒罗尼迦信徒效法保罗，就像保罗效法基督一样。",
+      "debugMeta": {
+        "coverageRanges": [
+          {
+            "end": "1Thess.1.6",
+            "start": "1Thess.1.6"
+          }
+        ],
+        "page": 5,
+        "primaryAnchor": "1Thess.1.6",
+        "sourceLabel": "圣经研修本 52_帖撒罗尼迦前书【codex-v3】"
+      },
+      "id": "study-bible-1thess-1-6-p005-n017",
+      "primaryAnchor": "1Thess.1.6",
+      "searchText": "帖撒罗尼迦前书 1:6 研修本注释：你们在大难之中…领受真道，见徒17:5-9\n你们在大难之中…领受真道，见徒17:5-9：帖前2:14。对于那些预定最终要得救的人来说，遭受患难是一件很正常的事情（见罗8:17-18：彼前4:12-14）。蒙了圣灵所赐的喜乐，帖撒罗尼迦信徒在患难中仍有极大的喜乐，这是效法耶稣和保罗的…\n你们在大难之中…领受真道，见徒17:5-9：帖前2:14。对于那些预定最终要得救的人来说，遭受患难是一件很正常的事情（见罗8:17-18：彼前4:12-14）。蒙了圣灵所赐的喜乐，帖撒罗尼迦信徒在患难中仍有极大的喜乐，这是效法耶稣和保罗的榜样。效法我们，帖撒罗尼迦信徒效法保罗，就像保罗效法基督一样。\n1:6\n圣经研修本 52_帖撒罗尼迦前书【codex-v3】",
+      "source": "圣经研修本 52_帖撒罗尼迦前书【codex-v3】",
+      "summary": "你们在大难之中…领受真道，见徒17:5-9：帖前2:14。对于那些预定最终要得救的人来说，遭受患难是一件很正常的事情（见罗8:17-18：彼前4:12-14）。蒙了圣灵所赐的喜乐，帖撒罗尼迦信徒在患难中仍有极大的喜乐，这是效法耶稣和保罗的…",
+      "title": "帖撒罗尼迦前书 1:6 研修本注释：你们在大难之中…领受真道，见徒17:5-9",
+      "type": "commentary",
+      "verses": [
+        "1Thess.1.6"
+      ]
+    },
+    {
+      "body": "马其顿和亚该亚是罗马帝国的两个希腊省份。",
+      "debugMeta": {
+        "coverageRanges": [
+          {
+            "end": "1Thess.1.7",
+            "start": "1Thess.1.7"
+          }
+        ],
+        "page": 5,
+        "primaryAnchor": "1Thess.1.7",
+        "sourceLabel": "圣经研修本 52_帖撒罗尼迦前书【codex-v3】"
+      },
+      "id": "study-bible-1thess-1-7-p005-n018",
+      "primaryAnchor": "1Thess.1.7",
+      "searchText": "帖撒罗尼迦前书 1:7 研修本注释：马其顿和亚该亚是罗马帝国的两个希腊省份\n马其顿和亚该亚是罗马帝国的两个希腊省份。\n马其顿和亚该亚是罗马帝国的两个希腊省份。\n1:7\n圣经研修本 52_帖撒罗尼迦前书【codex-v3】",
+      "source": "圣经研修本 52_帖撒罗尼迦前书【codex-v3】",
+      "summary": "马其顿和亚该亚是罗马帝国的两个希腊省份。",
+      "title": "帖撒罗尼迦前书 1:7 研修本注释：马其顿和亚该亚是罗马帝国的两个希腊省份",
+      "type": "commentary",
+      "verses": [
+        "1Thess.1.7"
+      ]
+    },
+    {
+      "body": "主的道从你们那里已经传扬出来，这可能指传扬福音，但更有可能指帖撒罗尼迦人信主的消息已经传出来。无论如何，在帖撒罗尼迦发生的事情已经使福音向四面八方传开，当然这也与帖撒罗尼迦所处的战略性地理位置有关（见\"导论：写作目的、缘起和背景）。",
+      "debugMeta": {
+        "coverageRanges": [
+          {
+            "end": "1Thess.1.8",
+            "start": "1Thess.1.8"
+          }
+        ],
+        "page": 6,
+        "primaryAnchor": "1Thess.1.8",
+        "sourceLabel": "圣经研修本 52_帖撒罗尼迦前书【codex-v3】"
+      },
+      "id": "study-bible-1thess-1-8-p006-n018",
+      "primaryAnchor": "1Thess.1.8",
+      "searchText": "帖撒罗尼迦前书 1:8 研修本注释\n主的道从你们那里已经传扬出来，这可能指传扬福音，但更有可能指帖撒罗尼迦人信主的消息已经传出来。无论如何，在帖撒罗尼迦发生的事情已经使福音向四面八方传开，当然这也与帖撒罗尼迦所处的战略性地理位置有关（见\"导论：写作目的、缘起和背景）。\n主的道从你们那里已经传扬出来，这可能指传扬福音，但更有可能指帖撒罗尼迦人信主的消息已经传出来。无论如何，在帖撒罗尼迦发生的事情已经使福音向四面八方传开，当然这也与帖撒罗尼迦所处的战略性地理位置有关（见\"导论：写作目的、缘起和背景）。\n1:8\n圣经研修本 52_帖撒罗尼迦前书【codex-v3】",
+      "source": "圣经研修本 52_帖撒罗尼迦前书【codex-v3】",
+      "summary": "主的道从你们那里已经传扬出来，这可能指传扬福音，但更有可能指帖撒罗尼迦人信主的消息已经传出来。无论如何，在帖撒罗尼迦发生的事情已经使福音向四面八方传开，当然这也与帖撒罗尼迦所处的战略性地理位置有关（见\"导论：写作目的、缘起和背景）。",
+      "title": "帖撒罗尼迦前书 1:8 研修本注释",
+      "type": "commentary",
+      "verses": [
+        "1Thess.1.8"
+      ]
+    },
+    {
+      "body": "徒然的希腊原文是kenos，意\"空的，无内容，无，指没有结果，没有实质的内容和特征。",
+      "debugMeta": {
+        "coverageRanges": [
+          {
+            "end": "1Thess.2.1",
+            "start": "1Thess.2.1"
+          }
+        ],
+        "page": 6,
+        "primaryAnchor": "1Thess.2.1",
+        "sourceLabel": "圣经研修本 52_帖撒罗尼迦前书【codex-v3】"
+      },
+      "id": "study-bible-1thess-2-1-p006-n021",
+      "primaryAnchor": "1Thess.2.1",
+      "searchText": "帖撒罗尼迦前书 2:1 研修本注释\n徒然的希腊原文是kenos，意\"空的，无内容，无，指没有结果，没有实质的内容和特征。\n徒然的希腊原文是kenos，意\"空的，无内容，无，指没有结果，没有实质的内容和特征。\n2:1\n圣经研修本 52_帖撒罗尼迦前书【codex-v3】",
+      "source": "圣经研修本 52_帖撒罗尼迦前书【codex-v3】",
+      "summary": "徒然的希腊原文是kenos，意\"空的，无内容，无，指没有结果，没有实质的内容和特征。",
+      "title": "帖撒罗尼迦前书 2:1 研修本注释",
+      "type": "commentary",
+      "verses": [
+        "1Thess.2.1"
+      ]
+    },
+    {
+      "body": "在腓立比被害受辱，见徒16:19-39。放开胆量，保罗即使在腓立比遭受了残酷的逼迫，也没有退缩，而是继续在帖撒罗尼迦传讲福音，尽管这使他遭受新一轮的苦难。争战（《和修》\"反对》，即通迫。",
+      "debugMeta": {
+        "coverageRanges": [
+          {
+            "end": "1Thess.2.2",
+            "start": "1Thess.2.2"
+          }
+        ],
+        "page": 6,
+        "primaryAnchor": "1Thess.2.2",
+        "sourceLabel": "圣经研修本 52_帖撒罗尼迦前书【codex-v3】"
+      },
+      "id": "study-bible-1thess-2-2-p006-n022",
+      "primaryAnchor": "1Thess.2.2",
+      "searchText": "帖撒罗尼迦前书 2:2 研修本注释：在腓立比被害受辱，见徒16:19-39\n在腓立比被害受辱，见徒16:19-39。放开胆量，保罗即使在腓立比遭受了残酷的逼迫，也没有退缩，而是继续在帖撒罗尼迦传讲福音，尽管这使他遭受新一轮的苦难。争战（《和修》\"反对》，即通迫。\n在腓立比被害受辱，见徒16:19-39。放开胆量，保罗即使在腓立比遭受了残酷的逼迫，也没有退缩，而是继续在帖撒罗尼迦传讲福音，尽管这使他遭受新一轮的苦难。争战（《和修》\"反对》，即通迫。\n2:2\n圣经研修本 52_帖撒罗尼迦前书【codex-v3】",
+      "source": "圣经研修本 52_帖撒罗尼迦前书【codex-v3】",
+      "summary": "在腓立比被害受辱，见徒16:19-39。放开胆量，保罗即使在腓立比遭受了残酷的逼迫，也没有退缩，而是继续在帖撒罗尼迦传讲福音，尽管这使他遭受新一轮的苦难。争战（《和修》\"反对》，即通迫。",
+      "title": "帖撒罗尼迦前书 2:2 研修本注释：在腓立比被害受辱，见徒16:19-39",
+      "type": "commentary",
+      "verses": [
+        "1Thess.2.2"
+      ]
+    },
+    {
+      "body": "谄媚的话，如果保罗和传道同工说谄媚的话，人们就有理由怀疑他们所传讲的信息是否可靠。藏着贪心，保罗服侍教会不是为了获得经济利益，这一点非常清楚：保罗坚持自己做工，不靠服侍对象的供给（9节；帖后3:8）。上帝可以作见证，只有上帝可以证明人的动机。",
+      "debugMeta": {
+        "coverageRanges": [
+          {
+            "end": "1Thess.2.5",
+            "start": "1Thess.2.5"
+          }
+        ],
+        "page": 6,
+        "primaryAnchor": "1Thess.2.5",
+        "sourceLabel": "圣经研修本 52_帖撒罗尼迦前书【codex-v3】"
+      },
+      "id": "study-bible-1thess-2-5-p006-n015",
+      "primaryAnchor": "1Thess.2.5",
+      "searchText": "帖撒罗尼迦前书 2:5 研修本注释\n谄媚的话，如果保罗和传道同工说谄媚的话，人们就有理由怀疑他们所传讲的信息是否可靠。藏着贪心，保罗服侍教会不是为了获得经济利益，这一点非常清楚：保罗坚持自己做工，不靠服侍对象的供给（9节；帖后3:8）。上帝可以作见证，只有上帝可以证明人的动…\n谄媚的话，如果保罗和传道同工说谄媚的话，人们就有理由怀疑他们所传讲的信息是否可靠。藏着贪心，保罗服侍教会不是为了获得经济利益，这一点非常清楚：保罗坚持自己做工，不靠服侍对象的供给（9节；帖后3:8）。上帝可以作见证，只有上帝可以证明人的动机。\n2:5\n圣经研修本 52_帖撒罗尼迦前书【codex-v3】",
+      "source": "圣经研修本 52_帖撒罗尼迦前书【codex-v3】",
+      "summary": "谄媚的话，如果保罗和传道同工说谄媚的话，人们就有理由怀疑他们所传讲的信息是否可靠。藏着贪心，保罗服侍教会不是为了获得经济利益，这一点非常清楚：保罗坚持自己做工，不靠服侍对象的供给（9节；帖后3:8）。上帝可以作见证，只有上帝可以证明人的动…",
+      "title": "帖撒罗尼迦前书 2:5 研修本注释",
+      "type": "commentary",
+      "verses": [
+        "1Thess.2.5"
+      ]
+    },
+    {
+      "body": "我们作基督的使徒……可以叫人尊重（原文直译：我们……可以加给重担；\"作基督的使徒\"在原文《圣经》属于第7节），作为使徒，他们有特别的权柄可以要求得到别人的供给（参罗15:24：林前9:3-14）。没有…求荣耀，保罗在帖撒罗尼迦传道服待，不是为了要得个人的荣耀或名声。",
+      "debugMeta": {
+        "coverageRanges": [
+          {
+            "end": "1Thess.2.6",
+            "start": "1Thess.2.6"
+          }
+        ],
+        "page": 6,
+        "primaryAnchor": "1Thess.2.6",
+        "sourceLabel": "圣经研修本 52_帖撒罗尼迦前书【codex-v3】"
+      },
+      "id": "study-bible-1thess-2-6-p006-n017",
+      "primaryAnchor": "1Thess.2.6",
+      "searchText": "帖撒罗尼迦前书 2:6 研修本注释：我们作基督的使徒……可以叫人尊重（原文直译\n我们作基督的使徒……可以叫人尊重（原文直译：我们……可以加给重担；\"作基督的使徒\"在原文《圣经》属于第7节），作为使徒，他们有特别的权柄可以要求得到别人的供给（参罗15:24：林前9:3-14）。没有…求荣耀，保罗在帖撒罗尼迦传道服待，不…\n我们作基督的使徒……可以叫人尊重（原文直译：我们……可以加给重担；\"作基督的使徒\"在原文《圣经》属于第7节），作为使徒，他们有特别的权柄可以要求得到别人的供给（参罗15:24：林前9:3-14）。没有…求荣耀，保罗在帖撒罗尼迦传道服待，不是为了要得个人的荣耀或名声。\n2:6\n圣经研修本 52_帖撒罗尼迦前书【codex-v3】",
+      "source": "圣经研修本 52_帖撒罗尼迦前书【codex-v3】",
+      "summary": "我们作基督的使徒……可以叫人尊重（原文直译：我们……可以加给重担；\"作基督的使徒\"在原文《圣经》属于第7节），作为使徒，他们有特别的权柄可以要求得到别人的供给（参罗15:24：林前9:3-14）。没有…求荣耀，保罗在帖撒罗尼迦传道服待，不…",
+      "title": "帖撒罗尼迦前书 2:6 研修本注释：我们作基督的使徒……可以叫人尊重（原文直译",
+      "type": "commentary",
+      "verses": [
+        "1Thess.2.6"
+      ]
+    },
+    {
+      "body": "为了不给帖撒罗尼迦信徒带来经济负担，保罗宁愿辛苦劳碌，昼夜工作。保罗的爱心藉此得以充分展现。",
+      "debugMeta": {
+        "coverageRanges": [
+          {
+            "end": "1Thess.2.9",
+            "start": "1Thess.2.9"
+          }
+        ],
+        "page": 6,
+        "primaryAnchor": "1Thess.2.9",
+        "sourceLabel": "圣经研修本 52_帖撒罗尼迦前书【codex-v3】"
+      },
+      "id": "study-bible-1thess-2-9-p006-n020",
+      "primaryAnchor": "1Thess.2.9",
+      "searchText": "帖撒罗尼迦前书 2:9 研修本注释\n为了不给帖撒罗尼迦信徒带来经济负担，保罗宁愿辛苦劳碌，昼夜工作。保罗的爱心藉此得以充分展现。\n为了不给帖撒罗尼迦信徒带来经济负担，保罗宁愿辛苦劳碌，昼夜工作。保罗的爱心藉此得以充分展现。\n2:9\n圣经研修本 52_帖撒罗尼迦前书【codex-v3】",
+      "source": "圣经研修本 52_帖撒罗尼迦前书【codex-v3】",
+      "summary": "为了不给帖撒罗尼迦信徒带来经济负担，保罗宁愿辛苦劳碌，昼夜工作。保罗的爱心藉此得以充分展现。",
+      "title": "帖撒罗尼迦前书 2:9 研修本注释",
+      "type": "commentary",
+      "verses": [
+        "1Thess.2.9"
+      ]
+    },
+    {
+      "body": "不以为是人的道，乃以为是上帝的道，作为使徒，保罗明确宣称他传讲的道具有绝对的属天权柄，与一般人所说的话截然不同。他的使徒教训实在是\"上帝的，信徒应当接受。运行在你们心中，上帝的道在帖撒罗尼迦信徒当中仍然是活泼的（见林前1:18；来4:12）。",
+      "debugMeta": {
+        "coverageRanges": [
+          {
+            "end": "1Thess.2.13",
+            "start": "1Thess.2.13"
+          }
+        ],
+        "page": 7,
+        "primaryAnchor": "1Thess.2.13",
+        "sourceLabel": "圣经研修本 52_帖撒罗尼迦前书【codex-v3】"
+      },
+      "id": "study-bible-1thess-2-13-p007-n025",
+      "primaryAnchor": "1Thess.2.13",
+      "searchText": "帖撒罗尼迦前书 2:13 研修本注释\n不以为是人的道，乃以为是上帝的道，作为使徒，保罗明确宣称他传讲的道具有绝对的属天权柄，与一般人所说的话截然不同。他的使徒教训实在是\"上帝的，信徒应当接受。运行在你们心中，上帝的道在帖撒罗尼迦信徒当中仍然是活泼的（见林前1:18；来4:12…\n不以为是人的道，乃以为是上帝的道，作为使徒，保罗明确宣称他传讲的道具有绝对的属天权柄，与一般人所说的话截然不同。他的使徒教训实在是\"上帝的，信徒应当接受。运行在你们心中，上帝的道在帖撒罗尼迦信徒当中仍然是活泼的（见林前1:18；来4:12）。\n2:13\n圣经研修本 52_帖撒罗尼迦前书【codex-v3】",
+      "source": "圣经研修本 52_帖撒罗尼迦前书【codex-v3】",
+      "summary": "不以为是人的道，乃以为是上帝的道，作为使徒，保罗明确宣称他传讲的道具有绝对的属天权柄，与一般人所说的话截然不同。他的使徒教训实在是\"上帝的，信徒应当接受。运行在你们心中，上帝的道在帖撒罗尼迦信徒当中仍然是活泼的（见林前1:18；来4:12…",
+      "title": "帖撒罗尼迦前书 2:13 研修本注释",
+      "type": "commentary",
+      "verses": [
+        "1Thess.2.13"
+      ]
+    },
+    {
+      "body": "有其父必有其子，真正的后代必有其父辈的特质。毫无疑问，犹太地的教会是第一批真正的教会，也是保罗后来建立的所有教会的母会。所有后来的教会都可以按照第一批教会所确立的标准来衡量自己。像犹太众教会一样，帖撒罗尼迦信徒也为耶稣遭受逼迫。本地人，受到反对福音的犹太人煽动，帖撒罗尼迦信徒的外邦同胞也起来攻击他们（徒17:5-10）。犹太人，保罗非常爱他的犹太同胞，如果他们能归信主，他甚至愿意自己承受永远的诅咒（罗9:1-3）。保罗在这里指出，犹太人刚硬的心导致他们一直拒绝上帝的道（见太23:29-35）。",
+      "debugMeta": {
+        "coverageRanges": [
+          {
+            "end": "1Thess.2.14",
+            "start": "1Thess.2.14"
+          }
+        ],
+        "page": 7,
+        "primaryAnchor": "1Thess.2.14",
+        "sourceLabel": "圣经研修本 52_帖撒罗尼迦前书【codex-v3】"
+      },
+      "id": "study-bible-1thess-2-14-p007-n026",
+      "primaryAnchor": "1Thess.2.14",
+      "searchText": "帖撒罗尼迦前书 2:14 研修本注释：有其父必有其子，真正的后代必有其父辈的特质\n有其父必有其子，真正的后代必有其父辈的特质。毫无疑问，犹太地的教会是第一批真正的教会，也是保罗后来建立的所有教会的母会。所有后来的教会都可以按照第一批教会所确立的标准来衡量自己。像犹太众教会一样，帖撒罗尼迦信徒也为耶稣遭受逼迫。本地人，受…\n有其父必有其子，真正的后代必有其父辈的特质。毫无疑问，犹太地的教会是第一批真正的教会，也是保罗后来建立的所有教会的母会。所有后来的教会都可以按照第一批教会所确立的标准来衡量自己。像犹太众教会一样，帖撒罗尼迦信徒也为耶稣遭受逼迫。本地人，受到反对福音的犹太人煽动，帖撒罗尼迦信徒的外邦同胞也起来攻击他们（徒17:5-10）。犹太人，保罗非常爱他的犹太同胞，如果他们能归信主，他甚至愿意自己承受永远的诅咒（罗9:1-3）。保罗在这里指出，犹太人刚硬的心导致他们一直拒绝上帝的道（见太23:29-35）。\n2:14\n圣经研修本 52_帖撒罗尼迦前书【codex-v3】",
+      "source": "圣经研修本 52_帖撒罗尼迦前书【codex-v3】",
+      "summary": "有其父必有其子，真正的后代必有其父辈的特质。毫无疑问，犹太地的教会是第一批真正的教会，也是保罗后来建立的所有教会的母会。所有后来的教会都可以按照第一批教会所确立的标准来衡量自己。像犹太众教会一样，帖撒罗尼迦信徒也为耶稣遭受逼迫。本地人，受…",
+      "title": "帖撒罗尼迦前书 2:14 研修本注释：有其父必有其子，真正的后代必有其父辈的特质",
+      "type": "commentary",
+      "verses": [
+        "1Thess.2.14"
+      ]
+    },
+    {
+      "body": "把我们赶出去，见徒17:5-10。犹太人一直与上帝的道为敌，因而做出种种恶行。保罗认为，他和传道同工在帖撒罗尼迦的遭遇只是那些恶行中最近的一个例子而已。与众人为敌（原文直译：跟全人类为敌），能听到让人有机会得救的福音，这关系到所有人的福祉，因此阻挡福音的道路就是与全人类为敌。",
+      "debugMeta": {
+        "coverageRanges": [
+          {
+            "end": "1Thess.2.15",
+            "start": "1Thess.2.15"
+          }
+        ],
+        "page": 7,
+        "primaryAnchor": "1Thess.2.15",
+        "sourceLabel": "圣经研修本 52_帖撒罗尼迦前书【codex-v3】"
+      },
+      "id": "study-bible-1thess-2-15-p007-n028",
+      "primaryAnchor": "1Thess.2.15",
+      "searchText": "帖撒罗尼迦前书 2:15 研修本注释：把我们赶出去，见徒17:5-10\n把我们赶出去，见徒17:5-10。犹太人一直与上帝的道为敌，因而做出种种恶行。保罗认为，他和传道同工在帖撒罗尼迦的遭遇只是那些恶行中最近的一个例子而已。与众人为敌（原文直译：跟全人类为敌），能听到让人有机会得救的福音，这关系到所有人的福祉…\n把我们赶出去，见徒17:5-10。犹太人一直与上帝的道为敌，因而做出种种恶行。保罗认为，他和传道同工在帖撒罗尼迦的遭遇只是那些恶行中最近的一个例子而已。与众人为敌（原文直译：跟全人类为敌），能听到让人有机会得救的福音，这关系到所有人的福祉，因此阻挡福音的道路就是与全人类为敌。\n2:15\n圣经研修本 52_帖撒罗尼迦前书【codex-v3】",
+      "source": "圣经研修本 52_帖撒罗尼迦前书【codex-v3】",
+      "summary": "把我们赶出去，见徒17:5-10。犹太人一直与上帝的道为敌，因而做出种种恶行。保罗认为，他和传道同工在帖撒罗尼迦的遭遇只是那些恶行中最近的一个例子而已。与众人为敌（原文直译：跟全人类为敌），能听到让人有机会得救的福音，这关系到所有人的福祉…",
+      "title": "帖撒罗尼迦前书 2:15 研修本注释：把我们赶出去，见徒17:5-10",
+      "type": "commentary",
+      "verses": [
+        "1Thess.2.15"
+      ]
+    },
+    {
+      "body": "忿怒临在他们身上，已经到了极处（《和修》\"愤怒终于临到他们身上\"，保罗在这里可能想到：（1）主后44-47年在犹太地发生的饥荒：（2）主后48-49年在耶路撒冷发生的暴乱和杀戮；或（3）主后49年犹太人被驱逐出罗马。但以上三个都是地方性事件，影响范围有限，似乎不至于使用如此强烈的语句。保罗所论到的可能是将来的事件。他在这里的描述如同事件已经发生（希腊原文使用不定过去时），表示那是相当确定的事（如：可11:24；约13:31：罗8:30），或是事情已经开始应验。",
+      "debugMeta": {
+        "coverageRanges": [
+          {
+            "end": "1Thess.2.16",
+            "start": "1Thess.2.16"
+          }
+        ],
+        "page": 7,
+        "primaryAnchor": "1Thess.2.16",
+        "sourceLabel": "圣经研修本 52_帖撒罗尼迦前书【codex-v3】"
+      },
+      "id": "study-bible-1thess-2-16-p007-n030",
+      "primaryAnchor": "1Thess.2.16",
+      "searchText": "帖撒罗尼迦前书 2:16 研修本注释\n忿怒临在他们身上，已经到了极处（《和修》\"愤怒终于临到他们身上\"，保罗在这里可能想到：（1）主后44-47年在犹太地发生的饥荒：（2）主后48-49年在耶路撒冷发生的暴乱和杀戮；或（3）主后49年犹太人被驱逐出罗马。但以上三个都是地方性事…\n忿怒临在他们身上，已经到了极处（《和修》\"愤怒终于临到他们身上\"，保罗在这里可能想到：（1）主后44-47年在犹太地发生的饥荒：（2）主后48-49年在耶路撒冷发生的暴乱和杀戮；或（3）主后49年犹太人被驱逐出罗马。但以上三个都是地方性事件，影响范围有限，似乎不至于使用如此强烈的语句。保罗所论到的可能是将来的事件。他在这里的描述如同事件已经发生（希腊原文使用不定过去时），表示那是相当确定的事（如：可11:24；约13:31：罗8:30），或是事情已经开始应验。\n2:16\n圣经研修本 52_帖撒罗尼迦前书【codex-v3】",
+      "source": "圣经研修本 52_帖撒罗尼迦前书【codex-v3】",
+      "summary": "忿怒临在他们身上，已经到了极处（《和修》\"愤怒终于临到他们身上\"，保罗在这里可能想到：（1）主后44-47年在犹太地发生的饥荒：（2）主后48-49年在耶路撒冷发生的暴乱和杀戮；或（3）主后49年犹太人被驱逐出罗马。但以上三个都是地方性事…",
+      "title": "帖撒罗尼迦前书 2:16 研修本注释",
+      "type": "commentary",
+      "verses": [
+        "1Thess.2.16"
+      ]
+    },
+    {
+      "body": "保罗和传道同工因遭受通迫而无奈地离开帖撒罗尼迎。暂时，提摩太近期的探访结束了这次短暂的分离。离别希腊原文是aporphanizo，意为\"成为孤儿\"，表达不情愿的分离带来极大的悲痛。面目离别，心里却不离人不在心还在，身体的离别并不表示心里没有关怀。我们极力地想法子……见你们的面，与帖撒罗尼迦信徒的想法相反，保罗和传道同工一直尝试返回帖撒罗尼迦。",
+      "debugMeta": {
+        "coverageRanges": [
+          {
+            "end": "1Thess.2.17",
+            "start": "1Thess.2.17"
+          }
+        ],
+        "page": 7,
+        "primaryAnchor": "1Thess.2.17",
+        "sourceLabel": "圣经研修本 52_帖撒罗尼迦前书【codex-v3】"
+      },
+      "id": "study-bible-1thess-2-17-p007-n024",
+      "primaryAnchor": "1Thess.2.17",
+      "searchText": "帖撒罗尼迦前书 2:17 研修本注释\n保罗和传道同工因遭受通迫而无奈地离开帖撒罗尼迎。暂时，提摩太近期的探访结束了这次短暂的分离。离别希腊原文是aporphanizo，意为\"成为孤儿\"，表达不情愿的分离带来极大的悲痛。面目离别，心里却不离人不在心还在，身体的离别并不表示心里没…\n保罗和传道同工因遭受通迫而无奈地离开帖撒罗尼迎。暂时，提摩太近期的探访结束了这次短暂的分离。离别希腊原文是aporphanizo，意为\"成为孤儿\"，表达不情愿的分离带来极大的悲痛。面目离别，心里却不离人不在心还在，身体的离别并不表示心里没有关怀。我们极力地想法子……见你们的面，与帖撒罗尼迦信徒的想法相反，保罗和传道同工一直尝试返回帖撒罗尼迦。\n2:17\n圣经研修本 52_帖撒罗尼迦前书【codex-v3】",
+      "source": "圣经研修本 52_帖撒罗尼迦前书【codex-v3】",
+      "summary": "保罗和传道同工因遭受通迫而无奈地离开帖撒罗尼迎。暂时，提摩太近期的探访结束了这次短暂的分离。离别希腊原文是aporphanizo，意为\"成为孤儿\"，表达不情愿的分离带来极大的悲痛。面目离别，心里却不离人不在心还在，身体的离别并不表示心里没…",
+      "title": "帖撒罗尼迦前书 2:17 研修本注释",
+      "type": "commentary",
+      "verses": [
+        "1Thess.2.17"
+      ]
+    },
+    {
+      "body": "我保罗，表明保罗是这封信的作者。保罗认为需要为自己离开帖撒罗尼迎这段时期辩护。撒但阻挡了我们，撒但用什么方法阻挡保罗和帖撒罗尼迦信徒相聚，我们无",
+      "debugMeta": {
+        "coverageRanges": [
+          {
+            "end": "1Thess.2.18",
+            "start": "1Thess.2.18"
+          }
+        ],
+        "page": 7,
+        "primaryAnchor": "1Thess.2.18",
+        "sourceLabel": "圣经研修本 52_帖撒罗尼迦前书【codex-v3】"
+      },
+      "id": "study-bible-1thess-2-18-p007-n027",
+      "primaryAnchor": "1Thess.2.18",
+      "searchText": "帖撒罗尼迦前书 2:18 研修本注释：我保罗，表明保罗是这封信的作者\n我保罗，表明保罗是这封信的作者。保罗认为需要为自己离开帖撒罗尼迎这段时期辩护。撒但阻挡了我们，撒但用什么方法阻挡保罗和帖撒罗尼迦信徒相聚，我们无\n我保罗，表明保罗是这封信的作者。保罗认为需要为自己离开帖撒罗尼迎这段时期辩护。撒但阻挡了我们，撒但用什么方法阻挡保罗和帖撒罗尼迦信徒相聚，我们无\n2:18\n圣经研修本 52_帖撒罗尼迦前书【codex-v3】",
+      "source": "圣经研修本 52_帖撒罗尼迦前书【codex-v3】",
+      "summary": "我保罗，表明保罗是这封信的作者。保罗认为需要为自己离开帖撒罗尼迎这段时期辩护。撒但阻挡了我们，撒但用什么方法阻挡保罗和帖撒罗尼迦信徒相聚，我们无",
+      "title": "帖撒罗尼迦前书 2:18 研修本注释：我保罗，表明保罗是这封信的作者",
+      "type": "commentary",
+      "verses": [
+        "1Thess.2.18"
+      ]
+    },
+    {
+      "body": "\"我们主耶稣来的时候，你们在他面前\"",
+      "debugMeta": {
+        "coverageRanges": [
+          {
+            "end": "1Thess.2.19",
+            "start": "1Thess.2.19"
+          }
+        ],
+        "page": 7,
+        "primaryAnchor": "1Thess.2.19",
+        "sourceLabel": "圣经研修本 52_帖撒罗尼迦前书【codex-v3】"
+      },
+      "id": "study-bible-1thess-2-19-p007-n029",
+      "primaryAnchor": "1Thess.2.19",
+      "searchText": "帖撒罗尼迦前书 2:19 研修本注释\n\"我们主耶稣来的时候，你们在他面前\"\n\"我们主耶稣来的时候，你们在他面前\"\n2:19\n圣经研修本 52_帖撒罗尼迦前书【codex-v3】",
+      "source": "圣经研修本 52_帖撒罗尼迦前书【codex-v3】",
+      "summary": "\"我们主耶稣来的时候，你们在他面前\"",
+      "title": "帖撒罗尼迦前书 2:19 研修本注释",
+      "type": "commentary",
+      "verses": [
+        "1Thess.2.19"
+      ]
+    },
+    {
+      "body": "保罗差派提摩太到帖撒罗尼迦，是因为他不能继续忍受与帖撒罗尼迦信徒分离，不知道他们的情况。此外，保罗要独自等在雅典，表明他愿意有所舍弃，反映了他作为牧者对信徒的深切关爱（见徒17:15注）。",
+      "debugMeta": {
+        "coverageRanges": [
+          {
+            "end": "1Thess.3.1",
+            "start": "1Thess.3.1"
+          }
+        ],
+        "page": 8,
+        "primaryAnchor": "1Thess.3.1",
+        "sourceLabel": "圣经研修本 52_帖撒罗尼迦前书【codex-v3】"
+      },
+      "id": "study-bible-1thess-3-1-p008-n033",
+      "primaryAnchor": "1Thess.3.1",
+      "searchText": "帖撒罗尼迦前书 3:1 研修本注释\n保罗差派提摩太到帖撒罗尼迦，是因为他不能继续忍受与帖撒罗尼迦信徒分离，不知道他们的情况。此外，保罗要独自等在雅典，表明他愿意有所舍弃，反映了他作为牧者对信徒的深切关爱（见徒17:15注）。\n保罗差派提摩太到帖撒罗尼迦，是因为他不能继续忍受与帖撒罗尼迦信徒分离，不知道他们的情况。此外，保罗要独自等在雅典，表明他愿意有所舍弃，反映了他作为牧者对信徒的深切关爱（见徒17:15注）。\n3:1\n圣经研修本 52_帖撒罗尼迦前书【codex-v3】",
+      "source": "圣经研修本 52_帖撒罗尼迦前书【codex-v3】",
+      "summary": "保罗差派提摩太到帖撒罗尼迦，是因为他不能继续忍受与帖撒罗尼迦信徒分离，不知道他们的情况。此外，保罗要独自等在雅典，表明他愿意有所舍弃，反映了他作为牧者对信徒的深切关爱（见徒17:15注）。",
+      "title": "帖撒罗尼迦前书 3:1 研修本注释",
+      "type": "commentary",
+      "verses": [
+        "1Thess.3.1"
+      ]
+    },
+    {
+      "body": "作上帝执事的（《和修》\"作上帝同工的》，这是一个极高的头衔（见林前3:9）。保罗似乎强调提摩太的资格，免得帖撒罗尼迦信徒因为保罗没有亲自去，只派遭资历较浅的同工去，而产生消极的情绪。",
+      "debugMeta": {
+        "coverageRanges": [
+          {
+            "end": "1Thess.3.2",
+            "start": "1Thess.3.2"
+          }
+        ],
+        "page": 8,
+        "primaryAnchor": "1Thess.3.2",
+        "sourceLabel": "圣经研修本 52_帖撒罗尼迦前书【codex-v3】"
+      },
+      "id": "study-bible-1thess-3-2-p008-n034",
+      "primaryAnchor": "1Thess.3.2",
+      "searchText": "帖撒罗尼迦前书 3:2 研修本注释\n作上帝执事的（《和修》\"作上帝同工的》，这是一个极高的头衔（见林前3:9）。保罗似乎强调提摩太的资格，免得帖撒罗尼迦信徒因为保罗没有亲自去，只派遭资历较浅的同工去，而产生消极的情绪。\n作上帝执事的（《和修》\"作上帝同工的》，这是一个极高的头衔（见林前3:9）。保罗似乎强调提摩太的资格，免得帖撒罗尼迦信徒因为保罗没有亲自去，只派遭资历较浅的同工去，而产生消极的情绪。\n3:2\n圣经研修本 52_帖撒罗尼迦前书【codex-v3】",
+      "source": "圣经研修本 52_帖撒罗尼迦前书【codex-v3】",
+      "summary": "作上帝执事的（《和修》\"作上帝同工的》，这是一个极高的头衔（见林前3:9）。保罗似乎强调提摩太的资格，免得帖撒罗尼迦信徒因为保罗没有亲自去，只派遭资历较浅的同工去，而产生消极的情绪。",
+      "title": "帖撒罗尼迦前书 3:2 研修本注释",
+      "type": "commentary",
+      "verses": [
+        "1Thess.3.2"
+      ]
+    },
+    {
+      "body": "那诱惑人的，撒但曾试探耶稣（太4:1-11），也会试探基督徒（林前7:5）。我们的劳苦归于徒然，如果撒但成功地引诱帖撒罗尼迦信徒放弃基督信仰，那么保罗和他同工的传道工作就徒劳了。",
+      "debugMeta": {
+        "coverageRanges": [
+          {
+            "end": "1Thess.3.5",
+            "start": "1Thess.3.5"
+          }
+        ],
+        "page": 8,
+        "primaryAnchor": "1Thess.3.5",
+        "sourceLabel": "圣经研修本 52_帖撒罗尼迦前书【codex-v3】"
+      },
+      "id": "study-bible-1thess-3-5-p008-n036",
+      "primaryAnchor": "1Thess.3.5",
+      "searchText": "帖撒罗尼迦前书 3:5 研修本注释\n那诱惑人的，撒但曾试探耶稣（太4:1-11），也会试探基督徒（林前7:5）。我们的劳苦归于徒然，如果撒但成功地引诱帖撒罗尼迦信徒放弃基督信仰，那么保罗和他同工的传道工作就徒劳了。\n那诱惑人的，撒但曾试探耶稣（太4:1-11），也会试探基督徒（林前7:5）。我们的劳苦归于徒然，如果撒但成功地引诱帖撒罗尼迦信徒放弃基督信仰，那么保罗和他同工的传道工作就徒劳了。\n3:5\n圣经研修本 52_帖撒罗尼迦前书【codex-v3】",
+      "source": "圣经研修本 52_帖撒罗尼迦前书【codex-v3】",
+      "summary": "那诱惑人的，撒但曾试探耶稣（太4:1-11），也会试探基督徒（林前7:5）。我们的劳苦归于徒然，如果撒但成功地引诱帖撒罗尼迦信徒放弃基督信仰，那么保罗和他同工的传道工作就徒劳了。",
+      "title": "帖撒罗尼迦前书 3:5 研修本注释",
+      "type": "commentary",
+      "verses": [
+        "1Thess.3.5"
+      ]
+    },
+    {
+      "body": "我们在一切困苦患难之中，和帖撒罗尼迎信徒一样.保罗和传道同工也正为基督受苦（见3-4节）。",
+      "debugMeta": {
+        "coverageRanges": [
+          {
+            "end": "1Thess.3.7",
+            "start": "1Thess.3.7"
+          }
+        ],
+        "page": 8,
+        "primaryAnchor": "1Thess.3.7",
+        "sourceLabel": "圣经研修本 52_帖撒罗尼迦前书【codex-v3】"
+      },
+      "id": "study-bible-1thess-3-7-p008-n039",
+      "primaryAnchor": "1Thess.3.7",
+      "searchText": "帖撒罗尼迦前书 3:7 研修本注释\n我们在一切困苦患难之中，和帖撒罗尼迎信徒一样.保罗和传道同工也正为基督受苦（见3-4节）。\n我们在一切困苦患难之中，和帖撒罗尼迎信徒一样.保罗和传道同工也正为基督受苦（见3-4节）。\n3:7\n圣经研修本 52_帖撒罗尼迦前书【codex-v3】",
+      "source": "圣经研修本 52_帖撒罗尼迦前书【codex-v3】",
+      "summary": "我们在一切困苦患难之中，和帖撒罗尼迎信徒一样.保罗和传道同工也正为基督受苦（见3-4节）。",
+      "title": "帖撒罗尼迦前书 3:7 研修本注释",
+      "type": "commentary",
+      "verses": [
+        "1Thess.3.7"
+      ]
+    },
+    {
+      "body": "\"当我们主耶稣同他众圣徒来的时候\"",
+      "debugMeta": {
+        "coverageRanges": [
+          {
+            "end": "1Thess.3.13",
+            "start": "1Thess.3.13"
+          }
+        ],
+        "page": 7,
+        "primaryAnchor": "1Thess.3.13",
+        "sourceLabel": "圣经研修本 52_帖撒罗尼迦前书【codex-v3】"
+      },
+      "id": "study-bible-1thess-3-13-p007-n040",
+      "primaryAnchor": "1Thess.3.13",
+      "searchText": "帖撒罗尼迦前书 3:13 研修本注释\n\"当我们主耶稣同他众圣徒来的时候\"\n\"当我们主耶稣同他众圣徒来的时候\"\n3:13\n圣经研修本 52_帖撒罗尼迦前书【codex-v3】",
+      "source": "圣经研修本 52_帖撒罗尼迦前书【codex-v3】",
+      "summary": "\"当我们主耶稣同他众圣徒来的时候\"",
+      "title": "帖撒罗尼迦前书 3:13 研修本注释",
+      "type": "commentary",
+      "verses": [
+        "1Thess.3.13"
+      ]
+    },
+    {
+      "body": "同他众圣徒，\"众圣徒希腊原文hagios是复数，意为\"圣者们\"，在这里可指天使或基督徒，但很可能两者。这节经文可能暗指亚14:5提到的事情。关于基督再来，见5:1-11：彼前4:7：彼后3:2-18。",
+      "debugMeta": {
+        "coverageRanges": [
+          {
+            "end": "1Thess.3.13",
+            "start": "1Thess.3.13"
+          }
+        ],
+        "page": 8,
+        "primaryAnchor": "1Thess.3.13",
+        "sourceLabel": "圣经研修本 52_帖撒罗尼迦前书【codex-v3】"
+      },
+      "id": "study-bible-1thess-3-13-p008-n039",
+      "primaryAnchor": "1Thess.3.13",
+      "searchText": "帖撒罗尼迦前书 3:13 研修本注释\n同他众圣徒，\"众圣徒希腊原文hagios是复数，意为\"圣者们\"，在这里可指天使或基督徒，但很可能两者。这节经文可能暗指亚14:5提到的事情。关于基督再来，见5:1-11：彼前4:7：彼后3:2-18。\n同他众圣徒，\"众圣徒希腊原文hagios是复数，意为\"圣者们\"，在这里可指天使或基督徒，但很可能两者。这节经文可能暗指亚14:5提到的事情。关于基督再来，见5:1-11：彼前4:7：彼后3:2-18。\n3:13\n圣经研修本 52_帖撒罗尼迦前书【codex-v3】",
+      "source": "圣经研修本 52_帖撒罗尼迦前书【codex-v3】",
+      "summary": "同他众圣徒，\"众圣徒希腊原文hagios是复数，意为\"圣者们\"，在这里可指天使或基督徒，但很可能两者。这节经文可能暗指亚14:5提到的事情。关于基督再来，见5:1-11：彼前4:7：彼后3:2-18。",
+      "title": "帖撒罗尼迦前书 3:13 研修本注释",
+      "type": "commentary",
+      "verses": [
+        "1Thess.3.13"
+      ]
+    },
+    {
+      "body": "我还有话说（《和修》\"末了\"希腊原文是loipon。保罗可能暗示书信已接近尾声，或只是表示一个新段落的开始（参腓3:1）显然，他在后面还有很多话要说。该怎样行，可以讨上帝的喜悦，指过一种讨上帝喜悦的生活（见西1:10注）。照你们现在所行的，更加勉励（《和修》\"更加努力，帖撒罗尼迎信徒仍在成长，还没有达到完全圣洁和能够\"讨上帝喜悦\"的阶段。",
+      "debugMeta": {
+        "coverageRanges": [
+          {
+            "end": "1Thess.4.1",
+            "start": "1Thess.4.1"
+          }
+        ],
+        "page": 8,
+        "primaryAnchor": "1Thess.4.1",
+        "sourceLabel": "圣经研修本 52_帖撒罗尼迦前书【codex-v3】"
+      },
+      "id": "study-bible-1thess-4-1-p008-n045",
+      "primaryAnchor": "1Thess.4.1",
+      "searchText": "帖撒罗尼迦前书 4:1 研修本注释：我还有话说（《和修》\"末了\"希腊原文是loipon\n我还有话说（《和修》\"末了\"希腊原文是loipon。保罗可能暗示书信已接近尾声，或只是表示一个新段落的开始（参腓3:1）显然，他在后面还有很多话要说。该怎样行，可以讨上帝的喜悦，指过一种讨上帝喜悦的生活（见西1:10注）。照你们现在所行的…\n我还有话说（《和修》\"末了\"希腊原文是loipon。保罗可能暗示书信已接近尾声，或只是表示一个新段落的开始（参腓3:1）显然，他在后面还有很多话要说。该怎样行，可以讨上帝的喜悦，指过一种讨上帝喜悦的生活（见西1:10注）。照你们现在所行的，更加勉励（《和修》\"更加努力，帖撒罗尼迎信徒仍在成长，还没有达到完全圣洁和能够\"讨上帝喜悦\"的阶段。\n4:1\n圣经研修本 52_帖撒罗尼迦前书【codex-v3】",
+      "source": "圣经研修本 52_帖撒罗尼迦前书【codex-v3】",
+      "summary": "我还有话说（《和修》\"末了\"希腊原文是loipon。保罗可能暗示书信已接近尾声，或只是表示一个新段落的开始（参腓3:1）显然，他在后面还有很多话要说。该怎样行，可以讨上帝的喜悦，指过一种讨上帝喜悦的生活（见西1:10注）。照你们现在所行的…",
+      "title": "帖撒罗尼迦前书 4:1 研修本注释：我还有话说（《和修》\"末了\"希腊原文是loipon",
+      "type": "commentary",
+      "verses": [
+        "1Thess.4.1"
+      ]
+    },
+    {
+      "body": "命令希腊原文是parangelia，原是军事用语，通常指带着权威的命令。",
+      "debugMeta": {
+        "coverageRanges": [
+          {
+            "end": "1Thess.4.2",
+            "start": "1Thess.4.2"
+          }
+        ],
+        "page": 8,
+        "primaryAnchor": "1Thess.4.2",
+        "sourceLabel": "圣经研修本 52_帖撒罗尼迦前书【codex-v3】"
+      },
+      "id": "study-bible-1thess-4-2-p008-n040",
+      "primaryAnchor": "1Thess.4.2",
+      "searchText": "帖撒罗尼迦前书 4:2 研修本注释\n命令希腊原文是parangelia，原是军事用语，通常指带着权威的命令。\n命令希腊原文是parangelia，原是军事用语，通常指带着权威的命令。\n4:2\n圣经研修本 52_帖撒罗尼迦前书【codex-v3】",
+      "source": "圣经研修本 52_帖撒罗尼迦前书【codex-v3】",
+      "summary": "命令希腊原文是parangelia，原是军事用语，通常指带着权威的命令。",
+      "title": "帖撒罗尼迦前书 4:2 研修本注释",
+      "type": "commentary",
+      "verses": [
+        "1Thess.4.2"
+      ]
+    },
+    {
+      "body": "远避淫行，从前信奉异教的人，容易被引诱犯淫乱的罪（见林前5-6章）。\"淫行\"希腊原文是porneia，指通好、乱伦或其他不道德的性行为。保罗禁止两性婚姻关系以外的任何性行为（见弗5:3；彼前1:15-22）。",
+      "debugMeta": {
+        "coverageRanges": [
+          {
+            "end": "1Thess.4.3",
+            "start": "1Thess.4.3"
+          }
+        ],
+        "page": 8,
+        "primaryAnchor": "1Thess.4.3",
+        "sourceLabel": "圣经研修本 52_帖撒罗尼迦前书【codex-v3】"
+      },
+      "id": "study-bible-1thess-4-3-p008-n052",
+      "primaryAnchor": "1Thess.4.3",
+      "searchText": "帖撒罗尼迦前书 4:3 研修本注释\n远避淫行，从前信奉异教的人，容易被引诱犯淫乱的罪（见林前5-6章）。\"淫行\"希腊原文是porneia，指通好、乱伦或其他不道德的性行为。保罗禁止两性婚姻关系以外的任何性行为（见弗5:3；彼前1:15-22）。\n远避淫行，从前信奉异教的人，容易被引诱犯淫乱的罪（见林前5-6章）。\"淫行\"希腊原文是porneia，指通好、乱伦或其他不道德的性行为。保罗禁止两性婚姻关系以外的任何性行为（见弗5:3；彼前1:15-22）。\n4:3\n圣经研修本 52_帖撒罗尼迦前书【codex-v3】",
+      "source": "圣经研修本 52_帖撒罗尼迦前书【codex-v3】",
+      "summary": "远避淫行，从前信奉异教的人，容易被引诱犯淫乱的罪（见林前5-6章）。\"淫行\"希腊原文是porneia，指通好、乱伦或其他不道德的性行为。保罗禁止两性婚姻关系以外的任何性行为（见弗5:3；彼前1:15-22）。",
+      "title": "帖撒罗尼迦前书 4:3 研修本注释",
+      "type": "commentary",
+      "verses": [
+        "1Thess.4.3"
+      ]
+    },
+    {
+      "body": "守着自己的身体（《和修》\"控制自己的身体\"），原文或译\"为自己娶妻\"（参《和修》注\"与自己的妻子相处\"）。根据4-5节和林前7章，这里很可能是指性行为方面的自制。用圣洁、尊贵，指在上帝和在人面前应有的行为。",
+      "debugMeta": {
+        "coverageRanges": [
+          {
+            "end": "1Thess.4.4",
+            "start": "1Thess.4.4"
+          }
+        ],
+        "page": 9,
+        "primaryAnchor": "1Thess.4.4",
+        "sourceLabel": "圣经研修本 52_帖撒罗尼迦前书【codex-v3】"
+      },
+      "id": "study-bible-1thess-4-4-p009-n043",
+      "primaryAnchor": "1Thess.4.4",
+      "searchText": "帖撒罗尼迦前书 4:4 研修本注释\n守着自己的身体（《和修》\"控制自己的身体\"），原文或译\"为自己娶妻\"（参《和修》注\"与自己的妻子相处\"）。根据4-5节和林前7章，这里很可能是指性行为方面的自制。用圣洁、尊贵，指在上帝和在人面前应有的行为。\n守着自己的身体（《和修》\"控制自己的身体\"），原文或译\"为自己娶妻\"（参《和修》注\"与自己的妻子相处\"）。根据4-5节和林前7章，这里很可能是指性行为方面的自制。用圣洁、尊贵，指在上帝和在人面前应有的行为。\n4:4\n圣经研修本 52_帖撒罗尼迦前书【codex-v3】",
+      "source": "圣经研修本 52_帖撒罗尼迦前书【codex-v3】",
+      "summary": "守着自己的身体（《和修》\"控制自己的身体\"），原文或译\"为自己娶妻\"（参《和修》注\"与自己的妻子相处\"）。根据4-5节和林前7章，这里很可能是指性行为方面的自制。用圣洁、尊贵，指在上帝和在人面前应有的行为。",
+      "title": "帖撒罗尼迦前书 4:4 研修本注释",
+      "type": "commentary",
+      "verses": [
+        "1Thess.4.4"
+      ]
+    },
+    {
+      "body": "放纵私欲的邪情，像…外邦人：见罗124-27。保罗担心有些帖撒罗尼迦信徒会走回头路，回到他们从前的生活方式。",
+      "debugMeta": {
+        "coverageRanges": [
+          {
+            "end": "1Thess.4.5",
+            "start": "1Thess.4.5"
+          }
+        ],
+        "page": 9,
+        "primaryAnchor": "1Thess.4.5",
+        "sourceLabel": "圣经研修本 52_帖撒罗尼迦前书【codex-v3】"
+      },
+      "id": "study-bible-1thess-4-5-p009-n044",
+      "primaryAnchor": "1Thess.4.5",
+      "searchText": "帖撒罗尼迦前书 4:5 研修本注释：放纵私欲的邪情，像…外邦人\n放纵私欲的邪情，像…外邦人：见罗124-27。保罗担心有些帖撒罗尼迦信徒会走回头路，回到他们从前的生活方式。\n放纵私欲的邪情，像…外邦人：见罗124-27。保罗担心有些帖撒罗尼迦信徒会走回头路，回到他们从前的生活方式。\n4:5\n圣经研修本 52_帖撒罗尼迦前书【codex-v3】",
+      "source": "圣经研修本 52_帖撒罗尼迦前书【codex-v3】",
+      "summary": "放纵私欲的邪情，像…外邦人：见罗124-27。保罗担心有些帖撒罗尼迦信徒会走回头路，回到他们从前的生活方式。",
+      "title": "帖撒罗尼迦前书 4:5 研修本注释：放纵私欲的邪情，像…外邦人",
+      "type": "commentary",
+      "verses": [
+        "1Thess.4.5"
+      ]
+    },
+    {
+      "body": "欺负（《和修》\"占……便宜\"希腊原文是pleonekteo.意为\"诈取，剥削，欺骗\"\"，这里指在性方面占人便宜，因而亏负了其他信徒。主必报应，在耶稣再来时，甚至在他再来之前，忽视基督徒性道德操守的人，将要遭受上帝的忿怒。",
+      "debugMeta": {
+        "coverageRanges": [
+          {
+            "end": "1Thess.4.6",
+            "start": "1Thess.4.6"
+          }
+        ],
+        "page": 9,
+        "primaryAnchor": "1Thess.4.6",
+        "sourceLabel": "圣经研修本 52_帖撒罗尼迦前书【codex-v3】"
+      },
+      "id": "study-bible-1thess-4-6-p009-n045",
+      "primaryAnchor": "1Thess.4.6",
+      "searchText": "帖撒罗尼迦前书 4:6 研修本注释\n欺负（《和修》\"占……便宜\"希腊原文是pleonekteo.意为\"诈取，剥削，欺骗\"\"，这里指在性方面占人便宜，因而亏负了其他信徒。主必报应，在耶稣再来时，甚至在他再来之前，忽视基督徒性道德操守的人，将要遭受上帝的忿怒。\n欺负（《和修》\"占……便宜\"希腊原文是pleonekteo.意为\"诈取，剥削，欺骗\"\"，这里指在性方面占人便宜，因而亏负了其他信徒。主必报应，在耶稣再来时，甚至在他再来之前，忽视基督徒性道德操守的人，将要遭受上帝的忿怒。\n4:6\n圣经研修本 52_帖撒罗尼迦前书【codex-v3】",
+      "source": "圣经研修本 52_帖撒罗尼迦前书【codex-v3】",
+      "summary": "欺负（《和修》\"占……便宜\"希腊原文是pleonekteo.意为\"诈取，剥削，欺骗\"\"，这里指在性方面占人便宜，因而亏负了其他信徒。主必报应，在耶稣再来时，甚至在他再来之前，忽视基督徒性道德操守的人，将要遭受上帝的忿怒。",
+      "title": "帖撒罗尼迦前书 4:6 研修本注释",
+      "type": "commentary",
+      "verses": [
+        "1Thess.4.6"
+      ]
+    },
+    {
+      "body": "召，帖撒罗尼迎人接受保罗所传的福音，就是回应上帝拣选的呼召（见罗8:30注；参帖前1:4注）。这个呼召的目的不是要人沾染污秽，而是要人过圣洁的生活。",
+      "debugMeta": {
+        "coverageRanges": [
+          {
+            "end": "1Thess.4.7",
+            "start": "1Thess.4.7"
+          }
+        ],
+        "page": 9,
+        "primaryAnchor": "1Thess.4.7",
+        "sourceLabel": "圣经研修本 52_帖撒罗尼迦前书【codex-v3】"
+      },
+      "id": "study-bible-1thess-4-7-p009-n047",
+      "primaryAnchor": "1Thess.4.7",
+      "searchText": "帖撒罗尼迦前书 4:7 研修本注释\n召，帖撒罗尼迎人接受保罗所传的福音，就是回应上帝拣选的呼召（见罗8:30注；参帖前1:4注）。这个呼召的目的不是要人沾染污秽，而是要人过圣洁的生活。\n召，帖撒罗尼迎人接受保罗所传的福音，就是回应上帝拣选的呼召（见罗8:30注；参帖前1:4注）。这个呼召的目的不是要人沾染污秽，而是要人过圣洁的生活。\n4:7\n圣经研修本 52_帖撒罗尼迦前书【codex-v3】",
+      "source": "圣经研修本 52_帖撒罗尼迦前书【codex-v3】",
+      "summary": "召，帖撒罗尼迎人接受保罗所传的福音，就是回应上帝拣选的呼召（见罗8:30注；参帖前1:4注）。这个呼召的目的不是要人沾染污秽，而是要人过圣洁的生活。",
+      "title": "帖撒罗尼迦前书 4:7 研修本注释",
+      "type": "commentary",
+      "verses": [
+        "1Thess.4.7"
+      ]
+    },
+    {
+      "body": "所以，从第7节的内容来看，拒绝保罗关于性道德的教导不仅是拒绝保罗，也是拒绝上帝，因为保罗所教导的标准源自上帝。赐圣灵给你们，在《旧约》中（如：结36:26-27），上帝应许与人订立新的约，圣灵将律法写在人的心上，并叫人遵守。在这个已经由基督开始的新的约里，人不能以任何借口犯奸淫。靠着圣灵使人成圣的能力，基督徒可以在主再来的时候：\"成为圣洁，无可责备\"（3:13）.人若拒绝赐圣灵的那一位，就是自行与这能力断绝了。",
+      "debugMeta": {
+        "coverageRanges": [
+          {
+            "end": "1Thess.4.8",
+            "start": "1Thess.4.8"
+          }
+        ],
+        "page": 9,
+        "primaryAnchor": "1Thess.4.8",
+        "sourceLabel": "圣经研修本 52_帖撒罗尼迦前书【codex-v3】"
+      },
+      "id": "study-bible-1thess-4-8-p009-n048",
+      "primaryAnchor": "1Thess.4.8",
+      "searchText": "帖撒罗尼迦前书 4:8 研修本注释\n所以，从第7节的内容来看，拒绝保罗关于性道德的教导不仅是拒绝保罗，也是拒绝上帝，因为保罗所教导的标准源自上帝。赐圣灵给你们，在《旧约》中（如：结36:26-27），上帝应许与人订立新的约，圣灵将律法写在人的心上，并叫人遵守。在这个已经由基…\n所以，从第7节的内容来看，拒绝保罗关于性道德的教导不仅是拒绝保罗，也是拒绝上帝，因为保罗所教导的标准源自上帝。赐圣灵给你们，在《旧约》中（如：结36:26-27），上帝应许与人订立新的约，圣灵将律法写在人的心上，并叫人遵守。在这个已经由基督开始的新的约里，人不能以任何借口犯奸淫。靠着圣灵使人成圣的能力，基督徒可以在主再来的时候：\"成为圣洁，无可责备\"（3:13）.人若拒绝赐圣灵的那一位，就是自行与这能力断绝了。\n4:8\n圣经研修本 52_帖撒罗尼迦前书【codex-v3】",
+      "source": "圣经研修本 52_帖撒罗尼迦前书【codex-v3】",
+      "summary": "所以，从第7节的内容来看，拒绝保罗关于性道德的教导不仅是拒绝保罗，也是拒绝上帝，因为保罗所教导的标准源自上帝。赐圣灵给你们，在《旧约》中（如：结36:26-27），上帝应许与人订立新的约，圣灵将律法写在人的心上，并叫人遵守。在这个已经由基…",
+      "title": "帖撒罗尼迦前书 4:8 研修本注释",
+      "type": "commentary",
+      "verses": [
+        "1Thess.4.8"
+      ]
+    },
+    {
+      "body": "蒙了上帝的教训，叫你们彼此相爱，耶31:33-34预言上帝要将他的律法写在他百姓的心上，并作为新的约的一部分直接教导他们。基督徒已经知道这个事实（约壹2:27）：藉着爱，他们完全了律法（罗13:8-10；参利19:18：约13:34）。",
+      "debugMeta": {
+        "coverageRanges": [
+          {
+            "end": "1Thess.4.9",
+            "start": "1Thess.4.9"
+          }
+        ],
+        "page": 9,
+        "primaryAnchor": "1Thess.4.9",
+        "sourceLabel": "圣经研修本 52_帖撒罗尼迦前书【codex-v3】"
+      },
+      "id": "study-bible-1thess-4-9-p009-n050",
+      "primaryAnchor": "1Thess.4.9",
+      "searchText": "帖撒罗尼迦前书 4:9 研修本注释\n蒙了上帝的教训，叫你们彼此相爱，耶31:33-34预言上帝要将他的律法写在他百姓的心上，并作为新的约的一部分直接教导他们。基督徒已经知道这个事实（约壹2:27）：藉着爱，他们完全了律法（罗13:8-10；参利19:18：约13:34）。\n蒙了上帝的教训，叫你们彼此相爱，耶31:33-34预言上帝要将他的律法写在他百姓的心上，并作为新的约的一部分直接教导他们。基督徒已经知道这个事实（约壹2:27）：藉着爱，他们完全了律法（罗13:8-10；参利19:18：约13:34）。\n4:9\n圣经研修本 52_帖撒罗尼迦前书【codex-v3】",
+      "source": "圣经研修本 52_帖撒罗尼迦前书【codex-v3】",
+      "summary": "蒙了上帝的教训，叫你们彼此相爱，耶31:33-34预言上帝要将他的律法写在他百姓的心上，并作为新的约的一部分直接教导他们。基督徒已经知道这个事实（约壹2:27）：藉着爱，他们完全了律法（罗13:8-10；参利19:18：约13:34）。",
+      "title": "帖撒罗尼迦前书 4:9 研修本注释",
+      "type": "commentary",
+      "verses": [
+        "1Thess.4.9"
+      ]
+    },
+    {
+      "body": "作安静人（《和修》\"过安静的生活\"），要与别人和平相处（见帖后3:11-12），不要多管别人的闲事。亲手作工，保罗呼吁帖撒罗尼迦信徒要自食其力，不要依赖富裕的基督徒，正如他在帖撒罗尼迎时吩附他们的那样。",
+      "debugMeta": {
+        "coverageRanges": [
+          {
+            "end": "1Thess.4.11",
+            "start": "1Thess.4.11"
+          }
+        ],
+        "page": 9,
+        "primaryAnchor": "1Thess.4.11",
+        "sourceLabel": "圣经研修本 52_帖撒罗尼迦前书【codex-v3】"
+      },
+      "id": "study-bible-1thess-4-11-p009-n051",
+      "primaryAnchor": "1Thess.4.11",
+      "searchText": "帖撒罗尼迦前书 4:11 研修本注释\n作安静人（《和修》\"过安静的生活\"），要与别人和平相处（见帖后3:11-12），不要多管别人的闲事。亲手作工，保罗呼吁帖撒罗尼迦信徒要自食其力，不要依赖富裕的基督徒，正如他在帖撒罗尼迎时吩附他们的那样。\n作安静人（《和修》\"过安静的生活\"），要与别人和平相处（见帖后3:11-12），不要多管别人的闲事。亲手作工，保罗呼吁帖撒罗尼迦信徒要自食其力，不要依赖富裕的基督徒，正如他在帖撒罗尼迎时吩附他们的那样。\n4:11\n圣经研修本 52_帖撒罗尼迦前书【codex-v3】",
+      "source": "圣经研修本 52_帖撒罗尼迦前书【codex-v3】",
+      "summary": "作安静人（《和修》\"过安静的生活\"），要与别人和平相处（见帖后3:11-12），不要多管别人的闲事。亲手作工，保罗呼吁帖撒罗尼迦信徒要自食其力，不要依赖富裕的基督徒，正如他在帖撒罗尼迎时吩附他们的那样。",
+      "title": "帖撒罗尼迦前书 4:11 研修本注释",
+      "type": "commentary",
+      "verses": [
+        "1Thess.4.11"
+      ]
+    },
+    {
+      "body": "向外人行事端正，有些帖撒罗尼迦信徒厚颜无耻地依赖富裕的基督徒生活，这在第1世纪的希腊罗马社会中是件非常不光彩的事。",
+      "debugMeta": {
+        "coverageRanges": [
+          {
+            "end": "1Thess.4.12",
+            "start": "1Thess.4.12"
+          }
+        ],
+        "page": 9,
+        "primaryAnchor": "1Thess.4.12",
+        "sourceLabel": "圣经研修本 52_帖撒罗尼迦前书【codex-v3】"
+      },
+      "id": "study-bible-1thess-4-12-p009-n042",
+      "primaryAnchor": "1Thess.4.12",
+      "searchText": "帖撒罗尼迦前书 4:12 研修本注释\n向外人行事端正，有些帖撒罗尼迦信徒厚颜无耻地依赖富裕的基督徒生活，这在第1世纪的希腊罗马社会中是件非常不光彩的事。\n向外人行事端正，有些帖撒罗尼迦信徒厚颜无耻地依赖富裕的基督徒生活，这在第1世纪的希腊罗马社会中是件非常不光彩的事。\n4:12\n圣经研修本 52_帖撒罗尼迦前书【codex-v3】",
+      "source": "圣经研修本 52_帖撒罗尼迦前书【codex-v3】",
+      "summary": "向外人行事端正，有些帖撒罗尼迦信徒厚颜无耻地依赖富裕的基督徒生活，这在第1世纪的希腊罗马社会中是件非常不光彩的事。",
+      "title": "帖撒罗尼迦前书 4:12 研修本注释",
+      "type": "commentary",
+      "verses": [
+        "1Thess.4.12"
+      ]
+    },
+    {
+      "body": "我们不愿意弟兄们不知道，帖撒罗尼迎信徒不明白保罗将要在接下来的14-17节中所解释的事情。睡了的人，保罗将已经去世的基督徒描述为\"睡了的人\"（参4:1415.5:10：林前15:6，18,20.51），以此强调他的重点，就是到了主再来的时候，那些信徒会从坟墓里苏醒过来。这个比喻不是要否定，死人在居间状态下是有知觉地与上帝相交。将死亡比作睡觉，是因为人睡着的状态与死了相似。死去的人在基督再来时还会复活。… 忧伤，像那些没有指望的人一样，忧伤本身没有错（參徒8:2），但如果像未得救的人那样绝望忧伤，那就错了。帖撒罗尼迦信徒显然不明白死去的基督徒还会复活，不会错过主再来时所带来的福乐。第1世纪的墓志铭显示，当时大多数希腊人对死亡的看法都十分悲观。",
+      "debugMeta": {
+        "coverageRanges": [
+          {
+            "end": "1Thess.4.13",
+            "start": "1Thess.4.13"
+          }
+        ],
+        "page": 9,
+        "primaryAnchor": "1Thess.4.13",
+        "sourceLabel": "圣经研修本 52_帖撒罗尼迦前书【codex-v3】"
+      },
+      "id": "study-bible-1thess-4-13-p009-n046",
+      "primaryAnchor": "1Thess.4.13",
+      "searchText": "帖撒罗尼迦前书 4:13 研修本注释\n我们不愿意弟兄们不知道，帖撒罗尼迎信徒不明白保罗将要在接下来的14-17节中所解释的事情。睡了的人，保罗将已经去世的基督徒描述为\"睡了的人\"（参4:1415.5:10：林前15:6，18,20.51），以此强调他的重点，就是到了主再来的时…\n我们不愿意弟兄们不知道，帖撒罗尼迎信徒不明白保罗将要在接下来的14-17节中所解释的事情。睡了的人，保罗将已经去世的基督徒描述为\"睡了的人\"（参4:1415.5:10：林前15:6，18,20.51），以此强调他的重点，就是到了主再来的时候，那些信徒会从坟墓里苏醒过来。这个比喻不是要否定，死人在居间状态下是有知觉地与上帝相交。将死亡比作睡觉，是因为人睡着的状态与死了相似。死去的人在基督再来时还会复活。… 忧伤，像那些没有指望的人一样，忧伤本身没有错（參徒8:2），但如果像未得救的人那样绝望忧伤，那就错了。帖撒罗尼迦信徒显然不明白死去的基督徒还会复活，不会错过主再来时所带来的福乐。第1世纪的墓志铭显示，当时大多数希腊人对死亡的看法都十分悲观。\n4:13\n圣经研修本 52_帖撒罗尼迦前书【codex-v3】",
+      "source": "圣经研修本 52_帖撒罗尼迦前书【codex-v3】",
+      "summary": "我们不愿意弟兄们不知道，帖撒罗尼迎信徒不明白保罗将要在接下来的14-17节中所解释的事情。睡了的人，保罗将已经去世的基督徒描述为\"睡了的人\"（参4:1415.5:10：林前15:6，18,20.51），以此强调他的重点，就是到了主再来的时…",
+      "title": "帖撒罗尼迦前书 4:13 研修本注释",
+      "type": "commentary",
+      "verses": [
+        "1Thess.4.13"
+      ]
+    },
+    {
+      "body": "复活，基督复活是上帝救恩历史的中心，也是盼望将来身体复活的基础（林前15:42-57：启21:4）。在耶稣里……上帝也必将他们…带来，耶稣是上帝救恩的中保，将会把死去的基督徒（已经……睡了的人），就是到目前为止在天家与基督同在的信徒（灵魂）\"带来\"。亚14:5描绘的景象暗指耶稣带着已经死去之人的灵魂从天降下。保罗指出，所有已经死去（\"睡了？的基督徒，在基督再次降临地上的时候，会与基督一同降临。在4:16-17，保罗详细解释死去的信徒和在世的信徒怎样与基督汇合：死去的信徒身体先复活（与灵魂结合），然后他们与在世的信徒一同\"被提……在空中与主相遇\"（17节）。",
+      "debugMeta": {
+        "coverageRanges": [
+          {
+            "end": "1Thess.4.14",
+            "start": "1Thess.4.14"
+          }
+        ],
+        "page": 9,
+        "primaryAnchor": "1Thess.4.14",
+        "sourceLabel": "圣经研修本 52_帖撒罗尼迦前书【codex-v3】"
+      },
+      "id": "study-bible-1thess-4-14-p009-n063",
+      "primaryAnchor": "1Thess.4.14",
+      "searchText": "帖撒罗尼迦前书 4:14 研修本注释\n复活，基督复活是上帝救恩历史的中心，也是盼望将来身体复活的基础（林前15:42-57：启21:4）。在耶稣里……上帝也必将他们…带来，耶稣是上帝救恩的中保，将会把死去的基督徒（已经……睡了的人），就是到目前为止在天家与基督同在的信徒（灵魂…\n复活，基督复活是上帝救恩历史的中心，也是盼望将来身体复活的基础（林前15:42-57：启21:4）。在耶稣里……上帝也必将他们…带来，耶稣是上帝救恩的中保，将会把死去的基督徒（已经……睡了的人），就是到目前为止在天家与基督同在的信徒（灵魂）\"带来\"。亚14:5描绘的景象暗指耶稣带着已经死去之人的灵魂从天降下。保罗指出，所有已经死去（\"睡了？的基督徒，在基督再次降临地上的时候，会与基督一同降临。在4:16-17，保罗详细解释死去的信徒和在世的信徒怎样与基督汇合：死去的信徒身体先复活（与灵魂结合），然后他们与在世的信徒一同\"被提……在空中与主相遇\"（17节）。\n4:14\n圣经研修本 52_帖撒罗尼迦前书【codex-v3】",
+      "source": "圣经研修本 52_帖撒罗尼迦前书【codex-v3】",
+      "summary": "复活，基督复活是上帝救恩历史的中心，也是盼望将来身体复活的基础（林前15:42-57：启21:4）。在耶稣里……上帝也必将他们…带来，耶稣是上帝救恩的中保，将会把死去的基督徒（已经……睡了的人），就是到目前为止在天家与基督同在的信徒（灵魂…",
+      "title": "帖撒罗尼迦前书 4:14 研修本注释",
+      "type": "commentary",
+      "verses": [
+        "1Thess.4.14"
+      ]
+    },
+    {
+      "body": "主的话，大概指15b-17节记载主亲自启示保罗的事情。我们这活着……的人，不是说保罗确信自己在主再来时还活着，而是说所有基督徒都应该在有生之年为基督再来做好准备。还存留 …的人，指那些还活着的基督徒。断不能在那已经睡了的人之先，帖撒罗尼迦信徒认为死去的人在主再来之后才复活，还是认为死去的人没有任何得救的盼望，我们无法确知。",
+      "debugMeta": {
+        "coverageRanges": [
+          {
+            "end": "1Thess.4.15",
+            "start": "1Thess.4.15"
+          }
+        ],
+        "page": 9,
+        "primaryAnchor": "1Thess.4.15",
+        "sourceLabel": "圣经研修本 52_帖撒罗尼迦前书【codex-v3】"
+      },
+      "id": "study-bible-1thess-4-15-p009-n052",
+      "primaryAnchor": "1Thess.4.15",
+      "searchText": "帖撒罗尼迦前书 4:15 研修本注释\n主的话，大概指15b-17节记载主亲自启示保罗的事情。我们这活着……的人，不是说保罗确信自己在主再来时还活着，而是说所有基督徒都应该在有生之年为基督再来做好准备。还存留 …的人，指那些还活着的基督徒。断不能在那已经睡了的人之先，帖撒罗尼迦…\n主的话，大概指15b-17节记载主亲自启示保罗的事情。我们这活着……的人，不是说保罗确信自己在主再来时还活着，而是说所有基督徒都应该在有生之年为基督再来做好准备。还存留 …的人，指那些还活着的基督徒。断不能在那已经睡了的人之先，帖撒罗尼迦信徒认为死去的人在主再来之后才复活，还是认为死去的人没有任何得救的盼望，我们无法确知。\n4:15\n圣经研修本 52_帖撒罗尼迦前书【codex-v3】",
+      "source": "圣经研修本 52_帖撒罗尼迦前书【codex-v3】",
+      "summary": "主的话，大概指15b-17节记载主亲自启示保罗的事情。我们这活着……的人，不是说保罗确信自己在主再来时还活着，而是说所有基督徒都应该在有生之年为基督再来做好准备。还存留 …的人，指那些还活着的基督徒。断不能在那已经睡了的人之先，帖撒罗尼迦…",
+      "title": "帖撒罗尼迦前书 4:15 研修本注释",
+      "type": "commentary",
+      "verses": [
+        "1Thess.4.15"
+      ]
+    },
+    {
+      "body": "有关主再来的明确教导，应该给信徒带来安慰和鼓励（保罗的目的），而不是恐惧和分裂。这些话指本章",
+      "debugMeta": {
+        "coverageRanges": [
+          {
+            "end": "1Thess.4.18",
+            "start": "1Thess.4.18"
+          }
+        ],
+        "page": 10,
+        "primaryAnchor": "1Thess.4.18",
+        "sourceLabel": "圣经研修本 52_帖撒罗尼迦前书【codex-v3】"
+      },
+      "id": "study-bible-1thess-4-18-p010-n070",
+      "primaryAnchor": "1Thess.4.18",
+      "searchText": "帖撒罗尼迦前书 4:18 研修本注释\n有关主再来的明确教导，应该给信徒带来安慰和鼓励（保罗的目的），而不是恐惧和分裂。这些话指本章\n有关主再来的明确教导，应该给信徒带来安慰和鼓励（保罗的目的），而不是恐惧和分裂。这些话指本章\n4:18\n圣经研修本 52_帖撒罗尼迦前书【codex-v3】",
+      "source": "圣经研修本 52_帖撒罗尼迦前书【codex-v3】",
+      "summary": "有关主再来的明确教导，应该给信徒带来安慰和鼓励（保罗的目的），而不是恐惧和分裂。这些话指本章",
+      "title": "帖撒罗尼迦前书 4:18 研修本注释",
+      "type": "commentary",
+      "verses": [
+        "1Thess.4.18"
+      ]
+    },
+    {
+      "body": "论到，保罗可能是回答帖撒罗尼迦信徒请提摩太替他们转达的问题。时候、日期，即主再来的时间（参徒1:7）。帖撒罗尼迦信徒的问题似乎不是出于无意义的好奇，而是产生于内心的焦虑，因为保罗的回答是安慰他们，而不是责备他们。他们似乎关心主的日子来到的\"方式\"和\"时间\"。不用写信给你们，不管帖撒罗尼迦信徒怎样理解主的日子，保罗认为无需就此问题专门写信给他们。",
+      "debugMeta": {
+        "coverageRanges": [
+          {
+            "end": "1Thess.5.1",
+            "start": "1Thess.5.1"
+          }
+        ],
+        "page": 10,
+        "primaryAnchor": "1Thess.5.1",
+        "sourceLabel": "圣经研修本 52_帖撒罗尼迦前书【codex-v3】"
+      },
+      "id": "study-bible-1thess-5-1-p010-n073",
+      "primaryAnchor": "1Thess.5.1",
+      "searchText": "帖撒罗尼迦前书 5:1 研修本注释\n论到，保罗可能是回答帖撒罗尼迦信徒请提摩太替他们转达的问题。时候、日期，即主再来的时间（参徒1:7）。帖撒罗尼迦信徒的问题似乎不是出于无意义的好奇，而是产生于内心的焦虑，因为保罗的回答是安慰他们，而不是责备他们。他们似乎关心主的日子来到的…\n论到，保罗可能是回答帖撒罗尼迦信徒请提摩太替他们转达的问题。时候、日期，即主再来的时间（参徒1:7）。帖撒罗尼迦信徒的问题似乎不是出于无意义的好奇，而是产生于内心的焦虑，因为保罗的回答是安慰他们，而不是责备他们。他们似乎关心主的日子来到的\"方式\"和\"时间\"。不用写信给你们，不管帖撒罗尼迦信徒怎样理解主的日子，保罗认为无需就此问题专门写信给他们。\n5:1\n圣经研修本 52_帖撒罗尼迦前书【codex-v3】",
+      "source": "圣经研修本 52_帖撒罗尼迦前书【codex-v3】",
+      "summary": "论到，保罗可能是回答帖撒罗尼迦信徒请提摩太替他们转达的问题。时候、日期，即主再来的时间（参徒1:7）。帖撒罗尼迦信徒的问题似乎不是出于无意义的好奇，而是产生于内心的焦虑，因为保罗的回答是安慰他们，而不是责备他们。他们似乎关心主的日子来到的…",
+      "title": "帖撒罗尼迦前书 5:1 研修本注释",
+      "type": "commentary",
+      "verses": [
+        "1Thess.5.1"
+      ]
+    },
+    {
+      "body": "\"主的日子来到，好像夜间的贼一样\"",
+      "debugMeta": {
+        "coverageRanges": [
+          {
+            "end": "1Thess.5.2",
+            "start": "1Thess.5.2"
+          }
+        ],
+        "page": 7,
+        "primaryAnchor": "1Thess.5.2",
+        "sourceLabel": "圣经研修本 52_帖撒罗尼迦前书【codex-v3】"
+      },
+      "id": "study-bible-1thess-5-2-p007-n034",
+      "primaryAnchor": "1Thess.5.2",
+      "searchText": "帖撒罗尼迦前书 5:2 研修本注释\n\"主的日子来到，好像夜间的贼一样\"\n\"主的日子来到，好像夜间的贼一样\"\n5:2\n圣经研修本 52_帖撒罗尼迦前书【codex-v3】",
+      "source": "圣经研修本 52_帖撒罗尼迦前书【codex-v3】",
+      "summary": "\"主的日子来到，好像夜间的贼一样\"",
+      "title": "帖撒罗尼迦前书 5:2 研修本注释",
+      "type": "commentary",
+      "verses": [
+        "1Thess.5.2"
+      ]
+    },
+    {
+      "body": "\"如同产难临到怀胎的妇人一样\"",
+      "debugMeta": {
+        "coverageRanges": [
+          {
+            "end": "1Thess.5.3",
+            "start": "1Thess.5.3"
+          }
+        ],
+        "page": 7,
+        "primaryAnchor": "1Thess.5.3",
+        "sourceLabel": "圣经研修本 52_帖撒罗尼迦前书【codex-v3】"
+      },
+      "id": "study-bible-1thess-5-3-p007-n032",
+      "primaryAnchor": "1Thess.5.3",
+      "searchText": "帖撒罗尼迦前书 5:3 研修本注释\n\"如同产难临到怀胎的妇人一样\"\n\"如同产难临到怀胎的妇人一样\"\n5:3\n圣经研修本 52_帖撒罗尼迦前书【codex-v3】",
+      "source": "圣经研修本 52_帖撒罗尼迦前书【codex-v3】",
+      "summary": "\"如同产难临到怀胎的妇人一样\"",
+      "title": "帖撒罗尼迦前书 5:3 研修本注释",
+      "type": "commentary",
+      "verses": [
+        "1Thess.5.3"
+      ]
+    },
+    {
+      "body": "你们却，人说\"平安稳妥\"的时候，灾祸就忽然临到他们（3节），但帖撒罗尼迎信徒并不属于这类人。在黑暗里，就是在罪、邪恶、无知和远离上帝的领域里。临到你们像贼一样，对于未得救的人来说，主的日子\"像一样\"忽然临到（见2节），既不受欢迎，也出乎他意料：但对于帖撒罗尼迦信徒来说，却不是这样。",
+      "debugMeta": {
+        "coverageRanges": [
+          {
+            "end": "1Thess.5.4",
+            "start": "1Thess.5.4"
+          }
+        ],
+        "page": 10,
+        "primaryAnchor": "1Thess.5.4",
+        "sourceLabel": "圣经研修本 52_帖撒罗尼迦前书【codex-v3】"
+      },
+      "id": "study-bible-1thess-5-4-p010-n068",
+      "primaryAnchor": "1Thess.5.4",
+      "searchText": "帖撒罗尼迦前书 5:4 研修本注释\n你们却，人说\"平安稳妥\"的时候，灾祸就忽然临到他们（3节），但帖撒罗尼迎信徒并不属于这类人。在黑暗里，就是在罪、邪恶、无知和远离上帝的领域里。临到你们像贼一样，对于未得救的人来说，主的日子\"像一样\"忽然临到（见2节），既不受欢迎，也出乎他…\n你们却，人说\"平安稳妥\"的时候，灾祸就忽然临到他们（3节），但帖撒罗尼迎信徒并不属于这类人。在黑暗里，就是在罪、邪恶、无知和远离上帝的领域里。临到你们像贼一样，对于未得救的人来说，主的日子\"像一样\"忽然临到（见2节），既不受欢迎，也出乎他意料：但对于帖撒罗尼迦信徒来说，却不是这样。\n5:4\n圣经研修本 52_帖撒罗尼迦前书【codex-v3】",
+      "source": "圣经研修本 52_帖撒罗尼迦前书【codex-v3】",
+      "summary": "你们却，人说\"平安稳妥\"的时候，灾祸就忽然临到他们（3节），但帖撒罗尼迎信徒并不属于这类人。在黑暗里，就是在罪、邪恶、无知和远离上帝的领域里。临到你们像贼一样，对于未得救的人来说，主的日子\"像一样\"忽然临到（见2节），既不受欢迎，也出乎他…",
+      "title": "帖撒罗尼迦前书 5:4 研修本注释",
+      "type": "commentary",
+      "verses": [
+        "1Thess.5.4"
+      ]
+    },
+    {
+      "body": "在希腊原文中，本节开头有\"因为\"一词，《和有译出。保罗在第4节的确信，是基于帖撒罗尼迎信徒的身份和上帝的命定。光明之子，在犹太文学和《新约》（如：路16:8：约12:36），这个短语都用于描绘那些属上帝国度并得蒙他救赎的人（西1:13）。白昼之子融汇了\"光明\"和\"白昼\"这两个概念。只有保罗使用过这个短语。耶稣是\"世界的光\"（约8:12.9:5），因此基督徒明之子\"。基督徒蒙召过敬虔的生活，是\"属乎白昼\"的（5:8），命定要在\"主的日子'承受救恩，就是当基界的光）带着能力和大荣耀再来的时候（參太24:30；可13:26；路21:27）。我们，保罗在这里转用第一人称复数，以强调他所确认的事实；并用稍微缓和的语气为5:6-8的劝告做铺垫。黑夜……幽暗，指敌对上帝的邪恶势力。",
+      "debugMeta": {
+        "coverageRanges": [
+          {
+            "end": "1Thess.5.5",
+            "start": "1Thess.5.5"
+          }
+        ],
+        "page": 10,
+        "primaryAnchor": "1Thess.5.5",
+        "sourceLabel": "圣经研修本 52_帖撒罗尼迦前书【codex-v3】"
+      },
+      "id": "study-bible-1thess-5-5-p010-n054",
+      "primaryAnchor": "1Thess.5.5",
+      "searchText": "帖撒罗尼迦前书 5:5 研修本注释\n在希腊原文中，本节开头有\"因为\"一词，《和有译出。保罗在第4节的确信，是基于帖撒罗尼迎信徒的身份和上帝的命定。光明之子，在犹太文学和《新约》（如：路16:8：约12:36），这个短语都用于描绘那些属上帝国度并得蒙他救赎的人（西1:13）。…\n在希腊原文中，本节开头有\"因为\"一词，《和有译出。保罗在第4节的确信，是基于帖撒罗尼迎信徒的身份和上帝的命定。光明之子，在犹太文学和《新约》（如：路16:8：约12:36），这个短语都用于描绘那些属上帝国度并得蒙他救赎的人（西1:13）。白昼之子融汇了\"光明\"和\"白昼\"这两个概念。只有保罗使用过这个短语。耶稣是\"世界的光\"（约8:12.9:5），因此基督徒明之子\"。基督徒蒙召过敬虔的生活，是\"属乎白昼\"的（5:8），命定要在\"主的日子'承受救恩，就是当基界的光）带着能力和大荣耀再来的时候（參太24:30；可13:26；路21:27）。我们，保罗在这里转用第一人称复数，以强调他所确认的事实；并用稍微缓和的语气为5:6-8的劝告做铺垫。黑夜……幽暗，指敌对上帝的邪恶势力。\n5:5\n圣经研修本 52_帖撒罗尼迦前书【codex-v3】",
+      "source": "圣经研修本 52_帖撒罗尼迦前书【codex-v3】",
+      "summary": "在希腊原文中，本节开头有\"因为\"一词，《和有译出。保罗在第4节的确信，是基于帖撒罗尼迎信徒的身份和上帝的命定。光明之子，在犹太文学和《新约》（如：路16:8：约12:36），这个短语都用于描绘那些属上帝国度并得蒙他救赎的人（西1:13）。…",
+      "title": "帖撒罗尼迦前书 5:5 研修本注释",
+      "type": "commentary",
+      "verses": [
+        "1Thess.5.5"
+      ]
+    },
+    {
+      "body": "所以，保罗根据第5节的确信对信徒作一般性的劝勉。睡觉指在道德和灵命方面懈怠，和（或）过着轻忽那即到来之日的生活。",
+      "debugMeta": {
+        "coverageRanges": [
+          {
+            "end": "1Thess.5.6",
+            "start": "1Thess.5.6"
+          }
+        ],
+        "page": 10,
+        "primaryAnchor": "1Thess.5.6",
+        "sourceLabel": "圣经研修本 52_帖撒罗尼迦前书【codex-v3】"
+      },
+      "id": "study-bible-1thess-5-6-p010-n072",
+      "primaryAnchor": "1Thess.5.6",
+      "searchText": "帖撒罗尼迦前书 5:6 研修本注释：所以，保罗根据第5节的确信对信徒作一般性的劝勉\n所以，保罗根据第5节的确信对信徒作一般性的劝勉。睡觉指在道德和灵命方面懈怠，和（或）过着轻忽那即到来之日的生活。\n所以，保罗根据第5节的确信对信徒作一般性的劝勉。睡觉指在道德和灵命方面懈怠，和（或）过着轻忽那即到来之日的生活。\n5:6\n圣经研修本 52_帖撒罗尼迦前书【codex-v3】",
+      "source": "圣经研修本 52_帖撒罗尼迦前书【codex-v3】",
+      "summary": "所以，保罗根据第5节的确信对信徒作一般性的劝勉。睡觉指在道德和灵命方面懈怠，和（或）过着轻忽那即到来之日的生活。",
+      "title": "帖撒罗尼迦前书 5:6 研修本注释：所以，保罗根据第5节的确信对信徒作一般性的劝勉",
+      "type": "commentary",
+      "verses": [
+        "1Thess.5.6"
+      ]
+    },
+    {
+      "body": "护心镜 头盔，保罗借用赛59:17的比喻，那里耶和华描述为顶盔掼甲的战士。保罗呼吁信徒要穿戴全副军装（见弗6:10-20），因为在末日他们要站在主的考边。信和……盼望，是基督徒不可或缺的三个特质（见林前13:13；帖前1:3）。",
+      "debugMeta": {
+        "coverageRanges": [
+          {
+            "end": "1Thess.5.8",
+            "start": "1Thess.5.8"
+          }
+        ],
+        "page": 10,
+        "primaryAnchor": "1Thess.5.8",
+        "sourceLabel": "圣经研修本 52_帖撒罗尼迦前书【codex-v3】"
+      },
+      "id": "study-bible-1thess-5-8-p010-n074",
+      "primaryAnchor": "1Thess.5.8",
+      "searchText": "帖撒罗尼迦前书 5:8 研修本注释\n护心镜 头盔，保罗借用赛59:17的比喻，那里耶和华描述为顶盔掼甲的战士。保罗呼吁信徒要穿戴全副军装（见弗6:10-20），因为在末日他们要站在主的考边。信和……盼望，是基督徒不可或缺的三个特质（见林前13:13；帖前1:3）。\n护心镜 头盔，保罗借用赛59:17的比喻，那里耶和华描述为顶盔掼甲的战士。保罗呼吁信徒要穿戴全副军装（见弗6:10-20），因为在末日他们要站在主的考边。信和……盼望，是基督徒不可或缺的三个特质（见林前13:13；帖前1:3）。\n5:8\n圣经研修本 52_帖撒罗尼迦前书【codex-v3】",
+      "source": "圣经研修本 52_帖撒罗尼迦前书【codex-v3】",
+      "summary": "护心镜 头盔，保罗借用赛59:17的比喻，那里耶和华描述为顶盔掼甲的战士。保罗呼吁信徒要穿戴全副军装（见弗6:10-20），因为在末日他们要站在主的考边。信和……盼望，是基督徒不可或缺的三个特质（见林前13:13；帖前1:3）。",
+      "title": "帖撒罗尼迦前书 5:8 研修本注释",
+      "type": "commentary",
+      "verses": [
+        "1Thess.5.8"
+      ]
+    },
+    {
+      "body": "因为一词将本节与前面的6-8节连接起来，或只与第8节论到戴上盼望的头盔这一具体劝勉连接起来。保罗重申他在第4节表述的内容：帖撒罗尼迎信徒不必忧虑，因为主再来的时候，他们肯定不会受刑，却会得救。",
+      "debugMeta": {
+        "coverageRanges": [
+          {
+            "end": "1Thess.5.9",
+            "start": "1Thess.5.9"
+          }
+        ],
+        "page": 10,
+        "primaryAnchor": "1Thess.5.9",
+        "sourceLabel": "圣经研修本 52_帖撒罗尼迦前书【codex-v3】"
+      },
+      "id": "study-bible-1thess-5-9-p010-n055",
+      "primaryAnchor": "1Thess.5.9",
+      "searchText": "帖撒罗尼迦前书 5:9 研修本注释\n因为一词将本节与前面的6-8节连接起来，或只与第8节论到戴上盼望的头盔这一具体劝勉连接起来。保罗重申他在第4节表述的内容：帖撒罗尼迎信徒不必忧虑，因为主再来的时候，他们肯定不会受刑，却会得救。\n因为一词将本节与前面的6-8节连接起来，或只与第8节论到戴上盼望的头盔这一具体劝勉连接起来。保罗重申他在第4节表述的内容：帖撒罗尼迎信徒不必忧虑，因为主再来的时候，他们肯定不会受刑，却会得救。\n5:9\n圣经研修本 52_帖撒罗尼迦前书【codex-v3】",
+      "source": "圣经研修本 52_帖撒罗尼迦前书【codex-v3】",
+      "summary": "因为一词将本节与前面的6-8节连接起来，或只与第8节论到戴上盼望的头盔这一具体劝勉连接起来。保罗重申他在第4节表述的内容：帖撒罗尼迎信徒不必忧虑，因为主再来的时候，他们肯定不会受刑，却会得救。",
+      "title": "帖撒罗尼迦前书 5:9 研修本注释",
+      "type": "commentary",
+      "verses": [
+        "1Thess.5.9"
+      ]
+    },
+    {
+      "body": "醒着、睡着，指活着和死去。\"醒着\"暗指活著的基督徒关切自己在主的日子的结局（1-11节），\"睡着\"暗指已死去的基督徒将来的结局（4:13-18）。活，主再来时，基督徒将与基督同在，经验全新的生活。",
+      "debugMeta": {
+        "coverageRanges": [
+          {
+            "end": "1Thess.5.10",
+            "start": "1Thess.5.10"
+          }
+        ],
+        "page": 11,
+        "primaryAnchor": "1Thess.5.10",
+        "sourceLabel": "圣经研修本 52_帖撒罗尼迦前书【codex-v3】"
+      },
+      "id": "study-bible-1thess-5-10-p011-n058",
+      "primaryAnchor": "1Thess.5.10",
+      "searchText": "帖撒罗尼迦前书 5:10 研修本注释：醒着、睡着，指活着和死去\n醒着、睡着，指活着和死去。\"醒着\"暗指活著的基督徒关切自己在主的日子的结局（1-11节），\"睡着\"暗指已死去的基督徒将来的结局（4:13-18）。活，主再来时，基督徒将与基督同在，经验全新的生活。\n醒着、睡着，指活着和死去。\"醒着\"暗指活著的基督徒关切自己在主的日子的结局（1-11节），\"睡着\"暗指已死去的基督徒将来的结局（4:13-18）。活，主再来时，基督徒将与基督同在，经验全新的生活。\n5:10\n圣经研修本 52_帖撒罗尼迦前书【codex-v3】",
+      "source": "圣经研修本 52_帖撒罗尼迦前书【codex-v3】",
+      "summary": "醒着、睡着，指活着和死去。\"醒着\"暗指活著的基督徒关切自己在主的日子的结局（1-11节），\"睡着\"暗指已死去的基督徒将来的结局（4:13-18）。活，主再来时，基督徒将与基督同在，经验全新的生活。",
+      "title": "帖撒罗尼迦前书 5:10 研修本注释：醒着、睡着，指活着和死去",
+      "type": "commentary",
+      "verses": [
+        "1Thess.5.10"
+      ]
+    },
+    {
+      "body": "正如你们素常所行的，正如在其他地方一样（如4:1），保罗避免让帖撒罗尼迦信徒以为他在批评他们。像在4:18一样，他的目的是鼓励他们。",
+      "debugMeta": {
+        "coverageRanges": [
+          {
+            "end": "1Thess.5.11",
+            "start": "1Thess.5.11"
+          }
+        ],
+        "page": 11,
+        "primaryAnchor": "1Thess.5.11",
+        "sourceLabel": "圣经研修本 52_帖撒罗尼迦前书【codex-v3】"
+      },
+      "id": "study-bible-1thess-5-11-p011-n079",
+      "primaryAnchor": "1Thess.5.11",
+      "searchText": "帖撒罗尼迦前书 5:11 研修本注释\n正如你们素常所行的，正如在其他地方一样（如4:1），保罗避免让帖撒罗尼迦信徒以为他在批评他们。像在4:18一样，他的目的是鼓励他们。\n正如你们素常所行的，正如在其他地方一样（如4:1），保罗避免让帖撒罗尼迦信徒以为他在批评他们。像在4:18一样，他的目的是鼓励他们。\n5:11\n圣经研修本 52_帖撒罗尼迦前书【codex-v3】",
+      "source": "圣经研修本 52_帖撒罗尼迦前书【codex-v3】",
+      "summary": "正如你们素常所行的，正如在其他地方一样（如4:1），保罗避免让帖撒罗尼迦信徒以为他在批评他们。像在4:18一样，他的目的是鼓励他们。",
+      "title": "帖撒罗尼迦前书 5:11 研修本注释",
+      "type": "commentary",
+      "verses": [
+        "1Thess.5.11"
+      ]
+    },
+    {
+      "body": "不守规矩希腊原文是ataktos，意为\"不守纪律的，不服从的\"。有些帖撒罗尼迦信徒逃避责任，不按上帝创造人时赋予人的使命去工作（创2:15），见4:9-12：另见帖后3:6-15。灰心源于通迫（3:3-4）或信徒意外地死亡（4:13-5:11）。软弱，可以指：（1）良心软弱的人（见林前8-9章），（2）因逼迫而惊慌的人，或（3）对主的日子感到焦虑不安的人（5:1-11）。",
+      "debugMeta": {
+        "coverageRanges": [
+          {
+            "end": "1Thess.5.14",
+            "start": "1Thess.5.14"
+          }
+        ],
+        "page": 11,
+        "primaryAnchor": "1Thess.5.14",
+        "sourceLabel": "圣经研修本 52_帖撒罗尼迦前书【codex-v3】"
+      },
+      "id": "study-bible-1thess-5-14-p011-n062",
+      "primaryAnchor": "1Thess.5.14",
+      "searchText": "帖撒罗尼迦前书 5:14 研修本注释\n不守规矩希腊原文是ataktos，意为\"不守纪律的，不服从的\"。有些帖撒罗尼迦信徒逃避责任，不按上帝创造人时赋予人的使命去工作（创2:15），见4:9-12：另见帖后3:6-15。灰心源于通迫（3:3-4）或信徒意外地死亡（4:13-5:…\n不守规矩希腊原文是ataktos，意为\"不守纪律的，不服从的\"。有些帖撒罗尼迦信徒逃避责任，不按上帝创造人时赋予人的使命去工作（创2:15），见4:9-12：另见帖后3:6-15。灰心源于通迫（3:3-4）或信徒意外地死亡（4:13-5:11）。软弱，可以指：（1）良心软弱的人（见林前8-9章），（2）因逼迫而惊慌的人，或（3）对主的日子感到焦虑不安的人（5:1-11）。\n5:14\n圣经研修本 52_帖撒罗尼迦前书【codex-v3】",
+      "source": "圣经研修本 52_帖撒罗尼迦前书【codex-v3】",
+      "summary": "不守规矩希腊原文是ataktos，意为\"不守纪律的，不服从的\"。有些帖撒罗尼迦信徒逃避责任，不按上帝创造人时赋予人的使命去工作（创2:15），见4:9-12：另见帖后3:6-15。灰心源于通迫（3:3-4）或信徒意外地死亡（4:13-5:…",
+      "title": "帖撒罗尼迦前书 5:14 研修本注释",
+      "type": "commentary",
+      "verses": [
+        "1Thess.5.14"
+      ]
+    },
+    {
+      "body": "要常常喜乐，在保罗书信中，喜乐是基督徒的一个基本标志（罗14:17），也是圣灵的果子（加5:22）。喜乐通常与基督徒坚定的盼望紧密相连（如：罗5:2-5,12:12）。",
+      "debugMeta": {
+        "coverageRanges": [
+          {
+            "end": "1Thess.5.16",
+            "start": "1Thess.5.16"
+          }
+        ],
+        "page": 11,
+        "primaryAnchor": "1Thess.5.16",
+        "sourceLabel": "圣经研修本 52_帖撒罗尼迦前书【codex-v3】"
+      },
+      "id": "study-bible-1thess-5-16-p011-n063",
+      "primaryAnchor": "1Thess.5.16",
+      "searchText": "帖撒罗尼迦前书 5:16 研修本注释\n要常常喜乐，在保罗书信中，喜乐是基督徒的一个基本标志（罗14:17），也是圣灵的果子（加5:22）。喜乐通常与基督徒坚定的盼望紧密相连（如：罗5:2-5,12:12）。\n要常常喜乐，在保罗书信中，喜乐是基督徒的一个基本标志（罗14:17），也是圣灵的果子（加5:22）。喜乐通常与基督徒坚定的盼望紧密相连（如：罗5:2-5,12:12）。\n5:16\n圣经研修本 52_帖撒罗尼迦前书【codex-v3】",
+      "source": "圣经研修本 52_帖撒罗尼迦前书【codex-v3】",
+      "summary": "要常常喜乐，在保罗书信中，喜乐是基督徒的一个基本标志（罗14:17），也是圣灵的果子（加5:22）。喜乐通常与基督徒坚定的盼望紧密相连（如：罗5:2-5,12:12）。",
+      "title": "帖撒罗尼迦前书 5:16 研修本注释",
+      "type": "commentary",
+      "verses": [
+        "1Thess.5.16"
+      ]
+    },
+    {
+      "body": "不住地祷告是一种常常祷告的心态，始终与上帝保持相交，以及时刻意识到他的同在。5:18谢恩，感恩是基督徒的标志（弗5:4,20：西2:7，3:15.17.4:2）。这大概是指5:16-18的所有内容。",
+      "debugMeta": {
+        "coverageRanges": [
+          {
+            "end": "1Thess.5.17",
+            "start": "1Thess.5.17"
+          }
+        ],
+        "page": 11,
+        "primaryAnchor": "1Thess.5.17",
+        "sourceLabel": "圣经研修本 52_帖撒罗尼迦前书【codex-v3】"
+      },
+      "id": "study-bible-1thess-5-17-p011-n064",
+      "primaryAnchor": "1Thess.5.17",
+      "searchText": "帖撒罗尼迦前书 5:17 研修本注释\n不住地祷告是一种常常祷告的心态，始终与上帝保持相交，以及时刻意识到他的同在。5:18谢恩，感恩是基督徒的标志（弗5:4,20：西2:7，3:15.17.4:2）。这大概是指5:16-18的所有内容。\n不住地祷告是一种常常祷告的心态，始终与上帝保持相交，以及时刻意识到他的同在。5:18谢恩，感恩是基督徒的标志（弗5:4,20：西2:7，3:15.17.4:2）。这大概是指5:16-18的所有内容。\n5:17\n圣经研修本 52_帖撒罗尼迦前书【codex-v3】",
+      "source": "圣经研修本 52_帖撒罗尼迦前书【codex-v3】",
+      "summary": "不住地祷告是一种常常祷告的心态，始终与上帝保持相交，以及时刻意识到他的同在。5:18谢恩，感恩是基督徒的标志（弗5:4,20：西2:7，3:15.17.4:2）。这大概是指5:16-18的所有内容。",
+      "title": "帖撒罗尼迦前书 5:17 研修本注释",
+      "type": "commentary",
+      "verses": [
+        "1Thess.5.17"
+      ]
+    },
+    {
+      "body": "不要消灭圣灵的感动，下一节经文具体说明帖撒罗尼迦人怎样消灭圣灵的感动。",
+      "debugMeta": {
+        "coverageRanges": [
+          {
+            "end": "1Thess.5.19",
+            "start": "1Thess.5.19"
+          }
+        ],
+        "page": 11,
+        "primaryAnchor": "1Thess.5.19",
+        "sourceLabel": "圣经研修本 52_帖撒罗尼迦前书【codex-v3】"
+      },
+      "id": "study-bible-1thess-5-19-p011-n066",
+      "primaryAnchor": "1Thess.5.19",
+      "searchText": "帖撒罗尼迦前书 5:19 研修本注释\n不要消灭圣灵的感动，下一节经文具体说明帖撒罗尼迦人怎样消灭圣灵的感动。\n不要消灭圣灵的感动，下一节经文具体说明帖撒罗尼迦人怎样消灭圣灵的感动。\n5:19\n圣经研修本 52_帖撒罗尼迦前书【codex-v3】",
+      "source": "圣经研修本 52_帖撒罗尼迦前书【codex-v3】",
+      "summary": "不要消灭圣灵的感动，下一节经文具体说明帖撒罗尼迦人怎样消灭圣灵的感动。",
+      "title": "帖撒罗尼迦前书 5:19 研修本注释",
+      "type": "commentary",
+      "verses": [
+        "1Thess.5.19"
+      ]
+    },
+    {
+      "body": "禁戒不作，保罗转而概括性地强调信徒必须拒绝各样的恶事。",
+      "debugMeta": {
+        "coverageRanges": [
+          {
+            "end": "1Thess.5.22",
+            "start": "1Thess.5.22"
+          }
+        ],
+        "page": 11,
+        "primaryAnchor": "1Thess.5.22",
+        "sourceLabel": "圣经研修本 52_帖撒罗尼迦前书【codex-v3】"
+      },
+      "id": "study-bible-1thess-5-22-p011-n082",
+      "primaryAnchor": "1Thess.5.22",
+      "searchText": "帖撒罗尼迦前书 5:22 研修本注释\n禁戒不作，保罗转而概括性地强调信徒必须拒绝各样的恶事。\n禁戒不作，保罗转而概括性地强调信徒必须拒绝各样的恶事。\n5:22\n圣经研修本 52_帖撒罗尼迦前书【codex-v3】",
+      "source": "圣经研修本 52_帖撒罗尼迦前书【codex-v3】",
+      "summary": "禁戒不作，保罗转而概括性地强调信徒必须拒绝各样的恶事。",
+      "title": "帖撒罗尼迦前书 5:22 研修本注释",
+      "type": "commentary",
+      "verses": [
+        "1Thess.5.22"
+      ]
+    },
+    {
+      "body": "\"在我们主耶稣基督降临的时候\"",
+      "debugMeta": {
+        "coverageRanges": [
+          {
+            "end": "1Thess.5.23",
+            "start": "1Thess.5.23"
+          }
+        ],
+        "page": 7,
+        "primaryAnchor": "1Thess.5.23",
+        "sourceLabel": "圣经研修本 52_帖撒罗尼迦前书【codex-v3】"
+      },
+      "id": "study-bible-1thess-5-23-p007-n044",
+      "primaryAnchor": "1Thess.5.23",
+      "searchText": "帖撒罗尼迦前书 5:23 研修本注释\n\"在我们主耶稣基督降临的时候\"\n\"在我们主耶稣基督降临的时候\"\n5:23\n圣经研修本 52_帖撒罗尼迦前书【codex-v3】",
+      "source": "圣经研修本 52_帖撒罗尼迦前书【codex-v3】",
+      "summary": "\"在我们主耶稣基督降临的时候\"",
+      "title": "帖撒罗尼迦前书 5:23 研修本注释",
+      "type": "commentary",
+      "verses": [
+        "1Thess.5.23"
+      ]
+    },
+    {
+      "body": "亲嘴…务要圣洁，亲嘴是基督徒相交和圣洁的象征，见林前16:20注：另参徒20:37：罗16:16：林后13:12彼前5:14。",
+      "debugMeta": {
+        "coverageRanges": [
+          {
+            "end": "1Thess.5.26",
+            "start": "1Thess.5.26"
+          }
+        ],
+        "page": 11,
+        "primaryAnchor": "1Thess.5.26",
+        "sourceLabel": "圣经研修本 52_帖撒罗尼迦前书【codex-v3】"
+      },
+      "id": "study-bible-1thess-5-26-p011-n086",
+      "primaryAnchor": "1Thess.5.26",
+      "searchText": "帖撒罗尼迦前书 5:26 研修本注释\n亲嘴…务要圣洁，亲嘴是基督徒相交和圣洁的象征，见林前16:20注：另参徒20:37：罗16:16：林后13:12彼前5:14。\n亲嘴…务要圣洁，亲嘴是基督徒相交和圣洁的象征，见林前16:20注：另参徒20:37：罗16:16：林后13:12彼前5:14。\n5:26\n圣经研修本 52_帖撒罗尼迦前书【codex-v3】",
+      "source": "圣经研修本 52_帖撒罗尼迦前书【codex-v3】",
+      "summary": "亲嘴…务要圣洁，亲嘴是基督徒相交和圣洁的象征，见林前16:20注：另参徒20:37：罗16:16：林后13:12彼前5:14。",
+      "title": "帖撒罗尼迦前书 5:26 研修本注释",
+      "type": "commentary",
+      "verses": [
+        "1Thess.5.26"
+      ]
+    },
+    {
+      "body": "我，与往常一样，在保罗口述，书记员笔录之后，保罗会亲笔写下信末的问安，证明这封信确实出自他（参帖后3:17）。把这信念给众弟兄听，这封信要向帖撒罗尼迎教会的全体会众朗读，包括那些灰心的人和不守规矩的人，见西4:16注。",
+      "debugMeta": {
+        "coverageRanges": [
+          {
+            "end": "1Thess.5.27",
+            "start": "1Thess.5.27"
+          }
+        ],
+        "page": 11,
+        "primaryAnchor": "1Thess.5.27",
+        "sourceLabel": "圣经研修本 52_帖撒罗尼迦前书【codex-v3】"
+      },
+      "id": "study-bible-1thess-5-27-p011-n065",
+      "primaryAnchor": "1Thess.5.27",
+      "searchText": "帖撒罗尼迦前书 5:27 研修本注释\n我，与往常一样，在保罗口述，书记员笔录之后，保罗会亲笔写下信末的问安，证明这封信确实出自他（参帖后3:17）。把这信念给众弟兄听，这封信要向帖撒罗尼迎教会的全体会众朗读，包括那些灰心的人和不守规矩的人，见西4:16注。\n我，与往常一样，在保罗口述，书记员笔录之后，保罗会亲笔写下信末的问安，证明这封信确实出自他（参帖后3:17）。把这信念给众弟兄听，这封信要向帖撒罗尼迎教会的全体会众朗读，包括那些灰心的人和不守规矩的人，见西4:16注。\n5:27\n圣经研修本 52_帖撒罗尼迦前书【codex-v3】",
+      "source": "圣经研修本 52_帖撒罗尼迦前书【codex-v3】",
+      "summary": "我，与往常一样，在保罗口述，书记员笔录之后，保罗会亲笔写下信末的问安，证明这封信确实出自他（参帖后3:17）。把这信念给众弟兄听，这封信要向帖撒罗尼迎教会的全体会众朗读，包括那些灰心的人和不守规矩的人，见西4:16注。",
+      "title": "帖撒罗尼迦前书 5:27 研修本注释",
+      "type": "commentary",
+      "verses": [
+        "1Thess.5.27"
+      ]
+    },
+    {
+      "body": "学者普遍认为保罗是《帖撒罗尼迦前书》的作者，因为信中的用词、写作风格和神学观点明显与保罗其他书信一致。11指出，发信人还包括西拉和提摩太，可能保罗特意表明他们和自己是同一传道团队的，以缓解帖撒罗尼迦信徒的失望情绪——因为保罗没有亲自再去探访他们，而是差派提摩太前去，他们可能会感到失望（见2:17-18,3:1-2,6,11）。",
+      "debugMeta": {
+        "coverageRanges": [
+          {
+            "end": "1Thess.1.1",
+            "start": "1Thess.1.1"
+          }
+        ],
+        "page": 1,
+        "primaryAnchor": "1Thess.1.1",
+        "sourceLabel": "圣经研修本 52_帖撒罗尼迦前书【codex-v3】"
+      },
+      "id": "study-bible-1thess-intro-p001-n001",
+      "primaryAnchor": "1Thess.1.1",
+      "searchText": "帖撒罗尼迦前书 导论：作者和书名\n学者普遍认为保罗是《帖撒罗尼迦前书》的作者，因为信中的用词、写作风格和神学观点明显与保罗其他书信一致。11指出，发信人还包括西拉和提摩太，可能保罗特意表明他们和自己是同一传道团队的，以缓解帖撒罗尼迦信徒的失望情绪——因为保罗没有亲自再去探…\n学者普遍认为保罗是《帖撒罗尼迦前书》的作者，因为信中的用词、写作风格和神学观点明显与保罗其他书信一致。11指出，发信人还包括西拉和提摩太，可能保罗特意表明他们和自己是同一传道团队的，以缓解帖撒罗尼迦信徒的失望情绪——因为保罗没有亲自再去探访他们，而是差派提摩太前去，他们可能会感到失望（见2:17-18,3:1-2,6,11）。\n导论：作者和书名\n圣经研修本 52_帖撒罗尼迦前书【codex-v3】",
+      "source": "圣经研修本 52_帖撒罗尼迦前书【codex-v3】",
+      "summary": "学者普遍认为保罗是《帖撒罗尼迦前书》的作者，因为信中的用词、写作风格和神学观点明显与保罗其他书信一致。11指出，发信人还包括西拉和提摩太，可能保罗特意表明他们和自己是同一传道团队的，以缓解帖撒罗尼迦信徒的失望情绪——因为保罗没有亲自再去探…",
+      "title": "帖撒罗尼迦前书 导论：作者和书名",
+      "type": "commentary",
+      "verses": [
+        "1Thess.1.1"
+      ]
+    },
+    {
+      "body": "圣经学者大都认为本书信写成于主后49-51年，也就是保罗第二次旅行传道期间，在哥林多逗留一年半的初期（徒18:1-18）。有少数学者（其中有些不认同《使徒行传》是可靠的历史记录）认为，本书信早在第1世纪40年代就已写成。据罗马皇帝革老丢给德尔斐城的信（称为《德尔斐石刻》）记载，迦流于主后51-52年任亚该亚省方伯；徒18:12-17提到迦流的时候，保罗在哥林多的侍奉已接近尾声。因此，本书信写于主后49-51年的说法较为可信。",
+      "debugMeta": {
+        "coverageRanges": [
+          {
+            "end": "1Thess.3.6",
+            "start": "1Thess.3.6"
+          }
+        ],
+        "page": 1,
+        "primaryAnchor": "1Thess.3.6",
+        "sourceLabel": "圣经研修本 52_帖撒罗尼迦前书【codex-v3】"
+      },
+      "id": "study-bible-1thess-intro-p001-n002",
+      "primaryAnchor": "1Thess.3.6",
+      "searchText": "帖撒罗尼迦前书 导论：写作时间\n圣经学者大都认为本书信写成于主后49-51年，也就是保罗第二次旅行传道期间，在哥林多逗留一年半的初期（徒18:1-18）。有少数学者（其中有些不认同《使徒行传》是可靠的历史记录）认为，本书信早在第1世纪40年代就已写成。据罗马皇帝革老丢给…\n圣经学者大都认为本书信写成于主后49-51年，也就是保罗第二次旅行传道期间，在哥林多逗留一年半的初期（徒18:1-18）。有少数学者（其中有些不认同《使徒行传》是可靠的历史记录）认为，本书信早在第1世纪40年代就已写成。据罗马皇帝革老丢给德尔斐城的信（称为《德尔斐石刻》）记载，迦流于主后51-52年任亚该亚省方伯；徒18:12-17提到迦流的时候，保罗在哥林多的侍奉已接近尾声。因此，本书信写于主后49-51年的说法较为可信。\n导论：写作时间\n圣经研修本 52_帖撒罗尼迦前书【codex-v3】",
+      "source": "圣经研修本 52_帖撒罗尼迦前书【codex-v3】",
+      "summary": "圣经学者大都认为本书信写成于主后49-51年，也就是保罗第二次旅行传道期间，在哥林多逗留一年半的初期（徒18:1-18）。有少数学者（其中有些不认同《使徒行传》是可靠的历史记录）认为，本书信早在第1世纪40年代就已写成。据罗马皇帝革老丢给…",
+      "title": "帖撒罗尼迦前书 导论：写作时间",
+      "type": "commentary",
+      "verses": [
+        "1Thess.3.6"
+      ]
+    },
+    {
+      "body": "《帖撒罗尼迦前书》最突出的主题是耶稣的第二次降临，信中每一章都提到这方面的内容（1:10,2:19-20.3:13,4:13-18,51-11,23-24）。耶稣再来时，在基督里死了的人必复活，与活着的人一同被提，在空中与主相遇（415-17）。顽梗不信的人必遭受上帝的忿怒，相信基督的人则可免遭此灾，且要承受救恩（1:10，52-4,9-10）。主再来时，那些蒙拣选作圣徒的人必须圣洁，无可责备（3:11-4:8,5:23），信实的上帝必在那些蒙他呼召的信徒中成就这事（5.24），使他们成为圣洁。",
+      "debugMeta": {
+        "coverageRanges": [
+          {
+            "end": "1Thess.4.16",
+            "start": "1Thess.4.16"
+          }
+        ],
+        "page": 1,
+        "primaryAnchor": "1Thess.4.16",
+        "sourceLabel": "圣经研修本 52_帖撒罗尼迦前书【codex-v3】"
+      },
+      "id": "study-bible-1thess-intro-p001-n003",
+      "primaryAnchor": "1Thess.4.16",
+      "searchText": "帖撒罗尼迦前书 导论：主题\n《帖撒罗尼迦前书》最突出的主题是耶稣的第二次降临，信中每一章都提到这方面的内容（1:10,2:19-20.3:13,4:13-18,51-11,23-24）。耶稣再来时，在基督里死了的人必复活，与活着的人一同被提，在空中与主相遇（415-…\n《帖撒罗尼迦前书》最突出的主题是耶稣的第二次降临，信中每一章都提到这方面的内容（1:10,2:19-20.3:13,4:13-18,51-11,23-24）。耶稣再来时，在基督里死了的人必复活，与活着的人一同被提，在空中与主相遇（415-17）。顽梗不信的人必遭受上帝的忿怒，相信基督的人则可免遭此灾，且要承受救恩（1:10，52-4,9-10）。主再来时，那些蒙拣选作圣徒的人必须圣洁，无可责备（3:11-4:8,5:23），信实的上帝必在那些蒙他呼召的信徒中成就这事（5.24），使他们成为圣洁。\n导论：主题\n圣经研修本 52_帖撒罗尼迦前书【codex-v3】",
+      "source": "圣经研修本 52_帖撒罗尼迦前书【codex-v3】",
+      "summary": "《帖撒罗尼迦前书》最突出的主题是耶稣的第二次降临，信中每一章都提到这方面的内容（1:10,2:19-20.3:13,4:13-18,51-11,23-24）。耶稣再来时，在基督里死了的人必复活，与活着的人一同被提，在空中与主相遇（415-…",
+      "title": "帖撒罗尼迦前书 导论：主题",
+      "type": "commentary",
+      "verses": [
+        "1Thess.4.16"
+      ]
+    },
+    {
+      "body": "帖撒罗尼迦是罗马帝国马其顿省省会，居民以此为荣。该城人口超过十万，拥有一个天然港口。繁忙、贯穿东西的伊格那修大道，与南北走向的贸易路线交汇于此，使得帖撒罗尼迦成为一个繁华的贸易中心和哲学思想交流中心。帖撒罗尼迦是一座自由城，由地方官管辖（参徒17:6,8）。在宗教方面，帖撒罗尼迦人信奉希腊罗马诸神和崇拜皇帝，埃及人的信仰在这里也很盛行。城里住了相当多的犹太人（徒17:5）。保罗、提摩太和西拉一连三个安息日在帖撒罗尼迦犹太会堂里传道，不少犹太人和敬畏上帝的外邦人归信基督（徒17:4）。帖前1:9-10暗示，保罗此后连续几个礼拜在外邦人中传道，大有果效。然而，敌挡保罗的犹太人煽动群众暴乱，把接待保罗的耶孙和一些基督徒强行带到地方官那里，诬告他们反叛凯撒（徒17:5-8）。保罗的传道团队被迫仓卒离开帖撒罗尼迦（徒17:9-10）。保罗虽然身离帖撒罗尼迦，但心系初信的帖撒罗尼迦信徒；几个月后，保罗差派提摩太回到帖撒罗尼迦（帖前3:1-2,5；见徒17:15注）。后来，提摩太在哥林多与保罗会合（徒18:5），并向他汇报帖撒罗尼迦教会的情况（帖前3:6）。提摩太报告说，帖撒罗尼迦教会总体表现良好，但有一些事情需要关注。帖撒罗尼迦教会中有信徒去世了（4:13），会众不知道基督再来时那些去世的信徒将会怎样（3:10，4:13），当中有些人认为去世的人错过了主再来的时间，因此为他们忧伤，感到绝望（4:13）。此外，提摩太告诉保罗，帖撒罗尼迦信徒对于主再来的日子有疑问（5:1-2）。不少学者认沩这疑问反映了帖撒罗尼迦信徒等得不耐烦，或有一种虚假的安全感。但保罗在5:4和5:9一再向他们保证，并且5:1-11整段经文都没有提及任何警告，因此这种观点不能成立。保罗向帖撒罗尼迦信徒保证，在主的日子，他们必定得着救赎，不会遭受上帝的忿怒。有些人认为，帖撒罗尼迦信徒是担心自己还没有准备好迎接耶稣再来，但4:3-8显示他们并不是担心这个问题，而是对圣洁生活没有足够的重视。也许最简单直接的解释是，这些初信的基督徒看到教会最近有人突然离世（4:13），就开始怀疑自己最终是否会得救，甚至怀疑信徒死亡是因为上帝不喜悦他们。无论如何，关于去世信徒（4:13-18）和在世信徒（5:1-11）在主再来时将会如何的问题，显然保罗需要一再安慰和鼓励帖撒罗尼迦信徒。帖撒罗尼迦信徒还有其他方面的软弱。他们没有料到起初的逼迫竟然会持续那么长时间，并且没有缓和（3:3-4；参帖后1:5-7）。此外，他们想念保罗，但对于保罗没有亲自来看望他们，显然感到失望（3:6-10）。保罗需要关注帖撒罗尼迦教会的另一个问题，就是有些信徒不愿意自食其力，只依赖比较富裕的信徒来生活（4:10b-12，5:14；参帖后3:6-15）。这种现象给教会带来了负面的影响。这个问题可能源于他们错误地理解末世；也可能只是因为教会中有自私懒惰的信徒滥用了富裕肢体的爱心，逃避自己的工作责任。保罗听了提摩太大体正面的汇报，满心欢喜，感到欣慰，于是立即动笔写了《帖撒罗尼迦前书》（3:6-8），鼓励那些因四面受敌而感到沮丧的信徒，并解答他们的疑问。帖撒罗尼迦教会中有人突然离世，信徒为此感到绝望，于是保罗帮助他们消除疑虑，坚固他们的盼望，使他们确信无论已经去世还是仍然健在的信徒，在主再来的时候都会得着救恩（4:13-5:11）。保罗切愿帖撒罗尼迦信徒确信他们是蒙上帝拣选的人，必会得救（1:4,5:24）。保罗与他们离别已经很长一段时间（2:17-3:10），加上持续的逼迫（3:3-4），以及有信徒突然离世（4:13），帖撒罗尼迦信徒可能满心疑惑。因此保罗强调，他传道团队中的人确实都是上帝差派来传福音的（1:5，2:1-12,2:17-3:10）。保罗指出，对于基督徒来说，逼迫是很正常的事，希望藉此鼓励他们（3:3-4）。保罗还呼吁初信的外邦信徒要持守圣洁，远避淫行（4:3-8）；并劝勉那些不做工的信徒要自食其力（4:9-12）。为使信徒不过分依赖他，保罗敦促他们要尊重和听从自己教会的传道同工（5:12-13）。必下经文可以看出保罗的良苦用心：禁止信徒藐视先知的讲论（5:19-22），强调提摩太是上帝仆人的身份（3:2），表明其他传道同工和他是同一传道团队的（信中大多使用复数第一人称代词）。",
+      "debugMeta": {
+        "coverageRanges": [
+          {
+            "end": "1Thess.3.10",
+            "start": "1Thess.3.10"
+          }
+        ],
+        "page": 1,
+        "primaryAnchor": "1Thess.3.10",
+        "sourceLabel": "圣经研修本 52_帖撒罗尼迦前书【codex-v3】"
+      },
+      "id": "study-bible-1thess-intro-p001-n004",
+      "primaryAnchor": "1Thess.3.10",
+      "searchText": "帖撒罗尼迦前书 导论：写作目的、缘起和背景\n帖撒罗尼迦是罗马帝国马其顿省省会，居民以此为荣。该城人口超过十万，拥有一个天然港口。繁忙、贯穿东西的伊格那修大道，与南北走向的贸易路线交汇于此，使得帖撒罗尼迦成为一个繁华的贸易中心和哲学思想交流中心。帖撒罗尼迦是一座自由城，由地方官管辖（…\n帖撒罗尼迦是罗马帝国马其顿省省会，居民以此为荣。该城人口超过十万，拥有一个天然港口。繁忙、贯穿东西的伊格那修大道，与南北走向的贸易路线交汇于此，使得帖撒罗尼迦成为一个繁华的贸易中心和哲学思想交流中心。帖撒罗尼迦是一座自由城，由地方官管辖（参徒17:6,8）。在宗教方面，帖撒罗尼迦人信奉希腊罗马诸神和崇拜皇帝，埃及人的信仰在这里也很盛行。城里住了相当多的犹太人（徒17:5）。保罗、提摩太和西拉一连三个安息日在帖撒罗尼迦犹太会堂里传道，不少犹太人和敬畏上帝的外邦人归信基督（徒17:4）。帖前1:9-10暗示，保罗此后连续几个礼拜在外邦人中传道，大有果效。然而，敌挡保罗的犹太人煽动群众暴乱，把接待保罗的耶孙和一些基督徒强行带到地方官那里，诬告他们反叛凯撒（徒17:5-8）。保罗的传道团队被迫仓卒离开帖撒罗尼迦（徒17:9-10）。保罗虽然身离帖撒罗尼迦，但心系初信的帖撒罗尼迦信徒；几个月后，保罗差派提摩太回到帖撒罗尼迦（帖前3:1-2,5；见徒17:15注）。后来，提摩太在哥林多与保罗会合（徒18:5），并向他汇报帖撒罗尼迦教会的情况（帖前3:6）。提摩太报告说，帖撒罗尼迦教会总体表现良好，但有一些事情需要关注。帖撒罗尼迦教会中有信徒去世了（4:13），会众不知道基督再来时那些去世的信徒将会怎样（3:10，4:13），当中有些人认为去世的人错过了主再来的时间，因此为他们忧伤，感到绝望（4:13）。此外，提摩太告诉保罗，帖撒罗尼迦信徒对于主再来的日子有疑问（5:1-2）。不少学者认沩这疑问反映了帖撒罗尼迦信徒等得不耐烦，或有一种虚假的安全感。但保罗在5:4和5:9一再向他们保证，并且5:1-11整段经文都没有提及任何警告，因此这种观点不能成立。保罗向帖撒罗尼迦信徒保证，在主的日子，他们必定得着救赎，不会遭受上帝的忿怒。有些人认为，帖撒罗尼迦信徒是担心自己还没有准备好迎接耶稣再来，但4:3-8显示他们并不是担心这个问题，而是对圣洁生活没有足够的重视。也许最简单直接的解释是，这些初信的基督徒看到教会最近有人突然离世（4:13），就开始怀疑自己最终是否会得救，甚至怀疑信徒死亡是因为上帝不喜悦他们。无论如何，关于去世信徒（4:13-18）和在世信徒（5:1-11）在主再来时将会如何的问题，显然保罗需要一再安慰和鼓励帖撒罗尼迦信徒。帖撒罗尼迦信徒还有其他方面的软弱。他们没有料到起初的逼迫竟然会持续那么长时间，并且没有缓和（3:3-4；参帖后1:5-7）。此外，他们想念保罗，但对于保罗没有亲自来看望他们，显然感到失望（3:6-10）。保罗需要关注帖撒罗尼迦教会的另一个问题，就是有些信徒不愿意自食其力，只依赖比较富裕的信徒来生活（4:10b-12，5:14；参帖后3:6-15）。这种现象给教会带来了负面的影响。这个问题可能源于他们错误地理解末世；也可能只是因为教会中有自私懒惰的信徒滥用了富裕肢体的爱心，逃避自己的工作责任。保罗听了提摩太大体正面的汇报，满心欢喜，感到欣慰，于是立即动笔写了《帖撒罗尼迦前书》（3:6-8），鼓励那些因四面受敌而感到沮丧的信徒，并解答他们的疑问。帖撒罗尼迦教会中有人突然离世，信徒为此感到绝望，于是保罗帮助他们消除疑虑，坚固他们的盼望，使他们确信无论已经去世还是仍然健在的信徒，在主再来的时候都会得着救恩（4:13-5:11）。保罗切愿帖撒罗尼迦信徒确信他们是蒙上帝拣选的人，必会得救（1:4,5:24）。保罗与他们离别已经很长一段时间（2:17-3:10），加上持续的逼迫（3:3-4），以及有信徒突然离世（4:13），帖撒罗尼迦信徒可能满心疑惑。因此保罗强调，他传道团队中的人确实都是上帝差派来传福音的（1:5，2:1-12,2:17-3:10）。保罗指出，对于基督徒来说，逼迫是很正常的事，希望藉此鼓励他们（3:3-4）。保罗还呼吁初信的外邦信徒要持守圣洁，远避淫行（4:3-8）；并劝勉那些不做工的信徒要自食其力（4:9-12）。为使信徒不过分依赖他，保罗敦促他们要尊重和听从自己教会的传道同工（5:12-13）。必下经文可以看出保罗的良苦用心：禁止信徒藐视先知的讲论（5:19-22），强调提摩太是上帝仆人的身份（3:2），表明其他传道同工和他是同一传道团队的（信中大多使用复数第一人称代词）。\n导论：写作目的、缘起和背景\n圣经研修本 52_帖撒罗尼迦前书【codex-v3】",
+      "source": "圣经研修本 52_帖撒罗尼迦前书【codex-v3】",
+      "summary": "帖撒罗尼迦是罗马帝国马其顿省省会，居民以此为荣。该城人口超过十万，拥有一个天然港口。繁忙、贯穿东西的伊格那修大道，与南北走向的贸易路线交汇于此，使得帖撒罗尼迦成为一个繁华的贸易中心和哲学思想交流中心。帖撒罗尼迦是一座自由城，由地方官管辖（…",
+      "title": "帖撒罗尼迦前书 导论：写作目的、缘起和背景",
+      "type": "commentary",
+      "verses": [
+        "1Thess.3.10"
+      ]
+    },
+    {
+      "body": "信徒应当回顾基督已成就的救恩，瞻望主再来的日子；救恩应验了《旧约》的应许，主再来是这应许的圆满成就。关于\"救恩历的解释，见《圣经文集》中的《〈圣经〉概述》。",
+      "debugMeta": {
+        "coverageRanges": [
+          {
+            "end": "1Thess.1.10",
+            "start": "1Thess.1.10"
+          }
+        ],
+        "page": 2,
+        "primaryAnchor": "1Thess.1.10",
+        "sourceLabel": "圣经研修本 52_帖撒罗尼迦前书【codex-v3】"
+      },
+      "id": "study-bible-1thess-intro-p002-n005",
+      "primaryAnchor": "1Thess.1.10",
+      "searchText": "帖撒罗尼迦前书 导论：救恩历史概要\n信徒应当回顾基督已成就的救恩，瞻望主再来的日子；救恩应验了《旧约》的应许，主再来是这应许的圆满成就。关于\"救恩历的解释，见《圣经文集》中的《〈圣经〉概述》。\n信徒应当回顾基督已成就的救恩，瞻望主再来的日子；救恩应验了《旧约》的应许，主再来是这应许的圆满成就。关于\"救恩历的解释，见《圣经文集》中的《〈圣经〉概述》。\n导论：救恩历史概要\n圣经研修本 52_帖撒罗尼迦前书【codex-v3】",
+      "source": "圣经研修本 52_帖撒罗尼迦前书【codex-v3】",
+      "summary": "信徒应当回顾基督已成就的救恩，瞻望主再来的日子；救恩应验了《旧约》的应许，主再来是这应许的圆满成就。关于\"救恩历的解释，见《圣经文集》中的《〈圣经〉概述》。",
+      "title": "帖撒罗尼迦前书 导论：救恩历史概要",
+      "type": "commentary",
+      "verses": [
+        "1Thess.1.10"
+      ]
+    },
+    {
+      "body": "耶稣基督受死和复活（主后33或30年）*保罗悔改归主（33/34年*）保罗第一次到访耶路撒冷（36/37年*）保罗第二次到访耶路撒冷（赈济饥荒灾民）（44-47年*）保罗第一次旅行传道（46-47年）保罗第三次到访耶路撒冷（使徒会议）（48-49年*）保罗第二次旅行传道，到了帖撒罗尼迦和哥林多（48/49-51年*）保罗在哥林多写《帖撒罗尼迦前书》（49-51年*）保罗第三次旅行传道（52-57年*）保罗在罗马殉道（64-67年*）*表示大致年份：/表示\"或\"；'见《圣经文集》中的主后30 35404550556065《耶稣被钉十字架的年份》。",
+      "debugMeta": {
+        "coverageRanges": [
+          {
+            "end": "1Thess.1.1",
+            "start": "1Thess.1.1"
+          }
+        ],
+        "page": 3,
+        "primaryAnchor": "1Thess.1.1",
+        "sourceLabel": "圣经研修本 52_帖撒罗尼迦前书【codex-v3】"
+      },
+      "id": "study-bible-1thess-intro-p003-n006",
+      "primaryAnchor": "1Thess.1.1",
+      "searchText": "帖撒罗尼迦前书 导论：大事年表\n耶稣基督受死和复活（主后33或30年）*保罗悔改归主（33/34年*）保罗第一次到访耶路撒冷（36/37年*）保罗第二次到访耶路撒冷（赈济饥荒灾民）（44-47年*）保罗第一次旅行传道（46-47年）保罗第三次到访耶路撒冷（使徒会议）（4…\n耶稣基督受死和复活（主后33或30年）*保罗悔改归主（33/34年*）保罗第一次到访耶路撒冷（36/37年*）保罗第二次到访耶路撒冷（赈济饥荒灾民）（44-47年*）保罗第一次旅行传道（46-47年）保罗第三次到访耶路撒冷（使徒会议）（48-49年*）保罗第二次旅行传道，到了帖撒罗尼迦和哥林多（48/49-51年*）保罗在哥林多写《帖撒罗尼迦前书》（49-51年*）保罗第三次旅行传道（52-57年*）保罗在罗马殉道（64-67年*）*表示大致年份：/表示\"或\"；'见《圣经文集》中的主后30 35404550556065《耶稣被钉十字架的年份》。\n导论：大事年表\n圣经研修本 52_帖撒罗尼迦前书【codex-v3】",
+      "source": "圣经研修本 52_帖撒罗尼迦前书【codex-v3】",
+      "summary": "耶稣基督受死和复活（主后33或30年）*保罗悔改归主（33/34年*）保罗第一次到访耶路撒冷（36/37年*）保罗第二次到访耶路撒冷（赈济饥荒灾民）（44-47年*）保罗第一次旅行传道（46-47年）保罗第三次到访耶路撒冷（使徒会议）（4…",
+      "title": "帖撒罗尼迦前书 导论：大事年表",
+      "type": "commentary",
+      "verses": [
+        "1Thess.1.1"
+      ]
+    },
+    {
+      "body": "1.上帝的忿怒临到拒绝福音的人身上。（经文：2:16，5:3）2.耶稣的受死和复活是基督徒怀着盼望的基础。（经文：4:14，5:10）3.上帝预定基督徒在耶稣再来时得着救恩，而不是遭受忿怒。（经文：1:10，5:4、9）4.主再来时，要将去世的基督徒一同带来。（经文：4:14-17，5:10）5.那些回应福音的人，是上帝在创世以前就已经拣选和呼召的人。上帝对他们的呼召会持续一生。（经文：1:4，2:12，4:7，5:9、24）6.基督徒应当活出完全圣洁的生命。（经文：3:13，4:3-8，5:23）7.基督徒绝不可逃避工作的责任。（经文：4:9-12，5:14）8.传道人的诚信印证福音的可靠性。（经文：1:5，2:1-12）9.喜乐，尤其在患难中的喜乐，是基督徒的记号。（经文：1:6，5:16）10.基督徒经历到所预言的新的约之真实。（经文：4:8-9）11.信心、盼望和爱心是基督徒必须同时具备的品质。（经文：1:2-3，5:8）",
+      "debugMeta": {
+        "coverageRanges": [
+          {
+            "end": "1Thess.1.3",
+            "start": "1Thess.1.3"
+          }
+        ],
+        "page": 3,
+        "primaryAnchor": "1Thess.1.3",
+        "sourceLabel": "圣经研修本 52_帖撒罗尼迦前书【codex-v3】"
+      },
+      "id": "study-bible-1thess-intro-p003-n007",
+      "primaryAnchor": "1Thess.1.3",
+      "searchText": "帖撒罗尼迦前书 导论：关键主题\n1.上帝的忿怒临到拒绝福音的人身上。（经文：2:16，5:3）2.耶稣的受死和复活是基督徒怀着盼望的基础。（经文：4:14，5:10）3.上帝预定基督徒在耶稣再来时得着救恩，而不是遭受忿怒。（经文：1:10，5:4、9）4.主再来时，要将…\n1.上帝的忿怒临到拒绝福音的人身上。（经文：2:16，5:3）2.耶稣的受死和复活是基督徒怀着盼望的基础。（经文：4:14，5:10）3.上帝预定基督徒在耶稣再来时得着救恩，而不是遭受忿怒。（经文：1:10，5:4、9）4.主再来时，要将去世的基督徒一同带来。（经文：4:14-17，5:10）5.那些回应福音的人，是上帝在创世以前就已经拣选和呼召的人。上帝对他们的呼召会持续一生。（经文：1:4，2:12，4:7，5:9、24）6.基督徒应当活出完全圣洁的生命。（经文：3:13，4:3-8，5:23）7.基督徒绝不可逃避工作的责任。（经文：4:9-12，5:14）8.传道人的诚信印证福音的可靠性。（经文：1:5，2:1-12）9.喜乐，尤其在患难中的喜乐，是基督徒的记号。（经文：1:6，5:16）10.基督徒经历到所预言的新的约之真实。（经文：4:8-9）11.信心、盼望和爱心是基督徒必须同时具备的品质。（经文：1:2-3，5:8）\n导论：关键主题\n圣经研修本 52_帖撒罗尼迦前书【codex-v3】",
+      "source": "圣经研修本 52_帖撒罗尼迦前书【codex-v3】",
+      "summary": "1.上帝的忿怒临到拒绝福音的人身上。（经文：2:16，5:3）2.耶稣的受死和复活是基督徒怀着盼望的基础。（经文：4:14，5:10）3.上帝预定基督徒在耶稣再来时得着救恩，而不是遭受忿怒。（经文：1:10，5:4、9）4.主再来时，要将…",
+      "title": "帖撒罗尼迦前书 导论：关键主题",
+      "type": "commentary",
+      "verses": [
+        "1Thess.1.3"
+      ]
+    },
+    {
+      "body": "《帖撒罗尼迦前书》包含新约书信所有常见的组成部分，但不是一封正式的公函。一方面，这是一封写给教会群体的公开信；但另一方面，当中有不少地方像一封私函，强调写信人与收信人的关系。写信的目的通常是要告诉收信人一些事情，这封信也是如此，内容包括：保罗关注帖撒罗尼迦信徒的问题，保罗个人的经历，以及基督宗教教义和信仰的实践。本书信显著的文学特征包括：较强的辩道和自传成分；为活出基督徒生命的人感恩；经常直接称呼收信人；着重教导基督再来的道理，甚至连一些道德劝勉也与这个教义相连；每章结束时都提及基督的再来。",
+      "debugMeta": {
+        "coverageRanges": [
+          {
+            "end": "1Thess.4.1",
+            "start": "1Thess.4.1"
+          }
+        ],
+        "page": 3,
+        "primaryAnchor": "1Thess.4.1",
+        "sourceLabel": "圣经研修本 52_帖撒罗尼迦前书【codex-v3】"
+      },
+      "id": "study-bible-1thess-intro-p003-n008",
+      "primaryAnchor": "1Thess.4.1",
+      "searchText": "帖撒罗尼迦前书 导论：文学特征\n《帖撒罗尼迦前书》包含新约书信所有常见的组成部分，但不是一封正式的公函。一方面，这是一封写给教会群体的公开信；但另一方面，当中有不少地方像一封私函，强调写信人与收信人的关系。写信的目的通常是要告诉收信人一些事情，这封信也是如此，内容包括：…\n《帖撒罗尼迦前书》包含新约书信所有常见的组成部分，但不是一封正式的公函。一方面，这是一封写给教会群体的公开信；但另一方面，当中有不少地方像一封私函，强调写信人与收信人的关系。写信的目的通常是要告诉收信人一些事情，这封信也是如此，内容包括：保罗关注帖撒罗尼迦信徒的问题，保罗个人的经历，以及基督宗教教义和信仰的实践。本书信显著的文学特征包括：较强的辩道和自传成分；为活出基督徒生命的人感恩；经常直接称呼收信人；着重教导基督再来的道理，甚至连一些道德劝勉也与这个教义相连；每章结束时都提及基督的再来。\n导论：文学特征\n圣经研修本 52_帖撒罗尼迦前书【codex-v3】",
+      "source": "圣经研修本 52_帖撒罗尼迦前书【codex-v3】",
+      "summary": "《帖撒罗尼迦前书》包含新约书信所有常见的组成部分，但不是一封正式的公函。一方面，这是一封写给教会群体的公开信；但另一方面，当中有不少地方像一封私函，强调写信人与收信人的关系。写信的目的通常是要告诉收信人一些事情，这封信也是如此，内容包括：…",
+      "title": "帖撒罗尼迦前书 导论：文学特征",
+      "type": "commentary",
+      "verses": [
+        "1Thess.4.1"
+      ]
+    },
+    {
+      "body": "一、开篇问候（1:1）二、感恩和鼓励（1:2-3:13）（一）为信徒的信心、爱心和盼望献上感恩（1:2-3）（二）保罗肯定帖撒罗尼迦信徒是蒙拣选的（1:4-2:16）（三）保罗为他和传道同工的离开辩护（2:17-3:10）（四）保罗为帖撒罗尼迦信徒祷告（3:11-13）三、教导和劝诫（4:1-5:28）（一）讨上帝的喜悦（4:1-12）（二）耶稣再来（4:13-5:11）（三）群体生活的指导（5:12-22）（四）祷告、安慰和总结（5:23-28）",
+      "debugMeta": {
+        "coverageRanges": [
+          {
+            "end": "1Thess.4.1",
+            "start": "1Thess.4.1"
+          }
+        ],
+        "page": 3,
+        "primaryAnchor": "1Thess.4.1",
+        "sourceLabel": "圣经研修本 52_帖撒罗尼迦前书【codex-v3】"
+      },
+      "id": "study-bible-1thess-intro-p003-n009",
+      "primaryAnchor": "1Thess.4.1",
+      "searchText": "帖撒罗尼迦前书 导论：大纲\n一、开篇问候（1:1）二、感恩和鼓励（1:2-3:13）（一）为信徒的信心、爱心和盼望献上感恩（1:2-3）（二）保罗肯定帖撒罗尼迦信徒是蒙拣选的（1:4-2:16）（三）保罗为他和传道同工的离开辩护（2:17-3:10）（四）保罗为帖撒…\n一、开篇问候（1:1）二、感恩和鼓励（1:2-3:13）（一）为信徒的信心、爱心和盼望献上感恩（1:2-3）（二）保罗肯定帖撒罗尼迦信徒是蒙拣选的（1:4-2:16）（三）保罗为他和传道同工的离开辩护（2:17-3:10）（四）保罗为帖撒罗尼迦信徒祷告（3:11-13）三、教导和劝诫（4:1-5:28）（一）讨上帝的喜悦（4:1-12）（二）耶稣再来（4:13-5:11）（三）群体生活的指导（5:12-22）（四）祷告、安慰和总结（5:23-28）\n导论：大纲\n圣经研修本 52_帖撒罗尼迦前书【codex-v3】",
+      "source": "圣经研修本 52_帖撒罗尼迦前书【codex-v3】",
+      "summary": "一、开篇问候（1:1）二、感恩和鼓励（1:2-3:13）（一）为信徒的信心、爱心和盼望献上感恩（1:2-3）（二）保罗肯定帖撒罗尼迦信徒是蒙拣选的（1:4-2:16）（三）保罗为他和传道同工的离开辩护（2:17-3:10）（四）保罗为帖撒…",
+      "title": "帖撒罗尼迦前书 导论：大纲",
+      "type": "commentary",
+      "verses": [
+        "1Thess.4.1"
+      ]
+    }
+  ]
+}

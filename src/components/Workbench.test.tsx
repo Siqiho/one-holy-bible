@@ -3614,6 +3614,61 @@ describe("Workbench", () => {
     expect(onRequestBook.mock.invocationCallOrder[0]).toBeLessThan(onRequestSearchResult.mock.invocationCallOrder[0]);
   });
 
+  it("clears a failed cross-book search target when ordinary book navigation starts", async () => {
+    const onRequestBook = vi.fn();
+    const wholeBibleSearchIndex: PublicScriptureSearchEntry[] = [{
+      verseId: "John.3.16", versionId: "kjv", versionLabel: "KJV", book: "John", chapter: 3, verse: 16,
+      text: "For God so loved the world",
+    }];
+
+    function Harness() {
+      const [activeBookId, setActiveBookId] = useState("Gen");
+      const [failedJohnSearch, setFailedJohnSearch] = useState(false);
+      const versions = [navigationCuv, navigationKjv].map((version) => ({
+        ...version,
+        verses: version.verses.filter((verse) => verse.book === activeBookId),
+      }));
+
+      return (
+        <Workbench
+          activeBookId={activeBookId}
+          versions={versions}
+          resources={[]}
+          initialLayout={defaultWorkbenchLayout}
+          wholeBibleSearchIndex={wholeBibleSearchIndex}
+          onRequestBook={async (bookId) => {
+            onRequestBook(bookId);
+            if (bookId === "John" && !failedJohnSearch) {
+              setFailedJohnSearch(true);
+              return;
+            }
+            setActiveBookId(bookId);
+          }}
+        />
+      );
+    }
+
+    render(<Harness />);
+    const searchRegion = screen.getByRole("search", { name: "经文搜索" });
+    await userEvent.type(within(searchRegion).getByRole("searchbox", { name: "搜索经文" }), "loved");
+    await userEvent.click(within(searchRegion).getByRole("button", { name: "搜索" }));
+    await userEvent.click(screen.getByRole("button", { name: /KJV John\.3\.16/ }));
+    expect(onRequestBook).toHaveBeenLastCalledWith("John");
+    expect(screen.getByRole("button", { name: "选择书卷 创世记" })).toBeInTheDocument();
+
+    await userEvent.click(screen.getByRole("button", { name: "选择书卷 创世记" }));
+    await userEvent.click(within(screen.getByRole("dialog", { name: "书卷选择" })).getByRole("button", { name: "出埃及记" }));
+    expect(await screen.findByRole("button", { name: "选择书卷 出埃及记" })).toBeInTheDocument();
+
+    await userEvent.click(screen.getByRole("button", { name: "选择书卷 出埃及记" }));
+    await userEvent.click(within(screen.getByRole("dialog", { name: "书卷选择" })).getByRole("button", { name: "约翰福音" }));
+
+    expect(await screen.findByRole("button", { name: "选择书卷 约翰福音" })).toBeInTheDocument();
+    expect(screen.getByRole("button", { name: "选择章节 第 1 章" })).toBeInTheDocument();
+    expect(screen.getByTestId("cuv-John.1.1")).toHaveAttribute("aria-current", "true");
+    expect(screen.queryByTestId("cuv-John.3.16")).not.toBeInTheDocument();
+  });
+
   it("keeps module controls quiet so cards are the draggable surface", () => {
     render(
       <Workbench

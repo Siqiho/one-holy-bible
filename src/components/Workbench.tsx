@@ -2931,6 +2931,7 @@ export function Workbench({
   }
 
   async function selectBook(book: string) {
+    pendingSearchResultRef.current = null;
     if (onRequestBook && book !== resolvedActiveBookId) {
       pendingBookRef.current = book;
       setOpenNavigationPanel(null);

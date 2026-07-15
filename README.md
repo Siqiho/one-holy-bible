@@ -1,12 +1,12 @@
 # One Holy Bible
 
-One Holy Bible is a local-first Bible study workbench built with React, TypeScript, Vite, and Tauri. It pairs synchronized Chinese Union Version (CUV) and King James Version (KJV) reading with verse-linked explanatory text cards.
+One Holy Bible is a local-first Bible study workbench built with React, TypeScript, Vite, and Tauri. It pairs synchronized Chinese Union Version (CUV) and King James Version (KJV) reading with verse-linked explanatory text and image cards.
 
-## `v0.1.0` scope
+## `v0.2.0` scope
 
-This first public release is deliberately text-first: all 66 Bible books, CUV and KJV Scripture, and selected explanatory text cards are included. Books are packaged separately and loaded on demand. The large image library and all image-card payloads are excluded.
+This public release includes all 66 Bible books, CUV and KJV Scripture, 10,963 verse-linked explanatory text cards, and 2,705 image cards. Books are packaged separately and loaded on demand. Image-card binaries are kept in the separate public [one-holy-bible-assets repository](https://github.com/Siqiho/one-holy-bible-assets) and referenced through immutable HTTPS URLs in the checked-in asset manifest.
 
-Screenshots will be added only after a public-release image is reviewed for content rights and accidental local information. The repository intentionally ships no screenshot placeholder image.
+The code repository intentionally does not duplicate the 2,515 unique PNG binaries. Each image descriptor records its SHA-256, byte size, MIME type, and dimensions so release validators and downstream consumers can verify the association without importing the development workbench.
 
 ## Features
 
@@ -15,12 +15,13 @@ Screenshots will be added only after a public-release image is reviewed for cont
 - lazy loading with cached return navigation and retry on load failure;
 - whole-Bible Scripture search with cross-book navigation;
 - verse-linked explanatory `commentary` and `note` cards;
+- verse-linked read-only image cards with remote preview and integrity metadata;
 - movable study modules in the reading workbench;
-- deterministic public-data generation and integrity validation.
+- deterministic public-data packaging and integrity validation.
 
 ## Architecture
 
-The browser UI loads `public/data/manifest.json`, then requests only the selected book package from `public/data/books`. The whole-Bible search index contains minimal Scripture fields; explanatory cards remain in their book package. Runtime schemas, URL checks, package hashes, and generator validation keep public data fail-closed.
+The browser UI loads `public/data/manifest.json`, then requests only the selected book package from `public/data/books`. Each book payload contains `textCards` and `imageCards`; image cards carry an `asset` descriptor rather than embedding binary data. The whole-Bible search index contains minimal Scripture fields, while the asset manifest maps image-card hashes to fixed public URLs. Runtime schemas, URL checks, package hashes, asset descriptors, and release validation keep public data fail-closed.
 
 Tauri provides the desktop shell. The web application can also run directly with Vite for development and review.
 
@@ -47,24 +48,20 @@ The checked-in public packages can be validated without private source inputs:
 
 ```bash
 npm run validate:public-data
+npm run validate:public-repository
+npm run validate:public-release
 npm test
 npx tsc --noEmit
+npx tsc -p tsconfig.node.json --noEmit
 npm run build
+npm audit --omit=dev
 ```
 
-Maintainers can regenerate `public/data` by passing separately maintained source datasets explicitly on the command line:
-
-```bash
-npm run generate:public-data -- --bible path/to/bible.json --resources path/to/resources.json --output public/data --release-version 0.1.0
-```
-
-The output must be a new directory or an existing generator-owned public-data directory. Protected roots, source overlaps, symbolic links, and unrelated existing directories are rejected; replacement is assembled in a temporary sibling before the previous valid output is swapped out.
-
-The source-import pipeline is intentionally kept outside this public repository. Contributors can use the checked-in, book-scoped packages and run `npm run validate:public-data` to verify their schemas, hashes, counts, and release hygiene.
+The source-import and release-preparation pipeline is intentionally kept outside this public repository. This checkout is a read-only public snapshot: contributors should update the checked-in book packages, image manifest, and public runtime only through the approved independent release workflow.
 
 ## Tauri status
 
-The web build and development server are the primary verified `v0.1.0` paths. Tauri configuration is included, but platform desktop bundles require the relevant OS toolchain and have not all been produced or signed. Run the desktop development shell only after installing Tauri's platform prerequisites:
+The web build and development server are the primary verified `v0.2.0` paths. Tauri configuration is included, but platform desktop bundles require the relevant OS toolchain and have not all been produced or signed. Run the desktop development shell only after installing Tauri's platform prerequisites:
 
 ```bash
 npm run tauri dev
@@ -72,14 +69,14 @@ npm run tauri dev
 
 ## Data rights
 
-The MIT license covers project-owned source code and documentation only. It does not relicense the bundled CUV, KJV, or explanatory-card datasets. Publication scope, provenance policy, jurisdiction cautions, and excluded resources are documented in [`DATA_SOURCES.md`](DATA_SOURCES.md) and [`THIRD_PARTY_NOTICES.md`](THIRD_PARTY_NOTICES.md).
+The MIT license covers project-owned source code and documentation only. It does not relicense the CUV, KJV, explanatory-card datasets, or image source material. Publication scope, provenance policy, jurisdiction cautions, and excluded resources are documented in [`DATA_SOURCES.md`](DATA_SOURCES.md) and [`THIRD_PARTY_NOTICES.md`](THIRD_PARTY_NOTICES.md). The external image repository has its own provenance and rights review.
 
 ## Repository structure
 
 ```text
-src/                  React application, domain logic, and tests
-public/data/          generated public manifest, search index, and 66 book packages
-scripts/              public-data generation and repository validation
+src/                  React application, public runtime, and domain logic
+public/data/          public manifest, asset manifest, search index, and 66 book packages
+scripts/              public-data, repository, and release validation
 src-tauri/            Tauri desktop-shell configuration
 .github/workflows/    continuous integration
 ```

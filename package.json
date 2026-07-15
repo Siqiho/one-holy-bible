@@ -1,7 +1,7 @@
 {
   "name": "one-holy-bible",
   "private": true,
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Local-first Bible study workbench with CUV/KJV reading and verse-linked explanatory cards",
   "author": "Siqiho",
   "license": "MIT",
@@ -20,12 +20,13 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc && tsc -p tsconfig.node.json --noEmit && vite build --config vite.public.config.ts",
-    "generate:public-data": "node scripts/generatePublicBibleData.mjs",
     "preview": "vite preview",
     "test": "vitest run",
     "test:watch": "vitest",
     "tauri": "tauri",
-    "validate:public-data": "node scripts/validatePublicData.mjs public/data && node scripts/validatePublicRepository.mjs && node scripts/validatePublicRelease.mjs"
+    "validate:public-data": "node scripts/validatePublicData.mjs public/data",
+    "validate:public-repository": "node scripts/validatePublicRepository.mjs",
+    "validate:public-release": "node scripts/validatePublicRelease.mjs"
   },
   "dependencies": {
     "@dnd-kit/core": "^6.3.1",

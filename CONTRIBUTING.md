@@ -18,11 +18,14 @@ Before opening a pull request, run the same gates as CI:
 
 ```bash
 npm run validate:public-data
+npm run validate:public-repository
+npm run validate:public-release
 npm test
 npx tsc --noEmit
+npx tsc -p tsconfig.node.json --noEmit
 npm run build
 ```
 
-Keep pull requests focused. Add or update tests for behavior changes, explain any data-source or rights implications, and do not commit local paths, private source files, generated image libraries, credentials, or service endpoints.
+Keep pull requests focused. Add or update tests for behavior changes, explain any data-source or rights implications, and do not commit local paths, private source files, raw/generated image binaries into this code repository, credentials, or service endpoints. Image-card changes must keep the public asset descriptor and external asset repository in sync.
 
-Generated `public/data` changes must be produced by the checked-in generator and committed together with their source-code changes. Maintainers pass release inputs explicitly after `npm run generate:public-data --`; source datasets are not part of the public repository.
+Generated `public/data` changes are prepared by the independent release workflow and committed together with their public runtime changes. Source datasets and release inputs are not part of the public repository.

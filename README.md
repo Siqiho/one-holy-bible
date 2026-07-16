@@ -85,6 +85,8 @@ src-tauri/            Tauri desktop-shell configuration
 
 Read [`CONTRIBUTING.md`](CONTRIBUTING.md) before proposing code or data changes. Report vulnerabilities, sensitive-data exposure, or content-rights concerns using the private process in [`SECURITY.md`](SECURITY.md).
 
+Project maintainers should follow the Chinese [`GitHub 更新与发布指南`](docs/GitHub更新与发布指南【codex】.md) to preserve the separation between development, public application, and public asset repositories.
+
 ## License
 
 Project-owned code and documentation are available under the [MIT License](LICENSE). Dataset rights remain separate as described above.

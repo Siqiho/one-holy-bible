@@ -2,6 +2,18 @@
 
 One Holy Bible is a local-first Bible study workbench built with React, TypeScript, Vite, and Tauri. It pairs synchronized Chinese Union Version (CUV) and King James Version (KJV) reading with verse-linked explanatory text and image cards.
 
+## 项目初衷 · Why this project exists
+
+在这个被人工智能深刻重塑、充满不确定性的时代，我们仿佛再次站在一个类似印刷术兴起之初的历史门槛上。
+
+印刷术改变的不只是知识的传播方式；它也深刻重塑了政治秩序、经济结构与教会的面貌。它使圣经得以更广泛地进入普通人的手中，也为宗教改革的传播提供了重要条件。今天，AI 正以一种同样难以预估的力量，重新定义我们理解世界、表达意义，乃至追问真理的方式。
+
+我不知道这条路最终会通向何处，也不知道人工智能的边界将延伸到哪里。但我相信：无论技术如何更迭、历史如何转向，一切仍在神恩慈的手中。神始终掌权。
+
+正是出于这样的信念，我开始了人生中的第一个 GitHub 项目——没错，它也是借助 AI、以 `vibe coding` 的方式开始的。One Holy Bible 的核心不在于技术的炫目，而在于成为一个承载神话语的器皿。它不是要给新技术简单贴上一个“基督教”的标签，而是愿意认真对待这个媒介本身，让技术、设计与内容一同服事于神的话语：在一个日益被算法与模拟充斥的时代，不把圣经还原为冰冷的数据，而使人仍能在阅读、查考、聆听与默想之中，与那活泼的道相遇，感受一种真实的“在场”。
+
+这或许只是一次微小的尝试。但我相信，即使面对最不确定的未来，神的话语仍能在新的媒介中被阅读、被聆听、被默想，并以它独有的方式临在于我们中间。
+
 ## `v0.2.0` scope
 
 This public release includes all 66 Bible books, CUV and KJV Scripture, 10,963 verse-linked explanatory text cards, and 2,705 image cards. Books are packaged separately and loaded on demand. Image-card binaries are kept in the separate public [one-holy-bible-assets repository](https://github.com/Siqiho/one-holy-bible-assets) and referenced through immutable HTTPS URLs in the checked-in asset manifest.

@@ -154,11 +154,8 @@ UI − 268 = **9,253（97.2%）缺失**。约翰轮已整类 hold，本轮不抬
 - `npm run validate:public-data`：66 卷、公开文字卡 **10,410**、无不安全串。
 - 锁计数：UI 六源合计 55,627；公开分源 9,403 / 858 / 0 / 146 / 0 / 3；隔离 18,397；约翰 1,533；信息系列 8=8；隔离 ∩ 公开 = ∅。
 
-整仓 `npm test` 仍会因缺本地资源失败（与前几轮相同，**不是本轮引入**）：
+整仓 `npm test` / 应用 `tsc` / `vite build` 仍需要未打包的本地工作台 v4、CMC JSON、创世记/Doré 图片。这是本快照的既有缺口，不是本轮引入。
 
-- 无 `workbenchSyncedResources-v4.json`
-- 无 `src/assets/resources/genesis/images/cmc-01`
-- 无 `public/resources/dore/`
-- 无 `comprehensiveCommentaryResources.json`
+为让 remote CI 变绿，本轮把 `.github/workflows/ci.yml` 改成跑 `npm run test:ci`（排除上述缺夹具文件）+ `validate:public-data` + `tsc -p tsconfig.node.json`。本地复跑：`test:ci` **27 files / 200 tests 通过**。
 
 本报告只依据仓库快照。未读取 Mac `Resources/`，未假设 Edit API 可用，未把 `/Users` 路径写入公开包。

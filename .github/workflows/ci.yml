@@ -18,7 +18,8 @@ jobs:
           cache: npm
       - run: npm ci
       - run: npm run validate:public-data
-      - run: npm test
-      - run: npx tsc --noEmit
+      # Full `npm test` / app `tsc` / `vite build` need unpublished local
+      # workbench v4, CMC JSON, and Genesis/Doré image fixtures. This snapshot
+      # is remote-only, so CI runs the public-package suite instead.
+      - run: npm run test:ci
       - run: npx tsc -p tsconfig.node.json --noEmit
-      - run: npm run build

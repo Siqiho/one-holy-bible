@@ -586,12 +586,12 @@
       "url": "/data/books/Jude.json"
     },
     {
-      "bytes": 533054,
+      "bytes": 489057,
       "cuvVerseCount": 404,
       "id": "Rev",
       "kjvVerseCount": 404,
-      "sha256": "13a44bb5fab354238a9feae598b918f63d4d659ded6ae2d1c81706413d456343",
-      "textCardCount": 148,
+      "sha256": "9672e95d1c441f3fce938e914ead86303661cd78882111cdfc35f93854de4045",
+      "textCardCount": 140,
       "url": "/data/books/Rev.json"
     }
   ],

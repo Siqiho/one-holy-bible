@@ -352,12 +352,12 @@
       "url": "/data/books/Mal.json"
     },
     {
-      "bytes": 1353456,
+      "bytes": 1292421,
       "cuvVerseCount": 1071,
       "id": "Matt",
       "kjvVerseCount": 1071,
-      "sha256": "3b358de975d74cc714d3a7cffc7f013cefd0de0dea1c8f3e39fb8190e7d1f64f",
-      "textCardCount": 453,
+      "sha256": "31bbe01138521eb10eecfd394a9dabc95f28e83fed0c50e872527efed8681d71",
+      "textCardCount": 430,
       "url": "/data/books/Matt.json"
     },
     {

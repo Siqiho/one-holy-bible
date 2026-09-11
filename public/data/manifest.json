@@ -370,12 +370,12 @@
       "url": "/data/books/Mark.json"
     },
     {
-      "bytes": 1501230,
+      "bytes": 1447352,
       "cuvVerseCount": 1151,
       "id": "Luke",
       "kjvVerseCount": 1151,
-      "sha256": "307021aa6178bdb3dee594c6579b144ffa2acb5f41316d5cfde9dd5f3b0beef6",
-      "textCardCount": 558,
+      "sha256": "138ca637935de455477cedf44d5dd2db01218ff041277fd389723ed97f640482",
+      "textCardCount": 531,
       "url": "/data/books/Luke.json"
     },
     {
@@ -388,12 +388,12 @@
       "url": "/data/books/John.json"
     },
     {
-      "bytes": 1400048,
+      "bytes": 1346181,
       "cuvVerseCount": 1007,
       "id": "Acts",
       "kjvVerseCount": 1007,
-      "sha256": "f3652d5c828070997f69fdf5db6f2fd25165ded0a99d60d12b355e455cacc760",
-      "textCardCount": 483,
+      "sha256": "5a32c1d8baaea52d58c3db30406adf8eb2e07cbdb4f15d62f3691bd35d169f25",
+      "textCardCount": 462,
       "url": "/data/books/Acts.json"
     },
     {

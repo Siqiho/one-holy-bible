@@ -172,12 +172,12 @@
       "url": "/data/books/Ps.json"
     },
     {
-      "bytes": 842318,
+      "bytes": 819670,
       "cuvVerseCount": 915,
       "id": "Prov",
       "kjvVerseCount": 915,
-      "sha256": "f402b0f98a9eac5258d11c1188d0e5e81800b097e9535b4d96df69fe459c244d",
-      "textCardCount": 232,
+      "sha256": "4a098cfe435960c04f3f8e761c841c2e1343755444f0ee7bd61b9335332e3d37",
+      "textCardCount": 227,
       "url": "/data/books/Prov.json"
     },
     {
@@ -406,12 +406,12 @@
       "url": "/data/books/Rom.json"
     },
     {
-      "bytes": 581234,
+      "bytes": 554017,
       "cuvVerseCount": 437,
       "id": "1Cor",
       "kjvVerseCount": 437,
-      "sha256": "86d6107298baa8e7891fbab8165257c0d8ed06db4b286c0434da30cd3d892124",
-      "textCardCount": 192,
+      "sha256": "fb239b3264364d3e9401946cd7669ae04697a7ab1f1b931acc7654526fe42b71",
+      "textCardCount": 183,
       "url": "/data/books/1Cor.json"
     },
     {

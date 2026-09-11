@@ -118,12 +118,12 @@
       "url": "/data/books/1Chr.json"
     },
     {
-      "bytes": 612260,
+      "bytes": 606316,
       "cuvVerseCount": 822,
       "id": "2Chr",
       "kjvVerseCount": 822,
-      "sha256": "92c2c40ac0f8f7b8cdc12358cb4c390cce717a45590d30d9bc4a533d30024c35",
-      "textCardCount": 121,
+      "sha256": "f8feb20e37b16400d75a95e63f24a936ff6d37ddb2841993534c551e7f68170c",
+      "textCardCount": 117,
       "url": "/data/books/2Chr.json"
     },
     {

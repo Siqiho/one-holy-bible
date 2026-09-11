@@ -134,15 +134,15 @@
 
 ## 5. 下一卷
 
-**尼希米记**（公开研修本 144，公开 OCR 0）。约书亚记（142 / 公开 OCR 5）为备选。
+启示录提前收束后，本跑已按备选卷展开**尼希米记**（公开 144→142，隔离 CMC 317 ledger-only）。见 `docs/verification/2026-09-11-nehemiah-1to1-hold-queue/report.md`。
 
 ## 6. 验证
 
 已跑：
 
-- `vitest run` 启示录 / 列王纪上 / 撒母耳记下 / 约伯记 / 以西结 / 哥林多前书 / 箴言 / 出埃及记 / 撒母耳记上 / 申命记 / 罗马书 / 以赛亚 / 马可 / 马太 / 路加 / 使徒行传 / 耶利米 / 诗篇 / 创世记 / 约翰 / `publicData` / `publicBibleData`：待本轮验证。
-- `node scripts/generatePublicBibleData.mjs --validate-only public/data`：待本轮验证。
-- `node scripts/validatePublicRepository.mjs`：待本轮验证。
+- `vitest run` 启示录 / 列王纪上 / 撒母耳记下 / 约伯记 / 以西结 / 哥林多前书 / 箴言 / 出埃及记 / 撒母耳记上 / 申命记 / 罗马书 / 以赛亚 / 马可 / 马太 / 路加 / 使徒行传 / 耶利米 / 诗篇 / 创世记 / 约翰 / `publicData` / `publicBibleData`：105/105 通过。
+- `node scripts/generatePublicBibleData.mjs --validate-only public/data`：66 卷、公开文字卡 10,199、无不安全串。
+- `node scripts/validatePublicRepository.mjs`：通过。
 
 未做浏览器点选：本快照没有 `workbenchSyncedResources-v4.json`，本地 `App.tsx` 不走 `loadPublicBook("Rev")`，因此无法在本环境用阅读页点开这些公开卡。对照与修补都落在公开数据包和台账 JSONL。
 

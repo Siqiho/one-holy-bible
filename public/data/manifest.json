@@ -136,12 +136,12 @@
       "url": "/data/books/Ezra.json"
     },
     {
-      "bytes": 440144,
+      "bytes": 432502,
       "cuvVerseCount": 406,
       "id": "Neh",
       "kjvVerseCount": 406,
-      "sha256": "f8e44f94538ce1187ea0b0a71be7ed01cf6531ac796c453d26ca2141503dd341",
-      "textCardCount": 144,
+      "sha256": "a076b55c5d0335d8051fc1b26681b46d4c993a71a5c4bf0d210b4565361849be",
+      "textCardCount": 142,
       "url": "/data/books/Neh.json"
     },
     {

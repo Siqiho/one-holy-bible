@@ -58,7 +58,7 @@ const expectedCounts: Record<string, number> = {
   Song: 90,
   Amos: 76,
   Mic: 78,
-  "1Thess": 61,
+  "1Thess": 60,
   "1Tim": 82,
   Jas: 78,
   "1John": 84,

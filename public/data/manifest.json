@@ -199,12 +199,12 @@
       "url": "/data/books/Song.json"
     },
     {
-      "bytes": 1474786,
+      "bytes": 1413041,
       "cuvVerseCount": 1292,
       "id": "Isa",
       "kjvVerseCount": 1292,
-      "sha256": "ca138a77d35da6af269d855b23ec732c66614219bbc75a5378cd098c3ce7c855",
-      "textCardCount": 475,
+      "sha256": "6ebbcf7acfec8015c32b162b8086858b14daa885736693e8338c7093dde7000c",
+      "textCardCount": 454,
       "url": "/data/books/Isa.json"
     },
     {
@@ -361,12 +361,12 @@
       "url": "/data/books/Matt.json"
     },
     {
-      "bytes": 792890,
+      "bytes": 754152,
       "cuvVerseCount": 678,
       "id": "Mark",
       "kjvVerseCount": 678,
-      "sha256": "58c44a90fbc10ca24756b737980fd660ea966fab0c841910f2e12014cc0aecbd",
-      "textCardCount": 260,
+      "sha256": "3849eea2aa6612db51f800956f2ddce170db12b2da080799cb117703d2863ffe",
+      "textCardCount": 247,
       "url": "/data/books/Mark.json"
     },
     {

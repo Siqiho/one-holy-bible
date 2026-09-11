@@ -25,6 +25,7 @@
     "generate:public-data": "node scripts/generatePublicBibleData.mjs --bible src/data/generated/bibleLibrary.json --resources src/data/generated/workbenchSyncedResources-v4.json --output public/data --release-version 0.1.0",
     "preview": "vite preview",
     "test": "vitest run",
+    "test:ci": "vitest run --exclude '**/{workbenchSyncedResources,studyBibleScriptureCoverage,bookIntroView,comprehensiveCommentaryScriptureCoverage,genesisCommentaryResources,genesisResourceAudit,sampleBible,doreChapterArtwork,auditGenesisResourceCards,syncWorkbenchResources,migrateCodexNames,bibleSearch}.test.*' --exclude 'src/components/Workbench.test.tsx'",
     "test:watch": "vitest",
     "tauri": "tauri",
     "validate:public-data": "node scripts/generatePublicBibleData.mjs --validate-only public/data && node scripts/validatePublicRepository.mjs"

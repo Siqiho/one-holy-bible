@@ -1,0 +1,67 @@
+{
+  "auditDate": "2026-09-12",
+  "baseline": "cursor/ohb-jeremiah-1to1-hold-queue-a460",
+  "uiTotals": {
+    "zonghe": 29476,
+    "yanxiu": 16270,
+    "qidaben": 9521,
+    "ocr": 254,
+    "story": 98,
+    "xinxi": 8,
+    "sum": 55627
+  },
+  "publicPackage": {
+    "total": 10410,
+    "zonghe": 858,
+    "yanxiu": 9403,
+    "qidaben": 0,
+    "ocr": 146,
+    "story": 0,
+    "xinxi": 3,
+    "other": 0
+  },
+  "isolationLedger": {
+    "total": 18397,
+    "zonghe": 18387,
+    "yanxiu": 10,
+    "qidaben": 0,
+    "ocr": 0,
+    "story": 0,
+    "xinxi": 0,
+    "publicOverlap": 0
+  },
+  "johnCardLedger": {
+    "total": 1533,
+    "zonghe": 765,
+    "yanxiu": 495,
+    "qidaben": 267,
+    "ocr": 1,
+    "story": 5,
+    "xinxi": 0,
+    "qidabenPlacementOrphan": 1
+  },
+  "genesisStableCommentary": {
+    "total": 1625,
+    "zonghe": 866,
+    "yanxiu": 751,
+    "xinxi": 8
+  },
+  "snapshotUnionUnique": {
+    "total": 30539,
+    "zonghe": 19861,
+    "yanxiu": 10250,
+    "qidaben": 268,
+    "ocr": 147,
+    "story": 5,
+    "xinxi": 8
+  },
+  "coverageVersusUi": {
+    "zonghe": { "public": 858, "hold": 19003, "missing": 9615 },
+    "yanxiu": { "public": 9403, "hold": 847, "missing": 6020 },
+    "qidaben": { "public": 0, "hold": 268, "missing": 9253 },
+    "ocr": { "public": 146, "hold": 1, "missing": 107 },
+    "story": { "public": 0, "hold": 5, "missing": 93 },
+    "xinxi": { "public": 3, "hold": 5, "missing": 0 }
+  },
+  "codeFix": "none"
+}

@@ -94,9 +94,11 @@
 
 已跑：
 
-- `vitest run` 阿摩司书 / 弥迦书及既有公开审计 / `publicData` / `publicBibleData`。
+- `vitest run src/data/*PublicCardAudit.test.ts scripts/generatePublicBibleData.test.mjs`：44 files, 147/147 通过。
+- `vitest run` 阿摩司书 / 弥迦书及雅歌 / 歌罗西书 / 何西阿书 / 撒迦利亚书 / 创世记 / 路加 / `publicData` / `publicBibleData`：10 files, 69/69 通过。
 - `node scripts/generatePublicBibleData.mjs --validate-only public/data`：66 卷、公开文字卡 10,115、无不安全串。
 - `node scripts/validatePublicRepository.mjs`：通过。
+- 原始输出见同目录 `validate.txt`。
 
 未做浏览器点选：本快照没有 `workbenchSyncedResources-v4.json`，本地 `App.tsx` 不走 `loadPublicBook("Mic")`，因此无法在本环境用阅读页点开这些公开卡。对照与修补都落在公开数据包和台账 JSONL。
 

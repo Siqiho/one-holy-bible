@@ -42,6 +42,10 @@ const forbiddenFragments = [
 const expectedCounts: Record<string, number> = {
   Gen: 1134,
   Deut: 239,
+  "1Chr": 70,
+  Lam: 103,
+  Gal: 101,
+  "2Cor": 101,
   Judg: 117,
   Prov: 227,
   Acts: 462,

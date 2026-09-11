@@ -487,12 +487,12 @@
       "url": "/data/books/1Tim.json"
     },
     {
-      "bytes": 166581,
+      "bytes": 162224,
       "cuvVerseCount": 83,
       "id": "2Tim",
       "kjvVerseCount": 83,
-      "sha256": "486192ac703a73d65f83667f5b06feca3d06db07e1fba591a9abb8985af0446b",
-      "textCardCount": 62,
+      "sha256": "39d4c408f52a2164adee92397b880456ee608b83bdc53227b7c581d5204a0843",
+      "textCardCount": 60,
       "url": "/data/books/2Tim.json"
     },
     {
@@ -532,12 +532,12 @@
       "url": "/data/books/Jas.json"
     },
     {
-      "bytes": 200072,
+      "bytes": 190508,
       "cuvVerseCount": 105,
       "id": "1Pet",
       "kjvVerseCount": 105,
-      "sha256": "ca9a360af96cad26a18c572e7a9900a93c2886be95dd5bbf935eb7d7544b0ea4",
-      "textCardCount": 62,
+      "sha256": "5733a6e54ad4e318412ed2af882c045b2da250d1eb0b9f295ae1726fa744e82e",
+      "textCardCount": 61,
       "url": "/data/books/1Pet.json"
     },
     {

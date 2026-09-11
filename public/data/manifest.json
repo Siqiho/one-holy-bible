@@ -514,12 +514,12 @@
       "url": "/data/books/Phlm.json"
     },
     {
-      "bytes": 456655,
+      "bytes": 447423,
       "cuvVerseCount": 303,
       "id": "Heb",
       "kjvVerseCount": 303,
-      "sha256": "291033a240b18188de2c3c2497aa4686ab9af892947c89a2885c1655f9e2476a",
-      "textCardCount": 136,
+      "sha256": "26bd476d18e374c48b9aab2a6b242d4502182c7192fd8e90f537301157ab3ebf",
+      "textCardCount": 132,
       "url": "/data/books/Heb.json"
     },
     {

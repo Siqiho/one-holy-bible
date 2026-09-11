@@ -84,14 +84,14 @@
 
 ## 5. 下一卷
 
-约书亚记 + 列王纪下已在本跑收束。下一高价值未审公开研修本面是**希伯来书**（公开 136，隔离 CMC 225）。士师记（119 / 隔离 449）与历代志下（119 / 隔离 590）为下一历史书备选。
+列王纪下提前收束后，本跑已按备选卷展开**希伯来书**（公开 136→132，隔离 CMC 225 ledger-only）。见 `docs/verification/2026-09-11-hebrews-1to1-hold-queue/report.md`。
 
 ## 6. 验证
 
 已跑：
 
-- `vitest run` 列王纪下 / 约书亚记 / 尼希米记 / 启示录 / 列王纪上 / 撒母耳记下 / 约伯记 / 以西结 / 哥林多前书 / 箴言 / 出埃及记 / 撒母耳记上 / 申命记 / 罗马书 / 以赛亚 / 马可 / 马太 / 路加 / 使徒行传 / 耶利米 / 诗篇 / 创世记 / 约翰 / `publicData` / `publicBibleData`：114/114 通过。
-- `node scripts/generatePublicBibleData.mjs --validate-only public/data`：66 卷、公开文字卡 10,181、无不安全串。
+- `vitest run` 希伯来书 / 列王纪下 / 约书亚记 / 尼希米记 / 启示录 / 列王纪上 / 撒母耳记下 / 约伯记 / 以西结 / 哥林多前书 / 箴言 / 出埃及记 / 撒母耳记上 / 申命记 / 罗马书 / 以赛亚 / 马可 / 马太 / 路加 / 使徒行传 / 耶利米 / 诗篇 / 创世记 / 约翰 / `publicData` / `publicBibleData`：117/117 通过。
+- `node scripts/generatePublicBibleData.mjs --validate-only public/data`：66 卷、公开文字卡 10,177、无不安全串。
 - `node scripts/validatePublicRepository.mjs`：通过。
 
 未做浏览器点选：本快照没有 `workbenchSyncedResources-v4.json`，本地阅读页不走 `loadPublicBook("2Kgs")`。

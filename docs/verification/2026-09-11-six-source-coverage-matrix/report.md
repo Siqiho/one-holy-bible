@@ -1,9 +1,9 @@
 # 信息源覆盖矩阵（六类全库口径对账）
 
 - 复核日期：2026-09-11
-- 对照快照：`cursor/ohb-josh-1to1-hold-queue-de43`（约翰 / 创世记 / 诗篇 / 耶利米 / 路加 / 使徒行传 / 马太 / 以赛亚 / 马可 / 申命记 / 罗马书 / 撒母耳记上 / 出埃及记 / 箴言 / 哥林多前书 / 以西结 / 约伯记 / 撒母耳记下 / 列王纪上 / 启示录 / 尼希米记 / 约书亚记 / 列王纪下已审）
+- 对照快照：`cursor/ohb-josh-1to1-hold-queue-de43`（约翰 / 创世记 / 诗篇 / 耶利米 / 路加 / 使徒行传 / 马太 / 以赛亚 / 马可 / 申命记 / 罗马书 / 撒母耳记上 / 出埃及记 / 箴言 / 哥林多前书 / 以西结 / 约伯记 / 撒母耳记下 / 列王纪上 / 启示录 / 尼希米记 / 约书亚记 / 列王纪下 / 希伯来书已审）
 - 用户硬要求：OHB 卡片审核除按书卷 1:1 外，必须覆盖全部信息源并核对数量口径
-- 应用对照面：`public/data/books/*.json`（公开 v0.1.0，10,181 张文字卡）
+- 应用对照面：`public/data/books/*.json`（公开 v0.1.0，10,177 张文字卡）
 - 隔离包：`local-audit-pack/no-explain-isolation-20260731/card候选清单.jsonl`（18,397）
 - 约翰卷级台账：`local-audit-pack/john-gospel-20260909/`（card 1,533 + 1 孤儿）
 - 创世记稳定注释：`src/data/generated/genesisCommentaryResources.json`（1,625）
@@ -23,14 +23,14 @@
 | 《圣经的故事》 | `hurlbut-*` | 公开包无 | `hurlbut-bible-story-zh-2013` |
 | 《圣经信息系列》 | `message-*` | `圣经信息系列·创世记1-11章` | `message-genesis-1-11-supplemental` |
 
-公开包现计 10,181 = 研修本 9,174 + CMC 858 + OCR 146 + 信息系列 3。没有启导本，没有故事卡。隔离 ∩ 公开 = ∅。撒母耳记上撤下 14 张，出埃及记再撤下 11 张，箴言再撤下 5 张，哥林多前书再撤下 9 张，以西结再撤下 10 张，约伯记再撤下 1 张，撒母耳记下再撤下 11 张，列王纪上再撤下 10 张，启示录再撤下 8 张，尼希米记再撤下 2 张，约书亚记再撤下 11 张，列王纪下再撤下 5 张。六源标识口径不变，不改写映射。
+公开包现计 10,177 = 研修本 9,170 + CMC 858 + OCR 146 + 信息系列 3。没有启导本，没有故事卡。隔离 ∩ 公开 = ∅。撒母耳记上撤下 14 张，出埃及记再撤下 11 张，箴言再撤下 5 张，哥林多前书再撤下 9 张，以西结再撤下 10 张，约伯记再撤下 1 张，撒母耳记下再撤下 11 张，列王纪上再撤下 10 张，启示录再撤下 8 张，尼希米记再撤下 2 张，约书亚记再撤下 11 张，列王纪下再撤下 5 张，希伯来书再撤下 4 张。六源标识口径不变，不改写映射。
 
 ## 2. 数量对账
 
 | 用户源 | 用户全库 | 公开包 | 隔离包 | 约翰 card 台账 | 创世记稳定注释 | 本快照可见并集 | 对账 |
 | --- | ---: | ---: | ---: | ---: | ---: | ---: | --- |
 | 综合解读 | 29,476 | 858 | 18,387 | 765（156 与隔离重合） | 866（858 已在公开包，1 与隔离重合） | **19,861** | **缺口** 9,615 |
-| 圣经研修本 | 16,270 | 9,174 | 10 | 495（409 已在公开包） | 751（`study-note-*`，另一套本地编码） | **9,270**（只计 `study-bible-*`）；若加 `study-note-*` 则 10,021 | **缺口** |
+| 圣经研修本 | 16,270 | 9,170 | 10 | 495（409 已在公开包） | 751（`study-note-*`，另一套本地编码） | **9,266**（只计 `study-bible-*`）；若加 `study-note-*` 则 10,017 | **缺口** |
 | 圣经启导本 | 9,521 | 0 | 0 | 267 + 1 孤儿 | 0 | **268** | **缺口** 9,253 |
 | OCR 转文字 | 254 | 146 | 0 | 1（已撤出公开包） | 0 | **147** | **缺口** 107 |
 | 圣经的故事 | 98 | 0 | 0 | 5 | 0 | **5** | **缺口** 93 |
@@ -52,8 +52,8 @@
 
 | 源 | 约翰 | 创世记 | 诗篇 | 耶利米 | 路加 | 本类是否已被策略覆盖 |
 | --- | --- | --- | --- | --- | --- | --- |
-| 综合解读 | 156 hold（隔离）+ 609 ledger-only；公开 0 | 858 keep（有解释）；506 hold 撤出公开 | 1,610 hold / ledger-only；公开 0 | 1,006 hold / ledger-only；公开 0 | 144 hold / ledger-only；使徒行传 543 / 马太 143 / 以赛亚 947 / 马可 280 / 申命记 684 / 罗马书 113 / 撒母耳记上 578 / 出埃及记 716 / 箴言 673 / 哥林多前书 241 / 以西结 1007 / 约伯记 848 / 撒母耳记下 495 / 列王纪上 601 / 启示录 232 / 尼希米记 317 / 约书亚记 220 / 列王纪下 520 hold / ledger-only；公开 0 | **是**。有解释才 keep；无解释一律 hold / ledger-only，不抬进公开包 |
-| 研修本 | 公开 409 keep/fix；82 宽范围 hold；4 损坏 hold | 272 keep；1 fix | 421 keep/fix；15 hold | 658 keep/fix；14 hold | 531 keep/fix；27 hold；使徒行传 462 keep/fix、21 hold；马太 430 keep/fix、23 hold；以赛亚 454 keep/fix、21 hold；马可 247 keep/fix、13 hold；申命记 233 keep/fix、11 hold；罗马书 214 keep/fix、16 hold；撒母耳记上 259 keep/fix、14 hold；出埃及记 198 keep/fix、11 hold；箴言 194 keep/fix、5 hold；哥林多前书 183 keep/fix、9 hold；以西结 176 keep/fix、10 hold；约伯记 159 keep/fix、1 hold；撒母耳记下 145 keep/fix、11 hold；列王纪上 143 keep/fix、10 hold；启示录 140 keep/fix、8 hold；尼希米记 142 keep/fix、2 hold；约书亚记 131 keep/fix、11 hold；列王纪下 134 keep/fix、5 hold | **是**。已审卷按 1:1 做 keep/fix/hold；未审卷仍在包内，等待后续书卷轮 |
+| 综合解读 | 156 hold（隔离）+ 609 ledger-only；公开 0 | 858 keep（有解释）；506 hold 撤出公开 | 1,610 hold / ledger-only；公开 0 | 1,006 hold / ledger-only；公开 0 | 144 hold / ledger-only；使徒行传 543 / 马太 143 / 以赛亚 947 / 马可 280 / 申命记 684 / 罗马书 113 / 撒母耳记上 578 / 出埃及记 716 / 箴言 673 / 哥林多前书 241 / 以西结 1007 / 约伯记 848 / 撒母耳记下 495 / 列王纪上 601 / 启示录 232 / 尼希米记 317 / 约书亚记 220 / 列王纪下 520 / 希伯来书 225 hold / ledger-only；公开 0 | **是**。有解释才 keep；无解释一律 hold / ledger-only，不抬进公开包 |
+| 研修本 | 公开 409 keep/fix；82 宽范围 hold；4 损坏 hold | 272 keep；1 fix | 421 keep/fix；15 hold | 658 keep/fix；14 hold | 531 keep/fix；27 hold；使徒行传 462 keep/fix、21 hold；马太 430 keep/fix、23 hold；以赛亚 454 keep/fix、21 hold；马可 247 keep/fix、13 hold；申命记 233 keep/fix、11 hold；罗马书 214 keep/fix、16 hold；撒母耳记上 259 keep/fix、14 hold；出埃及记 198 keep/fix、11 hold；箴言 194 keep/fix、5 hold；哥林多前书 183 keep/fix、9 hold；以西结 176 keep/fix、10 hold；约伯记 159 keep/fix、1 hold；撒母耳记下 145 keep/fix、11 hold；列王纪上 143 keep/fix、10 hold；启示录 140 keep/fix、8 hold；尼希米记 142 keep/fix、2 hold；约书亚记 131 keep/fix、11 hold；列王纪下 134 keep/fix、5 hold；希伯来书 132 keep/fix、4 hold | **是**。已审卷按 1:1 做 keep/fix/hold；未审卷仍在包内，等待后续书卷轮 |
 | 启导本 | 267+1 全部 hold | 沿用约翰 leftover hold | 沿用 | 沿用 | 沿用；路加公开 0，无路加启导本台账 | **是**。整类 hold，公开包 0 |
 | OCR | 1 hold（已撤） | 1 keep（`image-text-01-创世记-codex-pdf-p102-img057`）；另 3 张跨卷损坏 hold | 10 hold-as-class（无台账） | 本卷 0；跨卷继续 hold-as-class | 本卷 0；跨卷 145 张无台账继续 hold-as-class | **是**。有卷级台账才分源；无台账则整类 hold-as-class。公开 146 = 1 keep + 145 hold-as-class |
 | 圣经的故事 | 5 hold | 沿用 | 沿用 | 沿用 | 沿用；路加公开 0 | **是**。整类 hold，公开包 0 |
@@ -61,7 +61,7 @@
 
 路加本轮只触及研修本公开面 + 路加隔离 CMC。其余四类在路加上的公开交集为 0，策略是沿用既有 hold，不新抬、不新改。
 
-未审公开研修本仍在包内，它们的 keep/fix/hold 要等后续书卷轮，不在本矩阵里假装已经 1:1 审完。撒母耳记上、出埃及记、箴言、哥林多前书、以西结、约伯记、撒母耳记下、列王纪上、启示录、尼希米记、约书亚记与列王纪下已收束。六源映射口径不变。
+未审公开研修本仍在包内，它们的 keep/fix/hold 要等后续书卷轮，不在本矩阵里假装已经 1:1 审完。撒母耳记上、出埃及记、箴言、哥林多前书、以西结、约伯记、撒母耳记下、列王纪上、启示录、尼希米记、约书亚记、列王纪下与希伯来书已收束。六源映射口径不变。
 
 ## 4. 对账收束
 
@@ -92,3 +92,4 @@
 - `docs/verification/2026-09-11-nehemiah-1to1-hold-queue/report.md`
 - `docs/verification/2026-09-11-joshua-1to1-hold-queue/report.md`
 - `docs/verification/2026-09-11-2kings-1to1-hold-queue/report.md`
+- `docs/verification/2026-09-11-hebrews-1to1-hold-queue/report.md`

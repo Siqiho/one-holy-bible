@@ -415,12 +415,12 @@
       "url": "/data/books/1Cor.json"
     },
     {
-      "bytes": 355327,
+      "bytes": 340472,
       "cuvVerseCount": 257,
       "id": "2Cor",
       "kjvVerseCount": 257,
-      "sha256": "bce8916a43a81a8ac781cf02d718e7c41d6a29ee3cf441ffbe13c85ca13a4270",
-      "textCardCount": 105,
+      "sha256": "c9d96f427ab3759ea075ebc4497ada0e4e11cea2b0fa7910bab2c66b1f6bac95",
+      "textCardCount": 101,
       "url": "/data/books/2Cor.json"
     },
     {

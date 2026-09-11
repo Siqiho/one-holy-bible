@@ -10,12 +10,12 @@
       "url": "/data/books/Gen.json"
     },
     {
-      "bytes": 1034187,
+      "bytes": 1004474,
       "cuvVerseCount": 1213,
       "id": "Exod",
       "kjvVerseCount": 1213,
-      "sha256": "348de4c8a09dffd4d60fffc1c9fd93ccf420aa049fd05b978e8a458805d0046c",
-      "textCardCount": 215,
+      "sha256": "b1928f083a9279a27823936290b7ed3789783eb143434d0d95687b4ee2a851ca",
+      "textCardCount": 204,
       "url": "/data/books/Exod.json"
     },
     {
@@ -73,12 +73,12 @@
       "url": "/data/books/Ruth.json"
     },
     {
-      "bytes": 919511,
+      "bytes": 874646,
       "cuvVerseCount": 810,
       "id": "1Sam",
       "kjvVerseCount": 810,
-      "sha256": "1a281d3e99e5d601e03a21d698bd53c577200a709c5bb618e6bcb14e04ed61db",
-      "textCardCount": 275,
+      "sha256": "dc14e8e58db6840318f245a5e6f56b131cf10ca0e0b1f1bcd410715252d07378",
+      "textCardCount": 261,
       "url": "/data/books/1Sam.json"
     },
     {

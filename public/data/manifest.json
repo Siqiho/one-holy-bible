@@ -226,12 +226,12 @@
       "url": "/data/books/Lam.json"
     },
     {
-      "bytes": 988936,
+      "bytes": 962846,
       "cuvVerseCount": 1273,
       "id": "Ezek",
       "kjvVerseCount": 1273,
-      "sha256": "79c8366643d79e4264194da3c55962b505500dfd2b5d090cb6c9d75266fe0d6a",
-      "textCardCount": 186,
+      "sha256": "e91a9a58d74237d912b8b3cbcc8de6a845955d234c766afdebb33b374278b2cf",
+      "textCardCount": 176,
       "url": "/data/books/Ezek.json"
     },
     {

@@ -28,12 +28,12 @@
       "url": "/data/books/Lev.json"
     },
     {
-      "bytes": 791245,
+      "bytes": 770990,
       "cuvVerseCount": 1288,
       "id": "Num",
       "kjvVerseCount": 1288,
-      "sha256": "8e986e4e40239671feaac27c5e9e869fe279954a8f138143c62da9f14224c3b5",
-      "textCardCount": 89,
+      "sha256": "3f48742bc2650c0e0de06460ad40b7bda2e22e32cefe7c4e2e460c3048c0930e",
+      "textCardCount": 88,
       "url": "/data/books/Num.json"
     },
     {
@@ -127,11 +127,11 @@
       "url": "/data/books/2Chr.json"
     },
     {
-      "bytes": 313580,
+      "bytes": 307300,
       "cuvVerseCount": 280,
       "id": "Ezra",
       "kjvVerseCount": 280,
-      "sha256": "951e449dd0af93e47edfcfb874bb21cbdf23876b2442d7204df11725929863ef",
+      "sha256": "0a9c6c5ec49ce93127f16d367b6ad975b23163051a7274a94cbccf5257d6b3d2",
       "textCardCount": 86,
       "url": "/data/books/Ezra.json"
     },

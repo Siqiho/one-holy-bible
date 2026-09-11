@@ -1,12 +1,12 @@
 {
   "books": [
     {
-      "bytes": 3885890,
+      "bytes": 3400192,
       "cuvVerseCount": 1533,
       "id": "Gen",
       "kjvVerseCount": 1533,
-      "sha256": "2cdf9b13dfe8780bbad4b2f4d17c58b123b767fef809228b3b398ea9d0be14dd",
-      "textCardCount": 1640,
+      "sha256": "732c71b5270a7ad650eade8b0f87cc833355539feaa0acc3e50e758340380b11",
+      "textCardCount": 1134,
       "url": "/data/books/Gen.json"
     },
     {
@@ -37,12 +37,12 @@
       "url": "/data/books/Num.json"
     },
     {
-      "bytes": 887251,
+      "bytes": 884849,
       "cuvVerseCount": 959,
       "id": "Deut",
       "kjvVerseCount": 959,
-      "sha256": "5298ab8c3d738ea79f59d9844cdb298784bf42714826636f748661fc54504149",
-      "textCardCount": 251,
+      "sha256": "df03f9d9fb1437f509c22bbef6d1ff9a41e6265f27f3b4fb9382528e3b6fada1",
+      "textCardCount": 250,
       "url": "/data/books/Deut.json"
     },
     {
@@ -55,12 +55,12 @@
       "url": "/data/books/Josh.json"
     },
     {
-      "bytes": 565192,
+      "bytes": 561740,
       "cuvVerseCount": 618,
       "id": "Judg",
       "kjvVerseCount": 618,
-      "sha256": "f71efede51ffc1d2a9e62b805c206f79caf379715ed6a82a24e885d899dffc94",
-      "textCardCount": 123,
+      "sha256": "12ef16c2337e1ebae0d4c89c68889ac88464326ca69660f0eb1399fe8beff942",
+      "textCardCount": 122,
       "url": "/data/books/Judg.json"
     },
     {
@@ -172,12 +172,12 @@
       "url": "/data/books/Ps.json"
     },
     {
-      "bytes": 844619,
+      "bytes": 842318,
       "cuvVerseCount": 915,
       "id": "Prov",
       "kjvVerseCount": 915,
-      "sha256": "ba7933ff5e78029fe2eea9a2056f09b42f5ab00ab0d9659fd8921662aed18f6e",
-      "textCardCount": 233,
+      "sha256": "f402b0f98a9eac5258d11c1188d0e5e81800b097e9535b4d96df69fe459c244d",
+      "textCardCount": 232,
       "url": "/data/books/Prov.json"
     },
     {
@@ -388,12 +388,12 @@
       "url": "/data/books/John.json"
     },
     {
-      "bytes": 1401003,
+      "bytes": 1400048,
       "cuvVerseCount": 1007,
       "id": "Acts",
       "kjvVerseCount": 1007,
-      "sha256": "8ef1b6bd45ca6664551f74c71cbde557940626ded632d14b36064aef41212335",
-      "textCardCount": 484,
+      "sha256": "f3652d5c828070997f69fdf5db6f2fd25165ded0a99d60d12b355e455cacc760",
+      "textCardCount": 483,
       "url": "/data/books/Acts.json"
     },
     {
@@ -442,30 +442,30 @@
       "url": "/data/books/Eph.json"
     },
     {
-      "bytes": 174264,
+      "bytes": 172534,
       "cuvVerseCount": 104,
       "id": "Phil",
       "kjvVerseCount": 104,
-      "sha256": "cf695ae2017d61e1e3ae9776efd4e9f07c4171d46932ce9979ca299ad916b008",
-      "textCardCount": 58,
+      "sha256": "bb34225c692755ecbae4cab269b7a8216940be9671c94225f45191a5b97ac037",
+      "textCardCount": 56,
       "url": "/data/books/Phil.json"
     },
     {
-      "bytes": 211393,
+      "bytes": 210495,
       "cuvVerseCount": 95,
       "id": "Col",
       "kjvVerseCount": 95,
-      "sha256": "63bd6d0ad04bf1370a8cd81bda6419d6b1604ce9ccf1ca2a149e7eb68ec7f8b2",
-      "textCardCount": 78,
+      "sha256": "1ea826aa8918e6096a58d000b60e21f8e887103da420dc89963d047e1f635f50",
+      "textCardCount": 77,
       "url": "/data/books/Col.json"
     },
     {
-      "bytes": 179963,
+      "bytes": 175287,
       "cuvVerseCount": 89,
       "id": "1Thess",
       "kjvVerseCount": 89,
-      "sha256": "604263399d019fd784b6c195a6899fba688eb324d9ae87cb6fb705ac9361e6f6",
-      "textCardCount": 66,
+      "sha256": "b17d96f84f9be65f8650c8af2ecc7205f68d6b12b02eb66a5e9ad3d1e3de63c6",
+      "textCardCount": 61,
       "url": "/data/books/1Thess.json"
     },
     {
@@ -478,12 +478,12 @@
       "url": "/data/books/2Thess.json"
     },
     {
-      "bytes": 230444,
+      "bytes": 229585,
       "cuvVerseCount": 113,
       "id": "1Tim",
       "kjvVerseCount": 113,
-      "sha256": "3502da01f9d4797d8c7bb6e79bd1323b0f4f9811c805d7f9dc4e5c8f03d3ed17",
-      "textCardCount": 90,
+      "sha256": "4e2d464896911c0a5f2a2231a2208110cef5d62da070ee3c021fd60b89911a64",
+      "textCardCount": 89,
       "url": "/data/books/1Tim.json"
     },
     {

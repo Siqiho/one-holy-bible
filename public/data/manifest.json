@@ -208,12 +208,12 @@
       "url": "/data/books/Isa.json"
     },
     {
-      "bytes": 1751327,
+      "bytes": 1723998,
       "cuvVerseCount": 1364,
       "id": "Jer",
       "kjvVerseCount": 1364,
-      "sha256": "6ba87bf6715d02f5890c85bdbb15f220865bb11843e51a2c447abc94301297fa",
-      "textCardCount": 672,
+      "sha256": "6a0d3966690b8308e06ca9e427e57fed9f81855ab861c5356b13fb1624e56d8d",
+      "textCardCount": 658,
       "url": "/data/books/Jer.json"
     },
     {

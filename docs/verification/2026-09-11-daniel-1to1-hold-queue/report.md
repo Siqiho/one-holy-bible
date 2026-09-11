@@ -80,7 +80,7 @@
 
 已跑：
 
-- `vitest run` 撒迦利亚书 / 何西阿书 / 但以理书及既有公开审计 / `publicData` / `publicBibleData`：validate-only 批次见提交后记录。
+- `vitest run` 撒迦利亚书 / 何西阿书 / 但以理书及既有公开审计 / `publicData` / `publicBibleData`：36 files, 147/147 通过。
 - `node scripts/generatePublicBibleData.mjs --validate-only public/data`：66 卷、公开文字卡 10,143、无不安全串。
 - `node scripts/validatePublicRepository.mjs`：通过。
 

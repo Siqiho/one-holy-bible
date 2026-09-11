@@ -76,4 +76,10 @@
 
 ## 6. 验证
 
-见本跑但以理书报告后续记录。未做浏览器点选：本快照没有 `workbenchSyncedResources-v4.json`。
+已跑：
+
+- `vitest run` 撒迦利亚书 / 何西阿书 / 但以理书及既有公开审计 / `publicData` / `publicBibleData`：36 files, 147/147 通过。
+- `node scripts/generatePublicBibleData.mjs --validate-only public/data`：66 卷、公开文字卡 10,143、无不安全串。
+- `node scripts/validatePublicRepository.mjs`：通过。
+
+未做浏览器点选：本快照没有 `workbenchSyncedResources-v4.json`。

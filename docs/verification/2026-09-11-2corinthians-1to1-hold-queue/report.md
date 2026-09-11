@@ -88,4 +88,10 @@
 
 ## 6. 验证
 
-见本跑历代志上报告后续记录。未做浏览器点选：本快照没有 `workbenchSyncedResources-v4.json`。
+已跑：
+
+- `vitest run` 历代志上 / 耶利米哀歌 / 加拉太书 / 哥林多后书及既有公开审计 / `publicData` / `publicBibleData`：33 files, 138/138 通过。
+- `node scripts/generatePublicBibleData.mjs --validate-only public/data`：66 卷、公开文字卡 10,148、无不安全串。
+- `node scripts/validatePublicRepository.mjs`：通过。
+
+未做浏览器点选：本快照没有 `workbenchSyncedResources-v4.json`。

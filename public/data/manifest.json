@@ -37,12 +37,12 @@
       "url": "/data/books/Num.json"
     },
     {
-      "bytes": 884849,
+      "bytes": 857078,
       "cuvVerseCount": 959,
       "id": "Deut",
       "kjvVerseCount": 959,
-      "sha256": "df03f9d9fb1437f509c22bbef6d1ff9a41e6265f27f3b4fb9382528e3b6fada1",
-      "textCardCount": 250,
+      "sha256": "0650f5b105220f4113b7cb5dd591569f4dbfa932360aff33766394c74f09b025",
+      "textCardCount": 239,
       "url": "/data/books/Deut.json"
     },
     {
@@ -397,12 +397,12 @@
       "url": "/data/books/Acts.json"
     },
     {
-      "bytes": 633910,
+      "bytes": 595488,
       "cuvVerseCount": 433,
       "id": "Rom",
       "kjvVerseCount": 433,
-      "sha256": "65450b624f00866a4063f5d53321e8c8a5d5df1f69e94c94fc90c40b67fd08c7",
-      "textCardCount": 231,
+      "sha256": "560248ce1f2b9bb3815ae5dc02476205f1d1f7268d076c2474b85e11828b06c9",
+      "textCardCount": 215,
       "url": "/data/books/Rom.json"
     },
     {

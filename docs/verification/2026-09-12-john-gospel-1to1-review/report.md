@@ -214,3 +214,13 @@
 公开包与台账的关系可以收束为：
 
 > 约翰福音 v0.1.0 公开文字卡 = 研修本单节/短注，减去 5 张已确认损坏卡；导论保留并挂在既有归位经文上。CMC、启导本、故事、OCR、宽范围研修本全部不进入公开阅读面。
+
+## 8. 验证
+
+已跑：
+
+- `vitest run src/data/johnGospelPublicCardAudit.test.ts src/data/publicData.test.ts src/data/publicBibleData.test.ts`：47/47 通过。
+- `node scripts/generatePublicBibleData.mjs --validate-only public/data`：66 卷、公开文字卡 10,958（约翰 409）、无不安全串。
+- `node scripts/validatePublicRepository.mjs`：通过。
+
+未做浏览器点选：本快照没有 `workbenchSyncedResources-v4.json`，本地 `App.tsx` 不走 `loadPublicBook("John")`，因此无法在本环境用阅读页点开这 409 张卡。对照与修补都落在公开数据包和台账 JSONL。

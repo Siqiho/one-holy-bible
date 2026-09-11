@@ -148,6 +148,17 @@ UI − 268 = **9,253（97.2%）缺失**。约翰轮已整类 hold，本轮不抬
 
 ## 5. 验证
 
-锁计数测试：`src/data/sixSourceCoverageAudit.test.ts`（UI 常数、公开 10,410 分源、隔离 18,397 分源、约翰 1,533 分源、信息系列 8=8、隔离 ∩ 公开 = ∅）。
+已跑（本快照可执行）：
+
+- `vitest run src/data/sixSourceCoverageAudit.test.ts` 及约翰 / 创世记 / 诗篇 / 耶利米公开审计 + `publicData` / `publicBibleData`：**7 files / 59 tests 通过**。
+- `npm run validate:public-data`：66 卷、公开文字卡 **10,410**、无不安全串。
+- 锁计数：UI 六源合计 55,627；公开分源 9,403 / 858 / 0 / 146 / 0 / 3；隔离 18,397；约翰 1,533；信息系列 8=8；隔离 ∩ 公开 = ∅。
+
+整仓 `npm test` 仍会因缺本地资源失败（与前几轮相同，**不是本轮引入**）：
+
+- 无 `workbenchSyncedResources-v4.json`
+- 无 `src/assets/resources/genesis/images/cmc-01`
+- 无 `public/resources/dore/`
+- 无 `comprehensiveCommentaryResources.json`
 
 本报告只依据仓库快照。未读取 Mac `Resources/`，未假设 Edit API 可用，未把 `/Users` 路径写入公开包。

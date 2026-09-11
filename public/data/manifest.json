@@ -199,12 +199,12 @@
       "url": "/data/books/Song.json"
     },
     {
-      "bytes": 1474786,
+      "bytes": 1413041,
       "cuvVerseCount": 1292,
       "id": "Isa",
       "kjvVerseCount": 1292,
-      "sha256": "ca138a77d35da6af269d855b23ec732c66614219bbc75a5378cd098c3ce7c855",
-      "textCardCount": 475,
+      "sha256": "6ebbcf7acfec8015c32b162b8086858b14daa885736693e8338c7093dde7000c",
+      "textCardCount": 454,
       "url": "/data/books/Isa.json"
     },
     {

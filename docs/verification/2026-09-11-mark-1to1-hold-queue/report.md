@@ -75,4 +75,10 @@
 
 ## 6. 验证
 
-与以赛亚同一组公开卡审计测试加 `markPublicCardAudit.test.ts`，以及 `generatePublicBibleData --validate-only` / `validatePublicRepository.mjs`。
+已跑：
+
+- `vitest run` 以赛亚 / 马可 / 马太 / 路加 / 使徒行传 / 耶利米 / 诗篇 / 创世记 / 约翰 / `publicData` / `publicBibleData`：72/72 通过。
+- `node scripts/generatePublicBibleData.mjs --validate-only public/data`：66 卷、公开文字卡 10,305、无不安全串。
+- `node scripts/validatePublicRepository.mjs`：通过。
+
+未做浏览器点选：本快照没有 `workbenchSyncedResources-v4.json`。GitHub `verify` 全量仍会因缺创世记资源 / v4 / `rg` 失败；失败面不读马可公开包。

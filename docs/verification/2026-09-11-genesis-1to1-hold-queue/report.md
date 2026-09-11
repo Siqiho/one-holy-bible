@@ -168,8 +168,12 @@
 
 已跑：
 
-- `vitest run src/data/genesisPublicCardAudit.test.ts src/data/johnGospelPublicCardAudit.test.ts src/data/publicData.test.ts src/data/publicBibleData.test.ts`
-- `node scripts/generatePublicBibleData.mjs --validate-only public/data`
-- `node scripts/validatePublicRepository.mjs`
+- `vitest run src/data/genesisPublicCardAudit.test.ts src/data/johnGospelPublicCardAudit.test.ts src/data/publicData.test.ts src/data/publicBibleData.test.ts`：50/50 通过。
+- `node scripts/generatePublicBibleData.mjs --validate-only public/data`：66 卷、公开文字卡 10,439、无不安全串。
+- `node scripts/validatePublicRepository.mjs`：通过。
+
+未跑（本快照缺本地图片资源，与本轮公开包修改无关）：
+
+- `genesisCommentaryResources.test.ts` / `genesisResourceAudit.test.ts`：缺 `src/assets/resources/genesis/images/cmc-01`。
 
 未做浏览器点选：本快照没有 `workbenchSyncedResources-v4.json`，本地 `App.tsx` 不走 `loadPublicBook`，因此无法在本环境用阅读页点开这些公开卡。对照与修补都落在公开数据包和台账 JSONL。

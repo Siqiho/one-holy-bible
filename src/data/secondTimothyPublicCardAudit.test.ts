@@ -1,0 +1,165 @@
+import { existsSync, readdirSync, readFileSync } from "node:fs";
+import { resolve } from "node:path";
+import { describe, expect, it } from "vitest";
+
+import { BIBLE_BOOKS } from "../domain/bibleBooks";
+
+interface PublicCard {
+  id: string;
+  body?: string;
+  title?: string;
+  primaryAnchor?: string;
+  verses?: string[];
+  type?: string;
+  summary?: string;
+  searchText?: string;
+}
+
+interface PublicBookPayload {
+  bookId: string;
+  textCards: PublicCard[];
+}
+
+const booksDir = resolve(__dirname, "../../public/data/books");
+const isolationPath = resolve(__dirname, "../../local-audit-pack/no-explain-isolation-20260731/card候选清单.jsonl");
+const johnPackDir = resolve(__dirname, "../../local-audit-pack/john-gospel-20260909");
+
+const heldStudyBible = [
+  "study-bible-2tim-1-12-p004-n016",
+  "study-bible-2tim-4-16-p009-n050",
+];
+
+const forbiddenFragments = [
+  "保全他所交话我的",
+  "tenparathekenmou",
+  "上帝会保守保《和修》注",
+  "另见靡5:18-20注",
+  "在凯撒面前的初他这样做",
+  "机械地把生活分灵\"和\"属世\"",
+  "甚至被看力，\"属灵\"的某些事情",
+  "导致他法完成使命",
+  "当面责备彼得（加2:01）",
+  "没有益处，和《提摩太前书》一样，这里所关教导",
+  "尤指青年人特有的一欲望",
+  "追求正的事情（参提前6:11-12注）",
+  "对于不断圣和持守真道都是至关重要的",
+  "有些解经家认，这些人既然不明白真道",
+  "始祖犯罪（创了章）",
+  "保的预言：在\"末后的日子\"",
+  "鼓吹虚伪的克已，",
+  "受苦是保罗待奉中的軍要内容",
+  "只会使人陷人无意义的争论",
+  "9［启22:20］",
+  "能使人有得救的智感（3:15）",
+  "里面的\"全部*内容",
+  "这节经文通常应用士所有信徒",
+  "特指顶备提摩太，便他当保罗不在时",
+  "应用在特的情况中",
+  "嘱附并提醒提摩太",
+  "责备人，營戒人，劝勉人",
+  "对保罗来说道人传讲的信息内容",
+  "\"传福音者\"里和《圣经》其他书卷中",
+  "太5:12,46,6:1-6,16-18,10:41-42：奖赏的行为",
+  "（林12:8.9）",
+  "（9节\"紧地\"赶到罗马",
+  "《提摩太前、书》",
+  "有许多否《提多书》是保罗著作的学者",
+  "却肯定保罗是《摩太后书》的作者",
+  "保罗知道自己即将离（4:6-8）",
+  "这也世在情理之中",
+  "《《圣经）概述》",
+  "生活和侍.奉中始终听从",
+  "圣主后303540455055606570经文集",
+  "必须坚决抵制。1:8,12,2:3.9,3:01-12",
+];
+
+function loadBook(bookId: string): PublicBookPayload {
+  return JSON.parse(readFileSync(resolve(booksDir, `${bookId}.json`), "utf8")) as PublicBookPayload;
+}
+
+function loadJsonl(path: string): Array<Record<string, unknown>> {
+  return readFileSync(path, "utf8")
+    .split(/\r?\n/)
+    .filter((line) => line.trim().length > 0)
+    .map((line) => JSON.parse(line) as Record<string, unknown>);
+}
+
+function verseIdsFor(bookId: string): Set<string> {
+  const book = BIBLE_BOOKS.find((item) => item.id === bookId);
+  return new Set(
+    (book?.verseCounts ?? []).flatMap((verseCount, chapterIndex) => (
+      Array.from({ length: verseCount }, (_, verseIndex) => `${bookId}.${chapterIndex + 1}.${verseIndex + 1}`)
+    )),
+  );
+}
+
+describe("2 Timothy public card audit and isolation hold-queue", () => {
+  const payload = loadBook("2Tim");
+
+  it("keeps the public 2 Timothy package text-only, verse-mapped, and isolation-filtered", () => {
+    expect(payload.bookId).toBe("2Tim");
+    expect(payload.textCards).toHaveLength(60);
+    expect(payload.textCards.every((card) => card.type === "commentary" || card.type === "note")).toBe(true);
+
+    const mix = { studyBible: 0, ocr: 0, cmc: 0, other: 0 };
+    const verseIds = verseIdsFor("2Tim");
+    for (const card of payload.textCards) {
+      const anchors = [card.primaryAnchor, ...(card.verses ?? [])].filter((value): value is string => Boolean(value));
+      expect(anchors.length, card.id).toBeGreaterThan(0);
+      expect(anchors.every((anchor) => verseIds.has(anchor)), card.id).toBe(true);
+      if (card.id.startsWith("study-bible-")) mix.studyBible += 1;
+      else if (card.id.startsWith("image-text-")) mix.ocr += 1;
+      else if (card.id.startsWith("cmc-")) mix.cmc += 1;
+      else mix.other += 1;
+    }
+    expect(mix).toEqual({ studyBible: 60, ocr: 0, cmc: 0, other: 0 });
+  });
+
+  it("does not republish confirmed mid-cut or garbage 2 Timothy cards", () => {
+    const ids = new Set(payload.textCards.map((card) => card.id));
+    for (const id of heldStudyBible) {
+      expect(ids.has(id), id).toBe(false);
+    }
+
+    const blob = payload.textCards.map((card) => `${card.title ?? ""}\n${card.body ?? ""}\n${card.summary ?? ""}\n${card.searchText ?? ""}`).join("\n");
+    for (const fragment of forbiddenFragments) {
+      expect(blob.includes(fragment), fragment).toBe(false);
+    }
+  });
+
+  it("keeps isolation CMC and John leftover streams out of the public package when audit packs are present", () => {
+    if (!existsSync(isolationPath)) return;
+
+    const publicIds = new Set<string>();
+    for (const file of readdirSync(booksDir).filter((name) => name.endsWith(".json"))) {
+      const book = JSON.parse(readFileSync(resolve(booksDir, file), "utf8")) as PublicBookPayload;
+      for (const card of book.textCards) publicIds.add(card.id);
+    }
+
+    const isolation = loadJsonl(isolationPath);
+    const leaked = isolation
+      .map((row) => String(row.commentary_key ?? ""))
+      .filter((id) => publicIds.has(id));
+    expect(leaked).toEqual([]);
+
+    const timIsolation = isolation
+      .map((row) => String(row.commentary_key ?? ""))
+      .filter((id) => /^cmc-2tim-\d/.test(id));
+    expect(timIsolation).toHaveLength(21);
+    expect(timIsolation.some((id) => publicIds.has(id))).toBe(false);
+
+    const petIsolation = isolation
+      .map((row) => String(row.commentary_key ?? ""))
+      .filter((id) => /^cmc-1pet-\d/.test(id));
+    expect(petIsolation).toHaveLength(71);
+    expect(petIsolation.some((id) => publicIds.has(id))).toBe(false);
+
+    if (!existsSync(johnPackDir)) return;
+    const johnCards = loadJsonl(resolve(johnPackDir, "card候选清单.jsonl"));
+    const johnOcr = johnCards
+      .filter((row) => String(row.commentary_key).startsWith("image-text-"))
+      .map((row) => String(row.commentary_key));
+    expect(johnOcr).toEqual(["image-text-43-约翰福音-codex-pdf-p019-img004"]);
+    expect(publicIds.has(johnOcr[0])).toBe(false);
+  });
+});

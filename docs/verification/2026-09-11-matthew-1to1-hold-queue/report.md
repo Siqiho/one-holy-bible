@@ -162,4 +162,12 @@
 
 ## 6. 验证
 
-已跑公开卡审计测试与 `generatePublicBibleData --validate-only`。GitHub `verify` 全量仍会因本快照缺创世记资源 / v4 / `rg` 失败；失败面不读马太公开包，不补造真源。
+已跑：
+
+- `vitest run src/data/matthewPublicCardAudit.test.ts src/data/lukePublicCardAudit.test.ts src/data/actsPublicCardAudit.test.ts src/data/jeremiahPublicCardAudit.test.ts src/data/psalmsPublicCardAudit.test.ts src/data/genesisPublicCardAudit.test.ts src/data/johnGospelPublicCardAudit.test.ts src/data/publicData.test.ts src/data/publicBibleData.test.ts`：66/66 通过。
+- `node scripts/generatePublicBibleData.mjs --validate-only public/data`：66 卷、公开文字卡 10,339、无不安全串。
+- `node scripts/validatePublicRepository.mjs`：通过。
+
+未做浏览器点选：本快照没有 `workbenchSyncedResources-v4.json`，本地 `App.tsx` 不走 `loadPublicBook("Matt")`，因此无法在本环境用阅读页点开这些公开卡。对照与修补都落在公开数据包和台账 JSONL。
+
+GitHub `verify` 全量仍会因本快照缺创世记资源 / v4 / `rg` 失败；失败面不读马太公开包，不补造真源。

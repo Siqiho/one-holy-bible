@@ -190,12 +190,12 @@
       "url": "/data/books/Eccl.json"
     },
     {
-      "bytes": 230064,
+      "bytes": 221963,
       "cuvVerseCount": 117,
       "id": "Song",
       "kjvVerseCount": 117,
-      "sha256": "adf4ee80f18abbe87aab35d7df9f57f552a56a100f6ef936b7e1b25514663c08",
-      "textCardCount": 91,
+      "sha256": "31eeb1fe1068cf8d9df37b99547c1a39c50975a9b1cfd10f3b7068f2c71c96b0",
+      "textCardCount": 90,
       "url": "/data/books/Song.json"
     },
     {
@@ -451,12 +451,12 @@
       "url": "/data/books/Phil.json"
     },
     {
-      "bytes": 210495,
+      "bytes": 194221,
       "cuvVerseCount": 95,
       "id": "Col",
       "kjvVerseCount": 95,
-      "sha256": "1ea826aa8918e6096a58d000b60e21f8e887103da420dc89963d047e1f635f50",
-      "textCardCount": 77,
+      "sha256": "3fc123bab23bfcd7923df702bba340dcf360caca63526b33a5989bb26dd3516a",
+      "textCardCount": 72,
       "url": "/data/books/Col.json"
     },
     {

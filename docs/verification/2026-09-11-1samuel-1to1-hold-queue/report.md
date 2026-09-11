@@ -149,7 +149,7 @@
 
 已跑：
 
-- `vitest run` 撒母耳记上 / 申命记 / 罗马书 / 以赛亚 / 马可 / 马太 / 路加 / 使徒行传 / 耶利米 / 诗篇 / 创世记 / 约翰 / `publicData` / `publicBibleData`
+- `vitest run` 撒母耳记上 / 申命记 / 罗马书 / 以赛亚 / 马可 / 马太 / 路加 / 使徒行传 / 耶利米 / 诗篇 / 创世记 / 约翰 / `publicData` / `publicBibleData`：81/81 通过。
 - `node scripts/generatePublicBibleData.mjs --validate-only public/data`：66 卷、公开文字卡 10,264、无不安全串。
 - `node scripts/validatePublicRepository.mjs`：通过。
 

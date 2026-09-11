@@ -136,12 +136,12 @@
       "url": "/data/books/Ezra.json"
     },
     {
-      "bytes": 440144,
+      "bytes": 432526,
       "cuvVerseCount": 406,
       "id": "Neh",
       "kjvVerseCount": 406,
-      "sha256": "f8e44f94538ce1187ea0b0a71be7ed01cf6531ac796c453d26ca2141503dd341",
-      "textCardCount": 144,
+      "sha256": "1a689b97ca209f7bd6ad0b5ae48858d8a6649de9d8a3f8ed3874da5bb897f8c3",
+      "textCardCount": 142,
       "url": "/data/books/Neh.json"
     },
     {
@@ -586,12 +586,12 @@
       "url": "/data/books/Jude.json"
     },
     {
-      "bytes": 533054,
+      "bytes": 489057,
       "cuvVerseCount": 404,
       "id": "Rev",
       "kjvVerseCount": 404,
-      "sha256": "13a44bb5fab354238a9feae598b918f63d4d659ded6ae2d1c81706413d456343",
-      "textCardCount": 148,
+      "sha256": "9672e95d1c441f3fce938e914ead86303661cd78882111cdfc35f93854de4045",
+      "textCardCount": 140,
       "url": "/data/books/Rev.json"
     }
   ],

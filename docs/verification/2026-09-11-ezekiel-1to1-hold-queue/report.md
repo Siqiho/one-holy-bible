@@ -136,13 +136,13 @@
 
 ## 5. 下一卷
 
-以西结提前收束后，下一高价值未审公开研修本面是**约伯记**（公开 160，隔离 CMC 848，公开 OCR 6 hold-as-class）。撒母耳记下（156 / 隔离 495）为下一历史书备选。
+以西结提前收束后，本跑已按备选卷展开**约伯记**（公开 160→159，隔离 CMC 848 ledger-only）。见 `docs/verification/2026-09-11-job-1to1-hold-queue/report.md`。
 
 ## 6. 验证
 
 已跑：
 
-- `vitest run` 以西结 / 哥林多前书 / 箴言 / 出埃及记 / 撒母耳记上 / 申命记 / 罗马书 / 以赛亚 / 马可 / 马太 / 路加 / 使徒行传 / 耶利米 / 诗篇 / 创世记 / 约翰 / `publicData` / `publicBibleData`
+- `vitest run` 以西结 / 哥林多前书 / 箴言 / 出埃及记 / 撒母耳记上 / 申命记 / 罗马书 / 以赛亚 / 马可 / 马太 / 路加 / 使徒行传 / 耶利米 / 诗篇 / 创世记 / 约翰 / `publicData` / `publicBibleData`：93/93 通过。
 - `node scripts/generatePublicBibleData.mjs --validate-only public/data`：66 卷、公开文字卡 10,229、无不安全串。
 - `node scripts/validatePublicRepository.mjs`：通过。
 

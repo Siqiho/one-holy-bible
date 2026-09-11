@@ -154,12 +154,12 @@
       "url": "/data/books/Esth.json"
     },
     {
-      "bytes": 742818,
+      "bytes": 740764,
       "cuvVerseCount": 1070,
       "id": "Job",
       "kjvVerseCount": 1070,
-      "sha256": "742099ea7db487eb890835e04c84659c67362dc9279b680c0446cdc1887fb5aa",
-      "textCardCount": 166,
+      "sha256": "fc93fe4d7fcc08b0a825f5f809bd74a9dab7818ddc21c67e1d19b0cda78275a5",
+      "textCardCount": 165,
       "url": "/data/books/Job.json"
     },
     {

@@ -91,12 +91,12 @@
       "url": "/data/books/2Sam.json"
     },
     {
-      "bytes": 740829,
+      "bytes": 696535,
       "cuvVerseCount": 816,
       "id": "1Kgs",
       "kjvVerseCount": 816,
-      "sha256": "c04b2d94716650b37386be9e59e92d79a6f33bd3a6c4d2b35d6e96c41afe3741",
-      "textCardCount": 155,
+      "sha256": "52266afe18484acc7ffed33357e5c27bdc6b81ba9abe0f97edb0cfd1212d74bc",
+      "textCardCount": 145,
       "url": "/data/books/1Kgs.json"
     },
     {

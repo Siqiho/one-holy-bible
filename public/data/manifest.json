@@ -10,12 +10,12 @@
       "url": "/data/books/Gen.json"
     },
     {
-      "bytes": 1034187,
+      "bytes": 1004474,
       "cuvVerseCount": 1213,
       "id": "Exod",
       "kjvVerseCount": 1213,
-      "sha256": "348de4c8a09dffd4d60fffc1c9fd93ccf420aa049fd05b978e8a458805d0046c",
-      "textCardCount": 215,
+      "sha256": "b1928f083a9279a27823936290b7ed3789783eb143434d0d95687b4ee2a851ca",
+      "textCardCount": 204,
       "url": "/data/books/Exod.json"
     },
     {

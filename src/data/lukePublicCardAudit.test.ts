@@ -196,6 +196,12 @@ describe("Luke public card audit and isolation hold-queue", () => {
     expect(isaiahIsolation).toHaveLength(947);
     expect(isaiahIsolation.some((id) => publicIds.has(id))).toBe(false);
 
+    const actsIsolation = isolation
+      .map((row) => String(row.commentary_key ?? ""))
+      .filter((id) => /^cmc-acts-\d/.test(id));
+    expect(actsIsolation).toHaveLength(543);
+    expect(actsIsolation.some((id) => publicIds.has(id))).toBe(false);
+
     if (!existsSync(johnPackDir)) return;
     const johnCards = loadJsonl(resolve(johnPackDir, "card候选清单.jsonl"));
     const johnOcr = johnCards
@@ -213,8 +219,8 @@ describe("Luke public card audit and isolation hold-queue", () => {
         bumpSixSource(publicMix, card.id);
       }
     }
-    expect(publicMix).toEqual({ cmc: 858, study: 9376, qidaben: 0, ocr: 146, hurlbut: 0, info: 3, other: 0 });
-    expect(publicMix.cmc + publicMix.study + publicMix.ocr + publicMix.info).toBe(10383);
+    expect(publicMix).toEqual({ cmc: 858, study: 9355, qidaben: 0, ocr: 146, hurlbut: 0, info: 3, other: 0 });
+    expect(publicMix.cmc + publicMix.study + publicMix.ocr + publicMix.info).toBe(10362);
 
     const isolationMix = emptySixSourceMix();
     for (const row of loadJsonl(isolationPath)) {

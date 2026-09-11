@@ -100,12 +100,12 @@
       "url": "/data/books/1Kgs.json"
     },
     {
-      "bytes": 665696,
+      "bytes": 658596,
       "cuvVerseCount": 719,
       "id": "2Kgs",
       "kjvVerseCount": 719,
-      "sha256": "ff55c714e7f787322bb327a656145e79e070398e792e07e98b24a57429bdd39d",
-      "textCardCount": 140,
+      "sha256": "acd90ee0b66bec005e759cde66a111d8979797a5836db7b81ca9ef48bed4e66e",
+      "textCardCount": 135,
       "url": "/data/books/2Kgs.json"
     },
     {

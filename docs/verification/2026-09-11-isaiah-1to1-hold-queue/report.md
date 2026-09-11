@@ -157,9 +157,9 @@
 
 已跑：
 
-- `vitest run src/data/isaiahPublicCardAudit.test.ts src/data/matthewPublicCardAudit.test.ts src/data/lukePublicCardAudit.test.ts src/data/actsPublicCardAudit.test.ts src/data/jeremiahPublicCardAudit.test.ts src/data/psalmsPublicCardAudit.test.ts src/data/genesisPublicCardAudit.test.ts src/data/johnGospelPublicCardAudit.test.ts src/data/publicData.test.ts src/data/publicBibleData.test.ts`
-- `node scripts/generatePublicBibleData.mjs --validate-only public/data`
-- `node scripts/validatePublicRepository.mjs`
+- `vitest run src/data/isaiahPublicCardAudit.test.ts src/data/matthewPublicCardAudit.test.ts src/data/lukePublicCardAudit.test.ts src/data/actsPublicCardAudit.test.ts src/data/jeremiahPublicCardAudit.test.ts src/data/psalmsPublicCardAudit.test.ts src/data/genesisPublicCardAudit.test.ts src/data/johnGospelPublicCardAudit.test.ts src/data/publicData.test.ts src/data/publicBibleData.test.ts`：69/69 通过。
+- `node scripts/generatePublicBibleData.mjs --validate-only public/data`：66 卷、公开文字卡 10,318、无不安全串。
+- `node scripts/validatePublicRepository.mjs`：通过。
 
 未做浏览器点选：本快照没有 `workbenchSyncedResources-v4.json`，本地 `App.tsx` 不走 `loadPublicBook("Isa")`，因此无法在本环境用阅读页点开这些公开卡。对照与修补都落在公开数据包和台账 JSONL。
 

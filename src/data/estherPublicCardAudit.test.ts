@@ -1,0 +1,158 @@
+import { existsSync, readdirSync, readFileSync } from "node:fs";
+import { resolve } from "node:path";
+import { describe, expect, it } from "vitest";
+
+import { BIBLE_BOOKS } from "../domain/bibleBooks";
+
+interface PublicCard {
+  id: string;
+  body?: string;
+  title?: string;
+  primaryAnchor?: string;
+  verses?: string[];
+  type?: string;
+  summary?: string;
+  searchText?: string;
+}
+
+interface PublicBookPayload {
+  bookId: string;
+  textCards: PublicCard[];
+}
+
+const booksDir = resolve(__dirname, "../../public/data/books");
+const isolationPath = resolve(__dirname, "../../local-audit-pack/no-explain-isolation-20260731/card候选清单.jsonl");
+const johnPackDir = resolve(__dirname, "../../local-audit-pack/john-gospel-20260909");
+
+const heldStudyBible = [
+  "study-bible-esth-2-7-p006-n025",
+  "study-bible-esth-7-7-p010-n065",
+  "study-bible-esth-7-10-p010-n069",
+  "study-bible-esth-8-9-p006-n032",
+];
+
+const forbiddenFragments = [
+  "堂妹的希伯斯帖",
+  "提到她容为后续的故事",
+  "亚哈随鲁王席以平复心情",
+  "应验了哈如果是曼妻子",
+  "末底改奉王之名下谕旨8:11-12,9:1",
+  "可能这关紧要：",
+  "虽然《和》及《和修》",
+  "国土辽阁",
+  "己经三十日",
+  "6:4×［本书4:11,5：］",
+  "反映哈曼怒气\"天\"",
+  "15］8:2X本书3:10",
+  "蒙了哈愛的脸",
+  "（《和修》\"许多弟末底改担任",
+  "（《和修》\"史见2:22-23注。",
+  "（《和修》\"向…征税）、2:18提豁免",
+  "都是供名作品",
+  "主后2世纪《米示的一篇短文",
+  "纳入|约正典",
+  "在危难中化险全书可以归纳",
+  "配合得天衣事实，无缝",
+  "对他们的敌人不夷。",
+  "晚上，王好失眠（6:1-3）",
+  "统治逾127个省，懞不能管好",
+  "阅读《以斯帖不只是一个关于犹太人的故事",
+  "贯穿《旧约》和《新与约》",
+  "（弗2：|1-16）",
+  "福音是唯一真正的记》，它出路",
+  "基督徒蒙召生以斯帖和末底改的时期",
+  "（约等于340吨），数目",
+  "乔装以斯帖时期的波斯帝国约主前479年",
+  "（《驳阿1.40-41）",
+];
+
+function loadBook(bookId: string): PublicBookPayload {
+  return JSON.parse(readFileSync(resolve(booksDir, `${bookId}.json`), "utf8")) as PublicBookPayload;
+}
+
+function loadJsonl(path: string): Array<Record<string, unknown>> {
+  return readFileSync(path, "utf8")
+    .split(/\r?\n/)
+    .filter((line) => line.trim().length > 0)
+    .map((line) => JSON.parse(line) as Record<string, unknown>);
+}
+
+function verseIdsFor(bookId: string): Set<string> {
+  const book = BIBLE_BOOKS.find((item) => item.id === bookId);
+  return new Set(
+    (book?.verseCounts ?? []).flatMap((verseCount, chapterIndex) => (
+      Array.from({ length: verseCount }, (_, verseIndex) => `${bookId}.${chapterIndex + 1}.${verseIndex + 1}`)
+    )),
+  );
+}
+
+describe("Esther public card audit and isolation hold-queue", () => {
+  const payload = loadBook("Esth");
+
+  it("keeps the public Esther package text-only, verse-mapped, and isolation-filtered", () => {
+    expect(payload.bookId).toBe("Esth");
+    expect(payload.textCards).toHaveLength(57);
+    expect(payload.textCards.every((card) => card.type === "commentary" || card.type === "note")).toBe(true);
+
+    const mix = { studyBible: 0, ocr: 0, cmc: 0, other: 0 };
+    const verseIds = verseIdsFor("Esth");
+    for (const card of payload.textCards) {
+      const anchors = [card.primaryAnchor, ...(card.verses ?? [])].filter((value): value is string => Boolean(value));
+      expect(anchors.length, card.id).toBeGreaterThan(0);
+      expect(anchors.every((anchor) => verseIds.has(anchor)), card.id).toBe(true);
+      if (card.id.startsWith("study-bible-")) mix.studyBible += 1;
+      else if (card.id.startsWith("image-text-")) mix.ocr += 1;
+      else if (card.id.startsWith("cmc-")) mix.cmc += 1;
+      else mix.other += 1;
+    }
+    expect(mix).toEqual({ studyBible: 52, ocr: 5, cmc: 0, other: 0 });
+  });
+
+  it("does not republish confirmed mid-cut or garbage Esther cards", () => {
+    const ids = new Set(payload.textCards.map((card) => card.id));
+    for (const id of heldStudyBible) {
+      expect(ids.has(id), id).toBe(false);
+    }
+
+    const blob = payload.textCards.map((card) => `${card.title ?? ""}\n${card.body ?? ""}\n${card.summary ?? ""}\n${card.searchText ?? ""}`).join("\n");
+    for (const fragment of forbiddenFragments) {
+      expect(blob.includes(fragment), fragment).toBe(false);
+    }
+  });
+
+  it("keeps isolation CMC and John leftover streams out of the public package when audit packs are present", () => {
+    if (!existsSync(isolationPath)) return;
+
+    const publicIds = new Set<string>();
+    for (const file of readdirSync(booksDir).filter((name) => name.endsWith(".json"))) {
+      const book = JSON.parse(readFileSync(resolve(booksDir, file), "utf8")) as PublicBookPayload;
+      for (const card of book.textCards) publicIds.add(card.id);
+    }
+
+    const isolation = loadJsonl(isolationPath);
+    const leaked = isolation
+      .map((row) => String(row.commentary_key ?? ""))
+      .filter((id) => publicIds.has(id));
+    expect(leaked).toEqual([]);
+
+    const esthIsolation = isolation
+      .map((row) => String(row.commentary_key ?? ""))
+      .filter((id) => /^cmc-esth-\d/.test(id));
+    expect(esthIsolation).toHaveLength(122);
+    expect(esthIsolation.some((id) => publicIds.has(id))).toBe(false);
+
+    const thessIsolation = isolation
+      .map((row) => String(row.commentary_key ?? ""))
+      .filter((id) => /^cmc-1thess-\d/.test(id));
+    expect(thessIsolation).toHaveLength(21);
+    expect(thessIsolation.some((id) => publicIds.has(id))).toBe(false);
+
+    if (!existsSync(johnPackDir)) return;
+    const johnCards = loadJsonl(resolve(johnPackDir, "card候选清单.jsonl"));
+    const johnOcr = johnCards
+      .filter((row) => String(row.commentary_key).startsWith("image-text-"))
+      .map((row) => String(row.commentary_key));
+    expect(johnOcr).toEqual(["image-text-43-约翰福音-codex-pdf-p019-img004"]);
+    expect(publicIds.has(johnOcr[0])).toBe(false);
+  });
+});

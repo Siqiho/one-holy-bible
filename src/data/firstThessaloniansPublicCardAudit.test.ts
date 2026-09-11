@@ -1,0 +1,156 @@
+import { existsSync, readdirSync, readFileSync } from "node:fs";
+import { resolve } from "node:path";
+import { describe, expect, it } from "vitest";
+
+import { BIBLE_BOOKS } from "../domain/bibleBooks";
+
+interface PublicCard {
+  id: string;
+  body?: string;
+  title?: string;
+  primaryAnchor?: string;
+  verses?: string[];
+  type?: string;
+  summary?: string;
+  searchText?: string;
+}
+
+interface PublicBookPayload {
+  bookId: string;
+  textCards: PublicCard[];
+}
+
+const booksDir = resolve(__dirname, "../../public/data/books");
+const isolationPath = resolve(__dirname, "../../local-audit-pack/no-explain-isolation-20260731/card候选清单.jsonl");
+const johnPackDir = resolve(__dirname, "../../local-audit-pack/john-gospel-20260909");
+
+const heldStudyBible = [
+  "study-bible-1thess-5-5-p010-n054",
+];
+
+const forbiddenFragments = [
+  "《和有译出",
+  "因此基督徒明之子",
+  "当基界的光）",
+  "帖撒罗尼迎",
+  "即通迫。",
+  "传道服待，不是为了",
+  "意\"空的，无内容，无，指没有结果",
+  "心里却不离人不在心还在",
+  "阻挡保罗和帖撒罗尼迦信徒相聚，我们无",
+  "而不是恐惧和分裂。这些话指本章",
+  "只派遭资历较浅",
+  "指通好、乱伦",
+  "见罗124-27。",
+  "已经死去（\"睡了？的基督徒",
+  "主的日子\"像一样\"忽然临到",
+  "轻忽那即到来之日",
+  "顶盔掼甲的战士",
+  "站在主的考边",
+  "灰心源于通迫（3:3-4）",
+  "一致。11指出，",
+  "4:13-18,51-11,23-24",
+  "在空中与主相遇（415-17）",
+  "1:10，52-4,9-10",
+  "成就这事（5.24）",
+  "不少学者认沩这疑问",
+  "必下经文可以看出保罗的良苦用心",
+  "关于\"救恩历的解释",
+  "主后30 35404550556065",
+  "（《和修》\"反对》，",
+  "（《和修》\"作上帝同工的》，",
+  "见\"导论：写作目的、缘起和背景）。",
+  "\"提摩太前书导论\"。",
+  "（《和修》\"更加努力，帖撒罗尼迦信徒",
+];
+
+function loadBook(bookId: string): PublicBookPayload {
+  return JSON.parse(readFileSync(resolve(booksDir, `${bookId}.json`), "utf8")) as PublicBookPayload;
+}
+
+function loadJsonl(path: string): Array<Record<string, unknown>> {
+  return readFileSync(path, "utf8")
+    .split(/\r?\n/)
+    .filter((line) => line.trim().length > 0)
+    .map((line) => JSON.parse(line) as Record<string, unknown>);
+}
+
+function verseIdsFor(bookId: string): Set<string> {
+  const book = BIBLE_BOOKS.find((item) => item.id === bookId);
+  return new Set(
+    (book?.verseCounts ?? []).flatMap((verseCount, chapterIndex) => (
+      Array.from({ length: verseCount }, (_, verseIndex) => `${bookId}.${chapterIndex + 1}.${verseIndex + 1}`)
+    )),
+  );
+}
+
+describe("1 Thessalonians public card audit and isolation hold-queue", () => {
+  const payload = loadBook("1Thess");
+
+  it("keeps the public 1 Thessalonians package text-only, verse-mapped, and isolation-filtered", () => {
+    expect(payload.bookId).toBe("1Thess");
+    expect(payload.textCards).toHaveLength(60);
+    expect(payload.textCards.every((card) => card.type === "commentary" || card.type === "note")).toBe(true);
+
+    const mix = { studyBible: 0, ocr: 0, cmc: 0, other: 0 };
+    const verseIds = verseIdsFor("1Thess");
+    for (const card of payload.textCards) {
+      const anchors = [card.primaryAnchor, ...(card.verses ?? [])].filter((value): value is string => Boolean(value));
+      expect(anchors.length, card.id).toBeGreaterThan(0);
+      expect(anchors.every((anchor) => verseIds.has(anchor)), card.id).toBe(true);
+      if (card.id.startsWith("study-bible-")) mix.studyBible += 1;
+      else if (card.id.startsWith("image-text-")) mix.ocr += 1;
+      else if (card.id.startsWith("cmc-")) mix.cmc += 1;
+      else mix.other += 1;
+    }
+    expect(mix).toEqual({ studyBible: 60, ocr: 0, cmc: 0, other: 0 });
+  });
+
+  it("does not republish confirmed mid-cut or garbage 1 Thessalonians cards", () => {
+    const ids = new Set(payload.textCards.map((card) => card.id));
+    for (const id of heldStudyBible) {
+      expect(ids.has(id), id).toBe(false);
+    }
+
+    const blob = payload.textCards.map((card) => `${card.title ?? ""}\n${card.body ?? ""}\n${card.summary ?? ""}\n${card.searchText ?? ""}`).join("\n");
+    for (const fragment of forbiddenFragments) {
+      expect(blob.includes(fragment), fragment).toBe(false);
+    }
+  });
+
+  it("keeps isolation CMC and John leftover streams out of the public package when audit packs are present", () => {
+    if (!existsSync(isolationPath)) return;
+
+    const publicIds = new Set<string>();
+    for (const file of readdirSync(booksDir).filter((name) => name.endsWith(".json"))) {
+      const book = JSON.parse(readFileSync(resolve(booksDir, file), "utf8")) as PublicBookPayload;
+      for (const card of book.textCards) publicIds.add(card.id);
+    }
+
+    const isolation = loadJsonl(isolationPath);
+    const leaked = isolation
+      .map((row) => String(row.commentary_key ?? ""))
+      .filter((id) => publicIds.has(id));
+    expect(leaked).toEqual([]);
+
+    const thessIsolation = isolation
+      .map((row) => String(row.commentary_key ?? ""))
+      .filter((id) => /^cmc-1thess-\d/.test(id));
+    expect(thessIsolation).toHaveLength(21);
+    expect(thessIsolation.some((id) => publicIds.has(id))).toBe(false);
+
+    const timIsolation = isolation
+      .map((row) => String(row.commentary_key ?? ""))
+      .filter((id) => /^cmc-2tim-\d/.test(id));
+    expect(timIsolation).toHaveLength(21);
+    expect(timIsolation.some((id) => publicIds.has(id))).toBe(false);
+
+    if (!existsSync(johnPackDir)) return;
+    const johnCards = loadJsonl(resolve(johnPackDir, "card候选清单.jsonl"));
+    const johnOcr = johnCards
+      .filter((row) => String(row.commentary_key).startsWith("image-text-"))
+      .map((row) => String(row.commentary_key));
+    expect(johnOcr).toEqual(["image-text-43-约翰福音-codex-pdf-p019-img004"]);
+    expect(publicIds.has(johnOcr[0])).toBe(false);
+  });
+});

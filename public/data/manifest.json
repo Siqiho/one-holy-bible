@@ -145,12 +145,12 @@
       "url": "/data/books/Neh.json"
     },
     {
-      "bytes": 206834,
+      "bytes": 198671,
       "cuvVerseCount": 167,
       "id": "Esth",
       "kjvVerseCount": 167,
-      "sha256": "4b9ebfb14eefd5e5bdd2a9f37793073e73393891092196b90a78cfaa99dc986b",
-      "textCardCount": 61,
+      "sha256": "f76ec6350cc808cdaafecf3a08c38cf6179059d34ce3e7bc1a6b3bba35cba3f6",
+      "textCardCount": 57,
       "url": "/data/books/Esth.json"
     },
     {
@@ -460,12 +460,12 @@
       "url": "/data/books/Col.json"
     },
     {
-      "bytes": 175287,
+      "bytes": 171679,
       "cuvVerseCount": 89,
       "id": "1Thess",
       "kjvVerseCount": 89,
-      "sha256": "b17d96f84f9be65f8650c8af2ecc7205f68d6b12b02eb66a5e9ad3d1e3de63c6",
-      "textCardCount": 61,
+      "sha256": "76784942ce9f0a073e33687d27921e882e54f44c406f4ff7392b69a66a02be8a",
+      "textCardCount": 60,
       "url": "/data/books/1Thess.json"
     },
     {

@@ -72,7 +72,11 @@
 
 ## 6. 验证
 
-已跑：待记（本轮收束后与箴言审计一并复核）。
+已跑：
+
+- `vitest run` 哥林多前书 / 箴言 / 出埃及记 / 撒母耳记上 / 申命记 / 罗马书 / 以赛亚 / 马可 / 马太 / 路加 / 使徒行传 / 耶利米 / 诗篇 / 创世记 / 约翰 / `publicData` / `publicBibleData`：90/90 通过。
+- `node scripts/generatePublicBibleData.mjs --validate-only public/data`：66 卷、公开文字卡 10,239、无不安全串。
+- `node scripts/validatePublicRepository.mjs`：通过。
 
 未做浏览器点选：本快照没有 `workbenchSyncedResources-v4.json`，本地阅读页不走 `loadPublicBook("1Cor")`。
 

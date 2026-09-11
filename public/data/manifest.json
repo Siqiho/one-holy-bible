@@ -379,12 +379,12 @@
       "url": "/data/books/Luke.json"
     },
     {
-      "bytes": 1210600,
+      "bytes": 1198388,
       "cuvVerseCount": 879,
       "id": "John",
       "kjvVerseCount": 879,
-      "sha256": "67a4fc20eaee395562b9d66698a7bf2c9fee3be915ce922b5a436ca6ba04f821",
-      "textCardCount": 414,
+      "sha256": "e1b37b776b8ddd960d946d6f9bcac7d4791786a3065886d1dd0d30738ab54ffb",
+      "textCardCount": 409,
       "url": "/data/books/John.json"
     },
     {

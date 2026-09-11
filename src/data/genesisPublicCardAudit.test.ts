@@ -44,7 +44,7 @@ const expectedCounts: Record<string, number> = {
   Deut: 250,
   Judg: 122,
   Prov: 232,
-  Acts: 483,
+  Acts: 462,
   Phil: 56,
   Col: 77,
   "1Thess": 61,

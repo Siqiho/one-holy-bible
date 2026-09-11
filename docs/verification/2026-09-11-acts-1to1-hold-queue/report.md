@@ -96,4 +96,4 @@
 
 ## 6. 验证
 
-已跑公开卡审计测试与 `generatePublicBibleData --validate-only`。GitHub `verify` 全量仍会因本快照缺创世记资源 / v4 / `rg` 失败；失败面不读使徒行传公开包，不补造真源。
+已跑公开卡审计测试与 `generatePublicBibleData --validate-only`。创世记审计里的使徒行传张数锁已从 483 改成 462，与本轮 hold 对齐。GitHub `verify` 全量仍会因本快照缺创世记资源 / v4 / `rg` 失败；失败面不读使徒行传公开包，不补造真源。

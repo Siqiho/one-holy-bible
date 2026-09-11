@@ -46,12 +46,12 @@
       "url": "/data/books/Deut.json"
     },
     {
-      "bytes": 649942,
+      "bytes": 606882,
       "cuvVerseCount": 658,
       "id": "Josh",
       "kjvVerseCount": 658,
-      "sha256": "27b6c28a6dc74d726c4547bc3feeea199dc4bb63a320e81ed4296819db4e1567",
-      "textCardCount": 147,
+      "sha256": "d6519962005de6fc0305f8deb187116e133f5191d02c18861eb9f9622d1cb7d3",
+      "textCardCount": 136,
       "url": "/data/books/Josh.json"
     },
     {

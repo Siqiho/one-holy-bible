@@ -6,7 +6,7 @@
 - 隔离包：`local-audit-pack/no-explain-isolation-20260731/`
 - 应用对照面：`public/data/books/*.json`（公开 v0.1.0 经文卡包）
 - 工作台投影：本快照**没有** `src/data/generated/workbenchSyncedResources-v4.json`
-- 结论：隔离包 ∩ 公开包仍为 ∅。下一高价值公开面是路加福音。已从公开路加撤下 27 张无法复原的研修本卡，并最小修补 81 张高置信引号/OCR/表倾倒串；隔离 CMC 144 张继续 ledger-only。本快照无路加卷级台账，公开 OCR 为 0，故本轮不做 OCR 分源。
+- 结论：隔离包 ∩ 公开包仍为 ∅。下一高价值公开面是路加福音。已从公开路加撤下 27 张无法复原的研修本卡，并最小修补 81 张高置信引号/OCR/表倾倒串；隔离 CMC 144 张继续 ledger-only。本快照无路加卷级台账，公开 OCR 为 0，故本轮不做 OCR 分源。六类信息源已对账：用户全库数只有信息系列 8 能在本快照对齐；其余是 Edit 真源缺口，不补造公开卡。
 
 ## 1. 范围与方法
 
@@ -209,11 +209,43 @@
 
 > v0.1.0 公开文字卡仍不得包含无解释隔离包中的卡。路加公开面只保留可读的研修本单节/短注，减去 27 张已确认中截或表倾倒卡；81 张只做引号、高置信 OCR 串与表倾倒裁剪。路加隔离 CMC 与全部无台账 OCR 继续不进入新的公开审定。
 
-## 7. 验证
+## 7. 信息源覆盖矩阵
+
+用户给出的六类全库口径，与本快照能看见的标识字段对账。标识优先用 `id` 前缀，其次 `source` / `debugMeta.sourceLabel` / 台账 `source_stream`。
+
+| 用户源 | 用户全库数 | 本快照标识 | 公开包 | 隔离包 | 约翰台账 | 创世记稳定注释 | 对账 |
+| --- | ---: | --- | ---: | ---: | ---: | ---: | --- |
+| 综合解读 | 29,476 | `cmc-*`；`source_stream=cmc-comprehensive-commentary`；`sourceLabel` 含「综合解读」 | **858**（全在创世记，有解释） | **18,387** | **765**（156 与隔离重合） | **866** | **缺口**。本快照没有全库 CMC 投影；公开+隔离+约翰台账去重后远小于 29,476 |
+| 圣经研修本 | 16,270 | `study-bible-*`；`source` 含「研修本」；约翰台账 `study-bible-commentary-v3` | **9,376** | **10**（创世记轮已撤出公开包） | **495** | **751**（创世记本地研读本，含未进公开包的） | **缺口**。公开研修本是 v0.1.0 已发布子集，不是全库 16,270 |
+| 圣经启导本 | 9,521 | `qidaben-*`；`source_stream=qidaben-commentary-pilot` | **0** | **0** | **267+1 孤儿** | 0 | **缺口**。本快照只有约翰启导本台账；全部 hold，不进公开包 |
+| OCR 转文字 | 254 | `image-text-*`；约翰台账 `image-text-ocr-conversion` | **146** | **0** | **1**（已撤出公开包） | 0 | **缺口**。公开 146 无卷级台账，整类 hold-as-class；约翰 1 张已 hold。创世记 1 张已 keep（有解释、可读） |
+| 圣经的故事 | 98 | `hurlbut-*`；`source_stream=hurlbut-bible-story-zh-2013` | **0** | **0** | **5** | 0 | **缺口**。本快照只有约翰 5 张故事卡；全部 hold |
+| 圣经信息系列 | 8 | `message-*`；`source` / `sourceLabel` 含「圣经信息系列」 | **3** | **0** | **0** | **8** | **一致（稳定注释）**。用户 8 = 创世记稳定注释 8；其中 3 张已在创世记轮 keep 进公开包 |
+
+公开包现计 10,383 = 研修本 9,376 + CMC 858 + OCR 146 + 信息系列 3。没有启导本，没有故事卡。
+
+### 已审五卷对六类源的策略
+
+| 源 | 约翰 | 创世记 | 诗篇 | 耶利米 | 路加 |
+| --- | --- | --- | --- | --- | --- |
+| 综合解读 | 156 hold（隔离）+ 609 ledger-only；公开 0 | 858 keep（有解释）；506 hold 撤出公开 | 1,610 hold / ledger-only；公开 0 | 1,006 hold / ledger-only；公开 0 | **144 hold / ledger-only；公开 0** |
+| 研修本 | 公开 409 keep/fix；82 宽范围 hold；4 损坏 hold | 272 keep；1 fix | 421 keep/fix；15 hold | 658 keep/fix；14 hold | **531 keep/fix；27 hold** |
+| 启导本 | 267+1 全部 hold | 沿用约翰 leftover hold | 沿用 | 沿用 | **沿用；路加公开 0，本快照无路加启导本台账** |
+| OCR | 1 hold（已撤） | 1 keep（可读）；跨卷 3 hold | 10 hold-as-class（无台账） | 本卷 0；跨卷 146 hold-as-class | **本卷 0；跨卷 146 继续 hold-as-class** |
+| 圣经的故事 | 5 hold | 沿用 | 沿用 | 沿用 | **沿用；路加公开 0** |
+| 信息系列 | 0 | 3 keep（公开）/ 8 在稳定注释 | 0 | 0 | **0** |
+
+路加本轮只触及研修本公开面 + 路加隔离 CMC。其余四类源在路加上的公开交集为 0，策略是沿用既有 hold，不新抬、不新改。
+
+对账收束：
+
+> 用户六类全库数是 Edit/Resources 真源口径。本快照能 1:1 对上的只有：信息系列 8（稳定注释）、约翰台账五类子集、隔离 CMC 18,387、公开已发布子集。缺口不是漏审，而是本仓库没有其余卷的专包/工作台 v4/全库 CMC 投影。没有台账证据的源继续 hold，不按用户全库数补造公开卡。
+
+## 8. 验证
 
 已跑：
 
-- `vitest run src/data/lukePublicCardAudit.test.ts src/data/jeremiahPublicCardAudit.test.ts src/data/psalmsPublicCardAudit.test.ts src/data/genesisPublicCardAudit.test.ts src/data/johnGospelPublicCardAudit.test.ts src/data/publicData.test.ts src/data/publicBibleData.test.ts`：59/59 通过。
+- `vitest run src/data/lukePublicCardAudit.test.ts src/data/jeremiahPublicCardAudit.test.ts src/data/psalmsPublicCardAudit.test.ts src/data/genesisPublicCardAudit.test.ts src/data/johnGospelPublicCardAudit.test.ts src/data/publicData.test.ts src/data/publicBibleData.test.ts`：60/60 通过。
 - `node scripts/generatePublicBibleData.mjs --validate-only public/data`：66 卷、公开文字卡 10,383、无不安全串。
 - `node scripts/validatePublicRepository.mjs`：通过。
 

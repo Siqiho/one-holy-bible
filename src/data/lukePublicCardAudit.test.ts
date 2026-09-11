@@ -180,4 +180,21 @@ describe("Luke public card audit and isolation hold-queue", () => {
     expect(johnOcr).toEqual(["image-text-43-约翰福音-codex-pdf-p019-img004"]);
     expect(publicIds.has(johnOcr[0])).toBe(false);
   });
+
+  it("reconciles the six public source streams without lifting held classes", () => {
+    const mix = { cmc: 0, study: 0, qidaben: 0, ocr: 0, hurlbut: 0, info: 0, other: 0 };
+    for (const file of readdirSync(booksDir).filter((name) => name.endsWith(".json"))) {
+      const book = JSON.parse(readFileSync(resolve(booksDir, file), "utf8")) as PublicBookPayload;
+      for (const card of book.textCards) {
+        if (card.id.startsWith("cmc-")) mix.cmc += 1;
+        else if (card.id.startsWith("study-bible-")) mix.study += 1;
+        else if (card.id.startsWith("qidaben-") || card.id.startsWith("hurlbut-")) mix.other += 1;
+        else if (card.id.startsWith("image-text-")) mix.ocr += 1;
+        else if (card.id.startsWith("message-")) mix.info += 1;
+        else mix.other += 1;
+      }
+    }
+    expect(mix).toEqual({ cmc: 858, study: 9376, qidaben: 0, ocr: 146, hurlbut: 0, info: 3, other: 0 });
+    expect(mix.cmc + mix.study + mix.ocr + mix.info).toBe(10383);
+  });
 });

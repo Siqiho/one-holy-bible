@@ -85,8 +85,10 @@
 
 已跑：
 
-- `vitest run` 申命记 / 罗马书 / 以赛亚 / 马可 / 马太 / 路加 / 使徒行传 / 耶利米 / 诗篇 / 创世记 / 约翰 / `publicData` / `publicBibleData`
-- `node scripts/generatePublicBibleData.mjs --validate-only public/data`
-- `node scripts/validatePublicRepository.mjs`
+- `vitest run` 申命记 / 罗马书 / 以赛亚 / 马可 / 马太 / 路加 / 使徒行传 / 耶利米 / 诗篇 / 创世记 / 约翰 / `publicData` / `publicBibleData`：78/78 通过。
+- `node scripts/generatePublicBibleData.mjs --validate-only public/data`：66 卷、公开文字卡 10,278、无不安全串。
+- `node scripts/validatePublicRepository.mjs`：通过。
 
 未做浏览器点选：本快照没有 `workbenchSyncedResources-v4.json`，本地阅读页不走 `loadPublicBook("Rom")`。
+
+GitHub `verify` 全量仍会因本快照缺创世记资源 / v4 / `rg` 失败；失败面不读罗马书公开包，不补造真源。

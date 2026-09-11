@@ -141,9 +141,9 @@
 
 已跑：
 
-- `vitest run src/data/deuteronomyPublicCardAudit.test.ts src/data/romansPublicCardAudit.test.ts src/data/isaiahPublicCardAudit.test.ts src/data/markPublicCardAudit.test.ts src/data/matthewPublicCardAudit.test.ts src/data/lukePublicCardAudit.test.ts src/data/actsPublicCardAudit.test.ts src/data/jeremiahPublicCardAudit.test.ts src/data/psalmsPublicCardAudit.test.ts src/data/genesisPublicCardAudit.test.ts src/data/johnGospelPublicCardAudit.test.ts src/data/publicData.test.ts src/data/publicBibleData.test.ts`
-- `node scripts/generatePublicBibleData.mjs --validate-only public/data`
-- `node scripts/validatePublicRepository.mjs`
+- `vitest run` 申命记 / 罗马书 / 以赛亚 / 马可 / 马太 / 路加 / 使徒行传 / 耶利米 / 诗篇 / 创世记 / 约翰 / `publicData` / `publicBibleData`：78/78 通过。创世记审计里的 `Deut` 期望张数已从 250 改为 239。
+- `node scripts/generatePublicBibleData.mjs --validate-only public/data`：66 卷、公开文字卡 10,278、无不安全串。
+- `node scripts/validatePublicRepository.mjs`：通过。
 
 未做浏览器点选：本快照没有 `workbenchSyncedResources-v4.json`，本地 `App.tsx` 不走 `loadPublicBook("Deut")`，因此无法在本环境用阅读页点开这些公开卡。对照与修补都落在公开数据包和台账 JSONL。
 

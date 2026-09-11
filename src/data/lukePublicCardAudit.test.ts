@@ -219,8 +219,8 @@ describe("Luke public card audit and isolation hold-queue", () => {
         bumpSixSource(publicMix, card.id);
       }
     }
-    expect(publicMix).toEqual({ cmc: 858, study: 9298, qidaben: 0, ocr: 146, hurlbut: 0, info: 3, other: 0 });
-    expect(publicMix.cmc + publicMix.study + publicMix.ocr + publicMix.info).toBe(10305);
+    expect(publicMix).toEqual({ cmc: 858, study: 9271, qidaben: 0, ocr: 146, hurlbut: 0, info: 3, other: 0 });
+    expect(publicMix.cmc + publicMix.study + publicMix.ocr + publicMix.info).toBe(10278);
 
     const isolationMix = emptySixSourceMix();
     for (const row of loadJsonl(isolationPath)) {

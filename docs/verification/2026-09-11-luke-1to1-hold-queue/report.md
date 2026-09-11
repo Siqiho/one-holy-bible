@@ -168,14 +168,14 @@
 | 约翰福音 `card候选清单` / `资源审计台账` | 仅约翰 1 张 | **0** |
 | 无解释隔离包 | 0 张 `image-text-*` | **0** |
 
-因此本轮不对任何 OCR 做分源或正文改写。诗篇轮留下的 146 张无台账公开 OCR 继续 **hold-as-class**。
+因此本轮不对任何 OCR 做分源或正文改写。诗篇轮留下的公开 OCR 146 = 创世记 1 keep + 145 无台账 hold-as-class，本轮继续不改。
 
 ## 5. 已落地的仓库修改
 
 1. `public/data/books/Luke.json`：删除 27 张 hold 研修本卡；修补 81 张确认损坏卡。558→531。
 2. `public/data/manifest.json`：更新 Luke 的 `bytes` / `sha256` / `textCardCount`。公开文字卡 10,410→10,383。
-3. `src/data/lukePublicCardAudit.test.ts`：锁住路加构成、隔离 CMC 不得回潮、已知中截/垃圾串不得回潮、约翰 OCR 继续不在公开包。
-4. 本报告。
+3. `src/data/lukePublicCardAudit.test.ts`：锁住路加构成、隔离 CMC 不得回潮、六类源在公开/隔离/约翰台账的计数。
+4. 本报告，以及独立矩阵 `docs/verification/2026-09-11-six-source-coverage-matrix/report.md`。
 
 未做：
 
@@ -203,13 +203,17 @@
 | 路加隔离 CMC | 144 hold / ledger-only |
 | 以赛亚隔离 CMC | 947 hold / ledger-only |
 | 隔离 ∩ 公开 | 0（合同保持） |
-| 剩余公开 OCR | 146 hold-as-class（台账交集 0；本卷 0） |
+| 剩余公开 OCR | 146 = 1 keep + 145 hold-as-class（台账交集 0；本卷 0） |
 
 公开包与隔离合同可以收束为：
 
 > v0.1.0 公开文字卡仍不得包含无解释隔离包中的卡。路加公开面只保留可读的研修本单节/短注，减去 27 张已确认中截或表倾倒卡；81 张只做引号、高置信 OCR 串与表倾倒裁剪。路加隔离 CMC 与全部无台账 OCR 继续不进入新的公开审定。
 
 ## 7. 信息源覆盖矩阵
+
+完整标识、并集去重与 keep/hold/fix 覆盖见独立报告：
+
+`docs/verification/2026-09-11-six-source-coverage-matrix/report.md`
 
 用户给出的六类全库口径，与本快照能看见的标识字段对账。标识优先用 `id` 前缀，其次 `source` / `debugMeta.sourceLabel` / 台账 `source_stream`。
 
@@ -218,7 +222,7 @@
 | 综合解读 | 29,476 | `cmc-*`；`source_stream=cmc-comprehensive-commentary`；`sourceLabel` 含「综合解读」 | **858**（全在创世记，有解释） | **18,387** | **765**（156 与隔离重合） | **866** | **缺口**。本快照没有全库 CMC 投影；公开+隔离+约翰台账去重后远小于 29,476 |
 | 圣经研修本 | 16,270 | `study-bible-*`；`source` 含「研修本」；约翰台账 `study-bible-commentary-v3` | **9,376** | **10**（创世记轮已撤出公开包） | **495** | **751**（创世记本地研读本，含未进公开包的） | **缺口**。公开研修本是 v0.1.0 已发布子集，不是全库 16,270 |
 | 圣经启导本 | 9,521 | `qidaben-*`；`source_stream=qidaben-commentary-pilot` | **0** | **0** | **267+1 孤儿** | 0 | **缺口**。本快照只有约翰启导本台账；全部 hold，不进公开包 |
-| OCR 转文字 | 254 | `image-text-*`；约翰台账 `image-text-ocr-conversion` | **146** | **0** | **1**（已撤出公开包） | 0 | **缺口**。公开 146 无卷级台账，整类 hold-as-class；约翰 1 张已 hold。创世记 1 张已 keep（有解释、可读） |
+| OCR 转文字 | 254 | `image-text-*`；约翰台账 `image-text-ocr-conversion` | **146** | **0** | **1**（已撤出公开包） | 0 | **缺口**。公开 146 = 创世记 1 keep + 145 无台账 hold-as-class；约翰 1 张已 hold |
 | 圣经的故事 | 98 | `hurlbut-*`；`source_stream=hurlbut-bible-story-zh-2013` | **0** | **0** | **5** | 0 | **缺口**。本快照只有约翰 5 张故事卡；全部 hold |
 | 圣经信息系列 | 8 | `message-*`；`source` / `sourceLabel` 含「圣经信息系列」 | **3** | **0** | **0** | **8** | **一致（稳定注释）**。用户 8 = 创世记稳定注释 8；其中 3 张已在创世记轮 keep 进公开包 |
 
@@ -231,7 +235,7 @@
 | 综合解读 | 156 hold（隔离）+ 609 ledger-only；公开 0 | 858 keep（有解释）；506 hold 撤出公开 | 1,610 hold / ledger-only；公开 0 | 1,006 hold / ledger-only；公开 0 | **144 hold / ledger-only；公开 0** |
 | 研修本 | 公开 409 keep/fix；82 宽范围 hold；4 损坏 hold | 272 keep；1 fix | 421 keep/fix；15 hold | 658 keep/fix；14 hold | **531 keep/fix；27 hold** |
 | 启导本 | 267+1 全部 hold | 沿用约翰 leftover hold | 沿用 | 沿用 | **沿用；路加公开 0，本快照无路加启导本台账** |
-| OCR | 1 hold（已撤） | 1 keep（可读）；跨卷 3 hold | 10 hold-as-class（无台账） | 本卷 0；跨卷 146 hold-as-class | **本卷 0；跨卷 146 继续 hold-as-class** |
+| OCR | 1 hold（已撤） | 1 keep（可读）；跨卷 3 hold | 10 hold-as-class（无台账） | 本卷 0；跨卷继续 hold-as-class | **本卷 0；跨卷 145 hold-as-class（公开 146 含创世记 1 keep）** |
 | 圣经的故事 | 5 hold | 沿用 | 沿用 | 沿用 | **沿用；路加公开 0** |
 | 信息系列 | 0 | 3 keep（公开）/ 8 在稳定注释 | 0 | 0 | **0** |
 
@@ -250,3 +254,5 @@
 - `node scripts/validatePublicRepository.mjs`：通过。
 
 未做浏览器点选：本快照没有 `workbenchSyncedResources-v4.json`，本地 `App.tsx` 不走 `loadPublicBook("Luke")`，因此无法在本环境用阅读页点开这些公开卡。对照与修补都落在公开数据包和台账 JSONL。
+
+GitHub `verify`（`npm test`）在本分支与基线 `cursor/ohb-jeremiah-1to1-hold-queue-a460` 同样失败，根因是本快照缺创世记资源目录、`comprehensiveCommentaryResources.json`、`workbenchSyncedResources-v4.json`，以及 CI 环境没有 `rg`。失败面不读 `public/data/books/Luke.json`。不补造这些真源，也不为了绿 CI 把隔离 CMC 抬进公开包。

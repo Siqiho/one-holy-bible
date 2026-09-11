@@ -102,6 +102,30 @@ function loadJsonl(path: string): Array<Record<string, unknown>> {
     .map((line) => JSON.parse(line) as Record<string, unknown>);
 }
 
+type SixSourceMix = {
+  cmc: number;
+  study: number;
+  qidaben: number;
+  ocr: number;
+  hurlbut: number;
+  info: number;
+  other: number;
+};
+
+function emptySixSourceMix(): SixSourceMix {
+  return { cmc: 0, study: 0, qidaben: 0, ocr: 0, hurlbut: 0, info: 0, other: 0 };
+}
+
+function bumpSixSource(mix: SixSourceMix, id: string): void {
+  if (id.startsWith("cmc-")) mix.cmc += 1;
+  else if (id.startsWith("study-bible-")) mix.study += 1;
+  else if (id.startsWith("qidaben-")) mix.qidaben += 1;
+  else if (id.startsWith("image-text-")) mix.ocr += 1;
+  else if (id.startsWith("hurlbut-")) mix.hurlbut += 1;
+  else if (id.startsWith("message-")) mix.info += 1;
+  else mix.other += 1;
+}
+
 function verseIdsFor(bookId: string): Set<string> {
   const book = BIBLE_BOOKS.find((item) => item.id === bookId);
   return new Set(
@@ -182,19 +206,28 @@ describe("Luke public card audit and isolation hold-queue", () => {
   });
 
   it("reconciles the six public source streams without lifting held classes", () => {
-    const mix = { cmc: 0, study: 0, qidaben: 0, ocr: 0, hurlbut: 0, info: 0, other: 0 };
+    const publicMix = emptySixSourceMix();
     for (const file of readdirSync(booksDir).filter((name) => name.endsWith(".json"))) {
       const book = JSON.parse(readFileSync(resolve(booksDir, file), "utf8")) as PublicBookPayload;
       for (const card of book.textCards) {
-        if (card.id.startsWith("cmc-")) mix.cmc += 1;
-        else if (card.id.startsWith("study-bible-")) mix.study += 1;
-        else if (card.id.startsWith("qidaben-") || card.id.startsWith("hurlbut-")) mix.other += 1;
-        else if (card.id.startsWith("image-text-")) mix.ocr += 1;
-        else if (card.id.startsWith("message-")) mix.info += 1;
-        else mix.other += 1;
+        bumpSixSource(publicMix, card.id);
       }
     }
-    expect(mix).toEqual({ cmc: 858, study: 9376, qidaben: 0, ocr: 146, hurlbut: 0, info: 3, other: 0 });
-    expect(mix.cmc + mix.study + mix.ocr + mix.info).toBe(10383);
+    expect(publicMix).toEqual({ cmc: 858, study: 9376, qidaben: 0, ocr: 146, hurlbut: 0, info: 3, other: 0 });
+    expect(publicMix.cmc + publicMix.study + publicMix.ocr + publicMix.info).toBe(10383);
+
+    const isolationMix = emptySixSourceMix();
+    for (const row of loadJsonl(isolationPath)) {
+      bumpSixSource(isolationMix, String(row.commentary_key ?? ""));
+    }
+    expect(isolationMix).toEqual({ cmc: 18387, study: 10, qidaben: 0, ocr: 0, hurlbut: 0, info: 0, other: 0 });
+
+    if (!existsSync(johnPackDir)) return;
+    const johnMix = emptySixSourceMix();
+    for (const row of loadJsonl(resolve(johnPackDir, "card候选清单.jsonl"))) {
+      bumpSixSource(johnMix, String(row.commentary_key ?? ""));
+    }
+    expect(johnMix).toEqual({ cmc: 765, study: 495, qidaben: 267, ocr: 1, hurlbut: 5, info: 0, other: 0 });
+    expect(johnMix.cmc + johnMix.study + johnMix.qidaben + johnMix.ocr + johnMix.hurlbut).toBe(1533);
   });
 });

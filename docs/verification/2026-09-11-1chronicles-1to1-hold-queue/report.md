@@ -109,7 +109,7 @@
 | 源 | 用户全库 | 公开（本轮后） | 对账 |
 | --- | ---: | ---: | --- |
 | 综合解读 | 29,476 | 858 | 缺口；历代志上隔离 657 ledger-only |
-| 研修本 | 16,270 | **9,156** | 缺口；本卷 62 keep/fix + 1 hold |
+| 研修本 | 16,270 | **9,145** | 缺口；本卷 62 keep/fix + 1 hold；同跑哀歌 / 加拉太再撤 11 张 |
 | 启导本 | 9,521 | 0 | 整类 hold |
 | OCR | 254 | 146 | 1 keep + 145 hold-as-class；本卷 8 张继续 hold-as-class |
 | 圣经的故事 | 98 | 0 | 整类 hold |
@@ -119,14 +119,14 @@
 
 ## 5. 下一卷
 
-历代志上为本跑指定卷。提前收束后的下一高价值未审公开研修本面可看**耶利米哀歌**（公开 108，隔离 CMC 125）或下一封未审书信（加拉太书 107 / 哥林多后书 105）。
+历代志上为本跑指定卷。本跑已按备选展开**耶利米哀歌**（公开 108→103，隔离 CMC 125 ledger-only）与**加拉太书**（公开 107→101，隔离 CMC 25 ledger-only）。见对应 verification 报告。哥林多后书（105 / 隔离 108）为下一书信备选。
 
 ## 6. 验证
 
 已跑：
 
-- `vitest run` 历代志上及既有公开审计 / `publicData` / `publicBibleData`：见本跑后续记录。
-- `node scripts/generatePublicBibleData.mjs --validate-only public/data`：66 卷、公开文字卡 10,163、无不安全串。
+- `vitest run` 历代志上 / 耶利米哀歌 / 加拉太书及既有公开审计 / `publicData` / `publicBibleData`：见本跑测试记录。
+- `node scripts/generatePublicBibleData.mjs --validate-only public/data`：66 卷、公开文字卡 10,152、无不安全串。
 - `node scripts/validatePublicRepository.mjs`：通过。
 
 未做浏览器点选：本快照没有 `workbenchSyncedResources-v4.json`，本地 `App.tsx` 不走 `loadPublicBook("1Chr")`，因此无法在本环境用阅读页点开这些公开卡。对照与修补都落在公开数据包和台账 JSONL。

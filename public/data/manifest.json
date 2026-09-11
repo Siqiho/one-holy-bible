@@ -217,12 +217,12 @@
       "url": "/data/books/Jer.json"
     },
     {
-      "bytes": 266292,
+      "bytes": 250030,
       "cuvVerseCount": 154,
       "id": "Lam",
       "kjvVerseCount": 154,
-      "sha256": "ed1515ba2eccc8240521575c476201d080ff09af8ccbedbc98ddeef626b8afde",
-      "textCardCount": 108,
+      "sha256": "df87102a7f0cea049dd0f4f9c9d8861fc50b9aca48fa1b104dd5f7b6135e7936",
+      "textCardCount": 103,
       "url": "/data/books/Lam.json"
     },
     {
@@ -424,12 +424,12 @@
       "url": "/data/books/2Cor.json"
     },
     {
-      "bytes": 288797,
+      "bytes": 267236,
       "cuvVerseCount": 149,
       "id": "Gal",
       "kjvVerseCount": 149,
-      "sha256": "bd9b37695bc8fb5e2574426091f84a01599bce3ac1c9c60087166ddbd004f288",
-      "textCardCount": 107,
+      "sha256": "bbfc6e1aba3b818877e0ce77167e0198e730522917001c71b4eb8a467eb055a6",
+      "textCardCount": 101,
       "url": "/data/books/Gal.json"
     },
     {

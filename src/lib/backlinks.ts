@@ -5,7 +5,7 @@ import { normalizeVerseRef } from "../domain/verse";
 const wikiLinkPattern = /\[\[([^\]]+)\]\]/g;
 
 export function resourceMentionsVerse(resource: StudyResource, verseId: VerseId): boolean {
-  if (resource.verses.includes(verseId)) {
+  if (resource.primaryAnchor === verseId || resource.verses.includes(verseId)) {
     return true;
   }
 
@@ -20,4 +20,8 @@ export function resourceMentionsVerse(resource: StudyResource, verseId: VerseId)
 
 export function resourcesForVerse(resources: StudyResource[], verseId: VerseId): StudyResource[] {
   return resources.filter((resource) => resourceMentionsVerse(resource, verseId));
+}
+
+export function resourcesForBookIntro(resources: StudyResource[], book: string): StudyResource[] {
+  return resources.filter((resource) => resource.bookIntro === book);
 }

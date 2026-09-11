@@ -1,0 +1,17 @@
+{
+  "non_target_source_changes": [
+    "/Users/simon/OHB/one-holy-bible/src/data/workbenchSyncedResources.test.ts"
+  ],
+  "non_generated_source_files_compared": 336,
+  "target_hashes": {
+    "src/components/Workbench.tsx": {
+      "sha256": "bf6850827a9e9b4528c6ed683593d5fc7988eb7a7bd3f2620a5ebb46a9c170ae",
+      "served_source_matches_disk": true
+    },
+    "src/styles.css": {
+      "sha256": "2b78828daf4f4c4273f5bd8dda1346257a32f7b094cd45cf9b226a5a38ff3923",
+      "served_source_matches_disk": true
+    }
+  },
+  "process": "  PID STARTED                      COMMAND\n53819 Fri Sep 11 14:03:26 2026     /usr/local/bin/node node_modules/vite/bin/vite.js --host 127.0.0.1 --port 1420 --strictPort\n"
+}

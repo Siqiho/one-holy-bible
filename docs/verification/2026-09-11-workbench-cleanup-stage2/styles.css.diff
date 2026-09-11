@@ -1,0 +1,25 @@
+--- before/src/styles.css
++++ src/styles.css
+@@ -206,6 +206,22 @@
+   background: color-mix(in oklch, var(--accent-soft) 54%, var(--surface));
+   border-color: color-mix(in oklch, var(--accent) 30%, var(--line));
+   color: color-mix(in oklch, var(--ink-soft) 72%, var(--accent));
++}
++
++.workbench-status {
++  bottom: 16px;
++  box-shadow: var(--shadow-popover);
++  height: auto;
++  line-height: 1.5;
++  margin: 0;
++  max-width: min(32rem, calc(100vw - 32px));
++  overflow-wrap: anywhere;
++  padding: 8px 14px;
++  pointer-events: none;
++  position: fixed;
++  right: 16px;
++  white-space: normal;
++  z-index: 30;
+ }
+ 
+ 

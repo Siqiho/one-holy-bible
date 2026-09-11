@@ -1,0 +1,338 @@
+--- before/src/components/Workbench.tsx
++++ src/components/Workbench.tsx
+@@ -571,11 +571,12 @@
+   versionFilter: SearchVersionFilter,
+   scope: SearchScope,
+   currentBook: string,
++  maxResults = searchResultLimit,
+ ): WorkbenchSearchResponse {
+   const response = (wholeBibleSearchIndex
+     ? createPublicScriptureSearchIndex(wholeBibleSearchIndex)
+     : createBibleSearchIndex(versions)).search(query, {
+-    maxResults: searchResultLimit,
++    maxResults,
+     scope: searchScopeOption(scope, currentBook),
+     version: versionFilter,
+   });
+@@ -1508,7 +1509,7 @@
+   onEditResource: ResourceEditHandler;
+   onDeleteResource?: ResourceDeleteHandler;
+   onNavigateToResource?: ResourceNavigateHandler;
+-  onOpenImageResource?: (resource: StudyResource) => void;
++  onOpenImageResource?: (resource: StudyResource, trigger?: HTMLButtonElement) => void;
+   onOpenResource: (resourceId: string) => void;
+   onUnsyncResource?: (resourceId: string) => void;
+   onUpdateWorkbenchResource?: WorkbenchResourceUpdateHandler;
+@@ -1636,6 +1637,8 @@
+   const [editTitle, setEditTitle] = useState(resource.title);
+   const [isEditing, setIsEditing] = useState(false);
+   const [isCopyMenuOpen, setIsCopyMenuOpen] = useState(false);
++  const copyMenuRef = useRef<HTMLDivElement>(null);
++  const copyButtonRef = useRef<HTMLButtonElement>(null);
+   const [editSyncError, setEditSyncError] = useState<string | null>(null);
+   const bodyTextareaRef = useRef<HTMLTextAreaElement>(null);
+   const bodyResizeRef = useRef<{ pointerId: number; startHeight: number; startY: number } | null>(null);
+@@ -1670,6 +1673,34 @@
+     setIsEditing(false);
+     setIsCopyMenuOpen(false);
+   }, [isCollapsed]);
++
++  useEffect(() => {
++    if (!isCopyMenuOpen) return;
++    const menu = copyMenuRef.current;
++    const opener = copyButtonRef.current;
++    menu?.querySelector<HTMLButtonElement>("button")?.focus();
++    function closeOnOutsideClick(event: MouseEvent) {
++      if (!(event.target instanceof Node)) return;
++      if (menu?.contains(event.target) || opener?.contains(event.target)) return;
++      setIsCopyMenuOpen(false);
++    }
++    function closeOnEscape(event: KeyboardEvent) {
++      if (event.key !== "Escape" || !(event.target instanceof Node)) return;
++      if (!menu?.contains(event.target) && !opener?.contains(event.target)) return;
++      event.preventDefault();
++      event.stopPropagation();
++      setIsCopyMenuOpen(false);
++    }
++    document.addEventListener("click", closeOnOutsideClick, true);
++    document.addEventListener("keydown", closeOnEscape, true);
++    return () => {
++      document.removeEventListener("click", closeOnOutsideClick, true);
++      document.removeEventListener("keydown", closeOnEscape, true);
++      if (opener?.isConnected && (menu?.contains(document.activeElement) || document.activeElement === document.body)) {
++        opener.focus();
++      }
++    };
++  }, [isCopyMenuOpen]);
+ 
+   useEffect(() => {
+     if (!isEditing) return;
+@@ -1803,7 +1834,7 @@
+   }
+ 
+   const copyMenu = isCopyMenuOpen ? (
+-    <div className="resource-card__copy-menu" role="menu" aria-label={`${resource.title}复制菜单`}>
++    <div ref={copyMenuRef} className="resource-card__copy-menu" role="menu" aria-label={`${resource.title}复制菜单`}>
+       {(["标题", "正文", "Markdown"] as const).map((kind) => (
+         <button
+           className="resource-card__copy-menu-item"
+@@ -1824,6 +1855,7 @@
+ 
+   const copyButton = (
+     <button
++      ref={copyButtonRef}
+       aria-expanded={isCopyMenuOpen}
+       aria-haspopup="menu"
+       aria-label={`打开${resource.title}复制菜单`}
+@@ -2089,7 +2121,7 @@
+                     type="button"
+                     onClick={(event) => {
+                       stopResourceActionEvent(event);
+-                      onOpenImageResource?.(resource);
++                      onOpenImageResource?.(resource, event.currentTarget);
+                     }}
+                     onPointerDown={stopResourceActionEvent}
+                   >
+@@ -2190,7 +2222,7 @@
+   selectedSourceId: ResourceSourceId;
+   onEditResource: ResourceEditHandler;
+   onNavigateToResource: ResourceNavigateHandler;
+-  onOpenImageResource?: (resource: StudyResource) => void;
++  onOpenImageResource?: (resource: StudyResource, trigger?: HTMLButtonElement) => void;
+   onOpenResource: (resourceId: string) => void;
+   onUnsyncResource?: (resourceId: string) => void;
+   onUpdateWorkbenchResource?: WorkbenchResourceUpdateHandler;
+@@ -2210,7 +2242,7 @@
+   selectedSourceId: ResourceSourceId;
+   onEditResource: ResourceEditHandler;
+   onNavigateToResource: ResourceNavigateHandler;
+-  onOpenImageResource?: (resource: StudyResource) => void;
++  onOpenImageResource?: (resource: StudyResource, trigger?: HTMLButtonElement) => void;
+   onOpenResource: (resourceId: string) => void;
+   onUnsyncResource?: (resourceId: string) => void;
+   onUpdateWorkbenchResource?: WorkbenchResourceUpdateHandler;
+@@ -2457,7 +2489,7 @@
+   sourceIdForResource: (resource: StudyResource) => ResourceSourceId;
+   onEditResource: ResourceEditHandler;
+   onNavigateToResource: ResourceNavigateHandler;
+-  onOpenImageResource?: (resource: StudyResource) => void;
++  onOpenImageResource?: (resource: StudyResource, trigger?: HTMLButtonElement) => void;
+   onOpenResource: (resourceId: string) => void;
+   onUnsyncResource?: (resourceId: string) => void;
+   onUpdateWorkbenchResource?: WorkbenchResourceUpdateHandler;
+@@ -2575,7 +2607,7 @@
+   onEditResource: ResourceEditHandler;
+   onDeleteResource: ResourceDeleteHandler;
+   onNavigateToResource: ResourceNavigateHandler;
+-  onOpenImageResource?: (resource: StudyResource) => void;
++  onOpenImageResource?: (resource: StudyResource, trigger?: HTMLButtonElement) => void;
+   onOpenResource: (resourceId: string) => void;
+   onUnsyncResource?: (resourceId: string) => void;
+   onUpdateWorkbenchResource?: WorkbenchResourceUpdateHandler;
+@@ -2708,7 +2740,7 @@
+   onEditResource: ResourceEditHandler;
+   onDeleteResource: ResourceDeleteHandler;
+   onNavigateToResource: ResourceNavigateHandler;
+-  onOpenImageResource?: (resource: StudyResource) => void;
++  onOpenImageResource?: (resource: StudyResource, trigger?: HTMLButtonElement) => void;
+   onOpenResource: (resourceId: string) => void;
+   onUnsyncResource?: (resourceId: string) => void;
+   onUpdateWorkbenchResource?: WorkbenchResourceUpdateHandler;
+@@ -2858,7 +2890,7 @@
+   onSelectCommentaryLibrary: (libraryId: CommentaryLibraryId) => void;
+   onEditResource: ResourceEditHandler;
+   onNavigateToResource: ResourceNavigateHandler;
+-  onOpenImageResource?: (resource: StudyResource) => void;
++  onOpenImageResource?: (resource: StudyResource, trigger?: HTMLButtonElement) => void;
+   onOpenResource: (resourceId: string) => void;
+   onUnsyncResource?: (resourceId: string) => void;
+   onUpdateWorkbenchResource?: WorkbenchResourceUpdateHandler;
+@@ -2920,6 +2952,7 @@
+   const moduleSectionRefs = useRef(new Map<string, HTMLElement>());
+   const dockPanelRef = useRef<HTMLDivElement>(null);
+   const settingsRef = useRef<HTMLDivElement>(null);
++  const settingsButtonRef = useRef<HTMLButtonElement>(null);
+ 
+   const jumpTargets = useMemo(() => {
+     if (side !== "right") return [];
+@@ -3010,6 +3043,7 @@
+     function closeSettingsOnEscape(event: KeyboardEvent) {
+       if (event.key !== "Escape") return;
+       setIsSettingsOpen(false);
++      settingsButtonRef.current?.focus();
+     }
+ 
+     document.addEventListener("pointerdown", closeSettingsOnOutsidePointerDown, true);
+@@ -3169,6 +3203,7 @@
+                 aria-expanded={isSettingsOpen}
+                 aria-haspopup="dialog"
+                 aria-label={isSettingsOpen ? "关闭设置" : "打开设置"}
++                ref={settingsButtonRef}
+                 className={`resource-dock__settings-button ${isSettingsOpen ? "is-active" : ""}`}
+                 title="阅读设置"
+                 type="button"
+@@ -3271,6 +3306,7 @@
+   const [query, setQuery] = useState("");
+   const [cardQuery, setCardQuery] = useState("");
+   const [submittedQuery, setSubmittedQuery] = useState("");
++  const [searchDisplayLimit, setSearchDisplayLimit] = useState(searchResultLimit);
+   const [searchVersionFilter, setSearchVersionFilter] = useState<SearchVersionFilter>("all");
+   const [searchScope, setSearchScope] = useState<SearchScope>("all");
+   const [isSearchPanelOpen, setIsSearchPanelOpen] = useState(false);
+@@ -3305,6 +3341,11 @@
+   const navigationPickerRef = useRef<HTMLDivElement>(null);
+   const bookNavButtonRef = useRef<HTMLButtonElement>(null);
+   const chapterNavButtonRef = useRef<HTMLButtonElement>(null);
++  const searchInputRef = useRef<HTMLInputElement>(null);
++  const searchFormRef = useRef<HTMLDivElement>(null);
++  const searchPanelRef = useRef<HTMLElement>(null);
++  const imagePreviewOpenerRef = useRef<HTMLButtonElement | null>(null);
++  const imagePreviewCloseRef = useRef<HTMLButtonElement>(null);
+   const verseButtonRefs = useRef(new Map<string, HTMLButtonElement>());
+   const bibleColumnRefs = useRef(new Map<string, HTMLElement>());
+   const bibleScrollSyncLockRef = useRef(false);
+@@ -3423,9 +3464,28 @@
+     searchVersionFilter,
+     searchScope,
+     currentBook,
+-  ), [currentBook, searchQuery, searchScope, searchVersionFilter, versions, wholeBibleSearchIndex]);
++    searchDisplayLimit,
++  ), [currentBook, searchQuery, searchScope, searchVersionFilter, searchDisplayLimit, versions, wholeBibleSearchIndex]);
++  useEffect(() => {
++    setSearchDisplayLimit(searchResultLimit);
++    setStatus((previous) => {
++      if (!/^(已显示 |搜索到 )/.test(previous)) return previous;
++      if (hasPendingSearchChange) return "搜索条件已更新，请点击搜索。";
++      return searchQuery ? `搜索到 ${searchResponse.totalCount} 处经文` : "搜索已清除";
++    });
++  }, [pendingSearchQuery, searchQuery, searchVersionFilter, searchScope, currentBook, searchResponse.totalCount, hasPendingSearchChange]);
+   const searchResults = searchResponse.results;
+   const shouldShowSearchPanel = isSearchPanelOpen && (pendingSearchQuery.length > 0 || searchQuery.length > 0);
++  useEffect(() => {
++    if (!shouldShowSearchPanel) return;
++    function closeSearchOnOutsidePointer(event: PointerEvent) {
++      if (!(event.target instanceof Node)) return;
++      if (searchFormRef.current?.contains(event.target) || searchPanelRef.current?.contains(event.target)) return;
++      setIsSearchPanelOpen(false);
++    }
++    document.addEventListener("pointerdown", closeSearchOnOutsidePointer, true);
++    return () => document.removeEventListener("pointerdown", closeSearchOnOutsidePointer, true);
++  }, [shouldShowSearchPanel]);
+   const searchStatusLabel = hasPendingSearchChange
+     ? "待搜索"
+     : searchQuery
+@@ -3644,6 +3704,29 @@
+   }, [openNavigationPanel]);
+ 
+   useEffect(() => {
++    if (!previewImageResource?.assetPath) return;
++    const opener = imagePreviewOpenerRef.current;
++    imagePreviewCloseRef.current?.focus();
++    function handlePreviewKeyDown(event: KeyboardEvent) {
++      if (event.key === "Escape") {
++        event.preventDefault();
++        event.stopPropagation();
++        closeImagePreview();
++      } else if (event.key === "Tab") {
++        // The close button is the lightbox's only interactive element.
++        event.preventDefault();
++        event.stopPropagation();
++        imagePreviewCloseRef.current?.focus();
++      }
++    }
++    document.addEventListener("keydown", handlePreviewKeyDown, true);
++    return () => {
++      document.removeEventListener("keydown", handlePreviewKeyDown, true);
++      if (opener?.isConnected) opener.focus();
++    };
++  }, [previewImageResource]);
++
++  useEffect(() => {
+     const normalizedQuery = normalizedCardSearchQuery(cardQuery);
+     if (!normalizedQuery) return;
+ 
+@@ -3759,6 +3842,7 @@
+   }
+ 
+   function runSearch(nextQuery = query) {
++    setSearchDisplayLimit(searchResultLimit);
+     const normalizedQuery = nextQuery.trim();
+     if (!normalizedQuery) {
+       setSubmittedQuery("");
+@@ -4283,7 +4367,8 @@
+     });
+   }
+ 
+-  function openImagePreview(resource: StudyResource) {
++  function openImagePreview(resource: StudyResource, trigger?: HTMLButtonElement) {
++    imagePreviewOpenerRef.current = trigger ?? null;
+     setPreviewImageResource(resource);
+     setStatus(`已放大图片：${resource.title}`);
+     logWorkbenchInfo("[workbench] image preview opened", {
+@@ -4945,8 +5030,16 @@
+     return (
+       <section
+         aria-label="经文搜索结果"
++        ref={searchPanelRef}
+         className="bible-search-panel"
+         role="region"
++        onKeyDown={(event) => {
++          if (event.key !== "Escape") return;
++          event.preventDefault();
++          event.stopPropagation();
++          searchInputRef.current?.focus();
++          setIsSearchPanelOpen(false);
++        }}
+         style={{
+           left: `${leftDockWidth + dockResizeHandleWidth}px`,
+           right: `${rightDockWidth + dockResizeHandleWidth}px`,
+@@ -4995,8 +5088,17 @@
+                     <span className="bible-search-result__text">{highlightedSearchText(result)}</span>
+                   </button>
+                 ))}
++                <p className="bible-search-panel__empty">
++                  已显示 {searchResults.length} / 共 {searchResponse.totalCount} 处结果
++                </p>
+                 {searchResponse.totalCount > searchResults.length ? (
+-                  <p className="bible-search-panel__empty">已显示前 {searchResults.length} 处结果。</p>
++                  <button className="toolbar-button" type="button" onClick={() => {
++                    const nextLimit = Math.min(searchDisplayLimit + searchResultLimit, searchResponse.totalCount);
++                    setSearchDisplayLimit(nextLimit);
++                    setStatus(`已显示 ${nextLimit} / 共 ${searchResponse.totalCount} 处经文`);
++                  }}>
++                    加载更多结果
++                  </button>
+                 ) : null}
+               </>
+             ) : (
+@@ -5104,10 +5206,11 @@
+             {cardSearchQuery ? `${filteredCurrentResources.length} 张` : "全部"}
+           </span>
+         </div>
+-        <div className="bible-search" role="search" aria-label="经文搜索">
++        <div ref={searchFormRef} className="bible-search" role="search" aria-label="经文搜索">
+           <Search size={16} />
+           <input
+             aria-label="搜索经文"
++            ref={searchInputRef}
+             placeholder="搜索经文"
+             type="search"
+             value={query}
+@@ -5425,6 +5528,7 @@
+               </div>
+               <button
+                 aria-label="关闭图片预览"
++                ref={imagePreviewCloseRef}
+                 className="image-lightbox__close"
+                 title="关闭图片预览"
+                 type="button"
+@@ -5448,7 +5552,8 @@
+         </div>
+       ) : null}
+ 
+-      <p className="sr-only" role="status" aria-live="polite">
++      <p className={`workbench-status toolbar-refresh-status toolbar-refresh-status--${status.includes("失败") ? "error" : "success"}`}
++        role="status" aria-live="polite" aria-atomic="true">
+         {status}
+       </p>
+     </main>

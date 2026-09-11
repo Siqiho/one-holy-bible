@@ -1,0 +1,21 @@
+{
+  "outcome": "PASS. Overlay increment matches the requested close/focus contract; no save/data side effects in the two diffs.",
+  "result_status": "success",
+  "review_verdict": "pass",
+  "findings": [
+    "Copy: open effect focuses first menuitem; capture Esc only if target in menu/opener; capture click ignores menu/opener; cleanup focuses opener iff menu still holds focus or activeElement is body (1677-1703, 1836-1868). Success still closes, failure does not (1821-1833).",
+    "Copy cleanup does not steal other inputs: click-outside after pointerdown focus leaves activeElement off menu/body, so opener.focus is skipped. useEffect (not layout) runs after click default actions.",
+    "Search results Esc: focus input then setIsSearchPanelOpen(false) (5036-5042) so onFocus open (5218) is a no-op before close. Input Esc path unchanged (3964-3966). Outside pointerdown skips form+panel only (3479-3488, 5209-5213); no query/submittedQuery writes. Panel filters stay inside panel.",
+    "Settings Esc focuses the always-mounted trigger (3043-3046, 3206). Lightbox capture+stop and nav outside-pointer remain; search Esc stop keeps those document listeners from also firing.",
+    "Diff hunks are refs/listeners/focus only. saveLayout/onSaveLayout, copyTextToClipboard, selectSearchResult, and status/save strings untouched. styles.css hash equals review2; styles.diff absent/empty."
+  ],
+  "limitations": [
+    "Did not run vitest, tsc, or a browser; tests.log 170/3-file pass is implementer-recorded, not observed here.",
+    "Did not re-audit review1/2 pagination, lightbox internals, or feedback/count reset.",
+    "Did not hash-compare workspace files to origin (no execute). Settings Esc remains document-global while settings is open (pre-existing); click-away already dismisses, so leftover focus fight is a Tab-only path.",
+    "Three new tests (4464-4508) do not assert copy-success close or 'no steal when focusing another input'."
+  ],
+  "artifacts": [],
+  "prompt_round": 1,
+  "written_at": 1789107874096
+}

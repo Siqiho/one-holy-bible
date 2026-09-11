@@ -1,6 +1,5 @@
 import { beforeEach, describe, expect, it, vi } from "vitest";
 
-import { loadBibleLibrary, publicBookToBibleVersions } from "./loadBibleLibrary";
 import {
   PublicBookLoadError,
   loadPublicBook,
@@ -288,23 +287,5 @@ describe("public Bible data loading", () => {
     expect(secondFetcher).toHaveBeenCalledTimes(2);
     secondResponse.resolve(jsonResponse(validGenesis));
     await expect(second).resolves.toEqual(validGenesis);
-  });
-});
-
-describe("loadBibleLibrary compatibility adapter", () => {
-  beforeEach(() => {
-    resetPublicDataCache();
-  });
-
-  it("converts an active public book payload into CUV and KJV versions", async () => {
-    const fetcher = vi.fn()
-      .mockResolvedValueOnce(jsonResponse(validManifest))
-      .mockResolvedValueOnce(jsonResponse(validGenesis));
-
-    const result = await loadBibleLibrary("Gen", { fetcher });
-
-    expect(result).toEqual(publicBookToBibleVersions(validGenesis));
-    expect(result.cuvBible).toMatchObject({ id: "cuv", label: "和合本", language: "zh" });
-    expect(result.kjvBible).toMatchObject({ id: "kjv", label: "KJV", language: "en" });
   });
 });

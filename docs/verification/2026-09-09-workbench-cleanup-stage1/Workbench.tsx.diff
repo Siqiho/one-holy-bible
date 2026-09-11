@@ -1,0 +1,152 @@
+--- before/src/components/Workbench.tsx
++++ after/src/components/Workbench.tsx
+@@ -13,7 +13,6 @@
+   Navigation2,
+   NotebookText,
+   Pencil,
+-  Plus,
+   ArrowLeftRight,
+   PanelLeftClose,
+   PanelLeftOpen,
+@@ -2464,6 +2463,7 @@
+   unsyncFailedResourceId?: string | null;
+   hasAnyUnsyncInFlight?: boolean;
+   updateInFlightResourceId?: string | null;
++  isCardSearchActive?: boolean;
+ }
+ 
+ function ResourceModule({
+@@ -2485,6 +2485,7 @@
+   unsyncFailedResourceId = null,
+   hasAnyUnsyncInFlight = false,
+   updateInFlightResourceId = null,
++  isCardSearchActive = false,
+ }: ResourceModuleProps & {
+   hideHeader?: boolean;
+   isCollapsed?: boolean;
+@@ -2555,7 +2556,9 @@
+             />
+           ))
+         ) : (
+-          <p className="resource-dock__empty">当前经节还没有资源。</p>
++          <p className="resource-dock__empty">
++            {isCardSearchActive ? "没有匹配的卡片。" : "当前经节还没有资源。"}
++          </p>
+         )
+       ) : null}
+     </section>
+@@ -2868,6 +2871,7 @@
+   unsyncFailedResourceId?: string | null;
+   hasAnyUnsyncInFlight?: boolean;
+   updateInFlightResourceId?: string | null;
++  isCardSearchActive?: boolean;
+ }
+ 
+ function ResourceDock({
+@@ -2898,6 +2902,7 @@
+   unsyncFailedResourceId = null,
+   hasAnyUnsyncInFlight = false,
+   updateInFlightResourceId = null,
++  isCardSearchActive = false,
+ }: ResourceDockProps) {
+   const modules = layout.modules.filter((module) => module.side === side && module.visible);
+   const collapsed = side === "left" ? layout.leftCollapsed : layout.rightCollapsed;
+@@ -3061,15 +3066,6 @@
+                 <span>资源库</span>
+               </div>
+               <div className="resource-dock__header-actions">
+-                <button
+-                  aria-label="添加资源库"
+-                  className="dock-toggle"
+-                  disabled
+-                  title="添加资源库（即将支持）"
+-                  type="button"
+-                >
+-                  <Plus size={14} />
+-                </button>
+                 {!collapsed ? (
+                   <button
+                     aria-label="收起左侧资料栏"
+@@ -3204,6 +3200,7 @@
+                 unsyncFailedResourceId={unsyncFailedResourceId}
+                 hasAnyUnsyncInFlight={hasAnyUnsyncInFlight}
+                 updateInFlightResourceId={updateInFlightResourceId}
++                isCardSearchActive={isCardSearchActive}
+               />
+             );
+           })
+@@ -3303,6 +3300,8 @@
+   const updateInFlightResourceIdRef = useRef<string | null>(null);
+   const initialNavigationRef = useRef({ introBook: initialIntroBook, verseId: initialVerseId });
+   const navigationPickerRef = useRef<HTMLDivElement>(null);
++  const bookNavButtonRef = useRef<HTMLButtonElement>(null);
++  const chapterNavButtonRef = useRef<HTMLButtonElement>(null);
+   const verseButtonRefs = useRef(new Map<string, HTMLButtonElement>());
+   const bibleColumnRefs = useRef(new Map<string, HTMLElement>());
+   const bibleScrollSyncLockRef = useRef(false);
+@@ -3425,7 +3424,7 @@
+   const searchResults = searchResponse.results;
+   const shouldShowSearchPanel = isSearchPanelOpen && (pendingSearchQuery.length > 0 || searchQuery.length > 0);
+   const searchStatusLabel = hasPendingSearchChange
+-    ? "点击搜索更新结果"
++    ? "待搜索"
+     : searchQuery
+     ? `${searchResponse.totalCount} 处结果`
+     : "输入关键词后搜索";
+@@ -3620,9 +3619,24 @@
+       });
+     }
+ 
++    function closeNavigationPanelOnEscape(event: KeyboardEvent) {
++      if (event.key !== "Escape") return;
++
++      const panel = openNavigationPanel;
++      setOpenNavigationPanel(null);
++      logWorkbenchInfo("[workbench] navigation panel closed", {
++        panel,
++        reason: "escape",
++      });
++      const trigger = panel === "book" ? bookNavButtonRef.current : chapterNavButtonRef.current;
++      trigger?.focus();
++    }
++
+     document.addEventListener("pointerdown", closeNavigationPanelOnOutsidePointerDown, true);
++    document.addEventListener("keydown", closeNavigationPanelOnEscape);
+     return () => {
+       document.removeEventListener("pointerdown", closeNavigationPanelOnOutsidePointerDown, true);
++      document.removeEventListener("keydown", closeNavigationPanelOnEscape);
+     };
+   }, [openNavigationPanel]);
+ 
+@@ -5008,6 +5022,7 @@
+         </div>
+         <div className="toolbar__group" aria-label="当前书卷章节" ref={navigationPickerRef}>
+           <button
++            ref={bookNavButtonRef}
+             aria-expanded={openNavigationPanel === "book"}
+             aria-label={`选择书卷 ${bookTitle(currentBook)}`}
+             className="toolbar-button toolbar-button--chapter"
+@@ -5018,6 +5033,7 @@
+             {bookTitle(currentBook)}
+           </button>
+           <button
++            ref={chapterNavButtonRef}
+             aria-expanded={openNavigationPanel === "chapter"}
+             aria-label={selectedIntroBook ? "选择章节 序" : `选择章节 第 ${currentChapter} 章`}
+             className="toolbar-button toolbar-button--chapter"
+@@ -5249,7 +5265,6 @@
+                       </span>
+                     </button>
+                     <div className="reader-pane__title">
+-                      <span className="reader-pane__eyebrow">{currentEnglishBookTitle} study desk</span>
+                       <h1>{currentChapterLabel}</h1>
+                       <div className="reader-pane__selection">
+                         <span>{selectedIntroBook ? "当前位置" : "当前经节"}</span>
+@@ -5376,6 +5391,7 @@
+             selectedSourceId={selectedSourceId}
+             sourceIdForResource={sourceIdForResource}
+             side="right"
++            isCardSearchActive={Boolean(cardSearchQuery)}
+             unsyncingResourceId={activeUnsyncingResourceId}
+             unsyncFailedResourceId={unsyncFailedResourceId}
+             hasAnyUnsyncInFlight={hasAnyUnsyncInFlight}

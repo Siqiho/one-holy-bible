@@ -1,0 +1,475 @@
+{
+  "accepted_at": "2026-09-09T06:48:09.880Z",
+  "accepted_scope": "原工作台控件梳理报告；产品代码未修改",
+  "chief_acceptance": "accepted",
+  "initial_execution": {
+    "id": "07f7e0fc-3012-4ad4-bc69-b057a500c910",
+    "status": "failed",
+    "revision": 50,
+    "phase": "implement",
+    "session_id": "00167fc6-9039-46f3-ae6b-ac8e1f88b70f",
+    "model": {
+      "requested": "grok-4.6",
+      "effort_requested": "xhigh",
+      "configuration_acknowledged": true,
+      "reported_model": null,
+      "reported_effort": null,
+      "configured_model": "grok-4.6",
+      "configured_effort": "xhigh"
+    },
+    "summary": "acp_timeout:session/prompt",
+    "candidate": null,
+    "checks": [],
+    "acceptance": "not_accepted",
+    "permissions": {
+      "mode": "trusted",
+      "native_execute": "automatic"
+    },
+    "artifacts": [
+      {
+        "name": "baseline.json",
+        "bytes": 3011,
+        "sha256": "519da89b3279b0a8341543fcd6160df3676418150fe819e43df44afa806e17f5"
+      },
+      {
+        "name": "cursor.log",
+        "bytes": 993416,
+        "sha256": "42c2d4d3fc0f5aeb0c3639457bc7e8d347e2d91d44f87c40511d6c8780b9d705"
+      },
+      {
+        "name": "finish.json",
+        "bytes": 3917,
+        "sha256": "eeb5f39e228bb1b8c3a46cb5ee88f8e9bea9682303e3f49c0a6488ceffe67b30"
+      },
+      {
+        "name": "prompt-round.json",
+        "bytes": 39,
+        "sha256": "8c03028ea2d818ae72ccb68c5d226dd10afc4fa69d96ca1c573b05b97fcd9d89"
+      },
+      {
+        "name": "result.json",
+        "bytes": 1183,
+        "sha256": "5b52df5cbea228eb2a22b71d16f37b7fca3fae5af70fcf4d537227d3e544fed8"
+      },
+      {
+        "name": "supervisor.log",
+        "bytes": 169,
+        "sha256": "a693ee70d99b3ac0d7aa821540ffd0aaa8fcbb997c6c947b987133b7453e8295"
+      }
+    ],
+    "gpt6_coordination": {
+      "tool_calls": 84,
+      "returned_bytes_before_this_call": 184206,
+      "worker_output_bytes": 1229988,
+      "token_count": null
+    },
+    "retry_safe": false,
+    "stage": "failed",
+    "progress": {
+      "completed_tools": 198,
+      "active_tool": {
+        "id": "call-195eb757-415e-410b-9c9b-c3da8d9d21fe-33\nfc_ozZ66K7-6SkKZu-a384222f4fedfd1b_0",
+        "toolCallId": "call-195eb757-415e-410b-9c9b-c3da8d9d21fe-33\nfc_ozZ66K7-6SkKZu-a384222f4fedfd1b_0",
+        "title": "MCP: tool",
+        "kind": "other",
+        "status": "pending",
+        "rawInput": {}
+      },
+      "failed": 0
+    }
+  },
+  "report_fix": {
+    "id": "0ec8ca80-35aa-422e-b357-309a6e1c4db0",
+    "status": "completed",
+    "revision": 13,
+    "phase": "fix",
+    "session_id": "d4ac7c93-20d2-422e-9281-6a2d9752d36d",
+    "model": {
+      "requested": "grok-4.6",
+      "effort_requested": "xhigh",
+      "configuration_acknowledged": true,
+      "reported_model": null,
+      "reported_effort": null,
+      "configured_model": "grok-4.6",
+      "configured_effort": "xhigh"
+    },
+    "summary": "定向修订完成：54项仍在；TB-05/ST-02改为保留，TB-13改为下沉，CD-05改为缺陷，CD-01补触屏边界，DF-09证据改为index.html 1–13。计数 remove2/merge3/demote4/keep17/defect19/resolved6/unverified3。未改产品代码。\nTB-05：仅PointerSensor，交换钮是键…",
+    "candidate": "0ee38fa5c23c08f3039083726efbc7849892d6b513b2e1c5f508906ea3f89174",
+    "checks": [
+      {
+        "exit_code": 0,
+        "argv": "[\"python3\",\"-c\",\"import json,hashlib,pathlib\\np=pathlib.Path('/Users/simon/OHB/one-holy-bible/docs/verification/2026-…"
+      }
+    ],
+    "acceptance": "execution_returned; independent_review_pending",
+    "permissions": {
+      "mode": "trusted",
+      "native_execute": "automatic"
+    },
+    "artifacts": [
+      {
+        "name": "baseline.json",
+        "bytes": 3609,
+        "sha256": "a08e1ec6f1f2e6e765ceea939389e3c5ab164c567bfc7174dd87e58911dee219"
+      },
+      {
+        "name": "candidate.json",
+        "bytes": 3609,
+        "sha256": "7be807919a57a2c66f672ee387205b49be86b62ccc0fd82108d7e384aef473e1"
+      },
+      {
+        "name": "checks.log",
+        "bytes": 83,
+        "sha256": "1e80ca7d9e62dc8f83ebf1dc35678bf398520495ef1a98479c75483922c3c294"
+      },
+      {
+        "name": "cursor.log",
+        "bytes": 302000,
+        "sha256": "0978bf4457e45ccac89d204718c530a3f5f2e407f5fa49c8bb260753ce681dd6"
+      },
+      {
+        "name": "finish.json",
+        "bytes": 1463,
+        "sha256": "54864c8bfef7e933db2e81c5edf50462aa1287c824bf9d91bde6dad3613dda96"
+      }
+    ],
+    "gpt6_coordination": {
+      "tool_calls": 14,
+      "returned_bytes_before_this_call": 70295,
+      "worker_output_bytes": 349989,
+      "token_count": null
+    },
+    "retry_safe": false,
+    "stage": "completed",
+    "structured_final": true,
+    "progress": {
+      "completed_tools": 50,
+      "active_tool": null,
+      "failed": 0
+    }
+  },
+  "full_independent_review": {
+    "id": "d15adb7e-3e68-40a3-b3cc-fb3b485feb53",
+    "status": "completed",
+    "revision": 15,
+    "phase": "review",
+    "session_id": "ef5b429e-e1b1-496a-984b-110d1d6f6f74",
+    "model": {
+      "requested": "grok-4.6",
+      "effort_requested": "xhigh",
+      "configuration_acknowledged": true,
+      "reported_model": null,
+      "reported_effort": null,
+      "configured_model": "grok-4.6",
+      "configured_effort": "xhigh"
+    },
+    "summary": "PASS\n本会话未开浏览器、未跑测试、未启停服务、未读 SQLite、未加载 generated 数据、未复算 92 个输入哈希（控制器负责）。UI 现证仅依 Codex ui-evidence.md，不冒充亲测。\n未把 masthead「上一章/下一章」（Workbench.tsx 5239–5271）与坝…",
+    "candidate": "0ee38fa5c23c08f3039083726efbc7849892d6b513b2e1c5f508906ea3f89174",
+    "checks": [
+      {
+        "exit_code": 0,
+        "argv": "[\"python3\",\"-c\",\"import json,hashlib,pathlib\\np=pathlib.Path('/Users/simon/OHB/one-holy-bible/docs/verification/2026-…"
+      }
+    ],
+    "acceptance": "review_returned; chief_acceptance_pending",
+    "permissions": {
+      "mode": "restricted",
+      "native_execute": "restricted"
+    },
+    "artifacts": [
+      {
+        "name": "baseline.json",
+        "bytes": 3609,
+        "sha256": "7be807919a57a2c66f672ee387205b49be86b62ccc0fd82108d7e384aef473e1"
+      },
+      {
+        "name": "candidate.json",
+        "bytes": 3609,
+        "sha256": "7be807919a57a2c66f672ee387205b49be86b62ccc0fd82108d7e384aef473e1"
+      },
+      {
+        "name": "checks.log",
+        "bytes": 83,
+        "sha256": "1e80ca7d9e62dc8f83ebf1dc35678bf398520495ef1a98479c75483922c3c294"
+      },
+      {
+        "name": "cursor.log",
+        "bytes": 373291,
+        "sha256": "c80f26d52036f16f2224b5b1e86051442857dce72e1e039057040e6828237daf"
+      },
+      {
+        "name": "finish.json",
+        "bytes": 1634,
+        "sha256": "c611e686a8509901a136b93b41745cf654031a0f82966315a07f2c39301467ee"
+      }
+    ],
+    "gpt6_coordination": {
+      "tool_calls": 11,
+      "returned_bytes_before_this_call": 5934,
+      "worker_output_bytes": 358191,
+      "token_count": null
+    },
+    "retry_safe": false,
+    "stage": "completed",
+    "structured_final": true,
+    "progress": {
+      "completed_tools": 87,
+      "active_tool": null,
+      "failed": 0
+    }
+  },
+  "full_review_findings": {
+    "outcome": "PASS",
+    "findings": [],
+    "limitations": [
+      "本会话未开浏览器、未跑测试、未启停服务、未读 SQLite、未加载 generated 数据、未复算 92 个输入哈希（控制器负责）。UI 现证仅依 Codex ui-evidence.md，不冒充亲测。",
+      "未把 masthead「上一章/下一章」（Workbench.tsx 5239–5271）与坝宽/中栏分割条（含键盘调宽，4590–4696、5208–5220、5325–5357）列为独立条目；它们不在历史可删清单上，不改变现行 remove/keep 决策。DF-03 的「全局零快捷键」仍成立。",
+      "DF-12 仍标 unverified；styles.css 4125–4336 .verse-preview-popover 仍有历史 hex。属保守欠举证，不是误判为可删。JSON 引 canvas 102 实为 app-loading，verse-preview 在 canvas 103。",
+      "破坏性路径（保存/重置/删除/退回/同步）仍仅源码调用链，Codex 与本会话均未点。"
+    ],
+    "artifacts": [
+      {
+        "path": "one-holy-bible/docs/verification/2026-09-09-workbench-controls/inventory.md",
+        "sha256": "8286432c0a4bea53a0acff4f6143d602ee7673a15f404130e01b81d796f7f88b",
+        "bytes": 32915
+      },
+      {
+        "path": "one-holy-bible/docs/verification/2026-09-09-workbench-controls/inventory.json",
+        "sha256": "9573327a5d147d5ce07c246660c2d1bbab975afc02de32e9e3ad938998ddac79",
+        "bytes": 66767
+      },
+      {
+        "path": "one-holy-bible/docs/verification/2026-09-09-workbench-controls/ui-evidence.md",
+        "sha256": "420fd1efc98bc89c3519adaa6bf84da21fb60c8412f6cd779752e1c506fbab81",
+        "bytes": 4447
+      }
+    ],
+    "prompt_round": 1,
+    "written_at": 1788936086287
+  },
+  "citation_fix": {
+    "id": "b212ffba-d4f9-4467-8f1a-7460ef42ed7a",
+    "status": "completed",
+    "revision": 10,
+    "phase": "fix",
+    "session_id": "583afd60-8386-4c6e-b80a-b562ff0d78b7",
+    "model": {
+      "requested": "grok-4.6",
+      "effort_requested": "xhigh",
+      "configuration_acknowledged": true,
+      "reported_model": null,
+      "reported_effort": null,
+      "configured_model": "grok-4.6",
+      "configured_effort": "xhigh"
+    },
+    "summary": "DF-12 code_evidence[0] citation line_start/line_end 102→103\nDF-12 code_evidence[0] line_start and line_end changed from 102 to 103\ncitation errata only; no re-audit",
+    "candidate": "810a83125115441eaa28df73d65ec9b889d656130a277edf2076bc3a9d120c9e",
+    "checks": [
+      {
+        "exit_code": 0,
+        "argv": "[\"python3\",\"-c\",\"import json,hashlib,pathlib\\np=pathlib.Path('/Users/simon/OHB/one-holy-bible/docs/verification/2026-…"
+      },
+      {
+        "exit_code": 0,
+        "argv": "[\"python3\",\"-c\",\"import json,pathlib,hashlib\\nold=pathlib.Path('/Users/simon/备份/codex/20260909-workbench-controls…"
+      }
+    ],
+    "acceptance": "execution_returned; independent_review_pending",
+    "permissions": {
+      "mode": "trusted",
+      "native_execute": "automatic"
+    },
+    "artifacts": [
+      {
+        "name": "baseline.json",
+        "bytes": 3609,
+        "sha256": "7be807919a57a2c66f672ee387205b49be86b62ccc0fd82108d7e384aef473e1"
+      },
+      {
+        "name": "candidate.json",
+        "bytes": 3609,
+        "sha256": "82258df2577dda8647ba9c60b8114885f3bd87ea6ce6d10f775b761945bdc8bc"
+      },
+      {
+        "name": "checks.log",
+        "bytes": 151,
+        "sha256": "c610e2a2e2271b3889a347acf00a4b7bcc7a28939236d1de32e74d1ad73b599e"
+      },
+      {
+        "name": "cursor.log",
+        "bytes": 67363,
+        "sha256": "c7c6ebe12036ea49c21214e75b907c08f601e35515087179e50e653655607f65"
+      },
+      {
+        "name": "finish.json",
+        "bytes": 528,
+        "sha256": "dbf2c0071105d3aae5bf2cf62aeb45aaed4afc3ba349c1c19a92ce500090d739"
+      }
+    ],
+    "gpt6_coordination": {
+      "tool_calls": 6,
+      "returned_bytes_before_this_call": 7943,
+      "worker_output_bytes": 65383,
+      "token_count": null
+    },
+    "retry_safe": false,
+    "stage": "completed",
+    "structured_final": true,
+    "progress": {
+      "completed_tools": 9,
+      "active_tool": null,
+      "failed": 0
+    }
+  },
+  "citation_independent_review": {
+    "id": "f0ac8ed0-e504-4f09-8ec7-b30a87e7fd50",
+    "status": "completed",
+    "revision": 9,
+    "phase": "review",
+    "session_id": "1a7d09ef-d9ba-4a25-abf8-083111f7526f",
+    "model": {
+      "requested": "grok-4.6",
+      "effort_requested": "xhigh",
+      "configuration_acknowledged": true,
+      "reported_model": null,
+      "reported_effort": null,
+      "configured_model": "grok-4.6",
+      "configured_effort": "xhigh"
+    },
+    "summary": "PASS\nDF-12 code_evidence[0] is now line_start=line_end=103 on the historical canvas.\nCanvas line 103 is the verse-preview hardcoded sRGB hex (#8b6914) minor; line 102 is the unrelated app-loading item.\nBackup inventory.json still has 102/102 for that same DF-12 evidence object; remaining DF-12 fi…",
+    "candidate": "810a83125115441eaa28df73d65ec9b889d656130a277edf2076bc3a9d120c9e",
+    "checks": [
+      {
+        "exit_code": 0,
+        "argv": "[\"python3\",\"-c\",\"import json,hashlib,pathlib\\np=pathlib.Path('/Users/simon/OHB/one-holy-bible/docs/verification/2026-…"
+      },
+      {
+        "exit_code": 0,
+        "argv": "[\"python3\",\"-c\",\"import json,pathlib,hashlib\\nold=pathlib.Path('/Users/simon/备份/codex/20260909-workbench-controls…"
+      }
+    ],
+    "acceptance": "review_returned; chief_acceptance_pending",
+    "permissions": {
+      "mode": "restricted",
+      "native_execute": "restricted"
+    },
+    "artifacts": [
+      {
+        "name": "baseline.json",
+        "bytes": 3609,
+        "sha256": "82258df2577dda8647ba9c60b8114885f3bd87ea6ce6d10f775b761945bdc8bc"
+      },
+      {
+        "name": "candidate.json",
+        "bytes": 3609,
+        "sha256": "82258df2577dda8647ba9c60b8114885f3bd87ea6ce6d10f775b761945bdc8bc"
+      },
+      {
+        "name": "checks.log",
+        "bytes": 151,
+        "sha256": "c610e2a2e2271b3889a347acf00a4b7bcc7a28939236d1de32e74d1ad73b599e"
+      },
+      {
+        "name": "cursor.log",
+        "bytes": 80247,
+        "sha256": "59fdf4d1d6ccadcd4149122f1c077ec3a277f9fcf64e02dcf2c4bd3b30070363"
+      },
+      {
+        "name": "finish.json",
+        "bytes": 1182,
+        "sha256": "beb2ade14515130f4e0bfa2ce0acbbb210c0e7f4cbb3bef815b0ebfd454c4884"
+      }
+    ],
+    "gpt6_coordination": {
+      "tool_calls": 6,
+      "returned_bytes_before_this_call": 3994,
+      "worker_output_bytes": 76567,
+      "token_count": null
+    },
+    "retry_safe": false,
+    "stage": "completed",
+    "structured_final": true,
+    "progress": {
+      "completed_tools": 16,
+      "active_tool": null,
+      "failed": 0
+    }
+  },
+  "citation_review_findings": {
+    "outcome": "PASS",
+    "findings": [
+      "DF-12 code_evidence[0] is now line_start=line_end=103 on the historical canvas.",
+      "Canvas line 103 is the verse-preview hardcoded sRGB hex (#8b6914) minor; line 102 is the unrelated app-loading item.",
+      "Backup inventory.json still has 102/102 for that same DF-12 evidence object; remaining DF-12 fields match.",
+      "inventory.md DF-12 text has no 102/103 citation, consistent with an unchanged Markdown hash."
+    ],
+    "limitations": [
+      "Did not re-audit the other 53 items.",
+      "Did not run product tests, browse, or read SQLite.",
+      "Did not independently hash inventory.md (native execute unauthorized); controller owns the precise JSON diff and 92-input hash checks.",
+      "Byte-level uniqueness of the two-digit change was confirmed by reading both full JSON files and comparing the DF-12 objects, not by a local diff command."
+    ],
+    "artifacts": [
+      {
+        "path": "one-holy-bible/docs/verification/2026-09-09-workbench-controls/inventory.json",
+        "sha256": "ab68080ecbb94567ca47e35cfdacad39506d7528ec6708848e23a6366dbb4023",
+        "bytes": 66767
+      }
+    ],
+    "prompt_round": 1,
+    "written_at": 1788936390603
+  },
+  "final_manifest": {
+    "files": [
+      {
+        "name": "inventory.md",
+        "sha256": "8286432c0a4bea53a0acff4f6143d602ee7673a15f404130e01b81d796f7f88b",
+        "bytes": 32915
+      },
+      {
+        "name": "inventory.json",
+        "sha256": "ab68080ecbb94567ca47e35cfdacad39506d7528ec6708848e23a6366dbb4023",
+        "bytes": 66767
+      },
+      {
+        "name": "ui-evidence.md",
+        "sha256": "420fd1efc98bc89c3519adaa6bf84da21fb60c8412f6cd779752e1c506fbab81",
+        "bytes": 4447
+      },
+      {
+        "name": "baseline.json",
+        "sha256": "c1857fd33f5b1731d1411203b44cc90e3cb8911ffd84c0151be29f45bebc0175",
+        "bytes": 17076
+      }
+    ],
+    "count": 54,
+    "classifications": {
+      "keep": 17,
+      "merge": 3,
+      "demote": 4,
+      "defect": 19,
+      "remove": 2,
+      "unverified": 3,
+      "resolved": 6
+    }
+  },
+  "checks_log": "{\"input_hashes_unchanged\": 92, \"inventory_items\": 54, \"artifact_checks\": \"passed\"}\nPASS: only DF-12 historical citation 102 -> 103; Markdown unchanged\n",
+  "backups": [
+    {
+      "path": "/Users/simon/备份/codex/20260909-workbench-controls-report-before-fix-143237",
+      "reason": "保留首轮完整但尚有判断问题的两份报告，供定向修订前追溯",
+      "sources": [
+        "/Users/simon/OHB/one-holy-bible/docs/verification/2026-09-09-workbench-controls/inventory.md",
+        "/Users/simon/OHB/one-holy-bible/docs/verification/2026-09-09-workbench-controls/inventory.json"
+      ]
+    },
+    {
+      "path": "/Users/simon/备份/codex/20260909-workbench-controls-before-citation-fix-144405",
+      "reason": "保留已独立复核的JSON以证明历史引用勘误仅修改两处行号",
+      "sources": [
+        "/Users/simon/OHB/one-holy-bible/docs/verification/2026-09-09-workbench-controls/inventory.json"
+      ]
+    }
+  ],
+  "model_evidence_boundary": "所有 Cursor 阶段请求及配置确认 grok-4.6 / xhigh；reported_model 和 reported_effort 未返回，因此没有供应商后端模型或实际推理强度证明。"
+}

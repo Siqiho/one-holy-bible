@@ -1,40 +1,20 @@
-import { beforeEach, describe, expect, it, vi } from "vitest";
+import { describe, expect, it } from "vitest";
 
-import { loadPublicBook } from "./publicBibleData";
-import type { PublicBookPayload } from "./publicData";
-import { loadBibleLibrary, publicBookToBibleVersions } from "./loadBibleLibrary";
+import { loadBibleLibrary } from "./loadBibleLibrary";
 
-vi.mock("./publicBibleData", () => ({
-  loadPublicBook: vi.fn(),
-}));
-
-const genesisPayload: PublicBookPayload = {
-  schemaVersion: 1,
-  bookId: "Gen",
-  cuvVerses: [{ id: "Gen.1.1", book: "Gen", chapter: 1, verse: 1, text: "起初，神创造天地。" }],
-  kjvVerses: [{ id: "Gen.1.1", book: "Gen", chapter: 1, verse: 1, text: "In the beginning God created." }],
-  textCards: [],
-};
-
-const mockLoadPublicBook = vi.mocked(loadPublicBook);
-
-describe("loadBibleLibrary public compatibility adapter", () => {
-  beforeEach(() => {
-    mockLoadPublicBook.mockReset().mockResolvedValue(genesisPayload);
-  });
-
-  it("loads Genesis by default through the public per-book loader", async () => {
+describe("loadBibleLibrary complete development library", () => {
+  it("loads all 66 books for both Bible versions from the generated development library", async () => {
     const library = await loadBibleLibrary();
 
-    expect(mockLoadPublicBook).toHaveBeenCalledWith("Gen", {});
-    expect(library.cuvBible).toEqual({ id: "cuv", label: "和合本", language: "zh", verses: genesisPayload.cuvVerses });
-    expect(library.kjvBible).toEqual({ id: "kjv", label: "KJV", language: "en", verses: genesisPayload.kjvVerses });
+    expect(library.cuvBible.verses).toHaveLength(31_102);
+    expect(library.kjvBible.verses).toHaveLength(31_102);
+    expect(new Set(library.cuvBible.verses.map((verse) => verse.book))).toHaveLength(66);
+    expect(new Set(library.kjvBible.verses.map((verse) => verse.book))).toHaveLength(66);
+    expect(library.cuvBible.verses.at(-1)?.id).toBe("Rev.22.21");
+    expect(library.kjvBible.verses.at(-1)?.id).toBe("Rev.22.21");
   });
 
-  it("converts a public book payload without importing a private generated library", () => {
-    expect(publicBookToBibleVersions(genesisPayload)).toMatchObject({
-      cuvBible: { id: "cuv", verses: genesisPayload.cuvVerses },
-      kjvBible: { id: "kjv", verses: genesisPayload.kjvVerses },
-    });
+  it("reuses the same in-flight library promise", () => {
+    expect(loadBibleLibrary()).toBe(loadBibleLibrary());
   });
 });

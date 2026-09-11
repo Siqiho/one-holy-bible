@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Demo A · 修复版工作台 — One Holy Bible</title>
+<link rel="icon" href='data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><rect width="32" height="32" rx="7" fill="%233a2f1e"/><text x="16" y="21" font-size="13" font-weight="700" text-anchor="middle" fill="%23f7f0dd" font-family="Georgia,serif">OHB</text></svg>'>
+<style>
+:root {
+  --canvas: oklch(94% 0.018 88);
+  --surface: oklch(98% 0.012 88);
+  --surface-2: oklch(92.5% 0.017 86);
+  --ink: oklch(22% 0.018 74);
+  --ink-soft: oklch(35% 0.02 72);
+  --muted: oklch(50% 0.018 78);
+  --faint: oklch(62% 0.019 82);
+  --line: oklch(83% 0.02 82);
+  --line-strong: oklch(74% 0.025 78);
+  --accent: oklch(58% 0.095 75);
+  --accent-deep: oklch(44% 0.085 70);
+  --accent-soft: oklch(91% 0.055 82);
+  --accent-tint: oklch(96% 0.03 85);
+  --cool: oklch(48% 0.04 230);
+  --cool-soft: oklch(93% 0.02 230);
+  --danger: oklch(48% 0.11 28);
+  --danger-soft: oklch(93% 0.03 28);
+  --font-ui: ui-sans-serif, system-ui, -apple-system, "PingFang SC", "Hiragino Sans GB", sans-serif;
+  --font-scripture: "Songti SC", "STSong", "Noto Serif SC", Georgia, serif;
+  --scripture-size: 20px;
+  --ease: cubic-bezier(0.22, 1, 0.36, 1);
+}
+* { box-sizing: border-box; }
+html, body { height: 100%; }
+body {
+  margin: 0;
+  background: var(--canvas);
+  color: var(--ink);
+  font-family: var(--font-ui);
+  font-size: 14px;
+  overflow: hidden;
+}
+button { font: inherit; color: inherit; cursor: pointer; background: none; border: none; padding: 0; }
+input, select { font: inherit; color: inherit; }
+:is(button, input, select, [tabindex]):focus-visible {
+  outline: 2px solid var(--accent-deep);
+  outline-offset: 1px;
+  border-radius: 6px;
+}
+
+/* ---------- 工具栏:一行 7 个控件组,单一搜索框 ---------- */
+.toolbar {
+  align-items: center;
+  background: var(--surface-2);
+  border-bottom: 1px solid var(--line);
+  display: flex;
+  gap: 12px;
+  height: 52px;
+  padding: 0 14px;
+}
+.brand { align-items: center; display: flex; font-weight: 650; gap: 8px; letter-spacing: 0.01em; }
+.brand__mark {
+  align-items: center; background: var(--ink); border-radius: 6px; color: var(--surface);
+  display: inline-flex; font-size: 10px; font-weight: 760; height: 24px; justify-content: center; width: 32px;
+}
+.nav-group { align-items: center; display: flex; gap: 4px; }
+.tool-btn {
+  align-items: center; border: 1px solid transparent; border-radius: 7px; color: var(--ink-soft);
+  display: inline-flex; gap: 6px; height: 30px; padding: 0 10px; transition: background 150ms var(--ease);
+}
+.tool-btn:hover { background: oklch(100% 0 0 / 45%); border-color: var(--line); }
+.tool-btn--book { font-weight: 600; color: var(--ink); }
+.seg {
+  background: oklch(100% 0 0 / 42%); border: 1px solid var(--line); border-radius: 8px;
+  display: inline-flex; gap: 2px; padding: 2px;
+}
+.seg button { border-radius: 6px; color: var(--muted); height: 26px; padding: 0 12px; }
+.seg button[aria-pressed="true"] { background: var(--surface); box-shadow: 0 1px 2px oklch(40% 0.03 70 / 12%); color: var(--ink); font-weight: 600; }
+.search {
+  align-items: center; background: var(--surface); border: 1px solid var(--line); border-radius: 8px;
+  display: flex; flex: 0 1 320px; gap: 6px; height: 32px; margin-left: auto; padding: 0 4px 0 10px;
+}
+.search:focus-within { border-color: var(--accent); }
+.search svg { flex: 0 0 auto; }
+.search input { background: none; border: none; flex: 1; min-width: 0; outline: none; }
+.search select { background: var(--surface-2); border: 1px solid var(--line); border-radius: 6px; color: var(--muted); font-size: 12px; height: 24px; }
+.autosave { align-items: center; color: var(--muted); display: inline-flex; font-size: 12px; gap: 5px; transition: color 400ms; white-space: nowrap; }
+.autosave.pulse { color: var(--accent-deep); }
+.autosave .dot { background: var(--accent); border-radius: 50%; height: 6px; transition: transform 300ms var(--ease); width: 6px; }
+.autosave.pulse .dot { transform: scale(1.5); }
+.overflow-wrap { position: relative; }
+.menu {
+  background: var(--surface); border: 1px solid var(--line-strong); border-radius: 10px;
+  box-shadow: 0 16px 40px oklch(35% 0.04 60 / 18%); display: none; flex-direction: column;
+  min-width: 200px; padding: 5px; position: absolute; right: 0; top: 36px; z-index: 40;
+}
+.menu.open { display: flex; }
+.menu button { border-radius: 6px; display: flex; gap: 8px; padding: 8px 10px; text-align: left; }
+.menu button:hover { background: var(--surface-2); }
+.menu .menu-danger { color: var(--danger); }
+.menu-sep { border-top: 1px solid var(--line); margin: 4px 2px; }
+.confirm {
+  background: var(--surface); border: 1px solid var(--line-strong); border-radius: 10px;
+  box-shadow: 0 16px 40px oklch(35% 0.04 60 / 18%); display: none; padding: 12px;
+  position: absolute; right: 0; top: 36px; width: 240px; z-index: 41;
+}
+.confirm.open { display: block; }
+.confirm p { font-size: 13px; margin: 0 0 10px; }
+.confirm-row { display: flex; gap: 8px; justify-content: flex-end; }
+.btn-sm { border: 1px solid var(--line-strong); border-radius: 7px; height: 26px; padding: 0 10px; }
+.btn-sm:hover { background: var(--surface-2); }
+.btn-sm--danger { background: var(--danger); border-color: var(--danger); color: oklch(97% 0.01 60); }
+.btn-sm--danger:hover { background: oklch(42% 0.11 28); }
+
+/* ---------- 布局 ---------- */
+.workspace { display: grid; grid-template-columns: 250px minmax(0, 1fr) 330px; height: calc(100vh - 52px); }
+.dock { background: var(--surface-2); display: flex; flex-direction: column; gap: 0; overflow-y: auto; }
+.dock--left { border-right: 1px solid var(--line); }
+.dock--right { background: var(--canvas); border-left: 1px solid var(--line); }
+.dock h3 { color: var(--muted); font-size: 11px; font-weight: 650; letter-spacing: 0.04em; margin: 0 0 8px; }
+.dock-block { padding: 14px 14px 6px; }
+.dock-block + .dock-block { border-top: 1px solid var(--line); margin-top: 10px; padding-top: 14px; }
+
+.lib-item { align-items: center; border-radius: 8px; display: flex; gap: 9px; padding: 7px 8px; width: 100%; }
+.lib-item:hover { background: oklch(100% 0 0 / 50%); }
+.lib-item .lib-icon { align-items: center; background: var(--surface); border: 1px solid var(--line); border-radius: 7px; color: var(--accent-deep); display: inline-flex; height: 26px; justify-content: center; width: 26px; }
+.lib-item .lib-name { font-size: 13px; font-weight: 550; }
+.lib-item .lib-desc { color: var(--faint); font-size: 11px; }
+.lib-item .lib-count { color: var(--muted); font-size: 11px; margin-left: auto; }
+
+.settings { border-top: 1px solid var(--line); margin-top: auto; padding: 12px 14px; }
+.setting-row { align-items: center; display: flex; gap: 8px; justify-content: space-between; padding: 5px 0; }
+.setting-row .label { color: var(--ink-soft); font-size: 13px; }
+.stepper { align-items: center; border: 1px solid var(--line); border-radius: 7px; display: inline-flex; }
+.stepper button { height: 24px; width: 26px; }
+.stepper button:hover { background: var(--surface); }
+.stepper .val { color: var(--muted); font-size: 12px; min-width: 34px; text-align: center; }
+
+/* ---------- 中央阅读区 ---------- */
+.reader { display: flex; flex-direction: column; min-width: 0; }
+.masthead { align-items: center; display: flex; gap: 12px; justify-content: center; padding: 18px 20px 10px; position: relative; }
+.masthead h1 { font-family: var(--font-scripture); font-size: 26px; font-weight: 700; margin: 0; }
+.masthead .en { color: var(--faint); font-family: var(--font-scripture); font-size: 15px; font-style: italic; }
+.masthead .current-pill {
+  background: var(--accent-tint); border: 1px solid var(--accent-quiet, var(--accent-soft));
+  border-radius: 999px; color: var(--accent-deep); font-size: 12px; font-weight: 600; padding: 3px 10px;
+}
+.ch-nav { align-items: center; border: 1px solid var(--line); border-radius: 999px; color: var(--muted); display: inline-flex; gap: 4px; height: 28px; padding: 0 12px; }
+.ch-nav:hover { background: var(--surface); color: var(--ink); }
+.columns { display: grid; flex: 1; gap: 0; grid-template-columns: 1fr 1fr; min-height: 0; padding: 0 8px 8px; }
+.bible-column { display: flex; flex-direction: column; min-width: 0; overflow: hidden; }
+.column-head { color: var(--muted); font-size: 12px; font-weight: 650; letter-spacing: 0.03em; padding: 6px 26px; }
+.verse-scroll { border-top: 1px solid var(--line); overflow-y: auto; padding: 14px 10px 40px; }
+.bible-column + .bible-column .verse-scroll, .bible-column + .bible-column .column-head { border-left: 1px solid var(--line); }
+.verse {
+  border: 1px solid transparent; border-radius: 9px; display: grid; gap: 10px;
+  grid-template-columns: 26px 1fr; padding: 7px 12px; text-align: left; width: 100%;
+}
+.verse:hover { background: oklch(100% 0 0 / 55%); }
+.verse .vn { color: var(--faint); font-size: 12px; font-weight: 600; padding-top: 5px; text-align: right; }
+.verse .vt { font-family: var(--font-scripture); font-size: var(--scripture-size); line-height: 1.8; }
+.verse[aria-current="true"] { background: var(--accent-tint); border-color: oklch(84% 0.05 82); }
+.verse[aria-current="true"] .vn { color: var(--accent-deep); }
+.verse[aria-current="true"] .vt { font-weight: 600; }
+.kjv .verse .vt { font-size: calc(var(--scripture-size) - 2px); line-height: 1.68; }
+.hl { background: oklch(90% 0.08 95); border-radius: 3px; }
+
+/* ---------- 右坞:当前经节 + 本章资源 ---------- */
+.verse-section { background: var(--surface-2); border-bottom: 1px solid var(--line); padding: 13px 14px 14px; }
+.verse-section .sec-title { align-items: baseline; display: flex; gap: 8px; }
+.verse-section .sec-title strong { font-size: 13px; }
+.sec-sub { color: var(--faint); font-size: 11px; }
+.chapter-section { padding: 13px 14px 30px; }
+.chips { display: flex; flex-wrap: wrap; gap: 6px; margin: 2px 0 12px; }
+.chip { background: var(--surface); border: 1px solid var(--line); border-radius: 999px; color: var(--muted); font-size: 12px; padding: 3px 10px; }
+.chip[aria-pressed="true"] { background: var(--ink); border-color: var(--ink); color: var(--surface); }
+.chip:hover:not([aria-pressed="true"]) { border-color: var(--line-strong); color: var(--ink); }
+
+.card {
+  background: var(--surface); border: 1px solid var(--line); border-radius: 10px;
+  margin: 0 0 10px; padding: 11px 12px; position: relative;
+}
+.card:hover { border-color: var(--line-strong); }
+.card .meta { align-items: center; color: var(--faint); display: flex; font-size: 11px; gap: 6px; margin-bottom: 4px; }
+.card .meta .type { background: var(--surface-2); border-radius: 4px; color: var(--muted); font-weight: 600; padding: 1px 6px; }
+.card .meta .type--media { background: var(--cool-soft); color: var(--cool); }
+.card h4 { font-size: 13px; font-weight: 650; margin: 0 0 5px; }
+.card .excerpt { color: var(--ink-soft); font-size: 12.5px; line-height: 1.66; margin: 0; }
+.card .anchor-ref { color: var(--accent-deep); cursor: pointer; font-size: 11.5px; font-weight: 600; margin-top: 7px; }
+.card .anchor-ref:hover { text-decoration: underline; }
+.card-actions {
+  background: var(--surface); border: 1px solid var(--line); border-radius: 8px;
+  box-shadow: 0 4px 14px oklch(35% 0.04 60 / 12%); display: flex; gap: 2px;
+  opacity: 0; padding: 2px; position: absolute; right: 8px; top: 8px;
+  transition: opacity 140ms var(--ease);
+}
+.card:hover .card-actions, .card:focus-within .card-actions, .showcase .card-actions { opacity: 1; }
+.card-actions button { border-radius: 6px; color: var(--muted); display: inline-flex; padding: 5px; }
+.card-actions button:hover { background: var(--surface-2); color: var(--ink); }
+.card-actions .act-danger:hover { background: var(--danger-soft); color: var(--danger); }
+.media-thumb {
+  align-items: center; background: var(--cool-soft); border: 1px solid oklch(86% 0.02 230);
+  border-radius: 7px; color: var(--cool); display: flex; font-size: 11px; font-weight: 600;
+  gap: 6px; justify-content: center; height: 74px; margin-bottom: 7px;
+}
+.pinned-empty { border: 1px dashed var(--line-strong); border-radius: 9px; color: var(--faint); font-size: 12px; padding: 14px 12px; text-align: center; }
+.empty-quiet { color: var(--faint); font-size: 12.5px; padding: 6px 2px 2px; }
+.empty-quiet button { color: var(--accent-deep); font-weight: 600; }
+
+/* ---------- Toast:可见反馈 ---------- */
+.toasts { display: flex; flex-direction: column; gap: 8px; position: fixed; right: 16px; top: 62px; z-index: 80; }
+.toast {
+  align-items: center; animation: toast-in 220ms var(--ease); background: var(--ink);
+  border-radius: 9px; box-shadow: 0 10px 30px oklch(30% 0.04 60 / 25%);
+  color: var(--surface); display: flex; font-size: 13px; gap: 10px; padding: 9px 13px;
+}
+.toast button { color: oklch(88% 0.06 85); font-weight: 650; }
+.toast button:hover { text-decoration: underline; }
+@keyframes toast-in { from { opacity: 0; transform: translateY(-6px); } to { opacity: 1; transform: none; } }
+@media (prefers-reduced-motion: reduce) { * { animation: none !important; transition: none !important; } }
+</style>
+</head>
+<body>
+
+<header class="toolbar">
+  <div class="brand"><span class="brand__mark">OHB</span>One Holy Bible</div>
+  <div class="nav-group">
+    <button class="tool-btn tool-btn--book" title="选择书卷">创世记 <span style="color:var(--faint)">▾</span></button>
+    <button class="tool-btn" title="上一章" aria-label="上一章">‹</button>
+    <button class="tool-btn" style="padding:0 4px">第 1 章</button>
+    <button class="tool-btn" title="下一章" aria-label="下一章">›</button>
+  </div>
+  <div class="seg" role="group" aria-label="阅读视图">
+    <button id="viewCuv" aria-pressed="false">和合本</button>
+    <button id="viewKjv" aria-pressed="false">KJV</button>
+    <button id="viewBoth" aria-pressed="true">对照</button>
+  </div>
+  <div class="search">
+    <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" style="color:var(--faint)"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+    <input id="searchInput" type="search" placeholder="搜索经文,按 Enter 跳转" aria-label="搜索">
+    <select aria-label="搜索范围"><option>经文</option><option>卡片</option></select>
+  </div>
+  <span class="autosave" id="autosave"><span class="dot"></span>已自动保存</span>
+  <div class="overflow-wrap">
+    <button class="tool-btn" id="overflowBtn" aria-haspopup="menu" title="更多">⋯</button>
+    <div class="menu" id="overflowMenu" role="menu">
+      <button role="menuitem">刷新卡片资源</button>
+      <button role="menuitem">阅读设置…</button>
+      <div class="menu-sep"></div>
+      <button role="menuitem" class="menu-danger" id="resetBtn">重置布局…</button>
+    </div>
+    <div class="confirm" id="resetConfirm">
+      <p><strong>重置布局?</strong><br><span style="color:var(--muted)">视图、分栏与整理卡片将恢复默认,重置后 8 秒内可撤销。</span></p>
+      <div class="confirm-row">
+        <button class="btn-sm" id="resetCancel">取消</button>
+        <button class="btn-sm btn-sm--danger" id="resetDo">重置</button>
+      </div>
+    </div>
+  </div>
+</header>
+
+<div class="toasts" id="toasts"></div>
+
+<div class="workspace">
+  <aside class="dock dock--left">
+    <div class="dock-block">
+      <h3>资源库</h3>
+      <button class="lib-item"><span class="lib-icon">解</span><span><span class="lib-name">综合解读</span><br><span class="lib-desc">圣经综合解读</span></span><span class="lib-count">6</span></button>
+      <button class="lib-item"><span class="lib-icon">研</span><span><span class="lib-name">研读本圣经</span><br><span class="lib-desc">研读本注释</span></span><span class="lib-count">1</span></button>
+      <button class="lib-item"><span class="lib-icon">息</span><span><span class="lib-name">圣经信息系列</span><br><span class="lib-desc">媒体与图表</span></span><span class="lib-count">3</span></button>
+      <button class="lib-item"><span class="lib-icon">笔</span><span><span class="lib-name">我的笔记</span><br><span class="lib-desc">个人研经笔记</span></span><span class="lib-count">1</span></button>
+    </div>
+    <div class="dock-block">
+      <h3>整理卡片 · 创世记 1 章</h3>
+      <div id="pinnedZone"><div class="pinned-empty">还没有整理卡片。<br>悬停右侧卡片,点「钉住」收藏到这里。</div></div>
+    </div>
+    <div class="settings">
+      <h3>阅读设置</h3>
+      <div class="setting-row">
+        <span class="label">经文字号</span>
+        <span class="stepper">
+          <button id="fontDown" aria-label="减小字号">−</button>
+          <span class="val" id="fontVal">20px</span>
+          <button id="fontUp" aria-label="增大字号">+</button>
+        </span>
+      </div>
+      <div class="setting-row">
+        <span class="label">纸张</span>
+        <span class="stepper"><button style="width:auto;padding:0 10px;font-size:12px" aria-pressed="true">米色</button><button style="width:auto;padding:0 10px;font-size:12px">暖白</button></span>
+      </div>
+    </div>
+  </aside>
+
+  <main class="reader">
+    <div class="masthead">
+      <button class="ch-nav">‹ 上一章</button>
+      <h1>创世记 1</h1><span class="en">Genesis</span>
+      <span class="current-pill" id="currentPill">创世记 1:1</span>
+      <button class="ch-nav">下一章 ›</button>
+    </div>
+    <div class="columns" id="columns">
+      <div class="bible-column cuv" id="colCuv">
+        <div class="column-head">和合本 · 中文</div>
+        <div class="verse-scroll" id="scrollCuv"></div>
+      </div>
+      <div class="bible-column kjv" id="colKjv">
+        <div class="column-head">KJV · English</div>
+        <div class="verse-scroll" id="scrollKjv"></div>
+      </div>
+    </div>
+  </main>
+
+  <aside class="dock dock--right">
+    <section class="verse-section">
+      <div class="sec-title"><strong id="verseSecTitle">当前经节 · 创世记 1:1</strong><span class="sec-sub" id="verseSecCount"></span></div>
+      <div id="verseCards" style="margin-top:10px"></div>
+    </section>
+    <section class="chapter-section">
+      <div class="sec-title" style="margin-bottom:2px"><strong style="font-size:13px">本章资源</strong><span class="sec-sub" id="chapterCount"></span></div>
+      <div class="chips" id="typeChips"></div>
+      <div id="chapterCards"></div>
+    </section>
+  </aside>
+</div>
+
+<script src="gen1-data.js"></script>
+<script>
+const D = window.OHB_DATA;
+const state = { verse: 1, view: 'both', font: 20, filter: '全部', pinned: new Set(), removed: new Set() };
+const refCn = v => `创世记 1:${v}`;
+const anchorNum = a => Number(a.split('.')[2]);
+
+/* ---- 经文渲染 ---- */
+function renderColumns() {
+  for (const [key, id] of [['cuv','scrollCuv'], ['kjv','scrollKjv']]) {
+    const host = document.getElementById(id);
+    host.innerHTML = '';
+    for (const v of D[key]) {
+      const b = document.createElement('button');
+      b.className = 'verse';
+      b.dataset.v = v.v;
+      b.setAttribute('aria-current', String(v.v === state.verse));
+      b.innerHTML = `<span class="vn">${v.v}</span><span class="vt">${v.t}</span>`;
+      b.addEventListener('click', () => selectVerse(v.v));
+      host.appendChild(b);
+    }
+  }
+}
+function selectVerse(v, scroll = true) {
+  state.verse = v;
+  document.querySelectorAll('.verse').forEach(el => el.setAttribute('aria-current', String(Number(el.dataset.v) === v)));
+  document.getElementById('currentPill').textContent = refCn(v);
+  if (scroll) document.querySelectorAll(`.verse[data-v="${v}"]`).forEach(el => el.scrollIntoView({ block: 'center', behavior: 'smooth' }));
+  renderDock();
+}
+
+/* ---- 卡片 ---- */
+function cardEl(c, { compact = false } = {}) {
+  const el = document.createElement('article');
+  el.className = 'card';
+  const isPinned = state.pinned.has(c.id);
+  el.innerHTML = `
+    <div class="meta"><span class="type ${c.type === 'media' ? 'type--media' : ''}">${c.typeLabel}</span><span>${c.source}</span></div>
+    ${c.type === 'media' ? `<div class="media-thumb">▦ 图片 · ${c.title.slice(0, 14)}…</div>` : ''}
+    <h4>${c.title}</h4>
+    ${compact ? '' : `<p class="excerpt">${c.body.slice(0, 118)}${c.body.length > 118 ? '…' : ''}</p>`}
+    <div class="anchor-ref" data-v="${anchorNum(c.anchor)}">${refCn(anchorNum(c.anchor))} ↗</div>
+    <div class="card-actions">
+      <button title="${isPinned ? '取消钉住' : '钉住到整理卡片'}" data-act="pin">${isPinned ? '★' : '☆'}</button>
+      <button title="编辑" data-act="edit">✎</button>
+      <button title="复制" data-act="copy">⧉</button>
+      <button class="act-danger" title="移除(可撤销)" data-act="remove">✕</button>
+    </div>`;
+  el.querySelector('.anchor-ref').addEventListener('click', () => selectVerse(anchorNum(c.anchor)));
+  el.querySelector('[data-act="pin"]').addEventListener('click', () => {
+    state.pinned.has(c.id) ? state.pinned.delete(c.id) : state.pinned.add(c.id);
+    toast(state.pinned.has(c.id) ? `已钉住「${c.title.slice(0, 12)}…」到整理卡片` : '已取消钉住');
+    renderDock(); pulseAutosave();
+  });
+  el.querySelector('[data-act="copy"]').addEventListener('click', () => toast('卡片内容已复制'));
+  el.querySelector('[data-act="edit"]').addEventListener('click', () => toast('打开编辑器(demo 略)'));
+  el.querySelector('[data-act="remove"]').addEventListener('click', () => {
+    state.removed.add(c.id); renderDock();
+    toast(`已移除「${c.title.slice(0, 12)}…」`, { label: '撤销', fn: () => { state.removed.delete(c.id); renderDock(); } });
+  });
+  return el;
+}
+function visibleCards() { return D.cards.filter(c => !state.removed.has(c.id)); }
+function renderDock() {
+  const verseCards = visibleCards().filter(c => anchorNum(c.anchor) === state.verse);
+  document.getElementById('verseSecTitle').textContent = `当前经节 · ${refCn(state.verse)}`;
+  document.getElementById('verseSecCount').textContent = verseCards.length ? `${verseCards.length} 张卡片` : '';
+  const vHost = document.getElementById('verseCards');
+  vHost.innerHTML = '';
+  if (verseCards.length) verseCards.forEach(c => vHost.appendChild(cardEl(c)));
+  else {
+    vHost.innerHTML = `<div class="empty-quiet">本节暂无卡片。<button id="jumpNearest">跳到最近有卡片的经节</button></div>`;
+    vHost.querySelector('#jumpNearest').addEventListener('click', () => {
+      const anchors = [...new Set(visibleCards().map(c => anchorNum(c.anchor)))].sort((a, b) => Math.abs(a - state.verse) - Math.abs(b - state.verse));
+      if (anchors.length) selectVerse(anchors[0]);
+    });
+  }
+  const rest = visibleCards().filter(c => anchorNum(c.anchor) !== state.verse)
+    .filter(c => state.filter === '全部' || c.typeLabel === state.filter);
+  document.getElementById('chapterCount').textContent = `${visibleCards().length} 张`;
+  const chips = document.getElementById('typeChips');
+  chips.innerHTML = '';
+  const counts = { 全部: visibleCards().length };
+  visibleCards().forEach(c => counts[c.typeLabel] = (counts[c.typeLabel] || 0) + 1);
+  for (const label of Object.keys(counts)) {
+    const b = document.createElement('button');
+    b.className = 'chip';
+    b.setAttribute('aria-pressed', String(state.filter === label));
+    b.textContent = label === '全部' ? `全部 ${counts[label]}` : `${label} ${counts[label]}`;
+    b.addEventListener('click', () => { state.filter = label; renderDock(); });
+    chips.appendChild(b);
+  }
+  const cHost = document.getElementById('chapterCards');
+  cHost.innerHTML = '';
+  rest.forEach(c => cHost.appendChild(cardEl(c, { compact: true })));
+  const pinnedZone = document.getElementById('pinnedZone');
+  pinnedZone.innerHTML = '';
+  const pinnedCards = visibleCards().filter(c => state.pinned.has(c.id));
+  if (!pinnedCards.length) pinnedZone.innerHTML = '<div class="pinned-empty">还没有整理卡片。<br>悬停右侧卡片,点「钉住」收藏到这里。</div>';
+  else pinnedCards.forEach(c => pinnedZone.appendChild(cardEl(c, { compact: true })));
+}
+
+/* ---- 视图/字号/反馈 ---- */
+function setView(mode) {
+  state.view = mode;
+  document.getElementById('colCuv').style.display = (mode === 'kjv') ? 'none' : 'flex';
+  document.getElementById('colKjv').style.display = (mode === 'cuv') ? 'none' : 'flex';
+  document.getElementById('columns').style.gridTemplateColumns = mode === 'both' ? '1fr 1fr' : 'minmax(0, 720px)';
+  document.getElementById('columns').style.justifyContent = 'center';
+  for (const [id, m] of [['viewCuv','cuv'], ['viewKjv','kjv'], ['viewBoth','both']])
+    document.getElementById(id).setAttribute('aria-pressed', String(m === mode));
+  pulseAutosave();
+}
+['viewCuv','viewKjv','viewBoth'].forEach(id =>
+  document.getElementById(id).addEventListener('click', () => setView(id.replace('view','').toLowerCase())));
+function setFont(px) {
+  state.font = Math.min(24, Math.max(17, px));
+  document.documentElement.style.setProperty('--scripture-size', state.font + 'px');
+  document.getElementById('fontVal').textContent = state.font + 'px';
+  pulseAutosave();
+}
+document.getElementById('fontDown').addEventListener('click', () => setFont(state.font - 1));
+document.getElementById('fontUp').addEventListener('click', () => setFont(state.font + 1));
+
+let autosaveTimer;
+function pulseAutosave() {
+  const el = document.getElementById('autosave');
+  el.classList.add('pulse');
+  el.lastChild.textContent = '已自动保存';
+  clearTimeout(autosaveTimer);
+  autosaveTimer = setTimeout(() => el.classList.remove('pulse'), 1200);
+}
+function toast(msg, action) {
+  const host = document.getElementById('toasts');
+  const t = document.createElement('div');
+  t.className = 'toast';
+  t.innerHTML = `<span>${msg}</span>`;
+  if (action) {
+    const b = document.createElement('button');
+    b.textContent = action.label;
+    b.addEventListener('click', () => { action.fn(); t.remove(); });
+    t.appendChild(b);
+  }
+  host.appendChild(t);
+  setTimeout(() => t.remove(), action ? 8000 : 3200);
+}
+
+/* ---- 浮层统一行为:Esc + 外点关闭 ---- */
+const menu = document.getElementById('overflowMenu');
+const confirmBox = document.getElementById('resetConfirm');
+document.getElementById('overflowBtn').addEventListener('click', e => { e.stopPropagation(); confirmBox.classList.remove('open'); menu.classList.toggle('open'); });
+document.getElementById('resetBtn').addEventListener('click', e => { e.stopPropagation(); menu.classList.remove('open'); confirmBox.classList.add('open'); });
+document.getElementById('resetCancel').addEventListener('click', () => confirmBox.classList.remove('open'));
+document.getElementById('resetDo').addEventListener('click', () => {
+  confirmBox.classList.remove('open');
+  const prev = { ...state, pinned: new Set(state.pinned) };
+  setView('both'); setFont(20); state.pinned.clear(); state.filter = '全部'; renderDock();
+  toast('布局已重置', { label: '撤销', fn: () => { setView(prev.view); setFont(prev.font); state.pinned = prev.pinned; renderDock(); } });
+});
+document.addEventListener('click', () => { menu.classList.remove('open'); confirmBox.classList.remove('open'); });
+menu.addEventListener('click', e => e.stopPropagation());
+confirmBox.addEventListener('click', e => e.stopPropagation());
+document.addEventListener('keydown', e => { if (e.key === 'Escape') { menu.classList.remove('open'); confirmBox.classList.remove('open'); } });
+
+/* ---- 搜索:真实过滤本章 ---- */
+document.getElementById('searchInput').addEventListener('keydown', e => {
+  if (e.key !== 'Enter') return;
+  const q = e.target.value.trim();
+  if (!q) return;
+  const hits = D.cuv.filter(v => v.t.includes(q)).map(v => v.v);
+  document.querySelectorAll('.verse .vt').forEach(el => el.innerHTML = el.textContent);
+  if (!hits.length) { toast(`本章未找到「${q}」`); return; }
+  document.querySelectorAll('#scrollCuv .verse').forEach(el => {
+    const vt = el.querySelector('.vt');
+    if (hits.includes(Number(el.dataset.v))) vt.innerHTML = vt.textContent.replaceAll(q, `<span class="hl">${q}</span>`);
+  });
+  toast(`「${q}」本章 ${hits.length} 处,已跳转第一处`);
+  selectVerse(hits[0]);
+});
+
+renderColumns();
+setView('both');
+selectVerse(3, false);
+if (location.hash.includes('showcase')) document.querySelector('.dock--right').classList.add('showcase');
+</script>
+</body>
+</html>

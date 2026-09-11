@@ -1,0 +1,18 @@
+{
+  "outcome": "PASS. 修订只把 DF07 reset effect 挪到 searchResponse 之后，并在旧 status 为「已显示 /搜索到 」时改成新 totalCount 或待提交提示；load-more 不在 effect deps 里，+120 不会被复位；KJV 0 与旧约切回不再留下 已显示 240。",
+  "result_status": "success",
+  "review_verdict": "pass",
+  "findings": [
+    "Workbench.tsx:3432-3439 effect deps 为 pending/search query、version、scope、currentBook、totalCount、hasPendingSearchChange，不含 searchDisplayLimit；load-more 只改 limit+「已显示 N」(5040-5043)，totalCount 不随 maxResults 变（5037 仍 共 Y），故不会误复位 +120。",
+    "scope/version 仍走原 filter setter（3871-3907，不写 status）；effect 在旧串匹配 /^(已显示 |搜索到 )/ 时写成「搜索到 ${totalCount} 处经文」。KJV→0、旧约在 240 之后→「搜索到 245」且去掉「已显示 240 / 共 245 处经文」（test 4413-4420）对得上已观察的旧 240。",
+    "setStatus 函数式且非搜索数字前缀原样返回（3435）；已复制/复制失败/布局已保存/已保存并进入… 都不匹配，不会覆盖保存/复制。limit 与 status 同值时 React 会 bailing，无循环。draft 仍复位 limit，待提交时写「搜索条件已更新，请点击搜索。」"
+  ],
+  "limitations": [
+    "未跑 vitest/tsc/浏览器（本轮明确禁止）；测试断言只做了静态对照。",
+    "未重读 lightbox/CSS/bibleSearch.ts；totalCount 不随 paging 变依据本文件 5037 与 review1，不是本轮新审计。",
+    "currentBook 复位仍无新用例（review1 已记）；styles.css 与 review1 hash 相同。"
+  ],
+  "artifacts": [],
+  "prompt_round": 1,
+  "written_at": 1789107325436
+}

@@ -1,0 +1,169 @@
+{
+  "accepted": true,
+  "scope": "stage1 only: DK-03, ST-03, TB-10, CD-07, DF-01 partial",
+  "implementation": {
+    "task_id": "ae7ec5a5-6673-4463-8a61-cf37df53aec0",
+    "session_id": "9563b461-76d9-4bad-bcd9-325c0e05237a",
+    "status": "uncertain",
+    "summary": "verification_failed",
+    "candidate": "833af8964f8e290a29977ad8001195b706b5d813f8a71b30c3a40b829c96aa4a",
+    "model": {
+      "requested": "grok-4.6",
+      "effort_requested": "xhigh",
+      "configuration_acknowledged": true,
+      "reported_model": null,
+      "reported_effort": null,
+      "configured_model": "grok-4.6",
+      "configured_effort": "xhigh"
+    },
+    "checks": [
+      {
+        "argv": [
+          "python3",
+          "-c",
+          "import subprocess; subprocess.run(['./node_modules/.bin/vitest','run','src/components/Workbench.test.tsx','src/App.test.tsx','src/components/ReaderView.test.tsx','--reporter=dot'],cwd='/Users/simon/OHB/one-holy-bible',check=True)"
+        ],
+        "pid": 97811,
+        "exit_code": null,
+        "signal": "SIGTERM",
+        "output_truncated": true,
+        "process_group_remaining": true
+      },
+      {
+        "argv": [
+          "python3",
+          "-c",
+          "import subprocess; subprocess.run(['./node_modules/.bin/tsc','--noEmit'],cwd='/Users/simon/OHB/one-holy-bible',check=True)"
+        ],
+        "pid": 98402,
+        "exit_code": 0,
+        "signal": null,
+        "output_truncated": false,
+        "process_group_remaining": false
+      },
+      {
+        "argv": [
+          "python3",
+          "-c",
+          "import json,pathlib,hashlib\np=pathlib.Path('/Users/simon/OHB/one-holy-bible/docs/verification/2026-09-09-workbench-cleanup-stage1')\nb=json.loads((p/'baseline.json').read_text())\nbad=[x['path'] for x in b['files'] if x['path'] not in b['targets'] and hashlib.sha256(pathlib.Path(x['path']).read_bytes()).hexdigest()!=x['sha256']]\nassert not bad,bad\nprint('non-target input hashes unchanged')\n"
+        ],
+        "pid": 98940,
+        "exit_code": 0,
+        "signal": null,
+        "output_truncated": false,
+        "process_group_remaining": false
+      }
+    ]
+  },
+  "recovery": {
+    "registration_task_id": "259f0ce4-fdab-4209-ad0b-d4576c3b3b4c",
+    "registration_session_id": "4adaec1b-bd90-4182-9dce-8835c3be1e42",
+    "workspace": "/private/tmp/ohb-workbench-stage1-review-pf57kla8",
+    "meaning": "hash-identical candidate registration; does not restore original uncertain task",
+    "original_test_group_97811_absent": true
+  },
+  "review": {
+    "id": "039b9665-3a4e-406d-a4cb-7b135a934a27",
+    "status": "completed",
+    "revision": 14,
+    "phase": "review",
+    "session_id": "b2e4248c-9fd2-4cb8-84b7-6fd4140f5525",
+    "model": {
+      "requested": "grok-4.6",
+      "effort_requested": "xhigh",
+      "configuration_acknowledged": true,
+      "reported_model": null,
+      "reported_effort": null,
+      "configured_model": "grok-4.6",
+      "configured_effort": "xhigh"
+    },
+    "summary": "PASS：对照备份与 stage1 计划，5 项接线/生命周期/空态作用域成立，未见阻断缺陷。非目标 App/Reader/styles/package 哈希与 baseline 一致。\nPASS DK-03: Workbench.tsx 去掉 Plus 导入与始终 disabled 的「添加资源库」；左坞「注释资源库」与收…",
+    "candidate": "b39c9b3b3f2902afc5b6475fb33882dd6abe1de4d02bc69c4cbaf171af25721b",
+    "checks": [
+      {
+        "exit_code": 0,
+        "argv": "[\"python3\",\"-c\",\"import pathlib,hashlib,json\\np=pathlib.Path('/private/tmp/ohb-workbench-stage1-review-pf57kla8')\\nfo…"
+      },
+      {
+        "exit_code": 0,
+        "argv": "[\"python3\",\"-c\",\"import json,pathlib,hashlib\\np=pathlib.Path('/Users/simon/OHB/one-holy-bible/docs/verification/2026-…"
+      }
+    ],
+    "acceptance": "review_returned; chief_acceptance_pending",
+    "permissions": {
+      "mode": "restricted",
+      "native_execute": "restricted"
+    },
+    "artifacts": [
+      {
+        "name": "baseline.json",
+        "bytes": 2605,
+        "sha256": "ca6171ed9ec06b78f599191db18ff0907c30da429d4ce87d4743e8924080ab41"
+      },
+      {
+        "name": "candidate.json",
+        "bytes": 2605,
+        "sha256": "ca6171ed9ec06b78f599191db18ff0907c30da429d4ce87d4743e8924080ab41"
+      },
+      {
+        "name": "checks.log",
+        "bytes": 79,
+        "sha256": "a69d3b21642ec93b5f7892bed7ba8053aef43d221c1ffa8afa6db63c52317114"
+      },
+      {
+        "name": "cursor.log",
+        "bytes": 308788,
+        "sha256": "99f1e2ad0196c01fbd8ec7a3c70649306342d1e6fbbe4fedb87e771fc4e9a2f5"
+      },
+      {
+        "name": "finish.json",
+        "bytes": 2002,
+        "sha256": "ce1620a77dc8971db315521e4949c4183fb47fe5e74eb73b34aef288b6303c89"
+      }
+    ],
+    "gpt6_coordination": {
+      "tool_calls": 10,
+      "returned_bytes_before_this_call": 6019,
+      "worker_output_bytes": 295428,
+      "token_count": null
+    },
+    "retry_safe": false,
+    "stage": "completed",
+    "structured_final": true,
+    "progress": {
+      "completed_tools": 87,
+      "active_tool": null,
+      "failed": 0
+    }
+  },
+  "review_finish": {
+    "outcome": "PASS：对照备份与 stage1 计划，5 项接线/生命周期/空态作用域成立，未见阻断缺陷。非目标 App/Reader/styles/package 哈希与 baseline 一致。",
+    "findings": [
+      "PASS DK-03: Workbench.tsx 去掉 Plus 导入与始终 disabled 的「添加资源库」；左坞「注释资源库」与收起按钮仍在 3062-3095。测试 3028 断言无该钮。",
+      "PASS ST-03: 看题 {book} study desk 已删；h1、上一章/下一章、顶栏拖高仍在 5255-5303。测试 916-926 保留章标题并否定 study desk。",
+      "PASS TB-10: 待提交标题改为「待搜索」 3426-3427；正文只一次「输入已改变，点击搜索更新结果。」 4976。提交/范围/译本/清空未改。测试 4436-4438。",
+      "PASS CD-07: isCardSearchActive 仅传右坝 5394→3203→2560；filterResourcesByCardQuery 1351-1356 未改。中央/左侧空态仍是「当前经文还没有卡片。」/「还没有整理卡片」 2690/2405。清除钮仍在 5089-5098。测试 1272-1332。",
+      "PASS DF-01: Esc 仅在 openNavigationPanel 有值时监听并在 effect 清理 3607-3641；焦点回 book/chapter ref 3303-3304、3631-3632。设置 2997-3018、搜索输入 Esc 3877、灯箱 5406+ 未改。测试 939-977；外点 4667-4686。",
+      "NOTE low: Esc 焦点测试先点触发钮再 Escape，焦点可能从未离开触发器（939-977）；实现仍调用 trigger.focus()，不够挫回。"
+    ],
+    "limitations": [
+      "本会话未重跑 vitest/tsc，未开浏览器/服务。",
+      "未独立重算 sha256；以声明值与 candidate-origin.json 一致为准。",
+      "未对两个 5k+ 行文件跑 unix diff；用 Read/Grep 对照备份五处改点与过滤/导航/导入。",
+      "codex-tests.log 显示 162 passed，为外部提供记录，不是本会话执行证据。",
+      "协议/桥接 SIGTERM 与原 receipt uncertain 与代码判定分开，不影响本项 PASS。"
+    ],
+    "artifacts": [],
+    "prompt_round": 1,
+    "written_at": 1788939403438
+  },
+  "independent_codex_checks": {
+    "tests": "162 passed / 3 files / exit 0 / 54.44 s",
+    "test_log": "codex-tests.log",
+    "full_incremental_diff": "Workbench.tsx.diff; Workbench.test.tsx.diff",
+    "runtime_identity": "runtime-identity.json",
+    "ui": "ui-evidence.md",
+    "non_target_input_hashes_unchanged": 90
+  },
+  "backup": "/Users/simon/备份/codex/20260909-workbench-cleanup-stage1-151836"
+}

@@ -1,32 +1,24 @@
 import type { BibleVersion } from "../domain/bible";
-import { loadPublicBook, type PublicDataLoadOptions } from "./publicBibleData";
-import type { PublicBookPayload } from "./publicData";
+import bibleLibraryUrl from "./generated/bibleLibrary.json?url";
 
 interface BibleLibraryPayload {
   cuvBible: BibleVersion;
   kjvBible: BibleVersion;
 }
 
-export function publicBookToBibleVersions(payload: PublicBookPayload): BibleLibraryPayload {
-  return {
-    cuvBible: {
-      id: "cuv",
-      label: "和合本",
-      language: "zh",
-      verses: payload.cuvVerses,
-    },
-    kjvBible: {
-      id: "kjv",
-      label: "KJV",
-      language: "en",
-      verses: payload.kjvVerses,
-    },
-  };
-}
+let cachedLibrary: Promise<BibleLibraryPayload> | null = null;
 
-export async function loadBibleLibrary(
-  bookId = "Gen",
-  options: PublicDataLoadOptions = {},
-): Promise<BibleLibraryPayload> {
-  return publicBookToBibleVersions(await loadPublicBook(bookId, options));
+export function loadBibleLibrary(): Promise<BibleLibraryPayload> {
+  cachedLibrary ??= import.meta.env.MODE === "test"
+    ? import("./generated/bibleLibrary.json").then((module) => module.default as BibleLibraryPayload)
+    : fetch(bibleLibraryUrl).then(async (response) => {
+      if (!response.ok) {
+        throw new Error(`Failed to load Bible library JSON: ${response.status}`);
+      }
+      return await response.json() as BibleLibraryPayload;
+    }).catch((error: unknown) => {
+      cachedLibrary = null;
+      throw error;
+    });
+  return cachedLibrary;
 }

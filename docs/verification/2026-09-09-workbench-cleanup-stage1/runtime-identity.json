@@ -1,0 +1,6 @@
+{
+  "url": "http://127.0.0.1:1420/src/components/Workbench.tsx",
+  "served_sourcesContent_matches_current_Workbench": true,
+  "sha256": "da7a9470842976a816e8ffcfe012aeae193fe5a4a1a8de7ba05337e32605aa4c",
+  "process": "  PID STARTED                      COMMAND\n82698 Wed Sep  2 10:42:22 2026     node /Users/simon/OHB/one-holy-bible/node_modules/.bin/vite --host 127.0.0.1 --port 1420 --strictPort\n"
+}

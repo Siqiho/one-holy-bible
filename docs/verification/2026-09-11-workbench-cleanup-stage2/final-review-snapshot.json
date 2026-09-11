@@ -1,0 +1,23 @@
+{
+  "workspace": "/private/tmp/ohb-stage2-final-review-0c6qg4dk",
+  "files": [
+    {
+      "path": "src/components/Workbench.tsx",
+      "origin": "/Users/simon/OHB/one-holy-bible/src/components/Workbench.tsx",
+      "sha256": "23984b11dda5ea8d1afc9b7ad19e106b7a640c9e4a333658f0f73b64ce328771",
+      "review1_sha256": "dbca78523a1109c80f909775a525f9dc8689b99b2661655cfd5f4ca00df40790"
+    },
+    {
+      "path": "src/components/Workbench.test.tsx",
+      "origin": "/Users/simon/OHB/one-holy-bible/src/components/Workbench.test.tsx",
+      "sha256": "adc2cb6ee0bc71445569b8d42a143ff7bbd5de3d506e6eba1b33da2815b5ed5e",
+      "review1_sha256": "226de708b0b77ff37745fe7c0e8b9b6059bb901e7584ad8ddb18f0f96f45bb47"
+    },
+    {
+      "path": "src/styles.css",
+      "origin": "/Users/simon/OHB/one-holy-bible/src/styles.css",
+      "sha256": "2b78828daf4f4c4273f5bd8dda1346257a32f7b094cd45cf9b226a5a38ff3923",
+      "review1_sha256": "2b78828daf4f4c4273f5bd8dda1346257a32f7b094cd45cf9b226a5a38ff3923"
+    }
+  ]
+}

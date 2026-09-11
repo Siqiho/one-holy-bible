@@ -1,0 +1,1431 @@
+{
+ "generatedAt": "2026-08-13T04:25:41.389Z",
+ "source": "Doré's Bible Illustrations (Wikimedia Commons), 241 plates, downloaded 2026-07-17",
+ "maxPixelSize": 1200,
+ "entries": [
+  {
+   "page": 1,
+   "book": "Gen",
+   "chapter": 1,
+   "title": "The Creation of Light",
+   "scriptureReference": null,
+   "assetPath": "/resources/dore/001_Gen.1.jpg"
+  },
+  {
+   "page": 2,
+   "book": "Gen",
+   "chapter": 2,
+   "title": "The Creation of Eve",
+   "scriptureReference": null,
+   "assetPath": "/resources/dore/002_Gen.2.jpg"
+  },
+  {
+   "page": 3,
+   "book": "Gen",
+   "chapter": 3,
+   "title": "Adam and Eve Are Driven out of Eden",
+   "scriptureReference": null,
+   "assetPath": "/resources/dore/003_Gen.3.jpg"
+  },
+  {
+   "page": 4,
+   "book": "Gen",
+   "chapter": 4,
+   "title": "Cain and Abel Offer Their Sacrifices",
+   "scriptureReference": null,
+   "assetPath": "/resources/dore/004_Gen.4.jpg"
+  },
+  {
+   "page": 6,
+   "book": "Gen",
+   "chapter": 7,
+   "title": "The World Is Destroyed by Water",
+   "scriptureReference": null,
+   "assetPath": "/resources/dore/006_Gen.7.jpg"
+  },
+  {
+   "page": 8,
+   "book": "Gen",
+   "chapter": 8,
+   "title": "A Dove Is Sent Forth from the Ark",
+   "scriptureReference": null,
+   "assetPath": "/resources/dore/008_Gen.8.jpg"
+  },
+  {
+   "page": 9,
+   "book": "Gen",
+   "chapter": 9,
+   "title": "Noah Curses Ham and Canaan",
+   "scriptureReference": null,
+   "assetPath": "/resources/dore/009_Gen.9.jpg"
+  },
+  {
+   "page": 10,
+   "book": "Gen",
+   "chapter": 11,
+   "title": "The Tower of Babel",
+   "scriptureReference": null,
+   "assetPath": "/resources/dore/010_Gen.11.jpg"
+  },
+  {
+   "page": 11,
+   "book": "Gen",
+   "chapter": 12,
+   "title": "Abraham Goes to the Land of Canaan",
+   "scriptureReference": null,
+   "assetPath": "/resources/dore/011_Gen.12.jpg"
+  },
+  {
+   "page": 12,
+   "book": "Gen",
+   "chapter": 18,
+   "title": "Abraham and the Three Angels",
+   "scriptureReference": null,
+   "assetPath": "/resources/dore/012_Gen.18.jpg"
+  },
+  {
+   "page": 13,
+   "book": "Gen",
+   "chapter": 19,
+   "title": "Lot Flees as Sodom and Gomorrah Burn",
+   "scriptureReference": null,
+   "assetPath": "/resources/dore/013_Gen.19.jpg"
+  },
+  {
+   "page": 14,
+   "book": "Gen",
+   "chapter": 21,
+   "title": "Abraham Sends Hagar and Ishmael Away",
+   "scriptureReference": null,
+   "assetPath": "/resources/dore/014_Gen.21.jpg"
+  },
+  {
+   "page": 16,
+   "book": "Gen",
+   "chapter": 22,
+   "title": "The Testing of Abraham's Faith",
+   "scriptureReference": null,
+   "assetPath": "/resources/dore/016_Gen.22.jpg"
+  },
+  {
+   "page": 17,
+   "book": "Gen",
+   "chapter": 23,
+   "title": "The Burial of Sarah",
+   "scriptureReference": null,
+   "assetPath": "/resources/dore/017_Gen.23.jpg"
+  },
+  {
+   "page": 18,
+   "book": "Gen",
+   "chapter": 24,
+   "title": "Eliezer and Rebekah at the Well",
+   "scriptureReference": null,
+   "assetPath": "/resources/dore/018_Gen.24.jpg"
+  },
+  {
+   "page": 20,
+   "book": "Gen",
+   "chapter": 27,
+   "title": "Isaac Blesses Jacob",
+   "scriptureReference": null,
+   "assetPath": "/resources/dore/020_Gen.27.jpg"
+  },
+  {
+   "page": 21,
+   "book": "Gen",
+   "chapter": 28,
+   "title": "Jacob's Dream",
+   "scriptureReference": null,
+   "assetPath": "/resources/dore/021_Gen.28.jpg"
+  },
+  {
+   "page": 22,
+   "book": "Gen",
+   "chapter": 29,
+   "title": "Jacob Tends Laban's Flocks and Meets Rachel",
+   "scriptureReference": null,
+   "assetPath": "/resources/dore/022_Gen.29.jpg"
+  },
+  {
+   "page": 23,
+   "book": "Gen",
+   "chapter": 32,
+   "title": "Jacob Prays for Protection",
+   "scriptureReference": null,
+   "assetPath": "/resources/dore/023_Gen.32.jpg"
+  },
+  {
+   "page": 25,
+   "book": "Gen",
+   "chapter": 33,
+   "title": "Jacob and Esau Meet",
+   "scriptureReference": null,
+   "assetPath": "/resources/dore/025_Gen.33.jpg"
+  },
+  {
+   "page": 26,
+   "book": "Gen",
+   "chapter": 37,
+   "title": "Joseph Is Sold by His Brothers",
+   "scriptureReference": null,
+   "assetPath": "/resources/dore/026_Gen.37.jpg"
+  },
+  {
+   "page": 27,
+   "book": "Gen",
+   "chapter": 41,
+   "title": "Joseph Interprets Pharaoh's Dream",
+   "scriptureReference": null,
+   "assetPath": "/resources/dore/027_Gen.41.jpg"
+  },
+  {
+   "page": 28,
+   "book": "Gen",
+   "chapter": 45,
+   "title": "Joseph Reveals Himself to His Brothers",
+   "scriptureReference": null,
+   "assetPath": "/resources/dore/028_Gen.45.jpg"
+  },
+  {
+   "page": 29,
+   "book": "Gen",
+   "chapter": 46,
+   "title": "Jacob Goes to Egypt",
+   "scriptureReference": null,
+   "assetPath": "/resources/dore/029_Gen.46.jpg"
+  },
+  {
+   "page": 30,
+   "book": "Exod",
+   "chapter": 2,
+   "title": "The Child Moses on the Nile",
+   "scriptureReference": null,
+   "assetPath": "/resources/dore/030_Exod.2.jpg"
+  },
+  {
+   "page": 32,
+   "book": "Exod",
+   "chapter": 7,
+   "title": "Moses and Aaron Appear before Pharaoh",
+   "scriptureReference": null,
+   "assetPath": "/resources/dore/032_Exod.7.jpg"
+  },
+  {
+   "page": 33,
+   "book": "Exod",
+   "chapter": 9,
+   "title": "The Fifth Plague. Livestock Disease",
+   "scriptureReference": null,
+   "assetPath": "/resources/dore/033_Exod.9.jpg"
+  },
+  {
+   "page": 34,
+   "book": "Exod",
+   "chapter": 10,
+   "title": "The Ninth Plague. Darkness",
+   "scriptureReference": null,
+   "assetPath": "/resources/dore/034_Exod.10.jpg"
+  },
+  {
+   "page": 35,
+   "book": "Exod",
+   "chapter": 12,
+   "title": "The Firstborn of the Egyptians Are Slain",
+   "scriptureReference": null,
+   "assetPath": "/resources/dore/035_Exod.12.jpg"
+  },
+  {
+   "page": 37,
+   "book": "Exod",
+   "chapter": 14,
+   "title": "The Egyptians Drown in the Sea",
+   "scriptureReference": null,
+   "assetPath": "/resources/dore/037_Exod.14.jpg"
+  },
+  {
+   "page": 38,
+   "book": "Exod",
+   "chapter": 19,
+   "title": "The Giving of the Law on Mount Sinai",
+   "scriptureReference": null,
+   "assetPath": "/resources/dore/038_Exod.19.jpg"
+  },
+  {
+   "page": 39,
+   "book": "Exod",
+   "chapter": 34,
+   "title": "Moses Comes Down from Mount Sinai",
+   "scriptureReference": null,
+   "assetPath": "/resources/dore/039_Exod.34.jpg"
+  },
+  {
+   "page": 40,
+   "book": "Num",
+   "chapter": 16,
+   "title": "The Death of Korah, Dathan, and Abiram",
+   "scriptureReference": null,
+   "assetPath": "/resources/dore/040_Num.16.jpg"
+  },
+  {
+   "page": 41,
+   "book": "Exod",
+   "chapter": 17,
+   "title": "Moses Strikes the Rock at Horeb",
+   "scriptureReference": null,
+   "assetPath": "/resources/dore/041_Exod.17.jpg"
+  },
+  {
+   "page": 42,
+   "book": "Exod",
+   "chapter": 32,
+   "title": "Moses Breaks the Tables of the Law",
+   "scriptureReference": null,
+   "assetPath": "/resources/dore/042_Exod.32.jpg"
+  },
+  {
+   "page": 43,
+   "book": "Num",
+   "chapter": 13,
+   "title": "The Spies Return from the Promised Land",
+   "scriptureReference": null,
+   "assetPath": "/resources/dore/043_Num.13.jpg"
+  },
+  {
+   "page": 44,
+   "book": "Num",
+   "chapter": 21,
+   "title": "The Bronze Serpent",
+   "scriptureReference": null,
+   "assetPath": "/resources/dore/044_Num.21.jpg"
+  },
+  {
+   "page": 45,
+   "book": "Num",
+   "chapter": 22,
+   "title": "An Angel Appears to Balaam",
+   "scriptureReference": null,
+   "assetPath": "/resources/dore/045_Num.22.jpg"
+  },
+  {
+   "page": 46,
+   "book": "Josh",
+   "chapter": 3,
+   "title": "The Israelites Cross the Jordan River",
+   "scriptureReference": null,
+   "assetPath": "/resources/dore/046_Josh.3.jpg"
+  },
+  {
+   "page": 47,
+   "book": "Josh",
+   "chapter": 5,
+   "title": "An Angel Appears to the Israelites",
+   "scriptureReference": null,
+   "assetPath": "/resources/dore/047_Josh.5.jpg"
+  },
+  {
+   "page": 48,
+   "book": "Josh",
+   "chapter": 6,
+   "title": "The Walls of Jericho Fall Down",
+   "scriptureReference": null,
+   "assetPath": "/resources/dore/048_Josh.6.jpg"
+  },
+  {
+   "page": 50,
+   "book": "Josh",
+   "chapter": 7,
+   "title": "Achan Is Stoned to Death",
+   "scriptureReference": null,
+   "assetPath": "/resources/dore/050_Josh.7.jpg"
+  },
+  {
+   "page": 51,
+   "book": "Josh",
+   "chapter": 8,
+   "title": "Joshua Burns the Town of Ai",
+   "scriptureReference": null,
+   "assetPath": "/resources/dore/051_Josh.8.jpg"
+  },
+  {
+   "page": 52,
+   "book": "Josh",
+   "chapter": 10,
+   "title": "The Army of the Amorites Is Destroyed",
+   "scriptureReference": null,
+   "assetPath": "/resources/dore/052_Josh.10.jpg"
+  },
+  {
+   "page": 54,
+   "book": "Judg",
+   "chapter": 4,
+   "title": "Jael Kills Sisera",
+   "scriptureReference": null,
+   "assetPath": "/resources/dore/054_Judg.4.jpg"
+  },
+  {
+   "page": 55,
+   "book": "Judg",
+   "chapter": 5,
+   "title": "Deborah Praises Jael",
+   "scriptureReference": null,
+   "assetPath": "/resources/dore/055_Judg.5.jpg"
+  },
+  {
+   "page": 56,
+   "book": "Judg",
+   "chapter": 7,
+   "title": "Gideon Chooses 300 Soldiers",
+   "scriptureReference": null,
+   "assetPath": "/resources/dore/056_Judg.7.jpg"
+  },
+  {
+   "page": 58,
+   "book": "Judg",
+   "chapter": 9,
+   "title": "The Death of Gideon's Sons",
+   "scriptureReference": null,
+   "assetPath": "/resources/dore/058_Judg.9.jpg"
+  },
+  {
+   "page": 60,
+   "book": "Judg",
+   "chapter": 11,
+   "title": "Jephthah's Daughter Comes to Meet Her Father",
+   "scriptureReference": null,
+   "assetPath": "/resources/dore/060_Judg.11.jpg"
+  },
+  {
+   "page": 62,
+   "book": "Judg",
+   "chapter": 14,
+   "title": "Samson Slays a Lion",
+   "scriptureReference": null,
+   "assetPath": "/resources/dore/062_Judg.14.jpg"
+  },
+  {
+   "page": 63,
+   "book": "Judg",
+   "chapter": 15,
+   "title": "Samson Destroys the Philistines with an Ass' Jawbone",
+   "scriptureReference": null,
+   "assetPath": "/resources/dore/063_Judg.15.jpg"
+  },
+  {
+   "page": 64,
+   "book": "Judg",
+   "chapter": 16,
+   "title": "Samson Carries away the Gates of Gaza",
+   "scriptureReference": null,
+   "assetPath": "/resources/dore/064_Judg.16.jpg"
+  },
+  {
+   "page": 67,
+   "book": "Judg",
+   "chapter": 19,
+   "title": "A Levite Finds a Woman's Corpse",
+   "scriptureReference": null,
+   "assetPath": "/resources/dore/067_Judg.19.jpg"
+  },
+  {
+   "page": 69,
+   "book": "Judg",
+   "chapter": 21,
+   "title": "The Benjaminites Take the Virgins of Jabesh-gilead",
+   "scriptureReference": null,
+   "assetPath": "/resources/dore/069_Judg.21.jpg"
+  },
+  {
+   "page": 70,
+   "book": "Ruth",
+   "chapter": 1,
+   "title": "Naomi and Her Daughters-in-Law",
+   "scriptureReference": null,
+   "assetPath": "/resources/dore/070_Ruth.1.jpg"
+  },
+  {
+   "page": 71,
+   "book": "Ruth",
+   "chapter": 2,
+   "title": "Ruth and Boaz",
+   "scriptureReference": null,
+   "assetPath": "/resources/dore/071_Ruth.2.jpg"
+  },
+  {
+   "page": 72,
+   "book": "1Sam",
+   "chapter": 6,
+   "title": "The Ark Is Returned to Beth-shemesh",
+   "scriptureReference": null,
+   "assetPath": "/resources/dore/072_1Sam.6.jpg"
+  },
+  {
+   "page": 73,
+   "book": "1Sam",
+   "chapter": 9,
+   "title": "Samuel Blesses Saul",
+   "scriptureReference": null,
+   "assetPath": "/resources/dore/073_1Sam.9.jpg"
+  },
+  {
+   "page": 74,
+   "book": "1Sam",
+   "chapter": 15,
+   "title": "The Death of Agag",
+   "scriptureReference": null,
+   "assetPath": "/resources/dore/074_1Sam.15.jpg"
+  },
+  {
+   "page": 75,
+   "book": "1Sam",
+   "chapter": 17,
+   "title": "David Slays Goliath",
+   "scriptureReference": null,
+   "assetPath": "/resources/dore/075_1Sam.17.jpg"
+  },
+  {
+   "page": 76,
+   "book": "1Sam",
+   "chapter": 18,
+   "title": "Saul Attempts to Kill David",
+   "scriptureReference": null,
+   "assetPath": "/resources/dore/076_1Sam.18.jpg"
+  },
+  {
+   "page": 77,
+   "book": "1Sam",
+   "chapter": 19,
+   "title": "David Escapes through a Window",
+   "scriptureReference": null,
+   "assetPath": "/resources/dore/077_1Sam.19.jpg"
+  },
+  {
+   "page": 78,
+   "book": "1Sam",
+   "chapter": 20,
+   "title": "David and Jonathan",
+   "scriptureReference": null,
+   "assetPath": "/resources/dore/078_1Sam.20.jpg"
+  },
+  {
+   "page": 79,
+   "book": "1Sam",
+   "chapter": 24,
+   "title": "David Shows Saul How He Spared His Life",
+   "scriptureReference": null,
+   "assetPath": "/resources/dore/079_1Sam.24.jpg"
+  },
+  {
+   "page": 80,
+   "book": "1Sam",
+   "chapter": 28,
+   "title": "Saul and the Witch of Endor",
+   "scriptureReference": null,
+   "assetPath": "/resources/dore/080_1Sam.28.jpg"
+  },
+  {
+   "page": 81,
+   "book": "1Sam",
+   "chapter": 31,
+   "title": "The Death of Saul",
+   "scriptureReference": null,
+   "assetPath": "/resources/dore/081_1Sam.31.jpg"
+  },
+  {
+   "page": 83,
+   "book": "2Sam",
+   "chapter": 2,
+   "title": "Combat between Soldiers of Ish-bosheth and David",
+   "scriptureReference": null,
+   "assetPath": "/resources/dore/083_2Sam.2.jpg"
+  },
+  {
+   "page": 84,
+   "book": "2Sam",
+   "chapter": 12,
+   "title": "David Attacks the Ammonites",
+   "scriptureReference": null,
+   "assetPath": "/resources/dore/084_2Sam.12.jpg"
+  },
+  {
+   "page": 85,
+   "book": "2Sam",
+   "chapter": 18,
+   "title": "The Death of Absalom",
+   "scriptureReference": null,
+   "assetPath": "/resources/dore/085_2Sam.18.jpg"
+  },
+  {
+   "page": 87,
+   "book": "2Sam",
+   "chapter": 21,
+   "title": "Rizpah’s Kindness toward the Dead",
+   "scriptureReference": null,
+   "assetPath": "/resources/dore/087_2Sam.21.jpg"
+  },
+  {
+   "page": 89,
+   "book": "1Kgs",
+   "chapter": 3,
+   "title": "The Judgment of Solomon",
+   "scriptureReference": null,
+   "assetPath": "/resources/dore/089_1Kgs.3.jpg"
+  },
+  {
+   "page": 90,
+   "book": "1Kgs",
+   "chapter": 5,
+   "title": "Cedars Are Cut Down for the Jerusalem Temple",
+   "scriptureReference": null,
+   "assetPath": "/resources/dore/090_1Kgs.5.jpg"
+  },
+  {
+   "page": 91,
+   "book": "1Kgs",
+   "chapter": 10,
+   "title": "Solomon Receives the Queen of Sheba",
+   "scriptureReference": null,
+   "assetPath": "/resources/dore/091_1Kgs.10.jpg"
+  },
+  {
+   "page": 92,
+   "book": "1Kgs",
+   "chapter": 11,
+   "title": "King Solomon in Old Age",
+   "scriptureReference": null,
+   "assetPath": "/resources/dore/092_1Kgs.11.jpg"
+  },
+  {
+   "page": 93,
+   "book": "1Kgs",
+   "chapter": 13,
+   "title": "The Disobedient Prophet Is Slain by a Lion",
+   "scriptureReference": null,
+   "assetPath": "/resources/dore/093_1Kgs.13.jpg"
+  },
+  {
+   "page": 94,
+   "book": "1Kgs",
+   "chapter": 17,
+   "title": "Elijah Raises the Son of the Widow of Zarephath",
+   "scriptureReference": null,
+   "assetPath": "/resources/dore/094_1Kgs.17.jpg"
+  },
+  {
+   "page": 95,
+   "book": "1Kgs",
+   "chapter": 18,
+   "title": "The Prophets of Baal Are Slaughtered",
+   "scriptureReference": null,
+   "assetPath": "/resources/dore/095_1Kgs.18.jpg"
+  },
+  {
+   "page": 96,
+   "book": "1Kgs",
+   "chapter": 19,
+   "title": "Elijah Is Nourished by an Angel",
+   "scriptureReference": null,
+   "assetPath": "/resources/dore/096_1Kgs.19.jpg"
+  },
+  {
+   "page": 97,
+   "book": "1Kgs",
+   "chapter": 20,
+   "title": "The Israelites Slaughter the Syrians",
+   "scriptureReference": null,
+   "assetPath": "/resources/dore/097_1Kgs.20.jpg"
+  },
+  {
+   "page": 98,
+   "book": "1Kgs",
+   "chapter": 22,
+   "title": "The Death of Ahab",
+   "scriptureReference": null,
+   "assetPath": "/resources/dore/098_1Kgs.22.jpg"
+  },
+  {
+   "page": 99,
+   "book": "2Kgs",
+   "chapter": 1,
+   "title": "Elijah Destroys the Messengers of Ahaziah",
+   "scriptureReference": null,
+   "assetPath": "/resources/dore/099_2Kgs.1.jpg"
+  },
+  {
+   "page": 100,
+   "book": "2Kgs",
+   "chapter": 2,
+   "title": "Elijah Ascends to Heaven in a Chariot of Fire",
+   "scriptureReference": null,
+   "assetPath": "/resources/dore/100_2Kgs.2.jpg"
+  },
+  {
+   "page": 102,
+   "book": "2Kgs",
+   "chapter": 6,
+   "title": "A Famine in Samaria",
+   "scriptureReference": null,
+   "assetPath": "/resources/dore/102_2Kgs.6.jpg"
+  },
+  {
+   "page": 103,
+   "book": "2Kgs",
+   "chapter": 9,
+   "title": "The Death of Jezebel",
+   "scriptureReference": null,
+   "assetPath": "/resources/dore/103_2Kgs.9.jpg"
+  },
+  {
+   "page": 105,
+   "book": "2Kgs",
+   "chapter": 11,
+   "title": "The Death of Athaliah",
+   "scriptureReference": null,
+   "assetPath": "/resources/dore/105_2Kgs.11.jpg"
+  },
+  {
+   "page": 106,
+   "book": "2Kgs",
+   "chapter": 17,
+   "title": "Foreign Nations Are Slain by Lions in Samaria",
+   "scriptureReference": null,
+   "assetPath": "/resources/dore/106_2Kgs.17.jpg"
+  },
+  {
+   "page": 107,
+   "book": "2Kgs",
+   "chapter": 19,
+   "title": "Sennacherib's Army Is Destroyed",
+   "scriptureReference": null,
+   "assetPath": "/resources/dore/107_2Kgs.19.jpg"
+  },
+  {
+   "page": 108,
+   "book": "2Kgs",
+   "chapter": 25,
+   "title": "Zedekiah's Sons Are Slaughtered before His Eyes",
+   "scriptureReference": null,
+   "assetPath": "/resources/dore/108_2Kgs.25.jpg"
+  },
+  {
+   "page": 109,
+   "book": "1Chr",
+   "chapter": 21,
+   "title": "The Plague of Jerusalem",
+   "scriptureReference": null,
+   "assetPath": "/resources/dore/109_1Chr.21.jpg"
+  },
+  {
+   "page": 110,
+   "book": "2Chr",
+   "chapter": 20,
+   "title": "The Ammonite and Moabite Armies Are Destroyed",
+   "scriptureReference": null,
+   "assetPath": "/resources/dore/110_2Chr.20.jpg"
+  },
+  {
+   "page": 111,
+   "book": "Ezra",
+   "chapter": 1,
+   "title": "Cyrus Restores the Vessels of the Temple",
+   "scriptureReference": null,
+   "assetPath": "/resources/dore/111_Ezra.1.jpg"
+  },
+  {
+   "page": 112,
+   "book": "Ezra",
+   "chapter": 3,
+   "title": "The Rebuilding of the Temple Is Begun",
+   "scriptureReference": null,
+   "assetPath": "/resources/dore/112_Ezra.3.jpg"
+  },
+  {
+   "page": 113,
+   "book": "Ezra",
+   "chapter": 7,
+   "title": "Artaxerxes Grants Freedom to the Jews",
+   "scriptureReference": null,
+   "assetPath": "/resources/dore/113_Ezra.7.jpg"
+  },
+  {
+   "page": 114,
+   "book": "Ezra",
+   "chapter": 9,
+   "title": "Ezra Kneels in Prayer",
+   "scriptureReference": null,
+   "assetPath": "/resources/dore/114_Ezra.9.jpg"
+  },
+  {
+   "page": 115,
+   "book": "Neh",
+   "chapter": 2,
+   "title": "Nehemiah Views the Ruins of Jerusalem's Walls",
+   "scriptureReference": null,
+   "assetPath": "/resources/dore/115_Neh.2.jpg"
+  },
+  {
+   "page": 116,
+   "book": "Neh",
+   "chapter": 8,
+   "title": "Ezra Reads the Law to the People",
+   "scriptureReference": null,
+   "assetPath": "/resources/dore/116_Neh.8.jpg"
+  },
+  {
+   "page": 117,
+   "book": "Esth",
+   "chapter": 1,
+   "title": "Queen Vashti Refuses to Obey Ahasuerus' Command",
+   "scriptureReference": null,
+   "assetPath": "/resources/dore/117_Esth.1.jpg"
+  },
+  {
+   "page": 118,
+   "book": "Esth",
+   "chapter": 5,
+   "title": "Esther Before the King",
+   "scriptureReference": null,
+   "assetPath": "/resources/dore/118_Esth.5.jpg"
+  },
+  {
+   "page": 119,
+   "book": "Esth",
+   "chapter": 6,
+   "title": "The Triumph of Mordecai",
+   "scriptureReference": null,
+   "assetPath": "/resources/dore/119_Esth.6.jpg"
+  },
+  {
+   "page": 120,
+   "book": "Esth",
+   "chapter": 7,
+   "title": "Esther Accuses Haman",
+   "scriptureReference": null,
+   "assetPath": "/resources/dore/120_Esth.7.jpg"
+  },
+  {
+   "page": 121,
+   "book": "Job",
+   "chapter": 1,
+   "title": "Job Hears of His Misfortunes",
+   "scriptureReference": null,
+   "assetPath": "/resources/dore/121_Job.1.jpg"
+  },
+  {
+   "page": 122,
+   "book": "Job",
+   "chapter": 2,
+   "title": "Job Speaks with His Friends",
+   "scriptureReference": null,
+   "assetPath": "/resources/dore/122_Job.2.jpg"
+  },
+  {
+   "page": 123,
+   "book": "Isa",
+   "chapter": 1,
+   "title": "The Prophet Isaiah",
+   "scriptureReference": null,
+   "assetPath": "/resources/dore/123_Isa.1.jpg"
+  },
+  {
+   "page": 124,
+   "book": "Isa",
+   "chapter": 13,
+   "title": "Isaiah's Vision of the Destruction of Babylon",
+   "scriptureReference": null,
+   "assetPath": "/resources/dore/124_Isa.13.jpg"
+  },
+  {
+   "page": 125,
+   "book": "Isa",
+   "chapter": 27,
+   "title": "The Destruction of Leviathan",
+   "scriptureReference": null,
+   "assetPath": "/resources/dore/125_Isa.27.jpg"
+  },
+  {
+   "page": 126,
+   "book": "Jer",
+   "chapter": 36,
+   "title": "Baruch Writes Jeremiah's Prophecies",
+   "scriptureReference": null,
+   "assetPath": "/resources/dore/126_Jer.36.jpg"
+  },
+  {
+   "page": 127,
+   "book": "Jer",
+   "chapter": 1,
+   "title": "The Prophet Jeremiah",
+   "scriptureReference": null,
+   "assetPath": "/resources/dore/127_Jer.1.jpg"
+  },
+  {
+   "page": 128,
+   "book": "Lam",
+   "chapter": 1,
+   "title": "People Mourn over the Destruction of Jerusalem",
+   "scriptureReference": null,
+   "assetPath": "/resources/dore/128_Lam.1.jpg"
+  },
+  {
+   "page": 130,
+   "book": "Ezek",
+   "chapter": 1,
+   "title": "The Prophet Ezekiel",
+   "scriptureReference": null,
+   "assetPath": "/resources/dore/130_Ezek.1.jpg"
+  },
+  {
+   "page": 131,
+   "book": "Ezek",
+   "chapter": 37,
+   "title": "Ezekiel’s Vision of the Valley of Dry Bones",
+   "scriptureReference": null,
+   "assetPath": "/resources/dore/131_Ezek.37.jpg"
+  },
+  {
+   "page": 132,
+   "book": "Dan",
+   "chapter": 1,
+   "title": "Daniel among the Exiles",
+   "scriptureReference": null,
+   "assetPath": "/resources/dore/132_Dan.1.jpg"
+  },
+  {
+   "page": 133,
+   "book": "Dan",
+   "chapter": 3,
+   "title": "Shadrach, Meshach and Abednego in the Furnace",
+   "scriptureReference": null,
+   "assetPath": "/resources/dore/133_Dan.3.jpg"
+  },
+  {
+   "page": 134,
+   "book": "Dan",
+   "chapter": 5,
+   "title": "Daniel Interprets the Writing on the Wall",
+   "scriptureReference": null,
+   "assetPath": "/resources/dore/134_Dan.5.jpg"
+  },
+  {
+   "page": 135,
+   "book": "Dan",
+   "chapter": 6,
+   "title": "Daniel in the Lions' Den",
+   "scriptureReference": null,
+   "assetPath": "/resources/dore/135_Dan.6.jpg"
+  },
+  {
+   "page": 136,
+   "book": "Dan",
+   "chapter": 7,
+   "title": "Daniel's Vision of the Four Beasts",
+   "scriptureReference": null,
+   "assetPath": "/resources/dore/136_Dan.7.jpg"
+  },
+  {
+   "page": 137,
+   "book": "Amos",
+   "chapter": 1,
+   "title": "The Prophet Amos",
+   "scriptureReference": null,
+   "assetPath": "/resources/dore/137_Amos.1.jpg"
+  },
+  {
+   "page": 138,
+   "book": "Jonah",
+   "chapter": 2,
+   "title": "Jonah Is Spewed Forth by the Whale",
+   "scriptureReference": null,
+   "assetPath": "/resources/dore/138_Jonah.2.jpg"
+  },
+  {
+   "page": 139,
+   "book": "Jonah",
+   "chapter": 3,
+   "title": "Jonah Preaches to the Ninevites",
+   "scriptureReference": null,
+   "assetPath": "/resources/dore/139_Jonah.3.jpg"
+  },
+  {
+   "page": 140,
+   "book": "Mic",
+   "chapter": 6,
+   "title": "Micah Exhorts the Israelites to Repent",
+   "scriptureReference": null,
+   "assetPath": "/resources/dore/140_Mic.6.jpg"
+  },
+  {
+   "page": 141,
+   "book": "Zech",
+   "chapter": 6,
+   "title": "Zechariah's Vision of Four Chariots",
+   "scriptureReference": null,
+   "assetPath": "/resources/dore/141_Zech.6.jpg"
+  },
+  {
+   "page": 161,
+   "book": "Luke",
+   "chapter": 1,
+   "title": "The Annunciation",
+   "scriptureReference": "Luke 1:26-28",
+   "assetPath": "/resources/dore/161_Luke.1.jpg"
+  },
+  {
+   "page": 162,
+   "book": "Luke",
+   "chapter": 2,
+   "title": "The Nativity",
+   "scriptureReference": "Luke 2:15-16",
+   "assetPath": "/resources/dore/162_Luke.2.jpg"
+  },
+  {
+   "page": 163,
+   "book": "Matt",
+   "chapter": 2,
+   "title": "The Wise Men Guided by the Star",
+   "scriptureReference": "Matthew 2:1-2",
+   "assetPath": "/resources/dore/163_Matt.2.jpg"
+  },
+  {
+   "page": 167,
+   "book": "Mark",
+   "chapter": 1,
+   "title": "John the Baptist Preaching in the Wilderness",
+   "scriptureReference": "Mark 1:6-7",
+   "assetPath": "/resources/dore/167_Mark.1.jpg"
+  },
+  {
+   "page": 169,
+   "book": "Luke",
+   "chapter": 4,
+   "title": "The Temptation of Jesus",
+   "scriptureReference": "Luke 4:7-8",
+   "assetPath": "/resources/dore/169_Luke.4.jpg"
+  },
+  {
+   "page": 170,
+   "book": "John",
+   "chapter": 2,
+   "title": "The Marriage in Cana",
+   "scriptureReference": "John 2:5-7",
+   "assetPath": "/resources/dore/170_John.2.jpg"
+  },
+  {
+   "page": 172,
+   "book": "John",
+   "chapter": 4,
+   "title": "Jesus and the Woman of Samaria",
+   "scriptureReference": "John 4:13-14",
+   "assetPath": "/resources/dore/172_John.4.jpg"
+  },
+  {
+   "page": 174,
+   "book": "Luke",
+   "chapter": 5,
+   "title": "Jesus Preaching at the Sea of Galilee",
+   "scriptureReference": "Luke 5:3",
+   "assetPath": "/resources/dore/174_Luke.5.jpg"
+  },
+  {
+   "page": 175,
+   "book": "Mark",
+   "chapter": 2,
+   "title": "The Disciples Plucking Corn on the Sabbath",
+   "scriptureReference": "Mark 2:23-25",
+   "assetPath": "/resources/dore/175_Mark.2.jpg"
+  },
+  {
+   "page": 176,
+   "book": "Matt",
+   "chapter": 5,
+   "title": "The Sermon on the Mount",
+   "scriptureReference": "Matthew 5:7-10",
+   "assetPath": "/resources/dore/176_Matt.5.jpg"
+  },
+  {
+   "page": 177,
+   "book": "Luke",
+   "chapter": 8,
+   "title": "Mary Magdalene Repentant",
+   "scriptureReference": "Luke 8:2",
+   "assetPath": "/resources/dore/177_Luke.8.jpg"
+  },
+  {
+   "page": 178,
+   "book": "Matt",
+   "chapter": 12,
+   "title": "The Dumb Man Possessed",
+   "scriptureReference": "Matthew 12:22-25",
+   "assetPath": "/resources/dore/178_Matt.12.jpg"
+  },
+  {
+   "page": 179,
+   "book": "Mark",
+   "chapter": 4,
+   "title": "Jesus Stilling the Tempest",
+   "scriptureReference": "Mark 4:37-38",
+   "assetPath": "/resources/dore/179_Mark.4.jpg"
+  },
+  {
+   "page": 181,
+   "book": "Matt",
+   "chapter": 13,
+   "title": "Christ in the Synagogue",
+   "scriptureReference": "Matthew 13:54",
+   "assetPath": "/resources/dore/181_Matt.13.jpg"
+  },
+  {
+   "page": 182,
+   "book": "Matt",
+   "chapter": 14,
+   "title": "The Daughter of Herod Receiving the Head of John the Baptist",
+   "scriptureReference": "Matthew 14:8-10",
+   "assetPath": "/resources/dore/182_Matt.14.jpg"
+  },
+  {
+   "page": 184,
+   "book": "John",
+   "chapter": 6,
+   "title": "Jesus Walking on the Sea",
+   "scriptureReference": "John 6:19-20",
+   "assetPath": "/resources/dore/184_John.6.jpg"
+  },
+  {
+   "page": 185,
+   "book": "Matt",
+   "chapter": 15,
+   "title": "Jesus Healing the Sick",
+   "scriptureReference": "Matthew 15:31",
+   "assetPath": "/resources/dore/185_Matt.15.jpg"
+  },
+  {
+   "page": 186,
+   "book": "Matt",
+   "chapter": 17,
+   "title": "The Transfiguration",
+   "scriptureReference": "Matthew 17:2-3",
+   "assetPath": "/resources/dore/186_Matt.17.jpg"
+  },
+  {
+   "page": 188,
+   "book": "John",
+   "chapter": 8,
+   "title": "Jesus and the Woman Taken in Adultery",
+   "scriptureReference": "John 8:3-5",
+   "assetPath": "/resources/dore/188_John.8.jpg"
+  },
+  {
+   "page": 189,
+   "book": "Luke",
+   "chapter": 10,
+   "title": "The Good Samaritan",
+   "scriptureReference": "Luke 10:33",
+   "assetPath": "/resources/dore/189_Luke.10.jpg"
+  },
+  {
+   "page": 192,
+   "book": "Luke",
+   "chapter": 12,
+   "title": "Jesus Preaching to the Multitude",
+   "scriptureReference": "Luke 12:29-31",
+   "assetPath": "/resources/dore/192_Luke.12.jpg"
+  },
+  {
+   "page": 193,
+   "book": "Luke",
+   "chapter": 15,
+   "title": "The Return of the Prodigal Son",
+   "scriptureReference": "Luke 15:17",
+   "assetPath": "/resources/dore/193_Luke.15.jpg"
+  },
+  {
+   "page": 195,
+   "book": "Luke",
+   "chapter": 16,
+   "title": "Lazarus at the Rich Man's House",
+   "scriptureReference": "Luke 16:20-21",
+   "assetPath": "/resources/dore/195_Luke.16.jpg"
+  },
+  {
+   "page": 196,
+   "book": "Luke",
+   "chapter": 18,
+   "title": "The Pharisee and the Publican",
+   "scriptureReference": "Luke 18:11-13",
+   "assetPath": "/resources/dore/196_Luke.18.jpg"
+  },
+  {
+   "page": 197,
+   "book": "Mark",
+   "chapter": 10,
+   "title": "Jesus Blessing the Little Children",
+   "scriptureReference": "Mark 10:13-14",
+   "assetPath": "/resources/dore/197_Mark.10.jpg"
+  },
+  {
+   "page": 198,
+   "book": "John",
+   "chapter": 11,
+   "title": "Resurrection of Lazarus",
+   "scriptureReference": "John 11:41-43",
+   "assetPath": "/resources/dore/198_John.11.jpg"
+  },
+  {
+   "page": 199,
+   "book": "Matt",
+   "chapter": 21,
+   "title": "Entry of Jesus Into Jerusalem",
+   "scriptureReference": "Matthew 21:7-8",
+   "assetPath": "/resources/dore/199_Matt.21.jpg"
+  },
+  {
+   "page": 200,
+   "book": "Matt",
+   "chapter": 22,
+   "title": "Christ and the Tribute Money",
+   "scriptureReference": "Matthew 22:20-21",
+   "assetPath": "/resources/dore/200_Matt.22.jpg"
+  },
+  {
+   "page": 201,
+   "book": "Mark",
+   "chapter": 12,
+   "title": "The Widow's Mite",
+   "scriptureReference": "Mark 12:42-43",
+   "assetPath": "/resources/dore/201_Mark.12.jpg"
+  },
+  {
+   "page": 202,
+   "book": "Mark",
+   "chapter": 14,
+   "title": "The Last Supper",
+   "scriptureReference": "Mark 14:22-24",
+   "assetPath": "/resources/dore/202_Mark.14.jpg"
+  },
+  {
+   "page": 203,
+   "book": "Luke",
+   "chapter": 22,
+   "title": "The Agony in the Garden",
+   "scriptureReference": "Luke 22:43-44",
+   "assetPath": "/resources/dore/203_Luke.22.jpg"
+  },
+  {
+   "page": 204,
+   "book": "Matt",
+   "chapter": 26,
+   "title": "Jesus Praying in the Garden",
+   "scriptureReference": "Matthew 26:40-41",
+   "assetPath": "/resources/dore/204_Matt.26.jpg"
+  },
+  {
+   "page": 206,
+   "book": "John",
+   "chapter": 18,
+   "title": "Peter Denying Christ",
+   "scriptureReference": "John 18:26-27",
+   "assetPath": "/resources/dore/206_John.18.jpg"
+  },
+  {
+   "page": 207,
+   "book": "Matt",
+   "chapter": 27,
+   "title": "Jesus Scourged",
+   "scriptureReference": "Matthew 27:26",
+   "assetPath": "/resources/dore/207_Matt.27.jpg"
+  },
+  {
+   "page": 208,
+   "book": "John",
+   "chapter": 19,
+   "title": "The Crown of Thorns",
+   "scriptureReference": "John 19:2-3",
+   "assetPath": "/resources/dore/208_John.19.jpg"
+  },
+  {
+   "page": 211,
+   "book": "Mark",
+   "chapter": 15,
+   "title": "Jesus Falling Beneath the Cross",
+   "scriptureReference": "Mark 15:21",
+   "assetPath": "/resources/dore/211_Mark.15.jpg"
+  },
+  {
+   "page": 214,
+   "book": "Luke",
+   "chapter": 23,
+   "title": "The Crucifixion",
+   "scriptureReference": "Luke 23:34-35",
+   "assetPath": "/resources/dore/214_Luke.23.jpg"
+  },
+  {
+   "page": 220,
+   "book": "Matt",
+   "chapter": 28,
+   "title": "The Resurrection",
+   "scriptureReference": "Matthew 28:5-6",
+   "assetPath": "/resources/dore/220_Matt.28.jpg"
+  },
+  {
+   "page": 221,
+   "book": "Luke",
+   "chapter": 24,
+   "title": "Jesus and the Disciples Going to Emmaus",
+   "scriptureReference": "Luke 24:26-27",
+   "assetPath": "/resources/dore/221_Luke.24.jpg"
+  },
+  {
+   "page": 222,
+   "book": "John",
+   "chapter": 21,
+   "title": "The Miraculous Draught of Fishes",
+   "scriptureReference": "John 21:10-11",
+   "assetPath": "/resources/dore/222_John.21.jpg"
+  },
+  {
+   "page": 223,
+   "book": "Mark",
+   "chapter": 16,
+   "title": "The Ascension",
+   "scriptureReference": "Mark 16:19",
+   "assetPath": "/resources/dore/223_Mark.16.jpg"
+  },
+  {
+   "page": 224,
+   "book": "Acts",
+   "chapter": 2,
+   "title": "The Descent of the Spirit",
+   "scriptureReference": "Acts 2:2-3",
+   "assetPath": "/resources/dore/224_Acts.2.jpg"
+  },
+  {
+   "page": 226,
+   "book": "Acts",
+   "chapter": 3,
+   "title": "Peter and John at the Beautiful Gate",
+   "scriptureReference": "Acts 3:6-7",
+   "assetPath": "/resources/dore/226_Acts.3.jpg"
+  },
+  {
+   "page": 227,
+   "book": "Acts",
+   "chapter": 5,
+   "title": "Death of Ananias",
+   "scriptureReference": "Acts 5:4-5",
+   "assetPath": "/resources/dore/227_Acts.5.jpg"
+  },
+  {
+   "page": 228,
+   "book": "Acts",
+   "chapter": 7,
+   "title": "Martydom of Stephen",
+   "scriptureReference": "Acts 7:59-60",
+   "assetPath": "/resources/dore/228_Acts.7.jpg"
+  },
+  {
+   "page": 229,
+   "book": "Acts",
+   "chapter": 9,
+   "title": "Conversion of Saul",
+   "scriptureReference": "Acts 9:3-5",
+   "assetPath": "/resources/dore/229_Acts.9.jpg"
+  },
+  {
+   "page": 230,
+   "book": "Acts",
+   "chapter": 10,
+   "title": "Peter the House of Cornelius",
+   "scriptureReference": "Acts 10:28",
+   "assetPath": "/resources/dore/230_Acts.10.jpg"
+  },
+  {
+   "page": 231,
+   "book": "Acts",
+   "chapter": 12,
+   "title": "Peter Delivered From Prison",
+   "scriptureReference": "Acts 12:7-8",
+   "assetPath": "/resources/dore/231_Acts.12.jpg"
+  },
+  {
+   "page": 232,
+   "book": "Acts",
+   "chapter": 19,
+   "title": "Paul at Ephesus",
+   "scriptureReference": "Acts 19:19",
+   "assetPath": "/resources/dore/232_Acts.19.jpg"
+  },
+  {
+   "page": 233,
+   "book": "Acts",
+   "chapter": 21,
+   "title": "Paul Rescued From the Multitude",
+   "scriptureReference": "Acts 21:34-35",
+   "assetPath": "/resources/dore/233_Acts.21.jpg"
+  },
+  {
+   "page": 234,
+   "book": "Acts",
+   "chapter": 27,
+   "title": "Paul Shipwrecked",
+   "scriptureReference": "Acts 27:43-44",
+   "assetPath": "/resources/dore/234_Acts.27.jpg"
+  },
+  {
+   "page": 235,
+   "book": "1Thess",
+   "chapter": 2,
+   "title": "Paul Preaching to the Thessalonians",
+   "scriptureReference": "1 Thessalonians 2:11-12",
+   "assetPath": "/resources/dore/235_1Thess.2.jpg"
+  },
+  {
+   "page": 236,
+   "book": "Rev",
+   "chapter": 1,
+   "title": "John at Patmos",
+   "scriptureReference": "Revelation 1:9",
+   "assetPath": "/resources/dore/236_Rev.1.jpg"
+  },
+  {
+   "page": 237,
+   "book": "Rev",
+   "chapter": 6,
+   "title": "The Vision of Death",
+   "scriptureReference": "Revelation 6:7-8",
+   "assetPath": "/resources/dore/237_Rev.6.jpg"
+  },
+  {
+   "page": 238,
+   "book": "Rev",
+   "chapter": 12,
+   "title": "The Crowned Virgin: A Vision of John",
+   "scriptureReference": "Revelation 12:1-3",
+   "assetPath": "/resources/dore/238_Rev.12.jpg"
+  },
+  {
+   "page": 239,
+   "book": "Rev",
+   "chapter": 18,
+   "title": "Babylon Fallen",
+   "scriptureReference": "Revelation 18:2",
+   "assetPath": "/resources/dore/239_Rev.18.jpg"
+  },
+  {
+   "page": 240,
+   "book": "Rev",
+   "chapter": 20,
+   "title": "The Last Judgment",
+   "scriptureReference": "Revelation 20:12",
+   "assetPath": "/resources/dore/240_Rev.20.jpg"
+  },
+  {
+   "page": 241,
+   "book": "Rev",
+   "chapter": 21,
+   "title": "The New Jerusalem",
+   "scriptureReference": "Revelation 21:1-2",
+   "assetPath": "/resources/dore/241_Rev.21.jpg"
+  }
+ ]
+}

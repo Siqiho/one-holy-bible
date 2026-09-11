@@ -1,12 +1,17 @@
 import {
+  BookMarked,
   BookOpen,
   ChevronDown,
+  ChevronLeft,
   ChevronRight,
   Columns3,
   Copy,
+  GripVertical,
   Trash2,
   Images,
+  LibraryBig,
   Navigation2,
+  NotebookText,
   Pencil,
   ArrowLeftRight,
   PanelLeftClose,
@@ -16,7 +21,11 @@ import {
   RefreshCcw,
   RotateCcw,
   Save,
+  ScrollText,
   Search,
+  Settings,
+  SunMedium,
+  Type,
   X,
 } from "lucide-react";
 import { useEffect, useMemo, useRef, useState } from "react";
@@ -24,12 +33,13 @@ import type { CSSProperties, KeyboardEvent as ReactKeyboardEvent, PointerEvent a
 import { closestCenter, DndContext, DragOverlay, PointerSensor, useDraggable, useDroppable, useSensor, useSensors, type CollisionDetection, type DragCancelEvent, type DragEndEvent, type DragStartEvent, type Modifier } from "@dnd-kit/core";
 import { horizontalListSortingStrategy, SortableContext, useSortable, verticalListSortingStrategy } from "@dnd-kit/sortable";
 import { CSS } from "@dnd-kit/utilities";
-import ReactMarkdown from "react-markdown";
-import remarkGfm from "remark-gfm";
 import type { BibleVersion } from "../domain/bible";
+import { ScriptureLinkedText } from "./ScriptureLinkedText";
+import { VersePreviewProvider } from "./VersePreviewContext";
 import type { PublicScriptureSearchEntry } from "../data/publicData";
 import { bookTitle, englishBookTitle, newTestamentBooks, oldTestamentBooks } from "../domain/bibleBooks";
 import { defaultWorkbenchLayout, type CenterModuleId, type DockSide, type ResourceModuleLayout, type ResourceSourceId, type SavedCardRef, type WorkbenchLayout } from "../domain/layout";
+import { buildBookIntroView, type BookIntroViewModel } from "../domain/bookIntroView";
 import type { StudyResource } from "../domain/resources";
 import type { VerseId } from "../domain/verse";
 import { parseVerseId } from "../domain/verse";
@@ -38,11 +48,54 @@ import { createBibleSearchIndex, createPublicScriptureSearchIndex, type BibleSea
 import { formatTextResourceBody } from "../lib/formatTextResourceBody";
 
 export const layoutStorageKey = "one-holy-bible-layout";
+export const paperThemeStorageKey = "one-holy-bible-paper-theme";
+type PaperTheme = "default" | "warm";
+
+function storedPaperTheme(): PaperTheme {
+  try {
+    const value = window.localStorage.getItem(paperThemeStorageKey);
+    if (value === "default") return "default";
+    return "warm";
+  } catch {
+    return "warm";
+  }
+}
+
+function persistPaperTheme(theme: PaperTheme) {
+  try {
+    window.localStorage.setItem(paperThemeStorageKey, theme);
+  } catch {
+    // Theme still works for the current session if storage is unavailable.
+  }
+}
+
+export const readingFontStorageKey = "one-holy-bible-reading-font";
+type ReadingFont = "serif" | "sans";
+
+function storedReadingFont(): ReadingFont {
+  try {
+    const value = window.localStorage.getItem(readingFontStorageKey);
+    if (value === "sans") return "sans";
+    return "serif";
+  } catch {
+    return "serif";
+  }
+}
+
+function persistReadingFont(font: ReadingFont) {
+  try {
+    window.localStorage.setItem(readingFontStorageKey, font);
+  } catch {
+    // Session font still works without storage.
+  }
+}
+
 const resourceEditsStorageKey = "one-holy-bible-resource-edits";
 const deletedResourceIdsStorageKey = "one-holy-bible-deleted-resource-ids";
+export const commentaryLibrariesStorageKey = "one-holy-bible-commentary-libraries";
 const dockCollapsedWidth = 40;
 const dockResizeHandleWidth = 8;
-const dockMinWidth = 180;
+const dockMinWidth = 220;
 const dockMaxWidth = 560;
 const readerColumnMinWidth = 220;
 const splitMinPercent = 25;
@@ -71,24 +124,27 @@ export interface WorkbenchProps {
   initialIntroBook?: string | null;
   onRefreshResources?: () => Promise<void> | void;
   onUnsyncResource?: (resourceId: string) => Promise<void> | void;
-  onUpdateWorkbenchResource?: (resourceId: string, draft: { body: string; title: string }) => Promise<void> | void;
+  onUpdateWorkbenchResource?: (resourceId: string, draft: { body: string; title: string; primaryAnchor?: string | null }) => Promise<void> | void;
   unsyncingResourceId?: string | null;
   initialVerseId?: VerseId;
   versions: BibleVersion[];
   resources: StudyResource[];
   initialLayout: WorkbenchLayout;
   onSaveLayout?: (layout: WorkbenchLayout) => void;
+  onOpenReader?: (verseId: VerseId) => void;
 }
 
 type ResourceCardOrigin = DockSide | "center";
 type ResourceEditDrafts = Record<string, {
   body?: string;
+  primaryAnchor?: string | null;
   summary?: string;
   title?: string;
 }>;
 type ResourceEditResult = { persisted: boolean };
-type ResourceEditHandler = (resourceId: string, draft: { body: string; title: string }) => ResourceEditResult;
-type WorkbenchResourceUpdateHandler = (resourceId: string, draft: { body: string; title: string }) => Promise<void> | void;
+type ResourceTextDraft = { body: string; primaryAnchor?: string | null; title: string };
+type ResourceEditHandler = (resourceId: string, draft: ResourceTextDraft) => ResourceEditResult;
+type WorkbenchResourceUpdateHandler = (resourceId: string, draft: ResourceTextDraft) => Promise<void> | void;
 type ResourceNavigateHandler = (resource: StudyResource, sourceId?: ResourceSourceId) => void;
 type ResourceDeleteHandler = (resourceId: string) => void;
 type SearchVersionFilter = "all" | "cuv" | "kjv";
@@ -515,11 +571,12 @@ function searchResultsForDisplay(
   versionFilter: SearchVersionFilter,
   scope: SearchScope,
   currentBook: string,
+  maxResults = searchResultLimit,
 ): WorkbenchSearchResponse {
   const response = (wholeBibleSearchIndex
     ? createPublicScriptureSearchIndex(wholeBibleSearchIndex)
     : createBibleSearchIndex(versions)).search(query, {
-    maxResults: searchResultLimit,
+    maxResults,
     scope: searchScopeOption(scope, currentBook),
     version: versionFilter,
   });
@@ -745,13 +802,21 @@ function storedLayout(initialLayout: WorkbenchLayout, resources: StudyResource[]
   try {
     const raw = localStorage.getItem(layoutStorageKey);
     const parsed = raw ? JSON.parse(raw) : {};
-    const parsedModules = Array.isArray(parsed.modules) ? parsed.modules : [];
+    const parsedModules: Array<{ id?: string; visible?: unknown }> = Array.isArray(parsed.modules)
+      ? parsed.modules
+      : [];
     const modules = initialLayout.modules.map((defaultModule) => {
-      const storedModule = parsedModules.find((item: Partial<ResourceModuleLayout>) => item.id === defaultModule.id);
+      const storedModules = parsedModules.filter((item) => (
+        item.id === defaultModule.id
+        || (defaultModule.id === "encyclopedia" && item.id === "dictionary")
+      ));
+      const storedVisibility = storedModules
+        .map((item) => item.visible)
+        .filter((visible: unknown): visible is boolean => typeof visible === "boolean");
       return {
         ...defaultModule,
         title: resourceModuleTitle(defaultModule.id),
-        visible: typeof storedModule?.visible === "boolean" ? storedModule.visible : defaultModule.visible,
+        visible: storedVisibility.length > 0 ? storedVisibility.some(Boolean) : defaultModule.visible,
         side: "right" as DockSide,
       };
     });
@@ -841,6 +906,18 @@ function imageResourceAlt(resource: StudyResource) {
   return resource.title.trim() || "Image resource";
 }
 
+const paperBlendAssetSuffixes = [
+  "/cmc-01/p011_img001_661x631.png",
+  "/cmc-01/p015_img003_435x262.png",
+] as const;
+
+export function shouldBlendImageWithPaper(resource: StudyResource) {
+  if (resource.type !== "image" || !resource.assetPath) return false;
+
+  const normalizedPath = resource.assetPath.toLowerCase().split(/[?#]/, 1)[0];
+  return paperBlendAssetSuffixes.some((suffix) => normalizedPath.endsWith(suffix));
+}
+
 function imageDimensionsFromAssetPath(assetPath: string | undefined) {
   const match = assetPath?.match(/_(\d+)x(\d+)(?:-[^/]+)?\.png(?:$|\?)/);
   if (!match) return {};
@@ -858,11 +935,29 @@ function editableResources(resources: StudyResource[], edits: ResourceEditDrafts
       return resource;
     }
 
+    const nextPrimaryAnchor = (edit.primaryAnchor === undefined
+      ? resource.primaryAnchor
+      : edit.primaryAnchor || undefined) as VerseId | undefined;
+    const hasPlacementEdit = edit.primaryAnchor !== undefined;
+    const nextVerses = hasPlacementEdit
+      ? nextPrimaryAnchor ? [nextPrimaryAnchor] : []
+      : resource.verses;
+
     return {
       ...resource,
       body: edit.body ?? resource.body,
+      ...(nextPrimaryAnchor ? { primaryAnchor: nextPrimaryAnchor } : { primaryAnchor: undefined }),
+      ...(hasPlacementEdit ? {
+        debugMeta: {
+          ...resource.debugMeta,
+          coverageRanges: nextPrimaryAnchor
+            ? [{ start: nextPrimaryAnchor, end: nextPrimaryAnchor }]
+            : [],
+        },
+      } : {}),
       summary: edit.summary ?? resource.summary,
       title: edit.title ?? resource.title,
+      verses: nextVerses,
     };
   });
 }
@@ -887,9 +982,12 @@ function storedResourceEdits(): ResourceEditDrafts {
       Object.entries(parsed)
         .filter(([, value]) => value && typeof value === "object" && !Array.isArray(value))
         .map(([resourceId, value]) => {
-          const draft = value as { body?: unknown; summary?: unknown; title?: unknown };
+          const draft = value as { body?: unknown; primaryAnchor?: unknown; summary?: unknown; title?: unknown };
           return [resourceId, {
             ...(typeof draft.body === "string" ? { body: draft.body } : {}),
+            ...(typeof draft.primaryAnchor === "string" || draft.primaryAnchor === null
+              ? { primaryAnchor: draft.primaryAnchor }
+              : {}),
             ...(typeof draft.summary === "string" ? { summary: draft.summary } : {}),
             ...(typeof draft.title === "string" ? { title: draft.title } : {}),
           }];
@@ -976,6 +1074,9 @@ function moduleResources(moduleId: ResourceModuleLayout["id"], resources: StudyR
   if (moduleId === "notes") {
     return resources.filter((resource) => resource.type === "note");
   }
+  if (moduleId === "encyclopedia") {
+    return resources.filter((resource) => resource.type === "link");
+  }
   if (moduleId === "backlinks") {
     return resources.filter((resource) => resource.type === "link");
   }
@@ -986,15 +1087,17 @@ function resourceModuleTitle(moduleId: ResourceModuleLayout["id"]) {
   if (moduleId === "notes") return "笔记";
   if (moduleId === "commentary") return "注释";
   if (moduleId === "media") return "媒体";
-  return "百科和字典";
+  return "百科";
 }
 
 function resourceVisibleTypeLabel(resource: StudyResource) {
   if (resource.type === "note") return "笔记";
   if (resource.type === "commentary") return "注释";
-  if (resource.type === "link") return "百科和字典";
+  if (resource.type === "link") return "百科";
   return "媒体";
 }
+
+const rightDockJumpModuleIds = ["commentary", "media", "encyclopedia", "notes"] as const;
 
 function isTextResource(resource: StudyResource) {
   return ["commentary", "note", "link"].includes(resource.type);
@@ -1007,6 +1110,151 @@ function isBookTitleWrapped(value: string) {
 function unwrapBookTitleLabel(value: string) {
   const trimmedValue = value.trim();
   return isBookTitleWrapped(trimmedValue) ? trimmedValue.slice(1, -1).trim() : trimmedValue;
+}
+
+export type CommentaryLibraryId = "zonghe" | "yandu" | "yanxiu" | "xinxi";
+
+export interface CommentaryLibraryDefinition {
+  id: CommentaryLibraryId;
+  title: string;
+  subtitle: string;
+}
+
+export const commentaryLibraryCatalog: CommentaryLibraryDefinition[] = [
+  { id: "zonghe", title: "综合解读", subtitle: "圣经综合解读" },
+  { id: "yandu", title: "研读本圣经", subtitle: "研读本注释" },
+  { id: "yanxiu", title: "圣经研修本", subtitle: "研修本注释" },
+  { id: "xinxi", title: "圣经信息系列", subtitle: "信息系列注释" },
+];
+
+export const defaultSelectedCommentaryLibraryId: CommentaryLibraryId = "zonghe";
+
+function commentaryLibraryIcon(libraryId: CommentaryLibraryId) {
+  if (libraryId === "zonghe") return LibraryBig;
+  if (libraryId === "yandu") return BookMarked;
+  if (libraryId === "yanxiu") return ScrollText;
+  return NotebookText;
+}
+
+export function commentaryLibraryIdFromLabel(label: string | null | undefined): CommentaryLibraryId | null {
+  const value = label?.trim() ?? "";
+  if (!value) return null;
+  if (/image[-_ ]?text[-_ ]?ocr[-_ ]?conversion|综合解读[·・]图注|(?<![A-Za-z])ocr(?![A-Za-z])/i.test(value)) {
+    return null;
+  }
+  if (value.includes("综合解读")) return "zonghe";
+  if (value.includes("圣经研修本") || value.includes("研修本")) return "yanxiu";
+  if (value.includes("研读本圣经") || value.includes("研读本")) return "yandu";
+  if (value.includes("圣经信息系列") || value.includes("信息系列")) return "xinxi";
+  return null;
+}
+
+/** Map a resource to a left-dock commentary library, if it is library-backed text. */
+export function commentaryLibraryIdForResource(resource: StudyResource): CommentaryLibraryId | null {
+  // Image / video / html media cards are never library-scoped.
+  if (resource.type === "image" || resource.type === "video" || resource.type === "html") {
+    return null;
+  }
+
+  // Only text-like cards can belong to a commentary library.
+  // Notes and plain links without a library source stay unscoped.
+  if (resource.type !== "commentary" && resource.type !== "note" && resource.type !== "link") {
+    return null;
+  }
+
+  const fromSource = commentaryLibraryIdFromLabel(resource.source);
+  if (fromSource) return fromSource;
+
+  const fromMeta = commentaryLibraryIdFromLabel(
+    resource.debugMeta?.sourceLabel
+      ?? resource.debugMeta?.sourceStream
+      ?? resource.debugMeta?.sourcePackage,
+  );
+  if (fromMeta) return fromMeta;
+
+  const display = displayableSourceName(
+    resource.source
+      ?? resource.debugMeta?.sourceLabel
+      ?? resource.debugMeta?.sourceStream,
+    resource.title,
+  );
+  return commentaryLibraryIdFromLabel(display?.label);
+}
+
+/**
+ * Resource-library filter contract (single selected library):
+ * - Text cards that belong to a known commentary library are visible only when they match the selected library.
+ * - Image/media cards always remain visible (they are not library-scoped).
+ * - Unscoped text (user notes, OCR without library label, etc.) stays visible.
+ */
+export function resourceMatchesSelectedCommentaryLibrary(
+  resource: StudyResource,
+  selectedLibraryId: CommentaryLibraryId,
+) {
+  if (resource.type === "image" || resource.type === "video" || resource.type === "html") {
+    return true;
+  }
+
+  const libraryId = commentaryLibraryIdForResource(resource);
+  if (!libraryId) return true;
+  return libraryId === selectedLibraryId;
+}
+
+// Backward-compatible alias used by existing call sites/tests during transition.
+export function resourceMatchesEnabledCommentaryLibraries(
+  resource: StudyResource,
+  enabledLibraryIds: ReadonlySet<CommentaryLibraryId> | CommentaryLibraryId,
+) {
+  if (typeof enabledLibraryIds === "string") {
+    return resourceMatchesSelectedCommentaryLibrary(resource, enabledLibraryIds);
+  }
+  // Prefer the first enabled id if a set is provided (legacy multi-toggle shape).
+  const selected = enabledLibraryIds.values().next().value as CommentaryLibraryId | undefined;
+  if (!selected) return true;
+  return resourceMatchesSelectedCommentaryLibrary(resource, selected);
+}
+
+function isCommentaryLibraryId(value: unknown): value is CommentaryLibraryId {
+  return typeof value === "string" && commentaryLibraryCatalog.some((item) => item.id === value);
+}
+
+function normalizeSelectedCommentaryLibraryId(value: unknown): CommentaryLibraryId {
+  if (isCommentaryLibraryId(value)) return value;
+  if (Array.isArray(value)) {
+    const first = value.find(isCommentaryLibraryId);
+    if (first) return first;
+  }
+  if (value && typeof value === "object" && !Array.isArray(value)) {
+    const record = value as Record<string, unknown>;
+    if (isCommentaryLibraryId(record.selected)) return record.selected;
+    if (Array.isArray(record.enabled)) {
+      const first = record.enabled.find(isCommentaryLibraryId);
+      if (first) return first;
+    }
+  }
+  return defaultSelectedCommentaryLibraryId;
+}
+
+function storedSelectedCommentaryLibraryId(): CommentaryLibraryId {
+  try {
+    const raw = window.localStorage.getItem(commentaryLibrariesStorageKey);
+    if (!raw) return defaultSelectedCommentaryLibraryId;
+    return normalizeSelectedCommentaryLibraryId(JSON.parse(raw));
+  } catch {
+    return defaultSelectedCommentaryLibraryId;
+  }
+}
+
+function persistSelectedCommentaryLibraryId(libraryId: CommentaryLibraryId) {
+  try {
+    window.localStorage.setItem(
+      commentaryLibrariesStorageKey,
+      JSON.stringify({ selected: normalizeSelectedCommentaryLibraryId(libraryId) }),
+    );
+    return true;
+  } catch {
+    return false;
+  }
 }
 
 function displayableSourceName(rawSource: string | undefined, title: string) {
@@ -1022,7 +1270,7 @@ function displayableSourceName(rawSource: string | undefined, title: string) {
       .replace(/\s+/g, " ")
       .trim();
 
-    if (/image-text-ocr-conversion/i.test(cleanedSource)) {
+    if (/image-text-ocr-conversion|综合解读[·・]图注|OCR\s*转文字/i.test(cleanedSource)) {
       return { kind: "plain", label: "OCR 转文字" };
     }
     if (cleanedSource === "用户笔记") {
@@ -1256,10 +1504,12 @@ interface ResourceCardProps {
   origin: ResourceCardOrigin;
   sourceVerseId: ResourceSourceId;
   leadingAction?: ReactNode;
+  headerStartAction?: ReactNode;
+  headerEndAction?: ReactNode;
   onEditResource: ResourceEditHandler;
   onDeleteResource?: ResourceDeleteHandler;
   onNavigateToResource?: ResourceNavigateHandler;
-  onOpenImageResource?: (resource: StudyResource) => void;
+  onOpenImageResource?: (resource: StudyResource, trigger?: HTMLButtonElement) => void;
   onOpenResource: (resourceId: string) => void;
   onUnsyncResource?: (resourceId: string) => void;
   onUpdateWorkbenchResource?: WorkbenchResourceUpdateHandler;
@@ -1307,6 +1557,16 @@ function fitEditorTextarea(textarea: HTMLTextAreaElement, options?: { force?: bo
   }
 }
 
+function resourceScriptureContext(resource: StudyResource, fallbackSourceId: ResourceSourceId) {
+  const candidate = resource.primaryAnchor ?? resource.verses[0] ?? fallbackSourceId;
+  try {
+    const parsed = parseVerseId(String(candidate));
+    return { sourceBookId: parsed.book, sourceChapter: parsed.chapter };
+  } catch {
+    return { sourceBookId: undefined, sourceChapter: undefined };
+  }
+}
+
 function resourceDisplayBody(resource: StudyResource) {
   if (resource.type === "image") {
     return resource.body;
@@ -1344,11 +1604,13 @@ async function copyTextToClipboard(text: string) {
   }
 }
 
-function ResourceCard({
+export function ResourceCard({
   resource,
   origin,
   sourceVerseId,
   leadingAction,
+  headerStartAction,
+  headerEndAction,
   onEditResource,
   onDeleteResource,
   onNavigateToResource,
@@ -1371,9 +1633,12 @@ function ResourceCard({
   const visibleEditableBody = editableResourceBody(resource);
   const hasPinnedActions = isUnsyncing || isUpdateInFlight || unsyncFailedResourceId === resource.id;
   const [editBody, setEditBody] = useState(visibleEditableBody);
+  const [editPrimaryAnchor, setEditPrimaryAnchor] = useState<string>(resource.primaryAnchor ?? resource.verses[0] ?? "");
   const [editTitle, setEditTitle] = useState(resource.title);
   const [isEditing, setIsEditing] = useState(false);
   const [isCopyMenuOpen, setIsCopyMenuOpen] = useState(false);
+  const copyMenuRef = useRef<HTMLDivElement>(null);
+  const copyButtonRef = useRef<HTMLButtonElement>(null);
   const [editSyncError, setEditSyncError] = useState<string | null>(null);
   const bodyTextareaRef = useRef<HTMLTextAreaElement>(null);
   const bodyResizeRef = useRef<{ pointerId: number; startHeight: number; startY: number } | null>(null);
@@ -1400,13 +1665,42 @@ function ResourceCard({
   useEffect(() => {
     if (isEditing) return;
     setEditBody(visibleEditableBody);
+    setEditPrimaryAnchor(resource.primaryAnchor ?? resource.verses[0] ?? "");
     setEditTitle(resource.title);
-  }, [isEditing, visibleEditableBody, resource.title]);
+  }, [isEditing, visibleEditableBody, resource.primaryAnchor, resource.title, resource.verses]);
 
   useEffect(() => {
     setIsEditing(false);
     setIsCopyMenuOpen(false);
   }, [isCollapsed]);
+
+  useEffect(() => {
+    if (!isCopyMenuOpen) return;
+    const menu = copyMenuRef.current;
+    const opener = copyButtonRef.current;
+    menu?.querySelector<HTMLButtonElement>("button")?.focus();
+    function closeOnOutsideClick(event: MouseEvent) {
+      if (!(event.target instanceof Node)) return;
+      if (menu?.contains(event.target) || opener?.contains(event.target)) return;
+      setIsCopyMenuOpen(false);
+    }
+    function closeOnEscape(event: KeyboardEvent) {
+      if (event.key !== "Escape" || !(event.target instanceof Node)) return;
+      if (!menu?.contains(event.target) && !opener?.contains(event.target)) return;
+      event.preventDefault();
+      event.stopPropagation();
+      setIsCopyMenuOpen(false);
+    }
+    document.addEventListener("click", closeOnOutsideClick, true);
+    document.addEventListener("keydown", closeOnEscape, true);
+    return () => {
+      document.removeEventListener("click", closeOnOutsideClick, true);
+      document.removeEventListener("keydown", closeOnEscape, true);
+      if (opener?.isConnected && (menu?.contains(document.activeElement) || document.activeElement === document.body)) {
+        opener.focus();
+      }
+    };
+  }, [isCopyMenuOpen]);
 
   useEffect(() => {
     if (!isEditing) return;
@@ -1421,6 +1715,7 @@ function ResourceCard({
 
   function openEditor() {
     setEditBody(visibleEditableBody);
+    setEditPrimaryAnchor(resource.primaryAnchor ?? resource.verses[0] ?? "");
     setEditTitle(resource.title);
     setIsCopyMenuOpen(false);
     setEditSyncError(null);
@@ -1473,6 +1768,7 @@ function ResourceCard({
 
   function cancelEditor() {
     setEditBody(visibleEditableBody);
+    setEditPrimaryAnchor(resource.primaryAnchor ?? resource.verses[0] ?? "");
     setEditTitle(resource.title);
     setEditSyncError(null);
     setIsEditing(false);
@@ -1482,25 +1778,31 @@ function ResourceCard({
   async function saveEditor() {
     const nextTitle = editTitle.trim() || resource.title;
     const nextBody = editBody.trim();
+    const nextPrimaryAnchor = editPrimaryAnchor.trim() || null;
     if (resource.debugMeta?.sourceWorkbenchCardId && onUpdateWorkbenchResource) {
       setEditSyncError(null);
       try {
+        setEditSyncError(null);
+        onCopyStatus(`正在保存并同步：${nextTitle}`);
         await onUpdateWorkbenchResource(resource.id, {
           body: nextBody,
+          primaryAnchor: nextPrimaryAnchor,
           title: nextTitle,
         });
         setIsEditing(false);
-        onCopyStatus(`已同步卡片修改：${nextTitle}`);
+        onCopyStatus(`已保存并进入工作台「已编辑」：${nextTitle}`);
         return;
       } catch (error) {
-        setEditSyncError("同步失败");
-        onCopyStatus(`卡片修改同步失败：${resource.title}`);
+        const detail = error instanceof Error ? error.message : String(error);
+        setEditSyncError(`同步失败：${detail}`);
+        onCopyStatus(`卡片修改同步失败：${resource.title}（${detail}）`);
         return;
       }
     }
 
     const result = onEditResource(resource.id, {
       body: nextBody,
+      primaryAnchor: nextPrimaryAnchor,
       title: nextTitle,
     });
     setIsEditing(false);
@@ -1532,7 +1834,7 @@ function ResourceCard({
   }
 
   const copyMenu = isCopyMenuOpen ? (
-    <div className="resource-card__copy-menu" role="menu" aria-label={`${resource.title}复制菜单`}>
+    <div ref={copyMenuRef} className="resource-card__copy-menu" role="menu" aria-label={`${resource.title}复制菜单`}>
       {(["标题", "正文", "Markdown"] as const).map((kind) => (
         <button
           className="resource-card__copy-menu-item"
@@ -1553,6 +1855,7 @@ function ResourceCard({
 
   const copyButton = (
     <button
+      ref={copyButtonRef}
       aria-expanded={isCopyMenuOpen}
       aria-haspopup="menu"
       aria-label={`打开${resource.title}复制菜单`}
@@ -1571,10 +1874,10 @@ function ResourceCard({
 
   const unsyncButton = canUnsyncResource ? (
     <button
-      aria-label={`删除并退回未同步：${resource.title}`}
+      aria-label={`删除并退回待复核：${resource.title}`}
       className="resource-card__action-button resource-card__action-button--danger"
       disabled={isResourceActionBusy}
-      title="删除并退回未同步"
+      title="删除并退回待复核"
       type="button"
       onClick={(event) => {
         stopResourceActionEvent(event);
@@ -1583,15 +1886,15 @@ function ResourceCard({
       }}
       onPointerDown={stopResourceActionEvent}
     >
-      <Trash2 size={13} />
+      <Trash2 size={13} strokeWidth={1.9} />
     </button>
   ) : null;
   const deleteButton = canDeleteResource ? (
     <button
-      aria-label={canUnsyncResource ? `删除并退回未同步：${resource.title}` : `删除：${resource.title}`}
+      aria-label={canUnsyncResource ? `删除并退回待复核：${resource.title}` : `删除：${resource.title}`}
       className="resource-card__action-button resource-card__action-button--danger"
       disabled={isResourceActionBusy}
-      title={canUnsyncResource ? "删除并退回未同步" : "删除"}
+      title={canUnsyncResource ? "删除并退回待复核" : "删除"}
       type="button"
       onClick={(event) => {
         stopResourceActionEvent(event);
@@ -1600,7 +1903,7 @@ function ResourceCard({
       }}
       onPointerDown={stopResourceActionEvent}
     >
-      <Trash2 size={13} />
+      <Trash2 size={13} strokeWidth={1.9} />
     </button>
   ) : null;
 
@@ -1626,29 +1929,36 @@ function ResourceCard({
       }}
     >
       <header className="resource-card__header">
-        {(!centerVariant || currentVerseVariant) ? <span className="drag-handle" aria-hidden="true" /> : null}
-        {canNavigateToResource || leadingAction ? (
-          <span className="resource-card__leading-action">
-            {canNavigateToResource && navigationTargetLabel ? (
-              <button
-                aria-label={`跳转到 ${navigationTargetLabel}：${resource.title}`}
-                className="resource-card__verse-nav"
-                title={`跳转到 ${navigationTargetLabel}`}
-                type="button"
-                onClick={(event) => {
-                  stopResourceActionEvent(event);
-                  if (navigationTarget) {
-                    onNavigateToResource?.(resource, navigationTarget);
-                  }
-                }}
-                onPointerDown={stopResourceActionEvent}
-              >
-                <Navigation2 size={12} />
-              </button>
-            ) : null}
-            {leadingAction}
-          </span>
-        ) : null}
+        <div className="resource-card__header-start">
+          {headerStartAction ? (
+            <span className="resource-card__control-cluster resource-card__control-cluster--start">
+              {headerStartAction}
+            </span>
+          ) : null}
+          {(!centerVariant || currentVerseVariant) ? <span className="drag-handle" aria-hidden="true"><GripVertical size={14} strokeWidth={1.9} /></span> : null}
+          {canNavigateToResource || leadingAction ? (
+            <span className="resource-card__leading-action">
+              {canNavigateToResource && navigationTargetLabel ? (
+                <button
+                  aria-label={`跳转到 ${navigationTargetLabel}：${resource.title}`}
+                  className="resource-card__verse-nav"
+                  title={`跳转到 ${navigationTargetLabel}`}
+                  type="button"
+                  onClick={(event) => {
+                    stopResourceActionEvent(event);
+                    if (navigationTarget) {
+                      onNavigateToResource?.(resource, navigationTarget);
+                    }
+                  }}
+                  onPointerDown={stopResourceActionEvent}
+                >
+                  <Navigation2 size={13} strokeWidth={1.9} />
+                </button>
+              ) : null}
+              {leadingAction}
+            </span>
+          ) : null}
+        </div>
         <div
           className="resource-card__title resource-card__selectable-title"
           data-selection-mode="text"
@@ -1657,7 +1967,7 @@ function ResourceCard({
           onPointerDown={stopResourceTextSelectionEvent}
         >
           <span className="resource-card__type resource-card__source-pill">{resourceHeaderLabel(resource)}</span>
-          <h3>{resource.title}</h3>
+          <h3 title={resource.title}>{resource.title}</h3>
         </div>
         <div
           className="resource-card__actions"
@@ -1678,9 +1988,10 @@ function ResourceCard({
             }}
             onPointerDown={stopResourceActionEvent}
           >
-            <Pencil size={13} />
+            <Pencil size={13} strokeWidth={1.9} />
           </button>
           {deleteButton ?? unsyncButton}
+          {headerEndAction}
           {isUnsyncing ? (
             <span className="resource-card__action-status" role="status">删除中</span>
           ) : null}
@@ -1711,6 +2022,27 @@ function ResourceCard({
               value={editTitle}
               onChange={(event) => setEditTitle(event.currentTarget.value)}
             />
+          </label>
+          <label className="resource-card__editor-field">
+            <span>经文定位</span>
+            <input
+              aria-label="经文定位"
+              placeholder="如 Job.1.22 或 Gen.1.1"
+              value={editPrimaryAnchor}
+              onChange={(event) => setEditPrimaryAnchor(event.currentTarget.value)}
+            />
+            <span className="resource-card__editor-hint">
+              {(() => {
+                const anchor = editPrimaryAnchor.trim();
+                if (!anchor) return "填写主锚点后，卡片会按该经文归位。";
+                try {
+                  const verse = parseVerseId(anchor as ResourceSourceId);
+                  return `当前定位：${bookTitle(verse.book)} ${verse.chapter}:${verse.verse}（${anchor}）`;
+                } catch {
+                  return `当前定位：${anchor}`;
+                }
+              })()}
+            </span>
           </label>
           <label className="resource-card__editor-field">
             <span>正文</span>
@@ -1789,13 +2121,14 @@ function ResourceCard({
                     type="button"
                     onClick={(event) => {
                       stopResourceActionEvent(event);
-                      onOpenImageResource?.(resource);
+                      onOpenImageResource?.(resource, event.currentTarget);
                     }}
                     onPointerDown={stopResourceActionEvent}
                   >
                     <img
                       src={resource.assetPath}
                       alt={imageResourceAlt(resource)}
+                      data-paper-blend={shouldBlendImageWithPaper(resource) ? "true" : undefined}
                       loading="eager"
                       onError={() => {
                         console.warn("[workbench] image resource failed to load", {
@@ -1811,6 +2144,7 @@ function ResourceCard({
                   <img
                     src={resource.assetPath}
                     alt={imageResourceAlt(resource)}
+                    data-paper-blend={shouldBlendImageWithPaper(resource) ? "true" : undefined}
                     loading="eager"
                     onError={() => {
                       console.warn("[workbench] image resource failed to load", {
@@ -1823,7 +2157,6 @@ function ResourceCard({
                   />
                 )}
                 <figcaption>
-                  {resource.source ? <span className="image-resource-preview__source">{resource.source}</span> : null}
                   {imageResourceCaption(resource) ? <span>{imageResourceCaption(resource)}</span> : null}
                 </figcaption>
               </figure>
@@ -1848,7 +2181,10 @@ function ResourceCard({
               onDoubleClick={stopResourceTextSelectionEvent}
               onPointerDown={stopResourceTextSelectionEvent}
             >
-              <ReactMarkdown remarkPlugins={[remarkGfm]}>{resourceDisplayBody(resource)}</ReactMarkdown>
+              <ScriptureLinkedText
+                text={resourceDisplayBody(resource)}
+                {...resourceScriptureContext(resource, sourceVerseId)}
+              />
             </div>
           )}
           {shouldShowCopyInBody ? (
@@ -1886,7 +2222,7 @@ interface CenterCardBrowserProps {
   selectedSourceId: ResourceSourceId;
   onEditResource: ResourceEditHandler;
   onNavigateToResource: ResourceNavigateHandler;
-  onOpenImageResource?: (resource: StudyResource) => void;
+  onOpenImageResource?: (resource: StudyResource, trigger?: HTMLButtonElement) => void;
   onOpenResource: (resourceId: string) => void;
   onUnsyncResource?: (resourceId: string) => void;
   onUpdateWorkbenchResource?: WorkbenchResourceUpdateHandler;
@@ -1906,7 +2242,7 @@ interface SortableCenterCardItemProps {
   selectedSourceId: ResourceSourceId;
   onEditResource: ResourceEditHandler;
   onNavigateToResource: ResourceNavigateHandler;
-  onOpenImageResource?: (resource: StudyResource) => void;
+  onOpenImageResource?: (resource: StudyResource, trigger?: HTMLButtonElement) => void;
   onOpenResource: (resourceId: string) => void;
   onUnsyncResource?: (resourceId: string) => void;
   onUpdateWorkbenchResource?: WorkbenchResourceUpdateHandler;
@@ -1965,6 +2301,21 @@ function SortableCenterCardItem({
         centerVariant
         draggable={false}
         isCollapsed={isCollapsed}
+        headerStartAction={(
+          <button
+            ref={setActivatorNodeRef}
+            {...attributes}
+            {...listeners}
+            aria-label={`拖动排序 ${resource.title}`}
+            className="center-card-sort-handle"
+            title={`拖动排序 ${resource.title}`}
+            type="button"
+            onClick={stopResourceActionEvent}
+            onDoubleClick={stopResourceActionEvent}
+          >
+            <GripVertical size={14} strokeWidth={1.9} />
+          </button>
+        )}
         leadingAction={(
           <button
             aria-expanded={!isCollapsed}
@@ -1982,7 +2333,26 @@ function SortableCenterCardItem({
               event.stopPropagation();
             }}
           >
-            <ToggleIcon size={13} />
+            <ToggleIcon size={13} strokeWidth={1.9} />
+          </button>
+        )}
+        headerEndAction={(
+          <button
+            aria-label={`从左侧移除 ${resource.title}`}
+            className="center-card-remove"
+            title={`从左侧移除 ${resource.title}`}
+            type="button"
+            onClick={(event) => {
+              event.preventDefault();
+              event.stopPropagation();
+              onRemoveResource(resource.id);
+            }}
+            onPointerDown={(event) => {
+              event.preventDefault();
+              event.stopPropagation();
+            }}
+          >
+            <X size={13} strokeWidth={1.9} />
           </button>
         )}
         onEditResource={onEditResource}
@@ -1998,34 +2368,6 @@ function SortableCenterCardItem({
         isUpdateInFlight={updateInFlightResourceId === resource.id}
         unsyncFailedResourceId={unsyncFailedResourceId}
       />
-      <button
-        ref={setActivatorNodeRef}
-        {...attributes}
-        {...listeners}
-        aria-label={`拖动排序 ${resource.title}`}
-        className="center-card-sort-handle"
-        title={`拖动排序 ${resource.title}`}
-        type="button"
-      >
-        <span className="drag-handle" aria-hidden="true" />
-      </button>
-      <button
-        aria-label={`从左侧移除 ${resource.title}`}
-        className="center-card-remove"
-        title={`从左侧移除 ${resource.title}`}
-        type="button"
-        onClick={(event) => {
-          event.preventDefault();
-          event.stopPropagation();
-          onRemoveResource(resource.id);
-        }}
-        onPointerDown={(event) => {
-          event.preventDefault();
-          event.stopPropagation();
-        }}
-      >
-        <X size={13} />
-      </button>
     </div>
   );
 }
@@ -2095,7 +2437,7 @@ function CenterCardBrowser({
               ))}
             </SortableContext>
           ) : (
-            <p className="resource-dock__empty">还没有整理卡片。双击右侧卡片，或拖入左侧。</p>
+            <p className="resource-dock__empty">还没有整理卡片。双击右侧卡片，或拖入此处。</p>
           )}
         </div>
       </div>
@@ -2147,7 +2489,7 @@ interface ResourceModuleProps {
   sourceIdForResource: (resource: StudyResource) => ResourceSourceId;
   onEditResource: ResourceEditHandler;
   onNavigateToResource: ResourceNavigateHandler;
-  onOpenImageResource?: (resource: StudyResource) => void;
+  onOpenImageResource?: (resource: StudyResource, trigger?: HTMLButtonElement) => void;
   onOpenResource: (resourceId: string) => void;
   onUnsyncResource?: (resourceId: string) => void;
   onUpdateWorkbenchResource?: WorkbenchResourceUpdateHandler;
@@ -2156,6 +2498,7 @@ interface ResourceModuleProps {
   unsyncFailedResourceId?: string | null;
   hasAnyUnsyncInFlight?: boolean;
   updateInFlightResourceId?: string | null;
+  isCardSearchActive?: boolean;
 }
 
 function ResourceModule({
@@ -2169,49 +2512,63 @@ function ResourceModule({
   onUnsyncResource,
   onUpdateWorkbenchResource,
   onCopyStatus,
+  hideHeader = false,
+  isCollapsed = false,
+  onToggleCollapsed,
+  sectionRef,
   unsyncingResourceId = null,
   unsyncFailedResourceId = null,
   hasAnyUnsyncInFlight = false,
   updateInFlightResourceId = null,
-}: ResourceModuleProps) {
-  const [isCollapsed, setIsCollapsed] = useState(false);
+  isCardSearchActive = false,
+}: ResourceModuleProps & {
+  hideHeader?: boolean;
+  isCollapsed?: boolean;
+  onToggleCollapsed?: () => void;
+  sectionRef?: (element: HTMLElement | null) => void;
+}) {
   const ToggleIcon = isCollapsed ? ChevronRight : ChevronDown;
+  const showHeader = !hideHeader;
 
   function toggleModuleCollapse() {
-    const nextCollapsed = !isCollapsed;
-    setIsCollapsed(nextCollapsed);
+    onToggleCollapsed?.();
     logWorkbenchInfo("[workbench] right resource module collapsed state changed", {
       moduleId: module.id,
       title: module.title,
-      collapsed: nextCollapsed,
+      collapsed: !isCollapsed,
     });
   }
 
   return (
     <section
+      ref={sectionRef}
       aria-expanded={!isCollapsed}
       aria-label={module.title}
-      className={`resource-module resource-module--dock ${isCollapsed ? "is-collapsed" : ""}`}
+      className={`resource-module resource-module--dock ${isCollapsed ? "is-collapsed" : ""} ${hideHeader ? "resource-module--jump-only" : ""}`}
+      data-module-id={module.id}
       role="region"
     >
-      <header className="resource-module__header">
-        <div className="resource-module__title">
-          <span className="resource-module__title-text">{module.title}</span>
-        </div>
-        <button
-          aria-expanded={!isCollapsed}
-          aria-label={`${isCollapsed ? "展开" : "折叠"} ${module.title}`}
-          className="resource-module__collapse"
-          title={`${isCollapsed ? "展开" : "折叠"} ${module.title}`}
-          type="button"
-          onClick={toggleModuleCollapse}
-          onPointerDown={(event) => {
-            event.stopPropagation();
-          }}
-        >
-          <ToggleIcon size={13} />
-        </button>
-      </header>
+      {showHeader ? (
+        <header className="resource-module__header">
+          <div className="resource-module__title">
+            <span className="resource-module__title-text">{module.title}</span>
+            <span className="resource-module__count">{resources.length}</span>
+          </div>
+          <button
+            aria-expanded={!isCollapsed}
+            aria-label={`${isCollapsed ? "展开" : "折叠"} ${module.title}`}
+            className="resource-module__collapse"
+            title={`${isCollapsed ? "展开" : "折叠"} ${module.title}`}
+            type="button"
+            onClick={toggleModuleCollapse}
+            onPointerDown={(event) => {
+              event.stopPropagation();
+            }}
+          >
+            <ToggleIcon size={13} strokeWidth={1.9} />
+          </button>
+        </header>
+      ) : null}
       {!isCollapsed ? (
         resources.length > 0 ? (
           resources.map((resource) => (
@@ -2234,7 +2591,9 @@ function ResourceModule({
             />
           ))
         ) : (
-          <p className="resource-dock__empty">当前经节还没有资源。</p>
+          <p className="resource-dock__empty">
+            {isCardSearchActive ? "没有匹配的卡片。" : "当前经节还没有资源。"}
+          </p>
         )
       ) : null}
     </section>
@@ -2248,7 +2607,7 @@ interface CurrentVerseCardListProps {
   onEditResource: ResourceEditHandler;
   onDeleteResource: ResourceDeleteHandler;
   onNavigateToResource: ResourceNavigateHandler;
-  onOpenImageResource?: (resource: StudyResource) => void;
+  onOpenImageResource?: (resource: StudyResource, trigger?: HTMLButtonElement) => void;
   onOpenResource: (resourceId: string) => void;
   onUnsyncResource?: (resourceId: string) => void;
   onUpdateWorkbenchResource?: WorkbenchResourceUpdateHandler;
@@ -2341,7 +2700,7 @@ function CurrentVerseCardList({
                         event.stopPropagation();
                       }}
                     >
-                      <ToggleIcon size={13} />
+                      <ToggleIcon size={13} strokeWidth={1.9} />
                     </button>
                   )}
                   onEditResource={onEditResource}
@@ -2369,17 +2728,169 @@ function CurrentVerseCardList({
   );
 }
 
+const bookIntroLaneLabels = {
+  context: "书卷背景",
+  message: "核心信息",
+  structure: "阅读结构",
+} as const;
+
+interface BookIntroStableGridProps {
+  view: BookIntroViewModel;
+  sourceIdForResource: (resource: StudyResource) => ResourceSourceId;
+  onEditResource: ResourceEditHandler;
+  onDeleteResource: ResourceDeleteHandler;
+  onNavigateToResource: ResourceNavigateHandler;
+  onOpenImageResource?: (resource: StudyResource, trigger?: HTMLButtonElement) => void;
+  onOpenResource: (resourceId: string) => void;
+  onUnsyncResource?: (resourceId: string) => void;
+  onUpdateWorkbenchResource?: WorkbenchResourceUpdateHandler;
+  onCopyStatus: (message: string) => void;
+  unsyncingResourceId?: string | null;
+  unsyncFailedResourceId?: string | null;
+  hasAnyUnsyncInFlight?: boolean;
+  updateInFlightResourceId?: string | null;
+}
+
+function BookIntroStableGrid({
+  view,
+  sourceIdForResource,
+  onEditResource,
+  onDeleteResource,
+  onNavigateToResource,
+  onOpenImageResource,
+  onOpenResource,
+  onUnsyncResource,
+  onUpdateWorkbenchResource,
+  onCopyStatus,
+  unsyncingResourceId = null,
+  unsyncFailedResourceId = null,
+  hasAnyUnsyncInFlight = false,
+  updateInFlightResourceId = null,
+}: BookIntroStableGridProps) {
+  const [collapsedResourceIds, setCollapsedResourceIds] = useState<Set<string>>(() => new Set());
+
+  function toggleResource(resource: StudyResource) {
+    setCollapsedResourceIds((currentIds) => {
+      const nextIds = new Set(currentIds);
+      const nextCollapsed = !nextIds.has(resource.id);
+      if (nextCollapsed) {
+        nextIds.add(resource.id);
+      } else {
+        nextIds.delete(resource.id);
+      }
+      logWorkbenchInfo("[workbench] book intro stable grid card collapsed state changed", {
+        bookId: view.bookId,
+        resourceId: resource.id,
+        title: resource.title,
+        collapsed: nextCollapsed,
+      });
+      return nextIds;
+    });
+  }
+
+  return (
+    <section className="book-intro-canvas" role="region" aria-label={`${view.chineseTitle}书卷序`}>
+      <div className="book-intro-stable-grid">
+        {view.lanes.map((lane) => (
+          <section
+            aria-label={bookIntroLaneLabels[lane.id]}
+            className={`book-intro-lane book-intro-lane--${lane.id}`}
+            key={lane.id}
+            role="region"
+          >
+            <header className="book-intro-lane__header">
+              <span>{lane.eyebrow}</span>
+              <h2>{bookIntroLaneLabels[lane.id]}</h2>
+              <p>{lane.description}</p>
+            </header>
+            <div className="book-intro-lane__cards">
+              {lane.items.length > 0 ? (
+                lane.items.map((item) => {
+                  const { resource } = item;
+                  const isCollapsed = collapsedResourceIds.has(resource.id);
+                  const ToggleIcon = isCollapsed ? ChevronRight : ChevronDown;
+
+                  return (
+                    <div
+                      aria-expanded={!isCollapsed}
+                      className={`book-intro-lane__item ${isCollapsed ? "is-collapsed" : ""}`}
+                      key={resource.id}
+                    >
+                      {item.sharedFromBookId ? (
+                        <p className="book-intro-lane__shared-label">
+                          上下卷共用导论 · {bookTitle(item.sharedFromBookId)}
+                        </p>
+                      ) : null}
+                      <ResourceCard
+                        origin="center"
+                        resource={resource}
+                        savedVariant
+                        currentVerseVariant
+                        centerVariant
+                        draggable={false}
+                        sourceVerseId={sourceIdForResource(resource)}
+                        isCollapsed={isCollapsed}
+                        leadingAction={(
+                          <button
+                            aria-expanded={!isCollapsed}
+                            aria-label={`${isCollapsed ? "展开" : "折叠"} ${resource.title}`}
+                            className="saved-card-collapse"
+                            title={`${isCollapsed ? "展开" : "折叠"} ${resource.title}`}
+                            type="button"
+                            onClick={(event) => {
+                              event.preventDefault();
+                              event.stopPropagation();
+                              toggleResource(resource);
+                            }}
+                            onPointerDown={(event) => {
+                              event.preventDefault();
+                              event.stopPropagation();
+                            }}
+                          >
+                            <ToggleIcon size={13} strokeWidth={1.9} />
+                          </button>
+                        )}
+                        onEditResource={onEditResource}
+                        onDeleteResource={onDeleteResource}
+                        onNavigateToResource={onNavigateToResource}
+                        onOpenImageResource={onOpenImageResource}
+                        onOpenResource={onOpenResource}
+                        onUnsyncResource={onUnsyncResource}
+                        onUpdateWorkbenchResource={onUpdateWorkbenchResource}
+                        onCopyStatus={onCopyStatus}
+                        showDeleteAction
+                        isUnsyncing={unsyncingResourceId === resource.id}
+                        isUnsyncDisabled={hasAnyUnsyncInFlight && unsyncingResourceId !== resource.id}
+                        isUpdateInFlight={updateInFlightResourceId === resource.id}
+                        unsyncFailedResourceId={unsyncFailedResourceId}
+                      />
+                    </div>
+                  );
+                })
+              ) : (
+                <p className="resource-dock__empty">这一栏暂无导论卡片。</p>
+              )}
+            </div>
+          </section>
+        ))}
+      </div>
+    </section>
+  );
+}
+
 interface ResourceDockProps {
   side: DockSide;
   layout: WorkbenchLayout;
   selectedSourceId: ResourceSourceId;
   rightResources: StudyResource[];
   organizedResources: StudyResource[];
+  selectedCommentaryLibraryId: CommentaryLibraryId;
   sourceIdForResource: (resource: StudyResource) => ResourceSourceId;
   onToggleDock: (side: DockSide) => void;
+  onSelectCommentaryLibrary: (libraryId: CommentaryLibraryId) => void;
   onEditResource: ResourceEditHandler;
   onNavigateToResource: ResourceNavigateHandler;
-  onOpenImageResource?: (resource: StudyResource) => void;
+  onOpenImageResource?: (resource: StudyResource, trigger?: HTMLButtonElement) => void;
   onOpenResource: (resourceId: string) => void;
   onUnsyncResource?: (resourceId: string) => void;
   onUpdateWorkbenchResource?: WorkbenchResourceUpdateHandler;
@@ -2387,10 +2898,15 @@ interface ResourceDockProps {
   onToggleOrganizedResource: (resourceId: string) => void;
   collapsedOrganizedResourceIds: Set<string>;
   onCopyStatus: (message: string) => void;
+  isWarmPaperTheme?: boolean;
+  isSerifReadingFont?: boolean;
+  onTogglePaperTheme?: () => void;
+  onToggleReadingFont?: () => void;
   unsyncingResourceId?: string | null;
   unsyncFailedResourceId?: string | null;
   hasAnyUnsyncInFlight?: boolean;
   updateInFlightResourceId?: string | null;
+  isCardSearchActive?: boolean;
 }
 
 function ResourceDock({
@@ -2399,8 +2915,10 @@ function ResourceDock({
   selectedSourceId,
   rightResources,
   organizedResources,
+  selectedCommentaryLibraryId,
   sourceIdForResource,
   onToggleDock,
+  onSelectCommentaryLibrary,
   onEditResource,
   onNavigateToResource,
   onOpenImageResource,
@@ -2411,10 +2929,15 @@ function ResourceDock({
   onToggleOrganizedResource,
   collapsedOrganizedResourceIds,
   onCopyStatus,
+  isWarmPaperTheme = true,
+  isSerifReadingFont = true,
+  onTogglePaperTheme,
+  onToggleReadingFont,
   unsyncingResourceId = null,
   unsyncFailedResourceId = null,
   hasAnyUnsyncInFlight = false,
   updateInFlightResourceId = null,
+  isCardSearchActive = false,
 }: ResourceDockProps) {
   const modules = layout.modules.filter((module) => module.side === side && module.visible);
   const collapsed = side === "left" ? layout.leftCollapsed : layout.rightCollapsed;
@@ -2423,6 +2946,118 @@ function ResourceDock({
     id: `${side}-dock`,
   });
   const CollapseIcon = collapseIcon;
+  const [collapsedModuleIds, setCollapsedModuleIds] = useState<Set<string>>(() => new Set());
+  const [activeJumpModuleId, setActiveJumpModuleId] = useState<string | null>(null);
+  const [isSettingsOpen, setIsSettingsOpen] = useState(false);
+  const moduleSectionRefs = useRef(new Map<string, HTMLElement>());
+  const dockPanelRef = useRef<HTMLDivElement>(null);
+  const settingsRef = useRef<HTMLDivElement>(null);
+  const settingsButtonRef = useRef<HTMLButtonElement>(null);
+
+  const jumpTargets = useMemo(() => {
+    if (side !== "right") return [];
+    return rightDockJumpModuleIds.map((moduleId) => {
+      const module = modules.find((item) => item.id === moduleId) ?? {
+        id: moduleId,
+        title: resourceModuleTitle(moduleId),
+        side: "right" as const,
+        visible: true,
+      };
+      return {
+        module,
+        count: moduleResources(moduleId, rightResources).length,
+      };
+    });
+  }, [modules, rightResources, side]);
+
+  function setModuleSectionRef(moduleId: string, element: HTMLElement | null) {
+    if (element) {
+      moduleSectionRefs.current.set(moduleId, element);
+      return;
+    }
+    moduleSectionRefs.current.delete(moduleId);
+  }
+
+  function toggleModuleCollapsed(moduleId: string) {
+    setCollapsedModuleIds((current) => {
+      const next = new Set(current);
+      if (next.has(moduleId)) next.delete(moduleId);
+      else next.add(moduleId);
+      return next;
+    });
+  }
+
+  function jumpToModule(moduleId: string) {
+    setCollapsedModuleIds((current) => {
+      if (!current.has(moduleId)) return current;
+      const next = new Set(current);
+      next.delete(moduleId);
+      return next;
+    });
+    setActiveJumpModuleId(moduleId);
+    window.requestAnimationFrame(() => {
+      const section = moduleSectionRefs.current.get(moduleId);
+      section?.scrollIntoView({ behavior: "smooth", block: "start" });
+    });
+  }
+
+  useEffect(() => {
+    if (side !== "right") return;
+    const panel = dockPanelRef.current;
+    if (!panel) return;
+
+    function updateActiveJumpTarget() {
+      const panelTop = panel!.getBoundingClientRect().top + 48;
+      let nextActive: string | null = null;
+      for (const moduleId of rightDockJumpModuleIds) {
+        const section = moduleSectionRefs.current.get(moduleId);
+        if (!section) continue;
+        const rect = section.getBoundingClientRect();
+        if (rect.top <= panelTop + 24 && rect.bottom > panelTop + 24) {
+          nextActive = moduleId;
+          break;
+        }
+        if (rect.top > panelTop + 24 && nextActive === null) {
+          nextActive = moduleId;
+          break;
+        }
+      }
+      setActiveJumpModuleId((current) => (current === nextActive ? current : nextActive));
+    }
+
+    updateActiveJumpTarget();
+    panel.addEventListener("scroll", updateActiveJumpTarget, { passive: true });
+    return () => panel.removeEventListener("scroll", updateActiveJumpTarget);
+  }, [side, modules, rightResources]);
+
+  useEffect(() => {
+    if (side !== "left" || !isSettingsOpen) return;
+
+    function closeSettingsOnOutsidePointerDown(event: PointerEvent) {
+      const target = event.target;
+      if (!(target instanceof Node)) return;
+      if (settingsRef.current?.contains(target)) return;
+      setIsSettingsOpen(false);
+    }
+
+    function closeSettingsOnEscape(event: KeyboardEvent) {
+      if (event.key !== "Escape") return;
+      setIsSettingsOpen(false);
+      settingsButtonRef.current?.focus();
+    }
+
+    document.addEventListener("pointerdown", closeSettingsOnOutsidePointerDown, true);
+    document.addEventListener("keydown", closeSettingsOnEscape);
+    return () => {
+      document.removeEventListener("pointerdown", closeSettingsOnOutsidePointerDown, true);
+      document.removeEventListener("keydown", closeSettingsOnEscape);
+    };
+  }, [isSettingsOpen, side]);
+
+  useEffect(() => {
+    if (side === "left" && !collapsed) return;
+    setIsSettingsOpen(false);
+  }, [collapsed, side]);
 
   return (
     <aside
@@ -2431,58 +3066,165 @@ function ResourceDock({
       className={`resource-dock resource-dock--${side} ${collapsed ? "is-collapsed" : ""} ${isOver ? "is-drop-target" : ""}`}
       role="complementary"
     >
-      <div className="resource-dock__panel">
-        <header className="resource-dock__header">
-          {side === "left" ? (
-            <div className="resource-dock__title resource-dock__title--book">
-              <span>自行整理卡片</span>
-              <strong>{sourceIdChapterLabel(selectedSourceId)}</strong>
+      <div ref={dockPanelRef} className="resource-dock__panel">
+        {side === "right" && !collapsed ? (
+          <nav className="resource-dock__jump-bar" aria-label="资料类别快捷跳转">
+            <div className="resource-dock__jump-bar-actions">
+              {jumpTargets.map(({ module, count }) => (
+                <button
+                  key={module.id}
+                  aria-current={activeJumpModuleId === module.id ? "true" : undefined}
+                  aria-label={`跳转到${module.title}${count ? `，${count} 张` : ""}`}
+                  className={`resource-dock__jump-chip ${activeJumpModuleId === module.id ? "is-active" : ""} ${count === 0 ? "is-empty" : ""}`}
+                  title={`${module.title}（${count}）`}
+                  type="button"
+                  onClick={() => jumpToModule(module.id)}
+                >
+                  <span>{module.title}</span>
+                  <em>{count}</em>
+                </button>
+              ))}
             </div>
-          ) : (
-            <div className="resource-dock__title">
-              <span>{isBookIntroSourceId(selectedSourceId) ? "当前序言卡片" : "当前章节卡片"}</span>
-              <strong>{sourceIdChapterLabel(selectedSourceId)}</strong>
-            </div>
-          )}
-          {!collapsed ? (
             <button
-              aria-label={`收起${side === "left" ? "左侧" : "右侧"}资料栏`}
-              className="dock-toggle"
-              title={`收起${side === "left" ? "左侧" : "右侧"}资料栏`}
+              aria-label="收起右侧资料栏"
+              className="dock-toggle resource-dock__jump-collapse"
+              title="收起右侧资料栏"
               type="button"
               onClick={() => onToggleDock(side)}
             >
               <CollapseIcon size={14} />
             </button>
-          ) : null}
-        </header>
+          </nav>
+        ) : null}
         {side === "left" ? (
-          <CenterCardBrowser
-            activeResourceId={layout.activeResourceId}
-            collapsedCardIds={collapsedOrganizedResourceIds}
-            onEditResource={onEditResource}
-            onNavigateToResource={onNavigateToResource}
-            onOpenImageResource={onOpenImageResource}
-            onOpenResource={onOpenResource}
-            onUnsyncResource={onUnsyncResource}
-            onUpdateWorkbenchResource={onUpdateWorkbenchResource}
-            onRemoveResource={onRemoveOrganizedResource}
-            onToggleResource={onToggleOrganizedResource}
-            onCopyStatus={onCopyStatus}
-            resources={organizedResources}
-            selectedSourceId={selectedSourceId}
-            unsyncingResourceId={unsyncingResourceId}
-            unsyncFailedResourceId={unsyncFailedResourceId}
-            hasAnyUnsyncInFlight={hasAnyUnsyncInFlight}
-            updateInFlightResourceId={updateInFlightResourceId}
-          />
+          <>
+            <header className="resource-dock__header resource-dock__header--library">
+              <div className="resource-dock__title resource-dock__title--library">
+                <span>资源库</span>
+              </div>
+              <div className="resource-dock__header-actions">
+                {!collapsed ? (
+                  <button
+                    aria-label="收起左侧资料栏"
+                    className="dock-toggle"
+                    title="收起左侧资料栏"
+                    type="button"
+                    onClick={() => onToggleDock(side)}
+                  >
+                    <CollapseIcon size={14} />
+                  </button>
+                ) : null}
+              </div>
+            </header>
+            <section className="resource-library" aria-label="注释资源库">
+              <div className="resource-library__list">
+                {commentaryLibraryCatalog.map((library) => {
+                  const selected = selectedCommentaryLibraryId === library.id;
+                  const Icon = commentaryLibraryIcon(library.id);
+                  return (
+                    <button
+                      key={library.id}
+                      aria-label={`${library.title}，${library.subtitle}`}
+                      aria-pressed={selected}
+                      className={`resource-library__item ${selected ? "is-active" : ""}`}
+                      title={selected ? `当前资源库：${library.title}` : `选择 ${library.title}`}
+                      type="button"
+                      onClick={() => onSelectCommentaryLibrary(library.id)}
+                    >
+                      <span className="resource-library__icon" aria-hidden="true">
+                        <Icon size={16} />
+                      </span>
+                      <span className="resource-library__copy">
+                        <strong>{library.title}</strong>
+                        <em>{library.subtitle}</em>
+                      </span>
+                    </button>
+                  );
+                })}
+              </div>
+            </section>
+            <div className="resource-dock__section-divider" aria-hidden="true" />
+            <header className="resource-dock__subheader">
+              <div className="resource-dock__title resource-dock__title--book">
+                <span>整理卡片</span>
+                <strong>{sourceIdChapterLabel(selectedSourceId)}</strong>
+              </div>
+            </header>
+            <CenterCardBrowser
+              activeResourceId={layout.activeResourceId}
+              collapsedCardIds={collapsedOrganizedResourceIds}
+              onEditResource={onEditResource}
+              onNavigateToResource={onNavigateToResource}
+              onOpenImageResource={onOpenImageResource}
+              onOpenResource={onOpenResource}
+              onUnsyncResource={onUnsyncResource}
+              onUpdateWorkbenchResource={onUpdateWorkbenchResource}
+              onRemoveResource={onRemoveOrganizedResource}
+              onToggleResource={onToggleOrganizedResource}
+              onCopyStatus={onCopyStatus}
+              resources={organizedResources}
+              selectedSourceId={selectedSourceId}
+              unsyncingResourceId={unsyncingResourceId}
+              unsyncFailedResourceId={unsyncFailedResourceId}
+              hasAnyUnsyncInFlight={hasAnyUnsyncInFlight}
+              updateInFlightResourceId={updateInFlightResourceId}
+            />
+            <div className="resource-dock__settings" ref={settingsRef}>
+              {isSettingsOpen ? (
+                <div className="resource-dock__settings-panel" role="dialog" aria-label="阅读台设置">
+                  <div className="resource-dock__settings-title">阅读设置</div>
+                  <div className="resource-dock__settings-actions" role="group" aria-label="纸张与书体">
+                    <button
+                      aria-label={isWarmPaperTheme ? "关闭纸张模式" : "开启纸张模式"}
+                      aria-pressed={isWarmPaperTheme}
+                      className="toolbar-button toolbar-button--paper"
+                      title={isWarmPaperTheme ? "恢复默认主题" : "使用现代暖纸主题"}
+                      type="button"
+                      onClick={() => onTogglePaperTheme?.()}
+                    >
+                      <SunMedium size={16} />
+                      <span className="toolbar-button__label">纸张模式</span>
+                    </button>
+                    <button
+                      aria-label={isSerifReadingFont ? "切换为系统字体" : "切换为书体阅读字体"}
+                      aria-pressed={isSerifReadingFont}
+                      className="toolbar-button toolbar-button--font"
+                      title={isSerifReadingFont ? "当前：宋体书体，点击切回系统字体" : "当前：系统字体，点击使用宋体书体"}
+                      type="button"
+                      onClick={() => onToggleReadingFont?.()}
+                    >
+                      <Type size={16} />
+                      <span className="toolbar-button__label">{isSerifReadingFont ? "书体" : "系统字体"}</span>
+                    </button>
+                  </div>
+                </div>
+              ) : null}
+              <button
+                aria-expanded={isSettingsOpen}
+                aria-haspopup="dialog"
+                aria-label={isSettingsOpen ? "关闭设置" : "打开设置"}
+                ref={settingsButtonRef}
+                className={`resource-dock__settings-button ${isSettingsOpen ? "is-active" : ""}`}
+                title="阅读设置"
+                type="button"
+                onClick={() => setIsSettingsOpen((current) => !current)}
+              >
+                <Settings size={15} />
+                <span>设置</span>
+              </button>
+            </div>
+          </>
         ) : (
           modules.map((module) => {
             const resourcesForModule = moduleResources(module.id, rightResources);
             return (
               <ResourceModule
                 key={module.id}
-                module={module}
+                module={{ ...module, title: resourceModuleTitle(module.id) }}
+                hideHeader
+                isCollapsed={collapsedModuleIds.has(module.id)}
+                onToggleCollapsed={() => toggleModuleCollapsed(module.id)}
+                sectionRef={(element) => setModuleSectionRef(module.id, element)}
                 onEditResource={onEditResource}
                 onNavigateToResource={onNavigateToResource}
                 onOpenImageResource={onOpenImageResource}
@@ -2496,6 +3238,7 @@ function ResourceDock({
                 unsyncFailedResourceId={unsyncFailedResourceId}
                 hasAnyUnsyncInFlight={hasAnyUnsyncInFlight}
                 updateInFlightResourceId={updateInFlightResourceId}
+                isCardSearchActive={isCardSearchActive}
               />
             );
           })
@@ -2535,6 +3278,7 @@ export function Workbench({
   onUpdateWorkbenchResource,
   unsyncingResourceId = null,
   onSaveLayout,
+  onOpenReader,
   wholeBibleSearchIndex,
 }: WorkbenchProps) {
   const validVerseIds = useMemo(
@@ -2546,17 +3290,23 @@ export function Workbench({
     [resources, validVerseIds],
   );
   const [layout, setLayout] = useState(() => storedLayout(initialLayout, navigationValidatedResources));
+  const [paperTheme, setPaperTheme] = useState<PaperTheme>(storedPaperTheme);
+  const isWarmPaperTheme = paperTheme === "warm";
+  const [readingFont, setReadingFont] = useState<ReadingFont>(storedReadingFont);
+  const isSerifReadingFont = readingFont === "serif";
   const [activeResizeSide, setActiveResizeSide] = useState<DockSide | null>(null);
   const [activeResourceId, setActiveResourceId] = useState<string | null>(null);
   const [previewImageResource, setPreviewImageResource] = useState<StudyResource | null>(null);
   const [resourceEdits, setResourceEdits] = useState<ResourceEditDrafts>(() => storedResourceEdits());
   const [deletedResourceIds, setDeletedResourceIds] = useState<Set<string>>(() => storedDeletedResourceIds());
+  const [selectedCommentaryLibraryId, setSelectedCommentaryLibraryId] = useState<CommentaryLibraryId>(() => storedSelectedCommentaryLibraryId());
   const [selectedVerseId, setSelectedVerseId] = useState<VerseId>(initialVerseId);
   const [selectedIntroBook, setSelectedIntroBook] = useState<string | null>(initialIntroBook);
   const [openNavigationPanel, setOpenNavigationPanel] = useState<"book" | "chapter" | null>(null);
   const [query, setQuery] = useState("");
   const [cardQuery, setCardQuery] = useState("");
   const [submittedQuery, setSubmittedQuery] = useState("");
+  const [searchDisplayLimit, setSearchDisplayLimit] = useState(searchResultLimit);
   const [searchVersionFilter, setSearchVersionFilter] = useState<SearchVersionFilter>("all");
   const [searchScope, setSearchScope] = useState<SearchScope>("all");
   const [isSearchPanelOpen, setIsSearchPanelOpen] = useState(false);
@@ -2566,6 +3316,9 @@ export function Workbench({
   const [unsyncFailedResourceId, setUnsyncFailedResourceId] = useState<string | null>(null);
   const [locallyUnsyncingResourceId, setLocallyUnsyncingResourceId] = useState<string | null>(null);
   const [updateInFlightResourceId, setUpdateInFlightResourceId] = useState<string | null>(null);
+  const [mastheadHeight, setMastheadHeight] = useState(112);
+  const mastheadSize = mastheadHeight < 92 ? "mini" : mastheadHeight < 108 ? "compact" : "full";
+  const [mastheadResizeActive, setMastheadResizeActive] = useState(false);
   const resizeSessionRef = useRef<{
     side: DockSide;
     startLayout: WorkbenchLayout;
@@ -2575,13 +3328,27 @@ export function Workbench({
     startLayout: WorkbenchLayout;
     startX: number;
   } | null>(null);
+  const mastheadResizeSessionRef = useRef<{
+    pointerId: number;
+    startHeight: number;
+    startY: number;
+  } | null>(null);
   const layoutRef = useRef(layout);
   const refreshInFlightRef = useRef(false);
   const unsyncInFlightResourceIdRef = useRef<string | null>(null);
   const updateInFlightResourceIdRef = useRef<string | null>(null);
   const initialNavigationRef = useRef({ introBook: initialIntroBook, verseId: initialVerseId });
   const navigationPickerRef = useRef<HTMLDivElement>(null);
+  const bookNavButtonRef = useRef<HTMLButtonElement>(null);
+  const chapterNavButtonRef = useRef<HTMLButtonElement>(null);
+  const searchInputRef = useRef<HTMLInputElement>(null);
+  const searchFormRef = useRef<HTMLDivElement>(null);
+  const searchPanelRef = useRef<HTMLElement>(null);
+  const imagePreviewOpenerRef = useRef<HTMLButtonElement | null>(null);
+  const imagePreviewCloseRef = useRef<HTMLButtonElement>(null);
   const verseButtonRefs = useRef(new Map<string, HTMLButtonElement>());
+  const bibleColumnRefs = useRef(new Map<string, HTMLElement>());
+  const bibleScrollSyncLockRef = useRef(false);
   const pendingBookRef = useRef<string | null>(null);
   const pendingSearchResultRef = useRef<WorkbenchSearchResult | null>(null);
 
@@ -2601,6 +3368,13 @@ export function Workbench({
   const visibleResources = useMemo(() => (
     filterDeletedResources(editableResources(navigationValidatedResources, resourceEdits), deletedResourceIds)
   ), [deletedResourceIds, navigationValidatedResources, resourceEdits]);
+  const bookIntroView = useMemo(
+    () => (selectedIntroBook ? buildBookIntroView(visibleResources, selectedIntroBook) : null),
+    [selectedIntroBook, visibleResources],
+  );
+  const libraryFilteredResources = useMemo(() => (
+    visibleResources.filter((resource) => resourceMatchesSelectedCommentaryLibrary(resource, selectedCommentaryLibraryId))
+  ), [selectedCommentaryLibraryId, visibleResources]);
   const activeUnsyncingResourceId = unsyncingResourceId ?? locallyUnsyncingResourceId;
   const selectedSourceId = selectedIntroBook ? bookIntroSourceId(selectedIntroBook) : selectedVerseId;
   const currentChapterVerseIds = useMemo(() => {
@@ -2617,11 +3391,11 @@ export function Workbench({
   }, [currentBook, currentChapter, selectedIntroBook, versions]);
   const currentResources = useMemo(() => (
     selectedIntroBook
-      ? verseFirstBookIntroResources(visibleResources, selectedIntroBook)
-      : visibleResources.filter((resource) => (
+      ? verseFirstBookIntroResources(libraryFilteredResources, selectedIntroBook)
+      : libraryFilteredResources.filter((resource) => (
         currentChapterVerseIds.some((verseId) => resourceMentionsVerse(resource, verseId))
       ))
-  ), [currentChapterVerseIds, selectedIntroBook, visibleResources]);
+  ), [currentChapterVerseIds, libraryFilteredResources, selectedIntroBook]);
   const hasAnyUnsyncInFlight = Boolean(activeUnsyncingResourceId || unsyncInFlightResourceIdRef.current);
   const filteredCurrentResources = useMemo(
     () => filterResourcesByCardQuery(currentResources, cardQuery),
@@ -2676,9 +3450,9 @@ export function Workbench({
   const currentChapterNumbers = useMemo(() => Array.from(availableChapters).sort((a, b) => a - b), [availableChapters]);
   const currentVerseResources = useMemo(() => (
     selectedIntroBook
-      ? verseFirstBookIntroResources(visibleResources, selectedIntroBook)
-      : resourcesForVerse(visibleResources, selectedVerseId)
-  ), [selectedIntroBook, selectedVerseId, visibleResources]);
+      ? verseFirstBookIntroResources(libraryFilteredResources, selectedIntroBook)
+      : resourcesForVerse(libraryFilteredResources, selectedVerseId)
+  ), [libraryFilteredResources, selectedIntroBook, selectedVerseId]);
   const activeResource = activeResourceId ? visibleResources.find((resource) => resource.id === activeResourceId) ?? null : null;
   const pendingSearchQuery = query.trim();
   const searchQuery = submittedQuery.trim();
@@ -2690,17 +3464,38 @@ export function Workbench({
     searchVersionFilter,
     searchScope,
     currentBook,
-  ), [currentBook, searchQuery, searchScope, searchVersionFilter, versions, wholeBibleSearchIndex]);
+    searchDisplayLimit,
+  ), [currentBook, searchQuery, searchScope, searchVersionFilter, searchDisplayLimit, versions, wholeBibleSearchIndex]);
+  useEffect(() => {
+    setSearchDisplayLimit(searchResultLimit);
+    setStatus((previous) => {
+      if (!/^(已显示 |搜索到 )/.test(previous)) return previous;
+      if (hasPendingSearchChange) return "搜索条件已更新，请点击搜索。";
+      return searchQuery ? `搜索到 ${searchResponse.totalCount} 处经文` : "搜索已清除";
+    });
+  }, [pendingSearchQuery, searchQuery, searchVersionFilter, searchScope, currentBook, searchResponse.totalCount, hasPendingSearchChange]);
   const searchResults = searchResponse.results;
   const shouldShowSearchPanel = isSearchPanelOpen && (pendingSearchQuery.length > 0 || searchQuery.length > 0);
+  useEffect(() => {
+    if (!shouldShowSearchPanel) return;
+    function closeSearchOnOutsidePointer(event: PointerEvent) {
+      if (!(event.target instanceof Node)) return;
+      if (searchFormRef.current?.contains(event.target) || searchPanelRef.current?.contains(event.target)) return;
+      setIsSearchPanelOpen(false);
+    }
+    document.addEventListener("pointerdown", closeSearchOnOutsidePointer, true);
+    return () => document.removeEventListener("pointerdown", closeSearchOnOutsidePointer, true);
+  }, [shouldShowSearchPanel]);
   const searchStatusLabel = hasPendingSearchChange
-    ? "点击搜索更新结果"
+    ? "待搜索"
     : searchQuery
     ? `${searchResponse.totalCount} 处结果`
     : "输入关键词后搜索";
   const readerMinWidth = readerColumnMinWidth * 2;
   const leftDockWidth = dockVisibleWidth(layout, "left");
   const rightDockWidth = dockVisibleWidth(layout, "right");
+  const leftDockTrackMinWidth = layout.leftCollapsed ? dockCollapsedWidth : dockMinWidth;
+  const rightDockTrackMinWidth = layout.rightCollapsed ? dockCollapsedWidth : dockMinWidth;
   const sensors = useSensors(
     useSensor(PointerSensor, {
       activationConstraint: {
@@ -2717,6 +3512,15 @@ export function Workbench({
       activeCenterModules: normalizeActiveCenterModules(layoutRef.current.activeCenterModules),
     });
   }, []);
+
+  useEffect(() => {
+    if (refreshStatus === "idle") return;
+    const timeoutMs = refreshStatus === "success" ? 1800 : 2600;
+    const timer = window.setTimeout(() => {
+      setRefreshStatus("idle");
+    }, timeoutMs);
+    return () => window.clearTimeout(timer);
+  }, [refreshStatus]);
 
   useEffect(() => {
     const previous = initialNavigationRef.current;
@@ -2878,11 +3682,49 @@ export function Workbench({
       });
     }
 
+    function closeNavigationPanelOnEscape(event: KeyboardEvent) {
+      if (event.key !== "Escape") return;
+
+      const panel = openNavigationPanel;
+      setOpenNavigationPanel(null);
+      logWorkbenchInfo("[workbench] navigation panel closed", {
+        panel,
+        reason: "escape",
+      });
+      const trigger = panel === "book" ? bookNavButtonRef.current : chapterNavButtonRef.current;
+      trigger?.focus();
+    }
+
     document.addEventListener("pointerdown", closeNavigationPanelOnOutsidePointerDown, true);
+    document.addEventListener("keydown", closeNavigationPanelOnEscape);
     return () => {
       document.removeEventListener("pointerdown", closeNavigationPanelOnOutsidePointerDown, true);
+      document.removeEventListener("keydown", closeNavigationPanelOnEscape);
     };
   }, [openNavigationPanel]);
+
+  useEffect(() => {
+    if (!previewImageResource?.assetPath) return;
+    const opener = imagePreviewOpenerRef.current;
+    imagePreviewCloseRef.current?.focus();
+    function handlePreviewKeyDown(event: KeyboardEvent) {
+      if (event.key === "Escape") {
+        event.preventDefault();
+        event.stopPropagation();
+        closeImagePreview();
+      } else if (event.key === "Tab") {
+        // The close button is the lightbox's only interactive element.
+        event.preventDefault();
+        event.stopPropagation();
+        imagePreviewCloseRef.current?.focus();
+      }
+    }
+    document.addEventListener("keydown", handlePreviewKeyDown, true);
+    return () => {
+      document.removeEventListener("keydown", handlePreviewKeyDown, true);
+      if (opener?.isConnected) opener.focus();
+    };
+  }, [previewImageResource]);
 
   useEffect(() => {
     const normalizedQuery = normalizedCardSearchQuery(cardQuery);
@@ -2983,7 +3825,24 @@ export function Workbench({
     });
   }
 
+  function stepChapter(direction: -1 | 1) {
+    if (selectedIntroBook) {
+      if (direction < 0) return;
+      const firstChapter = currentChapterNumbers[0];
+      if (firstChapter === undefined) return;
+      selectChapter(firstChapter);
+      return;
+    }
+
+    const currentIndex = currentChapterNumbers.indexOf(currentChapter);
+    if (currentIndex < 0) return;
+    const nextChapter = currentChapterNumbers[currentIndex + direction];
+    if (nextChapter === undefined) return;
+    selectChapter(nextChapter);
+  }
+
   function runSearch(nextQuery = query) {
+    setSearchDisplayLimit(searchResultLimit);
     const normalizedQuery = nextQuery.trim();
     if (!normalizedQuery) {
       setSubmittedQuery("");
@@ -3158,11 +4017,16 @@ export function Workbench({
     return { persisted };
   }
 
-  function editResourceCopy(resourceId: string, draft: { body: string; title: string }): ResourceEditResult {
+  function editResourceCopy(resourceId: string, draft: ResourceTextDraft): ResourceEditResult {
     const baseResource = resources.find((resource) => resource.id === resourceId);
     const baseEditableBody = baseResource ? editableResourceBody(baseResource) : "";
+    const basePrimaryAnchor = baseResource?.primaryAnchor ?? baseResource?.verses[0] ?? null;
     const bodyChanged = !baseResource || draft.body !== baseEditableBody;
     const titleChanged = !baseResource || draft.title !== baseResource.title;
+    const nextPrimaryAnchor = draft.primaryAnchor === undefined
+      ? basePrimaryAnchor
+      : draft.primaryAnchor;
+    const primaryAnchorChanged = !baseResource || nextPrimaryAnchor !== basePrimaryAnchor;
     const nextDraft: ResourceEditDrafts[string] = {};
     if (titleChanged) {
       nextDraft.title = draft.title;
@@ -3173,10 +4037,13 @@ export function Workbench({
         nextDraft.summary = draft.body;
       }
     }
+    if (primaryAnchorChanged) {
+      nextDraft.primaryAnchor = nextPrimaryAnchor;
+    }
     const nextEdits = {
       ...resourceEdits,
     };
-    if (baseResource && !bodyChanged && !titleChanged) {
+    if (baseResource && !bodyChanged && !titleChanged && !primaryAnchorChanged) {
       delete nextEdits[resourceId];
     } else {
       nextEdits[resourceId] = nextDraft;
@@ -3189,12 +4056,13 @@ export function Workbench({
       resourceId,
       title: draft.title,
       bodyLength: draft.body.length,
+      primaryAnchor: nextPrimaryAnchor,
       persisted,
     });
     return { persisted };
   }
 
-  async function updateWorkbenchResourceCopy(resourceId: string, draft: { body: string; title: string }) {
+  async function updateWorkbenchResourceCopy(resourceId: string, draft: ResourceTextDraft) {
     if (!onUpdateWorkbenchResource || updateInFlightResourceIdRef.current) return;
     const resource = visibleResources.find((item) => item.id === resourceId);
     updateInFlightResourceIdRef.current = resourceId;
@@ -3240,6 +4108,40 @@ export function Workbench({
     setStatus(nextLayout[key] ? `${side === "left" ? "左侧" : "右侧"}已收起` : `${side === "left" ? "左侧" : "右侧"}已展开`);
   }
 
+  function togglePaperTheme() {
+    const nextTheme: PaperTheme = isWarmPaperTheme ? "default" : "warm";
+    setPaperTheme(nextTheme);
+    persistPaperTheme(nextTheme);
+    setStatus(nextTheme === "warm" ? "纸张模式已开启" : "纸张模式已关闭");
+  }
+
+  function toggleReadingFont() {
+    const nextFont: ReadingFont = isSerifReadingFont ? "sans" : "serif";
+    setReadingFont(nextFont);
+    persistReadingFont(nextFont);
+    setStatus(nextFont === "serif" ? "已切换为书体阅读字体" : "已切换为系统字体");
+  }
+
+  function selectCommentaryLibrary(libraryId: CommentaryLibraryId) {
+    if (libraryId === selectedCommentaryLibraryId) {
+      const library = commentaryLibraryCatalog.find((item) => item.id === libraryId);
+      setStatus(`当前资源库：${library?.title ?? libraryId}`);
+      return;
+    }
+
+    const next = normalizeSelectedCommentaryLibraryId(libraryId);
+    const persisted = persistSelectedCommentaryLibraryId(next);
+    setSelectedCommentaryLibraryId(next);
+    const library = commentaryLibraryCatalog.find((item) => item.id === next);
+    const label = library?.title ?? next;
+    setStatus(`已选择资源库：${label}${localPersistenceSuffix(persisted)}`);
+    logWorkbenchInfo("[workbench] commentary library selected", {
+      libraryId: next,
+      selectedCommentaryLibraryId: next,
+      persisted,
+    });
+  }
+
   function saveLayout() {
     const currentLayout = layoutRef.current;
     const persisted = persistLayoutToStorage(currentLayout);
@@ -3283,7 +4185,7 @@ export function Workbench({
     unsyncInFlightResourceIdRef.current = resourceId;
     setLocallyUnsyncingResourceId(resourceId);
     setUnsyncFailedResourceId(null);
-    setStatus(`正在删除并退回未同步：${resource?.title ?? resourceId}`);
+    setStatus(`正在删除并退回待复核：${resource?.title ?? resourceId}`);
     logWorkbenchInfo("[workbench] resource unsync requested", {
       resourceId,
       title: resource?.title,
@@ -3292,7 +4194,7 @@ export function Workbench({
 
     try {
       await onUnsyncResource(resourceId);
-      setStatus(`已删除并退回未同步：${resource?.title ?? resourceId}`);
+      setStatus(`已删除并退回待复核：${resource?.title ?? resourceId}`);
       logWorkbenchInfo("[workbench] resource unsync succeeded", {
         resourceId,
         title: resource?.title,
@@ -3300,7 +4202,7 @@ export function Workbench({
       });
     } catch (error) {
       setUnsyncFailedResourceId(resourceId);
-      setStatus(`删除并退回未同步失败：${resource?.title ?? resourceId}`);
+      setStatus(`删除并退回待复核失败：${resource?.title ?? resourceId}`);
       console.error("[workbench] resource unsync failed", {
         resourceId,
         title: resource?.title,
@@ -3465,7 +4367,8 @@ export function Workbench({
     });
   }
 
-  function openImagePreview(resource: StudyResource) {
+  function openImagePreview(resource: StudyResource, trigger?: HTMLButtonElement) {
+    imagePreviewOpenerRef.current = trigger ?? null;
     setPreviewImageResource(resource);
     setStatus(`已放大图片：${resource.title}`);
     logWorkbenchInfo("[workbench] image preview opened", {
@@ -3510,6 +4413,73 @@ export function Workbench({
       after: visibleCenterModules.slice().reverse(),
       centerModules: nextCenterModules,
     });
+  }
+
+  function setBibleColumnRef(versionId: string, element: HTMLElement | null) {
+    if (element) {
+      bibleColumnRefs.current.set(versionId, element);
+      return;
+    }
+    bibleColumnRefs.current.delete(versionId);
+  }
+
+  function syncBibleColumnScroll(sourceVersionId: string) {
+    if (bibleScrollSyncLockRef.current) return;
+    const source = bibleColumnRefs.current.get(sourceVersionId);
+    if (!source) return;
+
+    const sourceMax = Math.max(source.scrollHeight - source.clientHeight, 0);
+    const ratio = sourceMax <= 0 ? 0 : source.scrollTop / sourceMax;
+    bibleScrollSyncLockRef.current = true;
+
+    bibleColumnRefs.current.forEach((column, versionId) => {
+      if (versionId === sourceVersionId) return;
+      const targetMax = Math.max(column.scrollHeight - column.clientHeight, 0);
+      column.scrollTop = ratio * targetMax;
+    });
+
+    window.requestAnimationFrame(() => {
+      bibleScrollSyncLockRef.current = false;
+    });
+  }
+
+  function startMastheadResize(event: ReactPointerEvent<HTMLDivElement>) {
+    if (event.button !== 0) return;
+    event.preventDefault();
+    event.stopPropagation();
+    mastheadResizeSessionRef.current = {
+      pointerId: event.pointerId,
+      startHeight: mastheadHeight,
+      startY: event.clientY,
+    };
+    setMastheadResizeActive(true);
+    try {
+      event.currentTarget.setPointerCapture(event.pointerId);
+    } catch {
+      // Synthetic/test environments may not support pointer capture.
+    }
+  }
+
+  function moveMastheadResize(event: ReactPointerEvent<HTMLDivElement>) {
+    const session = mastheadResizeSessionRef.current;
+    if (!session || session.pointerId !== event.pointerId) return;
+    event.preventDefault();
+    const nextHeight = Math.round(
+      Math.min(220, Math.max(72, session.startHeight + (event.clientY - session.startY))),
+    );
+    setMastheadHeight(nextHeight);
+  }
+
+  function stopMastheadResize(event: ReactPointerEvent<HTMLDivElement>) {
+    const session = mastheadResizeSessionRef.current;
+    if (!session || session.pointerId !== event.pointerId) return;
+    mastheadResizeSessionRef.current = null;
+    setMastheadResizeActive(false);
+    try {
+      event.currentTarget.releasePointerCapture(event.pointerId);
+    } catch {
+      // Pointer capture may not have been acquired.
+    }
   }
 
   function setVerseButtonRef(versionId: string, verseId: VerseId, element: HTMLButtonElement | null) {
@@ -3833,11 +4803,13 @@ export function Workbench({
     if (selectedIntroBook) {
       return (
         <section
+          ref={(element) => setBibleColumnRef(version.id, element)}
           aria-label={isKjv ? "KJV阅读" : "和合本阅读"}
           className={`bible-column bible-column--intro ${isKjv ? "bible-column--kjv" : "bible-column--cuv"}`}
           data-module-id={version.id}
           data-testid="center-module"
           key={version.id}
+          onScroll={() => syncBibleColumnScroll(version.id)}
         >
           <header className="bible-column__header">
             <span>{isKjv ? "English" : "中文"}</span>
@@ -3853,11 +4825,13 @@ export function Workbench({
     const chapterVerses = version.verses.filter((verse) => verse.book === currentBook && verse.chapter === currentChapter);
     return (
       <section
+        ref={(element) => setBibleColumnRef(version.id, element)}
         aria-label={isKjv ? "KJV阅读" : "和合本阅读"}
         className={`bible-column ${isKjv ? "bible-column--kjv" : "bible-column--cuv"}`}
         data-module-id={version.id}
         data-testid="center-module"
         key={version.id}
+        onScroll={() => syncBibleColumnScroll(version.id)}
       >
         <header className="bible-column__header">
           <span>{isKjv ? "English" : "中文"}</span>
@@ -4056,8 +5030,16 @@ export function Workbench({
     return (
       <section
         aria-label="经文搜索结果"
+        ref={searchPanelRef}
         className="bible-search-panel"
         role="region"
+        onKeyDown={(event) => {
+          if (event.key !== "Escape") return;
+          event.preventDefault();
+          event.stopPropagation();
+          searchInputRef.current?.focus();
+          setIsSearchPanelOpen(false);
+        }}
         style={{
           left: `${leftDockWidth + dockResizeHandleWidth}px`,
           right: `${rightDockWidth + dockResizeHandleWidth}px`,
@@ -4106,8 +5088,17 @@ export function Workbench({
                     <span className="bible-search-result__text">{highlightedSearchText(result)}</span>
                   </button>
                 ))}
+                <p className="bible-search-panel__empty">
+                  已显示 {searchResults.length} / 共 {searchResponse.totalCount} 处结果
+                </p>
                 {searchResponse.totalCount > searchResults.length ? (
-                  <p className="bible-search-panel__empty">已显示前 {searchResults.length} 处结果。</p>
+                  <button className="toolbar-button" type="button" onClick={() => {
+                    const nextLimit = Math.min(searchDisplayLimit + searchResultLimit, searchResponse.totalCount);
+                    setSearchDisplayLimit(nextLimit);
+                    setStatus(`已显示 ${nextLimit} / 共 ${searchResponse.totalCount} 处经文`);
+                  }}>
+                    加载更多结果
+                  </button>
                 ) : null}
               </>
             ) : (
@@ -4121,8 +5112,14 @@ export function Workbench({
     );
   }
 
+  const cuvVerses = useMemo(
+    () => versions.find((version) => version.id === "cuv")?.verses ?? [],
+    [versions],
+  );
+
   return (
-    <main className="workbench">
+    <VersePreviewProvider verses={cuvVerses}>
+    <main className={`workbench ${activeResizeSide || mastheadResizeActive ? "is-resizing" : ""}`} data-paper-theme={paperTheme} data-reading-font={readingFont}>
       <header className="toolbar">
         <div className="toolbar__brand" aria-label="One Holy Bible">
           <span className="toolbar__mark" aria-hidden="true">OHB</span>
@@ -4130,6 +5127,7 @@ export function Workbench({
         </div>
         <div className="toolbar__group" aria-label="当前书卷章节" ref={navigationPickerRef}>
           <button
+            ref={bookNavButtonRef}
             aria-expanded={openNavigationPanel === "book"}
             aria-label={`选择书卷 ${bookTitle(currentBook)}`}
             className="toolbar-button toolbar-button--chapter"
@@ -4140,6 +5138,7 @@ export function Workbench({
             {bookTitle(currentBook)}
           </button>
           <button
+            ref={chapterNavButtonRef}
             aria-expanded={openNavigationPanel === "chapter"}
             aria-label={selectedIntroBook ? "选择章节 序" : `选择章节 第 ${currentChapter} 章`}
             className="toolbar-button toolbar-button--chapter"
@@ -4207,10 +5206,11 @@ export function Workbench({
             {cardSearchQuery ? `${filteredCurrentResources.length} 张` : "全部"}
           </span>
         </div>
-        <div className="bible-search" role="search" aria-label="经文搜索">
+        <div ref={searchFormRef} className="bible-search" role="search" aria-label="经文搜索">
           <Search size={16} />
           <input
             aria-label="搜索经文"
+            ref={searchInputRef}
             placeholder="搜索经文"
             type="search"
             value={query}
@@ -4238,29 +5238,41 @@ export function Workbench({
           </button>
         </div>
         <div className="toolbar__group toolbar__group--layout" aria-label="布局操作" role="group">
-	          {onRefreshResources ? (
-	            <>
-	              <button
-	                aria-label={isRefreshingResources ? "正在刷新卡片" : "刷新卡片"}
-	                className="toolbar-button"
-	                disabled={isRefreshingResources}
-	                title="重新读取工作台已同步卡片"
-	                type="button"
-	                onClick={refreshResources}
-	              >
-	                <RefreshCcw size={16} />
-	                {isRefreshingResources ? "刷新中" : "刷新卡片"}
-	              </button>
-	              {refreshStatus !== "idle" ? (
-	                <span
-	                  className={`toolbar-refresh-status toolbar-refresh-status--${refreshStatus}`}
-	                  role={refreshStatus === "error" ? "alert" : undefined}
-	                >
-	                  {refreshStatus === "success" ? "已刷新" : "刷新失败"}
-	                </span>
-	              ) : null}
-	            </>
-	          ) : null}
+          {onOpenReader ? (
+            <button
+              aria-label="切换到阅读模式"
+              className="toolbar-button"
+              title="切换到阅读模式"
+              type="button"
+              onClick={() => onOpenReader(selectedVerseId)}
+            >
+              <BookOpen size={16} />
+              阅读
+            </button>
+          ) : null}
+          {onRefreshResources ? (
+            <>
+              <button
+                aria-label={isRefreshingResources ? "正在刷新卡片" : "刷新卡片"}
+                className="toolbar-button"
+                disabled={isRefreshingResources}
+                title="重新读取工作台已同步卡片"
+                type="button"
+                onClick={refreshResources}
+              >
+                <RefreshCcw size={16} />
+                {isRefreshingResources ? "刷新中" : "刷新卡片"}
+              </button>
+              {refreshStatus !== "idle" ? (
+                <span
+                  className={`toolbar-refresh-status toolbar-refresh-status--${refreshStatus}`}
+                  role={refreshStatus === "error" ? "alert" : "status"}
+                >
+                  {refreshStatus === "success" ? "已刷新" : "刷新失败"}
+                </span>
+              ) : null}
+            </>
+          ) : null}
           <button className="toolbar-button toolbar-button--primary" type="button" onClick={saveLayout}>
             <Save size={16} />
             保存布局
@@ -4283,11 +5295,12 @@ export function Workbench({
         <div
           className="workbench-grid"
           style={{
-            gridTemplateColumns: `${leftDockWidth}px ${dockResizeHandleWidth}px minmax(${readerMinWidth}px, 1fr) ${dockResizeHandleWidth}px ${rightDockWidth}px`,
+            gridTemplateColumns: `minmax(${leftDockTrackMinWidth}px, ${leftDockWidth}px) ${dockResizeHandleWidth}px minmax(${readerMinWidth}px, 1fr) ${dockResizeHandleWidth}px minmax(${rightDockTrackMinWidth}px, ${rightDockWidth}px)`,
           }}
         >
           <ResourceDock
             collapsedOrganizedResourceIds={collapsedCenterCardIds}
+            selectedCommentaryLibraryId={selectedCommentaryLibraryId}
             layout={layout}
             onCopyStatus={setStatus}
             onEditResource={editResourceCopy}
@@ -4297,6 +5310,7 @@ export function Workbench({
             onUnsyncResource={unsyncResource}
             onUpdateWorkbenchResource={updateWorkbenchResourceCopy}
             onRemoveOrganizedResource={removeCenterResourceCard}
+            onSelectCommentaryLibrary={selectCommentaryLibrary}
             onToggleDock={toggleDock}
             onToggleOrganizedResource={toggleCenterResourceCard}
             organizedResources={centerCardResources}
@@ -4304,6 +5318,10 @@ export function Workbench({
             selectedSourceId={selectedSourceId}
             sourceIdForResource={sourceIdForResource}
             side="left"
+            isWarmPaperTheme={isWarmPaperTheme}
+            isSerifReadingFont={isSerifReadingFont}
+            onTogglePaperTheme={togglePaperTheme}
+            onToggleReadingFont={toggleReadingFont}
             unsyncingResourceId={activeUnsyncingResourceId}
             unsyncFailedResourceId={unsyncFailedResourceId}
             hasAnyUnsyncInFlight={hasAnyUnsyncInFlight}
@@ -4322,52 +5340,128 @@ export function Workbench({
             onKeyDown={(event) => handleDockResizeKeyDown("left", event)}
             onPointerDown={(event) => startDockResize("left", event)}
           />
-          <section className="reader-pane" aria-label="双译本阅读区">
+          <section
+            className="reader-pane"
+            aria-label="双译本阅读区"
+            data-masthead-size={mastheadSize}
+            style={{ "--reader-masthead-height": `${mastheadHeight}px` } as CSSProperties}
+          >
             <header className="reader-pane__masthead">
-              <div>
-                <span className="reader-pane__eyebrow">{currentEnglishBookTitle} study desk</span>
-                <h1>{currentChapterLabel}</h1>
-              </div>
-              <div className="reader-pane__selection">
-                <span>{selectedIntroBook ? "当前位置" : "当前经节"}</span>
-                <strong>{selectedIntroBook ? `${bookTitle(selectedIntroBook)}序` : selectedVerseId}</strong>
-              </div>
+              {(() => {
+                const canGoPrevious = selectedIntroBook
+                  ? false
+                  : currentChapterNumbers.indexOf(currentChapter) > 0;
+                const canGoNext = selectedIntroBook
+                  ? currentChapterNumbers.length > 0
+                  : currentChapterNumbers.indexOf(currentChapter) >= 0
+                    && currentChapterNumbers.indexOf(currentChapter) < currentChapterNumbers.length - 1;
+
+                return (
+                  <>
+                    <button
+                      aria-label="上一章"
+                      className={`reader-pane__chapter-zone reader-pane__chapter-zone--previous ${canGoPrevious ? "" : "is-disabled"}`}
+                      disabled={!canGoPrevious}
+                      type="button"
+                      onClick={() => stepChapter(-1)}
+                    >
+                      <span className="reader-pane__chapter-button">
+                        <ChevronLeft size={16} />
+                        上一章
+                      </span>
+                    </button>
+                    <div className="reader-pane__title">
+                      <h1>{currentChapterLabel}</h1>
+                      <div className="reader-pane__selection">
+                        <span>{selectedIntroBook ? "当前位置" : "当前经节"}</span>
+                        <strong>{selectedIntroBook ? `${bookTitle(selectedIntroBook)}序` : selectedVerseId}</strong>
+                      </div>
+                    </div>
+                    <button
+                      aria-label="下一章"
+                      className={`reader-pane__chapter-zone reader-pane__chapter-zone--next ${canGoNext ? "" : "is-disabled"}`}
+                      disabled={!canGoNext}
+                      type="button"
+                      onClick={() => stepChapter(1)}
+                    >
+                      <span className="reader-pane__chapter-button">
+                        下一章
+                        <ChevronRight size={16} />
+                      </span>
+                    </button>
+                  </>
+                );
+              })()}
+              <div
+                aria-label="调整阅读台顶栏高度"
+                aria-orientation="horizontal"
+                aria-valuemax={220}
+                aria-valuemin={72}
+                aria-valuenow={mastheadHeight}
+                className={`reader-pane__masthead-resize-handle ${mastheadResizeActive ? "is-active" : ""}`}
+                role="separator"
+                tabIndex={0}
+                title="上下拖动调整顶栏高度"
+                onPointerCancel={stopMastheadResize}
+                onPointerDown={startMastheadResize}
+                onPointerMove={moveMastheadResize}
+                onPointerUp={stopMastheadResize}
+              />
             </header>
-            <div
-              aria-label="中间工作区"
-              className={`reader-columns center-workspace center-workspace--${visibleCenterModules.length}`}
-              role="region"
-              style={visibleCenterModules.length === 2
-                ? {
-                    "--center-split-percent": `${layout.readerSplitPercent}%`,
-                    gridTemplateColumns: `${layout.readerSplitPercent}% minmax(0, 1fr)`,
-                  } as CSSProperties
-                : undefined}
-            >
-              {visibleCenterModules.length === 0 ? (
-                <div aria-label="未开启中间模块" className="center-workspace__empty" />
-              ) : visibleCenterModules.length === 2 ? (
-                <>
-                  {renderCenterModule(visibleCenterModules[0])}
-                  {renderCenterModule(visibleCenterModules[1])}
-                  <div
-                    aria-label="调整中间模块占比"
-                    aria-orientation="vertical"
-                    aria-valuemax={splitMaxPercent}
-                    aria-valuemin={splitMinPercent}
-                    aria-valuenow={layout.readerSplitPercent}
-                    className="center-workspace-resize-handle center-workspace-resize-handle--overlay"
-                    role="separator"
-                    tabIndex={0}
-                    title="调整中间模块占比"
-                    onKeyDown={handleCenterSplitResizeKeyDown}
-                    onPointerDown={startCenterSplitResize}
-                  />
-                </>
-              ) : (
-                visibleCenterModules.map((moduleId) => renderCenterModule(moduleId))
-              )}
-            </div>
+            {selectedIntroBook && bookIntroView ? (
+              <BookIntroStableGrid
+                view={bookIntroView}
+                sourceIdForResource={sourceIdForResource}
+                onDeleteResource={deleteCurrentResourceCard}
+                onEditResource={editResourceCopy}
+                onNavigateToResource={navigateToResourceTarget}
+                onOpenImageResource={openImagePreview}
+                onOpenResource={openResourceInCenter}
+                onUnsyncResource={unsyncResource}
+                onUpdateWorkbenchResource={updateWorkbenchResourceCopy}
+                onCopyStatus={setStatus}
+                unsyncingResourceId={activeUnsyncingResourceId}
+                unsyncFailedResourceId={unsyncFailedResourceId}
+                hasAnyUnsyncInFlight={hasAnyUnsyncInFlight}
+                updateInFlightResourceId={updateInFlightResourceId}
+              />
+            ) : (
+              <div
+                aria-label="中间工作区"
+                className={`reader-columns center-workspace center-workspace--${visibleCenterModules.length}`}
+                role="region"
+                style={visibleCenterModules.length === 2
+                  ? {
+                      "--center-split-percent": `${layout.readerSplitPercent}%`,
+                      gridTemplateColumns: `${layout.readerSplitPercent}% minmax(0, 1fr)`,
+                    } as CSSProperties
+                  : undefined}
+              >
+                {visibleCenterModules.length === 0 ? (
+                  <div aria-label="未开启中间模块" className="center-workspace__empty" />
+                ) : visibleCenterModules.length === 2 ? (
+                  <>
+                    {renderCenterModule(visibleCenterModules[0])}
+                    {renderCenterModule(visibleCenterModules[1])}
+                    <div
+                      aria-label="调整中间模块占比"
+                      aria-orientation="vertical"
+                      aria-valuemax={splitMaxPercent}
+                      aria-valuemin={splitMinPercent}
+                      aria-valuenow={layout.readerSplitPercent}
+                      className="center-workspace-resize-handle center-workspace-resize-handle--overlay"
+                      role="separator"
+                      tabIndex={0}
+                      title="调整中间模块占比"
+                      onKeyDown={handleCenterSplitResizeKeyDown}
+                      onPointerDown={startCenterSplitResize}
+                    />
+                  </>
+                ) : (
+                  visibleCenterModules.map((moduleId) => renderCenterModule(moduleId))
+                )}
+              </div>
+            )}
             {!cuv && !kjv ? <p className="reader-empty">没有可显示的圣经版本。</p> : null}
           </section>
           <div
@@ -4385,6 +5479,7 @@ export function Workbench({
           />
           <ResourceDock
             collapsedOrganizedResourceIds={collapsedCenterCardIds}
+            selectedCommentaryLibraryId={selectedCommentaryLibraryId}
             layout={layout}
             onCopyStatus={setStatus}
             onEditResource={editResourceCopy}
@@ -4394,6 +5489,7 @@ export function Workbench({
             onUnsyncResource={unsyncResource}
             onUpdateWorkbenchResource={updateWorkbenchResourceCopy}
             onRemoveOrganizedResource={removeCenterResourceCard}
+            onSelectCommentaryLibrary={selectCommentaryLibrary}
             onToggleDock={toggleDock}
             onToggleOrganizedResource={toggleCenterResourceCard}
             organizedResources={centerCardResources}
@@ -4401,6 +5497,7 @@ export function Workbench({
             selectedSourceId={selectedSourceId}
             sourceIdForResource={sourceIdForResource}
             side="right"
+            isCardSearchActive={Boolean(cardSearchQuery)}
             unsyncingResourceId={activeUnsyncingResourceId}
             unsyncFailedResourceId={unsyncFailedResourceId}
             hasAnyUnsyncInFlight={hasAnyUnsyncInFlight}
@@ -4431,6 +5528,7 @@ export function Workbench({
               </div>
               <button
                 aria-label="关闭图片预览"
+                ref={imagePreviewCloseRef}
                 className="image-lightbox__close"
                 title="关闭图片预览"
                 type="button"
@@ -4443,6 +5541,7 @@ export function Workbench({
               <img
                 src={previewImageResource.assetPath}
                 alt={imageResourceAlt(previewImageResource)}
+                data-paper-blend={shouldBlendImageWithPaper(previewImageResource) ? "true" : undefined}
                 {...imageDimensionsFromAssetPath(previewImageResource.assetPath)}
               />
             </div>
@@ -4453,9 +5552,11 @@ export function Workbench({
         </div>
       ) : null}
 
-      <p className="sr-only" role="status" aria-live="polite">
+      <p className={`workbench-status toolbar-refresh-status toolbar-refresh-status--${status.includes("失败") ? "error" : "success"}`}
+        role="status" aria-live="polite" aria-atomic="true">
         {status}
       </p>
     </main>
+    </VersePreviewProvider>
   );
 }

@@ -1,4 +1,5 @@
 import { fireEvent, render, screen, waitFor, within } from "@testing-library/react";
+import { DndContext } from "@dnd-kit/core";
 import userEvent from "@testing-library/user-event";
 import { readFileSync } from "node:fs";
 import { useState } from "react";
@@ -8,7 +9,22 @@ import { sampleResources } from "../data/sampleLibrary";
 import type { BibleVersion } from "../domain/bible";
 import type { PublicScriptureSearchEntry } from "../data/publicData";
 import { defaultWorkbenchLayout } from "../domain/layout";
-import { acceptsResourceCardDropTarget, anchorDragOverlayToCursor, layoutStorageKey, reorderCenterCardsByDrag, reorderCenterModulesByDrag, Workbench } from "./Workbench";
+import {
+  acceptsResourceCardDropTarget,
+  anchorDragOverlayToCursor,
+  commentaryLibraryIdForResource,
+  commentaryLibraryIdFromLabel,
+  layoutStorageKey,
+  paperThemeStorageKey,
+  readingFontStorageKey,
+  reorderCenterCardsByDrag,
+  reorderCenterModulesByDrag,
+  ResourceCard,
+  resourceMatchesSelectedCommentaryLibrary,
+  resourceMatchesEnabledCommentaryLibraries,
+  shouldBlendImageWithPaper,
+  Workbench,
+} from "./Workbench";
 
 function dragResourceCard(element: Element, startX: number, endX: number, y = 260) {
   const activationX = startX + Math.sign(endX - startX) * 8;
@@ -46,9 +62,251 @@ function waitForDndClickSuppressionCleanup() {
 
 const genesisMathImageId = "genesis-cmc-01-p014-img002-669x195";
 const genesisMathImageTitle = sampleResources.find((resource) => resource.id === genesisMathImageId)?.title ?? "创世记插图：Gen.1.1";
+const genesisPaperBlendImageId = "genesis-cmc-01-p011-img001-661x631";
+const genesisPaperBlendImageTitle = sampleResources.find((resource) => resource.id === genesisPaperBlendImageId)?.title ?? "希伯来文创世记残片";
 const genesisNearEastMapId = "genesis-ohb-genesis-codex-v2-p008-img007-1893x2778";
 const genesisNearEastMapTitle = sampleResources.find((resource) => resource.id === genesisNearEastMapId)?.title ?? "古代近东世界地图";
 const styles = readFileSync("src/styles.css", "utf8");
+const productionPaperRoot = '.workbench[data-paper-theme="warm"]';
+const productionPaperMarker = "/* Modern warm paper theme (toggleable) */";
+
+type CssContractRule = {
+  atRules: string[];
+  body: string;
+  selectors: string[];
+};
+
+function parseCssContractRules(source: string): CssContractRule[] {
+  const rules: CssContractRule[] = [];
+
+  function scan(block: string, atRules: string[]) {
+    let cursor = 0;
+
+    while (cursor < block.length) {
+      while (/\s/.test(block[cursor] ?? "")) cursor += 1;
+      if (block.startsWith("/*", cursor)) {
+        const commentEnd = block.indexOf("*/", cursor + 2);
+        cursor = commentEnd === -1 ? block.length : commentEnd + 2;
+        continue;
+      }
+
+      const openingBrace = block.indexOf("{", cursor);
+      if (openingBrace === -1) break;
+
+      const prelude = block.slice(cursor, openingBrace).trim();
+      let closingBrace = openingBrace + 1;
+      let depth = 1;
+
+      while (closingBrace < block.length && depth > 0) {
+        if (block[closingBrace] === "{") depth += 1;
+        if (block[closingBrace] === "}") depth -= 1;
+        closingBrace += 1;
+      }
+
+      const body = block.slice(openingBrace + 1, closingBrace - 1);
+      if (prelude.startsWith("@")) {
+        scan(body, [...atRules, prelude.replace(/\s+/g, " ").trim()]);
+      } else if (prelude) {
+        rules.push({
+          atRules,
+          body,
+          selectors: prelude.split(",").map((selector) => selector.replace(/\s+/g, " ").trim()),
+        });
+      }
+
+      cursor = closingBrace;
+    }
+  }
+
+  scan(source, []);
+  return rules;
+}
+
+function cssContractRule(rules: CssContractRule[], selector: string) {
+  const rule = rules.find((candidate) => candidate.selectors.includes(selector));
+  expect(rule, `missing CSS rule for ${selector}`).toBeDefined();
+  return rule!;
+}
+
+function oklchToken(rule: CssContractRule, token: string) {
+  const match = rule.body.match(new RegExp(`${token}:\\s*oklch\\(([\\d.]+)%\\s+([\\d.]+)\\s+([\\d.]+)\\)`));
+  expect(match, `missing OKLCH token ${token}`).not.toBeNull();
+  return [Number(match![1]) / 100, Number(match![2]), Number(match![3])] as const;
+}
+
+function relativeLuminance([lightness, chroma, hue]: readonly [number, number, number]) {
+  const radians = hue * Math.PI / 180;
+  const a = chroma * Math.cos(radians);
+  const b = chroma * Math.sin(radians);
+  const lPrime = lightness + 0.3963377774 * a + 0.2158037573 * b;
+  const mPrime = lightness - 0.1055613458 * a - 0.0638541728 * b;
+  const sPrime = lightness - 0.0894841775 * a - 1.291485548 * b;
+  const l = lPrime ** 3;
+  const m = mPrime ** 3;
+  const s = sPrime ** 3;
+  const linearRgb = [
+    4.0767416621 * l - 3.3077115913 * m + 0.2309699292 * s,
+    -1.2684380046 * l + 2.6097574011 * m - 0.3413193965 * s,
+    -0.0041960863 * l - 0.7034186147 * m + 1.707614701 * s,
+  ].map((channel) => Math.max(0, Math.min(1, channel)));
+
+  return 0.2126 * linearRgb[0] + 0.7152 * linearRgb[1] + 0.0722 * linearRgb[2];
+}
+
+function contrastRatio(first: readonly [number, number, number], second: readonly [number, number, number]) {
+  const firstLuminance = relativeLuminance(first);
+  const secondLuminance = relativeLuminance(second);
+  return (Math.max(firstLuminance, secondLuminance) + 0.05) / (Math.min(firstLuminance, secondLuminance) + 0.05);
+}
+
+function cssSpecificity(selector: string) {
+  const normalized = selector.replace(/:not\(([^()]*)\)/g, "$1");
+  const ids = normalized.match(/#[\w-]+/g)?.length ?? 0;
+  const classLike = (normalized.match(/\.[\w-]+/g)?.length ?? 0)
+    + (normalized.match(/\[[^\]]+\]/g)?.length ?? 0)
+    + (normalized.match(/:(?!:)[\w-]+/g)?.length ?? 0);
+  const elements = normalized
+    .replace(/#[\w-]+|\.[\w-]+|\[[^\]]+\]|::?[\w-]+/g, "")
+    .split(/[\s>+~]+/)
+    .filter((part) => /^[a-z][\w-]*$/i.test(part)).length;
+  return [ids, classLike, elements] as const;
+}
+
+function compareCssSpecificity(
+  first: readonly [number, number, number],
+  second: readonly [number, number, number],
+) {
+  for (let index = 0; index < first.length; index += 1) {
+    if (first[index] !== second[index]) return first[index] - second[index];
+  }
+  return 0;
+}
+
+it("uses an exact monochrome asset suffix allowlist without treating source families as monochrome", () => {
+  expect(shouldBlendImageWithPaper({
+    id: "archive-scan",
+    title: "旧书版画",
+    type: "image",
+    verses: ["Gen.1.1"],
+    body: "",
+    assetPath: "/src/assets/resources/genesis/images/cmc-01/p011_img001_661x631.png",
+  })).toBe(true);
+
+  expect(shouldBlendImageWithPaper({
+    id: "archive-line-art",
+    title: "灰阶白底线图",
+    type: "image",
+    verses: ["Gen.1.1"],
+    body: "",
+    assetPath: "/src/assets/resources/genesis/images/cmc-01/p015_img003_435x262.png",
+  })).toBe(true);
+
+  expect(shouldBlendImageWithPaper({
+    id: "blue-hebrew",
+    title: "蓝色希伯来文",
+    type: "image",
+    verses: ["Gen.1.1"],
+    body: "",
+    assetPath: "/src/assets/resources/genesis/images/cmc-01/p014_img002_669x195.png",
+  })).toBe(false);
+
+  expect(shouldBlendImageWithPaper({
+    id: "early-earth",
+    title: "彩色 Early Earth",
+    type: "image",
+    verses: ["Gen.1.3"],
+    body: "",
+    assetPath: "/src/assets/resources/genesis/images/cmc-01/p018_img009_716x518.png",
+  })).toBe(false);
+
+  expect(shouldBlendImageWithPaper({
+    id: "codex-map",
+    title: "彩色近东地图",
+    type: "image",
+    verses: ["Gen.1.1"],
+    body: "",
+    assetPath: "/src/assets/resources/genesis/images/ohb-genesis-codex-v2/p008_img007_1893x2778.png",
+  })).toBe(false);
+
+  expect(shouldBlendImageWithPaper({
+    id: "codex-crop-map",
+    title: "彩色近东地图裁切",
+    type: "image",
+    verses: ["Gen.1.1"],
+    body: "",
+    assetPath: "/src/assets/resources/genesis/images/ohb-genesis-codex-v2-crops/p008_img007_880x900.png",
+  })).toBe(false);
+
+  expect(shouldBlendImageWithPaper({
+    id: "color-photo",
+    title: "彩色照片",
+    type: "image",
+    verses: ["Gen.1.1"],
+    body: "",
+    assetPath: "/resources/color/landscape.webp",
+  })).toBe(false);
+
+  expect(shouldBlendImageWithPaper({
+    id: "text-resource",
+    title: "文字资料",
+    type: "note",
+    verses: ["Gen.1.1"],
+    body: "",
+    assetPath: "/src/assets/resources/genesis/images/cmc-01/p011_img001_661x631.png",
+  })).toBe(false);
+
+  expect(shouldBlendImageWithPaper({
+    id: "pathless-image",
+    title: "无路径图片",
+    type: "image",
+    verses: ["Gen.1.1"],
+    body: "",
+  })).toBe(false);
+});
+
+it("marks only allowlisted non-zoomable image cards in the DOM", () => {
+  render(
+    <DndContext>
+      <ResourceCard
+        resource={{
+          id: "non-zoomable-archive",
+          title: "普通古籍图",
+          type: "image",
+          verses: ["Gen.1.1"],
+          body: "",
+          assetPath: "/src/assets/resources/genesis/images/cmc-01/p015_img003_435x262.png",
+        }}
+        origin="right"
+        sourceVerseId="Gen.1.1"
+        onCopyStatus={() => undefined}
+        onEditResource={() => ({ persisted: true })}
+        onOpenResource={() => undefined}
+        draggable={false}
+      />
+      <ResourceCard
+        resource={{
+          id: "non-zoomable-blue-hebrew",
+          title: "蓝色希伯来文",
+          type: "image",
+          verses: ["Gen.1.1"],
+          body: "",
+          assetPath: "/src/assets/resources/genesis/images/cmc-01/p014_img002_669x195.png",
+        }}
+        origin="right"
+        sourceVerseId="Gen.1.1"
+        onCopyStatus={() => undefined}
+        onEditResource={() => ({ persisted: true })}
+        onOpenResource={() => undefined}
+        draggable={false}
+      />
+    </DndContext>,
+  );
+
+  const archivalImage = screen.getByRole("img", { name: "普通古籍图" });
+  expect(archivalImage).toHaveAttribute("data-paper-blend", "true");
+  expect(screen.queryByRole("button", { name: "放大普通古籍图" })).not.toBeInTheDocument();
+  expect(screen.getByRole("img", { name: "蓝色希伯来文" })).not.toHaveAttribute("data-paper-blend");
+});
 
 function getResourceArticleByTitle(container: HTMLElement, title: string, index = 0) {
   return within(container).getAllByRole("article", { name: title })[index];
@@ -61,6 +319,11 @@ function queryResourceArticleByTitle(container: HTMLElement, title: string) {
 function getLeftOrganizedCardStack() {
   const leftDock = screen.getByRole("complementary", { name: "左侧资料栏" });
   return within(leftDock).getByLabelText("用户根据章节自行整理卡片");
+}
+
+function getLeftResourceLibrary() {
+  const leftDock = screen.getByRole("complementary", { name: "左侧资料栏" });
+  return within(leftDock).getByRole("region", { name: "注释资源库" });
 }
 
 function getCenterCurrentCardModule() {
@@ -238,6 +501,193 @@ describe("Workbench", () => {
     activeCenterModules: ["cuv"],
   } as const;
 
+  const lukeIntroVersions: BibleVersion[] = [
+    {
+      id: "cuv",
+      label: "和合本",
+      language: "zh",
+      verses: [
+        { id: "Luke.1.1", book: "Luke", chapter: 1, verse: 1, text: "提阿非罗大人哪，有好些人提笔作书。" },
+      ],
+    },
+    {
+      id: "kjv",
+      label: "KJV",
+      language: "en",
+      verses: [
+        { id: "Luke.1.1", book: "Luke", chapter: 1, verse: 1, text: "Forasmuch as many have taken in hand." },
+      ],
+    },
+  ];
+
+  const lukeIntroResources = [
+    {
+      id: "study-bible-luke-intro-p001-n001",
+      title: "路加福音 作者与写作背景",
+      type: "commentary",
+      primaryAnchor: "Luke.1.1",
+      verses: ["Luke.1.1"],
+      body: "路加写作的处境与背景。",
+    },
+    {
+      id: "study-bible-luke-intro-p002-n001",
+      title: "路加福音 核心主题",
+      type: "commentary",
+      primaryAnchor: "Luke.1.1",
+      verses: ["Luke.1.1"],
+      body: "路加福音强调救恩临到万民。",
+    },
+    {
+      id: "study-bible-luke-intro-p003-n001",
+      title: "路加福音 文学结构",
+      type: "commentary",
+      primaryAnchor: "Luke.1.1",
+      verses: ["Luke.1.1"],
+      body: "路加按旅程与应验展开叙事。",
+    },
+  ] as const;
+
+  const samuelIntroVersions: BibleVersion[] = [
+    {
+      id: "cuv",
+      label: "和合本",
+      language: "zh",
+      verses: [
+        { id: "1Sam.1.1", book: "1Sam", chapter: 1, verse: 1, text: "以法莲山地的拉玛琐非有一个以法莲人。" },
+        { id: "2Sam.1.1", book: "2Sam", chapter: 1, verse: 1, text: "扫罗死后，大卫击杀亚玛力人回来。" },
+      ],
+    },
+    {
+      id: "kjv",
+      label: "KJV",
+      language: "en",
+      verses: [
+        { id: "1Sam.1.1", book: "1Sam", chapter: 1, verse: 1, text: "Now there was a certain man of Ramathaim-zophim." },
+        { id: "2Sam.1.1", book: "2Sam", chapter: 1, verse: 1, text: "Now it came to pass after the death of Saul." },
+      ],
+    },
+  ];
+
+  const samuelIntroResources = [
+    {
+      id: "study-bible-1sam-intro-p001-n001",
+      title: "撒母耳记上 作者背景",
+      type: "commentary",
+      primaryAnchor: "1Sam.1.1",
+      verses: ["1Sam.1.1"],
+      body: "撒母耳记上下共享的历史背景。",
+    },
+    {
+      id: "study-bible-2sam-intro-p002-n001",
+      title: "撒母耳记下 结构大纲",
+      type: "commentary",
+      primaryAnchor: "2Sam.1.1",
+      verses: ["2Sam.1.1"],
+      body: "撒母耳记下自身的结构大纲。",
+    },
+  ] as const;
+
+  it("scopes book-intro StableGrid CSS to the middle intro canvas only", () => {
+    const introMarker = "/* Book intro StableGrid canvas */";
+    const introMarkerIndex = styles.indexOf(introMarker);
+    expect(introMarkerIndex).toBeGreaterThan(-1);
+    expect(styles).not.toContain(".prototype-");
+
+    const introStyles = styles.slice(introMarkerIndex);
+    const introRules = parseCssContractRules(introStyles);
+    const reducedMotionAtRule = "@media (prefers-reduced-motion: reduce)";
+    expect(introStyles).toContain(".book-intro-canvas");
+    expect(introStyles).toContain("@container book-intro-canvas");
+    expect(cssContractRule(introRules, ".book-intro-canvas").body).toMatch(/container:\s*book-intro-canvas \/ inline-size/);
+    expect(introRules.some((rule) =>
+      rule.atRules.includes(reducedMotionAtRule)
+      && rule.selectors.includes(".book-intro-canvas *")
+      && /transition:\s*none !important/.test(rule.body)
+    )).toBe(true);
+
+    const selectorRoots = [".book-intro-canvas", ".book-intro-stable-grid"];
+    for (const rule of introRules) {
+      expect(rule.selectors.every((selector) =>
+        selectorRoots.some((root) => selector.startsWith(root))
+      )).toBe(true);
+    }
+
+    expect(introRules.some((rule) => rule.selectors.includes(".workbench-grid"))).toBe(false);
+    expect(introRules.some((rule) => rule.selectors.includes(".resource-dock"))).toBe(false);
+    expect(introRules.some((rule) => rule.selectors.includes(".resource-card"))).toBe(false);
+  });
+
+  it("renders the stable grid only in the middle reading area for book intros", () => {
+    render(
+      <Workbench
+        versions={lukeIntroVersions}
+        resources={lukeIntroResources}
+        initialIntroBook="Luke"
+        initialLayout={dualCenterLayout}
+      />,
+    );
+
+    expect(screen.getByRole("region", { name: "路加福音书卷序" })).toBeInTheDocument();
+    const contextLane = screen.getByRole("region", { name: "书卷背景" });
+    const messageLane = screen.getByRole("region", { name: "核心信息" });
+    const structureLane = screen.getByRole("region", { name: "阅读结构" });
+    expect(within(contextLane).getByRole("heading", { level: 2, name: "书卷背景" })).toBeInTheDocument();
+    expect(within(messageLane).getByRole("heading", { level: 2, name: "核心信息" })).toBeInTheDocument();
+    expect(within(structureLane).getByRole("heading", { level: 2, name: "阅读结构" })).toBeInTheDocument();
+    expect(screen.getByRole("complementary", { name: "左侧资料栏" })).toBeInTheDocument();
+    expect(screen.getByRole("complementary", { name: "右侧资料栏" })).toBeInTheDocument();
+    expect(screen.queryByTestId("center-module")).not.toBeInTheDocument();
+
+    const legacyIntroPanel = screen.queryByText("路加福音导论")?.closest(".book-intro-panel") ?? null;
+    expect(legacyIntroPanel).not.toBeInTheDocument();
+  });
+
+  it("restores the normal center workspace after leaving a book intro", async () => {
+    render(
+      <Workbench
+        versions={lukeIntroVersions}
+        resources={lukeIntroResources}
+        initialIntroBook="Luke"
+        initialLayout={dualCenterLayout}
+      />,
+    );
+
+    expect(screen.getByRole("region", { name: "路加福音书卷序" })).toBeInTheDocument();
+
+    await userEvent.click(screen.getByRole("button", { name: "选择章节 序" }));
+    await userEvent.click(within(screen.getByRole("dialog", { name: "章节选择" })).getByRole("button", { name: "第 1 章" }));
+
+    expect(screen.queryByRole("region", { name: "路加福音书卷序" })).not.toBeInTheDocument();
+    const center = screen.getByRole("region", { name: "中间工作区" });
+    expect(within(center).getByTestId("center-module")).toBeInTheDocument();
+    expect(screen.getByTestId("cuv-Luke.1.1")).toHaveAttribute("aria-current", "true");
+  });
+
+  it("marks shared first-volume intro cards and keeps their original navigation anchors", async () => {
+    render(
+      <Workbench
+        versions={samuelIntroVersions}
+        resources={samuelIntroResources}
+        initialIntroBook="2Sam"
+        initialLayout={dualCenterLayout}
+      />,
+    );
+
+    const introCanvas = screen.getByRole("region", { name: "撒母耳记下书卷序" });
+    expect(within(introCanvas).getByText("上下卷共用导论 · 撒母耳记上")).toBeInTheDocument();
+    expect(within(introCanvas).getByRole("article", { name: "撒母耳记下 结构大纲" })).toBeInTheDocument();
+
+    const sharedCard = within(introCanvas).getByRole("article", { name: "撒母耳记上 作者背景" });
+    const navigationButton = within(sharedCard).getByRole("button", { name: "跳转到 1Sam.1.1：撒母耳记上 作者背景" });
+    expect(navigationButton).toHaveAttribute("title", "跳转到 1Sam.1.1");
+
+    await userEvent.click(navigationButton);
+
+    expect(screen.queryByRole("region", { name: "撒母耳记下书卷序" })).not.toBeInTheDocument();
+    expect(screen.getByRole("button", { name: "选择书卷 撒母耳记上" })).toBeInTheDocument();
+    expect(screen.getByTestId("cuv-1Sam.1.1")).toHaveAttribute("aria-current", "true");
+  });
+
   it("syncs selected verse highlighting across CUV and KJV", async () => {
     render(
       <Workbench
@@ -251,6 +701,95 @@ describe("Workbench", () => {
     expect(screen.getByTestId("cuv-Gen.1.3")).toHaveAttribute("aria-current", "true");
     await userEvent.click(screen.getByRole("button", { name: "KJV" }));
     expect(screen.getByTestId("kjv-Gen.1.3")).toHaveAttribute("aria-current", "true");
+  });
+
+  it("defaults to warm paper theme and allows toggling back to classic UI", async () => {
+    localStorage.removeItem(paperThemeStorageKey);
+    render(
+      <Workbench
+        versions={[cuvBible, kjvBible]}
+        resources={sampleResources}
+        initialLayout={dualCenterLayout}
+      />,
+    );
+
+    const workbench = screen.getByRole("main");
+    expect(workbench).toHaveAttribute("data-paper-theme", "warm");
+    await userEvent.click(screen.getByRole("button", { name: "打开设置" }));
+    const paperButton = screen.getByRole("button", { name: "关闭纸张模式" });
+    expect(paperButton).toHaveAttribute("aria-pressed", "true");
+    expect(paperButton.querySelector(".toolbar-button__label")).toHaveTextContent("纸张模式");
+
+    await userEvent.click(paperButton);
+    expect(workbench).toHaveAttribute("data-paper-theme", "default");
+    expect(localStorage.getItem(paperThemeStorageKey)).toBe("default");
+    expect(screen.getByRole("button", { name: "开启纸张模式" })).toHaveAttribute("aria-pressed", "false");
+
+    await userEvent.click(screen.getByRole("button", { name: "开启纸张模式" }));
+    expect(workbench).toHaveAttribute("data-paper-theme", "warm");
+    expect(localStorage.getItem(paperThemeStorageKey)).toBe("warm");
+  });
+
+  it("restores the stored paper theme preference on load", async () => {
+    localStorage.setItem(paperThemeStorageKey, "default");
+    render(
+      <Workbench
+        versions={[cuvBible, kjvBible]}
+        resources={sampleResources}
+        initialLayout={dualCenterLayout}
+      />,
+    );
+    expect(screen.getByRole("main")).toHaveAttribute("data-paper-theme", "default");
+    await userEvent.click(screen.getByRole("button", { name: "打开设置" }));
+    expect(screen.getByRole("button", { name: "开启纸张模式" })).toHaveAttribute("aria-pressed", "false");
+  });
+
+  it("defaults to serif reading font and allows toggling to system sans", async () => {
+    localStorage.removeItem(readingFontStorageKey);
+    render(
+      <Workbench
+        versions={[cuvBible, kjvBible]}
+        resources={sampleResources}
+        initialLayout={dualCenterLayout}
+      />,
+    );
+
+    const workbench = screen.getByRole("main");
+    expect(workbench).toHaveAttribute("data-reading-font", "serif");
+    await userEvent.click(screen.getByRole("button", { name: "打开设置" }));
+    const fontButton = screen.getByRole("button", { name: "切换为系统字体" });
+    expect(fontButton).toHaveAttribute("aria-pressed", "true");
+    expect(fontButton.querySelector(".toolbar-button__label")).toHaveTextContent("书体");
+
+    await userEvent.click(fontButton);
+    expect(workbench).toHaveAttribute("data-reading-font", "sans");
+    expect(localStorage.getItem(readingFontStorageKey)).toBe("sans");
+    expect(screen.getByRole("button", { name: "切换为书体阅读字体" })).toHaveAttribute("aria-pressed", "false");
+
+    await userEvent.click(screen.getByRole("button", { name: "切换为书体阅读字体" }));
+    expect(workbench).toHaveAttribute("data-reading-font", "serif");
+    expect(localStorage.getItem(readingFontStorageKey)).toBe("serif");
+  });
+
+  it("moves paper and font controls into the left dock settings panel", async () => {
+    localStorage.removeItem(paperThemeStorageKey);
+    localStorage.removeItem(readingFontStorageKey);
+    render(
+      <Workbench
+        versions={[cuvBible, kjvBible]}
+        resources={sampleResources}
+        initialLayout={dualCenterLayout}
+      />,
+    );
+
+    const layoutGroup = screen.getByRole("group", { name: "布局操作" });
+    expect(within(layoutGroup).queryByRole("button", { name: "关闭纸张模式" })).not.toBeInTheDocument();
+    expect(within(layoutGroup).queryByRole("button", { name: "切换为系统字体" })).not.toBeInTheDocument();
+
+    await userEvent.click(screen.getByRole("button", { name: "打开设置" }));
+    const settingsPanel = screen.getByRole("dialog", { name: "阅读台设置" });
+    expect(within(settingsPanel).getByRole("button", { name: "关闭纸张模式" })).toBeVisible();
+    expect(within(settingsPanel).getByRole("button", { name: "切换为系统字体" })).toBeVisible();
   });
 
   it("scrolls every visible Bible module to the selected verse", async () => {
@@ -364,6 +903,79 @@ describe("Workbench", () => {
     expect(screen.getByRole("heading", { name: "创世记 Genesis 1" })).toBeInTheDocument();
     expect(within(rightDock).getByRole("article", { name: "起初，神创造天地" })).toBeInTheDocument();
     expect(within(rightDock).queryByRole("article", { name: "古代近东世界地图" })).not.toBeInTheDocument();
+  });
+
+  it("uses full-width masthead zones for previous and next chapter navigation", async () => {
+    render(
+      <Workbench
+        versions={[navigationCuv, navigationKjv]}
+        resources={bookIntroResources}
+        initialLayout={dualCenterLayout}
+      />,
+    );
+
+    const reader = screen.getByRole("region", { name: "双译本阅读区" });
+    const title = within(reader).getByRole("heading", { name: "创世记 Genesis 1" });
+    const previousChapter = within(reader).getByRole("button", { name: "上一章" });
+    const nextChapter = within(reader).getByRole("button", { name: "下一章" });
+
+    expect(previousChapter.compareDocumentPosition(title) & Node.DOCUMENT_POSITION_FOLLOWING).toBeTruthy();
+    expect(title.compareDocumentPosition(nextChapter) & Node.DOCUMENT_POSITION_FOLLOWING).toBeTruthy();
+    expect(previousChapter).toBeDisabled();
+    expect(nextChapter).not.toBeDisabled();
+    expect(within(reader).getByText("当前经节")).toBeInTheDocument();
+    expect(within(reader).queryByText(/study desk/i)).not.toBeInTheDocument();
+    expect(within(reader).getByText("Gen.1.1")).toBeInTheDocument();
+
+    await userEvent.click(nextChapter);
+    expect(within(reader).getByRole("heading", { name: "创世记 Genesis 2" })).toBeInTheDocument();
+    expect(within(reader).getByText("Gen.2.1")).toBeInTheDocument();
+    expect(previousChapter).not.toBeDisabled();
+
+    await userEvent.click(previousChapter);
+    expect(within(reader).getByRole("heading", { name: "创世记 Genesis 1" })).toBeInTheDocument();
+    expect(within(reader).getByText("Gen.1.1")).toBeInTheDocument();
+  });
+
+  it("closes the book picker on Escape and restores focus to the book button", async () => {
+    render(
+      <Workbench
+        versions={[navigationCuv, navigationKjv]}
+        resources={sampleResources}
+        initialLayout={dualCenterLayout}
+      />,
+    );
+
+    const bookButton = screen.getByRole("button", { name: "选择书卷 创世记" });
+    await userEvent.click(bookButton);
+    expect(screen.getByRole("dialog", { name: "书卷选择" })).toBeInTheDocument();
+
+    await userEvent.keyboard("{Escape}");
+    expect(screen.queryByRole("dialog", { name: "书卷选择" })).not.toBeInTheDocument();
+    expect(bookButton).toHaveFocus();
+
+    await userEvent.click(bookButton);
+    expect(screen.getByRole("dialog", { name: "书卷选择" })).toBeInTheDocument();
+    await userEvent.click(screen.getByRole("complementary", { name: "右侧资料栏" }));
+    expect(screen.queryByRole("dialog", { name: "书卷选择" })).not.toBeInTheDocument();
+  });
+
+  it("closes the chapter picker on Escape and restores focus to the chapter button", async () => {
+    render(
+      <Workbench
+        versions={[navigationCuv, navigationKjv]}
+        resources={sampleResources}
+        initialLayout={dualCenterLayout}
+      />,
+    );
+
+    const chapterButton = screen.getByRole("button", { name: "选择章节 第 1 章" });
+    await userEvent.click(chapterButton);
+    expect(screen.getByRole("dialog", { name: "章节选择" })).toBeInTheDocument();
+
+    await userEvent.keyboard("{Escape}");
+    expect(screen.queryByRole("dialog", { name: "章节选择" })).not.toBeInTheDocument();
+    expect(chapterButton).toHaveFocus();
   });
 
   it("groups and navigates verse-anchored resources by verse when bookIntro is stale", async () => {
@@ -521,7 +1133,7 @@ describe("Workbench", () => {
     expect(within(rightDock).getByRole("article", { name: "空虚混沌" })).toBeInTheDocument();
   });
 
-  it("labels right-side card categories as notes, commentary, media, and encyclopedia dictionary", () => {
+  it("merges dictionary cards into the encyclopedia category", () => {
     render(
       <Workbench
         versions={[cuvBible, kjvBible]}
@@ -534,9 +1146,70 @@ describe("Workbench", () => {
     expect(within(rightDock).getByRole("region", { name: "笔记" })).toBeInTheDocument();
     expect(within(rightDock).getByRole("region", { name: "注释" })).toBeInTheDocument();
     expect(within(rightDock).getByRole("region", { name: "媒体" })).toBeInTheDocument();
-    expect(within(rightDock).getByRole("region", { name: "百科和字典" })).toBeInTheDocument();
-    expect(within(rightDock).getAllByText("百科和字典").length).toBeGreaterThan(0);
+    expect(within(rightDock).getByRole("region", { name: "百科" })).toBeInTheDocument();
+    expect(within(rightDock).queryByRole("region", { name: "字典" })).not.toBeInTheDocument();
+    expect(within(rightDock).getByLabelText("资料类别快捷跳转")).toBeInTheDocument();
+    expect(within(rightDock).getByRole("button", { name: /跳转到注释/ })).toBeInTheDocument();
+    expect(within(rightDock).getByRole("button", { name: /跳转到媒体/ })).toBeInTheDocument();
+    expect(within(rightDock).getByRole("button", { name: /跳转到百科/ })).toBeInTheDocument();
+    expect(within(rightDock).queryByRole("button", { name: /跳转到字典/ })).not.toBeInTheDocument();
+    expect(within(rightDock).getByRole("button", { name: /跳转到笔记/ })).toBeInTheDocument();
     expect(within(rightDock).queryByText("回链")).not.toBeInTheDocument();
+  });
+
+  it("shows a dictionary-labelled link card inside encyclopedia with an encyclopedia type label", () => {
+    const legacyDictionaryResource = {
+      id: "gen-1-1-legacy-dictionary",
+      title: "圣经词典条目",
+      type: "link",
+      verses: ["Gen.1.1"],
+      body: "历史上标记为字典的链接卡片。",
+      category: "字典",
+    } as const;
+
+    render(
+      <Workbench
+        versions={[cuvBible, kjvBible]}
+        resources={[legacyDictionaryResource]}
+        initialLayout={dualCenterLayout}
+      />,
+    );
+
+    const rightDock = screen.getByRole("complementary", { name: "右侧资料栏" });
+    const encyclopediaSection = within(rightDock).getByRole("region", { name: "百科" });
+    const dictionaryCard = within(encyclopediaSection).getByRole("article", { name: "圣经词典条目" });
+
+    expect(dictionaryCard.querySelector(".resource-card__source-pill")).toHaveTextContent("百科");
+    expect(within(rightDock).queryByRole("region", { name: "字典" })).not.toBeInTheDocument();
+  });
+
+  it("migrates a visible legacy dictionary module into the merged encyclopedia module", () => {
+    localStorage.setItem(
+      layoutStorageKey,
+      JSON.stringify({
+        ...defaultWorkbenchLayout,
+        modules: [
+          ...defaultWorkbenchLayout.modules.map((module) => (
+            module.id === "encyclopedia" ? { ...module, visible: false } : module
+          )),
+          { id: "dictionary", title: "字典", side: "right", visible: true },
+        ],
+      }),
+    );
+
+    render(
+      <Workbench
+        versions={[navigationCuv, navigationKjv]}
+        resources={searchableResources}
+        initialLayout={dualCenterLayout}
+      />,
+    );
+
+    const rightDock = screen.getByRole("complementary", { name: "右侧资料栏" });
+    const encyclopediaSection = within(rightDock).getByRole("region", { name: "百科" });
+
+    expect(within(encyclopediaSection).getByRole("article", { name: "词典条目" })).toBeInTheDocument();
+    expect(within(rightDock).queryByRole("region", { name: "字典" })).not.toBeInTheDocument();
   });
 
   it("filters right-side source cards with toolbar card search and logs status", async () => {
@@ -597,6 +1270,69 @@ describe("Workbench", () => {
     expect(screen.getAllByRole("status").some((element) => element.textContent === "卡片搜索已清除")).toBe(true);
   });
 
+  it("keeps the ordinary right-dock empty copy when card search is not filtering", () => {
+    render(
+      <Workbench
+        versions={[navigationCuv, navigationKjv]}
+        resources={[]}
+        initialLayout={{
+          ...dualCenterLayout,
+          activeCenterModules: ["cuv", "card"],
+        }}
+      />,
+    );
+
+    const rightDock = screen.getByRole("complementary", { name: "右侧资料栏" });
+    const leftStack = getLeftOrganizedCardStack();
+    const centerCards = getCenterCurrentCardModule();
+
+    expect(within(rightDock).getAllByText("当前经节还没有资源。").length).toBeGreaterThan(0);
+    expect(within(rightDock).queryByText("没有匹配的卡片。")).not.toBeInTheDocument();
+    expect(within(centerCards).getByText("当前经文还没有卡片。")).toBeInTheDocument();
+    expect(within(centerCards).queryByText("没有匹配的卡片。")).not.toBeInTheDocument();
+    expect(leftStack).toHaveTextContent("还没有整理卡片");
+    expect(within(leftStack).queryByText("没有匹配的卡片。")).not.toBeInTheDocument();
+  });
+
+  it("shows a filtered-empty copy in the right dock and restores cards after clearing search", async () => {
+    render(
+      <Workbench
+        versions={[navigationCuv, navigationKjv]}
+        resources={searchableResources}
+        initialLayout={{
+          ...dualCenterLayout,
+          activeCenterModules: ["cuv", "card"],
+        }}
+      />,
+    );
+
+    const rightDock = screen.getByRole("complementary", { name: "右侧资料栏" });
+    const leftStack = getLeftOrganizedCardStack();
+    const centerCards = getCenterCurrentCardModule();
+    const cardSearch = screen.getByRole("search", { name: "卡片搜索" });
+    const searchInput = within(cardSearch).getByRole("searchbox", { name: "搜索卡片资源" });
+
+    expect(within(rightDock).getByRole("article", { name: "安静笔记" })).toBeInTheDocument();
+    expect(within(centerCards).getByRole("article", { name: "安静笔记" })).toBeInTheDocument();
+    expect(leftStack).toHaveTextContent("还没有整理卡片");
+
+    await userEvent.type(searchInput, "zzz-nomatch");
+
+    expect(within(rightDock).queryByRole("article", { name: "安静笔记" })).not.toBeInTheDocument();
+    expect(within(rightDock).getAllByText("没有匹配的卡片。").length).toBeGreaterThan(0);
+    expect(within(rightDock).queryByText("当前经节还没有资源。")).not.toBeInTheDocument();
+    expect(within(centerCards).getByRole("article", { name: "安静笔记" })).toBeInTheDocument();
+    expect(within(centerCards).queryByText("没有匹配的卡片。")).not.toBeInTheDocument();
+    expect(leftStack).toHaveTextContent("还没有整理卡片");
+    expect(within(leftStack).queryByText("没有匹配的卡片。")).not.toBeInTheDocument();
+    expect(within(cardSearch).getByRole("button", { name: "清除卡片搜索" })).toBeInTheDocument();
+
+    await userEvent.click(within(cardSearch).getByRole("button", { name: "清除卡片搜索" }));
+    expect(searchInput).toHaveValue("");
+    expect(within(rightDock).getByRole("article", { name: "安静笔记" })).toBeInTheDocument();
+    expect(within(rightDock).queryByText("没有匹配的卡片。")).not.toBeInTheDocument();
+  });
+
   it("exposes a top toolbar action for refreshing synced cards", async () => {
     let resolveRefresh: () => void = () => undefined;
     const refreshPromise = new Promise<void>((resolve) => {
@@ -623,8 +1359,9 @@ describe("Workbench", () => {
 	    await waitFor(() => {
 	      expect(screen.getAllByRole("status").some((element) => element.textContent === "卡片资源已刷新")).toBe(true);
 	    });
-		    expect(within(layoutGroup).getByText("已刷新")).toBeVisible();
-		  });
+	    expect(within(layoutGroup).getByText("已刷新")).toBeVisible();
+	    expect(within(layoutGroup).getByText("已刷新")).toHaveClass("toolbar-refresh-status");
+	  });
 
   it("guards against duplicate toolbar refresh requests before parent state catches up", async () => {
     let resolveRefresh: () => void = () => undefined;
@@ -834,8 +1571,8 @@ describe("Workbench", () => {
     const syncedCard = within(rightDock).getByRole("article", { name: "工作台已同步卡片" });
     const localCard = within(rightDock).getByRole("article", { name: "普通本地卡片" });
 
-    expect(within(syncedCard).getByRole("button", { name: "删除并退回未同步：工作台已同步卡片" })).toBeInTheDocument();
-    expect(within(localCard).queryByRole("button", { name: "删除并退回未同步：普通本地卡片" })).not.toBeInTheDocument();
+    expect(within(syncedCard).getByRole("button", { name: "删除并退回待复核：工作台已同步卡片" })).toBeInTheDocument();
+    expect(within(localCard).queryByRole("button", { name: "删除并退回待复核：普通本地卡片" })).not.toBeInTheDocument();
   });
 
   it("disables a card while unsync succeeds and records the interaction logs", async () => {
@@ -867,7 +1604,7 @@ describe("Workbench", () => {
 
     const rightDock = screen.getByRole("complementary", { name: "右侧资料栏" });
     const syncedCard = within(rightDock).getByRole("article", { name: "工作台已同步卡片" });
-    const deleteButton = within(syncedCard).getByRole("button", { name: "删除并退回未同步：工作台已同步卡片" });
+    const deleteButton = within(syncedCard).getByRole("button", { name: "删除并退回待复核：工作台已同步卡片" });
 
     await userEvent.click(deleteButton);
 
@@ -882,7 +1619,7 @@ describe("Workbench", () => {
     resolveUnsync();
     await waitFor(() => {
       expect(screen.getAllByRole("status").some((element) => (
-        element.textContent === "已删除并退回未同步：工作台已同步卡片"
+        element.textContent === "已删除并退回待复核：工作台已同步卡片"
       ))).toBe(true);
     });
     expect(infoSpy).toHaveBeenCalledWith("[workbench] resource unsync succeeded", {
@@ -921,7 +1658,7 @@ describe("Workbench", () => {
 
     const rightDock = screen.getByRole("complementary", { name: "右侧资料栏" });
     const syncedCard = within(rightDock).getByRole("article", { name: "工作台已同步卡片" });
-    const deleteButton = within(syncedCard).getByRole("button", { name: "删除并退回未同步：工作台已同步卡片" });
+    const deleteButton = within(syncedCard).getByRole("button", { name: "删除并退回待复核：工作台已同步卡片" });
     const editButton = within(syncedCard).getByRole("button", { name: "编辑工作台已同步卡片的标题和正文" });
 
     await userEvent.click(deleteButton);
@@ -960,7 +1697,7 @@ describe("Workbench", () => {
 
     const rightDock = screen.getByRole("complementary", { name: "右侧资料栏" });
     const syncedCard = within(rightDock).getByRole("article", { name: "工作台已同步卡片" });
-    const deleteButton = within(syncedCard).getByRole("button", { name: "删除并退回未同步：工作台已同步卡片" });
+    const deleteButton = within(syncedCard).getByRole("button", { name: "删除并退回待复核：工作台已同步卡片" });
     fireEvent.click(deleteButton);
     fireEvent.click(deleteButton);
 
@@ -970,7 +1707,7 @@ describe("Workbench", () => {
       expect(within(syncedCard).getByRole("alert")).toHaveTextContent("删除失败");
     });
     expect(screen.getAllByRole("status").some((element) => (
-      element.textContent === "删除并退回未同步失败：工作台已同步卡片"
+      element.textContent === "删除并退回待复核失败：工作台已同步卡片"
     ))).toBe(true);
     expect(consoleErrorSpy).toHaveBeenCalledWith(
       "[workbench] resource unsync failed",
@@ -1071,6 +1808,7 @@ describe("Workbench", () => {
 	      expect(within(layoutGroup).getByRole("alert")).toHaveTextContent("刷新失败");
 	    });
 	    expect(within(layoutGroup).getByRole("alert")).toBeVisible();
+	    expect(within(layoutGroup).getByRole("alert")).toHaveClass("toolbar-refresh-status");
 	    expect(screen.getAllByRole("status").some((element) => element.textContent === "卡片资源刷新失败")).toBe(true);
 	    consoleErrorSpy.mockRestore();
 	  });
@@ -1087,6 +1825,191 @@ describe("Workbench", () => {
     );
 
     expect(screen.getByRole("button", { name: "正在刷新卡片" })).toBeDisabled();
+  });
+
+  it("uses the production modern warm paper palette, book typography, and exact image blending", () => {
+    const markerIndex = styles.indexOf(productionPaperMarker);
+    expect(markerIndex).toBeGreaterThan(-1);
+    expect(styles).toContain('data-paper-theme="warm"');
+    expect(styles).toContain(".toolbar-button--paper");
+    expect(styles).toContain(".toolbar-button--font");
+    expect(styles).toContain('data-reading-font="serif"');
+    expect(styles).not.toContain("Modern warm paper demo");
+    expect(styles).toContain("Modern warm paper theme (toggleable)");
+    const taskRules = parseCssContractRules(styles.slice(markerIndex));
+    const allRules = parseCssContractRules(styles);
+    const rootRule = cssContractRule(taskRules, productionPaperRoot);
+    expect(rootRule.body).toMatch(/--canvas:\s*oklch\(/);
+
+    const readingFontRoot = '.workbench[data-reading-font="serif"]';
+    const readingFontRules = allRules.filter((rule) =>
+      rule.selectors.some((selector) => selector.startsWith(readingFontRoot))
+      && /font-family\s*:/.test(rule.body)
+    );
+    expect(readingFontRules.length).toBeGreaterThan(0);
+    for (const rule of readingFontRules) {
+      expect(rule.selectors.every((selector) => selector.startsWith(".workbench[data-reading-font="))).toBe(true);
+    }
+
+    const readingFaceRule = readingFontRules.find((rule) =>
+      rule.selectors.some((selector) => selector.includes(".verse-text"))
+      && rule.selectors.some((selector) => selector.includes(".resource-card__body"))
+      && rule.selectors.some((selector) => selector.includes(".resource-card__selectable-text"))
+      && rule.selectors.some((selector) => selector.includes("figcaption"))
+      && /Songti SC/.test(rule.body)
+    );
+    expect(readingFaceRule, "reading-area and card reading faces should share one Songti rule").toBeDefined();
+    expect(readingFaceRule!.body).toMatch(/Noto Serif CJK SC/);
+
+    const rightDockRhythm = allRules.find((rule) =>
+      rule.selectors.some((selector) => selector.includes(".resource-dock--right .resource-card") && selector.startsWith(readingFontRoot))
+      && /--resource-card-body-size\s*:\s*16\.5px/.test(rule.body)
+    );
+    expect(rightDockRhythm, "right-dock cards should use a book-like body size close to scripture rhythm").toBeDefined();
+    expect(rightDockRhythm!.body).toMatch(/--resource-card-body-line:\s*1\.78/);
+
+    const selectedVerseRule = cssContractRule(taskRules, `${productionPaperRoot} .verse-button[aria-current="true"]`);
+    expect(selectedVerseRule.body).toMatch(/background\s*:/);
+    expect(selectedVerseRule.body).toMatch(/border-color\s*:/);
+    expect(selectedVerseRule.body).not.toMatch(/border-(?:left|right)\s*:/);
+
+    const imageEffectRules = allRules.filter((rule) => /(?:^|;)\s*(?:filter|mix-blend-mode)\s*:/m.test(rule.body));
+    expect(imageEffectRules.length).toBeGreaterThan(0);
+    for (const rule of imageEffectRules) {
+      expect(rule.selectors.every((selector) => (
+        selector.startsWith(productionPaperRoot) && selector.includes('[data-paper-blend="true"]')
+      ))).toBe(true);
+    }
+
+    const paperBlendRule = cssContractRule(taskRules, `${productionPaperRoot} [data-paper-blend="true"]`);
+    expect(paperBlendRule.body).toMatch(/filter:\s*sepia\(/);
+    expect(paperBlendRule.body).toMatch(/mix-blend-mode:\s*multiply/);
+  });
+
+  it("uses a lighter lower-chroma warm-paper palette and restrained selected verse illumination", () => {
+    const markerIndex = styles.indexOf(productionPaperMarker);
+    const taskRules = parseCssContractRules(styles.slice(markerIndex));
+    const rootRule = cssContractRule(taskRules, productionPaperRoot);
+
+    expect(oklchToken(rootRule, "--canvas")).toEqual([0.94, 0.03, 94]);
+    expect(oklchToken(rootRule, "--surface")).toEqual([0.98, 0.022, 96]);
+    expect(oklchToken(rootRule, "--surface-2")).toEqual([0.96, 0.026, 94]);
+    expect(oklchToken(rootRule, "--surface-3")).toEqual([0.92, 0.028, 91]);
+    expect(oklchToken(rootRule, "--accent")).toEqual([0.56, 0.07, 72]);
+    expect(oklchToken(rootRule, "--accent-soft")).toEqual([0.95, 0.038, 88]);
+    expect(oklchToken(rootRule, "--accent-quiet")).toEqual([0.82, 0.046, 84]);
+    expect(rootRule.body).toMatch(/rgb\(255 248 196 \/ 24%\)/);
+    expect(rootRule.body).toMatch(/rgb\(218 188 116 \/ 7%\)/);
+
+    const selectedVerseRule = cssContractRule(taskRules, `${productionPaperRoot} .verse-button[aria-current="true"]`);
+    expect(selectedVerseRule.body).toMatch(/var\(--accent-soft\) 34%, var\(--surface\)/);
+    expect(selectedVerseRule.body).toMatch(/border-color:\s*color-mix\(in oklch, var\(--accent\) 38%, var\(--line\)\)/);
+    expect(selectedVerseRule.body).toMatch(/inset 0 0 0 1px/);
+  });
+
+  it("uses a dedicated high-contrast focus ring across warm-paper surfaces", () => {
+    const markerIndex = styles.indexOf(productionPaperMarker);
+    const taskRules = parseCssContractRules(styles.slice(markerIndex));
+    const rootRule = cssContractRule(taskRules, productionPaperRoot);
+    const focusRing = oklchToken(rootRule, "--focus-ring");
+    const warmSurfaces = ["--canvas", "--surface", "--surface-2", "--surface-3"]
+      .map((token) => oklchToken(rootRule, token));
+
+    for (const surface of warmSurfaces) {
+      expect(contrastRatio(focusRing, surface)).toBeGreaterThanOrEqual(3);
+    }
+
+    const focusSelectors = [
+      `${productionPaperRoot} button:focus-visible:not(:disabled)`,
+      `${productionPaperRoot} input:focus-visible:not(:disabled)`,
+      `${productionPaperRoot} textarea:focus-visible:not(:disabled)`,
+      `${productionPaperRoot} select:focus-visible:not(:disabled)`,
+      `${productionPaperRoot} a[href]:focus-visible`,
+      `${productionPaperRoot} .resource-card[tabindex="0"]:focus-visible:not([aria-disabled="true"])`,
+    ];
+    const focusRule = cssContractRule(taskRules, focusSelectors[0]);
+    expect(focusRule.selectors).toEqual(expect.arrayContaining(focusSelectors));
+    expect(focusRule.body).toMatch(/0 0 0 2px var\(--focus-halo\)/);
+    expect(focusRule.body).toMatch(/0 0 0 5px var\(--focus-ring\)/);
+    expect(focusRule.body).not.toMatch(/transparent|accent-soft/);
+  });
+
+  it("keeps warm focus rings above selected and pressed control shadows in the cascade", () => {
+    const markerIndex = styles.indexOf(productionPaperMarker);
+    const taskRules = parseCssContractRules(styles.slice(markerIndex));
+    const allRules = parseCssContractRules(styles);
+    const focusSelectors = [
+      `${productionPaperRoot} button:focus-visible:not(:disabled)`,
+      `${productionPaperRoot} input:focus-visible:not(:disabled)`,
+      `${productionPaperRoot} textarea:focus-visible:not(:disabled)`,
+      `${productionPaperRoot} select:focus-visible:not(:disabled)`,
+      `${productionPaperRoot} a[href]:focus-visible`,
+      `${productionPaperRoot} .resource-card[tabindex="0"]:focus-visible:not([aria-disabled="true"])`,
+    ];
+    const focusRule = cssContractRule(allRules, focusSelectors[0]);
+    expect(focusRule.selectors).toEqual(expect.arrayContaining(focusSelectors));
+
+    const stateSelectors = [
+      `${productionPaperRoot} .verse-button[aria-current="true"]`,
+      '.resource-card__action-button[aria-expanded="true"]',
+    ];
+    for (const stateSelector of stateSelectors) {
+      const stateRule = cssContractRule(allRules, stateSelector);
+      for (const focusSelector of focusSelectors) {
+        expect(compareCssSpecificity(
+          cssSpecificity(focusSelector),
+          cssSpecificity(stateSelector),
+        )).toBeGreaterThanOrEqual(0);
+      }
+      expect(allRules.indexOf(focusRule)).toBeGreaterThan(allRules.indexOf(stateRule));
+    }
+  });
+
+  it("uses an AA warm-paper text token at the real placeholder and search metadata sites", () => {
+    const markerIndex = styles.indexOf(productionPaperMarker);
+    const taskRules = parseCssContractRules(styles.slice(markerIndex));
+    const rootRule = cssContractRule(taskRules, productionPaperRoot);
+    const muted = oklchToken(rootRule, "--muted");
+    const surface = oklchToken(rootRule, "--surface");
+
+    expect(contrastRatio(muted, surface)).toBeGreaterThanOrEqual(4.5);
+    expect(cssContractRule(taskRules, `${productionPaperRoot} .card-search input::placeholder`).body).toMatch(/color:\s*var\(--muted\)/);
+    expect(cssContractRule(taskRules, `${productionPaperRoot} .bible-search input::placeholder`).body).toMatch(/color:\s*var\(--muted\)/);
+    expect(cssContractRule(taskRules, `${productionPaperRoot} .bible-search-result__meta > span`).body).toMatch(/color:\s*var\(--muted\)/);
+  });
+
+  it("defines distinct visible warm-paper backgrounds for the reader, docks, and cards", () => {
+    const markerIndex = styles.indexOf(productionPaperMarker);
+    const taskRules = parseCssContractRules(styles.slice(markerIndex));
+    const surfaceSelectors = [
+      `${productionPaperRoot} .reader-pane`,
+      `${productionPaperRoot} .resource-dock`,
+      `${productionPaperRoot} .resource-card:not(.resource-card--video)`,
+    ];
+    const surfaceBackgrounds = surfaceSelectors.map((selector) => {
+      const rule = cssContractRule(taskRules, selector);
+      const background = rule.body.match(/(?:^|;)\s*background:\s*([^;]+);/m)?.[1] ?? "";
+      expect(background).toContain("var(--");
+      expect(background).not.toMatch(/(?:rgb|oklch)\(/);
+      return background.replace(/\s+/g, " ").trim();
+    });
+
+    expect(new Set(surfaceBackgrounds).size).toBe(surfaceBackgrounds.length);
+  });
+
+  it("limits the warm-paper reduced-motion override to the production workbench", () => {
+    const markerIndex = styles.indexOf(productionPaperMarker);
+    const taskRules = parseCssContractRules(styles.slice(markerIndex));
+    const reducedMotionAtRule = "@media (prefers-reduced-motion: reduce)";
+    const reducedMotionRules = taskRules.filter((rule) => /transition-duration:\s*0\.01ms/.test(rule.body));
+    const rulesInsideReducedMotion = reducedMotionRules.filter((rule) => rule.atRules?.includes(reducedMotionAtRule));
+    const rulesOutsideReducedMotion = reducedMotionRules.filter((rule) => !rule.atRules?.includes(reducedMotionAtRule));
+
+    expect(rulesInsideReducedMotion.length).toBeGreaterThan(0);
+    expect(rulesOutsideReducedMotion).toHaveLength(0);
+    for (const rule of rulesInsideReducedMotion) {
+      expect(rule.selectors.every((selector) => selector.startsWith(productionPaperRoot))).toBe(true);
+    }
   });
 
   it("guards toolbar card search offset and rounded resource card CSS polish", () => {
@@ -1107,6 +2030,66 @@ describe("Workbench", () => {
     expect(styles).toMatch(/\.resource-card__source-pill\s*{[^}]*padding:\s*2px 7px/s);
     expect(styles).toMatch(/\.resource-card__source-pill\s*{[^}]*letter-spacing:\s*0/s);
     expect(styles).toMatch(/\.resource-card__source-pill\s*{[^}]*text-transform:\s*none/s);
+  });
+
+  it("uses a non-shrinking two-row toolbar contract before controls can overlap", () => {
+    expect(styles).toMatch(
+      /\.toolbar__group--modules\s*{[^}]*flex:\s*0 0 auto;[^}]*min-width:\s*max-content;/s,
+    );
+    expect(styles).toMatch(
+      /@media\s*\(max-width:\s*1450px\)\s*{[\s\S]*?\.workbench\s*{[^}]*grid-template-rows:\s*88px minmax\(0,\s*1fr\)/s,
+    );
+    expect(styles).toMatch(
+      /@media\s*\(max-width:\s*1450px\)\s*{[\s\S]*?\.toolbar\s*{[^}]*display:\s*grid;[^}]*grid-template-areas:\s*"brand chapter modules layout"\s*"\. card-search bible-search \."/s,
+    );
+    expect(styles).toMatch(
+      /@media\s*\(max-width:\s*1450px\)\s*{[\s\S]*?\.toolbar\s*{[^}]*grid-template-columns:\s*max-content max-content minmax\(max-content,\s*1fr\) max-content/s,
+    );
+    expect(styles).toMatch(
+      /@media\s*\(max-width:\s*1450px\)\s*{[\s\S]*?\.card-search\s*{[^}]*grid-area:\s*card-search;[^}]*justify-self:\s*start;[^}]*margin-left:\s*0;[^}]*width:\s*clamp\(200px,\s*22vw,\s*296px\)/s,
+    );
+    expect(styles).toMatch(
+      /@media\s*\(max-width:\s*1450px\)\s*{[\s\S]*?\.bible-search\s*{[^}]*grid-area:\s*bible-search;[^}]*justify-self:\s*start;[^}]*width:\s*clamp\(276px,\s*28vw,\s*420px\)/s,
+    );
+  });
+
+  it("keeps the workbench grid within a 900px viewport while controls stay reachable", () => {
+    const originalInnerWidth = window.innerWidth;
+    Object.defineProperty(window, "innerWidth", {
+      configurable: true,
+      value: 900,
+      writable: true,
+    });
+
+    try {
+      const { container } = render(
+        <Workbench
+          versions={[cuvBible, kjvBible]}
+          resources={sampleResources}
+          initialLayout={defaultWorkbenchLayout}
+        />,
+      );
+
+      const grid = container.querySelector<HTMLElement>(".workbench-grid");
+      expect(grid).not.toBeNull();
+      const minimumTracks = Array.from(grid!.style.gridTemplateColumns.matchAll(/minmax\((\d+)px,/g))
+        .map((match) => Number(match[1]));
+      expect(minimumTracks).toHaveLength(3);
+      expect(minimumTracks.reduce((total, width) => total + width, 16)).toBeLessThanOrEqual(window.innerWidth);
+
+      expect(screen.getByRole("button", { name: "和合本" })).toBeEnabled();
+      expect(screen.getByRole("button", { name: "KJV" })).toBeEnabled();
+      expect(screen.getByRole("button", { name: "卡片" })).toBeEnabled();
+      expect(screen.getByRole("searchbox", { name: "搜索卡片资源" })).toBeInTheDocument();
+      expect(screen.getByRole("searchbox", { name: "搜索经文" })).toBeInTheDocument();
+      expect(screen.getByRole("button", { name: "保存布局" })).toBeInTheDocument();
+    } finally {
+      Object.defineProperty(window, "innerWidth", {
+        configurable: true,
+        value: originalInnerWidth,
+        writable: true,
+      });
+    }
   });
 
   it("upgrades cramped persisted side widths to the roomier defaults", () => {
@@ -1335,6 +2318,7 @@ describe("Workbench", () => {
 
     expect(writeText).toHaveBeenCalledWith(expect.stringContaining("“起初”声明时间、宇宙和历史都在神的创造中开始"));
     expect(screen.getAllByRole("status").some((element) => element.textContent === "已复制：正文")).toBe(true);
+    expect(screen.getByText("已复制：正文")).toHaveClass("workbench-status");
   });
 
   it("copies a resource card as Markdown from the card action menu", async () => {
@@ -1527,6 +2511,65 @@ describe("Workbench", () => {
     expect(screen.getAllByRole("status").some((element) => element.textContent === "已更新卡片文字：创世记 1:1 标题测试")).toBe(true);
   });
 
+  it("replaces a local range card placement when its scripture location is edited", async () => {
+    const title = "苏维埃五日周历法测试卡";
+    const relocationCuv: BibleVersion = {
+      ...navigationCuv,
+      verses: [
+        ...navigationCuv.verses,
+        { id: "Gen.2.2", book: "Gen", chapter: 2, verse: 2, text: "到第七日，神造物的工已经完毕。" },
+        { id: "Gen.2.3", book: "Gen", chapter: 2, verse: 3, text: "神赐福给第七日，定为圣日。" },
+      ],
+    };
+    render(
+      <Workbench
+        versions={[relocationCuv, navigationKjv]}
+        resources={[
+          {
+            id: "local-soviet-calendar",
+            title,
+            type: "image",
+            verses: ["Gen.2.1", "Gen.2.2", "Gen.2.3"],
+            primaryAnchor: "Gen.2.1",
+            body: "苏联曾实施五日周历法。",
+            assetPath: "/resources/test/soviet-calendar.png",
+            debugMeta: {
+              coverageRanges: [{ start: "Gen.2.1", end: "Gen.2.3" }],
+            },
+          },
+        ]}
+        initialLayout={{
+          ...dualCenterLayout,
+          centerModules: ["kjv", "cuv", "card"],
+          activeCenterModules: ["cuv", "card"],
+        }}
+        initialVerseId="Gen.2.1"
+      />,
+    );
+
+    const rightDock = screen.getByRole("complementary", { name: "右侧资料栏" });
+    const cardModule = getCenterCurrentCardModule();
+    const rightCard = within(rightDock).getByRole("article", { name: title });
+    expect(within(cardModule).getByRole("article", { name: title })).toBeInTheDocument();
+
+    await userEvent.click(within(rightCard).getByRole("button", { name: `编辑${title}的标题和正文` }));
+    const editor = within(rightCard).getByRole("form", { name: `编辑${title}` });
+    const locationInput = within(editor).getByRole("textbox", { name: "经文定位" });
+    await userEvent.clear(locationInput);
+    await userEvent.type(locationInput, "Gen.2.2");
+    await userEvent.click(within(editor).getByRole("button", { name: "保存卡片文字" }));
+
+    expect(within(cardModule).queryByRole("article", { name: title })).not.toBeInTheDocument();
+    expect(within(rightDock).getByRole("article", { name: title })).toBeInTheDocument();
+
+    await userEvent.click(screen.getByTestId("cuv-Gen.2.2"));
+    expect(within(cardModule).getByRole("article", { name: title })).toBeInTheDocument();
+
+    await userEvent.click(screen.getByTestId("cuv-Gen.2.3"));
+    expect(within(cardModule).queryByRole("article", { name: title })).not.toBeInTheDocument();
+    expect(within(rightDock).getByRole("article", { name: title })).toBeInTheDocument();
+  });
+
   it("syncs workbench-sourced card text edits through the parent before showing them locally", async () => {
     const infoSpy = vi.spyOn(console, "info").mockImplementation(() => undefined);
     const onUpdateWorkbenchResource = vi.fn().mockResolvedValue(undefined);
@@ -1568,12 +2611,14 @@ describe("Workbench", () => {
     await waitFor(() => {
       expect(onUpdateWorkbenchResource).toHaveBeenCalledWith("workbench-synced-only", {
         body: "OHB 写回后的正文",
+        primaryAnchor: "Gen.1.1",
         title: "OHB 写回后的标题",
       });
     });
     expect(localStorage.getItem("one-holy-bible-resource-edits")).toBeNull();
     expect(screen.getAllByRole("status").some((element) => (
-      element.textContent === "已同步卡片修改：OHB 写回后的标题"
+      element.textContent === "已保存并进入工作台「已编辑」：OHB 写回后的标题"
+      || element.textContent === "已同步卡片修改：OHB 写回后的标题"
     ))).toBe(true);
     expect(infoSpy).toHaveBeenCalledWith("[workbench] resource card edit sync succeeded", {
       resourceId: "workbench-synced-only",
@@ -1615,7 +2660,7 @@ describe("Workbench", () => {
     await userEvent.click(within(syncedCard).getByRole("button", { name: "编辑工作台已同步卡片的标题和正文" }));
 
     const editor = within(syncedCard).getByRole("form", { name: "编辑工作台已同步卡片" });
-    const deleteButton = within(syncedCard).getByRole("button", { name: "删除并退回未同步：工作台已同步卡片" });
+    const deleteButton = within(syncedCard).getByRole("button", { name: "删除并退回待复核：工作台已同步卡片" });
     await userEvent.click(within(editor).getByRole("button", { name: "保存卡片文字" }));
 
     expect(within(editor).getByRole("button", { name: "保存中" })).toBeDisabled();
@@ -1623,7 +2668,8 @@ describe("Workbench", () => {
     resolveUpdate();
     await waitFor(() => {
       expect(screen.getAllByRole("status").some((element) => (
-        element.textContent === "已同步卡片修改：工作台已同步卡片"
+        element.textContent === "已保存并进入工作台「已编辑」：工作台已同步卡片"
+        || element.textContent === "已同步卡片修改：工作台已同步卡片"
       ))).toBe(true);
     });
   });
@@ -1674,7 +2720,7 @@ describe("Workbench", () => {
     expect(bodyInput).toHaveValue("失败时保留正文");
     expect(localStorage.getItem("one-holy-bible-resource-edits")).toBeNull();
     expect(screen.getAllByRole("status").some((element) => (
-      element.textContent === "卡片修改同步失败：工作台已同步卡片"
+      element.textContent?.startsWith("卡片修改同步失败：工作台已同步卡片")
     ))).toBe(true);
     expect(consoleErrorSpy).toHaveBeenCalledWith(
       "[workbench] resource card edit sync failed",
@@ -1962,6 +3008,163 @@ describe("Workbench", () => {
     expect(screen.getAllByTestId("center-module").map((element) => element.getAttribute("data-module-id"))).toEqual(["cuv", "kjv"]);
   });
 
+  it("shows a left commentary resource library picker instead of study tools", async () => {
+    render(
+      <Workbench
+        versions={[cuvBible, kjvBible]}
+        resources={sampleResources}
+        initialLayout={defaultWorkbenchLayout}
+      />,
+    );
+
+    const library = getLeftResourceLibrary();
+    expect(within(library).getByRole("button", { name: /综合解读/ })).toBeInTheDocument();
+    expect(within(library).getByRole("button", { name: /研读本圣经/ })).toBeInTheDocument();
+    expect(within(library).getByRole("button", { name: /圣经研修本/ })).toBeInTheDocument();
+    expect(within(library).getByRole("button", { name: /圣经信息系列/ })).toBeInTheDocument();
+
+    const leftDock = screen.getByRole("complementary", { name: "左侧资料栏" });
+    expect(within(leftDock).queryByText("学习工具")).not.toBeInTheDocument();
+    expect(within(leftDock).queryByText("我的资料")).not.toBeInTheDocument();
+    expect(within(leftDock).getByText("资源库")).toBeInTheDocument();
+    expect(within(leftDock).queryByRole("button", { name: "添加资源库" })).not.toBeInTheDocument();
+    expect(getLeftOrganizedCardStack()).toBeInTheDocument();
+  });
+
+  it("scopes only text commentary libraries while keeping image cards unscoped", () => {
+    const zongheText = {
+      id: "t-zonghe",
+      title: "综合解读卡",
+      type: "commentary" as const,
+      verses: ["Gen.1.1" as const],
+      source: "圣经综合解读·创世记",
+      body: "text",
+    };
+    const yanduText = {
+      id: "t-yandu",
+      title: "研读本卡",
+      type: "commentary" as const,
+      verses: ["Gen.1.1" as const],
+      source: "研读本圣经·创世记",
+      body: "text",
+    };
+    const imageCard = {
+      id: "t-image",
+      title: "插图卡",
+      type: "image" as const,
+      verses: ["Gen.1.1" as const],
+      source: "BibleEveryone 聖經圖庫",
+      body: "image",
+      assetPath: "/images/sample.png",
+    };
+    const noteCard = {
+      id: "t-note",
+      title: "用户笔记",
+      type: "note" as const,
+      verses: ["Gen.1.1" as const],
+      source: "用户笔记",
+      body: "note",
+    };
+
+    const ocrCaption = {
+      id: "t-ocr",
+      title: "图注卡",
+      type: "commentary" as const,
+      verses: ["Exod.3.15" as const],
+      source: "visible-image-text-ocr-conversion",
+      body: "text",
+    };
+
+    expect(commentaryLibraryIdForResource(zongheText)).toBe("zonghe");
+    expect(commentaryLibraryIdForResource(yanduText)).toBe("yandu");
+    expect(commentaryLibraryIdForResource(imageCard)).toBeNull();
+    expect(commentaryLibraryIdForResource(noteCard)).toBeNull();
+    expect(commentaryLibraryIdFromLabel("image-text-ocr-conversion")).toBeNull();
+    expect(commentaryLibraryIdFromLabel("visible-image-text-ocr-conversion")).toBeNull();
+    expect(commentaryLibraryIdFromLabel("综合解读·图注")).toBeNull();
+    expect(commentaryLibraryIdFromLabel("圣经综合解读·创世记")).toBe("zonghe");
+    expect(commentaryLibraryIdForResource(ocrCaption)).toBeNull();
+    expect(resourceMatchesSelectedCommentaryLibrary(ocrCaption, "zonghe")).toBe(true);
+
+    expect(resourceMatchesSelectedCommentaryLibrary(zongheText, "zonghe")).toBe(true);
+    expect(resourceMatchesSelectedCommentaryLibrary(yanduText, "zonghe")).toBe(false);
+    expect(resourceMatchesSelectedCommentaryLibrary(imageCard, "zonghe")).toBe(true);
+    expect(resourceMatchesSelectedCommentaryLibrary(noteCard, "zonghe")).toBe(true);
+    expect(resourceMatchesSelectedCommentaryLibrary(yanduText, "yandu")).toBe(true);
+  });
+
+  it("filters right-dock text cards by the single selected commentary library", async () => {
+    const resources = [
+      {
+        id: "lib-zonghe-gen-1-1",
+        title: "创世记 1:1 综合解读",
+        type: "commentary" as const,
+        verses: ["Gen.1.1" as const],
+        source: "圣经综合解读·创世记",
+        body: "综合解读正文。",
+      },
+      {
+        id: "lib-yandu-gen-1-1",
+        title: "创世记 1:1 研读本注释",
+        type: "commentary" as const,
+        verses: ["Gen.1.1" as const],
+        source: "研读本圣经·创世记",
+        body: "研读本正文。",
+      },
+      {
+        id: "lib-yanxiu-gen-1-1",
+        title: "创世记 1:1 研修本注释",
+        type: "commentary" as const,
+        verses: ["Gen.1.1" as const],
+        source: "圣经研修本 01_创世记-v3",
+        body: "研修本正文。",
+      },
+      {
+        id: "lib-image-gen-1-1",
+        title: "创世记 1:1 插图",
+        type: "image" as const,
+        verses: ["Gen.1.1" as const],
+        source: "BibleEveryone 聖經圖庫",
+        body: "图片说明",
+        assetPath: "/images/sample.png",
+      },
+    ];
+
+    render(
+      <Workbench
+        versions={[cuvBible, kjvBible]}
+        resources={resources}
+        initialLayout={defaultWorkbenchLayout}
+      />,
+    );
+
+    const rightDock = screen.getByRole("complementary", { name: "右侧资料栏" });
+    const library = getLeftResourceLibrary();
+
+    // Default selected library is 综合解读: only that text source + all images.
+    expect(within(rightDock).getByRole("article", { name: "创世记 1:1 综合解读" })).toBeInTheDocument();
+    expect(within(rightDock).queryByRole("article", { name: "创世记 1:1 研读本注释" })).not.toBeInTheDocument();
+    expect(within(rightDock).queryByRole("article", { name: "创世记 1:1 研修本注释" })).not.toBeInTheDocument();
+    expect(within(rightDock).getByRole("article", { name: "创世记 1:1 插图" })).toBeInTheDocument();
+    expect(within(library).getByRole("button", { name: /综合解读/ })).toHaveAttribute("aria-pressed", "true");
+
+    await userEvent.click(within(library).getByRole("button", { name: /研读本圣经/ }));
+
+    expect(within(rightDock).queryByRole("article", { name: "创世记 1:1 综合解读" })).not.toBeInTheDocument();
+    expect(within(rightDock).getByRole("article", { name: "创世记 1:1 研读本注释" })).toBeInTheDocument();
+    expect(within(rightDock).queryByRole("article", { name: "创世记 1:1 研修本注释" })).not.toBeInTheDocument();
+    expect(within(rightDock).getByRole("article", { name: "创世记 1:1 插图" })).toBeInTheDocument();
+    expect(within(library).getByRole("button", { name: /研读本圣经/ })).toHaveAttribute("aria-pressed", "true");
+    expect(within(library).getByRole("button", { name: /综合解读/ })).toHaveAttribute("aria-pressed", "false");
+
+    await userEvent.click(within(library).getByRole("button", { name: /圣经研修本/ }));
+
+    expect(within(rightDock).queryByRole("article", { name: "创世记 1:1 综合解读" })).not.toBeInTheDocument();
+    expect(within(rightDock).queryByRole("article", { name: "创世记 1:1 研读本注释" })).not.toBeInTheDocument();
+    expect(within(rightDock).getByRole("article", { name: "创世记 1:1 研修本注释" })).toBeInTheDocument();
+    expect(within(rightDock).getByRole("article", { name: "创世记 1:1 插图" })).toBeInTheDocument();
+  });
+
   it("shows the left organized-card workspace without resource category grouping", async () => {
     render(
       <Workbench
@@ -2004,8 +3207,8 @@ describe("Workbench", () => {
     expect(imageCard.querySelector(".resource-card__header")).toContainElement(collapseButton);
     expect(imageCard.querySelector(".resource-card__leading-action")).toContainElement(collapseButton);
     expect(imageCard.querySelector(".resource-card__actions")).not.toContainElement(collapseButton);
-    expect(styles).toMatch(/\.resource-card__verse-nav\s*{[^}]*width:\s*22px/s);
-    expect(styles).toMatch(/\.resource-card--center\s+\.resource-card__header\s*{[^}]*padding:\s*4px 58px 4px 80px/s);
+    expect(styles).toMatch(/\.resource-card__verse-nav\s*{[^}]*width:\s*24px/s);
+    expect(styles).toMatch(/\.resource-card--center\s+\.resource-card__header\s*{[^}]*padding:\s*8px 10px/s);
     expect(styles).toMatch(/\.resource-card--center\s+\.resource-card__body\s*{[^}]*position:\s*relative/s);
     expect(styles).toMatch(/\.resource-card__body-actions\s*{[^}]*bottom:\s*10px/s);
 
@@ -2036,7 +3239,7 @@ describe("Workbench", () => {
     const rightDock = screen.getByRole("complementary", { name: "右侧资料栏" });
     await userEvent.dblClick(within(rightDock).getByRole("article", { name: "创世记导论视频" }));
     await waitForDndClickSuppressionCleanup();
-    const center = screen.getByRole("region", { name: "中间工作区" });
+    const introCanvas = screen.getByRole("region", { name: "创世记书卷序" });
     const cardModule = getLeftOrganizedCardStack();
     const introCard = within(cardModule).getByRole("article", { name: "创世记导论视频" });
     const introNavigationButton = within(introCard).getByRole("button", { name: "跳转到 创世记序：创世记导论视频" });
@@ -2045,8 +3248,9 @@ describe("Workbench", () => {
 
     await userEvent.click(introNavigationButton);
 
-    expect(screen.getByRole("heading", { name: "和合本 / 创世记 序" })).toBeInTheDocument();
-    expect(within(center).getByRole("region", { name: "当前经文已有卡片" })).toBeInTheDocument();
+    expect(screen.getByRole("heading", { name: "创世记 Genesis 序" })).toBeInTheDocument();
+    expect(introCanvas).toBeInTheDocument();
+    expect(within(introCanvas).getByRole("region", { name: "书卷背景" })).toBeInTheDocument();
   });
 
   it("opens a dismissible enlarged preview when a left organized image is clicked", async () => {
@@ -2058,23 +3262,27 @@ describe("Workbench", () => {
           ...defaultWorkbenchLayout,
           centerModules: ["kjv", "cuv", "card"],
           activeCenterModules: ["cuv", "card"],
-          centerCardResourceIds: [genesisMathImageId],
-          activeResourceId: genesisMathImageId,
+          centerCardResourceIds: [genesisPaperBlendImageId],
+          activeResourceId: genesisPaperBlendImageId,
         }}
       />,
     );
 
     const cardModule = getLeftOrganizedCardStack();
-    const imageCard = getResourceArticleByTitle(cardModule, genesisMathImageTitle);
-    const image = within(imageCard).getByRole("img", { name: genesisMathImageTitle });
+    const imageCard = getResourceArticleByTitle(cardModule, genesisPaperBlendImageTitle);
+    const image = within(imageCard).getByRole("img", { name: genesisPaperBlendImageTitle });
+
+    expect(image).toHaveAttribute("data-paper-blend", "true");
 
     await userEvent.click(image);
 
-    const dialog = screen.getByRole("dialog", { name: `图片预览：${genesisMathImageTitle}` });
-    expect(within(dialog).getByRole("img", { name: genesisMathImageTitle })).toHaveAttribute("src", image.getAttribute("src"));
+    const dialog = screen.getByRole("dialog", { name: `图片预览：${genesisPaperBlendImageTitle}` });
+    const lightboxImage = within(dialog).getByRole("img", { name: genesisPaperBlendImageTitle });
+    expect(lightboxImage).toHaveAttribute("src", image.getAttribute("src"));
+    expect(lightboxImage).toHaveAttribute("data-paper-blend", "true");
 
     await userEvent.click(within(dialog).getByRole("button", { name: "关闭图片预览" }));
-    expect(screen.queryByRole("dialog", { name: `图片预览：${genesisMathImageTitle}` })).not.toBeInTheDocument();
+    expect(screen.queryByRole("dialog", { name: `图片预览：${genesisPaperBlendImageTitle}` })).not.toBeInTheDocument();
   });
 
   it("opens the same enlarged preview when a center current-verse image is clicked", async () => {
@@ -2191,7 +3399,7 @@ describe("Workbench", () => {
     expect(image).toHaveAttribute("loading", "eager");
     expect(image).toHaveAttribute("width", "640");
     expect(image).toHaveAttribute("height", "480");
-    expect(within(imageCard).getByText("CMC-01_副本")).toBeInTheDocument();
+    expect(imageCard.querySelector(".resource-card__source-pill")).toHaveTextContent("媒体");
     expect(within(imageCard).getByText("Source package preview.")).toBeInTheDocument();
     expect(within(imageCard).queryByText("图片 / 地图 / 图表")).not.toBeInTheDocument();
   });
@@ -2225,7 +3433,8 @@ describe("Workbench", () => {
     const figureCaption = imageCard.querySelector("figcaption");
 
     expect(figureCaption).toHaveTextContent("耶路撒冷附近出土的主前 1500 年牛腿刀（Khopesh），长 58 厘米。");
-    expect(figureCaption).not.toHaveTextContent(/摘要：|关联经文：|依据：/);
+    expect(figureCaption).not.toHaveTextContent(/摘要：|关联经文：|依据：|CMC-01_副本/);
+    expect(within(imageCard).queryByText("CMC-01_副本")).not.toBeInTheDocument();
     expect(within(imageCard).queryByText(/摘要：/)).not.toBeInTheDocument();
     expect(within(imageCard).queryByText(/关联经文：/)).not.toBeInTheDocument();
     expect(within(imageCard).queryByText(/依据：/)).not.toBeInTheDocument();
@@ -2529,17 +3738,25 @@ describe("Workbench", () => {
     const collapseButton = within(cardModule).getByRole("button", { name: "折叠 起初，神创造天地" });
     expect(dragHandle).toBeInTheDocument();
     expect(header).toContainElement(leadingAction);
-    expect(Array.from(header?.children ?? []).slice(0, 2)).toEqual([dragHandle, leadingAction]);
+    const headerStart = currentVerseCard.querySelector(".resource-card__header-start");
+    expect(headerStart).toBeInTheDocument();
+    expect(headerStart).toContainElement(dragHandle);
+    expect(headerStart).toContainElement(leadingAction);
+    expect(Array.from(header?.children ?? []).map((element) => element.className)).toEqual([
+      "resource-card__header-start",
+      "resource-card__title resource-card__selectable-title",
+      "resource-card__actions",
+    ]);
     expect(leadingAction).toContainElement(verseNavigationButton);
     expect(leadingAction).toContainElement(collapseButton);
     expect(Array.from(leadingAction?.children ?? [])).toEqual([verseNavigationButton, collapseButton]);
     expect(currentVerseCard.querySelector(".resource-card__actions")).not.toContainElement(collapseButton);
     expect(collapseButton).toHaveAttribute("aria-expanded", "true");
     expect(collapseButton).not.toHaveTextContent("折叠");
-    expect(styles).toMatch(/\.resource-card--current-verse\s+\.drag-handle\s*{[^}]*width:\s*12px/s);
+    expect(styles).toMatch(/\.resource-card--current-verse\s+\.drag-handle\s*{[^}]*width:\s*24px/s);
     expect(styles).toMatch(/\.resource-card--current-verse\s+\.resource-card__leading-action\s*{[^}]*position:\s*static/s);
     expect(styles).toMatch(/\.resource-card--current-verse\s+\.saved-card-collapse\s*{[^}]*position:\s*static/s);
-    expect(styles).toMatch(/\.resource-card--current-verse\s+\.resource-card__header\s*{[^}]*padding:\s*6px 84px 6px 10px/s);
+    expect(styles).toMatch(/\.resource-card--current-verse\s+\.resource-card__header\s*{[^}]*padding:\s*8px 10px/s);
     await userEvent.click(collapseButton);
 
     expect(consoleInfoSpy).toHaveBeenCalledWith(
@@ -2651,7 +3868,7 @@ describe("Workbench", () => {
     expect(within(cardModule).getByLabelText("当前经文卡片选择")).toHaveTextContent("当前经文2");
     expect(within(cardModule).getByRole("article", { name: "工作台已同步卡片" })).toBeInTheDocument();
 
-    await userEvent.click(within(cardModule).getByRole("button", { name: "删除并退回未同步：工作台已同步卡片" }));
+    await userEvent.click(within(cardModule).getByRole("button", { name: "删除并退回待复核：工作台已同步卡片" }));
 
     expect(onUnsyncResource).toHaveBeenCalledWith("workbench-synced-only");
     await waitFor(() => {
@@ -2660,7 +3877,7 @@ describe("Workbench", () => {
     expect(within(cardModule).getByLabelText("当前经文卡片选择")).toHaveTextContent("当前经文1");
     expect(within(cardModule).getByRole("article", { name: "普通本地卡片" })).toBeInTheDocument();
     expect(screen.getAllByRole("status").some((element) => (
-      element.textContent === "已删除并退回未同步：工作台已同步卡片"
+      element.textContent === "已删除并退回待复核：工作台已同步卡片"
     ))).toBe(true);
   });
 
@@ -2756,18 +3973,20 @@ describe("Workbench", () => {
     const rightDock = screen.getByRole("complementary", { name: "右侧资料栏" });
     const rightVerseCard = within(rightDock).getByRole("article", { name: "空虚混沌" });
     const header = rightVerseCard.querySelector(".resource-card__header");
+    const headerStart = rightVerseCard.querySelector(".resource-card__header-start");
     const dragHandle = rightVerseCard.querySelector(".drag-handle");
     const leadingAction = rightVerseCard.querySelector(".resource-card__leading-action");
     const title = rightVerseCard.querySelector(".resource-card__title");
     const verseNavigationButton = within(rightVerseCard).getByRole("button", { name: "跳转到 Gen.1.2：空虚混沌" });
     const copyButton = within(rightVerseCard).getByRole("button", { name: "打开空虚混沌复制菜单" });
 
-    expect(Array.from(header?.children ?? []).slice(0, 3)).toEqual([dragHandle, leadingAction, title]);
+    expect(Array.from(header?.children ?? []).slice(0, 2)).toEqual([headerStart, title]);
+    expect(Array.from(headerStart?.children ?? [])).toEqual([dragHandle, leadingAction]);
     expect(leadingAction).toContainElement(verseNavigationButton);
     expect(rightVerseCard.querySelector(".resource-card__actions")).toContainElement(copyButton);
     expect(rightVerseCard.querySelector(".resource-card__body-actions")).not.toBeInTheDocument();
     expect(styles).toMatch(/\.resource-card:not\(\.resource-card--center\):not\(\.resource-card--current-verse\)\s+\.resource-card__leading-action\s*{[^}]*position:\s*static/s);
-    expect(styles).toMatch(/\.resource-card:not\(\.resource-card--center\):not\(\.resource-card--current-verse\)\s+\.resource-card__header\s*{[^}]*padding:\s*8px 58px 8px 10px/s);
+    expect(styles).toMatch(/\.resource-card:not\(\.resource-card--center\):not\(\.resource-card--current-verse\)\s+\.resource-card__header\s*{[^}]*padding:\s*8px 10px/s);
   });
 
   it("exits center current-verse card editing when expanded or collapsed", async () => {
@@ -2798,8 +4017,7 @@ describe("Workbench", () => {
     expect(currentVerseCard.querySelector(".resource-card__actions")).not.toContainElement(copyButton);
   });
 
-  it("collapses right-side resource categories independently", async () => {
-    const consoleInfoSpy = vi.spyOn(console, "info").mockImplementation(() => undefined);
+  it("uses a single sticky category bar to jump across right-side resource sections", async () => {
     render(
       <Workbench
         versions={[cuvBible, kjvBible]}
@@ -2809,29 +4027,25 @@ describe("Workbench", () => {
     );
 
     const rightDock = screen.getByRole("complementary", { name: "右侧资料栏" });
+    const jumpBar = within(rightDock).getByLabelText("资料类别快捷跳转");
     const mediaSection = within(rightDock).getByRole("region", { name: "媒体" });
+    const mediaJump = within(jumpBar).getByRole("button", { name: /跳转到媒体/ });
+
+    expect(within(jumpBar).getByRole("button", { name: /跳转到注释/ })).toBeInTheDocument();
+    expect(mediaJump).toBeInTheDocument();
+    expect(mediaSection.querySelector(":scope > .resource-module__header")).not.toBeInTheDocument();
     expect(getResourceArticleByTitle(mediaSection, genesisMathImageTitle)).toBeInTheDocument();
 
-    const collapseButton = within(mediaSection).getByRole("button", { name: "折叠 媒体" });
-    expect(collapseButton).toHaveAttribute("aria-expanded", "true");
-    expect(collapseButton).not.toHaveTextContent("折叠");
-    await userEvent.click(collapseButton);
-
-    expect(mediaSection).toHaveAttribute("aria-expanded", "false");
-    expect(queryResourceArticleByTitle(mediaSection, genesisMathImageTitle)).not.toBeInTheDocument();
-    expect(within(mediaSection).getByRole("button", { name: "展开 媒体" })).toHaveAttribute("aria-expanded", "false");
-    expect(within(rightDock).getByRole("region", { name: "注释" })).toHaveAttribute("aria-expanded", "true");
-    expect(consoleInfoSpy).toHaveBeenCalledWith(
-      "[workbench] right resource module collapsed state changed",
-      expect.objectContaining({
-        moduleId: "media",
-        title: "媒体",
-        collapsed: true,
-      }),
-    );
+    const scrollIntoView = vi.fn();
+    Object.defineProperty(mediaSection, "scrollIntoView", {
+      configurable: true,
+      value: scrollIntoView,
+    });
+    await userEvent.click(mediaJump);
+    await waitFor(() => expect(scrollIntoView).toHaveBeenCalled());
   });
 
-  it("gives every right-side resource category its own icon collapse control", async () => {
+  it("keeps every right-side resource category reachable from the sticky jump bar", () => {
     render(
       <Workbench
         versions={[cuvBible, kjvBible]}
@@ -2841,21 +4055,15 @@ describe("Workbench", () => {
     );
 
     const rightDock = screen.getByRole("complementary", { name: "右侧资料栏" });
-    for (const categoryName of ["笔记", "注释", "媒体", "百科和字典"]) {
-      const categorySection = within(rightDock).getByRole("region", { name: categoryName });
-      const categoryHeader = categorySection.querySelector(":scope > .resource-module__header");
-      const collapseButton = within(categorySection).getByRole("button", { name: `折叠 ${categoryName}` });
-      expect(categoryHeader).toContainElement(collapseButton);
-      expect(collapseButton).not.toHaveTextContent("折叠");
-      expect(categorySection).toHaveAttribute("aria-expanded", "true");
-      await userEvent.click(collapseButton);
-      expect(categorySection).toHaveAttribute("aria-expanded", "false");
-      await userEvent.click(within(categorySection).getByRole("button", { name: `展开 ${categoryName}` }));
-      expect(categorySection).toHaveAttribute("aria-expanded", "true");
+    const jumpBar = within(rightDock).getByLabelText("资料类别快捷跳转");
+    for (const categoryName of ["注释", "媒体", "百科", "笔记"]) {
+      expect(within(rightDock).getByRole("region", { name: categoryName })).toBeInTheDocument();
+      expect(within(jumpBar).getByRole("button", { name: new RegExp(`跳转到${categoryName}`) })).toBeInTheDocument();
+      expect(within(rightDock).getByRole("region", { name: categoryName }).querySelector(":scope > .resource-module__header")).not.toBeInTheDocument();
     }
   });
 
-  it("groups right-side resources into the four visible categories without exposing raw types", () => {
+  it("groups visible right-side resources without exposing raw types", () => {
     const resourcesWithBacklink = [
       {
         id: "gen-1-1-note",
@@ -2886,7 +4094,7 @@ describe("Workbench", () => {
         type: "commentary",
         verses: ["Gen.1.1"],
         body: "研修本内容。",
-        source: "圣经研修本 01_创世记【codex-v3】",
+        source: "圣经研修本 01_创世记-v3",
       },
       {
         id: "gen-1-1-image",
@@ -2938,28 +4146,25 @@ describe("Workbench", () => {
     const notesSection = within(rightDock).getByRole("region", { name: "笔记" });
     const commentarySection = within(rightDock).getByRole("region", { name: "注释" });
     const mediaSection = within(rightDock).getByRole("region", { name: "媒体" });
-    const backlinksSection = within(rightDock).getByRole("region", { name: "百科和字典" });
+    const backlinksSection = within(rightDock).getByRole("region", { name: "百科" });
 
     const noteSourcePill = within(notesSection).getByRole("article", { name: "读经笔记" }).querySelector(".resource-card__source-pill");
     const fallbackNoteSourcePill = within(notesSection).getByRole("article", { name: "无来源笔记" }).querySelector(".resource-card__source-pill");
     const commentarySourcePill = within(commentarySection)
       .getByRole("article", { name: "创世记 1:1 综合解读" })
       .querySelector(".resource-card__source-pill");
-    const studyBibleSourcePill = within(commentarySection)
-      .getByRole("article", { name: "创世记 1:1 研修本注释：起初" })
-      .querySelector(".resource-card__source-pill");
 
     expect(noteSourcePill).toHaveTextContent("用户笔记");
     expect(fallbackNoteSourcePill).toHaveTextContent("笔记");
     expect(commentarySourcePill).toHaveTextContent("综合解读");
-    expect(studyBibleSourcePill).toHaveTextContent("圣经研修本");
+    expect(within(commentarySection).queryByRole("article", { name: "创世记 1:1 研修本注释：起初" })).not.toBeInTheDocument();
     expect(commentarySection).not.toHaveTextContent("《综合解读》");
     expect(notesSection).not.toHaveTextContent("《用户笔记》");
     expect(within(commentarySection).queryByRole("article", { name: "相关回链" })).not.toBeInTheDocument();
     expect(within(mediaSection).getByRole("article", { name: "创造图像" }).querySelector(".resource-card__source-pill")).toHaveTextContent("媒体");
     expect(within(mediaSection).getByRole("article", { name: "创造视频" }).querySelector(".resource-card__source-pill")).toHaveTextContent("媒体");
     expect(within(mediaSection).getByRole("article", { name: "互动资料" }).querySelector(".resource-card__source-pill")).toHaveTextContent("媒体");
-    expect(within(backlinksSection).getByRole("article", { name: "相关回链" }).querySelector(".resource-card__source-pill")).toHaveTextContent("百科和字典");
+    expect(within(backlinksSection).getByRole("article", { name: "相关回链" }).querySelector(".resource-card__source-pill")).toHaveTextContent("百科");
     expect(within(commentarySection).queryByText("注释", { selector: ".resource-card__type" })).not.toBeInTheDocument();
     expect(rightDock).not.toHaveTextContent("commentary");
     expect(rightDock).not.toHaveTextContent("image");
@@ -2969,15 +4174,12 @@ describe("Workbench", () => {
     expect(rightDock).not.toHaveTextContent("link");
   });
 
-  it("keeps right-side resource category headers sticky inside the scroll panel", () => {
+  it("keeps the right-side category jump bar sticky inside the scroll panel", () => {
     expect(styles).toMatch(/\.resource-dock__panel\s*{[^}]*overflow:\s*auto/s);
-    expect(styles).toMatch(/\.resource-dock--right\s+\.resource-module__header\s*{[^}]*position:\s*sticky/s);
-    expect(styles).toMatch(/\.resource-dock--right\s+\.resource-module__header\s*{[^}]*top:\s*-14px/s);
-    expect(styles).toMatch(/\.resource-dock--right\s+\.resource-module__header\s*{[^}]*background:\s*var\(--surface\)/s);
-    expect(styles).toMatch(/\.resource-dock--right\s+\.resource-module__header\s*{[^}]*box-shadow:/s);
-    expect(styles).toMatch(/\.resource-dock--right\s+\.resource-module__header\s*{[^}]*isolation:\s*isolate/s);
-    expect(styles).toMatch(/\.resource-dock--right\s+\.resource-module__header\s*{[^}]*z-index:\s*12/s);
-    expect(styles).not.toMatch(/\.resource-dock--right\s+\.resource-module__header::before\s*{[^}]*z-index:\s*-/s);
+    expect(styles).toMatch(/\.resource-dock__jump-bar\s*{[^}]*position:\s*sticky/s);
+    expect(styles).toMatch(/\.resource-dock__jump-bar\s*{[^}]*top:\s*0/s);
+    expect(styles).toMatch(/\.resource-dock__jump-bar\s*{[^}]*z-index:\s*16/s);
+    expect(styles).toMatch(/\.resource-dock__jump-bar-actions\s*{[^}]*grid-template-columns:\s*repeat\(4,/s);
   });
 
   it("restores older center layouts into the fixed three-module locator model", () => {
@@ -3179,6 +4381,173 @@ describe("Workbench", () => {
     });
   });
 
+  it.each(["loaded", "public"])("stage2 pages %s search results and resets query/filter/scope", async (source) => {
+    const verses: BibleVersion["verses"] = Array.from({ length: 245 }, (_, i) => ({
+      id: `Gen.${Math.floor(i / 25) + 1}.${i % 25 + 1}`,
+      book: "Gen", chapter: Math.floor(i / 25) + 1, verse: i % 25 + 1,
+      text: `光 起初 测试 ${i + 1}`,
+    }));
+    const version = { ...navigationCuv, verses };
+    const onRequestSearchResult = vi.fn();
+    render(<Workbench versions={[version]} resources={[]} initialLayout={defaultWorkbenchLayout}
+      onRequestSearchResult={onRequestSearchResult}
+      wholeBibleSearchIndex={source === "public" ? verses.map((v) => ({
+        ...v, verseId: v.id, versionId: "cuv", versionLabel: "和合本",
+      })) : undefined} />);
+    const input = screen.getByRole("searchbox", { name: "搜索经文" });
+    await userEvent.type(input, "光{Enter}");
+    let panel = screen.getByRole("region", { name: "经文搜索结果" });
+    const results = () => within(panel).getAllByRole("button", { name: /^和合本 Gen\./ });
+    const more = () => within(panel).getByRole("button", { name: "加载更多结果" });
+    expect(results()).toHaveLength(120);
+    expect(panel).toHaveTextContent("已显示 120 / 共 245 处结果");
+    await userEvent.click(more());
+    expect(results()).toHaveLength(240);
+    await userEvent.clear(input);
+    await userEvent.type(input, "起初{Enter}");
+    panel = screen.getByRole("region", { name: "经文搜索结果" });
+    expect(results()).toHaveLength(120);
+    await userEvent.click(more());
+    await userEvent.click(within(panel).getByRole("button", { name: "搜索译本 KJV" }));
+    expect(within(panel).queryByRole("button", { name: "加载更多结果" })).not.toBeInTheDocument();
+    expect(screen.getByText("搜索到 0 处经文")).toHaveClass("workbench-status");
+    await userEvent.click(within(panel).getByRole("button", { name: "全部译本" }));
+    expect(results()).toHaveLength(120);
+    await userEvent.click(more());
+    await userEvent.click(within(panel).getByRole("button", { name: "旧约", exact: true }));
+    expect(results()).toHaveLength(120);
+    expect(screen.getByText("搜索到 245 处经文")).toHaveClass("workbench-status");
+    expect(screen.queryByText("已显示 240 / 共 245 处经文")).not.toBeInTheDocument();
+    await userEvent.click(more());
+    await userEvent.click(more());
+    expect(results()).toHaveLength(245);
+    expect(new Set(results().map((r) => r.getAttribute("aria-label"))).size).toBe(245);
+    expect(panel).toHaveTextContent("已显示 245 / 共 245 处结果");
+    expect(within(panel).queryByRole("button", { name: "加载更多结果" })).not.toBeInTheDocument();
+    await userEvent.click(results()[244]);
+    expect(onRequestSearchResult).toHaveBeenCalledWith(expect.objectContaining({ verseId: "Gen.10.20" }));
+    expect(screen.queryByRole("region", { name: "经文搜索结果" })).not.toBeInTheDocument();
+  });
+
+  it("stage2 keeps lightbox keyboard focus and restores its exact image trigger on every close path", async () => {
+    render(<Workbench versions={[cuvBible, kjvBible]} resources={sampleResources}
+      initialLayout={dualCenterLayout} />);
+    const dock = screen.getByRole("complementary", { name: "右侧资料栏" });
+    const opener = within(dock).getByRole("button", { name: `放大${genesisMathImageTitle}` });
+    opener.focus();
+    await userEvent.keyboard("{Enter}");
+    let dialog = screen.getByRole("dialog", { name: `图片预览：${genesisMathImageTitle}` });
+    const close = within(dialog).getByRole("button", { name: "关闭图片预览" });
+    expect(close).toHaveFocus();
+    await userEvent.click(within(dialog).getByRole("img"));
+    expect(dialog).toBeInTheDocument();
+    await userEvent.tab();
+    expect(close).toHaveFocus();
+    await userEvent.tab({ shift: true });
+    expect(close).toHaveFocus();
+    await userEvent.keyboard("{Escape}");
+    expect(dialog).not.toBeInTheDocument();
+    expect(opener).toHaveFocus();
+    await userEvent.click(opener);
+    dialog = screen.getByRole("dialog", { name: `图片预览：${genesisMathImageTitle}` });
+    await userEvent.click(within(dialog).getByRole("button", { name: "关闭图片预览" }));
+    expect(opener).toHaveFocus();
+    await userEvent.click(opener);
+    await userEvent.click(screen.getByRole("dialog", { name: `图片预览：${genesisMathImageTitle}` }));
+    expect(screen.queryByRole("dialog", { name: `图片预览：${genesisMathImageTitle}` })).not.toBeInTheDocument();
+    expect(opener).toHaveFocus();
+    await userEvent.click(screen.getByRole("button", { name: "选择书卷 创世记" }));
+    await userEvent.keyboard("{Escape}");
+    expect(screen.queryByRole("dialog", { name: "书卷选择" })).not.toBeInTheDocument();
+  });
+
+  it("stage2 closes copy menus with Escape or outside clicks and restores keyboard entry", async () => {
+    render(<Workbench versions={[cuvBible, kjvBible]} resources={sampleResources} initialLayout={dualCenterLayout} />);
+    const dock = screen.getByRole("complementary", { name: "右侧资料栏" });
+    const opener = within(dock).getByRole("button", { name: "打开起初，神创造天地复制菜单" });
+    opener.focus();
+    await userEvent.keyboard("{Enter}");
+    expect(screen.getByRole("menuitem", { name: "复制标题" })).toHaveFocus();
+    await userEvent.keyboard("{Escape}");
+    expect(screen.queryByRole("menu")).not.toBeInTheDocument();
+    expect(opener).toHaveFocus();
+    await userEvent.click(opener);
+    await userEvent.click(screen.getByRole("menu"));
+    expect(screen.getByRole("menu")).toBeInTheDocument();
+    await userEvent.click(document.body);
+    expect(screen.queryByRole("menu")).not.toBeInTheDocument();
+    expect(opener).toHaveFocus();
+  });
+
+  it("stage2 closes focused search results with Escape and outside clicks without clearing the query", async () => {
+    render(<Workbench versions={[navigationCuv, navigationKjv]} resources={[]} initialLayout={dualCenterLayout} />);
+    const input = screen.getByRole("searchbox", { name: "搜索经文" });
+    await userEvent.type(input, "created{Enter}");
+    const result = screen.getByRole("button", { name: /KJV Gen\.1\.1/ });
+    result.focus();
+    await userEvent.keyboard("{Escape}");
+    expect(screen.queryByRole("region", { name: "经文搜索结果" })).not.toBeInTheDocument();
+    expect(input).toHaveFocus();
+    expect(input).toHaveValue("created");
+    await userEvent.keyboard("{Enter}");
+    await userEvent.click(screen.getByRole("button", { name: "搜索译本 KJV" }));
+    expect(screen.getByRole("region", { name: "经文搜索结果" })).toBeInTheDocument();
+    await userEvent.click(screen.getByText("资源库", { exact: true }));
+    expect(screen.queryByRole("region", { name: "经文搜索结果" })).not.toBeInTheDocument();
+    expect(input).toHaveValue("created");
+  });
+
+  it("stage2 restores the settings trigger after Escape from a setting", async () => {
+    render(<Workbench versions={[navigationCuv, navigationKjv]} resources={[]} initialLayout={dualCenterLayout} />);
+    const opener = screen.getByRole("button", { name: "打开设置" });
+    await userEvent.click(opener);
+    within(screen.getByRole("dialog", { name: "阅读台设置" })).getByRole("button", { name: "关闭纸张模式" }).focus();
+    await userEvent.keyboard("{Escape}");
+    expect(screen.queryByRole("dialog", { name: "阅读台设置" })).not.toBeInTheDocument();
+    expect(opener).toHaveFocus();
+  });
+
+  it("stage2 visibly reports copy failure and keeps the retry menu", async () => {
+    const clipboardDescriptor = Object.getOwnPropertyDescriptor(navigator, "clipboard");
+    const execDescriptor = Object.getOwnPropertyDescriptor(document, "execCommand");
+    Object.defineProperty(navigator, "clipboard", { configurable: true, value: {
+      writeText: vi.fn().mockRejectedValue(new Error("clipboard denied")),
+    } });
+    Object.defineProperty(document, "execCommand", { configurable: true, value: vi.fn().mockReturnValue(false) });
+    try {
+      render(<Workbench versions={[cuvBible, kjvBible]} resources={sampleResources} initialLayout={dualCenterLayout} />);
+      const dock = screen.getByRole("complementary", { name: "右侧资料栏" });
+      const card = within(dock).getByRole("article", { name: "起初，神创造天地" });
+      await userEvent.click(within(card).getByRole("button", { name: "打开起初，神创造天地复制菜单" }));
+      await userEvent.click(within(card).getByRole("menuitem", { name: "复制标题" }));
+      expect(screen.getByText("复制失败：标题")).toHaveClass("workbench-status", "toolbar-refresh-status--error");
+      expect(within(card).getByRole("menuitem", { name: "复制标题" })).toBeInTheDocument();
+    } finally {
+      if (clipboardDescriptor) Object.defineProperty(navigator, "clipboard", clipboardDescriptor);
+      else Reflect.deleteProperty(navigator, "clipboard");
+      if (execDescriptor) Object.defineProperty(document, "execCommand", execDescriptor);
+      else Reflect.deleteProperty(document, "execCommand");
+    }
+  });
+
+  it("stage2 exposes existing operation feedback without adding implicit save callbacks", async () => {
+    const onSaveLayout = vi.fn();
+    render(<Workbench versions={[navigationCuv, navigationKjv]} resources={sampleResources}
+      initialLayout={dualCenterLayout} onSaveLayout={onSaveLayout} />);
+    await userEvent.type(screen.getByRole("searchbox", { name: "搜索经文" }), "created{Enter}");
+    const status = screen.getByText("搜索到 1 处经文");
+    expect(status).toHaveAttribute("role", "status");
+    expect(status).toHaveAttribute("aria-live", "polite");
+    expect(status).not.toHaveClass("sr-only");
+    expect(status).toHaveClass("workbench-status");
+    await userEvent.click(screen.getByRole("button", { name: "清除搜索" }));
+    await userEvent.click(screen.getByRole("button", { name: "KJV", exact: true }));
+    expect(onSaveLayout).not.toHaveBeenCalled();
+    await userEvent.click(screen.getByRole("button", { name: "保存布局" }));
+    expect(onSaveLayout).toHaveBeenCalledTimes(1);
+    expect(status).toHaveTextContent("布局已保存");
+  });
+
   it("searches Bible text and jumps to a result", async () => {
     render(
       <Workbench
@@ -3248,7 +4617,9 @@ describe("Workbench", () => {
 
     await userEvent.type(searchInput, "x");
 
-    expect(searchPanel).toHaveTextContent("输入已改变，点击搜索更新结果。");
+    expect(within(searchPanel).getByText("待搜索")).toBeInTheDocument();
+    expect(within(searchPanel).getAllByText("输入已改变，点击搜索更新结果。")).toHaveLength(1);
+    expect(within(searchPanel).queryByText("点击搜索更新结果", { exact: true })).not.toBeInTheDocument();
     expect(within(searchPanel).queryByRole("button", { name: /KJV Gen\.1\.1/ })).not.toBeInTheDocument();
   });
 

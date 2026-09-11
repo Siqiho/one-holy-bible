@@ -1,0 +1,184 @@
+--- before/src/components/Workbench.test.tsx
++++ src/components/Workbench.test.tsx
+@@ -2318,6 +2318,7 @@
+ 
+     expect(writeText).toHaveBeenCalledWith(expect.stringContaining("“起初”声明时间、宇宙和历史都在神的创造中开始"));
+     expect(screen.getAllByRole("status").some((element) => element.textContent === "已复制：正文")).toBe(true);
++    expect(screen.getByText("已复制：正文")).toHaveClass("workbench-status");
+   });
+ 
+   it("copies a resource card as Markdown from the card action menu", async () => {
+@@ -4380,6 +4381,173 @@
+     });
+   });
+ 
++  it.each(["loaded", "public"])("stage2 pages %s search results and resets query/filter/scope", async (source) => {
++    const verses: BibleVersion["verses"] = Array.from({ length: 245 }, (_, i) => ({
++      id: `Gen.${Math.floor(i / 25) + 1}.${i % 25 + 1}`,
++      book: "Gen", chapter: Math.floor(i / 25) + 1, verse: i % 25 + 1,
++      text: `光 起初 测试 ${i + 1}`,
++    }));
++    const version = { ...navigationCuv, verses };
++    const onRequestSearchResult = vi.fn();
++    render(<Workbench versions={[version]} resources={[]} initialLayout={defaultWorkbenchLayout}
++      onRequestSearchResult={onRequestSearchResult}
++      wholeBibleSearchIndex={source === "public" ? verses.map((v) => ({
++        ...v, verseId: v.id, versionId: "cuv", versionLabel: "和合本",
++      })) : undefined} />);
++    const input = screen.getByRole("searchbox", { name: "搜索经文" });
++    await userEvent.type(input, "光{Enter}");
++    let panel = screen.getByRole("region", { name: "经文搜索结果" });
++    const results = () => within(panel).getAllByRole("button", { name: /^和合本 Gen\./ });
++    const more = () => within(panel).getByRole("button", { name: "加载更多结果" });
++    expect(results()).toHaveLength(120);
++    expect(panel).toHaveTextContent("已显示 120 / 共 245 处结果");
++    await userEvent.click(more());
++    expect(results()).toHaveLength(240);
++    await userEvent.clear(input);
++    await userEvent.type(input, "起初{Enter}");
++    panel = screen.getByRole("region", { name: "经文搜索结果" });
++    expect(results()).toHaveLength(120);
++    await userEvent.click(more());
++    await userEvent.click(within(panel).getByRole("button", { name: "搜索译本 KJV" }));
++    expect(within(panel).queryByRole("button", { name: "加载更多结果" })).not.toBeInTheDocument();
++    expect(screen.getByText("搜索到 0 处经文")).toHaveClass("workbench-status");
++    await userEvent.click(within(panel).getByRole("button", { name: "全部译本" }));
++    expect(results()).toHaveLength(120);
++    await userEvent.click(more());
++    await userEvent.click(within(panel).getByRole("button", { name: "旧约", exact: true }));
++    expect(results()).toHaveLength(120);
++    expect(screen.getByText("搜索到 245 处经文")).toHaveClass("workbench-status");
++    expect(screen.queryByText("已显示 240 / 共 245 处经文")).not.toBeInTheDocument();
++    await userEvent.click(more());
++    await userEvent.click(more());
++    expect(results()).toHaveLength(245);
++    expect(new Set(results().map((r) => r.getAttribute("aria-label"))).size).toBe(245);
++    expect(panel).toHaveTextContent("已显示 245 / 共 245 处结果");
++    expect(within(panel).queryByRole("button", { name: "加载更多结果" })).not.toBeInTheDocument();
++    await userEvent.click(results()[244]);
++    expect(onRequestSearchResult).toHaveBeenCalledWith(expect.objectContaining({ verseId: "Gen.10.20" }));
++    expect(screen.queryByRole("region", { name: "经文搜索结果" })).not.toBeInTheDocument();
++  });
++
++  it("stage2 keeps lightbox keyboard focus and restores its exact image trigger on every close path", async () => {
++    render(<Workbench versions={[cuvBible, kjvBible]} resources={sampleResources}
++      initialLayout={dualCenterLayout} />);
++    const dock = screen.getByRole("complementary", { name: "右侧资料栏" });
++    const opener = within(dock).getByRole("button", { name: `放大${genesisMathImageTitle}` });
++    opener.focus();
++    await userEvent.keyboard("{Enter}");
++    let dialog = screen.getByRole("dialog", { name: `图片预览：${genesisMathImageTitle}` });
++    const close = within(dialog).getByRole("button", { name: "关闭图片预览" });
++    expect(close).toHaveFocus();
++    await userEvent.click(within(dialog).getByRole("img"));
++    expect(dialog).toBeInTheDocument();
++    await userEvent.tab();
++    expect(close).toHaveFocus();
++    await userEvent.tab({ shift: true });
++    expect(close).toHaveFocus();
++    await userEvent.keyboard("{Escape}");
++    expect(dialog).not.toBeInTheDocument();
++    expect(opener).toHaveFocus();
++    await userEvent.click(opener);
++    dialog = screen.getByRole("dialog", { name: `图片预览：${genesisMathImageTitle}` });
++    await userEvent.click(within(dialog).getByRole("button", { name: "关闭图片预览" }));
++    expect(opener).toHaveFocus();
++    await userEvent.click(opener);
++    await userEvent.click(screen.getByRole("dialog", { name: `图片预览：${genesisMathImageTitle}` }));
++    expect(screen.queryByRole("dialog", { name: `图片预览：${genesisMathImageTitle}` })).not.toBeInTheDocument();
++    expect(opener).toHaveFocus();
++    await userEvent.click(screen.getByRole("button", { name: "选择书卷 创世记" }));
++    await userEvent.keyboard("{Escape}");
++    expect(screen.queryByRole("dialog", { name: "书卷选择" })).not.toBeInTheDocument();
++  });
++
++  it("stage2 closes copy menus with Escape or outside clicks and restores keyboard entry", async () => {
++    render(<Workbench versions={[cuvBible, kjvBible]} resources={sampleResources} initialLayout={dualCenterLayout} />);
++    const dock = screen.getByRole("complementary", { name: "右侧资料栏" });
++    const opener = within(dock).getByRole("button", { name: "打开起初，神创造天地复制菜单" });
++    opener.focus();
++    await userEvent.keyboard("{Enter}");
++    expect(screen.getByRole("menuitem", { name: "复制标题" })).toHaveFocus();
++    await userEvent.keyboard("{Escape}");
++    expect(screen.queryByRole("menu")).not.toBeInTheDocument();
++    expect(opener).toHaveFocus();
++    await userEvent.click(opener);
++    await userEvent.click(screen.getByRole("menu"));
++    expect(screen.getByRole("menu")).toBeInTheDocument();
++    await userEvent.click(document.body);
++    expect(screen.queryByRole("menu")).not.toBeInTheDocument();
++    expect(opener).toHaveFocus();
++  });
++
++  it("stage2 closes focused search results with Escape and outside clicks without clearing the query", async () => {
++    render(<Workbench versions={[navigationCuv, navigationKjv]} resources={[]} initialLayout={dualCenterLayout} />);
++    const input = screen.getByRole("searchbox", { name: "搜索经文" });
++    await userEvent.type(input, "created{Enter}");
++    const result = screen.getByRole("button", { name: /KJV Gen\.1\.1/ });
++    result.focus();
++    await userEvent.keyboard("{Escape}");
++    expect(screen.queryByRole("region", { name: "经文搜索结果" })).not.toBeInTheDocument();
++    expect(input).toHaveFocus();
++    expect(input).toHaveValue("created");
++    await userEvent.keyboard("{Enter}");
++    await userEvent.click(screen.getByRole("button", { name: "搜索译本 KJV" }));
++    expect(screen.getByRole("region", { name: "经文搜索结果" })).toBeInTheDocument();
++    await userEvent.click(screen.getByText("资源库", { exact: true }));
++    expect(screen.queryByRole("region", { name: "经文搜索结果" })).not.toBeInTheDocument();
++    expect(input).toHaveValue("created");
++  });
++
++  it("stage2 restores the settings trigger after Escape from a setting", async () => {
++    render(<Workbench versions={[navigationCuv, navigationKjv]} resources={[]} initialLayout={dualCenterLayout} />);
++    const opener = screen.getByRole("button", { name: "打开设置" });
++    await userEvent.click(opener);
++    within(screen.getByRole("dialog", { name: "阅读台设置" })).getByRole("button", { name: "关闭纸张模式" }).focus();
++    await userEvent.keyboard("{Escape}");
++    expect(screen.queryByRole("dialog", { name: "阅读台设置" })).not.toBeInTheDocument();
++    expect(opener).toHaveFocus();
++  });
++
++  it("stage2 visibly reports copy failure and keeps the retry menu", async () => {
++    const clipboardDescriptor = Object.getOwnPropertyDescriptor(navigator, "clipboard");
++    const execDescriptor = Object.getOwnPropertyDescriptor(document, "execCommand");
++    Object.defineProperty(navigator, "clipboard", { configurable: true, value: {
++      writeText: vi.fn().mockRejectedValue(new Error("clipboard denied")),
++    } });
++    Object.defineProperty(document, "execCommand", { configurable: true, value: vi.fn().mockReturnValue(false) });
++    try {
++      render(<Workbench versions={[cuvBible, kjvBible]} resources={sampleResources} initialLayout={dualCenterLayout} />);
++      const dock = screen.getByRole("complementary", { name: "右侧资料栏" });
++      const card = within(dock).getByRole("article", { name: "起初，神创造天地" });
++      await userEvent.click(within(card).getByRole("button", { name: "打开起初，神创造天地复制菜单" }));
++      await userEvent.click(within(card).getByRole("menuitem", { name: "复制标题" }));
++      expect(screen.getByText("复制失败：标题")).toHaveClass("workbench-status", "toolbar-refresh-status--error");
++      expect(within(card).getByRole("menuitem", { name: "复制标题" })).toBeInTheDocument();
++    } finally {
++      if (clipboardDescriptor) Object.defineProperty(navigator, "clipboard", clipboardDescriptor);
++      else Reflect.deleteProperty(navigator, "clipboard");
++      if (execDescriptor) Object.defineProperty(document, "execCommand", execDescriptor);
++      else Reflect.deleteProperty(document, "execCommand");
++    }
++  });
++
++  it("stage2 exposes existing operation feedback without adding implicit save callbacks", async () => {
++    const onSaveLayout = vi.fn();
++    render(<Workbench versions={[navigationCuv, navigationKjv]} resources={sampleResources}
++      initialLayout={dualCenterLayout} onSaveLayout={onSaveLayout} />);
++    await userEvent.type(screen.getByRole("searchbox", { name: "搜索经文" }), "created{Enter}");
++    const status = screen.getByText("搜索到 1 处经文");
++    expect(status).toHaveAttribute("role", "status");
++    expect(status).toHaveAttribute("aria-live", "polite");
++    expect(status).not.toHaveClass("sr-only");
++    expect(status).toHaveClass("workbench-status");
++    await userEvent.click(screen.getByRole("button", { name: "清除搜索" }));
++    await userEvent.click(screen.getByRole("button", { name: "KJV", exact: true }));
++    expect(onSaveLayout).not.toHaveBeenCalled();
++    await userEvent.click(screen.getByRole("button", { name: "保存布局" }));
++    expect(onSaveLayout).toHaveBeenCalledTimes(1);
++    expect(status).toHaveTextContent("布局已保存");
++  });
++
+   it("searches Bible text and jumps to a result", async () => {
+     render(
+       <Workbench

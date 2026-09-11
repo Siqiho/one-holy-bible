@@ -1,0 +1,375 @@
+{
+  "created_at": "2026-09-09T06:02:55.333998+00:00",
+  "root": "/Users/simon/OHB/one-holy-bible",
+  "head": "71e0f2368af5380cc848ae6574325b4a4657edce",
+  "files": [
+    {
+      "path": "/Users/simon/.cursor/projects/Users-simon-OHB/agent-transcripts/c2771526-b3b3-43a1-bcf4-30bc41d1209d/c2771526-b3b3-43a1-bcf4-30bc41d1209d.jsonl",
+      "sha256": "b113a660529fb3fbe02fdc8d6bca648a5fc1b9bdce0c2f456c907e7325c414ad"
+    },
+    {
+      "path": "/Users/simon/.cursor/projects/Users-simon-OHB/agent-transcripts/c2771526-b3b3-43a1-bcf4-30bc41d1209d/subagents/6b20e347-24f9-4c2f-81fe-718956cb5b6a.jsonl",
+      "sha256": "0222e31692d44405c3d1f95bb24741dc516b6447f430e77cb1087e65e4d7bfc0"
+    },
+    {
+      "path": "/Users/simon/.cursor/projects/Users-simon-OHB/agent-transcripts/c2771526-b3b3-43a1-bcf4-30bc41d1209d/subagents/d35d80e3-7d26-46da-b4e4-1ba9af03a40a.jsonl",
+      "sha256": "97108e652ce4714ac7c51b0d1e11e001ed1f8c72a2492685e457fc8be9808045"
+    },
+    {
+      "path": "/Users/simon/.cursor/projects/Users-simon-OHB/agent-transcripts/c2771526-b3b3-43a1-bcf4-30bc41d1209d/subagents/ecf6c9e8-4c40-45c5-8a30-2455300718d3.jsonl",
+      "sha256": "15e52fe50c4770d9e62fb4ea7d32c97ccc25c604e37708fa525d21084b3fc353"
+    },
+    {
+      "path": "/Users/simon/.cursor/projects/Users-simon-OHB/canvases/one-holy-bible-ui-critique.canvas.tsx",
+      "sha256": "138ae2aa97321096e9fdeb080ab5abebb69ffa3e78bdda326441efe8e0e46e37"
+    },
+    {
+      "path": "/Users/simon/OHB/one-holy-bible/AGENTS.md",
+      "sha256": "f6a8fa21673f336338a53c8ef0025af6bfa29ff69c5c3c7f81eaf6f36630610b"
+    },
+    {
+      "path": "/Users/simon/OHB/one-holy-bible/DESIGN.md",
+      "sha256": "0823886f797eafbb2deac3416012ee1b49e215cf23211bca65bf783d7cdaac99"
+    },
+    {
+      "path": "/Users/simon/OHB/one-holy-bible/PRODUCT.md",
+      "sha256": "346abeb4e674ae476d7d36a9be9570ac4ed66a44dcf0dddfecf2e86e645ed37c"
+    },
+    {
+      "path": "/Users/simon/OHB/one-holy-bible/docs/verification/2026-09-09-workbench-controls/brief.md",
+      "sha256": "b7dea76f3647baab4a01077da5a45648f781e9e3eb27ecac7c73ad091bc09ee4"
+    },
+    {
+      "path": "/Users/simon/OHB/one-holy-bible/index.html",
+      "sha256": "52acd1b1c875f89581c0b19b58264385b94f20f40f46a52446e4e579dbc9106a"
+    },
+    {
+      "path": "/Users/simon/OHB/one-holy-bible/package-lock.json",
+      "sha256": "223417edaa6891b44efd638f71ac94fc303fffb43ba12218cf488ec9879f5943"
+    },
+    {
+      "path": "/Users/simon/OHB/one-holy-bible/package.json",
+      "sha256": "56e079cbfa6010daecdce364b954e40f733c81db613757debf9bba1eefe59c5e"
+    },
+    {
+      "path": "/Users/simon/OHB/one-holy-bible/src/App.test.tsx",
+      "sha256": "70c111fa45d8fe927f62946ff274727c50019a60d8b0043bfe7bceaf76107a9d"
+    },
+    {
+      "path": "/Users/simon/OHB/one-holy-bible/src/App.tsx",
+      "sha256": "a4e54b85984fe35110950de3ec516d51249ca9f6a98618d98f275d8f9f201c0d"
+    },
+    {
+      "path": "/Users/simon/OHB/one-holy-bible/src/components/ReaderView.test.tsx",
+      "sha256": "13e70c463ef36102263a4735851a0ebc0f853cd6dda53504899b95c82d5985b7"
+    },
+    {
+      "path": "/Users/simon/OHB/one-holy-bible/src/components/ReaderView.tsx",
+      "sha256": "39cb6d7cb312a7cd6f15496538dfde993b91918c4b14b46a4281c7ce112e049a"
+    },
+    {
+      "path": "/Users/simon/OHB/one-holy-bible/src/components/ScriptureLinkedText.test.tsx",
+      "sha256": "57dfc7c447841a8805762eb5f5f06f92af612567ffb687c6b282505608c6f40a"
+    },
+    {
+      "path": "/Users/simon/OHB/one-holy-bible/src/components/ScriptureLinkedText.tsx",
+      "sha256": "fb8d79439f32d9748476a9b6a30fd2df5c1b75368fb57fafdc112fd06b9d8793"
+    },
+    {
+      "path": "/Users/simon/OHB/one-holy-bible/src/components/VersePreviewContext.tsx",
+      "sha256": "8314769fc5d4c97654f6042965212d6e5b751fcef3a07da7b726531b55aafa51"
+    },
+    {
+      "path": "/Users/simon/OHB/one-holy-bible/src/components/Workbench.test.tsx",
+      "sha256": "b61f80b6546fbd656728a4a4dec5defab09e4bf4b9d1e9b81c5db4e293de74de"
+    },
+    {
+      "path": "/Users/simon/OHB/one-holy-bible/src/components/Workbench.tsx",
+      "sha256": "ecea8115e47e07096107dfd063710e50b194111b302a2876a4974034e5a1180c"
+    },
+    {
+      "path": "/Users/simon/OHB/one-holy-bible/src/data/bibleEncyclopediaResources.test.ts",
+      "sha256": "1104c2a5e4a376408df90d3f094d987b48c0d80c7426676c02c24ee7d02fc1ca"
+    },
+    {
+      "path": "/Users/simon/OHB/one-holy-bible/src/data/bibleEncyclopediaResources.ts",
+      "sha256": "693a4537db64a2239c0813700fe19da0c2495a0d0905c586cadf988f3271a509"
+    },
+    {
+      "path": "/Users/simon/OHB/one-holy-bible/src/data/bibleEveryoneImageResources.test.ts",
+      "sha256": "46b810035db87d87b26faf51a7e349696c9e6aac5d396c6e092e930541f2df92"
+    },
+    {
+      "path": "/Users/simon/OHB/one-holy-bible/src/data/bibleEveryoneImageResources.ts",
+      "sha256": "50fcf9eaccf50f8e84c16126be184f6b8eb18cfa6e7c043065954019377d2799"
+    },
+    {
+      "path": "/Users/simon/OHB/one-holy-bible/src/data/bibleLibrary.ts",
+      "sha256": "7c1bff7e21198c570f3dea1f0bd70faab6f175991745013bb527d20c65ebc647"
+    },
+    {
+      "path": "/Users/simon/OHB/one-holy-bible/src/data/comprehensiveCommentaryResources.ts",
+      "sha256": "3cbbfe2756743083131969ccf563a73749c77be70d42242587c8df7ebbc2a803"
+    },
+    {
+      "path": "/Users/simon/OHB/one-holy-bible/src/data/doreChapterArtwork.test.ts",
+      "sha256": "a54dc78fe1ab1202bc064545c2c15b0c5cad2851117b208b6a2ef6944e431357"
+    },
+    {
+      "path": "/Users/simon/OHB/one-holy-bible/src/data/doreChapterArtwork.ts",
+      "sha256": "219e4e348043b7781f0643a20ea4e5c0d27bf75e8ba836863636f16a2420e4c7"
+    },
+    {
+      "path": "/Users/simon/OHB/one-holy-bible/src/data/genesisCommentaryResources.test.ts",
+      "sha256": "bd2963e8fdc0d35ef0fcc1cc9c2e8743cbb0d309a328f3b5fd7f615641d29618"
+    },
+    {
+      "path": "/Users/simon/OHB/one-holy-bible/src/data/genesisCommentaryResources.ts",
+      "sha256": "4de573dfe9b6d915afc5ab36f909c5549ad52617f0e487c6feb7256ed3a50f69"
+    },
+    {
+      "path": "/Users/simon/OHB/one-holy-bible/src/data/genesisResourceAudit.test.ts",
+      "sha256": "4fd6412ad014a9d53c15e2d368d8c5d046cb435efcc4797cf922a4a21214ee22"
+    },
+    {
+      "path": "/Users/simon/OHB/one-holy-bible/src/data/genesisResourcePlacements.ts",
+      "sha256": "8adaa8f7669a2e2c029e8eaeba288c01ecd8197ec211f4da45ae3cdefd74b2a0"
+    },
+    {
+      "path": "/Users/simon/OHB/one-holy-bible/src/data/genesisResourceSourceMeta.ts",
+      "sha256": "36fa05f291bb7f1c07992a28b3d9e6f6243108ae3780bfef9bb7bc5ba66a9a15"
+    },
+    {
+      "path": "/Users/simon/OHB/one-holy-bible/src/data/genesisResources.ts",
+      "sha256": "f5d73e3b1812920c3155edd4a9d4e3072919b0e75a86046453f72b0e01775494"
+    },
+    {
+      "path": "/Users/simon/OHB/one-holy-bible/src/data/loadBibleLibrary.test.ts",
+      "sha256": "8eb372d7a1da6d71402c06d70c5f0975f352122e229cc512eb08bfd8c3f90197"
+    },
+    {
+      "path": "/Users/simon/OHB/one-holy-bible/src/data/loadBibleLibrary.ts",
+      "sha256": "954691fb4d3296328fff704f9c23471952eedb7f2594296d02bd5ece150b64e0"
+    },
+    {
+      "path": "/Users/simon/OHB/one-holy-bible/src/data/publicBibleData.test.ts",
+      "sha256": "27dba33de086e966716ce24fef0a55958564c135422e39df3390e8040afc6e2b"
+    },
+    {
+      "path": "/Users/simon/OHB/one-holy-bible/src/data/publicBibleData.ts",
+      "sha256": "ac18fa0dc0a512dcbb63c9f5f80c6004033aff35706f5ac8280815caf28bcdaf"
+    },
+    {
+      "path": "/Users/simon/OHB/one-holy-bible/src/data/publicData.test.ts",
+      "sha256": "7bbf2ff8a477aa9f825b36235449347da6146880e21c8f93b7654f57c21c763a"
+    },
+    {
+      "path": "/Users/simon/OHB/one-holy-bible/src/data/publicData.ts",
+      "sha256": "65a9dd2e70aa0ba074a6cda1f02dce1345f987f278018cd32439e8ddc6d3d6e0"
+    },
+    {
+      "path": "/Users/simon/OHB/one-holy-bible/src/data/resources.test.ts",
+      "sha256": "e302d1ddc907528d3a3611eb58629de863491c9971169862ba219c7b24b870bf"
+    },
+    {
+      "path": "/Users/simon/OHB/one-holy-bible/src/data/resources.ts",
+      "sha256": "cb0e32e9852df0e644806776ba19273ac91d6547d36879bb0448f089a149a507"
+    },
+    {
+      "path": "/Users/simon/OHB/one-holy-bible/src/data/sampleBible.test.ts",
+      "sha256": "02d02904537e71b3c4e8ecf010d17b2b61df0352a1cbaca57b2168103333b8fd"
+    },
+    {
+      "path": "/Users/simon/OHB/one-holy-bible/src/data/sampleLibrary.ts",
+      "sha256": "444a7242f6b8e82c4c3c008f906f99cf6b6327be79dc6126631a6164ff04a48b"
+    },
+    {
+      "path": "/Users/simon/OHB/one-holy-bible/src/data/workbenchSyncedResources.test.ts",
+      "sha256": "76ca799277e14b0f66c33b9859351d79022fd355d26db03a135e0239bcc34101"
+    },
+    {
+      "path": "/Users/simon/OHB/one-holy-bible/src/data/workbenchSyncedResources.ts",
+      "sha256": "1ce33cf982882e4f5f568c11b3f2de901e3bb5f86ab1b473b323e4819e2f2778"
+    },
+    {
+      "path": "/Users/simon/OHB/one-holy-bible/src/domain/bible.ts",
+      "sha256": "d0fec6c3a33155a4b218a28dbdac71f9b2f1d2a1baa4c2b4774cf1fcd0d3a742"
+    },
+    {
+      "path": "/Users/simon/OHB/one-holy-bible/src/domain/bibleBooks.ts",
+      "sha256": "43a8ebf301e4ab46f810b2ffd7ead27e2c66875f352542b59d5bcbb5c97012c2"
+    },
+    {
+      "path": "/Users/simon/OHB/one-holy-bible/src/domain/bookIntroView.test.ts",
+      "sha256": "8b20d53b1533184fdc6d29445d79567ddfd469c64ee7f0639a8b86d22d4f4118"
+    },
+    {
+      "path": "/Users/simon/OHB/one-holy-bible/src/domain/bookIntroView.ts",
+      "sha256": "829f2ada2c66bc3bfecdf5fedf1e3bd133a557f889265497899838b848352537"
+    },
+    {
+      "path": "/Users/simon/OHB/one-holy-bible/src/domain/comprehensiveCommentaryScriptureCoverage.test.ts",
+      "sha256": "be0ebb1cfff26000dfcace0f8f95efd4c943b43485bfacea42520a34fb65664e"
+    },
+    {
+      "path": "/Users/simon/OHB/one-holy-bible/src/domain/genesisComprehensiveScriptureCoverage.test.ts",
+      "sha256": "213739214c934f1fe641c61de60f4f9e1080022aeaaf30b3b186127672537bef"
+    },
+    {
+      "path": "/Users/simon/OHB/one-holy-bible/src/domain/layout.ts",
+      "sha256": "00650c1147b9adb89ad8208be075fc8cfbb3a0b54ca2e12e27cee669d7ec3809"
+    },
+    {
+      "path": "/Users/simon/OHB/one-holy-bible/src/domain/resources.ts",
+      "sha256": "9f7a100a7738b600eb6bb538b003866f953edc6d1305192336f5f3ea83780db1"
+    },
+    {
+      "path": "/Users/simon/OHB/one-holy-bible/src/domain/scriptureRef.test.ts",
+      "sha256": "af75b33560d2239c2a99e93550a1117057abf0585ce95222e8695599ca696e4f"
+    },
+    {
+      "path": "/Users/simon/OHB/one-holy-bible/src/domain/scriptureRef.ts",
+      "sha256": "8aa3c7ad1dcdbe92657dd585249915de011cbb52247139b4d3eeabf56678648b"
+    },
+    {
+      "path": "/Users/simon/OHB/one-holy-bible/src/domain/studyBibleScriptureCoverage.test.ts",
+      "sha256": "a71b82b39d082586104f6830e30536bda51548765a138da9708e69cc64e775c4"
+    },
+    {
+      "path": "/Users/simon/OHB/one-holy-bible/src/domain/types.test.ts",
+      "sha256": "62261c14e729f679152aad1075b6689c034e88172669026892e0420b36b2b62c"
+    },
+    {
+      "path": "/Users/simon/OHB/one-holy-bible/src/domain/verse.test.ts",
+      "sha256": "df9df1fe36e368ecf1dca03e58decd9270902dc669ec596ecc23bc2ca78ee90b"
+    },
+    {
+      "path": "/Users/simon/OHB/one-holy-bible/src/domain/verse.ts",
+      "sha256": "6874b0bcb201ba22da8c9c2410c292f1318ad9741df7d90bf2f3e67acbe77f6e"
+    },
+    {
+      "path": "/Users/simon/OHB/one-holy-bible/src/domain/verseId.test.ts",
+      "sha256": "8e08d327c66d8a7ffac9cbc3cfe3e1a665aaf8b3dbac86461ac94be7f9ab0b0a"
+    },
+    {
+      "path": "/Users/simon/OHB/one-holy-bible/src/lib/backlinks.test.ts",
+      "sha256": "9cad4828d7ccf3213a51174d38d9bb0ed280b1fc51b67c0a76553cbc54346c08"
+    },
+    {
+      "path": "/Users/simon/OHB/one-holy-bible/src/lib/backlinks.ts",
+      "sha256": "8202f3bed1ca4c4fe85d1103b93e934db548eaeff236ef3c23d3e5bfb6382fb4"
+    },
+    {
+      "path": "/Users/simon/OHB/one-holy-bible/src/lib/bibleSearch.test.ts",
+      "sha256": "b3d62c6ae8734d02dcc53b33c46c717ed1c3e60c2520f31d001e021f969830d0"
+    },
+    {
+      "path": "/Users/simon/OHB/one-holy-bible/src/lib/bibleSearch.ts",
+      "sha256": "ebc123911ffa4a459759cac5312980b48e51f43452525d20fa7a85dd4d7d6358"
+    },
+    {
+      "path": "/Users/simon/OHB/one-holy-bible/src/lib/cuvVerseLookup.test.ts",
+      "sha256": "b0cade43bb8b22c28f2ba663c1c7035ee5e886f92330746c9f48f65ce7324246"
+    },
+    {
+      "path": "/Users/simon/OHB/one-holy-bible/src/lib/cuvVerseLookup.ts",
+      "sha256": "15f13abe12423330671dd3444082ac84f9f109d7e79478171bdb52f7a4c49193"
+    },
+    {
+      "path": "/Users/simon/OHB/one-holy-bible/src/lib/formatTextResourceBody.test.ts",
+      "sha256": "d5ea5c138203f7491b41042b8fceca000596bdf427f9a0eaa6435e832b4e6282"
+    },
+    {
+      "path": "/Users/simon/OHB/one-holy-bible/src/lib/formatTextResourceBody.ts",
+      "sha256": "e683a8cb97f1bf39fcf259eba0298ef210be855a4b925a7be0ba284fe7fd6248"
+    },
+    {
+      "path": "/Users/simon/OHB/one-holy-bible/src/main.tsx",
+      "sha256": "bfcf131d8fb04a4dadcdd633c0bdbefea3f3a7af5bb35d34dc55588991887654"
+    },
+    {
+      "path": "/Users/simon/OHB/one-holy-bible/src/projectIdentity.test.ts",
+      "sha256": "f832c1d2c5eee4c343c95440756353e6ab69f005951f321dcfac88c9ababaca6"
+    },
+    {
+      "path": "/Users/simon/OHB/one-holy-bible/src/prototypes/reader-card-system/PrototypeApp.tsx",
+      "sha256": "5af2d82beca8033fa9c03d2c7e93dca1a57cbfcffbaf74d3c9e923e11b1ee5c4"
+    },
+    {
+      "path": "/Users/simon/OHB/one-holy-bible/src/prototypes/reader-card-system/lukeChapterOne.ts",
+      "sha256": "f3afcf12d63842ea37b8fcc6fb67035ae4b32eb6951e2ea30c9624042983b8ae"
+    },
+    {
+      "path": "/Users/simon/OHB/one-holy-bible/src/prototypes/reader-card-system/main.tsx",
+      "sha256": "4e75e84bcb9a328c022a403e2cb681ae538f57e082c20e117a65db302350f677"
+    },
+    {
+      "path": "/Users/simon/OHB/one-holy-bible/src/prototypes/reader-card-system/prototype.css",
+      "sha256": "04c3114c259c7f18221b8604471982e15fc155e5a834d0b972c37ebe721cff23"
+    },
+    {
+      "path": "/Users/simon/OHB/one-holy-bible/src/prototypes/reader-card-system/shared.tsx",
+      "sha256": "0c063aad9b5c555685e95ef7ec54134745b2d1592d3543c44b0120f7817c1f69"
+    },
+    {
+      "path": "/Users/simon/OHB/one-holy-bible/src/prototypes/reader-card-system/variants/ChapterReadingCanvas.tsx",
+      "sha256": "77bdd69f646af6b4ef4dbc4b0db3b42a57a68e59291a2c20b8f49874a48bf24e"
+    },
+    {
+      "path": "/Users/simon/OHB/one-holy-bible/src/prototypes/reader-card-system/variants/CommandShelf.tsx",
+      "sha256": "589884113e79699994fb99255be1d3f780e5167069ca04b72a7510165f248849"
+    },
+    {
+      "path": "/Users/simon/OHB/one-holy-bible/src/prototypes/reader-card-system/variants/QuietDossier.tsx",
+      "sha256": "b7a68373484ea274cf18b940a9ac80f002cb7c4cd39e519a7d4cfd0c7051a53a"
+    },
+    {
+      "path": "/Users/simon/OHB/one-holy-bible/src/prototypes/reader-card-system/variants/ScriptureMargin.tsx",
+      "sha256": "5d490996e18dc243159e7704e9e6a947dbc3ef89cbc2b9f7b15a4f58246dc24b"
+    },
+    {
+      "path": "/Users/simon/OHB/one-holy-bible/src/prototypes/reader-card-system/variants/SourceAtlas.tsx",
+      "sha256": "0a3cf368b96d5747306b9a2cd9ca11f1a3eb9bd5a5d06895713a8f7ad59b04ba"
+    },
+    {
+      "path": "/Users/simon/OHB/one-holy-bible/src/prototypes/reader-card-system/variants/StableGrid.tsx",
+      "sha256": "19da8ac3deff4078a30c2a479228dbdfc41c438553fe216664d89860bd9861e2"
+    },
+    {
+      "path": "/Users/simon/OHB/one-holy-bible/src/prototypes/reader-card-system/variants/StudyJourney.tsx",
+      "sha256": "a52c9cb33ce1290a05eb5a6e5b6469200df3dfb1b01a3e868b37724b8063de36"
+    },
+    {
+      "path": "/Users/simon/OHB/one-holy-bible/src/prototypes/reader-card-system/variants/chapter-reading-canvas.css",
+      "sha256": "2a48eeef246250e88850d80b93e3b834a1d3f5be43dbcb8b9515addac32fec8f"
+    },
+    {
+      "path": "/Users/simon/OHB/one-holy-bible/src/prototypes/reader-card-system/variants/scripture-margin.css",
+      "sha256": "f21e8aec540d8889961f5accd79fad1aca345d39f0047df977c847863f83e983"
+    },
+    {
+      "path": "/Users/simon/OHB/one-holy-bible/src/prototypes/reader-card-system/variants/source-atlas.css",
+      "sha256": "d511a6da76df704eef75eca199ee17105e82e52a4b52a165aa8e8c8ba1f6d7b9"
+    },
+    {
+      "path": "/Users/simon/OHB/one-holy-bible/src/prototypes/reader-card-system/variants/study-journey.css",
+      "sha256": "15729e1cc57e34a1f271d178413fd67b0c91b52ab0c8784be6f408faf24f90d4"
+    },
+    {
+      "path": "/Users/simon/OHB/one-holy-bible/src/styles.css",
+      "sha256": "dbde2403817d43256e4d500cf40db3afb17d8bd45177940006760dcde5d84f97"
+    },
+    {
+      "path": "/Users/simon/OHB/one-holy-bible/src/test/setup.ts",
+      "sha256": "9b328c4843431fa76d8de00008fc159e95f99a840211085ff3b8f25e53d14409"
+    },
+    {
+      "path": "/Users/simon/OHB/one-holy-bible/src/vite-env.d.ts",
+      "sha256": "65996936fbb042915f7b74a200fcdde7e410f32a669b1ab9597cfaa4b0faddb5"
+    },
+    {
+      "path": "/Users/simon/OHB/one-holy-bible/vite.config.ts",
+      "sha256": "58ba187a76cd65383785819642460961548657ec2d6ad72783d618f0413d5200"
+    }
+  ]
+}

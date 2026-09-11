@@ -28,4 +28,4 @@ dist-ssr
 public/resources/
 src/assets/resources/
 src/data/generated/workbench*.json
-!src/data/generated/workbenchSyncedResources【codex-v4】.json
+!src/data/generated/workbenchSyncedResources-v4.json

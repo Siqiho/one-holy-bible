@@ -1,6 +1,6 @@
 import { describe, expect, it } from "vitest";
 import type { StudyResource } from "../domain/resources";
-import { resourcesForVerse } from "./backlinks";
+import { resourcesForBookIntro, resourcesForVerse } from "./backlinks";
 
 const resources: StudyResource[] = [
   {
@@ -24,6 +24,24 @@ const resources: StudyResource[] = [
     verses: ["Gen.1.2"],
     body: "No match.",
   },
+  {
+    id: "book-intro",
+    title: "Book Intro",
+    type: "image",
+    verses: [],
+    bookIntro: "Gen",
+    body: "Genesis introduction.",
+    assetPath: "/src/assets/resources/genesis/images/cmc-01/p001_img000_670x452.png",
+  },
+  {
+    id: "primary-anchor-only-image",
+    title: "Primary Anchor Only Image",
+    type: "image",
+    verses: [],
+    primaryAnchor: "Gen.1.1",
+    body: "Navigation-only image.",
+    assetPath: "/src/assets/resources/genesis/images/cmc-01/p002_img001_670x452.png",
+  },
 ];
 
 describe("resourcesForVerse", () => {
@@ -31,6 +49,17 @@ describe("resourcesForVerse", () => {
     expect(resourcesForVerse(resources, "Gen.1.1").map((resource) => resource.id)).toEqual([
       "frontmatter-match",
       "body-match",
+      "primary-anchor-only-image",
     ]);
+  });
+
+  it("keeps book intro resources separate from verse resources", () => {
+    expect(resourcesForVerse(resources, "Gen.1.1").map((resource) => resource.id)).not.toContain("book-intro");
+    expect(resourcesForBookIntro(resources, "Gen").map((resource) => resource.id)).toEqual(["book-intro"]);
+    expect(resourcesForBookIntro(resources, "Exod")).toEqual([]);
+  });
+
+  it("uses a primary anchor as verse membership when verses is empty", () => {
+    expect(resourcesForVerse(resources, "Gen.1.1").map((resource) => resource.id)).toContain("primary-anchor-only-image");
   });
 });

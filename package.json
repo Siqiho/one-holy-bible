@@ -18,9 +18,11 @@
   },
   "type": "module",
   "scripts": {
+    "check:dev-data": "vitest run scripts/syncWorkbenchResources.test.mjs src/data/loadBibleLibrary.test.ts src/data/bibleEveryoneImageResources.test.ts src/data/workbenchSyncedResources.test.ts --reporter=dot",
     "dev": "vite",
-    "build": "tsc && tsc -p tsconfig.node.json --noEmit && vite build --config vite.public.config.ts",
-    "generate:public-data": "node scripts/generatePublicBibleData.mjs --bible src/data/generated/bibleLibrary.json --resources src/data/generated/workbenchSyncedResources【codex-v4】.json --output public/data --release-version 0.1.0",
+    "build": "tsc && tsc -p tsconfig.node.json --noEmit && vite build",
+    "build:public": "tsc && tsc -p tsconfig.node.json --noEmit && vite build --config vite.public.config.ts",
+    "generate:public-data": "node scripts/generatePublicBibleData.mjs --bible src/data/generated/bibleLibrary.json --resources src/data/generated/workbenchSyncedResources-v4.json --output public/data --release-version 0.1.0",
     "preview": "vite preview",
     "test": "vitest run",
     "test:watch": "vitest",

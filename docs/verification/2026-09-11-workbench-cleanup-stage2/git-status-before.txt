@@ -1,0 +1,188 @@
+ M .gitignore
+R  "docs/superpowers/plans/2026-07-14-github-text-first-release\343\200\220codex\343\200\221.md" -> docs/superpowers/plans/2026-07-14-github-text-first-release.md
+R  "docs/superpowers/plans/2026-07-15-ohb-independent-public-release\343\200\220codex\343\200\221.md" -> docs/superpowers/plans/2026-07-15-ohb-independent-public-release.md
+R  "docs/superpowers/specs/2026-07-14-github-text-first-release-design\343\200\220codex\343\200\221.md" -> docs/superpowers/specs/2026-07-14-github-text-first-release-design.md
+R  "docs/superpowers/specs/2026-07-15-ohb-independent-public-release-design\343\200\220codex\343\200\221.md" -> docs/superpowers/specs/2026-07-15-ohb-independent-public-release-design.md
+R  "docs/verification/2026-05-07-initial-draft-verification\343\200\220codex\343\200\221.md" -> docs/verification/2026-05-07-initial-draft-verification.md
+R  "docs/verification/2026-05-09-rename-one-holy-bible\343\200\220codex\343\200\221.md" -> docs/verification/2026-05-09-rename-one-holy-bible.md
+ M index.html
+ M package.json
+ M public/data/books/1Chr.json
+ M public/data/books/1Cor.json
+ M public/data/books/1John.json
+ M public/data/books/1Kgs.json
+ M public/data/books/1Pet.json
+ M public/data/books/1Sam.json
+ M public/data/books/1Thess.json
+ M public/data/books/1Tim.json
+ M public/data/books/2Chr.json
+ M public/data/books/2Cor.json
+ M public/data/books/2John.json
+ M public/data/books/2Kgs.json
+ M public/data/books/2Pet.json
+ M public/data/books/2Sam.json
+ M public/data/books/2Thess.json
+ M public/data/books/2Tim.json
+ M public/data/books/3John.json
+ M public/data/books/Acts.json
+ M public/data/books/Amos.json
+ M public/data/books/Col.json
+ M public/data/books/Dan.json
+ M public/data/books/Deut.json
+ M public/data/books/Eccl.json
+ M public/data/books/Eph.json
+ M public/data/books/Esth.json
+ M public/data/books/Exod.json
+ M public/data/books/Ezek.json
+ M public/data/books/Ezra.json
+ M public/data/books/Gal.json
+ M public/data/books/Gen.json
+ M public/data/books/Hab.json
+ M public/data/books/Hag.json
+ M public/data/books/Heb.json
+ M public/data/books/Hos.json
+ M public/data/books/Isa.json
+ M public/data/books/Jas.json
+ M public/data/books/Jer.json
+ M public/data/books/Job.json
+ M public/data/books/Joel.json
+ M public/data/books/John.json
+ M public/data/books/Jonah.json
+ M public/data/books/Josh.json
+ M public/data/books/Jude.json
+ M public/data/books/Judg.json
+ M public/data/books/Lam.json
+ M public/data/books/Lev.json
+ M public/data/books/Luke.json
+ M public/data/books/Mal.json
+ M public/data/books/Mark.json
+ M public/data/books/Matt.json
+ M public/data/books/Mic.json
+ M public/data/books/Nah.json
+ M public/data/books/Neh.json
+ M public/data/books/Num.json
+ M public/data/books/Obad.json
+ M public/data/books/Phil.json
+ M public/data/books/Phlm.json
+ M public/data/books/Prov.json
+ M public/data/books/Ps.json
+ M public/data/books/Rev.json
+ M public/data/books/Rom.json
+ M public/data/books/Ruth.json
+ M public/data/books/Song.json
+ M public/data/books/Titus.json
+ M public/data/books/Zech.json
+ M public/data/books/Zeph.json
+ M public/data/manifest.json
+ M scripts/syncWorkbenchResources.mjs
+ M scripts/syncWorkbenchResources.test.mjs
+ D src/App.css
+ M src/App.test.tsx
+ M src/App.tsx
+ M src/components/Workbench.test.tsx
+ M src/components/Workbench.tsx
+ M src/data/loadBibleLibrary.test.ts
+ M src/data/loadBibleLibrary.ts
+ M src/data/publicBibleData.test.ts
+ M src/data/sampleBible.test.ts
+ M src/data/sampleLibrary.ts
+ M src/domain/layout.ts
+ M src/domain/resources.ts
+ M src/domain/types.test.ts
+ M src/domain/verse.test.ts
+ M src/domain/verse.ts
+ M src/domain/verseId.test.ts
+ M src/lib/backlinks.test.ts
+ M src/lib/backlinks.ts
+ D src/lib/markdownResource.test.ts
+ D src/lib/markdownResource.ts
+ M src/styles.css
+ M vite.config.ts
+?? AGENTS.md
+?? DESIGN.md
+?? PRODUCT.md
+?? design-qa.md
+?? docs/superpowers/plans/2026-05-11-full-bible-import.md
+?? docs/superpowers/plans/2026-05-12-ohb-genesis-placement-build-optimization.md
+?? docs/superpowers/plans/2026-05-12-ohb-resource-card-copy-polish.md
+?? docs/superpowers/plans/2026-05-13-genesis-card-original-text-verse-polish.md
+?? docs/superpowers/plans/2026-05-13-genesis-card-source-polish.md
+?? docs/superpowers/plans/2026-05-19-bibleeveryone-image-import.md
+?? docs/superpowers/plans/2026-05-19-card-search-layout-swap.md
+?? docs/superpowers/plans/2026-05-19-toolbar-card-polish.md
+?? docs/superpowers/plans/2026-05-20-ohb-project-card-source-pill.md
+?? docs/superpowers/plans/2026-07-14-ohb-intro-card-verse-mapping.md
+?? docs/superpowers/plans/2026-07-16-ohb-name-protocol-migration.md
+?? docs/superpowers/plans/2026-07-20-ohb-reliability-hardening.md
+?? docs/superpowers/plans/2026-07-28-reader-card-system-prototype.md
+?? docs/superpowers/plans/2026-07-30-luke-one-prototype-refresh.md
+?? docs/superpowers/plans/2026-07-30-no-explanation-card-quarantine.md
+?? docs/superpowers/plans/2026-07-30-reader-card-system-round-two.md
+?? docs/superpowers/plans/2026-07-31-ohb-66-book-intro-stable-grid.md
+?? docs/superpowers/plans/2026-08-01-bible-encyclopedia-ingestion.md
+?? docs/superpowers/plans/2026-08-01-reader-encyclopedia-merge.md
+?? docs/superpowers/plans/2026-09-09-workbench-cleanup-stage1.md
+?? docs/superpowers/plans/2026-09-09-workbench-controls-audit.md
+?? docs/superpowers/specs/2026-05-12-ohb-resource-card-copy-polish-design.md
+?? docs/superpowers/specs/2026-07-14-ohb-intro-card-verse-mapping-design.md
+?? docs/superpowers/specs/2026-07-20-ohb-reliability-hardening-design.md
+?? docs/verification/2026-05-11-full-bible-import-verification.md
+?? docs/verification/2026-05-19-bibleeveryone-512-chapter-audit.md
+?? docs/verification/2026-05-20-ohb-card-source-pill.jpg
+?? docs/verification/2026-07-14-ohb-intro-card-verse-mapping.md
+?? docs/verification/2026-07-14-reader-return-review-lane.md
+?? docs/verification/2026-07-31-ohb-66-book-intro-stable-grid.md
+?? docs/verification/2026-08-01-bible-encyclopedia-ingestion.md
+?? docs/verification/2026-09-09-workbench-cleanup-stage1/
+?? docs/verification/2026-09-09-workbench-controls/
+?? docs/verification/2026-09-11-workbench-cleanup-stage2/
+?? prototypes/
+?? scripts/auditGenesisResourceCards.mjs
+?? scripts/auditGenesisResourceCards.test.mjs
+?? scripts/extractCmcComprehensiveCommentary.mjs
+?? scripts/generateBibleEncyclopediaResources.mts
+?? scripts/generateBibleEncyclopediaResources.test.mts
+?? scripts/generateBibleLibrary.mjs
+?? scripts/generateDoreChapterArtwork.mjs
+?? scripts/migrateCodexNames.mjs
+?? scripts/migrateCodexNames.test.mjs
+?? scripts/resolveBibleEncyclopediaAnchors.mts
+?? scripts/resolveBibleEncyclopediaAnchors.test.mts
+?? scripts/syncBibleEveryoneImages.mjs
+?? scripts/syncGenesisCommentaryResources.mjs
+?? src/components/ReaderView.test.tsx
+?? src/components/ReaderView.tsx
+?? src/components/ScriptureLinkedText.test.tsx
+?? src/components/ScriptureLinkedText.tsx
+?? src/components/VersePreviewContext.tsx
+?? src/data/bibleEncyclopediaResources.test.ts
+?? src/data/bibleEncyclopediaResources.ts
+?? src/data/bibleEveryoneImageResources.test.ts
+?? src/data/bibleEveryoneImageResources.ts
+?? src/data/bibleLibrary.ts
+?? src/data/comprehensiveCommentaryResources.ts
+?? src/data/doreChapterArtwork.test.ts
+?? src/data/doreChapterArtwork.ts
+?? src/data/generated/
+?? src/data/genesisCommentaryResources.test.ts
+?? src/data/genesisCommentaryResources.ts
+?? src/data/genesisResourceAudit.test.ts
+?? src/data/genesisResourcePlacements.ts
+?? src/data/genesisResourceSourceMeta.ts
+?? src/data/genesisResources.ts
+?? src/data/resources.test.ts
+?? src/data/resources.ts
+?? src/data/workbenchSyncedResources.test.ts
+?? src/data/workbenchSyncedResources.ts
+?? src/domain/bookIntroView.test.ts
+?? src/domain/bookIntroView.ts
+?? src/domain/comprehensiveCommentaryScriptureCoverage.test.ts
+?? src/domain/genesisComprehensiveScriptureCoverage.test.ts
+?? src/domain/scriptureRef.test.ts
+?? src/domain/scriptureRef.ts
+?? src/domain/studyBibleScriptureCoverage.test.ts
+?? src/lib/cuvVerseLookup.test.ts
+?? src/lib/cuvVerseLookup.ts
+?? src/lib/formatTextResourceBody.test.ts
+?? src/lib/formatTextResourceBody.ts
+?? src/prototypes/

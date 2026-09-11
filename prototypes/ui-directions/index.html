@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>界面方向 Demo · One Holy Bible</title>
+<link rel="icon" href='data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><rect width="32" height="32" rx="7" fill="%233a2f1e"/><text x="16" y="21" font-size="13" font-weight="700" text-anchor="middle" fill="%23f7f0dd" font-family="Georgia,serif">OHB</text></svg>'>
+<style>
+:root {
+  --canvas: oklch(94% 0.018 88);
+  --surface: oklch(98% 0.012 88);
+  --ink: oklch(22% 0.018 74);
+  --muted: oklch(50% 0.018 78);
+  --faint: oklch(62% 0.019 82);
+  --line: oklch(83% 0.02 82);
+  --line-strong: oklch(74% 0.025 78);
+  --accent-deep: oklch(44% 0.085 70);
+  --font-scripture: "Songti SC", "STSong", "Noto Serif SC", Georgia, serif;
+}
+* { box-sizing: border-box; }
+body {
+  background: var(--canvas); color: var(--ink); margin: 0; min-height: 100vh;
+  font: 14px/1.6 ui-sans-serif, system-ui, -apple-system, "PingFang SC", sans-serif;
+  display: grid; place-items: center; padding: 40px 20px;
+}
+.wrap { max-width: 660px; }
+h1 { font-family: var(--font-scripture); font-size: 30px; margin: 0 0 4px; }
+.sub { color: var(--muted); margin: 0 0 30px; }
+a.option { border: 1px solid var(--line); border-radius: 12px; background: var(--surface); color: inherit; display: block; margin-bottom: 14px; padding: 18px 20px; text-decoration: none; transition: border-color 150ms; }
+a.option:hover { border-color: var(--accent-deep); }
+a.option .tag { color: var(--accent-deep); font-size: 11.5px; font-weight: 700; letter-spacing: 0.06em; }
+a.option h2 { font-size: 17px; margin: 4px 0 6px; }
+a.option p { color: var(--muted); font-size: 13px; margin: 0; }
+.note { color: var(--faint); font-size: 12.5px; margin-top: 24px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>One Holy Bible · 界面方向 Demo</h1>
+  <p class="sub">三个方向都已修复审查报告中的全部 P1/P2 问题(不变淡、双语默认、节级联动、可见反馈、悬停操作、统一浮层、强焦点环),差别在于信息架构的激进程度。数据全部来自真实经文与卡片。</p>
+
+  <a class="option" href="demo-a.html">
+    <span class="tag">DEMO A · 保守</span>
+    <h2>修复版工作台</h2>
+    <p>保留现有三栏结构与资源库/整理卡片概念。工具栏合并为一个搜索框 + 视图切换 + 自动保存信号 + 溢出菜单;右坞顶部固定「当前经节」区,重置有确认和撤销。</p>
+  </a>
+
+  <a class="option" href="demo-b.html">
+    <span class="tag">DEMO B · 结构简化(你认可的方向)</span>
+    <h2>单一跟随阅读资源流</h2>
+    <p>左坞取消,三个卡片区合并为右侧一条「跟随阅读」流:选中经节即滚动定位,按节分组,钉住的卡片常驻顶部。资源库变成工具栏浮层里的开关。支持 ↑↓ 逐节移动。</p>
+  </a>
+
+  <a class="option" href="demo-c.html">
+    <span class="tag">DEMO C · 激进</span>
+    <h2>书页边注</h2>
+    <p>无坞、无卡片 chrome:一页居中的双语书页(中文为主,英文对照缩排),所选经节的注释以安静的边注浮现在右页缘,查看全部时从右侧滑出抽屉。↑↓/jk 逐节,/ 搜索,Enter 开抽屉。</p>
+  </a>
+
+  <a class="option" href="demo-c-plus.html">
+    <span class="tag">DEMO C+ · 入选方向 · 完整版</span>
+    <h2>书页边注 + 三项核心能力</h2>
+    <p>在 C 的骨架上加回:左侧书脊导航(卷/章/节自主选择,默认收起,节号带内容圆点);图片卡以真实图片为主呈现(边注缩略图 → 抽屉大图 → 灯箱);关联内容五层模型(本节锚定 + 范围覆盖徽标 + 抽屉「本章」纵览 + 上下文跳转)。61 张真实卡片、14 张真实图片。</p>
+  </a>
+
+  <p class="note">建议用 1280px 以上宽度的浏览器窗口体验;三个 demo 均为独立静态页面,不影响应用代码。</p>
+</div>
+</body>
+</html>

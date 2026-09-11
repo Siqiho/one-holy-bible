@@ -1,0 +1,147 @@
+--- before/src/components/Workbench.test.tsx
++++ after/src/components/Workbench.test.tsx
+@@ -923,6 +923,7 @@
+     expect(previousChapter).toBeDisabled();
+     expect(nextChapter).not.toBeDisabled();
+     expect(within(reader).getByText("当前经节")).toBeInTheDocument();
++    expect(within(reader).queryByText(/study desk/i)).not.toBeInTheDocument();
+     expect(within(reader).getByText("Gen.1.1")).toBeInTheDocument();
+ 
+     await userEvent.click(nextChapter);
+@@ -933,6 +934,47 @@
+     await userEvent.click(previousChapter);
+     expect(within(reader).getByRole("heading", { name: "创世记 Genesis 1" })).toBeInTheDocument();
+     expect(within(reader).getByText("Gen.1.1")).toBeInTheDocument();
++  });
++
++  it("closes the book picker on Escape and restores focus to the book button", async () => {
++    render(
++      <Workbench
++        versions={[navigationCuv, navigationKjv]}
++        resources={sampleResources}
++        initialLayout={dualCenterLayout}
++      />,
++    );
++
++    const bookButton = screen.getByRole("button", { name: "选择书卷 创世记" });
++    await userEvent.click(bookButton);
++    expect(screen.getByRole("dialog", { name: "书卷选择" })).toBeInTheDocument();
++
++    await userEvent.keyboard("{Escape}");
++    expect(screen.queryByRole("dialog", { name: "书卷选择" })).not.toBeInTheDocument();
++    expect(bookButton).toHaveFocus();
++
++    await userEvent.click(bookButton);
++    expect(screen.getByRole("dialog", { name: "书卷选择" })).toBeInTheDocument();
++    await userEvent.click(screen.getByRole("complementary", { name: "右侧资料栏" }));
++    expect(screen.queryByRole("dialog", { name: "书卷选择" })).not.toBeInTheDocument();
++  });
++
++  it("closes the chapter picker on Escape and restores focus to the chapter button", async () => {
++    render(
++      <Workbench
++        versions={[navigationCuv, navigationKjv]}
++        resources={sampleResources}
++        initialLayout={dualCenterLayout}
++      />,
++    );
++
++    const chapterButton = screen.getByRole("button", { name: "选择章节 第 1 章" });
++    await userEvent.click(chapterButton);
++    expect(screen.getByRole("dialog", { name: "章节选择" })).toBeInTheDocument();
++
++    await userEvent.keyboard("{Escape}");
++    expect(screen.queryByRole("dialog", { name: "章节选择" })).not.toBeInTheDocument();
++    expect(chapterButton).toHaveFocus();
+   });
+ 
+   it("groups and navigates verse-anchored resources by verse when bookIntro is stale", async () => {
+@@ -1227,6 +1269,69 @@
+     expect(screen.getAllByRole("status").some((element) => element.textContent === "卡片搜索已清除")).toBe(true);
+   });
+ 
++  it("keeps the ordinary right-dock empty copy when card search is not filtering", () => {
++    render(
++      <Workbench
++        versions={[navigationCuv, navigationKjv]}
++        resources={[]}
++        initialLayout={{
++          ...dualCenterLayout,
++          activeCenterModules: ["cuv", "card"],
++        }}
++      />,
++    );
++
++    const rightDock = screen.getByRole("complementary", { name: "右侧资料栏" });
++    const leftStack = getLeftOrganizedCardStack();
++    const centerCards = getCenterCurrentCardModule();
++
++    expect(within(rightDock).getAllByText("当前经节还没有资源。").length).toBeGreaterThan(0);
++    expect(within(rightDock).queryByText("没有匹配的卡片。")).not.toBeInTheDocument();
++    expect(within(centerCards).getByText("当前经文还没有卡片。")).toBeInTheDocument();
++    expect(within(centerCards).queryByText("没有匹配的卡片。")).not.toBeInTheDocument();
++    expect(leftStack).toHaveTextContent("还没有整理卡片");
++    expect(within(leftStack).queryByText("没有匹配的卡片。")).not.toBeInTheDocument();
++  });
++
++  it("shows a filtered-empty copy in the right dock and restores cards after clearing search", async () => {
++    render(
++      <Workbench
++        versions={[navigationCuv, navigationKjv]}
++        resources={searchableResources}
++        initialLayout={{
++          ...dualCenterLayout,
++          activeCenterModules: ["cuv", "card"],
++        }}
++      />,
++    );
++
++    const rightDock = screen.getByRole("complementary", { name: "右侧资料栏" });
++    const leftStack = getLeftOrganizedCardStack();
++    const centerCards = getCenterCurrentCardModule();
++    const cardSearch = screen.getByRole("search", { name: "卡片搜索" });
++    const searchInput = within(cardSearch).getByRole("searchbox", { name: "搜索卡片资源" });
++
++    expect(within(rightDock).getByRole("article", { name: "安静笔记" })).toBeInTheDocument();
++    expect(within(centerCards).getByRole("article", { name: "安静笔记" })).toBeInTheDocument();
++    expect(leftStack).toHaveTextContent("还没有整理卡片");
++
++    await userEvent.type(searchInput, "zzz-nomatch");
++
++    expect(within(rightDock).queryByRole("article", { name: "安静笔记" })).not.toBeInTheDocument();
++    expect(within(rightDock).getAllByText("没有匹配的卡片。").length).toBeGreaterThan(0);
++    expect(within(rightDock).queryByText("当前经节还没有资源。")).not.toBeInTheDocument();
++    expect(within(centerCards).getByRole("article", { name: "安静笔记" })).toBeInTheDocument();
++    expect(within(centerCards).queryByText("没有匹配的卡片。")).not.toBeInTheDocument();
++    expect(leftStack).toHaveTextContent("还没有整理卡片");
++    expect(within(leftStack).queryByText("没有匹配的卡片。")).not.toBeInTheDocument();
++    expect(within(cardSearch).getByRole("button", { name: "清除卡片搜索" })).toBeInTheDocument();
++
++    await userEvent.click(within(cardSearch).getByRole("button", { name: "清除卡片搜索" }));
++    expect(searchInput).toHaveValue("");
++    expect(within(rightDock).getByRole("article", { name: "安静笔记" })).toBeInTheDocument();
++    expect(within(rightDock).queryByText("没有匹配的卡片。")).not.toBeInTheDocument();
++  });
++
+   it("exposes a top toolbar action for refreshing synced cards", async () => {
+     let resolveRefresh: () => void = () => undefined;
+     const refreshPromise = new Promise<void>((resolve) => {
+@@ -2920,6 +3025,7 @@
+     expect(within(leftDock).queryByText("学习工具")).not.toBeInTheDocument();
+     expect(within(leftDock).queryByText("我的资料")).not.toBeInTheDocument();
+     expect(within(leftDock).getByText("资源库")).toBeInTheDocument();
++    expect(within(leftDock).queryByRole("button", { name: "添加资源库" })).not.toBeInTheDocument();
+     expect(getLeftOrganizedCardStack()).toBeInTheDocument();
+   });
+ 
+@@ -4327,7 +4433,9 @@
+ 
+     await userEvent.type(searchInput, "x");
+ 
+-    expect(searchPanel).toHaveTextContent("输入已改变，点击搜索更新结果。");
++    expect(within(searchPanel).getByText("待搜索")).toBeInTheDocument();
++    expect(within(searchPanel).getAllByText("输入已改变，点击搜索更新结果。")).toHaveLength(1);
++    expect(within(searchPanel).queryByText("点击搜索更新结果", { exact: true })).not.toBeInTheDocument();
+     expect(within(searchPanel).queryByRole("button", { name: /KJV Gen\.1\.1/ })).not.toBeInTheDocument();
+   });
+ 

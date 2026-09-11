@@ -1,0 +1,723 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Demo C+ · 书页边注 完整版 — One Holy Bible</title>
+<link rel="icon" href='data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><rect width="32" height="32" rx="7" fill="%233a2f1e"/><text x="16" y="21" font-size="13" font-weight="700" text-anchor="middle" fill="%23f7f0dd" font-family="Georgia,serif">OHB</text></svg>'>
+<style>
+:root {
+  --canvas: oklch(95.5% 0.016 90);
+  --surface: oklch(98% 0.012 88);
+  --ink: oklch(20% 0.018 74);
+  --ink-soft: oklch(34% 0.02 72);
+  --muted: oklch(48% 0.018 78);
+  --faint: oklch(62% 0.019 82);
+  --line: oklch(85% 0.018 84);
+  --line-strong: oklch(74% 0.025 78);
+  --accent: oklch(56% 0.095 75);
+  --accent-deep: oklch(43% 0.085 70);
+  --accent-soft: oklch(91% 0.055 82);
+  --accent-tint: oklch(96.5% 0.028 86);
+  --cool: oklch(48% 0.04 230);
+  --cool-soft: oklch(93% 0.02 230);
+  --danger: oklch(48% 0.11 28);
+  --danger-soft: oklch(93% 0.03 28);
+  --font-ui: ui-sans-serif, system-ui, -apple-system, "PingFang SC", "Hiragino Sans GB", sans-serif;
+  --font-scripture: "Songti SC", "STSong", "Noto Serif SC", Georgia, serif;
+  --scripture-size: 21px;
+  --ease: cubic-bezier(0.22, 1, 0.36, 1);
+  --rail-w: 212px;
+  --spine-w: 46px;
+}
+* { box-sizing: border-box; }
+html, body { height: 100%; }
+body { margin: 0; background: var(--canvas); color: var(--ink); font-family: var(--font-ui); font-size: 14px; }
+button { font: inherit; color: inherit; cursor: pointer; background: none; border: none; padding: 0; }
+input { font: inherit; color: inherit; }
+:is(button, input, [tabindex]):focus-visible { outline: 2px solid var(--accent-deep); outline-offset: 2px; border-radius: 6px; }
+
+/* ---------- 顶栏 ---------- */
+.topbar {
+  align-items: center; background: color-mix(in oklch, var(--canvas) 88%, white);
+  border-bottom: 1px solid var(--line); display: flex; gap: 10px; height: 44px;
+  left: 0; padding: 0 16px; position: fixed; right: 0; top: 0; z-index: 30;
+}
+.topbar .brand { align-items: center; color: var(--muted); display: flex; font-size: 12.5px; font-weight: 650; gap: 7px; }
+.topbar .brand .mark { align-items: center; background: var(--ink); border-radius: 5px; color: var(--surface); display: inline-flex; font-size: 9px; font-weight: 760; height: 20px; justify-content: center; width: 27px; }
+.topbar .loc { color: var(--ink); font-family: var(--font-scripture); font-size: 14.5px; font-weight: 700; }
+.topbar .loc .en { color: var(--faint); font-style: italic; font-weight: 400; margin-left: 6px; }
+.top-actions { align-items: center; display: flex; gap: 4px; margin-left: auto; }
+.tbtn { align-items: center; border-radius: 7px; color: var(--muted); display: inline-flex; gap: 5px; height: 28px; padding: 0 9px; }
+.tbtn:hover { background: oklch(100% 0 0 / 60%); color: var(--ink); }
+.tbtn[aria-pressed="true"] { background: var(--accent-tint); color: var(--accent-deep); font-weight: 600; }
+.stepper { align-items: center; border: 1px solid var(--line); border-radius: 7px; display: inline-flex; margin: 0 4px; }
+.stepper button { color: var(--muted); height: 26px; width: 26px; }
+.stepper button:hover { background: var(--surface); color: var(--ink); }
+.autosave { align-items: center; color: var(--faint); display: inline-flex; font-size: 11.5px; gap: 5px; margin-left: 8px; white-space: nowrap; }
+.autosave.pulse { color: var(--accent-deep); }
+.autosave .dot { background: var(--accent); border-radius: 50%; height: 5px; width: 5px; }
+.searchbox { align-items: center; background: var(--surface); border: 1px solid var(--line); border-radius: 8px; display: none; gap: 6px; height: 30px; padding: 0 10px; width: 240px; }
+.searchbox.open { display: flex; }
+.searchbox input { background: none; border: none; flex: 1; min-width: 0; outline: none; }
+
+/* ---------- 左侧:书脊(默认) / 展开导航栏 ---------- */
+.spine {
+  align-items: center; background: color-mix(in oklch, var(--canvas) 70%, white);
+  border-right: 1px solid var(--line); bottom: 0; display: flex; flex-direction: column;
+  gap: 14px; left: 0; padding: 14px 0; position: fixed; top: 44px; width: var(--spine-w); z-index: 24;
+}
+.spine:hover { background: color-mix(in oklch, var(--canvas) 45%, white); }
+.spine .open-btn { border: 1px solid var(--line); border-radius: 7px; color: var(--muted); height: 28px; width: 28px; }
+.spine .open-btn:hover { border-color: var(--line-strong); color: var(--ink); }
+.spine .spine-title {
+  color: var(--muted); font-family: var(--font-scripture); font-size: 13px; font-weight: 700;
+  letter-spacing: 0.28em; writing-mode: vertical-rl; cursor: pointer;
+}
+.spine .spine-title:hover { color: var(--accent-deep); }
+
+.rail {
+  background: color-mix(in oklch, var(--canvas) 55%, white); border-right: 1px solid var(--line);
+  bottom: 0; display: flex; flex-direction: column; left: 0; overflow-y: auto;
+  padding: 14px 14px 20px; position: fixed; top: 44px; width: var(--rail-w); z-index: 24;
+}
+body:not(.rail-open) .rail { display: none; }
+body.rail-open .spine { display: none; }
+.rail-head { align-items: center; display: flex; gap: 8px; margin-bottom: 12px; }
+.book-btn {
+  align-items: center; border: 1px solid var(--line); border-radius: 8px; display: flex;
+  flex: 1; font-family: var(--font-scripture); font-size: 15px; font-weight: 700; gap: 6px;
+  justify-content: space-between; padding: 7px 11px;
+}
+.book-btn:hover { background: var(--surface); border-color: var(--line-strong); }
+.book-btn .caret { color: var(--faint); font-size: 11px; }
+.rail-close { border-radius: 7px; color: var(--faint); height: 28px; width: 28px; }
+.rail-close:hover { background: var(--surface); color: var(--ink); }
+.rail h4 { color: var(--faint); font-size: 10.5px; font-weight: 650; letter-spacing: 0.08em; margin: 12px 2px 7px; }
+.num-grid { display: grid; gap: 3px; grid-template-columns: repeat(6, 1fr); }
+.num-grid button {
+  border-radius: 6px; color: var(--muted); font-size: 12px; height: 26px; position: relative;
+}
+.num-grid button:hover { background: var(--surface); color: var(--ink); }
+.num-grid button[aria-current="true"] { background: var(--accent-deep); color: oklch(97% 0.01 80); font-weight: 700; }
+.num-grid button.faded { color: oklch(76% 0.015 82); }
+.num-grid button .d {
+  background: var(--accent); border-radius: 50%; height: 4px; position: absolute;
+  right: 3px; top: 3px; width: 4px;
+}
+.num-grid button[aria-current="true"] .d { background: oklch(97% 0.01 80); }
+.rail-note { color: var(--faint); font-size: 11px; line-height: 1.55; margin-top: 14px; }
+
+/* ---------- 书页 ---------- */
+.page { display: grid; grid-template-columns: 1fr minmax(0, 620px) 292px 1fr; padding: 78px 0 120px; transition: padding-left 200ms var(--ease); }
+body:not(.rail-open) .page { padding-left: var(--spine-w); }
+body.rail-open .page { padding-left: var(--rail-w); }
+.folio { grid-column: 2; position: relative; }
+.margin-rail { grid-column: 3; padding-left: 34px; position: relative; }
+.chapter-title { font-family: var(--font-scripture); margin: 0 0 6px; }
+.chapter-title .num { font-size: 44px; font-weight: 700; }
+.chapter-title .name { color: var(--ink-soft); font-size: 20px; margin-left: 10px; }
+.chapter-title .en { color: var(--faint); font-size: 15px; font-style: italic; margin-left: 8px; }
+.chapter-sub { color: var(--faint); font-size: 12.5px; margin: 0 0 34px; }
+.verse-block { border-radius: 10px; cursor: pointer; display: grid; gap: 0 14px; grid-template-columns: 34px 1fr; margin: 0 -12px; padding: 9px 12px; position: relative; }
+.verse-block:hover { background: oklch(100% 0 0 / 50%); }
+.verse-block .vn { color: var(--faint); font-family: var(--font-scripture); font-size: 13px; font-weight: 700; padding-top: 7px; text-align: right; }
+.verse-block .cuv { font-family: var(--font-scripture); font-size: var(--scripture-size); line-height: 1.9; }
+.verse-block .kjv { color: var(--muted); font-family: var(--font-scripture); font-size: calc(var(--scripture-size) - 5px); font-style: italic; grid-column: 2; line-height: 1.62; margin-top: 3px; }
+.verse-block[aria-current="true"] { background: var(--accent-tint); }
+.verse-block[aria-current="true"] .vn { color: var(--accent-deep); }
+.verse-block[aria-current="true"] .cuv { font-weight: 600; }
+.verse-block .mark-dot { background: var(--accent-soft); border-radius: 50%; height: 6px; position: absolute; right: -18px; top: 18px; width: 6px; }
+.verse-block[aria-current="true"] .mark-dot { background: var(--accent); }
+.hide-kjv .verse-block .kjv { display: none; }
+
+/* ---------- 边注 ---------- */
+.marginalia { position: absolute; width: 258px; }
+.marginalia .m-ref { color: var(--accent-deep); font-size: 11px; font-weight: 700; letter-spacing: 0.05em; margin-bottom: 8px; }
+.m-item { border-top: 1px solid var(--line); cursor: pointer; padding: 9px 0 10px; }
+.m-item:hover .m-title { color: var(--accent-deep); }
+.m-item .m-kind { color: var(--faint); font-size: 10.5px; font-weight: 650; letter-spacing: 0.05em; }
+.m-item .m-kind .src { color: var(--faint); font-weight: 400; letter-spacing: 0; margin-left: 5px; }
+.m-item .m-kind .cover-badge {
+  background: var(--accent-tint); border: 1px solid var(--accent-soft); border-radius: 4px;
+  color: var(--accent-deep); font-size: 10px; font-weight: 650; letter-spacing: 0; margin-left: 5px; padding: 0 4px;
+}
+.m-item .m-title { font-size: 12.5px; font-weight: 650; margin: 3px 0 3px; transition: color 120ms var(--ease); }
+.m-item .m-body { color: var(--muted); display: -webkit-box; font-size: 12px; line-height: 1.6; margin: 0; overflow: hidden; -webkit-box-orient: vertical; -webkit-line-clamp: 3; }
+.m-item .m-fig { border: 1px solid var(--line); border-radius: 8px; display: block; height: 118px; margin: 2px 0 6px; object-fit: cover; width: 100%; }
+.m-item.m-item--image .m-title { display: -webkit-box; overflow: hidden; -webkit-box-orient: vertical; -webkit-line-clamp: 2; }
+.m-more { border-top: 1px solid var(--line); color: var(--accent-deep); display: block; font-size: 12px; font-weight: 650; padding: 9px 0; text-align: left; width: 100%; }
+.m-more:hover { text-decoration: underline; }
+.m-context { border-top: 1px solid var(--line); color: var(--faint); font-size: 11.5px; padding: 8px 0 0; }
+.m-context button { color: var(--muted); font-size: 11.5px; font-weight: 600; }
+.m-context button:hover { color: var(--accent-deep); }
+.m-empty { border-top: 1px solid var(--line); color: var(--faint); font-size: 12px; padding: 9px 0; }
+
+/* ---------- 页缘章节导航 ---------- */
+.edge-nav {
+  align-items: center; background: var(--surface); border: 1px solid var(--line); border-radius: 999px;
+  color: var(--muted); display: flex; font-size: 18px; height: 44px; justify-content: center;
+  position: fixed; top: 50%; transform: translateY(-50%); transition: all 150ms var(--ease); width: 44px; z-index: 20;
+}
+.edge-nav:hover { border-color: var(--line-strong); color: var(--ink); }
+.edge-nav--prev { left: calc(var(--spine-w) + 14px); }
+body.rail-open .edge-nav--prev { left: calc(var(--rail-w) + 14px); }
+.edge-nav--next { right: 18px; }
+.edge-nav .tip { background: var(--ink); border-radius: 6px; color: var(--surface); font-size: 11px; opacity: 0; padding: 3px 8px; position: absolute; top: -30px; transition: opacity 150ms; white-space: nowrap; }
+.edge-nav:hover .tip { opacity: 1; }
+
+/* ---------- 抽屉(右:卡片 / 左:书卷) ---------- */
+.scrim { background: oklch(25% 0.02 70 / 26%); inset: 0; opacity: 0; pointer-events: none; position: fixed; transition: opacity 200ms var(--ease); z-index: 50; }
+body.drawer-open .scrim, body.books-open .scrim { opacity: 1; pointer-events: auto; }
+.drawer {
+  background: var(--surface); border-left: 1px solid var(--line-strong);
+  box-shadow: -18px 0 50px oklch(30% 0.04 60 / 14%); display: flex; flex-direction: column;
+  height: 100%; position: fixed; right: 0; top: 0; transform: translateX(102%);
+  transition: transform 260ms var(--ease); width: 440px; z-index: 51;
+}
+body.drawer-open .drawer { transform: none; }
+.drawer-head { border-bottom: 1px solid var(--line); padding: 13px 16px 0; }
+.drawer-head .row1 { align-items: center; display: flex; gap: 10px; }
+.drawer-head strong { font-family: var(--font-scripture); font-size: 15px; }
+.drawer-head .sub { color: var(--faint); font-size: 11.5px; }
+.drawer-close { border-radius: 7px; color: var(--muted); margin-left: auto; padding: 6px 8px; }
+.drawer-close:hover { background: var(--canvas); color: var(--ink); }
+.tabs { display: flex; gap: 2px; margin-top: 8px; }
+.tab { border-bottom: 2px solid transparent; color: var(--muted); font-size: 13px; font-weight: 600; padding: 7px 11px 8px; }
+.tab:hover { color: var(--ink); }
+.tab[aria-selected="true"] { border-bottom-color: var(--accent-deep); color: var(--accent-deep); }
+.chips { display: flex; flex-wrap: wrap; gap: 6px; padding: 10px 16px 2px; }
+.chip { background: var(--canvas); border: 1px solid var(--line); border-radius: 999px; color: var(--muted); font-size: 12px; padding: 3px 10px; }
+.chip[aria-pressed="true"] { background: var(--ink); border-color: var(--ink); color: var(--surface); }
+.chip:hover:not([aria-pressed="true"]) { border-color: var(--line-strong); color: var(--ink); }
+.drawer-body { flex: 1; overflow-y: auto; padding: 10px 16px 40px; }
+.d-group-head { align-items: baseline; background: var(--surface); display: flex; gap: 8px; padding: 10px 2px 6px; position: sticky; top: 0; z-index: 5; }
+.d-group-head .ref { color: var(--muted); font-size: 12px; font-weight: 700; }
+.d-group-head.current .ref { color: var(--accent-deep); }
+.d-group-head .cnt { color: var(--faint); font-size: 11px; }
+.d-group-head .goto { color: var(--faint); font-size: 11px; margin-left: auto; }
+.d-group-head .goto:hover { color: var(--accent-deep); }
+
+.card { background: var(--canvas); border: 1px solid var(--line); border-radius: 10px; margin: 0 0 10px; padding: 12px 13px; position: relative; }
+.card:hover { border-color: var(--line-strong); }
+.card .meta { align-items: center; color: var(--faint); display: flex; flex-wrap: wrap; font-size: 11px; gap: 6px; margin-bottom: 4px; }
+.card .meta .type { background: var(--surface); border: 1px solid var(--line); border-radius: 4px; color: var(--muted); font-weight: 600; padding: 0 6px; }
+.card .meta .type--image { background: var(--cool-soft); border-color: transparent; color: var(--cool); }
+.card .meta .cover-badge { background: var(--accent-tint); border: 1px solid var(--accent-soft); border-radius: 4px; color: var(--accent-deep); font-weight: 650; padding: 0 5px; }
+.card h4 { font-size: 13px; font-weight: 650; margin: 0 0 6px; }
+.card .body { color: var(--ink-soft); font-size: 12.5px; line-height: 1.7; margin: 0; }
+.card .fig { border: 1px solid var(--line); border-radius: 8px; cursor: zoom-in; display: block; margin: 2px 0 8px; max-height: 240px; object-fit: cover; width: 100%; }
+.card .fig:hover { border-color: var(--line-strong); }
+.card--image h4 { font-weight: 550; font-size: 12.5px; color: var(--ink-soft); }
+.card-actions { background: var(--surface); border: 1px solid var(--line); border-radius: 8px; box-shadow: 0 4px 14px oklch(35% 0.04 60 / 12%); display: flex; gap: 2px; opacity: 0; padding: 2px; position: absolute; right: 8px; top: 8px; transition: opacity 140ms var(--ease); z-index: 3; }
+.card:hover .card-actions, .card:focus-within .card-actions, .showcase .card-actions { opacity: 1; }
+.card-actions button { border-radius: 6px; color: var(--muted); padding: 5px; }
+.card-actions button:hover { background: var(--canvas); color: var(--ink); }
+.card-actions .act-danger:hover { background: var(--danger-soft); color: var(--danger); }
+
+.books {
+  background: var(--surface); border-right: 1px solid var(--line-strong);
+  box-shadow: 18px 0 50px oklch(30% 0.04 60 / 14%); display: flex; flex-direction: column;
+  height: 100%; left: 0; position: fixed; top: 0; transform: translateX(-102%);
+  transition: transform 260ms var(--ease); width: 420px; z-index: 52;
+}
+body.books-open .books { transform: none; }
+.books-head { align-items: center; border-bottom: 1px solid var(--line); display: flex; gap: 10px; padding: 13px 16px; }
+.books-head strong { font-size: 14px; }
+.books-body { flex: 1; overflow-y: auto; padding: 12px 16px 30px; }
+.books-body h4 { color: var(--faint); font-size: 10.5px; font-weight: 650; letter-spacing: 0.08em; margin: 10px 2px 7px; }
+.book-grid { display: grid; gap: 3px; grid-template-columns: repeat(3, 1fr); }
+.book-grid button { border-radius: 7px; color: var(--ink-soft); font-size: 12.5px; padding: 7px 4px; }
+.book-grid button:hover { background: var(--canvas); color: var(--ink); }
+.book-grid button[aria-current="true"] { background: var(--accent-deep); color: oklch(97% 0.01 80); font-weight: 650; }
+.book-grid button.faded { color: oklch(74% 0.015 82); }
+
+/* ---------- 灯箱 ---------- */
+.lightbox { align-items: center; background: oklch(18% 0.015 70 / 78%); display: none; flex-direction: column; gap: 12px; inset: 0; justify-content: center; padding: 40px; position: fixed; z-index: 70; }
+body.lightbox-open .lightbox { display: flex; }
+.lightbox img { border-radius: 10px; box-shadow: 0 30px 80px oklch(10% 0.01 70 / 50%); max-height: 78vh; max-width: min(1000px, 88vw); object-fit: contain; }
+.lightbox .cap { color: oklch(92% 0.01 85); font-size: 13px; max-width: 720px; text-align: center; }
+.lightbox .lb-close { background: oklch(96% 0.01 85 / 12%); border: 1px solid oklch(96% 0.01 85 / 30%); border-radius: 999px; color: oklch(96% 0.01 85); font-size: 13px; padding: 6px 14px; }
+.lightbox .lb-close:hover { background: oklch(96% 0.01 85 / 22%); }
+
+.toasts { bottom: 20px; display: flex; flex-direction: column; gap: 8px; position: fixed; right: 20px; z-index: 90; }
+.toast { align-items: center; animation: toast-in 220ms var(--ease); background: var(--ink); border-radius: 9px; box-shadow: 0 10px 30px oklch(30% 0.04 60 / 25%); color: var(--surface); display: flex; font-size: 13px; gap: 10px; padding: 9px 13px; }
+.toast button { color: oklch(88% 0.06 85); font-weight: 650; }
+@keyframes toast-in { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: none; } }
+.kbd-float { bottom: 20px; color: var(--faint); font-size: 11.5px; left: calc(var(--spine-w) + 16px); position: fixed; z-index: 10; }
+body.rail-open .kbd-float { left: calc(var(--rail-w) + 16px); }
+.kbd-float kbd { background: var(--surface); border: 1px solid var(--line); border-radius: 4px; font-family: inherit; font-size: 10.5px; padding: 0 5px; }
+@media (prefers-reduced-motion: reduce) { * { animation: none !important; transition: none !important; } }
+@media (max-width: 1280px) { .page { grid-template-columns: 1fr minmax(0, 620px) 1fr; } .margin-rail { display: none; } }
+</style>
+</head>
+<body>
+
+<header class="topbar">
+  <span class="brand"><span class="mark">OHB</span></span>
+  <span class="loc" id="topLoc">创世记 1<span class="en">Genesis</span></span>
+  <div class="top-actions">
+    <div class="searchbox" id="searchBox">
+      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" style="color:var(--faint)"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+      <input id="searchInput" placeholder="搜索经文,Enter 跳转" aria-label="搜索经文">
+    </div>
+    <button class="tbtn" id="searchToggle" title="搜索(/)"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg></button>
+    <button class="tbtn" id="kjvToggle" aria-pressed="true" title="显示/隐藏英文对照">英文对照</button>
+    <span class="stepper">
+      <button id="fontDown" aria-label="减小字号">−</button>
+      <button id="fontUp" aria-label="增大字号">+</button>
+    </span>
+    <span class="autosave" id="autosave"><span class="dot"></span>已自动保存</span>
+  </div>
+</header>
+
+<!-- 左侧:书脊(收起态) -->
+<div class="spine" id="spine">
+  <button class="open-btn" id="railOpen" title="展开导航" aria-label="展开导航">›</button>
+  <span class="spine-title" id="spineTitle" title="展开导航">创世记 · 第一章</span>
+</div>
+
+<!-- 左侧:展开导航栏 -->
+<nav class="rail" id="rail" aria-label="卷章节导航">
+  <div class="rail-head">
+    <button class="book-btn" id="bookBtn">创世记 <span class="caret">▾ 换卷</span></button>
+    <button class="rail-close" id="railClose" title="收起导航" aria-label="收起导航">‹</button>
+  </div>
+  <h4>章 · 50</h4>
+  <div class="num-grid" id="chapterGrid"></div>
+  <h4>节 · 31 <span style="letter-spacing:0;font-weight:400">(圆点 = 有卡片)</span></h4>
+  <div class="num-grid" id="verseGrid"></div>
+  <p class="rail-note">Demo 数据仅含创世记第 1 章;点其他章卷可看提示。</p>
+</nav>
+
+<button class="edge-nav edge-nav--prev" id="prevCh" aria-label="上一章">‹<span class="tip">上一章</span></button>
+<button class="edge-nav edge-nav--next" id="nextCh" aria-label="下一章">›<span class="tip">下一章 · 创世记 2</span></button>
+
+<div class="page" id="page">
+  <div class="folio" id="folio">
+    <h1 class="chapter-title"><span class="num">1</span><span class="name">创世记</span><span class="en">Genesis</span></h1>
+    <p class="chapter-sub">和合本 · KJV 对照 · 点选经节,右侧浮现该节边注;抽屉可纵览本章</p>
+    <div id="verses"></div>
+  </div>
+  <div class="margin-rail"><div class="marginalia" id="marginalia"></div></div>
+</div>
+
+<div class="scrim" id="scrim"></div>
+
+<!-- 右抽屉:本节 / 本章 -->
+<aside class="drawer" id="drawer" role="dialog" aria-modal="true" aria-label="卡片">
+  <div class="drawer-head">
+    <div class="row1">
+      <strong id="drawerTitle">创世记 1:1</strong><span class="sub" id="drawerCount"></span>
+      <button class="drawer-close" id="drawerClose" title="关闭(Esc)">✕ 关闭</button>
+    </div>
+    <div class="tabs" role="tablist">
+      <button class="tab" id="tabVerse" role="tab" aria-selected="true">本节</button>
+      <button class="tab" id="tabChapter" role="tab" aria-selected="false">本章</button>
+    </div>
+  </div>
+  <div class="chips" id="typeChips"></div>
+  <div class="drawer-body" id="drawerBody"></div>
+</aside>
+
+<!-- 左抽屉:66 卷 -->
+<aside class="books" id="books" role="dialog" aria-modal="true" aria-label="选择书卷">
+  <div class="books-head"><strong>书卷</strong><span style="color:var(--faint);font-size:11.5px">66 卷</span>
+    <button class="drawer-close" id="booksClose" style="margin-left:auto" title="关闭(Esc)">✕ 关闭</button>
+  </div>
+  <div class="books-body" id="booksBody"></div>
+</aside>
+
+<!-- 灯箱 -->
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="查看大图">
+  <img id="lbImg" src="" alt="">
+  <p class="cap" id="lbCap"></p>
+  <button class="lb-close" id="lbClose">✕ 关闭 (Esc)</button>
+</div>
+
+<div class="kbd-float"><kbd>↑</kbd> <kbd>↓</kbd> 逐节 · <kbd>←</kbd> <kbd>→</kbd> 翻章 · <kbd>Enter</kbd> 本节卡片 · <kbd>/</kbd> 搜索 · <kbd>Esc</kbd> 关闭</div>
+<div class="toasts" id="toasts"></div>
+
+<script src="gen1-data-plus.js"></script>
+<script>
+const D = window.OHB_DATA_PLUS;
+const state = { verse: 1, tab: 'verse', filter: '全部', removed: new Set() };
+const refCn = v => `创世记 1:${v}`;
+const kjvByV = new Map(D.kjv.map(v => [v.v, v.t]));
+const activeCards = () => D.cards.filter(c => !state.removed.has(c.id));
+const isRange = c => c.coverEnd != null && c.coverEnd > c.coverStart;
+/* 本节相关 = 锚定本节 + 范围覆盖本节 */
+const cardsFor = v => activeCards().filter(c => c.anchor === v || (isRange(c) && c.coverStart <= v && v <= c.coverEnd));
+const versesWithCards = () => { const s = new Set(); activeCards().forEach(c => { if (!isRange(c)) s.add(c.anchor); }); return s; };
+
+/* ---------- 经文 ---------- */
+function renderVerses() {
+  const host = document.getElementById('verses');
+  const marked = versesWithCards();
+  host.innerHTML = '';
+  for (const v of D.cuv) {
+    const el = document.createElement('div');
+    el.className = 'verse-block';
+    el.dataset.v = v.v;
+    el.tabIndex = 0;
+    el.setAttribute('role', 'button');
+    el.setAttribute('aria-current', String(v.v === state.verse));
+    el.innerHTML = `
+      <span class="vn">${v.v}</span>
+      <span class="cuv">${v.t}</span>
+      <span class="kjv">${kjvByV.get(v.v) ?? ''}</span>
+      ${marked.has(v.v) ? '<span class="mark-dot" title="本节有卡片"></span>' : ''}`;
+    el.addEventListener('click', () => selectVerse(v.v));
+    el.addEventListener('keydown', e => { if (e.key === 'Enter' && state.verse === v.v) openDrawer('verse'); });
+    host.appendChild(el);
+  }
+}
+function selectVerse(v, opts = {}) {
+  state.verse = v;
+  document.querySelectorAll('.verse-block').forEach(el => el.setAttribute('aria-current', String(Number(el.dataset.v) === v)));
+  document.querySelectorAll('#verseGrid button').forEach(b => b.setAttribute('aria-current', String(Number(b.dataset.v) === v)));
+  if (opts.scroll !== false) {
+    const el = document.querySelector(`.verse-block[data-v="${v}"]`);
+    const rect = el.getBoundingClientRect();
+    if (rect.top < 60 || rect.bottom > innerHeight - 40) el.scrollIntoView({ block: 'center', behavior: 'smooth' });
+  }
+  renderMarginalia();
+  if (document.body.classList.contains('drawer-open')) renderDrawer();
+}
+
+/* ---------- 边注:图片卡以图为主,凑齐类型 ---------- */
+function marginPick(cards) {
+  const imgs = cards.filter(c => c.type === 'image');
+  const texts = cards.filter(c => c.type !== 'image');
+  if (imgs.length && texts.length) return [imgs[0], texts[0]];
+  return cards.slice(0, 2);
+}
+function renderMarginalia() {
+  const host = document.getElementById('marginalia');
+  const verseEl = document.querySelector(`.verse-block[data-v="${state.verse}"]`);
+  const folioTop = document.getElementById('folio').getBoundingClientRect().top;
+  host.style.top = Math.max(0, verseEl.getBoundingClientRect().top - folioTop) + 'px';
+  const cards = cardsFor(state.verse);
+  let html = `<div class="m-ref">${refCn(state.verse)} 边注</div>`;
+  if (!cards.length) {
+    html += '<div class="m-empty">本节暂无卡片。左栏节号带圆点的有内容。</div>';
+  } else {
+    for (const c of marginPick(cards)) {
+      if (c.type === 'image') {
+        html += `
+          <div class="m-item m-item--image" data-open="1">
+            <div class="m-kind">图片<span class="src">· ${c.source}</span></div>
+            <img class="m-fig" src="${c.img}" alt="${c.title}">
+            <div class="m-title">${c.title}</div>
+          </div>`;
+      } else {
+        html += `
+          <div class="m-item" data-open="1">
+            <div class="m-kind">${c.typeLabel}<span class="src">· ${c.source}</span>${isRange(c) ? `<span class="cover-badge">覆盖 1:${c.coverStart}-${c.coverEnd}</span>` : ''}</div>
+            <div class="m-title">${c.title}</div>
+            <p class="m-body">${c.body.slice(0, 92)}…</p>
+          </div>`;
+      }
+    }
+    html += `<button class="m-more" data-open="1">查看本节全部 ${cards.length} 张卡片 →</button>`;
+  }
+  const ctx = contextLine();
+  if (ctx) html += `<div class="m-context">上下文:${ctx}</div>`;
+  host.innerHTML = html;
+  host.querySelectorAll('[data-open]').forEach(el => el.addEventListener('click', () => openDrawer('verse')));
+  host.querySelectorAll('.m-context button').forEach(b => b.addEventListener('click', e => { e.stopPropagation(); selectVerse(Number(b.dataset.v)); }));
+}
+function contextLine() {
+  const parts = [];
+  for (const v of [state.verse - 1, state.verse + 1, state.verse + 2]) {
+    if (v < 1 || v > 31 || v === state.verse) continue;
+    const n = activeCards().filter(c => c.anchor === v && !isRange(c)).length;
+    if (n) parts.push(`<button data-v="${v}">1:${v} 有 ${n} 张</button>`);
+    if (parts.length >= 2) break;
+  }
+  return parts.join(' · ');
+}
+
+/* ---------- 左侧导航 ---------- */
+function setRail(open, persist = true) {
+  document.body.classList.toggle('rail-open', open);
+  if (persist) { try { localStorage.setItem('ohb-cplus-rail', open ? '1' : '0'); } catch {} pulseAutosave(); }
+  renderMarginalia();
+}
+document.getElementById('railOpen').addEventListener('click', () => setRail(true));
+document.getElementById('spineTitle').addEventListener('click', () => setRail(true));
+document.getElementById('railClose').addEventListener('click', () => setRail(false));
+
+function renderRailGrids() {
+  const ch = document.getElementById('chapterGrid');
+  ch.innerHTML = '';
+  for (let i = 1; i <= D.chapterCount; i++) {
+    const b = document.createElement('button');
+    b.textContent = i;
+    if (i !== 1) b.className = 'faded';
+    b.setAttribute('aria-current', String(i === 1));
+    b.addEventListener('click', () => { if (i !== 1) toast('Demo 数据仅含创世记第 1 章'); });
+    ch.appendChild(b);
+  }
+  const vg = document.getElementById('verseGrid');
+  const marked = versesWithCards();
+  vg.innerHTML = '';
+  for (let i = 1; i <= 31; i++) {
+    const b = document.createElement('button');
+    b.dataset.v = i;
+    b.innerHTML = `${i}${marked.has(i) ? '<span class="d"></span>' : ''}`;
+    b.setAttribute('aria-current', String(i === state.verse));
+    b.title = marked.has(i) ? `1:${i} · 有卡片` : `1:${i}`;
+    b.addEventListener('click', () => selectVerse(i));
+    vg.appendChild(b);
+  }
+}
+const OT = ['创世记','出埃及记','利未记','民数记','申命记','约书亚记','士师记','路得记','撒母耳记上','撒母耳记下','列王纪上','列王纪下','历代志上','历代志下','以斯拉记','尼希米记','以斯帖记','约伯记','诗篇','箴言','传道书','雅歌','以赛亚书','耶利米书','耶利米哀歌','以西结书','但以理书','何西阿书','约珥书','阿摩司书','俄巴底亚书','约拿书','弥迦书','那鸿书','哈巴谷书','西番雅书','哈该书','撒迦利亚书','玛拉基书'];
+const NT = ['马太福音','马可福音','路加福音','约翰福音','使徒行传','罗马书','哥林多前书','哥林多后书','加拉太书','以弗所书','腓立比书','歌罗西书','帖撒罗尼迦前书','帖撒罗尼迦后书','提摩太前书','提摩太后书','提多书','腓利门书','希伯来书','雅各书','彼得前书','彼得后书','约翰一书','约翰二书','约翰三书','犹大书','启示录'];
+function renderBooks() {
+  const host = document.getElementById('booksBody');
+  host.innerHTML = '';
+  for (const [label, list] of [['旧约 · 39 卷', OT], ['新约 · 27 卷', NT]]) {
+    const h = document.createElement('h4');
+    h.textContent = label;
+    host.appendChild(h);
+    const grid = document.createElement('div');
+    grid.className = 'book-grid';
+    for (const name of list) {
+      const b = document.createElement('button');
+      b.textContent = name;
+      b.setAttribute('aria-current', String(name === '创世记'));
+      if (name !== '创世记') b.className = 'faded';
+      b.addEventListener('click', () => {
+        if (name === '创世记') { closeBooks(); return; }
+        toast(`Demo 数据仅含创世记(点了「${name}」)`);
+      });
+      grid.appendChild(b);
+    }
+    host.appendChild(grid);
+  }
+}
+let booksLastFocus = null;
+function openBooks() { booksLastFocus = document.activeElement; document.body.classList.add('books-open'); document.getElementById('booksClose').focus(); }
+function closeBooks() { document.body.classList.remove('books-open'); if (booksLastFocus) booksLastFocus.focus(); }
+document.getElementById('bookBtn').addEventListener('click', openBooks);
+document.getElementById('booksClose').addEventListener('click', closeBooks);
+
+/* ---------- 右抽屉 ---------- */
+let drawerLastFocus = null;
+function openDrawer(tab) {
+  if (tab) state.tab = tab;
+  drawerLastFocus = document.activeElement;
+  document.body.classList.add('drawer-open');
+  renderDrawer();
+  document.getElementById('drawerClose').focus();
+  if (location.hash.includes('showcase')) document.getElementById('drawer').classList.add('showcase');
+}
+function closeDrawer() { document.body.classList.remove('drawer-open'); if (drawerLastFocus) drawerLastFocus.focus(); }
+document.getElementById('drawerClose').addEventListener('click', closeDrawer);
+document.getElementById('tabVerse').addEventListener('click', () => { state.tab = 'verse'; renderDrawer(); });
+document.getElementById('tabChapter').addEventListener('click', () => { state.tab = 'chapter'; renderDrawer(); });
+
+function typeChips(cards) {
+  const chips = document.getElementById('typeChips');
+  chips.innerHTML = '';
+  const counts = { 全部: cards.length };
+  cards.forEach(c => counts[c.typeLabel] = (counts[c.typeLabel] || 0) + 1);
+  for (const label of Object.keys(counts)) {
+    const b = document.createElement('button');
+    b.className = 'chip';
+    b.setAttribute('aria-pressed', String(state.filter === label));
+    b.textContent = `${label} ${counts[label]}`;
+    b.addEventListener('click', () => { state.filter = label; renderDrawer(); });
+    chips.appendChild(b);
+  }
+}
+function cardEl(c) {
+  const el = document.createElement('article');
+  el.className = 'card' + (c.type === 'image' ? ' card--image' : '');
+  el.innerHTML = `
+    <div class="meta">
+      <span class="type ${c.type === 'image' ? 'type--image' : ''}">${c.typeLabel}</span><span>${c.source}</span>
+      ${isRange(c) ? `<span class="cover-badge">覆盖 1:${c.coverStart}-${c.coverEnd}</span>` : `<span>${refCn(c.anchor)}</span>`}
+    </div>
+    ${c.type === 'image' ? `<img class="fig" src="${c.img}" alt="${c.title}" loading="lazy" title="点击看大图">` : ''}
+    <h4>${c.title}</h4>
+    ${c.type === 'image' ? '' : `<p class="body">${c.body}</p>`}
+    <div class="card-actions">
+      <button title="编辑" data-act="edit">✎</button>
+      <button title="复制" data-act="copy">⧉</button>
+      <button class="act-danger" title="移除(可撤销)" data-act="remove">✕</button>
+    </div>`;
+  const fig = el.querySelector('.fig');
+  if (fig) fig.addEventListener('click', () => openLightbox(c));
+  el.querySelector('[data-act="copy"]').addEventListener('click', () => toast('卡片内容已复制'));
+  el.querySelector('[data-act="edit"]').addEventListener('click', () => toast('打开编辑器(demo 略)'));
+  el.querySelector('[data-act="remove"]').addEventListener('click', () => {
+    state.removed.add(c.id); refreshAll();
+    toast(`已移除「${c.title.slice(0, 12)}…」`, { label: '撤销', fn: () => { state.removed.delete(c.id); refreshAll(); } });
+  });
+  return el;
+}
+function renderDrawer() {
+  document.getElementById('tabVerse').setAttribute('aria-selected', String(state.tab === 'verse'));
+  document.getElementById('tabChapter').setAttribute('aria-selected', String(state.tab === 'chapter'));
+  const body = document.getElementById('drawerBody');
+  body.innerHTML = '';
+  if (state.tab === 'verse') {
+    const all = cardsFor(state.verse);
+    document.getElementById('drawerTitle').textContent = refCn(state.verse);
+    document.getElementById('drawerCount').textContent = `本节相关 ${all.length} 张`;
+    typeChips(all);
+    const cards = all.filter(c => state.filter === '全部' || c.typeLabel === state.filter);
+    if (!cards.length) body.innerHTML = '<p style="color:var(--faint);font-size:12.5px">当前筛选下本节没有卡片。</p>';
+    cards.forEach(c => body.appendChild(cardEl(c)));
+  } else {
+    const all = activeCards();
+    document.getElementById('drawerTitle').textContent = '创世记 1 章';
+    document.getElementById('drawerCount').textContent = `本章全部 ${all.length} 张`;
+    typeChips(all);
+    const cards = all.filter(c => state.filter === '全部' || c.typeLabel === state.filter);
+    const ranges = cards.filter(isRange).sort((a, b) => (b.coverEnd - b.coverStart) - (a.coverEnd - a.coverStart));
+    if (ranges.length) {
+      const gh = document.createElement('div');
+      gh.className = 'd-group-head';
+      gh.innerHTML = `<span class="ref">跨节 · 结构与导读</span><span class="cnt">${ranges.length} 张</span>`;
+      body.appendChild(gh);
+      ranges.forEach(c => body.appendChild(cardEl(c)));
+    }
+    const byVerse = new Map();
+    cards.filter(c => !isRange(c)).forEach(c => {
+      if (!byVerse.has(c.anchor)) byVerse.set(c.anchor, []);
+      byVerse.get(c.anchor).push(c);
+    });
+    for (const v of [...byVerse.keys()].sort((a, b) => a - b)) {
+      const gh = document.createElement('div');
+      gh.className = 'd-group-head' + (v === state.verse ? ' current' : '');
+      gh.innerHTML = `<span class="ref">${refCn(v)}</span><span class="cnt">${byVerse.get(v).length} 张</span><button class="goto">定位经文 ↖</button>`;
+      gh.querySelector('.goto').addEventListener('click', () => { selectVerse(v); });
+      body.appendChild(gh);
+      byVerse.get(v).forEach(c => body.appendChild(cardEl(c)));
+    }
+  }
+}
+
+/* ---------- 灯箱 ---------- */
+let lbLastFocus = null;
+function openLightbox(c) {
+  lbLastFocus = document.activeElement;
+  document.getElementById('lbImg').src = c.img;
+  document.getElementById('lbImg').alt = c.title;
+  document.getElementById('lbCap').textContent = c.body || c.title;
+  document.body.classList.add('lightbox-open');
+  document.getElementById('lbClose').focus();
+}
+function closeLightbox() { document.body.classList.remove('lightbox-open'); if (lbLastFocus) lbLastFocus.focus(); }
+document.getElementById('lbClose').addEventListener('click', closeLightbox);
+document.getElementById('lightbox').addEventListener('click', e => { if (e.target.id === 'lightbox') closeLightbox(); });
+
+/* ---------- 顶栏控件 ---------- */
+document.getElementById('kjvToggle').addEventListener('click', e => {
+  const on = e.currentTarget.getAttribute('aria-pressed') !== 'true';
+  e.currentTarget.setAttribute('aria-pressed', String(on));
+  document.getElementById('page').classList.toggle('hide-kjv', !on);
+  renderMarginalia(); pulseAutosave();
+});
+let fontPx = 21;
+function setFont(px) {
+  fontPx = Math.min(25, Math.max(18, px));
+  document.documentElement.style.setProperty('--scripture-size', fontPx + 'px');
+  renderMarginalia(); pulseAutosave();
+}
+document.getElementById('fontDown').addEventListener('click', () => setFont(fontPx - 1));
+document.getElementById('fontUp').addEventListener('click', () => setFont(fontPx + 1));
+document.getElementById('searchToggle').addEventListener('click', e => {
+  e.stopPropagation();
+  const box = document.getElementById('searchBox');
+  box.classList.toggle('open');
+  if (box.classList.contains('open')) document.getElementById('searchInput').focus();
+});
+document.getElementById('searchInput').addEventListener('keydown', e => {
+  if (e.key !== 'Enter') return;
+  const q = e.target.value.trim();
+  if (!q) return;
+  const hits = D.cuv.filter(v => v.t.includes(q)).map(v => v.v);
+  if (!hits.length) { toast(`本章未找到「${q}」`); return; }
+  toast(`「${q}」本章 ${hits.length} 处,已跳转第一处`);
+  selectVerse(hits[0]);
+});
+document.getElementById('prevCh').addEventListener('click', () => toast('已是第 1 章(demo 仅含本章)'));
+document.getElementById('nextCh').addEventListener('click', () => toast('Demo 数据仅含创世记第 1 章'));
+
+/* ---------- 键盘 ---------- */
+document.addEventListener('keydown', e => {
+  if (e.key === 'Escape') {
+    if (document.body.classList.contains('lightbox-open')) { closeLightbox(); return; }
+    if (document.body.classList.contains('drawer-open')) { closeDrawer(); return; }
+    if (document.body.classList.contains('books-open')) { closeBooks(); return; }
+    document.getElementById('searchBox').classList.remove('open');
+    return;
+  }
+  if (e.target.matches('input, textarea')) return;
+  if (document.body.classList.contains('drawer-open') || document.body.classList.contains('books-open')) return;
+  if (e.key === 'ArrowDown' || e.key === 'j') { e.preventDefault(); selectVerse(Math.min(31, state.verse + 1)); }
+  if (e.key === 'ArrowUp' || e.key === 'k') { e.preventDefault(); selectVerse(Math.max(1, state.verse - 1)); }
+  if (e.key === 'ArrowRight') toast('Demo 数据仅含创世记第 1 章');
+  if (e.key === 'ArrowLeft') toast('已是第 1 章(demo 仅含本章)');
+  if (e.key === 'Enter') openDrawer('verse');
+  if (e.key === '/') { e.preventDefault(); document.getElementById('searchBox').classList.add('open'); document.getElementById('searchInput').focus(); }
+});
+
+/* ---------- 焦点陷阱(右抽屉/书卷抽屉/灯箱共用) ---------- */
+for (const id of ['drawer', 'books', 'lightbox']) {
+  document.getElementById(id).addEventListener('keydown', e => {
+    if (e.key !== 'Tab') return;
+    const items = [...document.getElementById(id).querySelectorAll('button, img[tabindex]')].filter(el => el.offsetParent);
+    if (!items.length) return;
+    const first = items[0], last = items[items.length - 1];
+    if (e.shiftKey && document.activeElement === first) { e.preventDefault(); last.focus(); }
+    else if (!e.shiftKey && document.activeElement === last) { e.preventDefault(); first.focus(); }
+  });
+}
+document.getElementById('scrim').addEventListener('click', () => {
+  if (document.body.classList.contains('drawer-open')) closeDrawer();
+  if (document.body.classList.contains('books-open')) closeBooks();
+});
+
+/* ---------- 反馈 ---------- */
+let autosaveTimer;
+function pulseAutosave() {
+  const el = document.getElementById('autosave');
+  el.classList.add('pulse');
+  clearTimeout(autosaveTimer);
+  autosaveTimer = setTimeout(() => el.classList.remove('pulse'), 1200);
+}
+function toast(msg, action) {
+  const host = document.getElementById('toasts');
+  const t = document.createElement('div');
+  t.className = 'toast';
+  t.innerHTML = `<span>${msg}</span>`;
+  if (action) {
+    const b = document.createElement('button');
+    b.textContent = action.label;
+    b.addEventListener('click', () => { action.fn(); t.remove(); });
+    t.appendChild(b);
+  }
+  host.appendChild(t);
+  setTimeout(() => t.remove(), action ? 8000 : 3200);
+}
+function refreshAll() { renderVerses(); renderRailGrids(); renderMarginalia(); if (document.body.classList.contains('drawer-open')) renderDrawer(); }
+
+/* ---------- 初始化 ---------- */
+renderVerses();
+renderRailGrids();
+renderBooks();
+let railOpen = false;
+try { railOpen = localStorage.getItem('ohb-cplus-rail') === '1'; } catch {}
+if (location.hash.includes('rail')) railOpen = true;
+setRail(railOpen, false);
+selectVerse(1, { scroll: false });
+window.addEventListener('resize', renderMarginalia);
+if (location.hash.includes('drawer')) setTimeout(() => openDrawer(location.hash.includes('chapter') ? 'chapter' : 'verse'), 250);
+</script>
+</body>
+</html>

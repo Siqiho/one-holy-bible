@@ -1,0 +1,19 @@
+{
+  "createdAt": "2026-09-11T17:20:56+08:00",
+  "backup": "/Users/simon/备份/codex/20260911-workbench-cleanup-stage3-172056",
+  "files": [
+    {
+      "path": "/Users/simon/OHB/one-holy-bible/src/components/Workbench.tsx",
+      "sha256": "bf6850827a9e9b4528c6ed683593d5fc7988eb7a7bd3f2620a5ebb46a9c170ae"
+    },
+    {
+      "path": "/Users/simon/OHB/one-holy-bible/src/components/Workbench.test.tsx",
+      "sha256": "4513a06916f27e84981064ee31520afeb55fe261d277e8bf1b402ff08a321dd4"
+    },
+    {
+      "path": "/Users/simon/OHB/one-holy-bible/src/styles.css",
+      "sha256": "2b78828daf4f4c4273f5bd8dda1346257a32f7b094cd45cf9b226a5a38ff3923"
+    }
+  ]
+}
+

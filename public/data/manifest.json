@@ -478,12 +478,12 @@
       "url": "/data/books/2Thess.json"
     },
     {
-      "bytes": 229585,
+      "bytes": 212068,
       "cuvVerseCount": 113,
       "id": "1Tim",
       "kjvVerseCount": 113,
-      "sha256": "4e2d464896911c0a5f2a2231a2208110cef5d62da070ee3c021fd60b89911a64",
-      "textCardCount": 89,
+      "sha256": "5ef532021295e63cad44bcab9220d2b3c1dd1815db01ec0da4eac9fa1086501d",
+      "textCardCount": 82,
       "url": "/data/books/1Tim.json"
     },
     {
@@ -523,12 +523,12 @@
       "url": "/data/books/Heb.json"
     },
     {
-      "bytes": 223984,
+      "bytes": 201964,
       "cuvVerseCount": 108,
       "id": "Jas",
       "kjvVerseCount": 108,
-      "sha256": "9d502c39238cd6735c35c30ddd9a0335eee2474dc39e526d94ad0dc5dc0c7b3f",
-      "textCardCount": 88,
+      "sha256": "5a053c54668262f9236a7b5ad7a7ee1a453b6669929e11a8a83489d05cd7c4fb",
+      "textCardCount": 78,
       "url": "/data/books/Jas.json"
     },
     {

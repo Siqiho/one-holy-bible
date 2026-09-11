@@ -262,11 +262,11 @@
       "url": "/data/books/Joel.json"
     },
     {
-      "bytes": 223658,
+      "bytes": 222189,
       "cuvVerseCount": 146,
       "id": "Amos",
       "kjvVerseCount": 146,
-      "sha256": "1bf812ca283c6cb75962ec37e5720f9f3175c2ae95039b5efe3700d5ac1bb1e3",
+      "sha256": "de386bc3570d43c428d0cddc164bf40e65a34dc8112293111cb4fc84ff95d740",
       "textCardCount": 76,
       "url": "/data/books/Amos.json"
     },
@@ -289,12 +289,12 @@
       "url": "/data/books/Jonah.json"
     },
     {
-      "bytes": 204989,
+      "bytes": 201850,
       "cuvVerseCount": 105,
       "id": "Mic",
       "kjvVerseCount": 105,
-      "sha256": "c4092b1ddadd15bec72af2ecb9d18b78daac50d3ddb94ee4bc3129c81f0bbbf1",
-      "textCardCount": 79,
+      "sha256": "b57dd0d10df2997c6baa0c90ba2e9018de56eebc6529a7f16666392b369981cc",
+      "textCardCount": 78,
       "url": "/data/books/Mic.json"
     },
     {

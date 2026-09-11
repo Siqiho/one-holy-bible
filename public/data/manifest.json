@@ -163,12 +163,12 @@
       "url": "/data/books/Job.json"
     },
     {
-      "bytes": 1878569,
+      "bytes": 1851587,
       "cuvVerseCount": 2461,
       "id": "Ps",
       "kjvVerseCount": 2461,
-      "sha256": "f0bc4209805238b05ae16c8851e7d23df5c76921a27f968b5d7ed09c78c2e73e",
-      "textCardCount": 446,
+      "sha256": "81b4bc63ff59a6df92e2ad1d4e969324fb49dfcf9c76b20f97ccb9fc4e175ff9",
+      "textCardCount": 431,
       "url": "/data/books/Ps.json"
     },
     {

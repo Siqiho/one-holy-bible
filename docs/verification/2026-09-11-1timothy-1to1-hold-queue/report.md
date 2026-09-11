@@ -85,7 +85,7 @@
 
 ## 4. 六源口径
 
-本轮只减少公开研修本 7 张。公开研修本现计 **9,129**（同跑雅各书再撤 10 张后为 **9,119**）；公开文字卡 **10,136**（同跑后 **10,126**）。提摩太前书隔离 20 与但以理书隔离 251 继续 ledger-only。标识映射不改写。
+本轮只减少公开研修本 7 张。公开研修本现计 **9,116**（同跑雅各书撤 10、约翰一书撤 3 后）；公开文字卡 **10,123**。提摩太前书隔离 20 与但以理书隔离 251 继续 ledger-only。标识映射不改写。
 
 ## 5. 下一卷
 
@@ -96,7 +96,7 @@
 已跑：
 
 - `vitest run` 提摩太前书 / 雅各书及既有公开审计 / `publicData` / `publicBibleData`：见同跑验证。
-- `node scripts/generatePublicBibleData.mjs --validate-only public/data`：66 卷、公开文字卡 10,126、无不安全串。
+- `node scripts/generatePublicBibleData.mjs --validate-only public/data`：66 卷、公开文字卡 10,123、无不安全串。
 - `node scripts/validatePublicRepository.mjs`：通过。
 
 未做浏览器点选：本快照没有 `workbenchSyncedResources-v4.json`，本地 `App.tsx` 不走 `loadPublicBook("1Tim")`，因此无法在本环境用阅读页点开这些公开卡。对照与修补都落在公开数据包和台账 JSONL。

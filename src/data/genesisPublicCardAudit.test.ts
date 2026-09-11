@@ -58,6 +58,7 @@ const expectedCounts: Record<string, number> = {
   "1Thess": 61,
   "1Tim": 82,
   Jas: 78,
+  "1John": 84,
 };
 
 function loadBook(bookId: string): PublicBookPayload {

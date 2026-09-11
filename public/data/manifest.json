@@ -550,12 +550,12 @@
       "url": "/data/books/2Pet.json"
     },
     {
-      "bytes": 233940,
+      "bytes": 219227,
       "cuvVerseCount": 105,
       "id": "1John",
       "kjvVerseCount": 105,
-      "sha256": "b12965e3512cc5eef027fd7ce11a884c0f5e66a2338915c0ac9ac37240506840",
-      "textCardCount": 87,
+      "sha256": "2049def25d014a0fc97f4a786ff38ada2bc899f14c7df0c8eca3dc5133846415",
+      "textCardCount": 84,
       "url": "/data/books/1John.json"
     },
     {

@@ -83,18 +83,18 @@
 
 ## 4. 六源口径
 
-本轮只减少公开研修本 10 张。公开研修本现计 **9,119**；公开文字卡 **10,126**（含同跑提摩太前书撤 7 张）。雅各书隔离 75 与提摩太前书隔离 20 继续 ledger-only。标识映射不改写。
+本轮只减少公开研修本 10 张。公开研修本现计 **9,116**；公开文字卡 **10,123**（含同跑提摩太前书撤 7、约翰一书撤 3）。雅各书隔离 75 与提摩太前书隔离 20 继续 ledger-only。标识映射不改写。
 
 ## 5. 下一卷
 
-提摩太前书 + 雅各书已在本跑收束。下一高价值未审书信面可看**约翰一书**（公开 87，隔离 CMC 71）。以斯拉记 / 民数记（各 84）为下一研修本备选。
+提摩太前书 + 雅各书已在本跑收束。同跑已续展**约翰一书**（公开 87→84，隔离 CMC 71 ledger-only）。见 `docs/verification/2026-09-11-1john-1to1-hold-queue/report.md`。
 
 ## 6. 验证
 
 已跑：
 
 - `vitest run` 提摩太前书 / 雅各书及既有公开审计 / `publicData` / `publicBibleData`：见同跑验证。
-- `node scripts/generatePublicBibleData.mjs --validate-only public/data`：66 卷、公开文字卡 10,126、无不安全串。
+- `node scripts/generatePublicBibleData.mjs --validate-only public/data`：66 卷、公开文字卡 10,123、无不安全串。
 - `node scripts/validatePublicRepository.mjs`：通过。
 
 未做浏览器点选：本快照没有 `workbenchSyncedResources-v4.json`。

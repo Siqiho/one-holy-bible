@@ -235,20 +235,20 @@
       "url": "/data/books/Ezek.json"
     },
     {
-      "bytes": 402158,
+      "bytes": 400914,
       "cuvVerseCount": 357,
       "id": "Dan",
       "kjvVerseCount": 357,
-      "sha256": "72be8cbe2b9f2f4c1d1f0a25680ee3169aed06645d0d0e20d7f36a8cb70e68bc",
+      "sha256": "f8a4451a7afc595da92e384449c17b5b2ba42dd83523bdec6a242344d839e0e5",
       "textCardCount": 92,
       "url": "/data/books/Dan.json"
     },
     {
-      "bytes": 311776,
+      "bytes": 310796,
       "cuvVerseCount": 197,
       "id": "Hos",
       "kjvVerseCount": 197,
-      "sha256": "47874a6301b25b77227184248f1ddd7a47273d38d1dcff37f9f80e9690686370",
+      "sha256": "cdd232555065862c6cebcbfb8f9db7e8259f47d49aff51cc8e4fa63d6b812169",
       "textCardCount": 103,
       "url": "/data/books/Hos.json"
     },
@@ -334,12 +334,12 @@
       "url": "/data/books/Hag.json"
     },
     {
-      "bytes": 329173,
+      "bytes": 312174,
       "cuvVerseCount": 211,
       "id": "Zech",
       "kjvVerseCount": 211,
-      "sha256": "88454e2cae5134e5397cf35112f88763f312d1091405082ddb2f333bcb89eafa",
-      "textCardCount": 106,
+      "sha256": "d22e796f280423f49861b3c4418db880520a2c2cb04e4d011394f1662b97937a",
+      "textCardCount": 101,
       "url": "/data/books/Zech.json"
     },
     {

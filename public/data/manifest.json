@@ -406,12 +406,12 @@
       "url": "/data/books/Rom.json"
     },
     {
-      "bytes": 581234,
+      "bytes": 554017,
       "cuvVerseCount": 437,
       "id": "1Cor",
       "kjvVerseCount": 437,
-      "sha256": "86d6107298baa8e7891fbab8165257c0d8ed06db4b286c0434da30cd3d892124",
-      "textCardCount": 192,
+      "sha256": "fb239b3264364d3e9401946cd7669ae04697a7ab1f1b931acc7654526fe42b71",
+      "textCardCount": 183,
       "url": "/data/books/1Cor.json"
     },
     {

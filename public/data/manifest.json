@@ -109,12 +109,12 @@
       "url": "/data/books/2Kgs.json"
     },
     {
-      "bytes": 581201,
+      "bytes": 561398,
       "cuvVerseCount": 942,
       "id": "1Chr",
       "kjvVerseCount": 942,
-      "sha256": "345a8e2f3c70fd7af207126f72d983e0c20b70111b6dcb7598f009e41beca387",
-      "textCardCount": 71,
+      "sha256": "2d51f1909ea96b648df610a24f77d6a1ff9e8513f2f120f9d2b8db2283bd56af",
+      "textCardCount": 70,
       "url": "/data/books/1Chr.json"
     },
     {

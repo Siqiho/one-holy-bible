@@ -1,8 +1,8 @@
 === vitest public audits + residual holds ===
-pending local run after commit
+78 files, 312 tests passed
 
 === generatePublicBibleData --validate-only ===
-pending local run after commit
+Public data valid: 66 books, 31102 CUV verses, 31102 KJV verses, 10096 text cards, 62204 search entries, 0 image cards, 0 unsafe matches
 
 === validatePublicRepository ===
-pending local run after commit
+Public repository metadata valid: 8 required files, Node 24

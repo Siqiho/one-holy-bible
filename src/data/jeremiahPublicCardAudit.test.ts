@@ -82,6 +82,10 @@ const forbiddenFragments = [
   "指王官和圣殿",
   "焚烧圣殿、王官",
   "负资安排",
+  "马利亚的子官",
+  "\"归回\"\"，",
+  "\"包围着\"\"，",
+  "\"所剩余的\"\"，",
 ];
 
 function loadBook(bookId: string): PublicBookPayload {

@@ -92,6 +92,8 @@ const forbiddenFragments = [
   "介人",
   "水恒",
   "糖物",
+  "加人到规模",
+  "11*天\"",
 ];
 
 function loadBook(bookId: string): PublicBookPayload {

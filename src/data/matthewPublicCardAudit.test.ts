@@ -108,6 +108,9 @@ const forbiddenFragments = [
   "\"还要怎样来*",
   "\"这世代*可以",
   "和1\"意\"",
+  "（《和修\"向他下跪》",
+  "67年\"）",
+  "\"爸爸\"\"，",
 ];
 
 function loadBook(bookId: string): PublicBookPayload {

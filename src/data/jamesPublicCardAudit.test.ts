@@ -60,6 +60,8 @@ const forbiddenFragments = [
   "宜告",
   "（《和》《",
   "引人14-26节",
+  "收劃",
+  "残人自肥",
 ];
 
 function loadBook(bookId: string): PublicBookPayload {

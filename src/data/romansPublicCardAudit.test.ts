@@ -81,6 +81,8 @@ const forbiddenFragments = [
   "］V见徒",
   "人狱",
   "\"使人因信而顺服*",
+  "\"来自上帝的义\"\"，",
+  "\"众人都犯了亚当的罪\"\"，",
 ];
 
 function loadBook(bookId: string): PublicBookPayload {

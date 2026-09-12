@@ -65,6 +65,9 @@ const forbiddenFragments = [
   "4:10.5：。关于",
   "撤但",
   "亵读",
+  "加人弥赛亚",
+  "融人罗马社会",
+  "约瀚福音",
 ];
 
 function loadBook(bookId: string): PublicBookPayload {

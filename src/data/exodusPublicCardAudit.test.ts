@@ -72,6 +72,7 @@ const forbiddenFragments = [
   "莱耀",
   "上：帝",
   "利已",
+  "混人异教",
 ];
 
 function loadBook(bookId: string): PublicBookPayload {

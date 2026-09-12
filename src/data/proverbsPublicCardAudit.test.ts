@@ -80,6 +80,9 @@ const forbiddenFragments = [
   "有染是致命",
   "贏得别人",
   "\"智慧人*等同",
+  "带人歧途",
+  "希伯来¥经",
+  "\"因小失大\"\"，",
 ];
 
 function loadBook(bookId: string): PublicBookPayload {

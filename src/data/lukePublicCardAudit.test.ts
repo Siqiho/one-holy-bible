@@ -105,6 +105,12 @@ const forbiddenFragments = [
   "\"贫穷人*",
   "为*至高者\"",
   "负资发掘",
+  "加人他们的",
+  "更深人认识",
+  "约瀚",
+  "*无礼〞",
+  "情词迫场",
+  "\"七十二\"\"，",
 ];
 
 function loadBook(bookId: string): PublicBookPayload {

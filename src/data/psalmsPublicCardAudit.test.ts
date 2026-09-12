@@ -68,6 +68,13 @@ const forbiddenFragments = [
   "被收人正典",
   "太多数",
   "阴羅",
+  "仂敌",
+  "大工家的王",
+  "完金一样",
+  "与上常同在",
+  "剧歌相同",
+  "礼拜人门仪式",
+  "参王上5：。",
 ];
 
 function loadBook(bookId: string): PublicBookPayload {

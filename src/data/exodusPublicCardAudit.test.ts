@@ -69,6 +69,9 @@ const forbiddenFragments = [
   "摩西生平的三个阶段",
   "法老的心变刚硬宣告",
   "占为已有",
+  "莱耀",
+  "上：帝",
+  "利已",
 ];
 
 function loadBook(bookId: string): PublicBookPayload {

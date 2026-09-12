@@ -76,6 +76,7 @@ const forbiddenFragments = [
   "21：.9",
   "《经智慧篇》",
   "有染是致命",
+  "贏得别人",
 ];
 
 function loadBook(bookId: string): PublicBookPayload {

@@ -62,6 +62,7 @@ const forbiddenFragments = [
   "而且是来的小学",
   "这个生活领袖十分重要",
   "从老底嘉来；的书信",
+  "介人",
 ];
 
 function loadBook(bookId: string): PublicBookPayload {

@@ -80,6 +80,7 @@ const forbiddenFragments = [
   "《《圣概述》",
   "干早地带",
   "《和修》注\"低地是继续",
+  "11:21见本书",
 ];
 
 function loadBook(bookId: string): PublicBookPayload {

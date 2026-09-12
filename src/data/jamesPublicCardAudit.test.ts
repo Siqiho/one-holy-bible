@@ -57,6 +57,9 @@ const forbiddenFragments = [
   "亚作拉罕",
   "温菜",
   "像慨",
+  "宜告",
+  "（《和》《",
+  "引人14-26节",
 ];
 
 function loadBook(bookId: string): PublicBookPayload {

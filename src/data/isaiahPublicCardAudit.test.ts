@@ -87,6 +87,9 @@ const forbiddenFragments = [
   "事件 经文 年份（主前）",
   "22:21］",
   "人侵",
+  "莱耀",
+  "官廷",
+  "介人",
 ];
 
 function loadBook(bookId: string): PublicBookPayload {

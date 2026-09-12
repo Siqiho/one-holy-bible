@@ -39,6 +39,11 @@ const forbiddenFragments = [
   "Double Blessings",
   "迎勒底",
   "人侵",
+  "鸟加列",
+  "将收人的",
+  "［本书12:17］",
+  "示剑的士地",
+  "一般认力",
 ];
 
 const expectedCounts: Record<string, number> = {

@@ -90,4 +90,13 @@
 
 ## 6. 验证
 
-见同目录 `validate.txt` 与 `full-vitest-blockers.md`。
+已跑：
+
+- `vitest run src/data/*PublicCardAudit.test.ts src/data/residualHoldsInventory.test.ts src/data/residualHoldsThirdPass.test.ts src/data/publicData.test.ts src/data/publicBibleData.test.ts scripts/generatePublicBibleData.test.mjs scripts/validatePublicRepository.test.mjs`：72/72 通过（276 tests）。
+- `node scripts/generatePublicBibleData.mjs --validate-only public/data`：66 卷、公开文字卡 10,096、无不安全串。
+- `node scripts/validatePublicRepository.mjs`：通过。
+- 原始输出见同目录 `validate.txt`。
+
+`vitest run` 全量：103 files / 419 tests，89 / 403 通过，14 files / 16 tests 失败。失败面是缺创世记图像、缺工作台 v4、缺综合解读生成 JSON / Doré 缩图，以及本快照 Node 22 跑 `.mts`；不读本轮公开包修补，不补造真源。明细见 `full-vitest-blockers.md`。
+
+未做浏览器点选：本快照没有 `workbenchSyncedResources-v4.json`，本地阅读页不走 `loadPublicBook`。对照与修补都落在公开数据包和台账 JSONL。

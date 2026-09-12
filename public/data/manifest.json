@@ -253,11 +253,11 @@
       "url": "/data/books/Hos.json"
     },
     {
-      "bytes": 152343,
+      "bytes": 147995,
       "cuvVerseCount": 73,
       "id": "Joel",
       "kjvVerseCount": 73,
-      "sha256": "a8ec4a09cf0cd2ba3f34041f038e8c87d2afceeca6d4ddc5131d3e2637389f7a",
+      "sha256": "aad93685d2240d6a92660e38ff6076fdb135d1195150862c8ff3090221da5f6e",
       "textCardCount": 57,
       "url": "/data/books/Joel.json"
     },
@@ -442,12 +442,12 @@
       "url": "/data/books/Eph.json"
     },
     {
-      "bytes": 172534,
+      "bytes": 160356,
       "cuvVerseCount": 104,
       "id": "Phil",
       "kjvVerseCount": 104,
-      "sha256": "bb34225c692755ecbae4cab269b7a8216940be9671c94225f45191a5b97ac037",
-      "textCardCount": 56,
+      "sha256": "6b3a3097fe4002a9da6ba2c7ba77a6009ee9f81d8c865829da7056b401ddcb29",
+      "textCardCount": 52,
       "url": "/data/books/Phil.json"
     },
     {

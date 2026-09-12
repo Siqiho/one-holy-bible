@@ -39,6 +39,7 @@ const forbiddenFragments = [
   "关于\"救历史\"的解释，见和《",
   "（《和修》\"直捣南即在今天",
   "发音类似亚兰文的\"波",
+  "迎勒底",
 ];
 
 function loadBook(bookId: string): PublicBookPayload {

@@ -27,6 +27,7 @@ const heldStudyBible: string[] = [];
 const forbiddenFragments = [
   "撒迎利亚提到了",
   "是迎得支派居住的地方",
+  "位于迎得的北疆",
   "人侵的敌军就可进人城里",
   "将要被遺回最早的居住地",
   "见饿12-14节",

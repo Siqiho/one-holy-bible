@@ -37,6 +37,7 @@ const forbiddenFragments = [
   "二十—",
   "尽都毁灭口",
   "Double Blessings",
+  "迎勒底",
 ];
 
 const expectedCounts: Record<string, number> = {

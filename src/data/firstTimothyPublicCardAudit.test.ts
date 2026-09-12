@@ -49,6 +49,7 @@ const forbiddenFragments = [
   "19世的纪以前",
   "今不同。天有许多学者",
   "带给世是人",
+  "《《圣经",
 ];
 
 function loadBook(bookId: string): PublicBookPayload {

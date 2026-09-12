@@ -1,0 +1,54 @@
+{
+  "asOf": "2026-09-12",
+  "method": "Matthew keep/fix/hold; no Mac Resources; no invented study-bible text; no six-source rewrite",
+  "publicMix": {
+    "studyBible": 9089,
+    "ocr": 146,
+    "cmc": 858,
+    "message": 3,
+    "books": 66,
+    "cards": 10096
+  },
+  "needsMacResourcesOrSourcePdf": {
+    "heldStudyBible": 347,
+    "heldStudyBibleVerdict": "keep-hold",
+    "note": "第二轮已从 main 找回原文；无源 PDF 不能救回。第三轮不伪造权柄/儿子/诫命后文。"
+  },
+  "needsVolumeOcrLedger": {
+    "publicOcrHoldAsClass": 145,
+    "publicOcrKeep": 1,
+    "johnLeftoverOcr": ["image-text-43-约翰福音-codex-pdf-p019-img004"],
+    "note": "无卷级台账则不改正文、不补造、不撤卡。"
+  },
+  "ledgerOnlyDoNotLift": {
+    "isolationCmc": 18387,
+    "isolationStudyBible": 10,
+    "qidabenPublic": 0,
+    "hurlbutPublic": 0
+  },
+  "publicMidCutStillInPackage": [
+    {
+      "id": "study-bible-john-18-22-p046-n297",
+      "bookId": "John",
+      "fragment": "参了、12节",
+      "verdict": "hold-in-place",
+      "reason": "可能是参7、12节，无 PDF 不能补数字"
+    },
+    {
+      "id": "study-bible-john-3-17-p011-n061",
+      "bookId": "John",
+      "fragment": "受差遣的遭者自己",
+      "verdict": "hold-in-place",
+      "reason": "差遭已改差遣；「遭者自己」仍是中截，不补造差遣者"
+    }
+  ],
+  "keepNotDebt": [
+    "Iesous 希腊转写（书/太）",
+    "形成鲜明对比",
+    "可读年表中的主后30"
+  ],
+  "blockedWithoutWorkbenchV4": [
+    "不能从工作台重生成 66 卷公开包",
+    "不能按用户全库数补齐研修本/CMC/启导本/故事卡缺口"
+  ]
+}

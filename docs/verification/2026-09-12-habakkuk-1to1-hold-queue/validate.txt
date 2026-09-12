@@ -1,0 +1,18 @@
+$ npx vitest run src/data/*PublicCardAudit.test.ts scripts/generatePublicBibleData.test.mjs
+
+Test Files  54 passed (54)
+     Tests  177 passed (177)
+
+$ npx vitest run src/data/habakkukPublicCardAudit.test.ts src/data/ruthPublicCardAudit.test.ts src/data/ecclesiastesPublicCardAudit.test.ts src/data/zephaniahPublicCardAudit.test.ts src/data/publicData.test.ts src/data/publicBibleData.test.ts
+
+Test Files  6 passed (6)
+     Tests  56 passed (56)
+
+$ node scripts/generatePublicBibleData.mjs --validate-only public/data
+Public data valid: 66 books, 31102 CUV verses, 31102 KJV verses, 10099 text cards, 62204 search entries, 0 image cards, 0 unsafe matches
+
+$ node scripts/validatePublicRepository.mjs
+Public repository metadata valid: 8 required files, Node 24
+
+isolation ∩ public = 0
+public mix: study 9092, ocr 146, cmc 858, info 3; total 10099

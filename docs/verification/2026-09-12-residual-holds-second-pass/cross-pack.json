@@ -1,0 +1,19 @@
+{
+  "mix": {
+    "studyBible": 9089,
+    "ocr": 146,
+    "cmc": 858,
+    "message": 3,
+    "other": 0,
+    "books": 66,
+    "cards": 10096
+  },
+  "isolationRows": 18397,
+  "isolationCmc": 18387,
+  "isolationStudyBible": 10,
+  "isolationPublicIntersection": [],
+  "johnOcr": [
+    "image-text-43-约翰福音-codex-pdf-p019-img004"
+  ],
+  "johnOcrInPublic": []
+}

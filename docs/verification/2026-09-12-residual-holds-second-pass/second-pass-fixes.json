@@ -1,0 +1,949 @@
+[
+  {
+    "cardId": "study-bible-1cor-10-7-p018-n146",
+    "field": "body",
+    "label": "陷人→陷入",
+    "count": 1
+  },
+  {
+    "cardId": "study-bible-1cor-10-7-p018-n146",
+    "field": "summary",
+    "label": "陷人→陷入",
+    "count": 1
+  },
+  {
+    "cardId": "study-bible-1cor-10-7-p018-n146",
+    "field": "searchText",
+    "label": "陷人→陷入",
+    "count": 2
+  },
+  {
+    "cardId": "study-bible-1cor-intro-p002-n005",
+    "field": "body",
+    "label": "timeline-axis",
+    "count": 1
+  },
+  {
+    "cardId": "study-bible-1cor-intro-p002-n005",
+    "field": "searchText",
+    "label": "timeline-axis",
+    "count": 1
+  },
+  {
+    "cardId": "study-bible-1john-3-15-p010-n062",
+    "field": "summary",
+    "label": "诚命→诫命",
+    "count": 2
+  },
+  {
+    "cardId": "study-bible-1john-3-15-p010-n062",
+    "field": "searchText",
+    "label": "诚命→诫命",
+    "count": 4
+  },
+  {
+    "cardId": "study-bible-1sam-7-14-p017-n111",
+    "field": "summary",
+    "label": "进人→进入",
+    "count": 1
+  },
+  {
+    "cardId": "study-bible-1sam-7-14-p017-n111",
+    "field": "searchText",
+    "label": "进人→进入",
+    "count": 1
+  },
+  {
+    "cardId": "study-bible-acts-20-1-p052-n488",
+    "field": "body",
+    "label": "服待→服侍",
+    "count": 1
+  },
+  {
+    "cardId": "study-bible-acts-20-1-p052-n488",
+    "field": "summary",
+    "label": "服待→服侍",
+    "count": 1
+  },
+  {
+    "cardId": "study-bible-acts-20-1-p052-n488",
+    "field": "searchText",
+    "label": "服待→服侍",
+    "count": 2
+  },
+  {
+    "cardId": "study-bible-acts-28-28-p067-n647",
+    "field": "body",
+    "label": "table-tail",
+    "count": 1,
+    "needle": "13：提后2:9］"
+  },
+  {
+    "cardId": "study-bible-acts-28-28-p067-n647",
+    "field": "summary",
+    "label": "table-tail",
+    "count": 1,
+    "needle": "13：提后2:9］"
+  },
+  {
+    "cardId": "study-bible-acts-28-28-p067-n647",
+    "field": "searchText",
+    "label": "table-tail",
+    "count": 1,
+    "needle": "13：提后2:9］"
+  },
+  {
+    "cardId": "study-bible-gen-1-1-p010-n007",
+    "field": "body",
+    "label": "旧日约→旧约",
+    "count": 1
+  },
+  {
+    "cardId": "study-bible-gen-1-1-p010-n007",
+    "field": "searchText",
+    "label": "旧日约→旧约",
+    "count": 1
+  },
+  {
+    "cardId": "study-bible-gen-1-21-p011-n017",
+    "field": "body",
+    "label": "迎南→迦南",
+    "count": 1
+  },
+  {
+    "cardId": "study-bible-gen-1-21-p011-n017",
+    "field": "summary",
+    "label": "迎南→迦南",
+    "count": 1
+  },
+  {
+    "cardId": "study-bible-gen-1-21-p011-n017",
+    "field": "searchText",
+    "label": "迎南→迦南",
+    "count": 2
+  },
+  {
+    "cardId": "study-bible-gen-1-26-p012-n017",
+    "field": "body",
+    "label": "旧日约→旧约",
+    "count": 1
+  },
+  {
+    "cardId": "study-bible-gen-1-26-p012-n017",
+    "field": "summary",
+    "label": "旧日约→旧约",
+    "count": 1
+  },
+  {
+    "cardId": "study-bible-gen-1-26-p012-n017",
+    "field": "searchText",
+    "label": "旧日约→旧约",
+    "count": 2
+  },
+  {
+    "cardId": "study-bible-gen-8-1-p022-n063",
+    "field": "body",
+    "label": "进人→进入",
+    "count": 1
+  },
+  {
+    "cardId": "study-bible-gen-8-1-p022-n063",
+    "field": "searchText",
+    "label": "进人→进入",
+    "count": 1
+  },
+  {
+    "cardId": "study-bible-gen-12-9-p030-n098",
+    "field": "body",
+    "label": "迎南→迦南",
+    "count": 1
+  },
+  {
+    "cardId": "study-bible-gen-12-9-p030-n098",
+    "field": "summary",
+    "label": "迎南→迦南",
+    "count": 1
+  },
+  {
+    "cardId": "study-bible-gen-12-9-p030-n098",
+    "field": "searchText",
+    "label": "迎南→迦南",
+    "count": 2
+  },
+  {
+    "cardId": "study-bible-gen-16-3-p034-n191",
+    "field": "body",
+    "label": "旧日约→旧约",
+    "count": 1
+  },
+  {
+    "cardId": "study-bible-gen-16-3-p034-n191",
+    "field": "summary",
+    "label": "旧日约→旧约",
+    "count": 1
+  },
+  {
+    "cardId": "study-bible-gen-16-3-p034-n191",
+    "field": "searchText",
+    "label": "旧日约→旧约",
+    "count": 2
+  },
+  {
+    "cardId": "study-bible-gen-16-16-p035-n122",
+    "field": "body",
+    "label": "迎南→迦南",
+    "count": 1
+  },
+  {
+    "cardId": "study-bible-gen-16-16-p035-n122",
+    "field": "summary",
+    "label": "迎南→迦南",
+    "count": 1
+  },
+  {
+    "cardId": "study-bible-gen-16-16-p035-n122",
+    "field": "searchText",
+    "label": "迎南→迦南",
+    "count": 2
+  },
+  {
+    "cardId": "study-bible-gen-17-10-p036-n138",
+    "field": "body",
+    "label": "进人→进入",
+    "count": 1
+  },
+  {
+    "cardId": "study-bible-gen-17-10-p036-n138",
+    "field": "summary",
+    "label": "进人→进入",
+    "count": 1
+  },
+  {
+    "cardId": "study-bible-gen-17-10-p036-n138",
+    "field": "searchText",
+    "label": "进人→进入",
+    "count": 2
+  },
+  {
+    "cardId": "study-bible-gen-17-17-p036-n137",
+    "field": "body",
+    "label": "mid-cut last sentence",
+    "count": 1,
+    "needle": "他们已经太老，不能再生养孩"
+  },
+  {
+    "cardId": "study-bible-gen-17-17-p036-n137",
+    "field": "summary",
+    "label": "mid-cut last sentence",
+    "count": 1,
+    "needle": "他们已经太老，不能再生养孩"
+  },
+  {
+    "cardId": "study-bible-gen-17-17-p036-n137",
+    "field": "searchText",
+    "label": "mid-cut last sentence",
+    "count": 1,
+    "needle": "他们已经太老，不能再生养孩"
+  },
+  {
+    "cardId": "study-bible-gen-22-2-p042-n185",
+    "field": "body",
+    "label": "吩附→吩咐",
+    "count": 2
+  },
+  {
+    "cardId": "study-bible-gen-22-2-p042-n185",
+    "field": "searchText",
+    "label": "吩附→吩咐",
+    "count": 2
+  },
+  {
+    "cardId": "study-bible-gen-34-21-p061-n461",
+    "field": "body",
+    "label": "table-tail",
+    "count": 1,
+    "needle": "15］e本书32:28"
+  },
+  {
+    "cardId": "study-bible-gen-34-21-p061-n461",
+    "field": "summary",
+    "label": "table-tail",
+    "count": 1,
+    "needle": "15］e本书32:28"
+  },
+  {
+    "cardId": "study-bible-gen-34-21-p061-n461",
+    "field": "searchText",
+    "label": "table-tail",
+    "count": 1,
+    "needle": "15］e本书32:28"
+  },
+  {
+    "cardId": "study-bible-jas-2-13-p008-n033",
+    "field": "searchText",
+    "label": "旧日约→旧约",
+    "count": 1
+  },
+  {
+    "cardId": "study-bible-jer-16-5-p034-n232",
+    "field": "body",
+    "label": "吩附→吩咐",
+    "count": 1
+  },
+  {
+    "cardId": "study-bible-jer-16-5-p034-n232",
+    "field": "summary",
+    "label": "吩附→吩咐",
+    "count": 1
+  },
+  {
+    "cardId": "study-bible-jer-16-5-p034-n232",
+    "field": "searchText",
+    "label": "吩附→吩咐",
+    "count": 2
+  },
+  {
+    "cardId": "study-bible-jer-17-4-p035-n238",
+    "field": "title",
+    "label": "服待→服侍",
+    "count": 1
+  },
+  {
+    "cardId": "study-bible-jer-17-4-p035-n238",
+    "field": "body",
+    "label": "服待→服侍",
+    "count": 1
+  },
+  {
+    "cardId": "study-bible-jer-17-4-p035-n238",
+    "field": "summary",
+    "label": "服待→服侍",
+    "count": 1
+  },
+  {
+    "cardId": "study-bible-jer-17-4-p035-n238",
+    "field": "searchText",
+    "label": "服待→服侍",
+    "count": 3
+  },
+  {
+    "cardId": "study-bible-job-9-15-p014-n077",
+    "field": "body",
+    "label": "陷人→陷入",
+    "count": 1
+  },
+  {
+    "cardId": "study-bible-job-9-15-p014-n077",
+    "field": "summary",
+    "label": "陷人→陷入",
+    "count": 1
+  },
+  {
+    "cardId": "study-bible-job-9-15-p014-n077",
+    "field": "searchText",
+    "label": "陷人→陷入",
+    "count": 2
+  },
+  {
+    "cardId": "study-bible-john-1-18-p006-n017",
+    "field": "body",
+    "label": "旧日约→旧约",
+    "count": 1
+  },
+  {
+    "cardId": "study-bible-john-1-18-p006-n017",
+    "field": "summary",
+    "label": "旧日约→旧约",
+    "count": 1
+  },
+  {
+    "cardId": "study-bible-john-1-18-p006-n017",
+    "field": "searchText",
+    "label": "旧日约→旧约",
+    "count": 2
+  },
+  {
+    "cardId": "study-bible-john-1-46-p008-n037",
+    "field": "body",
+    "label": "旧日约→旧约",
+    "count": 1
+  },
+  {
+    "cardId": "study-bible-john-1-46-p008-n037",
+    "field": "summary",
+    "label": "旧日约→旧约",
+    "count": 1
+  },
+  {
+    "cardId": "study-bible-john-1-46-p008-n037",
+    "field": "searchText",
+    "label": "旧日约→旧约",
+    "count": 2
+  },
+  {
+    "cardId": "study-bible-john-3-13-p011-n048",
+    "field": "body",
+    "label": "进人→进入",
+    "count": 1
+  },
+  {
+    "cardId": "study-bible-john-3-13-p011-n048",
+    "field": "summary",
+    "label": "进人→进入",
+    "count": 1
+  },
+  {
+    "cardId": "study-bible-john-3-13-p011-n048",
+    "field": "searchText",
+    "label": "进人→进入",
+    "count": 2
+  },
+  {
+    "cardId": "study-bible-john-3-14-p011-n049",
+    "field": "body",
+    "label": "进人→进入",
+    "count": 1
+  },
+  {
+    "cardId": "study-bible-john-3-14-p011-n049",
+    "field": "searchText",
+    "label": "进人→进入",
+    "count": 1
+  },
+  {
+    "cardId": "study-bible-john-4-6-p013-n066",
+    "field": "body",
+    "label": "旧日约→旧约",
+    "count": 1
+  },
+  {
+    "cardId": "study-bible-john-4-6-p013-n066",
+    "field": "summary",
+    "label": "旧日约→旧约",
+    "count": 1
+  },
+  {
+    "cardId": "study-bible-john-4-6-p013-n066",
+    "field": "searchText",
+    "label": "旧日约→旧约",
+    "count": 2
+  },
+  {
+    "cardId": "study-bible-john-10-1-p028-n238",
+    "field": "body",
+    "label": "进人→进入",
+    "count": 2
+  },
+  {
+    "cardId": "study-bible-john-10-1-p028-n238",
+    "field": "searchText",
+    "label": "进人→进入",
+    "count": 2
+  },
+  {
+    "cardId": "study-bible-john-10-9-p028-n235",
+    "field": "body",
+    "label": "进人→进入",
+    "count": 1
+  },
+  {
+    "cardId": "study-bible-john-10-9-p028-n235",
+    "field": "summary",
+    "label": "进人→进入",
+    "count": 1
+  },
+  {
+    "cardId": "study-bible-john-10-9-p028-n235",
+    "field": "searchText",
+    "label": "进人→进入",
+    "count": 2
+  },
+  {
+    "cardId": "study-bible-john-11-33-p031-n188",
+    "field": "body",
+    "label": "自已→自己",
+    "count": 1
+  },
+  {
+    "cardId": "study-bible-john-11-33-p031-n188",
+    "field": "searchText",
+    "label": "自已→自己",
+    "count": 1
+  },
+  {
+    "cardId": "study-bible-john-13-14-p035-n324",
+    "field": "body",
+    "label": "服待→服侍",
+    "count": 1
+  },
+  {
+    "cardId": "study-bible-john-13-14-p035-n324",
+    "field": "summary",
+    "label": "服待→服侍",
+    "count": 1
+  },
+  {
+    "cardId": "study-bible-john-13-14-p035-n324",
+    "field": "searchText",
+    "label": "服待→服侍",
+    "count": 2
+  },
+  {
+    "cardId": "study-bible-john-17-24-p044-n287",
+    "field": "body",
+    "label": "进人→进入",
+    "count": 1
+  },
+  {
+    "cardId": "study-bible-john-17-24-p044-n287",
+    "field": "summary",
+    "label": "进人→进入",
+    "count": 1
+  },
+  {
+    "cardId": "study-bible-john-17-24-p044-n287",
+    "field": "searchText",
+    "label": "进人→进入",
+    "count": 2
+  },
+  {
+    "cardId": "study-bible-john-19-31-p052-n332",
+    "field": "body",
+    "label": "mid-cut last sentence",
+    "count": 1,
+    "needle": "这与《圣经》中的记载吻"
+  },
+  {
+    "cardId": "study-bible-john-19-31-p052-n332",
+    "field": "searchText",
+    "label": "mid-cut last sentence",
+    "count": 1,
+    "needle": "这与《圣经》中的记载吻"
+  },
+  {
+    "cardId": "study-bible-john-intro-p002-n006",
+    "field": "body",
+    "label": "旧日约→旧约",
+    "count": 1
+  },
+  {
+    "cardId": "study-bible-john-intro-p002-n006",
+    "field": "summary",
+    "label": "旧日约→旧约",
+    "count": 1
+  },
+  {
+    "cardId": "study-bible-john-intro-p002-n006",
+    "field": "searchText",
+    "label": "旧日约→旧约",
+    "count": 2
+  },
+  {
+    "cardId": "study-bible-luke-5-14-p025-n129",
+    "field": "body",
+    "label": "吩附→吩咐",
+    "count": 1
+  },
+  {
+    "cardId": "study-bible-luke-5-14-p025-n129",
+    "field": "summary",
+    "label": "吩附→吩咐",
+    "count": 1
+  },
+  {
+    "cardId": "study-bible-luke-5-14-p025-n129",
+    "field": "searchText",
+    "label": "吩附→吩咐",
+    "count": 2
+  },
+  {
+    "cardId": "study-bible-luke-8-29-p033-n279",
+    "field": "body",
+    "label": "吩附→吩咐",
+    "count": 1
+  },
+  {
+    "cardId": "study-bible-luke-8-29-p033-n279",
+    "field": "body",
+    "label": "盼咐→吩咐",
+    "count": 1
+  },
+  {
+    "cardId": "study-bible-luke-8-29-p033-n279",
+    "field": "summary",
+    "label": "吩附→吩咐",
+    "count": 1
+  },
+  {
+    "cardId": "study-bible-luke-8-29-p033-n279",
+    "field": "summary",
+    "label": "盼咐→吩咐",
+    "count": 1
+  },
+  {
+    "cardId": "study-bible-luke-8-29-p033-n279",
+    "field": "searchText",
+    "label": "吩附→吩咐",
+    "count": 2
+  },
+  {
+    "cardId": "study-bible-luke-8-29-p033-n279",
+    "field": "searchText",
+    "label": "盼咐→吩咐",
+    "count": 2
+  },
+  {
+    "cardId": "study-bible-luke-11-20-p043-n433",
+    "field": "body",
+    "label": "进人→进入",
+    "count": 1
+  },
+  {
+    "cardId": "study-bible-luke-11-20-p043-n433",
+    "field": "searchText",
+    "label": "进人→进入",
+    "count": 1
+  },
+  {
+    "cardId": "study-bible-luke-13-14-p048-n481",
+    "field": "body",
+    "label": "吩附→吩咐",
+    "count": 1
+  },
+  {
+    "cardId": "study-bible-luke-13-14-p048-n481",
+    "field": "searchText",
+    "label": "吩附→吩咐",
+    "count": 1
+  },
+  {
+    "cardId": "study-bible-luke-13-29-p049-n367",
+    "field": "body",
+    "label": "进人→进入",
+    "count": 1
+  },
+  {
+    "cardId": "study-bible-luke-13-29-p049-n367",
+    "field": "summary",
+    "label": "进人→进入",
+    "count": 1
+  },
+  {
+    "cardId": "study-bible-luke-13-29-p049-n367",
+    "field": "searchText",
+    "label": "进人→进入",
+    "count": 2
+  },
+  {
+    "cardId": "study-bible-luke-15-3-p052-n387",
+    "field": "body",
+    "label": "进人→进入",
+    "count": 1
+  },
+  {
+    "cardId": "study-bible-luke-15-3-p052-n387",
+    "field": "summary",
+    "label": "进人→进入",
+    "count": 1
+  },
+  {
+    "cardId": "study-bible-luke-15-3-p052-n387",
+    "field": "searchText",
+    "label": "进人→进入",
+    "count": 2
+  },
+  {
+    "cardId": "study-bible-luke-15-6-p052-n389",
+    "field": "body",
+    "label": "进人→进入",
+    "count": 1
+  },
+  {
+    "cardId": "study-bible-luke-15-6-p052-n389",
+    "field": "summary",
+    "label": "进人→进入",
+    "count": 1
+  },
+  {
+    "cardId": "study-bible-luke-15-6-p052-n389",
+    "field": "searchText",
+    "label": "进人→进入",
+    "count": 2
+  },
+  {
+    "cardId": "study-bible-luke-16-16-p054-n407",
+    "field": "body",
+    "label": "进人→进入",
+    "count": 2
+  },
+  {
+    "cardId": "study-bible-luke-16-16-p054-n407",
+    "field": "searchText",
+    "label": "进人→进入",
+    "count": 2
+  },
+  {
+    "cardId": "study-bible-luke-18-33-p036-n245",
+    "field": "body",
+    "label": "进人→进入",
+    "count": 1
+  },
+  {
+    "cardId": "study-bible-luke-18-33-p036-n245",
+    "field": "searchText",
+    "label": "进人→进入",
+    "count": 1
+  },
+  {
+    "cardId": "study-bible-matt-16-22-p039-n282",
+    "field": "body",
+    "label": "《I日约》→《旧约》",
+    "count": 1
+  },
+  {
+    "cardId": "study-bible-matt-16-22-p039-n282",
+    "field": "summary",
+    "label": "《I日约》→《旧约》",
+    "count": 1
+  },
+  {
+    "cardId": "study-bible-matt-16-22-p039-n282",
+    "field": "searchText",
+    "label": "《I日约》→《旧约》",
+    "count": 2
+  },
+  {
+    "cardId": "study-bible-prov-1-29-p007-n020",
+    "field": "body",
+    "label": "陷人→陷入",
+    "count": 1
+  },
+  {
+    "cardId": "study-bible-prov-1-29-p007-n020",
+    "field": "summary",
+    "label": "陷人→陷入",
+    "count": 1
+  },
+  {
+    "cardId": "study-bible-prov-1-29-p007-n020",
+    "field": "searchText",
+    "label": "陷人→陷入",
+    "count": 2
+  },
+  {
+    "cardId": "study-bible-ps-1-3-p008-n013",
+    "field": "body",
+    "label": "自已→自己",
+    "count": 1
+  },
+  {
+    "cardId": "study-bible-ps-1-3-p008-n013",
+    "field": "summary",
+    "label": "自已→自己",
+    "count": 1
+  },
+  {
+    "cardId": "study-bible-ps-1-3-p008-n013",
+    "field": "searchText",
+    "label": "自已→自己",
+    "count": 2
+  },
+  {
+    "cardId": "study-bible-ps-1-5-p008-n015",
+    "field": "body",
+    "label": "进人→进入",
+    "count": 1
+  },
+  {
+    "cardId": "study-bible-ps-1-5-p008-n015",
+    "field": "summary",
+    "label": "进人→进入",
+    "count": 1
+  },
+  {
+    "cardId": "study-bible-ps-1-5-p008-n015",
+    "field": "searchText",
+    "label": "进人→进入",
+    "count": 2
+  },
+  {
+    "cardId": "study-bible-ps-14-7-p018-n131",
+    "field": "body",
+    "label": "进人→进入",
+    "count": 1
+  },
+  {
+    "cardId": "study-bible-ps-14-7-p018-n131",
+    "field": "searchText",
+    "label": "进人→进入",
+    "count": 1
+  },
+  {
+    "cardId": "study-bible-ps-25-22-p029-n145",
+    "field": "body",
+    "label": "进人→进入",
+    "count": 1
+  },
+  {
+    "cardId": "study-bible-ps-25-22-p029-n145",
+    "field": "searchText",
+    "label": "进人→进入",
+    "count": 1
+  },
+  {
+    "cardId": "study-bible-ps-27-8-p030-n230",
+    "field": "body",
+    "label": "table-tail",
+    "count": 1,
+    "needle": "72m赛40:11,46:3."
+  },
+  {
+    "cardId": "study-bible-ps-27-8-p030-n230",
+    "field": "summary",
+    "label": "table-tail",
+    "count": 1,
+    "needle": "72m赛40:11,46:3."
+  },
+  {
+    "cardId": "study-bible-ps-27-8-p030-n230",
+    "field": "searchText",
+    "label": "table-tail",
+    "count": 1,
+    "needle": "72m赛40:11,46:3."
+  },
+  {
+    "cardId": "study-bible-ps-61-8-p060-n268",
+    "field": "body",
+    "label": "陷人→陷入",
+    "count": 1
+  },
+  {
+    "cardId": "study-bible-ps-61-8-p060-n268",
+    "field": "searchText",
+    "label": "陷人→陷入",
+    "count": 1
+  },
+  {
+    "cardId": "study-bible-ps-78-2-p078-n507-2-2-2",
+    "field": "body",
+    "label": "mid-cut last sentence",
+    "count": 1,
+    "needle": "耶稣使用"
+  },
+  {
+    "cardId": "study-bible-ps-78-2-p078-n507-2-2-2",
+    "field": "summary",
+    "label": "mid-cut last sentence",
+    "count": 1,
+    "needle": "耶稣使用"
+  },
+  {
+    "cardId": "study-bible-ps-78-2-p078-n507-2-2-2",
+    "field": "searchText",
+    "label": "mid-cut last sentence",
+    "count": 1,
+    "needle": "耶稣使用"
+  },
+  {
+    "cardId": "study-bible-ps-89-52-p093-n410",
+    "field": "body",
+    "label": "进人→进入",
+    "count": 2
+  },
+  {
+    "cardId": "study-bible-ps-89-52-p093-n410",
+    "field": "summary",
+    "label": "进人→进入",
+    "count": 1
+  },
+  {
+    "cardId": "study-bible-ps-89-52-p093-n410",
+    "field": "searchText",
+    "label": "进人→进入",
+    "count": 3
+  },
+  {
+    "cardId": "study-bible-ps-94-23-p098-n441",
+    "field": "body",
+    "label": "迎南→迦南",
+    "count": 1
+  },
+  {
+    "cardId": "study-bible-ps-94-23-p098-n441",
+    "field": "searchText",
+    "label": "迎南→迦南",
+    "count": 1
+  },
+  {
+    "cardId": "study-bible-ps-96-6-p099-n642",
+    "field": "body",
+    "label": "进人→进入",
+    "count": 1
+  },
+  {
+    "cardId": "study-bible-ps-96-6-p099-n642",
+    "field": "summary",
+    "label": "进人→进入",
+    "count": 1
+  },
+  {
+    "cardId": "study-bible-ps-96-6-p099-n642",
+    "field": "searchText",
+    "label": "进人→进入",
+    "count": 2
+  },
+  {
+    "cardId": "study-bible-ps-109-31-p118-n557",
+    "field": "body",
+    "label": "进人→进入",
+    "count": 1
+  },
+  {
+    "cardId": "study-bible-ps-109-31-p118-n557",
+    "field": "searchText",
+    "label": "进人→进入",
+    "count": 1
+  },
+  {
+    "cardId": "study-bible-ps-118-26-p126-n611",
+    "field": "body",
+    "label": "耶路撤冷→耶路撒冷",
+    "count": 1
+  },
+  {
+    "cardId": "study-bible-ps-118-26-p126-n611",
+    "field": "body",
+    "label": "进人→进入",
+    "count": 1
+  },
+  {
+    "cardId": "study-bible-ps-118-26-p126-n611",
+    "field": "summary",
+    "label": "进人→进入",
+    "count": 1
+  },
+  {
+    "cardId": "study-bible-ps-118-26-p126-n611",
+    "field": "searchText",
+    "label": "耶路撤冷→耶路撒冷",
+    "count": 1
+  },
+  {
+    "cardId": "study-bible-ps-118-26-p126-n611",
+    "field": "searchText",
+    "label": "进人→进入",
+    "count": 2
+  },
+  {
+    "cardId": "study-bible-ps-intro-p001-n003",
+    "field": "body",
+    "label": "犯好淫→犯奸淫",
+    "count": 1
+  },
+  {
+    "cardId": "study-bible-ps-intro-p001-n003",
+    "field": "searchText",
+    "label": "犯好淫→犯奸淫",
+    "count": 1
+  }
+]

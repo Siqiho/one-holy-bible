@@ -1,6 +1,6 @@
 import { describe, expect, it } from "vitest";
 import type { StudyResource } from "../domain/resources";
-import { resourcesForBookIntro, resourcesForVerse } from "./backlinks";
+import { createVerseResourceIndex, resourcesForBookIntro, resourcesForVerse } from "./backlinks";
 
 const resources: StudyResource[] = [
   {
@@ -61,5 +61,41 @@ describe("resourcesForVerse", () => {
 
   it("uses a primary anchor as verse membership when verses is empty", () => {
     expect(resourcesForVerse(resources, "Gen.1.1").map((resource) => resource.id)).toContain("primary-anchor-only-image");
+  });
+});
+
+describe("createVerseResourceIndex", () => {
+  const ids = (list: StudyResource[]) => list.map((resource) => resource.id);
+  const index = createVerseResourceIndex(resources);
+
+  it("matches resourcesForVerse for every verse, in resource order", () => {
+    for (const verseId of ["Gen.1.1", "Gen.1.2", "Gen.1.3"] as const) {
+      expect(ids(index.mentioning(verseId))).toEqual(ids(resourcesForVerse(resources, verseId)));
+    }
+  });
+
+  it("separates anchor/coverage touches from wiki-link mentions", () => {
+    expect(ids(index.touching("Gen.1.1"))).toEqual(["frontmatter-match", "primary-anchor-only-image"]);
+    expect(ids(index.mentioning("Gen.1.1"))).toContain("body-match");
+    expect(index.touching("Gen.9.9")).toEqual([]);
+  });
+
+  it("unions several verses without duplicates and keeps original order", () => {
+    const covering: StudyResource = {
+      id: "covers-both",
+      title: "Covers Both",
+      type: "commentary",
+      verses: ["Gen.1.1", "Gen.1.2"],
+      primaryAnchor: "Gen.1.1",
+      body: "Also links [[创 1:2]].",
+    };
+    const combined = createVerseResourceIndex([covering, ...resources]);
+    expect(ids(combined.mentioningAny(["Gen.1.2", "Gen.1.1"]))).toEqual([
+      "covers-both",
+      "frontmatter-match",
+      "body-match",
+      "other-verse",
+      "primary-anchor-only-image",
+    ]);
   });
 });

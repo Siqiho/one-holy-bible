@@ -8,6 +8,7 @@ import type { WorkbenchProps } from "./components/Workbench";
 import { loadBibleEveryoneImageResources } from "./data/bibleEveryoneImageResources";
 import { loadComprehensiveCommentaryResources } from "./data/comprehensiveCommentaryResources";
 import { loadBibleLibrary } from "./data/loadBibleLibrary";
+import { readerPositionStorageKey } from "./data/readerPosition";
 import {
   loadWorkbenchSyncedResourcePayload,
   markWorkbenchCardReaderReturned,
@@ -142,6 +143,7 @@ function latestReaderViewProps(): ReaderViewProps {
 describe("App complete development data flow", () => {
   beforeEach(() => {
     window.localStorage.setItem(viewModeStorageKey, "workbench");
+    window.localStorage.removeItem(readerPositionStorageKey);
     mockWorkbench.mockClear();
     mockReaderView.mockClear();
     mockLoadBibleLibrary.mockReset().mockResolvedValue(loadedVersions);
@@ -339,6 +341,24 @@ describe("App complete development data flow", () => {
     expect(await screen.findByRole("main", { name: "阅读" })).toBeInTheDocument();
     expect(mockWorkbench).not.toHaveBeenCalled();
     expect(mockReaderView).toHaveBeenCalled();
+  });
+
+  it("lets the reader restore its own stored position on a cold start", async () => {
+    window.localStorage.removeItem(viewModeStorageKey);
+    window.localStorage.setItem(readerPositionStorageKey, JSON.stringify({ book: "John", chapter: 3, verse: 16 }));
+    render(<App />);
+    await screen.findByRole("main", { name: "阅读" });
+
+    expect(latestReaderViewProps().initialPosition).toBeNull();
+  });
+
+  it("opens the workbench at the stored reader position on a cold start", async () => {
+    window.localStorage.setItem(viewModeStorageKey, "workbench");
+    window.localStorage.setItem(readerPositionStorageKey, JSON.stringify({ book: "John", chapter: 3, verse: 16 }));
+    render(<App />);
+    await screen.findByRole("main", { name: "OHB Study 工作台" });
+
+    expect(latestWorkbenchProps().initialVerseId).toBe("John.3.16");
   });
 
   it("opens the workbench at the reader verse when returning from reading", async () => {

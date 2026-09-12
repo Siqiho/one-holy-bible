@@ -4763,7 +4763,10 @@ body.reader-resizing {
 
 .reader-marginalia--peek {
   --reader-peek-top: 16px;
-  max-height: calc(100dvh - 16px - 72px);
+  /* 预览态必须是定高：列表的 flex-basis 百分比只在定高容器里生效，
+     否则卡片多的经节会让缩略图列表按内容撑开、把预览面板挤出可视区。 */
+  height: calc(100dvh - var(--reader-peek-top) - 72px);
+  max-height: calc(100dvh - var(--reader-peek-top) - 72px);
 }
 
 .reader-marginalia__list {

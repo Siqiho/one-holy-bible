@@ -1,9 +1,11 @@
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import { ReaderView } from "./components/ReaderView";
 import { Workbench } from "./components/Workbench";
 import { loadBibleEncyclopediaResources } from "./data/bibleEncyclopediaResources";
 import { loadBibleEveryoneImageResources } from "./data/bibleEveryoneImageResources";
 import { loadBibleLibrary } from "./data/loadBibleLibrary";
+import { genesisWorkbenchImageTwins } from "./data/genesisImageTwins";
+import { storedReaderPosition } from "./data/readerPosition";
 import { mergeResourcesById, mergeStableAndWorkbenchResources } from "./data/resources";
 import { sampleResources } from "./data/sampleLibrary";
 import { loadWorkbenchSyncedResourcePayload, markWorkbenchCardReaderReturned, syncWorkbenchCards, updateWorkbenchCardReview, type UpdateWorkbenchCardReviewOptions, type WorkbenchReviewStatus, type WorkbenchSyncedResourcePayload } from "./data/workbenchSyncedResources";
@@ -30,6 +32,12 @@ function storedViewMode(): AppViewMode {
   } catch {
     return "reader";
   }
+}
+
+/** Workbench cold start continues from wherever the reader last was. */
+function storedWorkbenchStartVerseId(): VerseId {
+  const position = storedReaderPosition();
+  return verseIdFromParts(position.book, position.chapter, position.verse);
 }
 
 function persistViewMode(mode: AppViewMode) {
@@ -195,7 +203,9 @@ export default function App() {
   const [loadError, setLoadError] = useState<string | null>(null);
   const [loadAttempt, setLoadAttempt] = useState(0);
   const [viewMode, setViewMode] = useState<AppViewMode>(storedViewMode);
-  const [workbenchVerseId, setWorkbenchVerseId] = useState<VerseId>("Gen.1.1");
+  // Verse handed across the reader/workbench switch. Null on cold start so each
+  // surface restores its own persisted position instead of always opening at Gen 1:1.
+  const [workbenchVerseId, setWorkbenchVerseId] = useState<VerseId | null>(null);
   const [isRefreshingResources, setIsRefreshingResources] = useState(false);
   const [unsyncingResourceId, setUnsyncingResourceId] = useState<string | null>(null);
   const appDataRef = useRef<LoadedAppData | null>(null);
@@ -227,6 +237,7 @@ export default function App() {
       currentAppData.stableResources,
       workbenchPayload.resources,
       workbenchPayload.metadata.excludedResourceIds,
+      genesisWorkbenchImageTwins,
     );
     if (resourceOperationSequenceRef.current === operationSequence) {
       const nextAppData = {
@@ -278,6 +289,7 @@ export default function App() {
           stableResources,
           workbenchPayload.resources,
           workbenchPayload.metadata.excludedResourceIds,
+          genesisWorkbenchImageTwins,
         );
         setLoadError(null);
         logAppInfo("[app] data load succeeded", {
@@ -515,6 +527,9 @@ export default function App() {
     });
   }
 
+  // Stable identity so the reader/workbench chapter memos do not recompute on every App render.
+  const versions = useMemo(() => (appData ? [appData.cuvBible, appData.kjvBible] : []), [appData]);
+
   if (loadError) {
     return (
       <main className="app-loading" role="alert">
@@ -538,9 +553,9 @@ export default function App() {
   if (viewMode === "reader") {
     return (
       <ReaderView
-        versions={[appData.cuvBible, appData.kjvBible]}
+        versions={versions}
         resources={appData.resources}
-        initialPosition={parseVerseId(workbenchVerseId)}
+        initialPosition={workbenchVerseId ? parseVerseId(workbenchVerseId) : null}
         onExitReader={(position) => {
           setWorkbenchVerseId(verseIdFromParts(position.book, position.chapter, position.verse));
           switchViewMode("workbench");
@@ -552,9 +567,9 @@ export default function App() {
   return (
     <Workbench
       isRefreshingResources={isRefreshingResources}
-      versions={[appData.cuvBible, appData.kjvBible]}
+      versions={versions}
       resources={appData.resources}
-      initialVerseId={workbenchVerseId}
+      initialVerseId={workbenchVerseId ?? storedWorkbenchStartVerseId()}
       initialLayout={defaultWorkbenchLayout}
       onRefreshResources={refreshWorkbenchResources}
       onUnsyncResource={unsyncWorkbenchResource}

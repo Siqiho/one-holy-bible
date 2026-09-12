@@ -3,20 +3,15 @@ import { loadDoreChapterArtworkByChapter, type DoreChapterArtwork } from "../dat
 import type { BibleVersion, BibleVerse } from "../domain/bible";
 import { bibleBooks, bookTitle, chaptersForBook, englishBookTitle, getBibleBook } from "../domain/bibleBooks";
 import type { StudyResource } from "../domain/resources";
-import { verseIdFromParts, type VerseId } from "../domain/verse";
-import { resourceMentionsVerse, resourcesForVerse } from "../lib/backlinks";
+import { verseIdFromParts } from "../domain/verse";
+import { createVerseResourceIndex } from "../lib/backlinks";
 import { formatTextResourceBody } from "../lib/formatTextResourceBody";
 import { ScriptureLinkedText } from "./ScriptureLinkedText";
 import { VersePreviewProvider } from "./VersePreviewContext";
+import { readerPositionStorageKey, storedReaderPosition, type ReaderPosition } from "../data/readerPosition";
 
-export const readerPositionStorageKey = "one-holy-bible-reader-position";
+export { readerPositionStorageKey, type ReaderPosition };
 export const readerPrefsStorageKey = "one-holy-bible-reader-prefs";
-
-export interface ReaderPosition {
-  book: string;
-  chapter: number;
-  verse: number;
-}
 
 export interface ReaderViewProps {
   versions: BibleVersion[];
@@ -32,7 +27,6 @@ interface ReaderPrefs {
   marginWidth: number;
 }
 
-const defaultPosition: ReaderPosition = { book: "Gen", chapter: 1, verse: 1 };
 const defaultPrefs: ReaderPrefs = { railOpen: false, showKjv: true, fontSize: 21, marginWidth: 340 };
 const minFontSize = 18;
 const maxFontSize = 25;
@@ -82,24 +76,7 @@ function resolveInitialPosition(preferred?: ReaderPosition | null): ReaderPositi
     const verse = preferred.verse >= 1 ? preferred.verse : 1;
     return { book: preferred.book, chapter, verse };
   }
-  return storedPosition();
-}
-
-function storedPosition(): ReaderPosition {
-  try {
-    const raw = window.localStorage.getItem(readerPositionStorageKey);
-    if (!raw) return defaultPosition;
-    const parsed = JSON.parse(raw) as Partial<ReaderPosition>;
-    const book = typeof parsed.book === "string" && getBibleBook(parsed.book) ? parsed.book : defaultPosition.book;
-    const chapterCount = chaptersForBook(book);
-    const chapter = typeof parsed.chapter === "number" && parsed.chapter >= 1 && parsed.chapter <= chapterCount
-      ? parsed.chapter
-      : 1;
-    const verse = typeof parsed.verse === "number" && parsed.verse >= 1 ? parsed.verse : 1;
-    return { book, chapter, verse };
-  } catch {
-    return defaultPosition;
-  }
+  return storedReaderPosition();
 }
 
 function storedPrefs(): ReaderPrefs {
@@ -170,10 +147,6 @@ interface VerseCardKinds {
 
 function emptyVerseCardKinds(): VerseCardKinds {
   return { text: false, image: false, html: false };
-}
-
-function resourceTouchesVerse(resource: StudyResource, verseId: VerseId): boolean {
-  return resource.primaryAnchor === verseId || resource.verses.includes(verseId);
 }
 
 function kindsFromResources(cards: StudyResource[]): VerseCardKinds {
@@ -297,27 +270,30 @@ export function ReaderView({ versions, resources, initialPosition: preferredPosi
     () => chapterCuvVerses.map((verse) => verse.id),
     [chapterCuvVerses],
   );
+  // Built once per resource set; chapter/verse lookups then cost O(hits) instead of
+  // re-scanning every resource body per verse (Ps 119 × 30k cards was ~1.7 s).
+  const resourceIndex = useMemo(() => createVerseResourceIndex(resources), [resources]);
   // Same relation semantics as the workbench chapter dock (anchor, verses, or wiki links in the body).
   const chapterResources = useMemo(
-    () => resources.filter((resource) => chapterVerseIds.some((verseId) => resourceMentionsVerse(resource, verseId))),
-    [chapterVerseIds, resources],
+    () => resourceIndex.mentioningAny(chapterVerseIds),
+    [chapterVerseIds, resourceIndex],
   );
   const selectedVerseId = useMemo(
     () => verseIdFromParts(book, chapter, selectedVerse),
     [book, chapter, selectedVerse],
   );
   const selectedVerseResources = useMemo(
-    () => resourcesForVerse(chapterResources, selectedVerseId),
-    [chapterResources, selectedVerseId],
+    () => resourceIndex.mentioning(selectedVerseId),
+    [resourceIndex, selectedVerseId],
   );
   const verseCardKinds = useMemo(() => {
     const marked = new Map<number, VerseCardKinds>();
     for (const verse of chapterCuvVerses) {
-      const cards = chapterResources.filter((resource) => resourceTouchesVerse(resource, verse.id));
+      const cards = resourceIndex.touching(verse.id);
       if (cards.length) marked.set(verse.verse, kindsFromResources(cards));
     }
     return marked;
-  }, [chapterCuvVerses, chapterResources]);
+  }, [chapterCuvVerses, resourceIndex]);
 
   const pulseAutosave = useCallback(() => {
     setSavePulse(true);

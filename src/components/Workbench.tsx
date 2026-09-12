@@ -43,7 +43,7 @@ import { buildBookIntroView, type BookIntroViewModel } from "../domain/bookIntro
 import type { StudyResource } from "../domain/resources";
 import type { VerseId } from "../domain/verse";
 import { parseVerseId } from "../domain/verse";
-import { resourceMentionsVerse, resourcesForBookIntro, resourcesForVerse } from "../lib/backlinks";
+import { createVerseResourceIndex, resourceMentionsVerse, resourcesForBookIntro, resourcesForVerse } from "../lib/backlinks";
 import { createBibleSearchIndex, createPublicScriptureSearchIndex, type BibleSearchMatchRange, type IndexedBibleSearchResult } from "../lib/bibleSearch";
 import { formatTextResourceBody } from "../lib/formatTextResourceBody";
 
@@ -3389,13 +3389,15 @@ export function Workbench({
     });
     return Array.from(verseIds);
   }, [currentBook, currentChapter, selectedIntroBook, versions]);
+  const libraryResourceIndex = useMemo(
+    () => createVerseResourceIndex(libraryFilteredResources),
+    [libraryFilteredResources],
+  );
   const currentResources = useMemo(() => (
     selectedIntroBook
       ? verseFirstBookIntroResources(libraryFilteredResources, selectedIntroBook)
-      : libraryFilteredResources.filter((resource) => (
-        currentChapterVerseIds.some((verseId) => resourceMentionsVerse(resource, verseId))
-      ))
-  ), [currentChapterVerseIds, libraryFilteredResources, selectedIntroBook]);
+      : libraryResourceIndex.mentioningAny(currentChapterVerseIds)
+  ), [currentChapterVerseIds, libraryFilteredResources, libraryResourceIndex, selectedIntroBook]);
   const hasAnyUnsyncInFlight = Boolean(activeUnsyncingResourceId || unsyncInFlightResourceIdRef.current);
   const filteredCurrentResources = useMemo(
     () => filterResourcesByCardQuery(currentResources, cardQuery),

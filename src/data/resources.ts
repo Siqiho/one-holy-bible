@@ -12,12 +12,23 @@ export function mergeResourcesById(...resourceGroups: StudyResource[][]): StudyR
   return Array.from(resourcesById.values());
 }
 
+/**
+ * @param workbenchTwinsOfStable workbench resource id → stable resource id that carries the
+ *   same picture. A workbench twin is dropped while its stable card is visible, so the same
+ *   image is never shown twice; once the stable card is excluded the twin takes its place.
+ */
 export function mergeStableAndWorkbenchResources(
   stableResources: StudyResource[],
   workbenchResources: StudyResource[],
   excludedResourceIds: string[],
+  workbenchTwinsOfStable: Readonly<Record<string, string>> = {},
 ): StudyResource[] {
   const excludedResourceIdSet = new Set(excludedResourceIds);
   const visibleStableResources = stableResources.filter((resource) => !excludedResourceIdSet.has(resource.id));
-  return mergeResourcesById(visibleStableResources, workbenchResources);
+  const visibleStableIds = new Set(visibleStableResources.map((resource) => resource.id));
+  const dedupedWorkbenchResources = workbenchResources.filter((resource) => {
+    const stableTwinId = workbenchTwinsOfStable[resource.id];
+    return stableTwinId === undefined || !visibleStableIds.has(stableTwinId);
+  });
+  return mergeResourcesById(visibleStableResources, dedupedWorkbenchResources);
 }

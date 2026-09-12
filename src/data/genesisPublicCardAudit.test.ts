@@ -55,6 +55,8 @@ const expectedCounts: Record<string, number> = {
   Matt: 430,
   Phil: 52,
   Joel: 57,
+  Eccl: 54,
+  Zeph: 56,
   Col: 72,
   Song: 90,
   Amos: 76,

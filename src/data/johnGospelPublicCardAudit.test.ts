@@ -49,6 +49,12 @@ const forbiddenFragments = [
   "服待",
   "自已",
   "进人",
+  "约輸",
+  "掌捆",
+  "指资",
+  "差遭",
+  "差遺",
+  "《《圣经",
 ];
 
 function loadPublicJohn(): PublicJohnPayload {

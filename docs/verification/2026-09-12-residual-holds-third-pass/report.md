@@ -97,6 +97,6 @@
 - `node scripts/validatePublicRepository.mjs`：通过。
 - 原始输出见同目录 `validate.txt`。
 
-`vitest run` 全量：103 files / 419 tests，89 / 403 通过，14 files / 16 tests 失败。失败面是缺创世记图像、缺工作台 v4、缺综合解读生成 JSON / Doré 缩图，以及本快照 Node 22 跑 `.mts`；不读本轮公开包修补，不补造真源。明细见 `full-vitest-blockers.md`。
+`vitest run` 全量：103 files / 419 tests，89 / 403 通过，14 files / 16 tests 失败。失败面是缺创世记图像、缺工作台 v4、缺综合解读生成 JSON / Doré 缩图，以及本快照 Node 22 跑 `.mts`；不读本轮公开包修补，不补造真源。GitHub `verify` 上 `validate:public-data` 已绿，全量 `npm test` 仍红，与 PR #32 同一类缺口。明细见 `full-vitest-blockers.md`。
 
 未做浏览器点选：本快照没有 `workbenchSyncedResources-v4.json`，本地阅读页不走 `loadPublicBook`。对照与修补都落在公开数据包和台账 JSONL。

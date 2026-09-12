@@ -1,0 +1,596 @@
+[
+  {
+    "cardId": "study-bible-1cor-6-11-p012-n084",
+    "bookId": "1Cor",
+    "field": "body",
+    "label": "dirty-quote",
+    "count": 1,
+    "from": "（被看作义\".而是它的司法含义（\"宣告为义。",
+    "to": "（\"被看作义\"），而是它的司法含义（\"宣告为义\"）。"
+  },
+  {
+    "cardId": "study-bible-1cor-6-11-p012-n084",
+    "bookId": "1Cor",
+    "field": "searchText",
+    "label": "dirty-quote",
+    "count": 1,
+    "from": "（被看作义\".而是它的司法含义（\"宣告为义。",
+    "to": "（\"被看作义\"），而是它的司法含义（\"宣告为义\"）。"
+  },
+  {
+    "cardId": "study-bible-1cor-8-1-p015-n110",
+    "bookId": "1Cor",
+    "field": "searchText",
+    "label": "腊原文→希腊原文",
+    "count": 1,
+    "from": "这个词（腊原文brasis",
+    "to": "这个词（希腊原文brasis"
+  },
+  {
+    "cardId": "study-bible-1cor-8-1-p015-n110",
+    "bookId": "1Cor",
+    "field": "summary",
+    "label": "腊原文→希腊原文",
+    "count": 1,
+    "from": "这个词（腊原文brasis",
+    "to": "这个词（希腊原文brasis"
+  },
+  {
+    "cardId": "study-bible-2kgs-10-5-p016-n086",
+    "bookId": "2Kgs",
+    "field": "body",
+    "label": "extra-book-closer",
+    "count": 1,
+    "from": "（教养…的人》",
+    "to": "（教养…的人）"
+  },
+  {
+    "cardId": "study-bible-2kgs-10-5-p016-n086",
+    "bookId": "2Kgs",
+    "field": "body",
+    "label": "hexiu-missing-paren",
+    "count": 1,
+    "from": "（《和修》\"王宫总管、市长\"，这些人",
+    "to": "（《和修》\"王宫总管、市长\"），这些人"
+  },
+  {
+    "cardId": "study-bible-2kgs-10-5-p016-n086",
+    "bookId": "2Kgs",
+    "field": "body",
+    "label": "hexiu-missing-paren",
+    "count": 1,
+    "from": "（\"王宫总管\"，有些还记载",
+    "to": "（\"王宫总管\"），有些还记载"
+  },
+  {
+    "cardId": "study-bible-2kgs-10-5-p016-n086",
+    "bookId": "2Kgs",
+    "field": "searchText",
+    "label": "extra-book-closer",
+    "count": 1,
+    "from": "（教养…的人》",
+    "to": "（教养…的人）"
+  },
+  {
+    "cardId": "study-bible-2kgs-10-5-p016-n086",
+    "bookId": "2Kgs",
+    "field": "searchText",
+    "label": "hexiu-missing-paren",
+    "count": 2,
+    "from": "（《和修》\"王宫总管、市长\"，这些人",
+    "to": "（《和修》\"王宫总管、市长\"），这些人"
+  },
+  {
+    "cardId": "study-bible-2kgs-10-5-p016-n086",
+    "bookId": "2Kgs",
+    "field": "searchText",
+    "label": "hexiu-missing-paren",
+    "count": 1,
+    "from": "（\"王宫总管\"，有些还记载",
+    "to": "（\"王宫总管\"），有些还记载"
+  },
+  {
+    "cardId": "study-bible-2kgs-10-5-p016-n086",
+    "bookId": "2Kgs",
+    "field": "summary",
+    "label": "hexiu-missing-paren",
+    "count": 1,
+    "from": "（《和修》\"王宫总管、市长\"，这些人",
+    "to": "（《和修》\"王宫总管、市长\"），这些人"
+  },
+  {
+    "cardId": "study-bible-acts-1-5-p008-n015",
+    "bookId": "Acts",
+    "field": "body",
+    "label": "徒行传→使徒行传",
+    "count": 1,
+    "from": "整卷《徒行传》",
+    "to": "整卷《使徒行传》"
+  },
+  {
+    "cardId": "study-bible-acts-1-5-p008-n015",
+    "bookId": "Acts",
+    "field": "searchText",
+    "label": "徒行传→使徒行传",
+    "count": 2,
+    "from": "整卷《徒行传》",
+    "to": "整卷《使徒行传》"
+  },
+  {
+    "cardId": "study-bible-acts-1-5-p008-n015",
+    "bookId": "Acts",
+    "field": "summary",
+    "label": "徒行传→使徒行传",
+    "count": 1,
+    "from": "整卷《徒行传》",
+    "to": "整卷《使徒行传》"
+  },
+  {
+    "cardId": "study-bible-acts-10-35-p030-n167",
+    "bookId": "Acts",
+    "field": "body",
+    "label": "hexiu-missing-closer",
+    "count": 1,
+    "from": "受欢迎是指",
+    "to": "受欢迎\"是指"
+  },
+  {
+    "cardId": "study-bible-acts-10-35-p030-n167",
+    "bookId": "Acts",
+    "field": "searchText",
+    "label": "hexiu-missing-closer",
+    "count": 1,
+    "from": "受欢迎是指",
+    "to": "受欢迎\"是指"
+  },
+  {
+    "cardId": "study-bible-exod-20-16-p035-n181",
+    "bookId": "Exod",
+    "field": "body",
+    "label": "无宰→无辜",
+    "count": 1,
+    "from": "无宰受刑",
+    "to": "无辜受刑"
+  },
+  {
+    "cardId": "study-bible-exod-20-16-p035-n181",
+    "bookId": "Exod",
+    "field": "body",
+    "label": "道责→谴责",
+    "count": 1,
+    "from": "道责作假见证",
+    "to": "谴责作假见证"
+  },
+  {
+    "cardId": "study-bible-exod-20-16-p035-n181",
+    "bookId": "Exod",
+    "field": "searchText",
+    "label": "无宰→无辜",
+    "count": 2,
+    "from": "无宰受刑",
+    "to": "无辜受刑"
+  },
+  {
+    "cardId": "study-bible-exod-20-16-p035-n181",
+    "bookId": "Exod",
+    "field": "searchText",
+    "label": "道责→谴责",
+    "count": 2,
+    "from": "道责作假见证",
+    "to": "谴责作假见证"
+  },
+  {
+    "cardId": "study-bible-exod-20-16-p035-n181",
+    "bookId": "Exod",
+    "field": "summary",
+    "label": "无宰→无辜",
+    "count": 1,
+    "from": "无宰受刑",
+    "to": "无辜受刑"
+  },
+  {
+    "cardId": "study-bible-exod-20-16-p035-n181",
+    "bookId": "Exod",
+    "field": "summary",
+    "label": "道责→谴责",
+    "count": 1,
+    "from": "道责作假见证",
+    "to": "谴责作假见证"
+  },
+  {
+    "cardId": "study-bible-exod-intro-p002-n005",
+    "bookId": "Exod",
+    "field": "body",
+    "label": "《创世前→《创世记》前",
+    "count": 1,
+    "from": "《创世前几章的内容",
+    "to": "《创世记》前几章的内容"
+  },
+  {
+    "cardId": "study-bible-exod-intro-p002-n005",
+    "bookId": "Exod",
+    "field": "body",
+    "label": "extra-book-closer",
+    "count": 1,
+    "from": "以色列记》人",
+    "to": "以色列人"
+  },
+  {
+    "cardId": "study-bible-exod-intro-p002-n005",
+    "bookId": "Exod",
+    "field": "body",
+    "label": "missing-colon",
+    "count": 1,
+    "from": "原因有二经文",
+    "to": "原因有二：经文"
+  },
+  {
+    "cardId": "study-bible-exod-intro-p002-n005",
+    "bookId": "Exod",
+    "field": "body",
+    "label": "missing-period",
+    "count": 1,
+    "from": "未能进入迦南《申命记》",
+    "to": "未能进入迦南。《申命记》"
+  },
+  {
+    "cardId": "study-bible-exod-intro-p002-n005",
+    "bookId": "Exod",
+    "field": "searchText",
+    "label": "《创世前→《创世记》前",
+    "count": 1,
+    "from": "《创世前几章的内容",
+    "to": "《创世记》前几章的内容"
+  },
+  {
+    "cardId": "study-bible-exod-intro-p002-n005",
+    "bookId": "Exod",
+    "field": "searchText",
+    "label": "extra-book-closer",
+    "count": 1,
+    "from": "以色列记》人",
+    "to": "以色列人"
+  },
+  {
+    "cardId": "study-bible-exod-intro-p002-n005",
+    "bookId": "Exod",
+    "field": "searchText",
+    "label": "missing-colon",
+    "count": 1,
+    "from": "原因有二经文",
+    "to": "原因有二：经文"
+  },
+  {
+    "cardId": "study-bible-exod-intro-p002-n005",
+    "bookId": "Exod",
+    "field": "searchText",
+    "label": "missing-period",
+    "count": 1,
+    "from": "未能进入迦南《申命记》",
+    "to": "未能进入迦南。《申命记》"
+  },
+  {
+    "cardId": "study-bible-gen-1-31-p012-n022",
+    "bookId": "Gen",
+    "field": "body",
+    "label": "良普→良善",
+    "count": 1,
+    "from": "满有良普",
+    "to": "满有良善"
+  },
+  {
+    "cardId": "study-bible-gen-1-31-p012-n022",
+    "bookId": "Gen",
+    "field": "searchText",
+    "label": "良普→良善",
+    "count": 1,
+    "from": "满有良普",
+    "to": "满有良善"
+  },
+  {
+    "cardId": "study-bible-gen-40-1-p070-n539",
+    "bookId": "Gen",
+    "field": "body",
+    "label": "missing-comma",
+    "count": 1,
+    "from": "很少使用这里反复",
+    "to": "很少使用，这里反复"
+  },
+  {
+    "cardId": "study-bible-gen-40-1-p070-n539",
+    "bookId": "Gen",
+    "field": "body",
+    "label": "得罪们→得罪他们",
+    "count": 1,
+    "from": "得罪们的主",
+    "to": "得罪他们的主"
+  },
+  {
+    "cardId": "study-bible-gen-40-1-p070-n539",
+    "bookId": "Gen",
+    "field": "searchText",
+    "label": "missing-comma",
+    "count": 2,
+    "from": "很少使用这里反复",
+    "to": "很少使用，这里反复"
+  },
+  {
+    "cardId": "study-bible-gen-40-1-p070-n539",
+    "bookId": "Gen",
+    "field": "searchText",
+    "label": "得罪们→得罪他们",
+    "count": 2,
+    "from": "得罪们的主",
+    "to": "得罪他们的主"
+  },
+  {
+    "cardId": "study-bible-gen-40-1-p070-n539",
+    "bookId": "Gen",
+    "field": "summary",
+    "label": "missing-comma",
+    "count": 1,
+    "from": "很少使用这里反复",
+    "to": "很少使用，这里反复"
+  },
+  {
+    "cardId": "study-bible-gen-40-1-p070-n539",
+    "bookId": "Gen",
+    "field": "summary",
+    "label": "得罪们→得罪他们",
+    "count": 1,
+    "from": "得罪们的主",
+    "to": "得罪他们的主"
+  },
+  {
+    "cardId": "study-bible-heb-3-14-p008-n053",
+    "bookId": "Heb",
+    "field": "body",
+    "label": "extra-book-closer",
+    "count": 1,
+    "from": "在基督里拣选了我们》和其他",
+    "to": "在基督里拣选了我们\"）和其他"
+  },
+  {
+    "cardId": "study-bible-heb-3-14-p008-n053",
+    "bookId": "Heb",
+    "field": "searchText",
+    "label": "extra-book-closer",
+    "count": 1,
+    "from": "在基督里拣选了我们》和其他",
+    "to": "在基督里拣选了我们\"）和其他"
+  },
+  {
+    "cardId": "study-bible-jas-2-21-p008-n051",
+    "bookId": "Jas",
+    "field": "searchText",
+    "label": "称（→称义",
+    "count": 2,
+    "from": "\"因行为称（罗4:2）",
+    "to": "\"因行为称义\"（罗4:2）"
+  },
+  {
+    "cardId": "study-bible-jas-2-21-p008-n051",
+    "bookId": "Jas",
+    "field": "searchText",
+    "label": "腊原文→希腊原文",
+    "count": 1,
+    "from": "这里的腊原文dikaioo）",
+    "to": "这里的希腊原文dikaioo"
+  },
+  {
+    "cardId": "study-bible-jas-2-21-p008-n051",
+    "bookId": "Jas",
+    "field": "summary",
+    "label": "称（→称义",
+    "count": 1,
+    "from": "\"因行为称（罗4:2）",
+    "to": "\"因行为称义\"（罗4:2）"
+  },
+  {
+    "cardId": "study-bible-john-1-45-p008-n035",
+    "bookId": "John",
+    "field": "body",
+    "label": "extra-book-closer",
+    "count": 1,
+    "from": "\"多罗买的儿子\"》。",
+    "to": "\"多罗买的儿子\"）。"
+  },
+  {
+    "cardId": "study-bible-john-1-45-p008-n035",
+    "bookId": "John",
+    "field": "searchText",
+    "label": "extra-book-closer",
+    "count": 2,
+    "from": "\"多罗买的儿子\"》。",
+    "to": "\"多罗买的儿子\"）。"
+  },
+  {
+    "cardId": "study-bible-john-1-45-p008-n035",
+    "bookId": "John",
+    "field": "summary",
+    "label": "extra-book-closer",
+    "count": 1,
+    "from": "\"多罗买的儿子\"》。",
+    "to": "\"多罗买的儿子\"）。"
+  },
+  {
+    "cardId": "study-bible-john-2-11-p009-n049",
+    "bookId": "John",
+    "field": "body",
+    "label": "hexiu-missing-paren",
+    "count": 1,
+    "from": "（《和修》\"第一个\"神迹",
+    "to": "（《和修》\"第一个\"）神迹"
+  },
+  {
+    "cardId": "study-bible-john-2-11-p009-n049",
+    "bookId": "John",
+    "field": "body",
+    "label": "膳眼→瞎眼",
+    "count": 1,
+    "from": "生来膳眼",
+    "to": "生来瞎眼"
+  },
+  {
+    "cardId": "study-bible-john-2-11-p009-n049",
+    "bookId": "John",
+    "field": "searchText",
+    "label": "hexiu-missing-paren",
+    "count": 2,
+    "from": "（《和修》\"第一个\"神迹",
+    "to": "（《和修》\"第一个\"）神迹"
+  },
+  {
+    "cardId": "study-bible-john-2-11-p009-n049",
+    "bookId": "John",
+    "field": "searchText",
+    "label": "膳眼→瞎眼",
+    "count": 1,
+    "from": "生来膳眼",
+    "to": "生来瞎眼"
+  },
+  {
+    "cardId": "study-bible-john-2-11-p009-n049",
+    "bookId": "John",
+    "field": "summary",
+    "label": "hexiu-missing-paren",
+    "count": 1,
+    "from": "（《和修》\"第一个\"神迹",
+    "to": "（《和修》\"第一个\"）神迹"
+  },
+  {
+    "cardId": "study-bible-john-7-8-p022-n187",
+    "bookId": "John",
+    "field": "body",
+    "label": "extra-book-closer",
+    "count": 1,
+    "from": "\"现在\"》，表明",
+    "to": "\"现在\"），表明"
+  },
+  {
+    "cardId": "study-bible-john-7-8-p022-n187",
+    "bookId": "John",
+    "field": "searchText",
+    "label": "extra-book-closer",
+    "count": 2,
+    "from": "\"现在\"》，表明",
+    "to": "\"现在\"），表明"
+  },
+  {
+    "cardId": "study-bible-john-7-8-p022-n187",
+    "bookId": "John",
+    "field": "summary",
+    "label": "extra-book-closer",
+    "count": 1,
+    "from": "\"现在\"》，表明",
+    "to": "\"现在\"），表明"
+  },
+  {
+    "cardId": "study-bible-mark-7-33-p019-n184",
+    "bookId": "Mark",
+    "field": "body",
+    "label": "员性→灵性",
+    "count": 1,
+    "from": "门徒员性",
+    "to": "门徒灵性"
+  },
+  {
+    "cardId": "study-bible-mark-7-33-p019-n184",
+    "bookId": "Mark",
+    "field": "searchText",
+    "label": "员性→灵性",
+    "count": 2,
+    "from": "门徒员性",
+    "to": "门徒灵性"
+  },
+  {
+    "cardId": "study-bible-mark-7-33-p019-n184",
+    "bookId": "Mark",
+    "field": "summary",
+    "label": "员性→灵性",
+    "count": 1,
+    "from": "门徒员性",
+    "to": "门徒灵性"
+  },
+  {
+    "cardId": "study-bible-mark-intro-p002-n007",
+    "bookId": "Mark",
+    "field": "body",
+    "label": "extra-semicolon",
+    "count": 1,
+    "from": "这幅；\"马赛克\"",
+    "to": "这幅\"马赛克\""
+  },
+  {
+    "cardId": "study-bible-mark-intro-p002-n007",
+    "bookId": "Mark",
+    "field": "body",
+    "label": "主人体→主人公",
+    "count": 1,
+    "from": "故事的主人体，公是耶稣",
+    "to": "故事的主人公，就是耶稣"
+  },
+  {
+    "cardId": "study-bible-mark-intro-p002-n007",
+    "bookId": "Mark",
+    "field": "body",
+    "label": "腊文→希腊文",
+    "count": 1,
+    "from": "喜欢使用腊文）动词",
+    "to": "喜欢使用（希腊文）动词"
+  },
+  {
+    "cardId": "study-bible-mark-intro-p002-n007",
+    "bookId": "Mark",
+    "field": "searchText",
+    "label": "extra-semicolon",
+    "count": 1,
+    "from": "这幅；\"马赛克\"",
+    "to": "这幅\"马赛克\""
+  },
+  {
+    "cardId": "study-bible-mark-intro-p002-n007",
+    "bookId": "Mark",
+    "field": "searchText",
+    "label": "主人体→主人公",
+    "count": 1,
+    "from": "故事的主人体，公是耶稣",
+    "to": "故事的主人公，就是耶稣"
+  },
+  {
+    "cardId": "study-bible-mark-intro-p002-n007",
+    "bookId": "Mark",
+    "field": "searchText",
+    "label": "腊文→希腊文",
+    "count": 1,
+    "from": "喜欢使用腊文）动词",
+    "to": "喜欢使用（希腊文）动词"
+  },
+  {
+    "cardId": "study-bible-song-1-13-p006-n016",
+    "bookId": "Song",
+    "field": "body",
+    "label": "hexiu-missing-closer",
+    "count": 1,
+    "from": "是\"我的良人）。",
+    "to": "是\"我的良人\"）。"
+  },
+  {
+    "cardId": "study-bible-song-1-13-p006-n016",
+    "bookId": "Song",
+    "field": "searchText",
+    "label": "hexiu-missing-closer",
+    "count": 2,
+    "from": "是\"我的良人）。",
+    "to": "是\"我的良人\"）。"
+  },
+  {
+    "cardId": "study-bible-song-1-13-p006-n016",
+    "bookId": "Song",
+    "field": "summary",
+    "label": "hexiu-missing-closer",
+    "count": 1,
+    "from": "是\"我的良人）。",
+    "to": "是\"我的良人\"）。"
+  }
+]

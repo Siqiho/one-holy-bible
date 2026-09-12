@@ -1,0 +1,11 @@
+$ npx vitest run src/data/*PublicCardAudit.test.ts scripts/generatePublicBibleData.test.mjs
+(pending)
+
+$ npx vitest run src/data/habakkukPublicCardAudit.test.ts src/data/ruthPublicCardAudit.test.ts src/data/ecclesiastesPublicCardAudit.test.ts src/data/zephaniahPublicCardAudit.test.ts src/data/publicData.test.ts src/data/publicBibleData.test.ts
+(pending)
+
+$ node scripts/generatePublicBibleData.mjs --validate-only public/data
+(pending)
+
+$ node scripts/validatePublicRepository.mjs
+(pending)

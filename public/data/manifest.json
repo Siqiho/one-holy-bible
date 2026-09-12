@@ -64,11 +64,11 @@
       "url": "/data/books/Judg.json"
     },
     {
-      "bytes": 168186,
+      "bytes": 167130,
       "cuvVerseCount": 85,
       "id": "Ruth",
       "kjvVerseCount": 85,
-      "sha256": "04e1275ce95150bda23598b5163e23aa8018b11c78673166f549c238967b1f30",
+      "sha256": "743f3308d7f1948e625d41e123e391388a41872a8481263b870e7e1bfabb2075",
       "textCardCount": 58,
       "url": "/data/books/Ruth.json"
     },
@@ -307,11 +307,11 @@
       "url": "/data/books/Nah.json"
     },
     {
-      "bytes": 133570,
+      "bytes": 132864,
       "cuvVerseCount": 56,
       "id": "Hab",
       "kjvVerseCount": 56,
-      "sha256": "e24a7d4eaf87d14d57a8b7ae764a0bdd51d791f5e08433629db6c39f23e34ad4",
+      "sha256": "4ec553d3cfeb5b9379208534e5b5f1bfe06dbe96633c97c06df387490688bac0",
       "textCardCount": 56,
       "url": "/data/books/Hab.json"
     },

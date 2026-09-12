@@ -181,12 +181,12 @@
       "url": "/data/books/Prov.json"
     },
     {
-      "bytes": 227153,
+      "bytes": 221119,
       "cuvVerseCount": 222,
       "id": "Eccl",
       "kjvVerseCount": 222,
-      "sha256": "fbbe9297c9995e6a792be4983f35c9b6a2540a9ece85fd560b95fcf61acba903",
-      "textCardCount": 58,
+      "sha256": "144f627d517bb1df92da0840cfb4c685a7a680409ee1233a909d0e544e6ef296",
+      "textCardCount": 54,
       "url": "/data/books/Eccl.json"
     },
     {
@@ -316,11 +316,11 @@
       "url": "/data/books/Hab.json"
     },
     {
-      "bytes": 146870,
+      "bytes": 146002,
       "cuvVerseCount": 53,
       "id": "Zeph",
       "kjvVerseCount": 53,
-      "sha256": "3d63dfd4a4a6112832fdba13f689ed6c4c326cc9bb4db904d1372d9ecb1540c3",
+      "sha256": "259f6e023fee8f9a14178798b45a05086dc7b01e4d3ee3f4fef792f5ee34f936",
       "textCardCount": 56,
       "url": "/data/books/Zeph.json"
     },

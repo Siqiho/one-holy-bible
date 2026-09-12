@@ -45,6 +45,10 @@ const forbiddenFragments = [
   "人新烈",
   "森瀝播想",
   "一样受造物是如此被造",
+  "旧日约",
+  "服待",
+  "自已",
+  "进人",
 ];
 
 function loadPublicJohn(): PublicJohnPayload {

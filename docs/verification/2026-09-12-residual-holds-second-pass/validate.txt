@@ -1,0 +1,8 @@
+=== vitest public-card / residual inventory / public data ===
+71 files, 270 tests passed
+
+=== generatePublicBibleData --validate-only ===
+Public data valid: 66 books, 31102 CUV verses, 31102 KJV verses, 10096 text cards, 62204 search entries, 0 image cards, 0 unsafe matches
+
+=== validatePublicRepository ===
+Public repository metadata valid: 8 required files, Node 24

@@ -1,0 +1,1395 @@
+{
+  "count": 347,
+  "verdict": "keep-hold",
+  "note": "Second-pass reviewed main-branch originals. No high-confidence quote/OCR/table-tail rescue: bodies still mid-cut, garbage, or missing source PDF text.",
+  "cards": [
+    {
+      "id": "study-bible-acts-intro-p002-n004",
+      "testFile": "actsPublicCardAudit.test.ts"
+    },
+    {
+      "id": "study-bible-acts-intro-p004-n007",
+      "testFile": "actsPublicCardAudit.test.ts"
+    },
+    {
+      "id": "study-bible-acts-intro-p005-n010",
+      "testFile": "actsPublicCardAudit.test.ts"
+    },
+    {
+      "id": "study-bible-acts-1-14-p009-n025",
+      "testFile": "actsPublicCardAudit.test.ts"
+    },
+    {
+      "id": "study-bible-acts-2-23-p037-n310",
+      "testFile": "actsPublicCardAudit.test.ts"
+    },
+    {
+      "id": "study-bible-acts-4-10-p015-n080",
+      "testFile": "actsPublicCardAudit.test.ts"
+    },
+    {
+      "id": "study-bible-acts-5-10-p017-n073",
+      "testFile": "actsPublicCardAudit.test.ts"
+    },
+    {
+      "id": "study-bible-acts-5-31-p037-n320",
+      "testFile": "actsPublicCardAudit.test.ts"
+    },
+    {
+      "id": "study-bible-acts-6-11-p019-n135",
+      "testFile": "actsPublicCardAudit.test.ts"
+    },
+    {
+      "id": "study-bible-acts-7-37-p021-n150",
+      "testFile": "actsPublicCardAudit.test.ts"
+    },
+    {
+      "id": "study-bible-acts-7-56-p022-n160",
+      "testFile": "actsPublicCardAudit.test.ts"
+    },
+    {
+      "id": "study-bible-acts-9-35-p028-n220",
+      "testFile": "actsPublicCardAudit.test.ts"
+    },
+    {
+      "id": "study-bible-acts-10-48-p030-n247",
+      "testFile": "actsPublicCardAudit.test.ts"
+    },
+    {
+      "id": "study-bible-acts-15-6-p040-n230",
+      "testFile": "actsPublicCardAudit.test.ts"
+    },
+    {
+      "id": "study-bible-acts-15-39-p041-n362",
+      "testFile": "actsPublicCardAudit.test.ts"
+    },
+    {
+      "id": "study-bible-acts-16-23-p044-n386",
+      "testFile": "actsPublicCardAudit.test.ts"
+    },
+    {
+      "id": "study-bible-acts-19-19-p051-n307",
+      "testFile": "actsPublicCardAudit.test.ts"
+    },
+    {
+      "id": "study-bible-acts-20-7-p053-n492",
+      "testFile": "actsPublicCardAudit.test.ts"
+    },
+    {
+      "id": "study-bible-acts-20-16-p053-n321",
+      "testFile": "actsPublicCardAudit.test.ts"
+    },
+    {
+      "id": "study-bible-acts-21-28-p056-n525",
+      "testFile": "actsPublicCardAudit.test.ts"
+    },
+    {
+      "id": "study-bible-acts-28-19-p067-n640",
+      "testFile": "actsPublicCardAudit.test.ts"
+    },
+    {
+      "id": "study-bible-col-1-7-p005-n014",
+      "testFile": "colossiansPublicCardAudit.test.ts"
+    },
+    {
+      "id": "study-bible-col-2-7-p008-n054",
+      "testFile": "colossiansPublicCardAudit.test.ts"
+    },
+    {
+      "id": "study-bible-col-2-12-p008-n058",
+      "testFile": "colossiansPublicCardAudit.test.ts"
+    },
+    {
+      "id": "study-bible-col-4-17-p008-n063",
+      "testFile": "colossiansPublicCardAudit.test.ts"
+    },
+    {
+      "id": "study-bible-col-intro-p001-n004",
+      "testFile": "colossiansPublicCardAudit.test.ts"
+    },
+    {
+      "id": "study-bible-deut-1-6-p006-n012",
+      "testFile": "deuteronomyPublicCardAudit.test.ts"
+    },
+    {
+      "id": "study-bible-deut-5-11-p015-n088",
+      "testFile": "deuteronomyPublicCardAudit.test.ts"
+    },
+    {
+      "id": "study-bible-deut-9-7-p020-n133",
+      "testFile": "deuteronomyPublicCardAudit.test.ts"
+    },
+    {
+      "id": "study-bible-deut-12-15-p024-n179",
+      "testFile": "deuteronomyPublicCardAudit.test.ts"
+    },
+    {
+      "id": "study-bible-deut-19-13-p031-n282",
+      "testFile": "deuteronomyPublicCardAudit.test.ts"
+    },
+    {
+      "id": "study-bible-deut-21-1-p032-n318",
+      "testFile": "deuteronomyPublicCardAudit.test.ts"
+    },
+    {
+      "id": "study-bible-deut-23-17-p035-n265",
+      "testFile": "deuteronomyPublicCardAudit.test.ts"
+    },
+    {
+      "id": "study-bible-deut-26-12-p037-n352",
+      "testFile": "deuteronomyPublicCardAudit.test.ts"
+    },
+    {
+      "id": "study-bible-deut-29-18-p042-n309",
+      "testFile": "deuteronomyPublicCardAudit.test.ts"
+    },
+    {
+      "id": "study-bible-deut-intro-p001-n003",
+      "testFile": "deuteronomyPublicCardAudit.test.ts"
+    },
+    {
+      "id": "study-bible-deut-intro-p002-n005",
+      "testFile": "deuteronomyPublicCardAudit.test.ts"
+    },
+    {
+      "id": "study-bible-eccl-1-15-p006-n017",
+      "testFile": "ecclesiastesPublicCardAudit.test.ts"
+    },
+    {
+      "id": "study-bible-eccl-3-8-p007-n036",
+      "testFile": "ecclesiastesPublicCardAudit.test.ts"
+    },
+    {
+      "id": "study-bible-eccl-4-12-p008-n036",
+      "testFile": "ecclesiastesPublicCardAudit.test.ts"
+    },
+    {
+      "id": "study-bible-eccl-7-7-p010-n056",
+      "testFile": "ecclesiastesPublicCardAudit.test.ts"
+    },
+    {
+      "id": "study-bible-eph-4-5-p012-n074",
+      "testFile": "ephesiansPublicCardAudit.test.ts"
+    },
+    {
+      "id": "study-bible-eph-4-22-p009-n044",
+      "testFile": "ephesiansPublicCardAudit.test.ts"
+    },
+    {
+      "id": "study-bible-eph-intro-p002-n005",
+      "testFile": "ephesiansPublicCardAudit.test.ts"
+    },
+    {
+      "id": "study-bible-eph-intro-p004-n007",
+      "testFile": "ephesiansPublicCardAudit.test.ts"
+    },
+    {
+      "id": "study-bible-esth-2-7-p006-n025",
+      "testFile": "estherPublicCardAudit.test.ts"
+    },
+    {
+      "id": "study-bible-esth-7-7-p010-n065",
+      "testFile": "estherPublicCardAudit.test.ts"
+    },
+    {
+      "id": "study-bible-esth-7-10-p010-n069",
+      "testFile": "estherPublicCardAudit.test.ts"
+    },
+    {
+      "id": "study-bible-esth-8-9-p006-n032",
+      "testFile": "estherPublicCardAudit.test.ts"
+    },
+    {
+      "id": "study-bible-exod-3-14-p010-n039",
+      "testFile": "exodusPublicCardAudit.test.ts"
+    },
+    {
+      "id": "study-bible-exod-5-2-p013-n061",
+      "testFile": "exodusPublicCardAudit.test.ts"
+    },
+    {
+      "id": "study-bible-exod-7-13-p016-n085",
+      "testFile": "exodusPublicCardAudit.test.ts"
+    },
+    {
+      "id": "study-bible-exod-7-14-p012-n052",
+      "testFile": "exodusPublicCardAudit.test.ts"
+    },
+    {
+      "id": "study-bible-exod-9-7-p012-n049",
+      "testFile": "exodusPublicCardAudit.test.ts"
+    },
+    {
+      "id": "study-bible-exod-14-5-p012-n056",
+      "testFile": "exodusPublicCardAudit.test.ts"
+    },
+    {
+      "id": "study-bible-exod-15-13-p028-n155",
+      "testFile": "exodusPublicCardAudit.test.ts"
+    },
+    {
+      "id": "study-bible-exod-20-3-p034-n259",
+      "testFile": "exodusPublicCardAudit.test.ts"
+    },
+    {
+      "id": "study-bible-exod-20-7-p034-n258",
+      "testFile": "exodusPublicCardAudit.test.ts"
+    },
+    {
+      "id": "study-bible-exod-21-1-p035-n268",
+      "testFile": "exodusPublicCardAudit.test.ts"
+    },
+    {
+      "id": "study-bible-exod-intro-p002-n006",
+      "testFile": "exodusPublicCardAudit.test.ts"
+    },
+    {
+      "id": "study-bible-ezek-1-12-p009-n033",
+      "testFile": "ezekielPublicCardAudit.test.ts"
+    },
+    {
+      "id": "study-bible-ezek-6-2-p014-n079",
+      "testFile": "ezekielPublicCardAudit.test.ts"
+    },
+    {
+      "id": "study-bible-ezek-17-7-p026-n196",
+      "testFile": "ezekielPublicCardAudit.test.ts"
+    },
+    {
+      "id": "study-bible-ezek-22-9-p033-n256",
+      "testFile": "ezekielPublicCardAudit.test.ts"
+    },
+    {
+      "id": "study-bible-ezek-31-18-p065-n500",
+      "testFile": "ezekielPublicCardAudit.test.ts"
+    },
+    {
+      "id": "study-bible-ezek-32-2-p048-n376",
+      "testFile": "ezekielPublicCardAudit.test.ts"
+    },
+    {
+      "id": "study-bible-ezek-40-17-p062-n336",
+      "testFile": "ezekielPublicCardAudit.test.ts"
+    },
+    {
+      "id": "study-bible-ezek-41-1-p062-n339",
+      "testFile": "ezekielPublicCardAudit.test.ts"
+    },
+    {
+      "id": "study-bible-ezek-intro-p001-n001",
+      "testFile": "ezekielPublicCardAudit.test.ts"
+    },
+    {
+      "id": "study-bible-ezek-intro-p003-n006",
+      "testFile": "ezekielPublicCardAudit.test.ts"
+    },
+    {
+      "id": "study-bible-1chr-intro-p002-n005",
+      "testFile": "firstChroniclesPublicCardAudit.test.ts"
+    },
+    {
+      "id": "study-bible-1cor-1-2-p006-n015",
+      "testFile": "firstCorinthiansPublicCardAudit.test.ts"
+    },
+    {
+      "id": "study-bible-1cor-1-18-p007-n023",
+      "testFile": "firstCorinthiansPublicCardAudit.test.ts"
+    },
+    {
+      "id": "study-bible-1cor-7-21-p014-n099",
+      "testFile": "firstCorinthiansPublicCardAudit.test.ts"
+    },
+    {
+      "id": "study-bible-1cor-7-25-p022-n193",
+      "testFile": "firstCorinthiansPublicCardAudit.test.ts"
+    },
+    {
+      "id": "study-bible-1cor-10-12-p018-n097",
+      "testFile": "firstCorinthiansPublicCardAudit.test.ts"
+    },
+    {
+      "id": "study-bible-1cor-14-21-p025-n218",
+      "testFile": "firstCorinthiansPublicCardAudit.test.ts"
+    },
+    {
+      "id": "study-bible-1cor-15-28-p027-n157",
+      "testFile": "firstCorinthiansPublicCardAudit.test.ts"
+    },
+    {
+      "id": "study-bible-1cor-intro-p001-n004",
+      "testFile": "firstCorinthiansPublicCardAudit.test.ts"
+    },
+    {
+      "id": "study-bible-1cor-intro-p004-n006",
+      "testFile": "firstCorinthiansPublicCardAudit.test.ts"
+    },
+    {
+      "id": "study-bible-1john-1-3-p006-n016",
+      "testFile": "firstJohnPublicCardAudit.test.ts"
+    },
+    {
+      "id": "study-bible-1john-intro-p003-n007",
+      "testFile": "firstJohnPublicCardAudit.test.ts"
+    },
+    {
+      "id": "study-bible-1john-intro-p004-n010",
+      "testFile": "firstJohnPublicCardAudit.test.ts"
+    },
+    {
+      "id": "study-bible-1kgs-3-16-p012-n041",
+      "testFile": "firstKingsPublicCardAudit.test.ts"
+    },
+    {
+      "id": "study-bible-1kgs-10-1-p026-n127",
+      "testFile": "firstKingsPublicCardAudit.test.ts"
+    },
+    {
+      "id": "study-bible-1kgs-12-18-p031-n150",
+      "testFile": "firstKingsPublicCardAudit.test.ts"
+    },
+    {
+      "id": "study-bible-1kgs-14-15-p036-n122",
+      "testFile": "firstKingsPublicCardAudit.test.ts"
+    },
+    {
+      "id": "study-bible-1kgs-18-20-p042-n216",
+      "testFile": "firstKingsPublicCardAudit.test.ts"
+    },
+    {
+      "id": "study-bible-1kgs-18-21-p042-n154",
+      "testFile": "firstKingsPublicCardAudit.test.ts"
+    },
+    {
+      "id": "study-bible-1kgs-20-11-p045-n173",
+      "testFile": "firstKingsPublicCardAudit.test.ts"
+    },
+    {
+      "id": "study-bible-1kgs-21-3-p047-n256",
+      "testFile": "firstKingsPublicCardAudit.test.ts"
+    },
+    {
+      "id": "study-bible-1kgs-22-20-p010-n033",
+      "testFile": "firstKingsPublicCardAudit.test.ts"
+    },
+    {
+      "id": "study-bible-1kgs-intro-p002-n005",
+      "testFile": "firstKingsPublicCardAudit.test.ts"
+    },
+    {
+      "id": "study-bible-1pet-3-19-p010-n058",
+      "testFile": "firstPeterPublicCardAudit.test.ts"
+    },
+    {
+      "id": "study-bible-1sam-2-3-p009-n035",
+      "testFile": "firstSamuelPublicCardAudit.test.ts"
+    },
+    {
+      "id": "study-bible-1sam-6-19-p016-n071",
+      "testFile": "firstSamuelPublicCardAudit.test.ts"
+    },
+    {
+      "id": "study-bible-1sam-7-10-p017-n117",
+      "testFile": "firstSamuelPublicCardAudit.test.ts"
+    },
+    {
+      "id": "study-bible-1sam-8-11-p018-n123",
+      "testFile": "firstSamuelPublicCardAudit.test.ts"
+    },
+    {
+      "id": "study-bible-1sam-10-25-p021-n160",
+      "testFile": "firstSamuelPublicCardAudit.test.ts"
+    },
+    {
+      "id": "study-bible-1sam-13-7-p024-n189",
+      "testFile": "firstSamuelPublicCardAudit.test.ts"
+    },
+    {
+      "id": "study-bible-1sam-14-10-p025-n200",
+      "testFile": "firstSamuelPublicCardAudit.test.ts"
+    },
+    {
+      "id": "study-bible-1sam-15-4-p027-n216",
+      "testFile": "firstSamuelPublicCardAudit.test.ts"
+    },
+    {
+      "id": "study-bible-1sam-24-2-p040-n345",
+      "testFile": "firstSamuelPublicCardAudit.test.ts"
+    },
+    {
+      "id": "study-bible-1sam-24-4-p040-n348",
+      "testFile": "firstSamuelPublicCardAudit.test.ts"
+    },
+    {
+      "id": "study-bible-1sam-30-19-p047-n397",
+      "testFile": "firstSamuelPublicCardAudit.test.ts"
+    },
+    {
+      "id": "study-bible-1sam-30-22-p047-n399",
+      "testFile": "firstSamuelPublicCardAudit.test.ts"
+    },
+    {
+      "id": "study-bible-1sam-intro-p002-n005",
+      "testFile": "firstSamuelPublicCardAudit.test.ts"
+    },
+    {
+      "id": "study-bible-1sam-intro-p003-n009",
+      "testFile": "firstSamuelPublicCardAudit.test.ts"
+    },
+    {
+      "id": "study-bible-1thess-5-5-p010-n054",
+      "testFile": "firstThessaloniansPublicCardAudit.test.ts"
+    },
+    {
+      "id": "study-bible-1tim-1-1-p005-n011",
+      "testFile": "firstTimothyPublicCardAudit.test.ts"
+    },
+    {
+      "id": "study-bible-1tim-1-7-p009-n072",
+      "testFile": "firstTimothyPublicCardAudit.test.ts"
+    },
+    {
+      "id": "study-bible-1tim-1-11-p006-n025",
+      "testFile": "firstTimothyPublicCardAudit.test.ts"
+    },
+    {
+      "id": "study-bible-1tim-3-7-p009-n070",
+      "testFile": "firstTimothyPublicCardAudit.test.ts"
+    },
+    {
+      "id": "study-bible-1tim-6-11-p008-n055",
+      "testFile": "firstTimothyPublicCardAudit.test.ts"
+    },
+    {
+      "id": "study-bible-1tim-intro-p002-n005",
+      "testFile": "firstTimothyPublicCardAudit.test.ts"
+    },
+    {
+      "id": "study-bible-1tim-intro-p003-n008",
+      "testFile": "firstTimothyPublicCardAudit.test.ts"
+    },
+    {
+      "id": "study-bible-gal-1-18-p006-n031-2-2-2",
+      "testFile": "galatiansPublicCardAudit.test.ts"
+    },
+    {
+      "id": "study-bible-gal-2-16-p008-n033",
+      "testFile": "galatiansPublicCardAudit.test.ts"
+    },
+    {
+      "id": "study-bible-gal-2-18-p008-n050",
+      "testFile": "galatiansPublicCardAudit.test.ts"
+    },
+    {
+      "id": "study-bible-gal-6-18-p016-n146",
+      "testFile": "galatiansPublicCardAudit.test.ts"
+    },
+    {
+      "id": "study-bible-gal-intro-p002-n005",
+      "testFile": "galatiansPublicCardAudit.test.ts"
+    },
+    {
+      "id": "study-bible-gal-intro-p002-n006",
+      "testFile": "galatiansPublicCardAudit.test.ts"
+    },
+    {
+      "id": "study-bible-heb-7-28-p014-n089",
+      "testFile": "hebrewsPublicCardAudit.test.ts"
+    },
+    {
+      "id": "study-bible-heb-9-14-p016-n145-2-2-2",
+      "testFile": "hebrewsPublicCardAudit.test.ts"
+    },
+    {
+      "id": "study-bible-heb-11-32-p021-n200",
+      "testFile": "hebrewsPublicCardAudit.test.ts"
+    },
+    {
+      "id": "study-bible-heb-intro-p002-n005",
+      "testFile": "hebrewsPublicCardAudit.test.ts"
+    },
+    {
+      "id": "study-bible-isa-1-1-p008-n025",
+      "testFile": "isaiahPublicCardAudit.test.ts"
+    },
+    {
+      "id": "study-bible-isa-7-20-p019-n088",
+      "testFile": "isaiahPublicCardAudit.test.ts"
+    },
+    {
+      "id": "study-bible-isa-8-2-p019-n109",
+      "testFile": "isaiahPublicCardAudit.test.ts"
+    },
+    {
+      "id": "study-bible-isa-14-1-p028-n196",
+      "testFile": "isaiahPublicCardAudit.test.ts"
+    },
+    {
+      "id": "study-bible-isa-21-10-p036-n193",
+      "testFile": "isaiahPublicCardAudit.test.ts"
+    },
+    {
+      "id": "study-bible-isa-24-5-p039-n218",
+      "testFile": "isaiahPublicCardAudit.test.ts"
+    },
+    {
+      "id": "study-bible-isa-27-13-p043-n259",
+      "testFile": "isaiahPublicCardAudit.test.ts"
+    },
+    {
+      "id": "study-bible-isa-30-1-p047-n397",
+      "testFile": "isaiahPublicCardAudit.test.ts"
+    },
+    {
+      "id": "study-bible-isa-36-4-p055-n346",
+      "testFile": "isaiahPublicCardAudit.test.ts"
+    },
+    {
+      "id": "study-bible-isa-44-24-p070-n457",
+      "testFile": "isaiahPublicCardAudit.test.ts"
+    },
+    {
+      "id": "study-bible-isa-47-11-p074-n691",
+      "testFile": "isaiahPublicCardAudit.test.ts"
+    },
+    {
+      "id": "study-bible-isa-47-14-p074-n487",
+      "testFile": "isaiahPublicCardAudit.test.ts"
+    },
+    {
+      "id": "study-bible-isa-53-2-p081-n768",
+      "testFile": "isaiahPublicCardAudit.test.ts"
+    },
+    {
+      "id": "study-bible-isa-53-4-p082-n535",
+      "testFile": "isaiahPublicCardAudit.test.ts"
+    },
+    {
+      "id": "study-bible-isa-57-8-p086-n828",
+      "testFile": "isaiahPublicCardAudit.test.ts"
+    },
+    {
+      "id": "study-bible-isa-59-21-p090-n598",
+      "testFile": "isaiahPublicCardAudit.test.ts"
+    },
+    {
+      "id": "study-bible-isa-60-7-p091-n878",
+      "testFile": "isaiahPublicCardAudit.test.ts"
+    },
+    {
+      "id": "study-bible-isa-65-5-p096-n927",
+      "testFile": "isaiahPublicCardAudit.test.ts"
+    },
+    {
+      "id": "study-bible-isa-66-1-p098-n660",
+      "testFile": "isaiahPublicCardAudit.test.ts"
+    },
+    {
+      "id": "study-bible-isa-intro-p001-n001",
+      "testFile": "isaiahPublicCardAudit.test.ts"
+    },
+    {
+      "id": "study-bible-isa-intro-p003-n004",
+      "testFile": "isaiahPublicCardAudit.test.ts"
+    },
+    {
+      "id": "study-bible-jas-1-17-p006-n022",
+      "testFile": "jamesPublicCardAudit.test.ts"
+    },
+    {
+      "id": "study-bible-jas-1-21-p006-n026",
+      "testFile": "jamesPublicCardAudit.test.ts"
+    },
+    {
+      "id": "study-bible-jas-2-13-p011-n095",
+      "testFile": "jamesPublicCardAudit.test.ts"
+    },
+    {
+      "id": "study-bible-jas-3-16-p010-n050",
+      "testFile": "jamesPublicCardAudit.test.ts"
+    },
+    {
+      "id": "study-bible-jas-4-4-p011-n059",
+      "testFile": "jamesPublicCardAudit.test.ts"
+    },
+    {
+      "id": "study-bible-jas-4-14-p011-n084",
+      "testFile": "jamesPublicCardAudit.test.ts"
+    },
+    {
+      "id": "study-bible-jas-5-12-p011-n102",
+      "testFile": "jamesPublicCardAudit.test.ts"
+    },
+    {
+      "id": "study-bible-jas-5-12-p012-n115",
+      "testFile": "jamesPublicCardAudit.test.ts"
+    },
+    {
+      "id": "study-bible-jas-intro-p002-n005",
+      "testFile": "jamesPublicCardAudit.test.ts"
+    },
+    {
+      "id": "study-bible-jas-intro-p003-n008",
+      "testFile": "jamesPublicCardAudit.test.ts"
+    },
+    {
+      "id": "study-bible-jer-1-1-p007-n013",
+      "testFile": "jeremiahPublicCardAudit.test.ts"
+    },
+    {
+      "id": "study-bible-jer-1-18-p008-n025",
+      "testFile": "jeremiahPublicCardAudit.test.ts"
+    },
+    {
+      "id": "study-bible-jer-3-8-p012-n070",
+      "testFile": "jeremiahPublicCardAudit.test.ts"
+    },
+    {
+      "id": "study-bible-jer-3-16-p013-n069",
+      "testFile": "jeremiahPublicCardAudit.test.ts"
+    },
+    {
+      "id": "study-bible-jer-17-7-p035-n243",
+      "testFile": "jeremiahPublicCardAudit.test.ts"
+    },
+    {
+      "id": "study-bible-jer-17-26-p059-n608",
+      "testFile": "jeremiahPublicCardAudit.test.ts"
+    },
+    {
+      "id": "study-bible-jer-23-10-p043-n299",
+      "testFile": "jeremiahPublicCardAudit.test.ts"
+    },
+    {
+      "id": "study-bible-jer-25-1-p045-n434",
+      "testFile": "jeremiahPublicCardAudit.test.ts"
+    },
+    {
+      "id": "study-bible-jer-25-19-p046-n447",
+      "testFile": "jeremiahPublicCardAudit.test.ts"
+    },
+    {
+      "id": "study-bible-jer-33-2-p059-n619",
+      "testFile": "jeremiahPublicCardAudit.test.ts"
+    },
+    {
+      "id": "study-bible-jer-36-4-p062-n649",
+      "testFile": "jeremiahPublicCardAudit.test.ts"
+    },
+    {
+      "id": "study-bible-jer-45-5-p074-n779",
+      "testFile": "jeremiahPublicCardAudit.test.ts"
+    },
+    {
+      "id": "study-bible-jer-49-1-p080-n576",
+      "testFile": "jeremiahPublicCardAudit.test.ts"
+    },
+    {
+      "id": "study-bible-jer-51-44-p088-n938",
+      "testFile": "jeremiahPublicCardAudit.test.ts"
+    },
+    {
+      "id": "study-bible-job-40-15-p047-n328",
+      "testFile": "jobPublicCardAudit.test.ts"
+    },
+    {
+      "id": "study-bible-john-21-24-p056-n512",
+      "testFile": "johnGospelPublicCardAudit.test.ts"
+    },
+    {
+      "id": "study-bible-john-13-16-p035-n221",
+      "testFile": "johnGospelPublicCardAudit.test.ts"
+    },
+    {
+      "id": "study-bible-john-12-44-p034-n214",
+      "testFile": "johnGospelPublicCardAudit.test.ts"
+    },
+    {
+      "id": "study-bible-john-10-36-p029-n255",
+      "testFile": "johnGospelPublicCardAudit.test.ts"
+    },
+    {
+      "id": "study-bible-josh-1-13-p007-n025",
+      "testFile": "joshuaPublicCardAudit.test.ts"
+    },
+    {
+      "id": "study-bible-josh-3-17-p010-n039",
+      "testFile": "joshuaPublicCardAudit.test.ts"
+    },
+    {
+      "id": "study-bible-josh-4-20-p034-n139",
+      "testFile": "joshuaPublicCardAudit.test.ts"
+    },
+    {
+      "id": "study-bible-josh-5-15-p012-n055-2-2-2-2",
+      "testFile": "joshuaPublicCardAudit.test.ts"
+    },
+    {
+      "id": "study-bible-josh-7-26-p034-n140",
+      "testFile": "joshuaPublicCardAudit.test.ts"
+    },
+    {
+      "id": "study-bible-josh-10-27-p034-n142",
+      "testFile": "joshuaPublicCardAudit.test.ts"
+    },
+    {
+      "id": "study-bible-josh-20-3-p031-n130",
+      "testFile": "joshuaPublicCardAudit.test.ts"
+    },
+    {
+      "id": "study-bible-josh-22-34-p034-n143-2-2-2-2",
+      "testFile": "joshuaPublicCardAudit.test.ts"
+    },
+    {
+      "id": "study-bible-josh-24-1-p035-n146",
+      "testFile": "joshuaPublicCardAudit.test.ts"
+    },
+    {
+      "id": "study-bible-josh-intro-p001-n001",
+      "testFile": "joshuaPublicCardAudit.test.ts"
+    },
+    {
+      "id": "study-bible-josh-intro-p001-n004",
+      "testFile": "joshuaPublicCardAudit.test.ts"
+    },
+    {
+      "id": "study-bible-jude-9-p005-n032",
+      "testFile": "judePublicCardAudit.test.ts"
+    },
+    {
+      "id": "study-bible-jude-11-p005-n033",
+      "testFile": "judePublicCardAudit.test.ts"
+    },
+    {
+      "id": "study-bible-judg-13-23-p011-n049",
+      "testFile": "judgesPublicCardAudit.test.ts"
+    },
+    {
+      "id": "study-bible-judg-17-6-p030-n185",
+      "testFile": "judgesPublicCardAudit.test.ts"
+    },
+    {
+      "id": "study-bible-judg-17-9-p030-n188",
+      "testFile": "judgesPublicCardAudit.test.ts"
+    },
+    {
+      "id": "study-bible-judg-intro-p001-n001",
+      "testFile": "judgesPublicCardAudit.test.ts"
+    },
+    {
+      "id": "study-bible-judg-intro-p003-n004",
+      "testFile": "judgesPublicCardAudit.test.ts"
+    },
+    {
+      "id": "study-bible-lam-2-6-p008-n027",
+      "testFile": "lamentationsPublicCardAudit.test.ts"
+    },
+    {
+      "id": "study-bible-lam-4-22-p012-n057",
+      "testFile": "lamentationsPublicCardAudit.test.ts"
+    },
+    {
+      "id": "study-bible-lam-5-22-p016-n093",
+      "testFile": "lamentationsPublicCardAudit.test.ts"
+    },
+    {
+      "id": "study-bible-lam-intro-p002-n005",
+      "testFile": "lamentationsPublicCardAudit.test.ts"
+    },
+    {
+      "id": "study-bible-lam-intro-p002-n006",
+      "testFile": "lamentationsPublicCardAudit.test.ts"
+    },
+    {
+      "id": "study-bible-luke-1-48-p011-n040",
+      "testFile": "lukePublicCardAudit.test.ts"
+    },
+    {
+      "id": "study-bible-luke-2-11-p016-n055",
+      "testFile": "lukePublicCardAudit.test.ts"
+    },
+    {
+      "id": "study-bible-luke-2-21-p016-n071",
+      "testFile": "lukePublicCardAudit.test.ts"
+    },
+    {
+      "id": "study-bible-luke-3-8-p018-n083",
+      "testFile": "lukePublicCardAudit.test.ts"
+    },
+    {
+      "id": "study-bible-luke-4-23-p022-n136",
+      "testFile": "lukePublicCardAudit.test.ts"
+    },
+    {
+      "id": "study-bible-luke-4-34-p023-n144",
+      "testFile": "lukePublicCardAudit.test.ts"
+    },
+    {
+      "id": "study-bible-luke-7-47-p031-n196",
+      "testFile": "lukePublicCardAudit.test.ts"
+    },
+    {
+      "id": "study-bible-luke-9-14-p036-n321",
+      "testFile": "lukePublicCardAudit.test.ts"
+    },
+    {
+      "id": "study-bible-luke-9-44-p036-n238",
+      "testFile": "lukePublicCardAudit.test.ts"
+    },
+    {
+      "id": "study-bible-luke-10-28-p041-n307",
+      "testFile": "lukePublicCardAudit.test.ts"
+    },
+    {
+      "id": "study-bible-luke-15-7-p052-n529",
+      "testFile": "lukePublicCardAudit.test.ts"
+    },
+    {
+      "id": "study-bible-luke-15-8-p052-n385",
+      "testFile": "lukePublicCardAudit.test.ts"
+    },
+    {
+      "id": "study-bible-luke-16-9-p053-n398",
+      "testFile": "lukePublicCardAudit.test.ts"
+    },
+    {
+      "id": "study-bible-luke-16-13-p054-n404",
+      "testFile": "lukePublicCardAudit.test.ts"
+    },
+    {
+      "id": "study-bible-luke-16-24-p055-n558",
+      "testFile": "lukePublicCardAudit.test.ts"
+    },
+    {
+      "id": "study-bible-luke-19-1-p060-n465",
+      "testFile": "lukePublicCardAudit.test.ts"
+    },
+    {
+      "id": "study-bible-luke-19-46-p042-n325",
+      "testFile": "lukePublicCardAudit.test.ts"
+    },
+    {
+      "id": "study-bible-luke-21-36-p042-n423",
+      "testFile": "lukePublicCardAudit.test.ts"
+    },
+    {
+      "id": "study-bible-luke-22-44-p042-n319",
+      "testFile": "lukePublicCardAudit.test.ts"
+    },
+    {
+      "id": "study-bible-luke-22-45-p069-n550",
+      "testFile": "lukePublicCardAudit.test.ts"
+    },
+    {
+      "id": "study-bible-luke-23-2-p071-n566",
+      "testFile": "lukePublicCardAudit.test.ts"
+    },
+    {
+      "id": "study-bible-luke-23-15-p072-n575",
+      "testFile": "lukePublicCardAudit.test.ts"
+    },
+    {
+      "id": "study-bible-luke-23-24-p072-n787",
+      "testFile": "lukePublicCardAudit.test.ts"
+    },
+    {
+      "id": "study-bible-luke-23-46-p073-n808",
+      "testFile": "lukePublicCardAudit.test.ts"
+    },
+    {
+      "id": "study-bible-luke-23-47-p074-n586",
+      "testFile": "lukePublicCardAudit.test.ts"
+    },
+    {
+      "id": "study-bible-luke-24-6-p074-n822",
+      "testFile": "lukePublicCardAudit.test.ts"
+    },
+    {
+      "id": "study-bible-luke-intro-p003-n008",
+      "testFile": "lukePublicCardAudit.test.ts"
+    },
+    {
+      "id": "study-bible-mark-1-9-p005-n015",
+      "testFile": "markPublicCardAudit.test.ts"
+    },
+    {
+      "id": "study-bible-mark-1-44-p007-n028",
+      "testFile": "markPublicCardAudit.test.ts"
+    },
+    {
+      "id": "study-bible-mark-7-5-p017-n154",
+      "testFile": "markPublicCardAudit.test.ts"
+    },
+    {
+      "id": "study-bible-mark-7-36-p019-n169",
+      "testFile": "markPublicCardAudit.test.ts"
+    },
+    {
+      "id": "study-bible-mark-7-37-p019-n170",
+      "testFile": "markPublicCardAudit.test.ts"
+    },
+    {
+      "id": "study-bible-mark-10-39-p026-n256",
+      "testFile": "markPublicCardAudit.test.ts"
+    },
+    {
+      "id": "study-bible-mark-11-9-p027-n277",
+      "testFile": "markPublicCardAudit.test.ts"
+    },
+    {
+      "id": "study-bible-mark-13-2-p032-n316",
+      "testFile": "markPublicCardAudit.test.ts"
+    },
+    {
+      "id": "study-bible-mark-14-38-p038-n356",
+      "testFile": "markPublicCardAudit.test.ts"
+    },
+    {
+      "id": "study-bible-mark-14-71-p039-n242",
+      "testFile": "markPublicCardAudit.test.ts"
+    },
+    {
+      "id": "study-bible-mark-15-14-p040-n385",
+      "testFile": "markPublicCardAudit.test.ts"
+    },
+    {
+      "id": "study-bible-mark-intro-p001-n002",
+      "testFile": "markPublicCardAudit.test.ts"
+    },
+    {
+      "id": "study-bible-mark-intro-p003-n008",
+      "testFile": "markPublicCardAudit.test.ts"
+    },
+    {
+      "id": "study-bible-matt-3-2-p009-n031",
+      "testFile": "matthewPublicCardAudit.test.ts"
+    },
+    {
+      "id": "study-bible-matt-5-2-p013-n068",
+      "testFile": "matthewPublicCardAudit.test.ts"
+    },
+    {
+      "id": "study-bible-matt-5-9-p013-n067",
+      "testFile": "matthewPublicCardAudit.test.ts"
+    },
+    {
+      "id": "study-bible-matt-7-15-p015-n106",
+      "testFile": "matthewPublicCardAudit.test.ts"
+    },
+    {
+      "id": "study-bible-matt-8-26-p021-n168",
+      "testFile": "matthewPublicCardAudit.test.ts"
+    },
+    {
+      "id": "study-bible-matt-10-40-p026-n239",
+      "testFile": "matthewPublicCardAudit.test.ts"
+    },
+    {
+      "id": "study-bible-matt-11-13-p027-n235",
+      "testFile": "matthewPublicCardAudit.test.ts"
+    },
+    {
+      "id": "study-bible-matt-15-5-p036-n259",
+      "testFile": "matthewPublicCardAudit.test.ts"
+    },
+    {
+      "id": "study-bible-matt-15-14-p036-n339",
+      "testFile": "matthewPublicCardAudit.test.ts"
+    },
+    {
+      "id": "study-bible-matt-15-39-p037-n263",
+      "testFile": "matthewPublicCardAudit.test.ts"
+    },
+    {
+      "id": "study-bible-matt-16-18-p038-n276",
+      "testFile": "matthewPublicCardAudit.test.ts"
+    },
+    {
+      "id": "study-bible-matt-17-15-p040-n287",
+      "testFile": "matthewPublicCardAudit.test.ts"
+    },
+    {
+      "id": "study-bible-matt-19-20-p044-n415",
+      "testFile": "matthewPublicCardAudit.test.ts"
+    },
+    {
+      "id": "study-bible-matt-22-16-p051-n369",
+      "testFile": "matthewPublicCardAudit.test.ts"
+    },
+    {
+      "id": "study-bible-matt-23-23-p015-n113",
+      "testFile": "matthewPublicCardAudit.test.ts"
+    },
+    {
+      "id": "study-bible-matt-23-24-p054-n381",
+      "testFile": "matthewPublicCardAudit.test.ts"
+    },
+    {
+      "id": "study-bible-matt-23-35-p054-n514",
+      "testFile": "matthewPublicCardAudit.test.ts"
+    },
+    {
+      "id": "study-bible-matt-26-5-p061-n570",
+      "testFile": "matthewPublicCardAudit.test.ts"
+    },
+    {
+      "id": "study-bible-matt-26-41-p063-n594",
+      "testFile": "matthewPublicCardAudit.test.ts"
+    },
+    {
+      "id": "study-bible-matt-27-2-p065-n616",
+      "testFile": "matthewPublicCardAudit.test.ts"
+    },
+    {
+      "id": "study-bible-matt-27-38-p067-n642",
+      "testFile": "matthewPublicCardAudit.test.ts"
+    },
+    {
+      "id": "study-bible-matt-intro-p001-n002",
+      "testFile": "matthewPublicCardAudit.test.ts"
+    },
+    {
+      "id": "study-bible-matt-intro-p003-n008",
+      "testFile": "matthewPublicCardAudit.test.ts"
+    },
+    {
+      "id": "study-bible-mic-7-7-p012-n103",
+      "testFile": "micahPublicCardAudit.test.ts"
+    },
+    {
+      "id": "study-bible-neh-6-1-p012-n076",
+      "testFile": "nehemiahPublicCardAudit.test.ts"
+    },
+    {
+      "id": "study-bible-neh-intro-p001-n005",
+      "testFile": "nehemiahPublicCardAudit.test.ts"
+    },
+    {
+      "id": "study-bible-num-intro-p003-n006",
+      "testFile": "numbersPublicCardAudit.test.ts"
+    },
+    {
+      "id": "study-bible-phil-1-18-p005-n009",
+      "testFile": "philippiansPublicCardAudit.test.ts"
+    },
+    {
+      "id": "study-bible-phil-1-19-p006-n021",
+      "testFile": "philippiansPublicCardAudit.test.ts"
+    },
+    {
+      "id": "study-bible-phil-4-10-p005-n018",
+      "testFile": "philippiansPublicCardAudit.test.ts"
+    },
+    {
+      "id": "study-bible-phil-4-15-p008-n053",
+      "testFile": "philippiansPublicCardAudit.test.ts"
+    },
+    {
+      "id": "study-bible-prov-8-5-p016-n092",
+      "testFile": "proverbsPublicCardAudit.test.ts"
+    },
+    {
+      "id": "study-bible-prov-10-16-p019-n115",
+      "testFile": "proverbsPublicCardAudit.test.ts"
+    },
+    {
+      "id": "study-bible-prov-14-9-p024-n168",
+      "testFile": "proverbsPublicCardAudit.test.ts"
+    },
+    {
+      "id": "study-bible-prov-15-20-p026-n195",
+      "testFile": "proverbsPublicCardAudit.test.ts"
+    },
+    {
+      "id": "study-bible-prov-intro-p003-n005",
+      "testFile": "proverbsPublicCardAudit.test.ts"
+    },
+    {
+      "id": "study-bible-ps-1-6-p009-n015",
+      "testFile": "psalmsPublicCardAudit.test.ts"
+    },
+    {
+      "id": "study-bible-ps-5-3-p011-n037",
+      "testFile": "psalmsPublicCardAudit.test.ts"
+    },
+    {
+      "id": "study-bible-ps-11-3-p016-n103",
+      "testFile": "psalmsPublicCardAudit.test.ts"
+    },
+    {
+      "id": "study-bible-ps-12-3-p017-n071",
+      "testFile": "psalmsPublicCardAudit.test.ts"
+    },
+    {
+      "id": "study-bible-ps-15-5-p019-n095-2-2-2-2",
+      "testFile": "psalmsPublicCardAudit.test.ts"
+    },
+    {
+      "id": "study-bible-ps-17-14-p021-n105",
+      "testFile": "psalmsPublicCardAudit.test.ts"
+    },
+    {
+      "id": "study-bible-ps-19-7-p023-n171",
+      "testFile": "psalmsPublicCardAudit.test.ts"
+    },
+    {
+      "id": "study-bible-ps-31-10-p033-n254",
+      "testFile": "psalmsPublicCardAudit.test.ts"
+    },
+    {
+      "id": "study-bible-ps-54-3-p054-n359",
+      "testFile": "psalmsPublicCardAudit.test.ts"
+    },
+    {
+      "id": "study-bible-ps-90-10-p093-n595",
+      "testFile": "psalmsPublicCardAudit.test.ts"
+    },
+    {
+      "id": "study-bible-ps-103-7-p106-n484",
+      "testFile": "psalmsPublicCardAudit.test.ts"
+    },
+    {
+      "id": "study-bible-ps-103-19-p106-n486",
+      "testFile": "psalmsPublicCardAudit.test.ts"
+    },
+    {
+      "id": "study-bible-ps-112-1-p120-n806",
+      "testFile": "psalmsPublicCardAudit.test.ts"
+    },
+    {
+      "id": "study-bible-ps-119-27-p127-n880",
+      "testFile": "psalmsPublicCardAudit.test.ts"
+    },
+    {
+      "id": "study-bible-ps-145-1-p149-n751",
+      "testFile": "psalmsPublicCardAudit.test.ts"
+    },
+    {
+      "id": "study-bible-rev-2-26-p016-n050",
+      "testFile": "revelationPublicCardAudit.test.ts"
+    },
+    {
+      "id": "study-bible-rev-2-28-p016-n066",
+      "testFile": "revelationPublicCardAudit.test.ts"
+    },
+    {
+      "id": "study-bible-rev-3-5-p016-n052",
+      "testFile": "revelationPublicCardAudit.test.ts"
+    },
+    {
+      "id": "study-bible-rev-5-6-p028-n177",
+      "testFile": "revelationPublicCardAudit.test.ts"
+    },
+    {
+      "id": "study-bible-rev-8-12-p022-n127",
+      "testFile": "revelationPublicCardAudit.test.ts"
+    },
+    {
+      "id": "study-bible-rev-16-3-p020-n109",
+      "testFile": "revelationPublicCardAudit.test.ts"
+    },
+    {
+      "id": "study-bible-rev-intro-p004-n010",
+      "testFile": "revelationPublicCardAudit.test.ts"
+    },
+    {
+      "id": "study-bible-rev-intro-p006-n011",
+      "testFile": "revelationPublicCardAudit.test.ts"
+    },
+    {
+      "id": "study-bible-rom-5-6-p015-n073",
+      "testFile": "romansPublicCardAudit.test.ts"
+    },
+    {
+      "id": "study-bible-rom-7-12-p018-n098",
+      "testFile": "romansPublicCardAudit.test.ts"
+    },
+    {
+      "id": "study-bible-rom-8-1-p019-n104",
+      "testFile": "romansPublicCardAudit.test.ts"
+    },
+    {
+      "id": "study-bible-rom-8-6-p019-n169",
+      "testFile": "romansPublicCardAudit.test.ts"
+    },
+    {
+      "id": "study-bible-rom-8-10-p019-n103",
+      "testFile": "romansPublicCardAudit.test.ts"
+    },
+    {
+      "id": "study-bible-rom-8-23-p020-n174",
+      "testFile": "romansPublicCardAudit.test.ts"
+    },
+    {
+      "id": "study-bible-rom-10-4-p023-n215",
+      "testFile": "romansPublicCardAudit.test.ts"
+    },
+    {
+      "id": "study-bible-rom-11-26-p026-n152",
+      "testFile": "romansPublicCardAudit.test.ts"
+    },
+    {
+      "id": "study-bible-rom-11-32-p026-n246",
+      "testFile": "romansPublicCardAudit.test.ts"
+    },
+    {
+      "id": "study-bible-rom-12-1-p026-n255",
+      "testFile": "romansPublicCardAudit.test.ts"
+    },
+    {
+      "id": "study-bible-rom-12-14-p027-n260",
+      "testFile": "romansPublicCardAudit.test.ts"
+    },
+    {
+      "id": "study-bible-rom-13-1-p028-n174",
+      "testFile": "romansPublicCardAudit.test.ts"
+    },
+    {
+      "id": "study-bible-rom-14-5-p029-n180",
+      "testFile": "romansPublicCardAudit.test.ts"
+    },
+    {
+      "id": "study-bible-rom-15-26-p031-n192",
+      "testFile": "romansPublicCardAudit.test.ts"
+    },
+    {
+      "id": "study-bible-rom-16-2-p032-n318",
+      "testFile": "romansPublicCardAudit.test.ts"
+    },
+    {
+      "id": "study-bible-rom-intro-p002-n005",
+      "testFile": "romansPublicCardAudit.test.ts"
+    },
+    {
+      "id": "study-bible-2chr-3-12-p029-n210",
+      "testFile": "secondChroniclesPublicCardAudit.test.ts"
+    },
+    {
+      "id": "study-bible-2chr-25-2-p028-n202",
+      "testFile": "secondChroniclesPublicCardAudit.test.ts"
+    },
+    {
+      "id": "study-bible-2chr-27-2-p030-n224",
+      "testFile": "secondChroniclesPublicCardAudit.test.ts"
+    },
+    {
+      "id": "study-bible-2chr-29-8-p034-n152",
+      "testFile": "secondChroniclesPublicCardAudit.test.ts"
+    },
+    {
+      "id": "study-bible-2cor-1-8-p005-n022",
+      "testFile": "secondCorinthiansPublicCardAudit.test.ts"
+    },
+    {
+      "id": "study-bible-2cor-12-9-p008-n054",
+      "testFile": "secondCorinthiansPublicCardAudit.test.ts"
+    },
+    {
+      "id": "study-bible-2cor-intro-p002-n005",
+      "testFile": "secondCorinthiansPublicCardAudit.test.ts"
+    },
+    {
+      "id": "study-bible-2cor-intro-p003-n007",
+      "testFile": "secondCorinthiansPublicCardAudit.test.ts"
+    },
+    {
+      "id": "study-bible-2kgs-2-2-p003-n007",
+      "testFile": "secondKingsPublicCardAudit.test.ts"
+    },
+    {
+      "id": "study-bible-2kgs-7-20-p012-n062",
+      "testFile": "secondKingsPublicCardAudit.test.ts"
+    },
+    {
+      "id": "study-bible-2kgs-8-19-p013-n069",
+      "testFile": "secondKingsPublicCardAudit.test.ts"
+    },
+    {
+      "id": "study-bible-2kgs-10-20-p017-n118",
+      "testFile": "secondKingsPublicCardAudit.test.ts"
+    },
+    {
+      "id": "study-bible-2kgs-10-25-p017-n120",
+      "testFile": "secondKingsPublicCardAudit.test.ts"
+    },
+    {
+      "id": "study-bible-2pet-3-18-p008-n069",
+      "testFile": "secondPeterPublicCardAudit.test.ts"
+    },
+    {
+      "id": "study-bible-2sam-1-19-p003-n011",
+      "testFile": "secondSamuelPublicCardAudit.test.ts"
+    },
+    {
+      "id": "study-bible-2sam-3-27-p007-n026",
+      "testFile": "secondSamuelPublicCardAudit.test.ts"
+    },
+    {
+      "id": "study-bible-2sam-4-4-p007-n050",
+      "testFile": "secondSamuelPublicCardAudit.test.ts"
+    },
+    {
+      "id": "study-bible-2sam-8-1-p014-n060",
+      "testFile": "secondSamuelPublicCardAudit.test.ts"
+    },
+    {
+      "id": "study-bible-2sam-9-9-p015-n070-2",
+      "testFile": "secondSamuelPublicCardAudit.test.ts"
+    },
+    {
+      "id": "study-bible-2sam-11-21-p017-n112",
+      "testFile": "secondSamuelPublicCardAudit.test.ts"
+    },
+    {
+      "id": "study-bible-2sam-12-11-p019-n089",
+      "testFile": "secondSamuelPublicCardAudit.test.ts"
+    },
+    {
+      "id": "study-bible-2sam-13-22-p020-n147",
+      "testFile": "secondSamuelPublicCardAudit.test.ts"
+    },
+    {
+      "id": "study-bible-2sam-18-4-p014-n088",
+      "testFile": "secondSamuelPublicCardAudit.test.ts"
+    },
+    {
+      "id": "study-bible-2sam-19-24-p019-n085",
+      "testFile": "secondSamuelPublicCardAudit.test.ts"
+    },
+    {
+      "id": "study-bible-2sam-20-3-p030-n159",
+      "testFile": "secondSamuelPublicCardAudit.test.ts"
+    },
+    {
+      "id": "study-bible-2tim-1-12-p004-n016",
+      "testFile": "secondTimothyPublicCardAudit.test.ts"
+    },
+    {
+      "id": "study-bible-2tim-4-16-p009-n050",
+      "testFile": "secondTimothyPublicCardAudit.test.ts"
+    },
+    {
+      "id": "study-bible-song-intro-p003-n006",
+      "testFile": "songPublicCardAudit.test.ts"
+    },
+    {
+      "id": "study-bible-zech-1-1-p005-n010-2-2-2-2",
+      "testFile": "zechariahPublicCardAudit.test.ts"
+    },
+    {
+      "id": "study-bible-zech-1-1-p005-n010-2-2-2-2-2",
+      "testFile": "zechariahPublicCardAudit.test.ts"
+    },
+    {
+      "id": "study-bible-zech-12-3-p016-n121",
+      "testFile": "zechariahPublicCardAudit.test.ts"
+    },
+    {
+      "id": "study-bible-zech-13-7-p013-n096",
+      "testFile": "zechariahPublicCardAudit.test.ts"
+    },
+    {
+      "id": "study-bible-zech-14-4-p018-n133",
+      "testFile": "zechariahPublicCardAudit.test.ts"
+    }
+  ]
+}

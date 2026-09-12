@@ -95,6 +95,7 @@ const forbiddenFragments = [
   "主前10年主后1年10203040506070",
   "橄榄山讲24-25章",
   "9［约16:20］",
+  "《I日约》",
 ];
 
 function loadBook(bookId: string): PublicBookPayload {

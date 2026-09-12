@@ -1,0 +1,1050 @@
+{
+  "publicOcr": 146,
+  "keep": [
+    {
+      "id": "image-text-01-创世记-codex-pdf-p102-img057",
+      "bookId": "Gen",
+      "primaryAnchor": "Gen.8.1",
+      "verdict": "keep",
+      "ledger": "genesis-stable-commentary / public keep"
+    }
+  ],
+  "holdAsClass": [
+    {
+      "id": "image-text-13-历代志上-codex-pdf-p003-img000",
+      "bookId": "1Chr",
+      "primaryAnchor": "1Chr.24.6",
+      "verdict": "hold-as-class",
+      "ledger": "none"
+    },
+    {
+      "id": "image-text-13-历代志上-codex-pdf-p017-img005",
+      "bookId": "1Chr",
+      "primaryAnchor": "1Chr.2.7",
+      "verdict": "hold-as-class",
+      "ledger": "none"
+    },
+    {
+      "id": "image-text-13-历代志上-codex-pdf-p063-img029",
+      "bookId": "1Chr",
+      "primaryAnchor": "1Chr.7.13",
+      "verdict": "hold-as-class",
+      "ledger": "none"
+    },
+    {
+      "id": "image-text-13-历代志上-codex-pdf-p075-img037",
+      "bookId": "1Chr",
+      "primaryAnchor": "1Chr.9.22",
+      "verdict": "hold-as-class",
+      "ledger": "none"
+    },
+    {
+      "id": "image-text-13-历代志上-codex-pdf-p091-img045",
+      "bookId": "1Chr",
+      "primaryAnchor": "1Chr.11.11",
+      "verdict": "hold-as-class",
+      "ledger": "none"
+    },
+    {
+      "id": "image-text-13-历代志上-codex-pdf-p135-img063",
+      "bookId": "1Chr",
+      "primaryAnchor": "1Chr.17.14",
+      "verdict": "hold-as-class",
+      "ledger": "none"
+    },
+    {
+      "id": "image-text-13-历代志上-codex-pdf-p158-img069",
+      "bookId": "1Chr",
+      "primaryAnchor": "1Chr.21.20",
+      "verdict": "hold-as-class",
+      "ledger": "none"
+    },
+    {
+      "id": "image-text-13-历代志上-codex-pdf-p166-img072",
+      "bookId": "1Chr",
+      "primaryAnchor": "1Chr.22.12",
+      "verdict": "hold-as-class",
+      "ledger": "none"
+    },
+    {
+      "id": "image-text-11-列王纪上-codex-pdf-p003-img000",
+      "bookId": "1Kgs",
+      "primaryAnchor": "1Kgs.8.65",
+      "verdict": "hold-as-class",
+      "ledger": "none"
+    },
+    {
+      "id": "image-text-11-列王纪上-codex-pdf-p091-img030",
+      "bookId": "1Kgs",
+      "primaryAnchor": "1Kgs.9.13",
+      "verdict": "hold-as-class",
+      "ledger": "none"
+    },
+    {
+      "id": "image-text-09-撒母耳记上-codex-pdf-p010-img002",
+      "bookId": "1Sam",
+      "primaryAnchor": "1Sam.1.20",
+      "verdict": "hold-as-class",
+      "ledger": "none"
+    },
+    {
+      "id": "image-text-09-撒母耳记上-codex-pdf-p092-img035",
+      "bookId": "1Sam",
+      "primaryAnchor": "1Sam.15.9",
+      "verdict": "hold-as-class",
+      "ledger": "none"
+    },
+    {
+      "id": "image-text-14-历代志下-codex-pdf-p053-img023",
+      "bookId": "2Chr",
+      "primaryAnchor": "2Chr.8.6",
+      "verdict": "hold-as-class",
+      "ledger": "none"
+    },
+    {
+      "id": "image-text-14-历代志下-codex-pdf-p109-img039",
+      "bookId": "2Chr",
+      "primaryAnchor": "2Chr.20.2",
+      "verdict": "hold-as-class",
+      "ledger": "none"
+    },
+    {
+      "id": "image-text-12-列王纪下-codex-pdf-p131-img032",
+      "bookId": "2Kgs",
+      "primaryAnchor": "2Kgs.16.15",
+      "verdict": "hold-as-class",
+      "ledger": "none"
+    },
+    {
+      "id": "image-text-10-撒母耳记下-codex-pdf-p166-img048",
+      "bookId": "2Sam",
+      "primaryAnchor": "2Sam.22.51",
+      "verdict": "hold-as-class",
+      "ledger": "none"
+    },
+    {
+      "id": "image-text-10-撒母耳记下-codex-pdf-p178-img051",
+      "bookId": "2Sam",
+      "primaryAnchor": "2Sam.24.18",
+      "verdict": "hold-as-class",
+      "ledger": "none"
+    },
+    {
+      "id": "image-text-30-阿摩司书-codex-pdf-p005-img002",
+      "bookId": "Amos",
+      "primaryAnchor": "Amos.5.24",
+      "verdict": "hold-as-class",
+      "ledger": "none"
+    },
+    {
+      "id": "image-text-05-申命记-codex-pdf-p005-img001",
+      "bookId": "Deut",
+      "primaryAnchor": "Deut.17.18",
+      "verdict": "hold-as-class",
+      "ledger": "none"
+    },
+    {
+      "id": "image-text-05-申命记-codex-pdf-p065-img032",
+      "bookId": "Deut",
+      "primaryAnchor": "Deut.7.13",
+      "verdict": "hold-as-class",
+      "ledger": "none"
+    },
+    {
+      "id": "image-text-05-申命记-codex-pdf-p116-img060",
+      "bookId": "Deut",
+      "primaryAnchor": "Deut.15.1",
+      "verdict": "hold-as-class",
+      "ledger": "none"
+    },
+    {
+      "id": "image-text-05-申命记-codex-pdf-p182-img092",
+      "bookId": "Deut",
+      "primaryAnchor": "Deut.25.9",
+      "verdict": "hold-as-class",
+      "ledger": "none"
+    },
+    {
+      "id": "image-text-05-申命记-codex-pdf-p197-img102",
+      "bookId": "Deut",
+      "primaryAnchor": "Deut.28.15",
+      "verdict": "hold-as-class",
+      "ledger": "none"
+    },
+    {
+      "id": "image-text-05-申命记-codex-pdf-p236-img120",
+      "bookId": "Deut",
+      "primaryAnchor": "Deut.33.2",
+      "verdict": "hold-as-class",
+      "ledger": "none"
+    },
+    {
+      "id": "image-text-21-传道书-codex-pdf-p003-img002",
+      "bookId": "Eccl",
+      "primaryAnchor": "Eccl.1.1",
+      "verdict": "hold-as-class",
+      "ledger": "none"
+    },
+    {
+      "id": "image-text-21-传道书-codex-pdf-p004-img005",
+      "bookId": "Eccl",
+      "primaryAnchor": "Eccl.1.2",
+      "verdict": "hold-as-class",
+      "ledger": "none"
+    },
+    {
+      "id": "image-text-21-传道书-codex-pdf-p015-img012",
+      "bookId": "Eccl",
+      "primaryAnchor": "Eccl.1.16",
+      "verdict": "hold-as-class",
+      "ledger": "none"
+    },
+    {
+      "id": "image-text-17-以斯帖记-codex-pdf-p005-img002",
+      "bookId": "Esth",
+      "primaryAnchor": "Esth.2.15",
+      "verdict": "hold-as-class",
+      "ledger": "none"
+    },
+    {
+      "id": "image-text-17-以斯帖记-codex-pdf-p009-img003",
+      "bookId": "Esth",
+      "primaryAnchor": "Esth.1.1",
+      "verdict": "hold-as-class",
+      "ledger": "none"
+    },
+    {
+      "id": "image-text-17-以斯帖记-codex-pdf-p025-img014",
+      "bookId": "Esth",
+      "primaryAnchor": "Esth.3.6",
+      "verdict": "hold-as-class",
+      "ledger": "none"
+    },
+    {
+      "id": "image-text-17-以斯帖记-codex-pdf-p038-img021",
+      "bookId": "Esth",
+      "primaryAnchor": "Esth.5.13",
+      "verdict": "hold-as-class",
+      "ledger": "none"
+    },
+    {
+      "id": "image-text-17-以斯帖记-codex-pdf-p045-img026",
+      "bookId": "Esth",
+      "primaryAnchor": "Esth.7.5",
+      "verdict": "hold-as-class",
+      "ledger": "none"
+    },
+    {
+      "id": "image-text-02-出埃及记-codex-pdf-p026-img008",
+      "bookId": "Exod",
+      "primaryAnchor": "Exod.3.14",
+      "verdict": "hold-as-class",
+      "ledger": "none"
+    },
+    {
+      "id": "image-text-02-出埃及记-codex-pdf-p026-img010",
+      "bookId": "Exod",
+      "primaryAnchor": "Exod.3.15",
+      "verdict": "hold-as-class",
+      "ledger": "none"
+    },
+    {
+      "id": "image-text-02-出埃及记-codex-pdf-p045-img022",
+      "bookId": "Exod",
+      "primaryAnchor": "Exod.6.2",
+      "verdict": "hold-as-class",
+      "ledger": "none"
+    },
+    {
+      "id": "image-text-02-出埃及记-codex-pdf-p128-img056",
+      "bookId": "Exod",
+      "primaryAnchor": "Exod.17.8",
+      "verdict": "hold-as-class",
+      "ledger": "none"
+    },
+    {
+      "id": "image-text-02-出埃及记-codex-pdf-p131-img059",
+      "bookId": "Exod",
+      "primaryAnchor": "Exod.17.15",
+      "verdict": "hold-as-class",
+      "ledger": "none"
+    },
+    {
+      "id": "image-text-02-出埃及记-codex-pdf-p143-img066",
+      "bookId": "Exod",
+      "primaryAnchor": "Exod.19.4",
+      "verdict": "hold-as-class",
+      "ledger": "none"
+    },
+    {
+      "id": "image-text-15-以斯拉记-codex-pdf-p005-img000",
+      "bookId": "Ezra",
+      "primaryAnchor": "Ezra.5.1",
+      "verdict": "hold-as-class",
+      "ledger": "none"
+    },
+    {
+      "id": "image-text-15-以斯拉记-codex-pdf-p056-img010",
+      "bookId": "Ezra",
+      "primaryAnchor": "Ezra.10.8",
+      "verdict": "hold-as-class",
+      "ledger": "none"
+    },
+    {
+      "id": "image-text-35-哈巴谷书-codex-pdf-p005-img002",
+      "bookId": "Hab",
+      "primaryAnchor": "Hab.1.5",
+      "verdict": "hold-as-class",
+      "ledger": "none"
+    },
+    {
+      "id": "image-text-37-哈该书-codex-pdf-p005-img002",
+      "bookId": "Hag",
+      "primaryAnchor": "Hag.1.1",
+      "verdict": "hold-as-class",
+      "ledger": "none"
+    },
+    {
+      "id": "image-text-28-何西阿书-codex-pdf-p005-img000",
+      "bookId": "Hos",
+      "primaryAnchor": "Hos.1.3",
+      "verdict": "hold-as-class",
+      "ledger": "none"
+    },
+    {
+      "id": "image-text-28-何西阿书-codex-pdf-p022-img008",
+      "bookId": "Hos",
+      "primaryAnchor": "Hos.3.2",
+      "verdict": "hold-as-class",
+      "ledger": "none"
+    },
+    {
+      "id": "image-text-28-何西阿书-codex-pdf-p065-img035",
+      "bookId": "Hos",
+      "primaryAnchor": "Hos.10.6",
+      "verdict": "hold-as-class",
+      "ledger": "none"
+    },
+    {
+      "id": "image-text-28-何西阿书-codex-pdf-p085-img049",
+      "bookId": "Hos",
+      "primaryAnchor": "Hos.13.15",
+      "verdict": "hold-as-class",
+      "ledger": "none"
+    },
+    {
+      "id": "image-text-18-约伯记-codex-pdf-p084-img028",
+      "bookId": "Job",
+      "primaryAnchor": "Job.13.24",
+      "verdict": "hold-as-class",
+      "ledger": "none"
+    },
+    {
+      "id": "image-text-18-约伯记-codex-pdf-p127-img039",
+      "bookId": "Job",
+      "primaryAnchor": "Job.22.4",
+      "verdict": "hold-as-class",
+      "ledger": "none"
+    },
+    {
+      "id": "image-text-18-约伯记-codex-pdf-p129-img041",
+      "bookId": "Job",
+      "primaryAnchor": "Job.23.2",
+      "verdict": "hold-as-class",
+      "ledger": "none"
+    },
+    {
+      "id": "image-text-18-约伯记-codex-pdf-p135-img044",
+      "bookId": "Job",
+      "primaryAnchor": "Job.24.18",
+      "verdict": "hold-as-class",
+      "ledger": "none"
+    },
+    {
+      "id": "image-text-18-约伯记-codex-pdf-p164-img055",
+      "bookId": "Job",
+      "primaryAnchor": "Job.31.37",
+      "verdict": "hold-as-class",
+      "ledger": "none"
+    },
+    {
+      "id": "image-text-18-约伯记-codex-pdf-p229-img087",
+      "bookId": "Job",
+      "primaryAnchor": "Job.42.11",
+      "verdict": "hold-as-class",
+      "ledger": "none"
+    },
+    {
+      "id": "image-text-29-约珥书-codex-pdf-p005-img005",
+      "bookId": "Joel",
+      "primaryAnchor": "Joel.3.8",
+      "verdict": "hold-as-class",
+      "ledger": "none"
+    },
+    {
+      "id": "image-text-32-约拿书-codex-pdf-p005-img002",
+      "bookId": "Jonah",
+      "primaryAnchor": "Jonah.1.9",
+      "verdict": "hold-as-class",
+      "ledger": "none"
+    },
+    {
+      "id": "image-text-06-约书亚记-codex-pdf-p003-img000",
+      "bookId": "Josh",
+      "primaryAnchor": "Josh.14.1",
+      "verdict": "hold-as-class",
+      "ledger": "none"
+    },
+    {
+      "id": "image-text-06-约书亚记-codex-pdf-p035-img023",
+      "bookId": "Josh",
+      "primaryAnchor": "Josh.5.7",
+      "verdict": "hold-as-class",
+      "ledger": "none"
+    },
+    {
+      "id": "image-text-06-约书亚记-codex-pdf-p051-img035",
+      "bookId": "Josh",
+      "primaryAnchor": "Josh.7.1",
+      "verdict": "hold-as-class",
+      "ledger": "none"
+    },
+    {
+      "id": "image-text-06-约书亚记-codex-pdf-p055-img038",
+      "bookId": "Josh",
+      "primaryAnchor": "Josh.7.10",
+      "verdict": "hold-as-class",
+      "ledger": "none"
+    },
+    {
+      "id": "image-text-06-约书亚记-codex-pdf-p060-img040",
+      "bookId": "Josh",
+      "primaryAnchor": "Josh.7.25",
+      "verdict": "hold-as-class",
+      "ledger": "none"
+    },
+    {
+      "id": "image-text-07-士师记-codex-pdf-p008-img004",
+      "bookId": "Judg",
+      "primaryAnchor": "Judg.1.17",
+      "verdict": "hold-as-class",
+      "ledger": "none"
+    },
+    {
+      "id": "image-text-07-士师记-codex-pdf-p054-img021",
+      "bookId": "Judg",
+      "primaryAnchor": "Judg.6.24",
+      "verdict": "hold-as-class",
+      "ledger": "none"
+    },
+    {
+      "id": "image-text-07-士师记-codex-pdf-p130-img059",
+      "bookId": "Judg",
+      "primaryAnchor": "Judg.16.31",
+      "verdict": "hold-as-class",
+      "ledger": "none"
+    },
+    {
+      "id": "image-text-03-利未记-codex-pdf-p005-img004",
+      "bookId": "Lev",
+      "primaryAnchor": "Lev.1.1",
+      "verdict": "hold-as-class",
+      "ledger": "none"
+    },
+    {
+      "id": "image-text-03-利未记-codex-pdf-p026-img012",
+      "bookId": "Lev",
+      "primaryAnchor": "Lev.5.7",
+      "verdict": "hold-as-class",
+      "ledger": "none"
+    },
+    {
+      "id": "image-text-03-利未记-codex-pdf-p031-img015",
+      "bookId": "Lev",
+      "primaryAnchor": "Lev.6.25",
+      "verdict": "hold-as-class",
+      "ledger": "none"
+    },
+    {
+      "id": "image-text-03-利未记-codex-pdf-p100-img044",
+      "bookId": "Lev",
+      "primaryAnchor": "Lev.16.13",
+      "verdict": "hold-as-class",
+      "ledger": "none"
+    },
+    {
+      "id": "image-text-03-利未记-codex-pdf-p130-img063",
+      "bookId": "Lev",
+      "primaryAnchor": "Lev.19.19",
+      "verdict": "hold-as-class",
+      "ledger": "none"
+    },
+    {
+      "id": "image-text-03-利未记-codex-pdf-p158-img073",
+      "bookId": "Lev",
+      "primaryAnchor": "Lev.3.5",
+      "verdict": "hold-as-class",
+      "ledger": "none"
+    },
+    {
+      "id": "image-text-39-玛拉基书-codex-pdf-p005-img002",
+      "bookId": "Mal",
+      "primaryAnchor": "Mal.1.6",
+      "verdict": "hold-as-class",
+      "ledger": "none"
+    },
+    {
+      "id": "image-text-39-玛拉基书-codex-pdf-p021-img008",
+      "bookId": "Mal",
+      "primaryAnchor": "Mal.3.1",
+      "verdict": "hold-as-class",
+      "ledger": "none"
+    },
+    {
+      "id": "image-text-33-弥迦书-codex-pdf-p005-img002",
+      "bookId": "Mic",
+      "primaryAnchor": "Mic.1.1",
+      "verdict": "hold-as-class",
+      "ledger": "none"
+    },
+    {
+      "id": "image-text-33-弥迦书-codex-pdf-p022-img012",
+      "bookId": "Mic",
+      "primaryAnchor": "Mic.4.2",
+      "verdict": "hold-as-class",
+      "ledger": "none"
+    },
+    {
+      "id": "image-text-33-弥迦书-codex-pdf-p028-img015",
+      "bookId": "Mic",
+      "primaryAnchor": "Mic.5.1",
+      "verdict": "hold-as-class",
+      "ledger": "none"
+    },
+    {
+      "id": "image-text-33-弥迦书-codex-pdf-p034-img018",
+      "bookId": "Mic",
+      "primaryAnchor": "Mic.6.8",
+      "verdict": "hold-as-class",
+      "ledger": "none"
+    },
+    {
+      "id": "image-text-34-那鸿书-codex-pdf-p005-img002",
+      "bookId": "Nah",
+      "primaryAnchor": "Nah.1.15",
+      "verdict": "hold-as-class",
+      "ledger": "none"
+    },
+    {
+      "id": "image-text-04-民数记-codex-pdf-p005-img000",
+      "bookId": "Num",
+      "primaryAnchor": "Num.14.16",
+      "verdict": "hold-as-class",
+      "ledger": "none"
+    },
+    {
+      "id": "image-text-04-民数记-codex-pdf-p038-img012",
+      "bookId": "Num",
+      "primaryAnchor": "Num.6.2",
+      "verdict": "hold-as-class",
+      "ledger": "none"
+    },
+    {
+      "id": "image-text-04-民数记-codex-pdf-p124-img050",
+      "bookId": "Num",
+      "primaryAnchor": "Num.19.5",
+      "verdict": "hold-as-class",
+      "ledger": "none"
+    },
+    {
+      "id": "image-text-04-民数记-codex-pdf-p135-img056",
+      "bookId": "Num",
+      "primaryAnchor": "Num.21.6",
+      "verdict": "hold-as-class",
+      "ledger": "none"
+    },
+    {
+      "id": "image-text-04-民数记-codex-pdf-p230-img097",
+      "bookId": "Num",
+      "primaryAnchor": "Num.35.12",
+      "verdict": "hold-as-class",
+      "ledger": "none"
+    },
+    {
+      "id": "image-text-20-箴言-codex-pdf-p003-img000",
+      "bookId": "Prov",
+      "primaryAnchor": "Prov.25.1",
+      "verdict": "hold-as-class",
+      "ledger": "none"
+    },
+    {
+      "id": "image-text-20-箴言-codex-pdf-p004-img002",
+      "bookId": "Prov",
+      "primaryAnchor": "Prov.10.1",
+      "verdict": "hold-as-class",
+      "ledger": "none"
+    },
+    {
+      "id": "image-text-20-箴言-codex-pdf-p025-img009",
+      "bookId": "Prov",
+      "primaryAnchor": "Prov.3.22",
+      "verdict": "hold-as-class",
+      "ledger": "none"
+    },
+    {
+      "id": "image-text-20-箴言-codex-pdf-p053-img021",
+      "bookId": "Prov",
+      "primaryAnchor": "Prov.8.22",
+      "verdict": "hold-as-class",
+      "ledger": "none"
+    },
+    {
+      "id": "image-text-20-箴言-codex-pdf-p056-img022",
+      "bookId": "Prov",
+      "primaryAnchor": "Prov.9.4",
+      "verdict": "hold-as-class",
+      "ledger": "none"
+    },
+    {
+      "id": "image-text-20-箴言-codex-pdf-p059-img024",
+      "bookId": "Prov",
+      "primaryAnchor": "Prov.9.13",
+      "verdict": "hold-as-class",
+      "ledger": "none"
+    },
+    {
+      "id": "image-text-20-箴言-codex-pdf-p070-img027",
+      "bookId": "Prov",
+      "primaryAnchor": "Prov.11.1",
+      "verdict": "hold-as-class",
+      "ledger": "none"
+    },
+    {
+      "id": "image-text-20-箴言-codex-pdf-p091-img032",
+      "bookId": "Prov",
+      "primaryAnchor": "Prov.13.2",
+      "verdict": "hold-as-class",
+      "ledger": "none"
+    },
+    {
+      "id": "image-text-20-箴言-codex-pdf-p092-img033",
+      "bookId": "Prov",
+      "primaryAnchor": "Prov.13.8",
+      "verdict": "hold-as-class",
+      "ledger": "none"
+    },
+    {
+      "id": "image-text-20-箴言-codex-pdf-p098-img037",
+      "bookId": "Prov",
+      "primaryAnchor": "Prov.13.25",
+      "verdict": "hold-as-class",
+      "ledger": "none"
+    },
+    {
+      "id": "image-text-20-箴言-codex-pdf-p101-img041",
+      "bookId": "Prov",
+      "primaryAnchor": "Prov.14.8",
+      "verdict": "hold-as-class",
+      "ledger": "none"
+    },
+    {
+      "id": "image-text-20-箴言-codex-pdf-p106-img047",
+      "bookId": "Prov",
+      "primaryAnchor": "Prov.14.28",
+      "verdict": "hold-as-class",
+      "ledger": "none"
+    },
+    {
+      "id": "image-text-20-箴言-codex-pdf-p119-img052",
+      "bookId": "Prov",
+      "primaryAnchor": "Prov.16.1",
+      "verdict": "hold-as-class",
+      "ledger": "none"
+    },
+    {
+      "id": "image-text-20-箴言-codex-pdf-p134-img057",
+      "bookId": "Prov",
+      "primaryAnchor": "Prov.17.16",
+      "verdict": "hold-as-class",
+      "ledger": "none"
+    },
+    {
+      "id": "image-text-20-箴言-codex-pdf-p139-img059",
+      "bookId": "Prov",
+      "primaryAnchor": "Prov.18.1",
+      "verdict": "hold-as-class",
+      "ledger": "none"
+    },
+    {
+      "id": "image-text-20-箴言-codex-pdf-p140-img060",
+      "bookId": "Prov",
+      "primaryAnchor": "Prov.18.4",
+      "verdict": "hold-as-class",
+      "ledger": "none"
+    },
+    {
+      "id": "image-text-20-箴言-codex-pdf-p164-img064",
+      "bookId": "Prov",
+      "primaryAnchor": "Prov.20.1",
+      "verdict": "hold-as-class",
+      "ledger": "none"
+    },
+    {
+      "id": "image-text-20-箴言-codex-pdf-p165-img065",
+      "bookId": "Prov",
+      "primaryAnchor": "Prov.20.20",
+      "verdict": "hold-as-class",
+      "ledger": "none"
+    },
+    {
+      "id": "image-text-20-箴言-codex-pdf-p166-img066",
+      "bookId": "Prov",
+      "primaryAnchor": "Prov.20.16",
+      "verdict": "hold-as-class",
+      "ledger": "none"
+    },
+    {
+      "id": "image-text-20-箴言-codex-pdf-p168-img068",
+      "bookId": "Prov",
+      "primaryAnchor": "Prov.20.29",
+      "verdict": "hold-as-class",
+      "ledger": "none"
+    },
+    {
+      "id": "image-text-20-箴言-codex-pdf-p176-img073",
+      "bookId": "Prov",
+      "primaryAnchor": "Prov.21.10",
+      "verdict": "hold-as-class",
+      "ledger": "none"
+    },
+    {
+      "id": "image-text-20-箴言-codex-pdf-p185-img082",
+      "bookId": "Prov",
+      "primaryAnchor": "Prov.22.6",
+      "verdict": "hold-as-class",
+      "ledger": "none"
+    },
+    {
+      "id": "image-text-20-箴言-codex-pdf-p198-img089",
+      "bookId": "Prov",
+      "primaryAnchor": "Prov.23.22",
+      "verdict": "hold-as-class",
+      "ledger": "none"
+    },
+    {
+      "id": "image-text-20-箴言-codex-pdf-p204-img091",
+      "bookId": "Prov",
+      "primaryAnchor": "Prov.24.3",
+      "verdict": "hold-as-class",
+      "ledger": "none"
+    },
+    {
+      "id": "image-text-20-箴言-codex-pdf-p211-img096",
+      "bookId": "Prov",
+      "primaryAnchor": "Prov.24.27",
+      "verdict": "hold-as-class",
+      "ledger": "none"
+    },
+    {
+      "id": "image-text-20-箴言-codex-pdf-p221-img100",
+      "bookId": "Prov",
+      "primaryAnchor": "Prov.25.2",
+      "verdict": "hold-as-class",
+      "ledger": "none"
+    },
+    {
+      "id": "image-text-20-箴言-codex-pdf-p240-img107",
+      "bookId": "Prov",
+      "primaryAnchor": "Prov.28.1",
+      "verdict": "hold-as-class",
+      "ledger": "none"
+    },
+    {
+      "id": "image-text-20-箴言-codex-pdf-p242-img109",
+      "bookId": "Prov",
+      "primaryAnchor": "Prov.28.3",
+      "verdict": "hold-as-class",
+      "ledger": "none"
+    },
+    {
+      "id": "image-text-20-箴言-codex-pdf-p243-img111",
+      "bookId": "Prov",
+      "primaryAnchor": "Prov.28.5",
+      "verdict": "hold-as-class",
+      "ledger": "none"
+    },
+    {
+      "id": "image-text-20-箴言-codex-pdf-p252-img115",
+      "bookId": "Prov",
+      "primaryAnchor": "Prov.29.4",
+      "verdict": "hold-as-class",
+      "ledger": "none"
+    },
+    {
+      "id": "image-text-20-箴言-codex-pdf-p256-img116",
+      "bookId": "Prov",
+      "primaryAnchor": "Prov.29.16",
+      "verdict": "hold-as-class",
+      "ledger": "none"
+    },
+    {
+      "id": "image-text-20-箴言-codex-pdf-p270-img122",
+      "bookId": "Prov",
+      "primaryAnchor": "Prov.30.33",
+      "verdict": "hold-as-class",
+      "ledger": "none"
+    },
+    {
+      "id": "image-text-20-箴言-codex-pdf-p278-img131",
+      "bookId": "Prov",
+      "primaryAnchor": "Prov.12.19",
+      "verdict": "hold-as-class",
+      "ledger": "none"
+    },
+    {
+      "id": "image-text-19-诗篇-codex-pdf-p014-img007",
+      "bookId": "Ps",
+      "primaryAnchor": "Ps.3.1",
+      "verdict": "hold-as-class",
+      "ledger": "none"
+    },
+    {
+      "id": "image-text-19-诗篇-codex-pdf-p150-img067",
+      "bookId": "Ps",
+      "primaryAnchor": "Ps.46.1",
+      "verdict": "hold-as-class",
+      "ledger": "none"
+    },
+    {
+      "id": "image-text-19-诗篇-codex-pdf-p343-img137",
+      "bookId": "Ps",
+      "primaryAnchor": "Ps.105.35",
+      "verdict": "hold-as-class",
+      "ledger": "none"
+    },
+    {
+      "id": "image-text-19-诗篇-codex-pdf-p424-img184",
+      "bookId": "Ps",
+      "primaryAnchor": "Ps.122.6",
+      "verdict": "hold-as-class",
+      "ledger": "none"
+    },
+    {
+      "id": "image-text-19-诗篇-codex-pdf-p493-img216",
+      "bookId": "Ps",
+      "primaryAnchor": "Ps.145.8",
+      "verdict": "hold-as-class",
+      "ledger": "none"
+    },
+    {
+      "id": "image-text-19-诗篇-codex-pdf-p494-img217",
+      "bookId": "Ps",
+      "primaryAnchor": "Ps.146.4",
+      "verdict": "hold-as-class",
+      "ledger": "none"
+    },
+    {
+      "id": "image-text-19-诗篇-codex-pdf-p499-img220",
+      "bookId": "Ps",
+      "primaryAnchor": "Ps.147.11",
+      "verdict": "hold-as-class",
+      "ledger": "none"
+    },
+    {
+      "id": "image-text-19-诗篇-codex-pdf-p501-img221",
+      "bookId": "Ps",
+      "primaryAnchor": "Ps.148.1",
+      "verdict": "hold-as-class",
+      "ledger": "none"
+    },
+    {
+      "id": "image-text-19-诗篇-codex-pdf-p506-img225",
+      "bookId": "Ps",
+      "primaryAnchor": "Ps.149.1",
+      "verdict": "hold-as-class",
+      "ledger": "none"
+    },
+    {
+      "id": "image-text-19-诗篇-codex-pdf-p509-img227",
+      "bookId": "Ps",
+      "primaryAnchor": "Ps.150.1",
+      "verdict": "hold-as-class",
+      "ledger": "none"
+    },
+    {
+      "id": "image-text-45-罗马书-codex-pdf-p075-img011",
+      "bookId": "Rom",
+      "primaryAnchor": "Rom.10.9",
+      "verdict": "hold-as-class",
+      "ledger": "none"
+    },
+    {
+      "id": "image-text-08-路得记-codex-pdf-p003-img001",
+      "bookId": "Ruth",
+      "primaryAnchor": "Ruth.1.2",
+      "verdict": "hold-as-class",
+      "ledger": "none"
+    },
+    {
+      "id": "image-text-08-路得记-codex-pdf-p017-img007",
+      "bookId": "Ruth",
+      "primaryAnchor": "Ruth.2.20",
+      "verdict": "hold-as-class",
+      "ledger": "none"
+    },
+    {
+      "id": "image-text-08-路得记-codex-pdf-p022-img011",
+      "bookId": "Ruth",
+      "primaryAnchor": "Ruth.3.17",
+      "verdict": "hold-as-class",
+      "ledger": "none"
+    },
+    {
+      "id": "image-text-08-路得记-codex-pdf-p026-img014",
+      "bookId": "Ruth",
+      "primaryAnchor": "Ruth.4.15",
+      "verdict": "hold-as-class",
+      "ledger": "none"
+    },
+    {
+      "id": "image-text-22-雅歌-codex-pdf-p003-img001",
+      "bookId": "Song",
+      "primaryAnchor": "Song.1.1",
+      "verdict": "hold-as-class",
+      "ledger": "none"
+    },
+    {
+      "id": "image-text-22-雅歌-codex-pdf-p003-img002",
+      "bookId": "Song",
+      "primaryAnchor": "Song.1.5",
+      "verdict": "hold-as-class",
+      "ledger": "none"
+    },
+    {
+      "id": "image-text-22-雅歌-codex-pdf-p006-img003",
+      "bookId": "Song",
+      "primaryAnchor": "Song.8.6",
+      "verdict": "hold-as-class",
+      "ledger": "none"
+    },
+    {
+      "id": "image-text-22-雅歌-codex-pdf-p014-img012",
+      "bookId": "Song",
+      "primaryAnchor": "Song.1.4",
+      "verdict": "hold-as-class",
+      "ledger": "none"
+    },
+    {
+      "id": "image-text-22-雅歌-codex-pdf-p027-img024",
+      "bookId": "Song",
+      "primaryAnchor": "Song.3.5",
+      "verdict": "hold-as-class",
+      "ledger": "none"
+    },
+    {
+      "id": "image-text-22-雅歌-codex-pdf-p032-img028",
+      "bookId": "Song",
+      "primaryAnchor": "Song.4.8",
+      "verdict": "hold-as-class",
+      "ledger": "none"
+    },
+    {
+      "id": "image-text-22-雅歌-codex-pdf-p052-img046",
+      "bookId": "Song",
+      "primaryAnchor": "Song.7.5",
+      "verdict": "hold-as-class",
+      "ledger": "none"
+    },
+    {
+      "id": "image-text-22-雅歌-codex-pdf-p057-img054",
+      "bookId": "Song",
+      "primaryAnchor": "Song.8.3",
+      "verdict": "hold-as-class",
+      "ledger": "none"
+    },
+    {
+      "id": "image-text-22-雅歌-codex-pdf-p059-img055",
+      "bookId": "Song",
+      "primaryAnchor": "Song.8.6",
+      "verdict": "hold-as-class",
+      "ledger": "none"
+    },
+    {
+      "id": "image-text-22-雅歌-codex-pdf-p059-img057",
+      "bookId": "Song",
+      "primaryAnchor": "Song.8.7",
+      "verdict": "hold-as-class",
+      "ledger": "none"
+    },
+    {
+      "id": "image-text-22-雅歌-codex-pdf-p061-img059",
+      "bookId": "Song",
+      "primaryAnchor": "Song.8.12",
+      "verdict": "hold-as-class",
+      "ledger": "none"
+    },
+    {
+      "id": "image-text-38-撒迦利亚书-codex-pdf-p005-img001",
+      "bookId": "Zech",
+      "primaryAnchor": "Zech.1.3",
+      "verdict": "hold-as-class",
+      "ledger": "none"
+    },
+    {
+      "id": "image-text-38-撒迦利亚书-codex-pdf-p032-img013",
+      "bookId": "Zech",
+      "primaryAnchor": "Zech.6.11",
+      "verdict": "hold-as-class",
+      "ledger": "none"
+    },
+    {
+      "id": "image-text-38-撒迦利亚书-codex-pdf-p037-img014",
+      "bookId": "Zech",
+      "primaryAnchor": "Zech.8.2",
+      "verdict": "hold-as-class",
+      "ledger": "none"
+    },
+    {
+      "id": "image-text-38-撒迦利亚书-codex-pdf-p044-img016",
+      "bookId": "Zech",
+      "primaryAnchor": "Zech.9.8",
+      "verdict": "hold-as-class",
+      "ledger": "none"
+    },
+    {
+      "id": "image-text-38-撒迦利亚书-codex-pdf-p055-img022",
+      "bookId": "Zech",
+      "primaryAnchor": "Zech.10.12",
+      "verdict": "hold-as-class",
+      "ledger": "none"
+    },
+    {
+      "id": "image-text-36-西番雅书-codex-pdf-p005-img002",
+      "bookId": "Zeph",
+      "primaryAnchor": "Zeph.1.18",
+      "verdict": "hold-as-class",
+      "ledger": "none"
+    }
+  ],
+  "heldOutOcr": [
+    {
+      "id": "image-text-05-申命记-codex-pdf-p028-img012",
+      "testFile": "genesisPublicCardAudit.test.ts"
+    },
+    {
+      "id": "image-text-07-士师记-codex-pdf-p003-img001",
+      "testFile": "genesisPublicCardAudit.test.ts"
+    },
+    {
+      "id": "image-text-20-箴言-codex-pdf-p155-img063",
+      "testFile": "genesisPublicCardAudit.test.ts"
+    },
+    {
+      "id": "image-text-43-约翰福音-codex-pdf-p019-img004",
+      "testFile": "johnGospelPublicCardAudit.test.ts"
+    }
+  ],
+  "johnLeftoverOcr": [
+    "image-text-43-约翰福音-codex-pdf-p019-img004"
+  ]
+}

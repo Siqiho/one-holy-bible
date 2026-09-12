@@ -37,6 +37,7 @@ const forbiddenFragments = [
   "我喊冤叫屈》",
   "解经家认这是",
   "（《和修》\"力威亚探，",
+  "陷人困境",
 ];
 
 function loadBook(bookId: string): PublicBookPayload {

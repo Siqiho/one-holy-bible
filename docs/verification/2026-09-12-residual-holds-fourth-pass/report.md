@@ -7,7 +7,7 @@
 - 应用对照面：`public/data/books/*.json`
 - 工作台投影：本快照**没有** `src/data/generated/workbenchSyncedResources-v4.json`
 - 创世记图像：本快照**没有** `src/assets/resources/genesis/images/`
-- 结论：隔离 ∩ 公开仍为 ∅。第四轮不新抬隔离 CMC，不改六源标识，不假设 Mac `Resources/`。公开研修本 **9,089**、公开文字卡 **10,096** 不变。前两轮已禁残串继续为空；第四轮又从公开研修本四字段清掉 112 张仍留包内的高置信 OCR / 表尾（迎百农 / 迎拿 / 边拿 / 迎萨 / 迎特 / 弥迎 / 舍已 / 爱人如已 / 人侵 / 误人歧途 / 霞惊 / `39a本书` / `10002000英尺` 等），并把 66 份卷测全部扩到 title+body+summary+searchText。
+- 结论：隔离 ∩ 公开仍为 ∅。第四轮不新抬隔离 CMC，不改六源标识，不假设 Mac `Resources/`。公开研修本 **9,089**、公开文字卡 **10,096** 不变。前两轮已禁残串继续为空；第四轮又从公开研修本四字段清掉 117 张仍留包内的高置信 OCR / 表尾（迎百农 / 迎拿 / 边拿 / 迎萨 / 迎特 / 弥迎 / 舍已 / 爱人如已 / 人侵 / 误人歧途 / 霞惊 / `39a本书` / `10002000英尺` 等），并把 66 份卷测全部扩到 title+body+summary+searchText。
 
 ## 1. 范围与方法
 
@@ -40,9 +40,9 @@
 
 分册计数见 `isolation-cmc-ledger.json`。不抬隔离 CMC，不改六源映射。
 
-## 3. 已 fix（公开研修本 112 张，不撤卡）
+## 3. 已 fix（公开研修本 117 张，不撤卡）
 
-只改 `study-bible-*` 的 `title` / `body` / `summary` / `searchText`。不改经文，不改 OCR 卡。字段级记录见 `fourth-pass-fixes.json`（269 行）。
+只改 `study-bible-*` 的 `title` / `body` / `summary` / `searchText`。不改经文，不改 OCR 卡。字段级记录见 `fourth-pass-fixes.json`（276 行）。
 
 大量残串只在 summary/searchText：正文早已干净，卷测只扫 title+body 时漏掉。本轮按同卡正文对齐，不补造新句。
 
@@ -87,14 +87,14 @@
 - 第二 / 三轮禁串仍空；第四轮扩表跨四字段为空。
 - 隔离 CMC 18,387 的哈希、65 卷分册、哨兵 ID 与公开包不相交。
 - 公开 CMC 858 全是 `cmc-gen-*`。
-- 112 张第四轮修补清单与公开包 1:1，卡数不变。
+- 117 张第四轮修补清单与公开包 1:1，卡数不变。
 - 66 份卷测全部改为四字段；不补造 v4 / 创世记图像。
 
 ## 6. 验证
 
 已跑：
 
-- `vitest run src/data/*PublicCardAudit.test.ts src/data/residualHoldsInventory.test.ts src/data/residualHoldsThirdPass.test.ts src/data/residualHoldsFourthPass.test.ts src/data/publicData.test.ts src/data/publicBibleData.test.ts scripts/generatePublicBibleData.test.mjs scripts/validatePublicRepository.test.mjs`
+- `vitest run src/data/*PublicCardAudit.test.ts src/data/residualHoldsInventory.test.ts src/data/residualHoldsThirdPass.test.ts src/data/residualHoldsFourthPass.test.ts src/data/publicData.test.ts src/data/publicBibleData.test.ts scripts/generatePublicBibleData.test.mjs scripts/validatePublicRepository.test.mjs`：73/73 通过（282 tests）。
 - `node scripts/generatePublicBibleData.mjs --validate-only public/data`：66 卷、公开文字卡 10,096、无不安全串。
 - `node scripts/validatePublicRepository.mjs`：通过。
 - 原始输出见同目录 `validate.txt`。

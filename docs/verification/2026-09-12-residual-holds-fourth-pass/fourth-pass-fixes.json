@@ -2419,5 +2419,68 @@
     "count": 2,
     "from": "低加波利位［本书12:28：路19:44］16:42见本书12:39a本书4:13.于加利利海东南岸",
     "to": "低加波利位于加利利海东南岸"
+  },
+  {
+    "cardId": "study-bible-deut-1-7-p006-n014",
+    "bookId": "Deut",
+    "field": "searchText",
+    "label": "quote-ocr",
+    "count": 1,
+    "from": "（《和修》注\"低地是继续",
+    "to": "（《和修》注\"低地\"）是继续"
+  },
+  {
+    "cardId": "study-bible-1john-2-2-p007-n021",
+    "bookId": "1John",
+    "field": "searchText",
+    "label": "searchText-midcut",
+    "count": 1,
+    "from": "（见2:4，23，3:10.5:12；参约3:18.5:24）。耶稣献上自己祭，不只是为了约翰和当时的读者，也是为了\"普天下\"的每一",
+    "to": "（见2:4，23，3:10.5:12；参约3:18.5:24）。"
+  },
+  {
+    "cardId": "study-bible-rev-12-7-p027-n119",
+    "bookId": "Rev",
+    "field": "searchText",
+    "label": "searchText-midcut",
+    "count": 1,
+    "from": "时期开始。\"大艰难\"也就是",
+    "to": "时期开始。"
+  },
+  {
+    "cardId": "study-bible-rev-15-8-p031-n203",
+    "bookId": "Rev",
+    "field": "summary",
+    "label": "quote-ocr",
+    "count": 1,
+    "from": "七灾完毕（\"完毕\"在1作\"发尽》，才能进殿",
+    "to": "七灾完毕（\"完毕\"在1节作\"发尽\"），才能进殿"
+  },
+  {
+    "cardId": "study-bible-rev-15-8-p031-n203",
+    "bookId": "Rev",
+    "field": "searchText",
+    "label": "quote-ocr",
+    "count": 1,
+    "from": "七灾完毕（\"完毕\"在1作\"发尽》，才能进殿",
+    "to": "七灾完毕（\"完毕\"在1节作\"发尽\"），才能进殿"
+  },
+  {
+    "cardId": "study-bible-rev-21-1-p039-n195",
+    "bookId": "Rev",
+    "field": "summary",
+    "label": "summary-midcut-tail",
+    "count": 1,
+    "from": "毁灭性影响，取而代之的是新的宇\"叹息、劳苦，直直到如今\"，等待着\"天……销化\"的\"新天新地\"（彼后3:12-13）到来，永远取代旧的天地。这表明",
+    "to": "毁灭性影响，这表明"
+  },
+  {
+    "cardId": "study-bible-rev-21-1-p039-n195",
+    "bookId": "Rev",
+    "field": "searchText",
+    "label": "summary-midcut-tail",
+    "count": 2,
+    "from": "毁灭性影响，取而代之的是新的宇\"叹息、劳苦，直直到如今\"，等待着\"天……销化\"的\"新天新地\"（彼后3:12-13）到来，永远取代旧的天地。这表明",
+    "to": "毁灭性影响，这表明"
   }
 ]

@@ -205,9 +205,9 @@ describe("residual holds fourth-pass after third-pass inventory", () => {
     expect(publicIds.has("cmc-gen-1-3")).toBe(false);
   });
 
-  it("pins the 112-card fourth-pass fix inventory without changing card counts", () => {
-    expect(fixes).toHaveLength(269);
-    expect(new Set(fixes.map((row) => row.cardId)).size).toBe(112);
+  it("pins the 117-card fourth-pass fix inventory without changing card counts", () => {
+    expect(fixes).toHaveLength(276);
+    expect(new Set(fixes.map((row) => row.cardId)).size).toBe(117);
     const labels = new Set(fixes.map((row) => row.label));
     for (const label of CORE_FOURTH_PASS_LABELS) {
       expect(labels.has(label), label).toBe(true);

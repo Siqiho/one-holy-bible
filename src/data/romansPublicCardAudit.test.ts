@@ -77,6 +77,8 @@ const forbiddenFragments = [
   "福音与！律法",
   "名叫\"C（拉丁文",
   "《《圣经〉概述》",
+  "酒水礼",
+  "］V见徒",
 ];
 
 function loadBook(bookId: string): PublicBookPayload {
@@ -127,7 +129,7 @@ describe("Romans public card audit and isolation hold-queue", () => {
       expect(ids.has(id), id).toBe(false);
     }
 
-    const blob = payload.textCards.map((card) => `${card.title ?? ""}\n${card.body ?? ""}`).join("\n");
+    const blob = payload.textCards.map((card) => `${card.title ?? ""}\n${card.body ?? ""}\n${card.summary ?? ""}\n${card.searchText ?? ""}`).join("\n");
     for (const fragment of forbiddenFragments) {
       expect(blob.includes(fragment), fragment).toBe(false);
     }

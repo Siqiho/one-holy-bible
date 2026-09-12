@@ -79,6 +79,7 @@ const forbiddenFragments = [
   "《《圣经〉概述》",
   "酒水礼",
   "］V见徒",
+  "人狱",
 ];
 
 function loadBook(bookId: string): PublicBookPayload {

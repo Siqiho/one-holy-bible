@@ -77,6 +77,7 @@ const forbiddenFragments = [
   "本书是供名之作",
   "主后30 3540455055606570文集",
   "在希腊原文中，，美\"、\"更大\"",
+  "《经文集",
 ];
 
 function loadBook(bookId: string): PublicBookPayload {

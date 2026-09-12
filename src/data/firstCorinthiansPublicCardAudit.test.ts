@@ -66,6 +66,7 @@ const forbiddenFragments = [
   "经得起考验的人…7",
   "修辞手，法",
   "由于保与教会",
+  "藉者",
 ];
 
 function loadBook(bookId: string): PublicBookPayload {

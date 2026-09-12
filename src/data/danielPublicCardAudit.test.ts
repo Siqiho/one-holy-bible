@@ -40,6 +40,10 @@ const forbiddenFragments = [
   "（《和修》\"直捣南即在今天",
   "发音类似亚兰文的\"波",
   "迎勒底",
+  "投人那群",
+  "英果400",
+  "400600",
+  "介人",
 ];
 
 function loadBook(bookId: string): PublicBookPayload {

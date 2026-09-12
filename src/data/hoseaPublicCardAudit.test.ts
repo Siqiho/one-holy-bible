@@ -36,6 +36,7 @@ const forbiddenFragments = [
   "杓烂的比喻",
   "所种的是风》，必会收获",
   "杓烂的比喻",
+  "收验",
 ];
 
 function loadBook(bookId: string): PublicBookPayload {

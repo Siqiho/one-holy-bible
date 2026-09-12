@@ -62,6 +62,11 @@ const forbiddenFragments = [
   "彰昆",
   "霞惊",
   "14:20h本书",
+  "宜告",
+  "待奉",
+  "通迫",
+  "短吾",
+  "就以是侍",
 ];
 
 function loadPublicJohn(): PublicJohnPayload {

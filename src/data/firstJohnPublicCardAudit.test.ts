@@ -48,6 +48,8 @@ const forbiddenFragments = [
   "永生也儿子里面",
   "一致认《约翰一书》",
   "误人歧途",
+  "见本书1:62",
+  "道徳",
 ];
 
 function loadBook(bookId: string): PublicBookPayload {

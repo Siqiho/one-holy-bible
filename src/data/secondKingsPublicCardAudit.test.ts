@@ -56,6 +56,9 @@ const forbiddenFragments = [
   "（《和修》\"你求的是一件难事\"，以利沙是由上帝任命",
   "（《和修》\"没有奴役的，没有自由的》，",
   "（《和修》\"因为玛拿西种种的恶事激怒了他，上帝必须",
+  "官廷",
+  "宫延",
+  "后官",
 ];
 
 function loadBook(bookId: string): PublicBookPayload {

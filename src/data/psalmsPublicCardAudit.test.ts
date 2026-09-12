@@ -60,6 +60,14 @@ const forbiddenFragments = [
   "旧日约",
   "大工的宝座",
   "迎特",
+  "莱耀",
+  "干早",
+  "度诚",
+  "道徳",
+  "插人",
+  "被收人正典",
+  "太多数",
+  "阴羅",
 ];
 
 function loadBook(bookId: string): PublicBookPayload {

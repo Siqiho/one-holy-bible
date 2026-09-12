@@ -68,6 +68,8 @@ const forbiddenFragments = [
   "并且相信一括完成",
   "见经文集》中的",
   "w拉8:16",
+  "官廷",
+  "1.770公里",
 ];
 
 function loadBook(bookId: string): PublicBookPayload {

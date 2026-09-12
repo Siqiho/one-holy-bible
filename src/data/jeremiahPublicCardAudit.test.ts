@@ -74,6 +74,9 @@ const forbiddenFragments = [
   "迎萨",
   "弥迎",
   "所有的的",
+  "故士",
+  "并人波斯",
+  "介人",
 ];
 
 function loadBook(bookId: string): PublicBookPayload {

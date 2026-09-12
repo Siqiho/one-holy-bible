@@ -82,6 +82,14 @@ const forbiddenFragments = [
   "圣路经",
   "加但最早",
   "无人能这些",
+  "介人",
+  "藉者",
+  "顾序",
+  "插人",
+  "数以干计",
+  "慈普",
+  "《<圣经",
+  "放人水中",
 ];
 
 function loadBook(bookId: string): PublicBookPayload {

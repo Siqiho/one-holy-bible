@@ -1,0 +1,109 @@
+# 66 卷后第十二轮：残余 OCR / 隔离 CMC 台账 / 第十一轮禁串加厚
+
+- 复核日期：2026-09-12
+- 基线：`cursor/ohb-residual-holds-eleventh-pass-a16a`（PR #42 顶端；第十一轮残余 hold 清单已钉）
+- 台账包：`local-audit-pack/john-gospel-20260909/`（本快照唯一卷级台账）
+- 隔离包：`local-audit-pack/no-explain-isolation-20260731/`
+- 应用对照面：`public/data/books/*.json`
+- 工作台投影：本快照**没有** `src/data/generated/workbenchSyncedResources-v4.json`
+- 创世记图像：本快照**没有** `src/assets/resources/genesis/images/`
+- 结论：隔离 ∩ 公开仍为 ∅。第十二轮不新抬隔离 CMC，不改六源标识，不假设 Mac `Resources/`。公开研修本 **9,089**、公开文字卡 **10,096** 不变。前十轮已禁残串继续为空；第十二轮又从公开研修本四字段清掉 **78** 张仍留包内的高置信 OCR / 节号 `.：` / 和修缺闭括号 / CJK 弯引号 / 交叉字段脏拷（`五句节` / `圣吴` / `察乡` / `坐船刦` / `以色列才民` / `骆驼果要` / `提后3！1` / `约14.：27` / `22」39` / `凡有血气的的预言` / `最后几位旧知` / `不再知说话` / `犹9节：后12` / 13 张和修缺 `）` / 39 张 `“”` 等），并把第十一轮核心禁串（`无宰` / `道责` / `员性` / `膳眼` / `良普` / `《徒行传》` / `腊原文` / `主人体`）再钉进第十二轮禁表。
+
+## 1. 范围与方法
+
+判定口径仍是马太方法：
+
+- **keep**：锚点合法、正文可读。
+- **fix**：仓库内可安全修补的引号、唯一 OCR、完整段落后的表倾倒 / 中截尾句。
+- **hold**：中截 / 表倾倒 / 乱码到无源 PDF 不能复原。
+
+本轮不再展开未审卷，也不重审 347 张已撤研修本 hold。只做跨卷第十二过：
+
+1. 再扫公开研修本四字段，抓住第十一轮漏掉的句/旬、吴/灵、察/家、刦/却、才/子、果/若、旧知/先知、叠「的的」、节号 `.：` / `！` / `」`、和修缺闭括号、以及 CJK 弯引号。
+2. 隔离 CMC 台账完整性：18,387 张 ledger-only CMC 的排序哈希、65 卷分册计数、哨兵 ID 全部重钉；确认无一出现在公开包。
+3. 加厚公开包回归：跨卷禁止第十一轮同类 + 本轮新抓到的五句节/圣吴/察乡/坐船刦/才民/骆驼果要/节号 `.：`。
+4. 记录全量 `vitest` 已知阻断（缺创世记图像 / 工作台 v4 / 本快照 Node 22 / `rg`），不补造夹具。
+5. 盘点交叉字段脏拷：只按正文抄高置信残串，不整段重写 summary。
+
+## 2. 隔离 CMC 台账
+
+| 集合 | 张数 | 本轮 |
+| --- | ---: | --- |
+| 隔离 ∩ 公开 | 0 | **keep 合同** |
+| 隔离 CMC | 18,387 | **hold / ledger-only**；排序 SHA-256 `fa086c106e0fe8f96facdc00e0946233b524a28e25d02c8a13ff8cb74643c257` |
+| 隔离创世记 CMC | 508 | 含 `cmc-gen-1-3`；公开创世记 CMC 858 与此不相交 |
+| 公开 CMC | 858 | 全部 `cmc-gen-*`；排序 SHA-256 `57faabdbe9c8ced51267e6b1142581e1e5475c08e6392f8d2451f93bb87377f6` |
+| 隔离研修本 | 10 | 继续 hold，未回潮 |
+| 约翰 leftover OCR | 1 | 未回潮 |
+
+哨兵（均在隔离、均不在公开）：`cmc-matt-1-9`、`cmc-luke-1-37`、`cmc-john-4-1`、`cmc-acts-1-1`、`cmc-ps-1-5`、`cmc-isa-1-2`、`cmc-gen-1-3`、`cmc-rom-1-9`、`cmc-mark-1-23`。
+
+分册计数见 `isolation-cmc-ledger.json`。不抬隔离 CMC，不改六源映射。
+
+## 3. 已 fix（公开研修本 78 张，不撤卡）
+
+只改 `study-bible-*` 的 `title` / `body` / `summary` / `searchText`。不改经文，不改 OCR 卡。字段级记录见 `twelfth-pass-fixes.json`（203 行：39 张唯一 OCR / 和修闭括号 + 39 张 CJK 弯引号）。
+
+| 串 | 还原 | 例 |
+| --- | --- | --- |
+| `五句节` | 五旬节 | 徒 2:17；10:47 |
+| `圣吴` | 圣灵 | 徒 10:47 |
+| `察乡` | 家乡 | 出 13:19 |
+| `坐船刦使` | 坐船却使 | 徒 27:24 |
+| `以色列才民` | 以色列子民 | 创导论 |
+| `骆驼果要` | 骆驼若要 | 太 19:24 |
+| `提后3！1` | 提后3:1 | 提前 4:1 |
+| `约14.：27` / `代上11.：1` / `弗1.：13` / `林后1.：1` / `何4.：1` / `哀1.：19` / `该1.：10` / `参来1.：14` / `见1.：1` / `和1.：12` / `51.：14` / `（1.：12-18）` | 节号 `.：` → `:` | 林前 7:15 等 12 张 |
+| `22」39` | 22.39 | 诗 109:1 |
+| `凡有血气的的预言` / `伺候的的妇人` / `仗赖的的希伯来文` / `踹葡萄的的人` / `理解的的枝子` / `掳来的的诱惑` | 叠「的的」→「的」 | 徒 2:17；出 38:8 等 6 张 |
+| `最后几位旧知` / `不再知说话` | 先知 / 开口说话 | 徒 2:17 |
+| `犹9节：后12` | 犹9节；启12 | 代上 21:1 |
+| 13 张和修缺 `）` | 按正文同一 gloss 补 `）` | 林前 7:18 / 9:21；约壹 5:20 / 4:18；亚 8:23 等 |
+| `“”` | ASCII `"` | 39 张，与第十轮 `〝〞` 同类 |
+
+未改：
+
+- `有目的的` / `目的的确实性质`、`如果要`、`藉着先知说话`、`「牧人」`：keep。
+- `个像人子的`、`耶稣己的看法`、`我们是在面`、`（《和庭"`、`那时的人经》`：继续 hold。
+- `懞`（路 6:29 / 19:30；诗 12:8）：无唯一还原，hold。
+- `容是需說的的魚翅`、`重基督再来之前完成`、`女，楼房上的妇女`、`口才（1.：2:3-4`、`和记长信靠顺服`：中截 / 表轴，hold。
+- 徒 20:28 / 耶 24:7 / 约 14:12 乱码倾倒：hold。
+- 雅 2:5「拣选 / 选举」：两词合法，不按正文改写。
+
+## 4. 六源口径
+
+不改标识字段，也不按用户全库数补造卡。
+
+| 源 | 用户全库 | 公开（本轮后） | 对账 |
+| --- | ---: | ---: | --- |
+| 综合解读 | 29,476 | 858 | 缺口；隔离 18,387 ledger-only |
+| 研修本 | 16,270 | **9,089** | 缺口；本轮 0 张撤 / 0 张救回 |
+| 启导本 | 9,521 | 0 | 整类 hold |
+| OCR | 254 | 146 | 1 keep + 145 hold-as-class |
+| 圣经的故事 | 98 | 0 | 整类 hold |
+| 信息系列 | 8 | 3 | 稳定注释 8 一致 |
+
+## 5. 审计覆盖
+
+新增 `src/data/residualHoldsTwelfthPass.test.ts`：
+
+- 第二 / 三 / 四 / 五 / 六 / 七 / 八 / 九 / 十 / 十一轮禁串仍空；第十二轮扩表跨四字段为空。
+- 第十一轮核心类（无宰 / 道责 / 员性 / 膳眼 / 良普 / 《徒行传》 / 腊原文 / 主人体）单独再钉。
+- 隔离 CMC 18,387 的哈希、65 卷分册、哨兵 ID 与公开包不相交。
+- 公开 CMC 858 全是 `cmc-gen-*`。
+- 78 张第十二轮修补清单与公开包 1:1，卡数不变。
+- 66 份卷测全部保持四字段，并写入本轮新禁串；不补造 v4 / 创世记图像。
+
+## 6. 验证
+
+已跑：
+
+- `vitest run src/data/*PublicCardAudit.test.ts src/data/residualHoldsInventory.test.ts src/data/residualHoldsThirdPass.test.ts src/data/residualHoldsFourthPass.test.ts src/data/residualHoldsFifthPass.test.ts src/data/residualHoldsSixthPass.test.ts src/data/residualHoldsSeventhPass.test.ts src/data/residualHoldsEighthPass.test.ts src/data/residualHoldsNinthPass.test.ts src/data/residualHoldsTenthPass.test.ts src/data/residualHoldsEleventhPass.test.ts src/data/residualHoldsTwelfthPass.test.ts src/data/publicData.test.ts src/data/publicBibleData.test.ts scripts/generatePublicBibleData.test.mjs scripts/validatePublicRepository.test.mjs`：**81 files, 330 tests passed**
+- `node scripts/generatePublicBibleData.mjs --validate-only public/data`：66 卷、31,102 CUV/KJV、10,096 文字卡、0 unsafe
+- `node scripts/validatePublicRepository.mjs`：8 required files, Node 24
+
+明细见 `validate.txt`。
+
+全量 `vitest run` / GitHub `verify` 的失败面仍是缺创世记图像、缺工作台 v4、缺综合解读生成 JSON / Doré 缩图，以及本快照 Node 22 跑 `.mts` / runner 无 `rg`。不读本轮公开包修补，不补造真源。明细见 `full-vitest-blockers.md`。
+
+未做浏览器点选：本快照没有 `workbenchSyncedResources-v4.json`，本地阅读页不走 `loadPublicBook`。对照与修补都落在公开数据包和台账 JSONL。

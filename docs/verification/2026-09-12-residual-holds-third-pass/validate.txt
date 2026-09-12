@@ -11,3 +11,7 @@ Public repository metadata valid: 8 required files, Node 24
 103 files, 419 tests: 89 files / 403 tests passed, 14 files / 16 tests failed
 Failure face does not read this pass's public-package OCR fixes.
 See full-vitest-blockers.md.
+
+=== GitHub verify on eaed161 ===
+validate:public-data passed (66 books, 10096 text cards, 0 unsafe)
+npm test failed on missing Genesis images / workbench v4 / rg (same class as PR #32)

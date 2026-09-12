@@ -3,6 +3,7 @@
 - 日期：2026-09-12
 - 对照快照：本工作区（第二轮 PR #32 顶端 + 第三轮公开包修补）
 - 本快照实测：`npx vitest run` → **103 files, 419 tests**；**89 / 403 通过**，**14 files / 16 tests 失败**
+- GitHub `verify`（Node 24）：`validate:public-data` 通过；随后 `npm test` 全量仍红。失败面与本机全量相同（缺创世记图像 / v4），另加 runner 无 `rg`。PR #32 第二轮同一 `verify` 也红。不补造夹具，不改 CI 去假装绿。
 - 原则：记录真实缺失；不发明创世记图像、不发明工作台 v4、不把隔离 CMC 写成假资源。
 
 失败面不读本轮公开包修补。`src/data/*PublicCardAudit.test.ts`、`residualHoldsInventory.test.ts`、`residualHoldsThirdPass.test.ts`、`publicData.test.ts`、`publicBibleData.test.ts`、`scripts/generatePublicBibleData.test.mjs`、`scripts/validatePublicRepository.test.mjs` 均在通过面。
@@ -63,6 +64,8 @@
 | `scripts/generateBibleEncyclopediaResources.test.mts` | `node:internal/modules/esm/get_format` 进了断言 stderr |
 
 不在本轮升级 Node、不改引擎声明、不发明 `.mts` 夹具。
+
+GitHub `ubuntu-latest` runner 另有 `spawnSync rg ENOENT`（`scripts/migrateCodexNames.test.mjs`）。本快照未装 ripgrep，不补造。
 
 ## 5. 本轮仍可跑、且读公开包的面
 

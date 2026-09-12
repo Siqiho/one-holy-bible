@@ -54,6 +54,8 @@ const forbiddenFragments = [
   "公开贵备",
   "命令的日的",
   "19世的纪",
+  "遺责",
+  "\"万人*原文",
 ];
 
 function loadBook(bookId: string): PublicBookPayload {

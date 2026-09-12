@@ -55,6 +55,7 @@ const forbiddenFragments = [
   "因为收清楚",
   "命令和信人提多",
   "1:1,2：，11-14,3:4-71:16",
+  "\"奴仆*．",
 ];
 
 function loadBook(bookId: string): PublicBookPayload {

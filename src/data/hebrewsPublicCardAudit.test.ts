@@ -79,6 +79,9 @@ const forbiddenFragments = [
   "在希腊原文中，，美\"、\"更大\"",
   "《经文集",
   "旧约经文，：以及",
+  "被称为1\"儿子\"",
+  "\"一次*显明",
+  "\"与上帝同行*",
 ];
 
 function loadBook(bookId: string): PublicBookPayload {

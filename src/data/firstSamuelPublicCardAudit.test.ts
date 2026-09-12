@@ -100,6 +100,7 @@ const forbiddenFragments = [
   "后悔*",
   "罐子\"可以",
   "《<圣经",
+  "遺散军队",
 ];
 
 function loadBook(bookId: string): PublicBookPayload {

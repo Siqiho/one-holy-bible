@@ -67,6 +67,14 @@ const forbiddenFragments = [
   "修辞手，法",
   "由于保与教会",
   "藉者",
+  "遺词用字",
+  "好淫",
+  "二万三干",
+  "《1约》",
+  "披肩或头中",
+  "亵读",
+  "響告",
+  "\"奥秘事*",
 ];
 
 function loadBook(bookId: string): PublicBookPayload {

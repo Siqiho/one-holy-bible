@@ -70,6 +70,7 @@ const forbiddenFragments = [
   "w拉8:16",
   "官廷",
   "1.770公里",
+  "\"约*（berit）",
 ];
 
 function loadBook(bookId: string): PublicBookPayload {

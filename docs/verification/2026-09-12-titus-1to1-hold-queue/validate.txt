@@ -1,0 +1,34 @@
+$ npx vitest run src/data/*PublicCardAudit.test.ts scripts/generatePublicBibleData.test.mjs
+
+
+ RUN  v4.1.5 /workspace
+
+
+ Test Files  67 passed (67)
+      Tests  216 passed (216)
+   Start at  00:55:07
+   Duration  28.70s (transform 696ms, setup 2.21s, import 1.25s, tests 40.58s, environment 31.09s)
+
+
+
+$ npx vitest run src/data/titusPublicCardAudit.test.ts src/data/secondThessaloniansPublicCardAudit.test.ts src/data/leviticusPublicCardAudit.test.ts src/data/secondPeterPublicCardAudit.test.ts src/data/judePublicCardAudit.test.ts src/data/lukePublicCardAudit.test.ts src/data/publicData.test.ts src/data/publicBibleData.test.ts
+
+
+ RUN  v4.1.5 /workspace
+
+
+ Test Files  8 passed (8)
+      Tests  63 passed (63)
+   Start at  00:55:36
+   Duration  3.34s (transform 255ms, setup 286ms, import 310ms, tests 4.18s, environment 3.73s)
+
+
+
+$ node scripts/generatePublicBibleData.mjs --validate-only public/data
+Public data valid: 66 books, 31102 CUV verses, 31102 KJV verses, 10096 text cards, 62204 search entries, 0 image cards, 0 unsafe matches
+
+$ node scripts/validatePublicRepository.mjs
+Public repository metadata valid: 8 required files, Node 24
+
+isolation ∩ public = 0
+public mix: study 9089, ocr 146, cmc 858, info 3; total 10096

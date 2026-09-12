@@ -1,20 +1,20 @@
 {
   "books": [
     {
-      "bytes": 3399938,
+      "bytes": 3399062,
       "cuvVerseCount": 1533,
       "id": "Gen",
       "kjvVerseCount": 1533,
-      "sha256": "ca0aa8564b0019aec25d94908809290d1d541789eda96843d026c20566af1c62",
+      "sha256": "d1163c7d0dc149b04c7a85008c88703ff15320b32069e13a6951bb0f4009cb57",
       "textCardCount": 1134,
       "url": "/data/books/Gen.json"
     },
     {
-      "bytes": 1004066,
+      "bytes": 1003962,
       "cuvVerseCount": 1213,
       "id": "Exod",
       "kjvVerseCount": 1213,
-      "sha256": "e9136f4296026843d26bc5bd121903fd761165fc6da1aac8625652445365218f",
+      "sha256": "2ca07662e2aa51a1bf81bdac2a325a70a3b64102cf61bbf5c66f99653f45498d",
       "textCardCount": 204,
       "url": "/data/books/Exod.json"
     },
@@ -32,16 +32,16 @@
       "cuvVerseCount": 1288,
       "id": "Num",
       "kjvVerseCount": 1288,
-      "sha256": "3f48742bc2650c0e0de06460ad40b7bda2e22e32cefe7c4e2e460c3048c0930e",
+      "sha256": "f8ca4772bb886942b109115492af6df298ed5efcc2208161190ef5c271c97c1d",
       "textCardCount": 88,
       "url": "/data/books/Num.json"
     },
     {
-      "bytes": 857060,
+      "bytes": 856982,
       "cuvVerseCount": 959,
       "id": "Deut",
       "kjvVerseCount": 959,
-      "sha256": "3b4ef09e49ede3590be5f3b7196feb0707a21e589d8a77c1a7a05564a5f21675",
+      "sha256": "527fdffd16f525704fd127220b3b0b08be617ca1ca79c6d6f13684d310c261fe",
       "textCardCount": 239,
       "url": "/data/books/Deut.json"
     },
@@ -55,11 +55,11 @@
       "url": "/data/books/Josh.json"
     },
     {
-      "bytes": 539002,
+      "bytes": 538990,
       "cuvVerseCount": 618,
       "id": "Judg",
       "kjvVerseCount": 618,
-      "sha256": "76539ab4afefbc11a6d0c7572e575a9a9fa384a9d4524d288079647bcca29f9d",
+      "sha256": "083de1116f53449e5563a19ac966d7d45c1706f1e7e22088044eadd1879d0ffa",
       "textCardCount": 117,
       "url": "/data/books/Judg.json"
     },
@@ -77,16 +77,16 @@
       "cuvVerseCount": 810,
       "id": "1Sam",
       "kjvVerseCount": 810,
-      "sha256": "b5b28d041c2a15b5d46ad174083648fba586f11a3c319dc6a6f02f8cc0ec94db",
+      "sha256": "2f2fab5bec810e12f720ad870c64ce123c7e603ec912dd1c52e4b84ed672c9c2",
       "textCardCount": 261,
       "url": "/data/books/1Sam.json"
     },
     {
-      "bytes": 609018,
+      "bytes": 609006,
       "cuvVerseCount": 695,
       "id": "2Sam",
       "kjvVerseCount": 695,
-      "sha256": "e6c1647658c8964fed15a8f5b689fc9b62bcb9fc9ebc2757c350e0193fdb8dcc",
+      "sha256": "8877c8f647ae17367a94eb0c83fba064ee770ba8e55bc6d29ec218a6dd445dee",
       "textCardCount": 147,
       "url": "/data/books/2Sam.json"
     },
@@ -95,7 +95,7 @@
       "cuvVerseCount": 816,
       "id": "1Kgs",
       "kjvVerseCount": 816,
-      "sha256": "52266afe18484acc7ffed33357e5c27bdc6b81ba9abe0f97edb0cfd1212d74bc",
+      "sha256": "d23e0f8165598f300f4f6f634f1734119acf4c829d10be7d9e1a9ed5a5272394",
       "textCardCount": 145,
       "url": "/data/books/1Kgs.json"
     },
@@ -104,7 +104,7 @@
       "cuvVerseCount": 719,
       "id": "2Kgs",
       "kjvVerseCount": 719,
-      "sha256": "acd90ee0b66bec005e759cde66a111d8979797a5836db7b81ca9ef48bed4e66e",
+      "sha256": "4447b5486611e39610dccb55eea2f7bd98026f9fb9d344a73c1ac2c960fb3ef4",
       "textCardCount": 135,
       "url": "/data/books/2Kgs.json"
     },
@@ -118,29 +118,29 @@
       "url": "/data/books/1Chr.json"
     },
     {
-      "bytes": 606316,
+      "bytes": 606310,
       "cuvVerseCount": 822,
       "id": "2Chr",
       "kjvVerseCount": 822,
-      "sha256": "f8feb20e37b16400d75a95e63f24a936ff6d37ddb2841993534c551e7f68170c",
+      "sha256": "c771d57e5aa30bf709aecacf52414e5ed48d32430670b696b3ed027a6d343578",
       "textCardCount": 117,
       "url": "/data/books/2Chr.json"
     },
     {
-      "bytes": 307300,
+      "bytes": 307288,
       "cuvVerseCount": 280,
       "id": "Ezra",
       "kjvVerseCount": 280,
-      "sha256": "0a9c6c5ec49ce93127f16d367b6ad975b23163051a7274a94cbccf5257d6b3d2",
+      "sha256": "c575879d0ba146885c8c17c1dd5460c5efa74bddf0adc34321fbd78862bcd8f0",
       "textCardCount": 86,
       "url": "/data/books/Ezra.json"
     },
     {
-      "bytes": 432434,
+      "bytes": 432432,
       "cuvVerseCount": 406,
       "id": "Neh",
       "kjvVerseCount": 406,
-      "sha256": "3b9e2ce03c50116de928833b6bbbd9447584a6291b359a8ab138578c7287c637",
+      "sha256": "110bec6a5ad8f3dbe759949548c79ccaecdd6dae2b7014b2c310b0c80b403c1b",
       "textCardCount": 142,
       "url": "/data/books/Neh.json"
     },
@@ -158,16 +158,16 @@
       "cuvVerseCount": 1070,
       "id": "Job",
       "kjvVerseCount": 1070,
-      "sha256": "2f0f52ab9227c1dc3ac5c552e597dd26942a37eb6c5959c12f1a1a5b40540710",
+      "sha256": "0accf4359753f9964f79a9de7bf827770a15c22652e587ee14ea981b0d77205c",
       "textCardCount": 165,
       "url": "/data/books/Job.json"
     },
     {
-      "bytes": 1851459,
+      "bytes": 1851435,
       "cuvVerseCount": 2461,
       "id": "Ps",
       "kjvVerseCount": 2461,
-      "sha256": "68ce179bcc3e1afa1f130d98a5679ab4b95f72bc4bb9b50fdaec696a6c1d0c42",
+      "sha256": "83fed31069e7007115f3c58d31adc7dabefafec061801440d40be35bd97d3d7b",
       "textCardCount": 431,
       "url": "/data/books/Ps.json"
     },
@@ -176,7 +176,7 @@
       "cuvVerseCount": 915,
       "id": "Prov",
       "kjvVerseCount": 915,
-      "sha256": "c6da44fda6990e9943f3517ba8aeb8feee68edfee717c60357a14c8b14e91ebf",
+      "sha256": "73cd33460b6cd66a7134304ed843ad768b6025d2f63dd18702bb5cb93f385637",
       "textCardCount": 227,
       "url": "/data/books/Prov.json"
     },
@@ -199,11 +199,11 @@
       "url": "/data/books/Song.json"
     },
     {
-      "bytes": 1413041,
+      "bytes": 1412995,
       "cuvVerseCount": 1292,
       "id": "Isa",
       "kjvVerseCount": 1292,
-      "sha256": "e3c888645234fd7b9f4298f82b9c2d4c66080887cc65c1e254a3f00a8f6cd4e0",
+      "sha256": "7173a09177934002a4aedbc763095bba9956442135597c6696a3a299241ac35c",
       "textCardCount": 454,
       "url": "/data/books/Isa.json"
     },
@@ -212,7 +212,7 @@
       "cuvVerseCount": 1364,
       "id": "Jer",
       "kjvVerseCount": 1364,
-      "sha256": "180d406b321af10144c3dacf73395c3ec5736d390c563c6cb571a0e79ca3c805",
+      "sha256": "ebd68eac9166be70b8a5dc2fdfdc3aec1da6f3ce40844e5c34627e5251130972",
       "textCardCount": 658,
       "url": "/data/books/Jer.json"
     },
@@ -235,11 +235,11 @@
       "url": "/data/books/Ezek.json"
     },
     {
-      "bytes": 400914,
+      "bytes": 399914,
       "cuvVerseCount": 357,
       "id": "Dan",
       "kjvVerseCount": 357,
-      "sha256": "ea200d7d5181f0dec1bbf29551040b1b1772a23dfdf029cdca7a8520b83e129f",
+      "sha256": "f75f5d04393aba683302e9e031066d6ecb1c124451d52d49da7401793eaf55f1",
       "textCardCount": 92,
       "url": "/data/books/Dan.json"
     },
@@ -248,7 +248,7 @@
       "cuvVerseCount": 197,
       "id": "Hos",
       "kjvVerseCount": 197,
-      "sha256": "aa989604592539c7aab46b039481b94b8a365113335ebd7e109c1615baff50f6",
+      "sha256": "a6567db9e5e9cb1ef159eab26d7b4376866debcd4ffb30d0a73738e5d8630960",
       "textCardCount": 103,
       "url": "/data/books/Hos.json"
     },
@@ -338,7 +338,7 @@
       "cuvVerseCount": 211,
       "id": "Zech",
       "kjvVerseCount": 211,
-      "sha256": "9508539e3c076d9e4c32afc3ebec408e4ec81e7b6651585bafd06b8d4cf4a158",
+      "sha256": "7756740de4e0657db999f6edb762fa1bf4135b8ea6f675b6310e377247fdd5b6",
       "textCardCount": 101,
       "url": "/data/books/Zech.json"
     },
@@ -352,11 +352,11 @@
       "url": "/data/books/Mal.json"
     },
     {
-      "bytes": 1292181,
+      "bytes": 1292175,
       "cuvVerseCount": 1071,
       "id": "Matt",
       "kjvVerseCount": 1071,
-      "sha256": "8d9a9008cf45b086c7e03e8b4e3b257082611a7a9cdcde15a8e3d71adec4da06",
+      "sha256": "4b2f16c28414c1b6509539405660143d3fd95eaa5da8e305f7ce8aa5c275ae0a",
       "textCardCount": 430,
       "url": "/data/books/Matt.json"
     },
@@ -365,34 +365,34 @@
       "cuvVerseCount": 678,
       "id": "Mark",
       "kjvVerseCount": 678,
-      "sha256": "878adcf50dbb0122f1b31501be0a8d855af4d78e6f53731b9a42b1ce38d744f9",
+      "sha256": "e6a92ceb2a5093f9ea9440e2292fee58a90a77db54202b37da56618d8efd5738",
       "textCardCount": 247,
       "url": "/data/books/Mark.json"
     },
     {
-      "bytes": 1446978,
+      "bytes": 1446914,
       "cuvVerseCount": 1151,
       "id": "Luke",
       "kjvVerseCount": 1151,
-      "sha256": "e1dffca63484682f907cb153efa2d87dc011cff20d30d52c8380ab9cbe5d50bb",
+      "sha256": "0bd1d6cb466ca265792d158694a5bc2129be9390d382ee8de123627ff7c36e3f",
       "textCardCount": 531,
       "url": "/data/books/Luke.json"
     },
     {
-      "bytes": 1198112,
+      "bytes": 1198118,
       "cuvVerseCount": 879,
       "id": "John",
       "kjvVerseCount": 879,
-      "sha256": "5e61349dec95ba0f290222a44e2923aa5cc7c93ef2a49640822571b4b349c883",
+      "sha256": "760149a3aa8688b29df3c6a2f4176c05dc559e5a80f7f7a23d31dd9d0d5a376e",
       "textCardCount": 409,
       "url": "/data/books/John.json"
     },
     {
-      "bytes": 1346037,
+      "bytes": 1345859,
       "cuvVerseCount": 1007,
       "id": "Acts",
       "kjvVerseCount": 1007,
-      "sha256": "754b50d46ef2a09d6fa913a3d87448ecedbd779a2803a3799e200ea979a86cb8",
+      "sha256": "e03d66d22ffef670551555b507b8d0099965ddb9f7ac248372ddf94cccf8bde7",
       "textCardCount": 462,
       "url": "/data/books/Acts.json"
     },
@@ -401,7 +401,7 @@
       "cuvVerseCount": 433,
       "id": "Rom",
       "kjvVerseCount": 433,
-      "sha256": "4d0c44d5092fee88e774da144e26ed7ea7cc15ae35232fc9d82f7cfe483ccb7b",
+      "sha256": "645af401e771d6038744a80fed38ced77fdccff50f22b5005d89e07aaf50217a",
       "textCardCount": 215,
       "url": "/data/books/Rom.json"
     },
@@ -410,7 +410,7 @@
       "cuvVerseCount": 437,
       "id": "1Cor",
       "kjvVerseCount": 437,
-      "sha256": "831c134d21b1e4cd83b4c95d6c3e88a636fdc0242fb79b1fc0ee8f1f2da0707c",
+      "sha256": "93f5d8ae583df71c7f018394b8d3477c4ec58d562800fca2976327bd72ca593a",
       "textCardCount": 183,
       "url": "/data/books/1Cor.json"
     },
@@ -455,7 +455,7 @@
       "cuvVerseCount": 95,
       "id": "Col",
       "kjvVerseCount": 95,
-      "sha256": "3fc123bab23bfcd7923df702bba340dcf360caca63526b33a5989bb26dd3516a",
+      "sha256": "3946aa96894259bf059585159d107dbe08d1e27e4fbe2d3f04fcd083259561d8",
       "textCardCount": 72,
       "url": "/data/books/Col.json"
     },
@@ -514,11 +514,11 @@
       "url": "/data/books/Phlm.json"
     },
     {
-      "bytes": 447423,
+      "bytes": 447435,
       "cuvVerseCount": 303,
       "id": "Heb",
       "kjvVerseCount": 303,
-      "sha256": "26bd476d18e374c48b9aab2a6b242d4502182c7192fd8e90f537301157ab3ebf",
+      "sha256": "aa8585ee3c16cc44a762c19d36499938ad93f7b581f1a72e7431533359cb4e3c",
       "textCardCount": 132,
       "url": "/data/books/Heb.json"
     },
@@ -527,7 +527,7 @@
       "cuvVerseCount": 108,
       "id": "Jas",
       "kjvVerseCount": 108,
-      "sha256": "6db0ad7d043a95f9740b0844ca95bffefd35aa1c8c39866c13b0071dcc6eb7ec",
+      "sha256": "38428d9a604f207af77fe0014b678806f5e773c4536837ad4fac372018ae5ee8",
       "textCardCount": 78,
       "url": "/data/books/Jas.json"
     },
@@ -550,11 +550,11 @@
       "url": "/data/books/2Pet.json"
     },
     {
-      "bytes": 218661,
+      "bytes": 218505,
       "cuvVerseCount": 105,
       "id": "1John",
       "kjvVerseCount": 105,
-      "sha256": "408d0fa54547f2b5e5a04cb411c61272ee2fcb195ec71e14d731b1e3c5fc5ab5",
+      "sha256": "b8ac959648b5a668966f79756d94c6a43a6b43d317527910900aac1cb981cc99",
       "textCardCount": 84,
       "url": "/data/books/1John.json"
     },

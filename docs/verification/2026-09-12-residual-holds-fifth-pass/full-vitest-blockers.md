@@ -68,4 +68,10 @@ GitHub `ubuntu-latest` runner 另有 `spawnSync rg ENOENT`（`scripts/migrateCod
 
 ## 5. 本轮仍可跑、且读公开包的面
 
-已实测通过面见同目录 `validate.txt` 与 `report.md`。全量 `npm test` 的失败面不读第五轮公开包修补。不补造真源来强行绿全量。GitHub `verify` 上 `validate:public-data` 应绿、全量 `npm test` 仍红，与 PR #32 / #33 / #34 同一类缺口。
+已实测通过：
+
+- `vitest run src/data/*PublicCardAudit.test.ts src/data/residualHoldsInventory.test.ts src/data/residualHoldsThirdPass.test.ts src/data/residualHoldsFourthPass.test.ts src/data/residualHoldsFifthPass.test.ts src/data/publicData.test.ts src/data/publicBibleData.test.ts scripts/generatePublicBibleData.test.mjs scripts/validatePublicRepository.test.mjs`：**74 files, 288 tests**
+- `node scripts/generatePublicBibleData.mjs --validate-only public/data`：66 卷、10,096 文字卡、0 unsafe
+- `node scripts/validatePublicRepository.mjs`：通过
+
+全量 `npm test` 的失败面不读第五轮公开包修补。不补造真源来强行绿全量。GitHub `verify` 上 `validate:public-data` 应绿、全量 `npm test` 仍红，与 PR #32 / #33 / #34 同一类缺口。

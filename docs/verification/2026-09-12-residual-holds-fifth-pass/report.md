@@ -94,9 +94,10 @@
 
 已跑：
 
-- 公开卷测 + residual holds + public data + generate/validate scripts（见 `validate.txt`）。
-- `node scripts/generatePublicBibleData.mjs --validate-only public/data`
-- `node scripts/validatePublicRepository.mjs`
+- `vitest run src/data/*PublicCardAudit.test.ts src/data/residualHoldsInventory.test.ts src/data/residualHoldsThirdPass.test.ts src/data/residualHoldsFourthPass.test.ts src/data/residualHoldsFifthPass.test.ts src/data/publicData.test.ts src/data/publicBibleData.test.ts scripts/generatePublicBibleData.test.mjs scripts/validatePublicRepository.test.mjs`：74/74 通过（288 tests）。
+- `node scripts/generatePublicBibleData.mjs --validate-only public/data`：66 卷、公开文字卡 10,096、无不安全串。
+- `node scripts/validatePublicRepository.mjs`：通过。
+- 原始输出见同目录 `validate.txt`。
 
 全量 `vitest run` / GitHub `verify` 的失败面仍是缺创世记图像、缺工作台 v4、缺综合解读生成 JSON / Doré 缩图，以及本快照 Node 22 跑 `.mts` / runner 无 `rg`。不读本轮公开包修补，不补造真源。明细见 `full-vitest-blockers.md`。
 

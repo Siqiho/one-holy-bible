@@ -92,7 +92,7 @@
 
 已跑：
 
-- 公开卷测 + residual-holds 第二至六轮 + public data / generate / validate 脚本：见同目录 `validate.txt`。
+- `vitest run src/data/*PublicCardAudit.test.ts src/data/residualHoldsInventory.test.ts src/data/residualHoldsThirdPass.test.ts src/data/residualHoldsFourthPass.test.ts src/data/residualHoldsFifthPass.test.ts src/data/residualHoldsSixthPass.test.ts src/data/publicData.test.ts src/data/publicBibleData.test.ts scripts/generatePublicBibleData.test.mjs scripts/validatePublicRepository.test.mjs`：75/75 通过（294 tests）。
 - `node scripts/generatePublicBibleData.mjs --validate-only public/data`：66 卷、公开文字卡 10,096、无不安全串。
 - `node scripts/validatePublicRepository.mjs`：通过。
 

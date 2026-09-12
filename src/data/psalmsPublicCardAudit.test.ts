@@ -75,6 +75,11 @@ const forbiddenFragments = [
   "剧歌相同",
   "礼拜人门仪式",
   "参王上5：。",
+  "甘路",
+  "牙方",
+  "上帝右边*",
+  "为1\"我主\"",
+  "辦白",
 ];
 
 function loadBook(bookId: string): PublicBookPayload {

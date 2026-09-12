@@ -1,0 +1,551 @@
+[
+  {
+    "cardId": "study-bible-1cor-10-8-p018-n100",
+    "bookId": "1Cor",
+    "field": "body",
+    "label": "三干→三千",
+    "count": 1,
+    "from": "二万三干",
+    "to": "二万三千"
+  },
+  {
+    "cardId": "study-bible-1cor-10-8-p018-n100",
+    "bookId": "1Cor",
+    "field": "body",
+    "label": "好淫→奸淫",
+    "count": 2,
+    "from": "好淫",
+    "to": "奸淫"
+  },
+  {
+    "cardId": "study-bible-1cor-10-8-p018-n100",
+    "bookId": "1Cor",
+    "field": "summary",
+    "label": "三干→三千",
+    "count": 1,
+    "from": "二万三干",
+    "to": "二万三千"
+  },
+  {
+    "cardId": "study-bible-1cor-10-8-p018-n100",
+    "bookId": "1Cor",
+    "field": "summary",
+    "label": "好淫→奸淫",
+    "count": 2,
+    "from": "好淫",
+    "to": "奸淫"
+  },
+  {
+    "cardId": "study-bible-1cor-10-8-p018-n100",
+    "bookId": "1Cor",
+    "field": "searchText",
+    "label": "三干→三千",
+    "count": 2,
+    "from": "二万三干",
+    "to": "二万三千"
+  },
+  {
+    "cardId": "study-bible-1cor-10-8-p018-n100",
+    "bookId": "1Cor",
+    "field": "searchText",
+    "label": "好淫→奸淫",
+    "count": 4,
+    "from": "好淫",
+    "to": "奸淫"
+  },
+  {
+    "cardId": "study-bible-1cor-10-18-p018-n152",
+    "bookId": "1Cor",
+    "field": "body",
+    "label": "《1约》→《旧约》",
+    "count": 1,
+    "from": "《1约》",
+    "to": "《旧约》"
+  },
+  {
+    "cardId": "study-bible-1cor-10-18-p018-n152",
+    "bookId": "1Cor",
+    "field": "summary",
+    "label": "《1约》→《旧约》",
+    "count": 1,
+    "from": "《1约》",
+    "to": "《旧约》"
+  },
+  {
+    "cardId": "study-bible-1cor-10-18-p018-n152",
+    "bookId": "1Cor",
+    "field": "searchText",
+    "label": "《1约》→《旧约》",
+    "count": 2,
+    "from": "《1约》",
+    "to": "《旧约》"
+  },
+  {
+    "cardId": "study-bible-1cor-11-4-p019-n164",
+    "bookId": "1Cor",
+    "field": "body",
+    "label": "头中→头巾",
+    "count": 1,
+    "from": "披肩或头中",
+    "to": "披肩或头巾"
+  },
+  {
+    "cardId": "study-bible-1cor-11-4-p019-n164",
+    "bookId": "1Cor",
+    "field": "summary",
+    "label": "头中→头巾",
+    "count": 1,
+    "from": "披肩或头中",
+    "to": "披肩或头巾"
+  },
+  {
+    "cardId": "study-bible-1cor-11-4-p019-n164",
+    "bookId": "1Cor",
+    "field": "searchText",
+    "label": "头中→头巾",
+    "count": 2,
+    "from": "披肩或头中",
+    "to": "披肩或头巾"
+  },
+  {
+    "cardId": "study-bible-1cor-11-29-p021-n117",
+    "bookId": "1Cor",
+    "field": "body",
+    "label": "響告→警告",
+    "count": 1,
+    "from": "響告",
+    "to": "警告"
+  },
+  {
+    "cardId": "study-bible-1cor-11-29-p021-n117",
+    "bookId": "1Cor",
+    "field": "body",
+    "label": "亵读→亵渎",
+    "count": 1,
+    "from": "亵读",
+    "to": "亵渎"
+  },
+  {
+    "cardId": "study-bible-1cor-11-29-p021-n117",
+    "bookId": "1Cor",
+    "field": "searchText",
+    "label": "響告→警告",
+    "count": 1,
+    "from": "響告",
+    "to": "警告"
+  },
+  {
+    "cardId": "study-bible-1cor-11-29-p021-n117",
+    "bookId": "1Cor",
+    "field": "searchText",
+    "label": "亵读→亵渎",
+    "count": 1,
+    "from": "亵读",
+    "to": "亵渎"
+  },
+  {
+    "cardId": "study-bible-1cor-intro-p001-n001",
+    "bookId": "1Cor",
+    "field": "body",
+    "label": "遺词→遣词",
+    "count": 1,
+    "from": "遺词",
+    "to": "遣词"
+  },
+  {
+    "cardId": "study-bible-1cor-intro-p001-n001",
+    "bookId": "1Cor",
+    "field": "summary",
+    "label": "遺词→遣词",
+    "count": 1,
+    "from": "遺词",
+    "to": "遣词"
+  },
+  {
+    "cardId": "study-bible-1cor-intro-p001-n001",
+    "bookId": "1Cor",
+    "field": "searchText",
+    "label": "遺词→遣词",
+    "count": 2,
+    "from": "遺词",
+    "to": "遣词"
+  },
+  {
+    "cardId": "study-bible-1sam-4-10-p014-n081",
+    "bookId": "1Sam",
+    "field": "body",
+    "label": "遺散→遣散",
+    "count": 1,
+    "from": "遺散",
+    "to": "遣散"
+  },
+  {
+    "cardId": "study-bible-1sam-4-10-p014-n081",
+    "bookId": "1Sam",
+    "field": "summary",
+    "label": "遺散→遣散",
+    "count": 1,
+    "from": "遺散",
+    "to": "遣散"
+  },
+  {
+    "cardId": "study-bible-1sam-4-10-p014-n081",
+    "bookId": "1Sam",
+    "field": "searchText",
+    "label": "遺散→遣散",
+    "count": 2,
+    "from": "遺散",
+    "to": "遣散"
+  },
+  {
+    "cardId": "study-bible-1tim-6-5-p014-n123",
+    "bookId": "1Tim",
+    "field": "summary",
+    "label": "遺责→谴责",
+    "count": 1,
+    "from": "遺责",
+    "to": "谴责"
+  },
+  {
+    "cardId": "study-bible-1tim-6-5-p014-n123",
+    "bookId": "1Tim",
+    "field": "searchText",
+    "label": "遺责→谴责",
+    "count": 2,
+    "from": "遺责",
+    "to": "谴责"
+  },
+  {
+    "cardId": "study-bible-2kgs-19-37-p035-n166",
+    "bookId": "2Kgs",
+    "field": "body",
+    "label": "亵读→亵渎",
+    "count": 1,
+    "from": "亵读",
+    "to": "亵渎"
+  },
+  {
+    "cardId": "study-bible-2kgs-19-37-p035-n166",
+    "bookId": "2Kgs",
+    "field": "summary",
+    "label": "亵读→亵渎",
+    "count": 1,
+    "from": "亵读",
+    "to": "亵渎"
+  },
+  {
+    "cardId": "study-bible-2kgs-19-37-p035-n166",
+    "bookId": "2Kgs",
+    "field": "searchText",
+    "label": "亵读→亵渎",
+    "count": 2,
+    "from": "亵读",
+    "to": "亵渎"
+  },
+  {
+    "cardId": "study-bible-acts-24-1-p059-n566",
+    "bookId": "Acts",
+    "field": "title",
+    "label": "辦士→辩士",
+    "count": 1,
+    "from": "辦士",
+    "to": "辩士"
+  },
+  {
+    "cardId": "study-bible-acts-24-1-p059-n566",
+    "bookId": "Acts",
+    "field": "body",
+    "label": "辦士→辩士",
+    "count": 1,
+    "from": "辦士",
+    "to": "辩士"
+  },
+  {
+    "cardId": "study-bible-acts-24-1-p059-n566",
+    "bookId": "Acts",
+    "field": "summary",
+    "label": "辦士→辩士",
+    "count": 1,
+    "from": "辦士",
+    "to": "辩士"
+  },
+  {
+    "cardId": "study-bible-acts-24-1-p059-n566",
+    "bookId": "Acts",
+    "field": "searchText",
+    "label": "辦士→辩士",
+    "count": 3,
+    "from": "辦士",
+    "to": "辩士"
+  },
+  {
+    "cardId": "study-bible-deut-6-16-p017-n108",
+    "bookId": "Deut",
+    "field": "body",
+    "label": "玛撤→玛撒",
+    "count": 1,
+    "from": "玛撤",
+    "to": "玛撒"
+  },
+  {
+    "cardId": "study-bible-deut-6-16-p017-n108",
+    "bookId": "Deut",
+    "field": "summary",
+    "label": "玛撤→玛撒",
+    "count": 1,
+    "from": "玛撤",
+    "to": "玛撒"
+  },
+  {
+    "cardId": "study-bible-deut-6-16-p017-n108",
+    "bookId": "Deut",
+    "field": "searchText",
+    "label": "玛撤→玛撒",
+    "count": 2,
+    "from": "玛撤",
+    "to": "玛撒"
+  },
+  {
+    "cardId": "study-bible-job-intro-p003-n007",
+    "bookId": "Job",
+    "field": "body",
+    "label": "辦论→辩论",
+    "count": 1,
+    "from": "辦论",
+    "to": "辩论"
+  },
+  {
+    "cardId": "study-bible-job-intro-p003-n007",
+    "bookId": "Job",
+    "field": "searchText",
+    "label": "辦论→辩论",
+    "count": 1,
+    "from": "辦论",
+    "to": "辩论"
+  },
+  {
+    "cardId": "study-bible-mark-3-29-p010-n047",
+    "bookId": "Mark",
+    "field": "body",
+    "label": "撤但→撒但",
+    "count": 1,
+    "from": "撤但",
+    "to": "撒但"
+  },
+  {
+    "cardId": "study-bible-mark-3-29-p010-n047",
+    "bookId": "Mark",
+    "field": "body",
+    "label": "亵读→亵渎",
+    "count": 1,
+    "from": "亵读",
+    "to": "亵渎"
+  },
+  {
+    "cardId": "study-bible-mark-3-29-p010-n047",
+    "bookId": "Mark",
+    "field": "summary",
+    "label": "亵读→亵渎",
+    "count": 1,
+    "from": "亵读",
+    "to": "亵渎"
+  },
+  {
+    "cardId": "study-bible-mark-3-29-p010-n047",
+    "bookId": "Mark",
+    "field": "searchText",
+    "label": "撤但→撒但",
+    "count": 1,
+    "from": "撤但",
+    "to": "撒但"
+  },
+  {
+    "cardId": "study-bible-mark-3-29-p010-n047",
+    "bookId": "Mark",
+    "field": "searchText",
+    "label": "亵读→亵渎",
+    "count": 2,
+    "from": "亵读",
+    "to": "亵渎"
+  },
+  {
+    "cardId": "study-bible-matt-1-19-p007-n017",
+    "bookId": "Matt",
+    "field": "body",
+    "label": "好淫→奸淫",
+    "count": 1,
+    "from": "好淫",
+    "to": "奸淫"
+  },
+  {
+    "cardId": "study-bible-matt-1-19-p007-n017",
+    "bookId": "Matt",
+    "field": "searchText",
+    "label": "好淫→奸淫",
+    "count": 1,
+    "from": "好淫",
+    "to": "奸淫"
+  },
+  {
+    "cardId": "study-bible-matt-5-27-p014-n104",
+    "bookId": "Matt",
+    "field": "body",
+    "label": "好淫→奸淫",
+    "count": 1,
+    "from": "好淫",
+    "to": "奸淫"
+  },
+  {
+    "cardId": "study-bible-matt-5-27-p014-n104",
+    "bookId": "Matt",
+    "field": "summary",
+    "label": "好淫→奸淫",
+    "count": 1,
+    "from": "好淫",
+    "to": "奸淫"
+  },
+  {
+    "cardId": "study-bible-matt-5-27-p014-n104",
+    "bookId": "Matt",
+    "field": "searchText",
+    "label": "好淫→奸淫",
+    "count": 2,
+    "from": "好淫",
+    "to": "奸淫"
+  },
+  {
+    "cardId": "study-bible-matt-9-3-p022-n150",
+    "bookId": "Matt",
+    "field": "body",
+    "label": "亵读→亵渎",
+    "count": 1,
+    "from": "亵读",
+    "to": "亵渎"
+  },
+  {
+    "cardId": "study-bible-matt-9-3-p022-n150",
+    "bookId": "Matt",
+    "field": "summary",
+    "label": "亵读→亵渎",
+    "count": 1,
+    "from": "亵读",
+    "to": "亵渎"
+  },
+  {
+    "cardId": "study-bible-matt-9-3-p022-n150",
+    "bookId": "Matt",
+    "field": "searchText",
+    "label": "亵读→亵渎",
+    "count": 2,
+    "from": "亵读",
+    "to": "亵渎"
+  },
+  {
+    "cardId": "study-bible-ps-110-1-p118-n553",
+    "bookId": "Ps",
+    "field": "body",
+    "label": "closed-quote-star",
+    "count": 1,
+    "from": "\"上帝右边*",
+    "to": "\"上帝右边\""
+  },
+  {
+    "cardId": "study-bible-ps-110-1-p118-n553",
+    "bookId": "Ps",
+    "field": "body",
+    "label": "table-prefix",
+    "count": 1,
+    "from": "为1\"我主\"",
+    "to": "为\"我主\""
+  },
+  {
+    "cardId": "study-bible-ps-110-1-p118-n553",
+    "bookId": "Ps",
+    "field": "searchText",
+    "label": "closed-quote-star",
+    "count": 1,
+    "from": "\"上帝右边*",
+    "to": "\"上帝右边\""
+  },
+  {
+    "cardId": "study-bible-ps-110-1-p118-n553",
+    "bookId": "Ps",
+    "field": "searchText",
+    "label": "table-prefix",
+    "count": 1,
+    "from": "为1\"我主\"",
+    "to": "为\"我主\""
+  },
+  {
+    "cardId": "study-bible-ps-110-3-p119-n560",
+    "bookId": "Ps",
+    "field": "body",
+    "label": "甘路→甘露",
+    "count": 1,
+    "from": "甘路",
+    "to": "甘露"
+  },
+  {
+    "cardId": "study-bible-ps-110-3-p119-n560",
+    "bookId": "Ps",
+    "field": "body",
+    "label": "牙方→东方",
+    "count": 1,
+    "from": "牙方",
+    "to": "东方"
+  },
+  {
+    "cardId": "study-bible-ps-110-3-p119-n560",
+    "bookId": "Ps",
+    "field": "summary",
+    "label": "甘路→甘露",
+    "count": 1,
+    "from": "甘路",
+    "to": "甘露"
+  },
+  {
+    "cardId": "study-bible-ps-110-3-p119-n560",
+    "bookId": "Ps",
+    "field": "summary",
+    "label": "牙方→东方",
+    "count": 1,
+    "from": "牙方",
+    "to": "东方"
+  },
+  {
+    "cardId": "study-bible-ps-110-3-p119-n560",
+    "bookId": "Ps",
+    "field": "searchText",
+    "label": "甘路→甘露",
+    "count": 2,
+    "from": "甘路",
+    "to": "甘露"
+  },
+  {
+    "cardId": "study-bible-ps-110-3-p119-n560",
+    "bookId": "Ps",
+    "field": "searchText",
+    "label": "牙方→东方",
+    "count": 2,
+    "from": "牙方",
+    "to": "东方"
+  },
+  {
+    "cardId": "study-bible-ps-intro-p003-n005",
+    "bookId": "Ps",
+    "field": "body",
+    "label": "辦白→辩白",
+    "count": 1,
+    "from": "辦白",
+    "to": "辩白"
+  },
+  {
+    "cardId": "study-bible-ps-intro-p003-n005",
+    "bookId": "Ps",
+    "field": "searchText",
+    "label": "辦白→辩白",
+    "count": 1,
+    "from": "辦白",
+    "to": "辩白"
+  }
+]

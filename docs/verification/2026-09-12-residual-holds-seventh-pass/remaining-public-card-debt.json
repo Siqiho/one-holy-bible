@@ -1,0 +1,147 @@
+{
+  "asOf": "2026-09-12",
+  "method": "Matthew keep/fix/hold; no Mac Resources; no invented study-bible text; no six-source rewrite",
+  "publicMix": {
+    "studyBible": 9089,
+    "ocr": 146,
+    "cmc": 858,
+    "message": 3,
+    "books": 66,
+    "cards": 10096
+  },
+  "needsMacResourcesOrSourcePdf": {
+    "heldStudyBible": 347,
+    "heldStudyBibleVerdict": "keep-hold",
+    "note": "第二轮已从 main 找回原文；无源 PDF 不能救回。第七轮不伪造权柄/儿子/诫命后文。"
+  },
+  "needsVolumeOcrLedger": {
+    "publicOcrHoldAsClass": 145,
+    "publicOcrKeep": 1,
+    "johnLeftoverOcr": ["image-text-43-约翰福音-codex-pdf-p019-img004"],
+    "note": "无卷级台账则不改正文、不补造、不撤卡。"
+  },
+  "ledgerOnlyDoNotLift": {
+    "isolationCmc": 18387,
+    "isolationCmcSha256": "fa086c106e0fe8f96facdc00e0946233b524a28e25d02c8a13ff8cb74643c257",
+    "publicCmcSha256": "57faabdbe9c8ced51267e6b1142581e1e5475c08e6392f8d2451f93bb87377f6",
+    "isolationStudyBible": 10,
+    "qidabenPublic": 0,
+    "hurlbutPublic": 0
+  },
+  "publicMidCutStillInPackage": [
+    {
+      "id": "study-bible-john-18-22-p046-n297",
+      "bookId": "John",
+      "fragment": "参了、12节",
+      "verdict": "hold-in-place",
+      "reason": "可能是参7、12节，无 PDF 不能补数字"
+    },
+    {
+      "id": "study-bible-john-3-17-p011-n061",
+      "bookId": "John",
+      "fragment": "受差遣的遭者自己",
+      "verdict": "hold-in-place",
+      "reason": "差遭已改差遣；「遭者自己」仍是中截，不补造差遣者"
+    },
+    {
+      "id": "study-bible-luke-19-30-p061-n651",
+      "bookId": "Luke",
+      "fragment": "路加懞只提到",
+      "verdict": "hold-in-place",
+      "reason": "懞不能唯一还原为则/仅/却；已删地图尺标，不补造该字"
+    },
+    {
+      "id": "study-bible-luke-6-29-p028-n173",
+      "bookId": "Luke",
+      "fragment": "懞生动地说明",
+      "verdict": "hold-in-place",
+      "reason": "与路 19:30 同类，懞无唯一还原"
+    },
+    {
+      "id": "study-bible-ps-12-8-p017-n078",
+      "bookId": "Ps",
+      "fragment": "懞提醒忠信人",
+      "verdict": "hold-in-place",
+      "reason": "懞无唯一还原，不补造"
+    },
+    {
+      "id": "study-bible-jer-26-19-p048-n469",
+      "bookId": "Jer",
+      "fragment": "入侵犹大这里指审判官。坐在，时降下灾祸",
+      "verdict": "hold-in-place",
+      "reason": "弥迎/己被已改；「这里指审判官。坐在，时」仍中截，无 PDF 不补造"
+    },
+    {
+      "id": "study-bible-isa-7-14-p018-n085",
+      "bookId": "Isa",
+      "fragment": "责备亚哈斯没有信心的世俗还有一些人认为",
+      "verdict": "hold-in-place",
+      "reason": "已删「见本书7:8.9」表尾；两侧中截无 PDF 不补造"
+    },
+    {
+      "id": "study-bible-acts-22-28-p058-n357",
+      "bookId": "Acts",
+      "fragment": "密谋罗余害保岁",
+      "verdict": "hold-in-place",
+      "reason": "年表/地图倾倒后的残句，无 PDF 不补造"
+    },
+    {
+      "id": "study-bible-acts-14-2-p050-n462",
+      "bookId": "Acts",
+      "fragment": "/23节；见本书9:2章",
+      "verdict": "hold-in-place",
+      "reason": "表头倾倒后正文讲以弗所/施洗约翰，属徒 18:24-25 亚波罗材料，不是徒 14:2；删表头不能复原本卡，无 PDF 不补造"
+    },
+    {
+      "id": "study-bible-ps-41-13-p044-n198",
+      "bookId": "Ps",
+      "fragment": "其中首似乎不属于相关诗篇的部分",
+      "verdict": "hold-in-place",
+      "reason": "「其中首」可能是「其中有些」或「其中三首」，无 PDF 不补造"
+    },
+    {
+      "id": "study-bible-1cor-11-4-p019-n164",
+      "bookId": "1Cor",
+      "fragment": "就必须先了当时的社会背景",
+      "verdict": "hold-in-place",
+      "reason": "「先了」可能是「先了解」中截；本轮只改同卡「披肩或头中」，不补造该字"
+    },
+    {
+      "id": "study-bible-1cor-11-29-p021-n117",
+      "bookId": "1Cor",
+      "fragment": "吃喝自己的吃喝就是定自己的罪了）",
+      "verdict": "hold-in-place",
+      "reason": "缺开括号/前半句；本轮只改同卡「亵读 / 響告」，不补造残句"
+    }
+  ],
+  "crossFieldCopyRemaining": [
+    {
+      "id": "study-bible-jas-2-5-p007-n033",
+      "note": "body 用「拣选术语」，summary/searchText 用「选举术语」。两词都合法，不按正文改写"
+    },
+    {
+      "note": "第七轮已按正文抄高置信残串：提前 6:5 body 已是「谴责」，summary/searchText 的「遺责」改为「谴责」。其余 summary 分叉多为括号切边 / 省略号截断。"
+    }
+  ],
+  "keepNotDebt": [
+    "Iesous 希腊转写（书/太）",
+    "形成鲜明对比",
+    "可读年表中的主后30",
+    "自己经历（含己经子串，不能当禁串）",
+    "非利士地",
+    "希伯来话（与希腊话/亚兰话并列）",
+    "隐罗结",
+    "ViaDolorosa",
+    "《和修》注",
+    "征收人头税",
+    "救赎大工 / 办理大工（大工合法；只有大工家是大卫 OCR）",
+    "着重（强调义）",
+    "善事上常用（上常是子串；只有与上常同在是上帝 OCR）",
+    "昆虫 / 昆兰 / 撤离 / 撤兵 / 撤销",
+    "墻垣 / 墻壁（墙的传统异体）"
+  ],
+  "blockedWithoutWorkbenchV4": [
+    "不能从工作台重生成 66 卷公开包",
+    "不能按用户全库数补齐研修本/CMC/启导本/故事卡缺口"
+  ]
+}

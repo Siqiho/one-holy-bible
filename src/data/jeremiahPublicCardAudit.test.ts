@@ -71,6 +71,9 @@ const forbiddenFragments = [
   "离开埃带领",
   "悔根据",
   "其他经上帝",
+  "迎萨",
+  "弥迎",
+  "所有的的",
 ];
 
 function loadBook(bookId: string): PublicBookPayload {
@@ -121,7 +124,7 @@ describe("Jeremiah public card audit and isolation hold-queue", () => {
       expect(ids.has(id), id).toBe(false);
     }
 
-    const blob = payload.textCards.map((card) => `${card.title ?? ""}\n${card.body ?? ""}`).join("\n");
+    const blob = payload.textCards.map((card) => `${card.title ?? ""}\n${card.body ?? ""}\n${card.summary ?? ""}\n${card.searchText ?? ""}`).join("\n");
     for (const fragment of forbiddenFragments) {
       expect(blob.includes(fragment), fragment).toBe(false);
     }

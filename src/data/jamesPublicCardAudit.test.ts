@@ -53,6 +53,10 @@ const forbiddenFragments = [
   "態勇生摇義利是：規",
   "《雅各者的理由",
   "一定与于雅各殉道之前",
+  "爱人如已",
+  "亚作拉罕",
+  "温菜",
+  "像慨",
 ];
 
 function loadBook(bookId: string): PublicBookPayload {
@@ -103,7 +107,7 @@ describe("James public card audit and isolation hold-queue", () => {
       expect(ids.has(id), id).toBe(false);
     }
 
-    const blob = payload.textCards.map((card) => `${card.title ?? ""}\n${card.body ?? ""}`).join("\n");
+    const blob = payload.textCards.map((card) => `${card.title ?? ""}\n${card.body ?? ""}\n${card.summary ?? ""}\n${card.searchText ?? ""}`).join("\n");
     for (const fragment of forbiddenFragments) {
       expect(blob.includes(fragment), fragment).toBe(false);
     }

@@ -64,6 +64,7 @@ const forbiddenFragments = [
   "《（圣和《〈旧约〉中的救恩历史",
   "以\"耶和华晓开始记述",
   "则针对公然违犯律法。。",
+  "爱人如已",
 ];
 
 function loadBook(bookId: string): PublicBookPayload {

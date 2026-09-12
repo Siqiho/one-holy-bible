@@ -55,6 +55,13 @@ const forbiddenFragments = [
   "差遭",
   "差遺",
   "《《圣经",
+  "迎拿",
+  "边拿",
+  "慢子",
+  "宜告了",
+  "彰昆",
+  "霞惊",
+  "14:20h本书",
 ];
 
 function loadPublicJohn(): PublicJohnPayload {
@@ -89,7 +96,7 @@ describe("John gospel public card audit", () => {
       expect(ids.has(id)).toBe(false);
     }
 
-    const blob = payload.textCards.map((card) => `${card.title ?? ""}\n${card.body ?? ""}`).join("\n");
+    const blob = payload.textCards.map((card) => `${card.title ?? ""}\n${card.body ?? ""}\n${card.summary ?? ""}\n${card.searchText ?? ""}`).join("\n");
     for (const fragment of forbiddenFragments) {
       expect(blob.includes(fragment)).toBe(false);
     }

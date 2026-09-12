@@ -1,0 +1,2486 @@
+[
+  {
+    "cardId": "study-bible-1cor-11-19-p020-n171",
+    "bookId": "1Cor",
+    "field": "summary",
+    "label": "summary-ocr",
+    "count": 1,
+    "from": "（《和修》\"经得起考验的人…7",
+    "to": "（《和修》\"经得起考验的人\""
+  },
+  {
+    "cardId": "study-bible-1cor-11-19-p020-n171",
+    "bookId": "1Cor",
+    "field": "searchText",
+    "label": "summary-ocr",
+    "count": 1,
+    "from": "（《和修》\"经得起考验的人…7",
+    "to": "（《和修》\"经得起考验的人\""
+  },
+  {
+    "cardId": "study-bible-1john-1-7-p006-n014",
+    "bookId": "1John",
+    "field": "summary",
+    "label": "summary-garbage",
+    "count": 1,
+    "from": "不会有隐藏的罪、假冒村诡作。",
+    "to": "不会有隐藏的罪。"
+  },
+  {
+    "cardId": "study-bible-1john-1-7-p006-n014",
+    "bookId": "1John",
+    "field": "searchText",
+    "label": "summary-garbage",
+    "count": 2,
+    "from": "不会有隐藏的罪、假冒村诡作。",
+    "to": "不会有隐藏的罪。"
+  },
+  {
+    "cardId": "study-bible-1john-1-8-p006-n016",
+    "bookId": "1John",
+    "field": "title",
+    "label": "quote-ocr",
+    "count": 1,
+    "from": "（《和修》\"没有罪》，",
+    "to": "（《和修》\"没有罪\"），"
+  },
+  {
+    "cardId": "study-bible-1john-1-8-p006-n016",
+    "bookId": "1John",
+    "field": "summary",
+    "label": "误人歧途→误入歧途",
+    "count": 1,
+    "from": "误人歧途",
+    "to": "误入歧途"
+  },
+  {
+    "cardId": "study-bible-1john-1-8-p006-n016",
+    "bookId": "1John",
+    "field": "summary",
+    "label": "承担资任→承担责任",
+    "count": 1,
+    "from": "承担资任",
+    "to": "承担责任"
+  },
+  {
+    "cardId": "study-bible-1john-1-8-p006-n016",
+    "bookId": "1John",
+    "field": "summary",
+    "label": "quote-ocr",
+    "count": 1,
+    "from": "（《和修》\"没有罪》，",
+    "to": "（《和修》\"没有罪\"），"
+  },
+  {
+    "cardId": "study-bible-1john-1-8-p006-n016",
+    "bookId": "1John",
+    "field": "searchText",
+    "label": "误人歧途→误入歧途",
+    "count": 2,
+    "from": "误人歧途",
+    "to": "误入歧途"
+  },
+  {
+    "cardId": "study-bible-1john-1-8-p006-n016",
+    "bookId": "1John",
+    "field": "searchText",
+    "label": "承担资任→承担责任",
+    "count": 2,
+    "from": "承担资任",
+    "to": "承担责任"
+  },
+  {
+    "cardId": "study-bible-1john-1-8-p006-n016",
+    "bookId": "1John",
+    "field": "searchText",
+    "label": "quote-ocr",
+    "count": 3,
+    "from": "（《和修》\"没有罪》，",
+    "to": "（《和修》\"没有罪\"），"
+  },
+  {
+    "cardId": "study-bible-1john-1-9-p006-n018",
+    "bookId": "1John",
+    "field": "summary",
+    "label": "table-tail",
+    "count": 1,
+    "from": "后来是为2:91本书4:20：［本书3:14.15；多3:3］2:10约11:10：［箴4:19：彼后1:10］2:11了维系",
+    "to": "后来是为了维系"
+  },
+  {
+    "cardId": "study-bible-1john-1-9-p006-n018",
+    "bookId": "1John",
+    "field": "searchText",
+    "label": "table-tail",
+    "count": 2,
+    "from": "后来是为2:91本书4:20：［本书3:14.15；多3:3］2:10约11:10：［箴4:19：彼后1:10］2:11了维系",
+    "to": "后来是为了维系"
+  },
+  {
+    "cardId": "study-bible-1john-intro-p003-n008",
+    "bookId": "1John",
+    "field": "body",
+    "label": "《<圣经〉概述》→《〈圣经〉概述》",
+    "count": 1,
+    "from": "《<圣经〉概述》",
+    "to": "《〈圣经〉概述》"
+  },
+  {
+    "cardId": "study-bible-1john-intro-p003-n008",
+    "bookId": "1John",
+    "field": "summary",
+    "label": "《<圣经〉概述》→《〈圣经〉概述》",
+    "count": 1,
+    "from": "《<圣经〉概述》",
+    "to": "《〈圣经〉概述》"
+  },
+  {
+    "cardId": "study-bible-1john-intro-p003-n008",
+    "bookId": "1John",
+    "field": "searchText",
+    "label": "《<圣经〉概述》→《〈圣经〉概述》",
+    "count": 2,
+    "from": "《<圣经〉概述》",
+    "to": "《〈圣经〉概述》"
+  },
+  {
+    "cardId": "study-bible-1sam-4-10-p014-n081",
+    "bookId": "1Sam",
+    "field": "body",
+    "label": "第了节→第2节",
+    "count": 1,
+    "from": "第了节",
+    "to": "第2节"
+  },
+  {
+    "cardId": "study-bible-1sam-4-10-p014-n081",
+    "bookId": "1Sam",
+    "field": "summary",
+    "label": "第了节→第2节",
+    "count": 1,
+    "from": "第了节",
+    "to": "第2节"
+  },
+  {
+    "cardId": "study-bible-1sam-4-10-p014-n081",
+    "bookId": "1Sam",
+    "field": "searchText",
+    "label": "第了节→第2节",
+    "count": 2,
+    "from": "第了节",
+    "to": "第2节"
+  },
+  {
+    "cardId": "study-bible-1tim-1-5-p005-n010",
+    "bookId": "1Tim",
+    "field": "summary",
+    "label": "日的→目的",
+    "count": 1,
+    "from": "命令的日的",
+    "to": "命令的目的"
+  },
+  {
+    "cardId": "study-bible-1tim-1-5-p005-n010",
+    "bookId": "1Tim",
+    "field": "summary",
+    "label": "圣贝做上→圣灵做工",
+    "count": 1,
+    "from": "由圣贝做上",
+    "to": "由圣灵做工"
+  },
+  {
+    "cardId": "study-bible-1tim-1-5-p005-n010",
+    "bookId": "1Tim",
+    "field": "summary",
+    "label": "長明→表明",
+    "count": 1,
+    "from": "清楚長明",
+    "to": "清楚表明"
+  },
+  {
+    "cardId": "study-bible-1tim-1-5-p005-n010",
+    "bookId": "1Tim",
+    "field": "summary",
+    "label": "发白内心→发自内心",
+    "count": 1,
+    "from": "发白内心",
+    "to": "发自内心"
+  },
+  {
+    "cardId": "study-bible-1tim-1-5-p005-n010",
+    "bookId": "1Tim",
+    "field": "searchText",
+    "label": "日的→目的",
+    "count": 2,
+    "from": "命令的日的",
+    "to": "命令的目的"
+  },
+  {
+    "cardId": "study-bible-1tim-1-5-p005-n010",
+    "bookId": "1Tim",
+    "field": "searchText",
+    "label": "圣贝做上→圣灵做工",
+    "count": 2,
+    "from": "由圣贝做上",
+    "to": "由圣灵做工"
+  },
+  {
+    "cardId": "study-bible-1tim-1-5-p005-n010",
+    "bookId": "1Tim",
+    "field": "searchText",
+    "label": "長明→表明",
+    "count": 2,
+    "from": "清楚長明",
+    "to": "清楚表明"
+  },
+  {
+    "cardId": "study-bible-1tim-1-5-p005-n010",
+    "bookId": "1Tim",
+    "field": "searchText",
+    "label": "发白内心→发自内心",
+    "count": 2,
+    "from": "发白内心",
+    "to": "发自内心"
+  },
+  {
+    "cardId": "study-bible-1tim-3-6-p009-n058-2-2-2-2",
+    "bookId": "1Tim",
+    "field": "summary",
+    "label": "初人教→初入教",
+    "count": 1,
+    "from": "不是初人教的",
+    "to": "不是初入教的"
+  },
+  {
+    "cardId": "study-bible-1tim-3-6-p009-n058-2-2-2-2",
+    "bookId": "1Tim",
+    "field": "searchText",
+    "label": "初人教→初入教",
+    "count": 2,
+    "from": "不是初人教的",
+    "to": "不是初入教的"
+  },
+  {
+    "cardId": "study-bible-1tim-3-12-p010-n071",
+    "bookId": "1Tim",
+    "field": "searchText",
+    "label": "火事→执事",
+    "count": 1,
+    "from": "作火事",
+    "to": "作执事"
+  },
+  {
+    "cardId": "study-bible-1tim-4-10-p011-n089",
+    "bookId": "1Tim",
+    "field": "searchText",
+    "label": "晋救论→普救论",
+    "count": 1,
+    "from": "教导晋救论",
+    "to": "教导普救论"
+  },
+  {
+    "cardId": "study-bible-1tim-5-20-p013-n095",
+    "bookId": "1Tim",
+    "field": "summary",
+    "label": "公开贵备→公开责备",
+    "count": 1,
+    "from": "公开贵备",
+    "to": "公开责备"
+  },
+  {
+    "cardId": "study-bible-1tim-5-20-p013-n095",
+    "bookId": "1Tim",
+    "field": "searchText",
+    "label": "公开贵备→公开责备",
+    "count": 2,
+    "from": "公开贵备",
+    "to": "公开责备"
+  },
+  {
+    "cardId": "study-bible-1tim-intro-p001-n001",
+    "bookId": "1Tim",
+    "field": "summary",
+    "label": "19世的纪→19世纪",
+    "count": 1,
+    "from": "19世的纪",
+    "to": "19世纪"
+  },
+  {
+    "cardId": "study-bible-1tim-intro-p001-n001",
+    "bookId": "1Tim",
+    "field": "summary",
+    "label": "今不同。天有→今天有",
+    "count": 1,
+    "from": "今不同。天有",
+    "to": "今天有"
+  },
+  {
+    "cardId": "study-bible-1tim-intro-p001-n001",
+    "bookId": "1Tim",
+    "field": "searchText",
+    "label": "19世的纪→19世纪",
+    "count": 2,
+    "from": "19世的纪",
+    "to": "19世纪"
+  },
+  {
+    "cardId": "study-bible-1tim-intro-p001-n001",
+    "bookId": "1Tim",
+    "field": "searchText",
+    "label": "今不同。天有→今天有",
+    "count": 2,
+    "from": "今不同。天有",
+    "to": "今天有"
+  },
+  {
+    "cardId": "study-bible-1tim-intro-p002-n006",
+    "bookId": "1Tim",
+    "field": "summary",
+    "label": "世是人→世人",
+    "count": 1,
+    "from": "带给世是人",
+    "to": "带给世人"
+  },
+  {
+    "cardId": "study-bible-1tim-intro-p002-n006",
+    "bookId": "1Tim",
+    "field": "searchText",
+    "label": "世是人→世人",
+    "count": 2,
+    "from": "带给世是人",
+    "to": "带给世人"
+  },
+  {
+    "cardId": "study-bible-acts-intro-p005-n009",
+    "bookId": "Acts",
+    "field": "body",
+    "label": "《<圣经〉概述》→《〈圣经〉概述》",
+    "count": 1,
+    "from": "《<圣经〉概述》",
+    "to": "《〈圣经〉概述》"
+  },
+  {
+    "cardId": "study-bible-acts-intro-p005-n009",
+    "bookId": "Acts",
+    "field": "searchText",
+    "label": "《<圣经〉概述》→《〈圣经〉概述》",
+    "count": 1,
+    "from": "《<圣经〉概述》",
+    "to": "《〈圣经〉概述》"
+  },
+  {
+    "cardId": "study-bible-deut-1-26-p007-n026",
+    "bookId": "Deut",
+    "field": "searchText",
+    "label": "懞.25节→25节",
+    "count": 1,
+    "from": "懞.25节",
+    "to": "25节"
+  },
+  {
+    "cardId": "study-bible-deut-5-29-p016-n096",
+    "bookId": "Deut",
+    "field": "searchText",
+    "label": "21淮→21注",
+    "count": 1,
+    "from": "21淮",
+    "to": "21注"
+  },
+  {
+    "cardId": "study-bible-deut-6-5-p016-n117",
+    "bookId": "Deut",
+    "field": "searchText",
+    "label": "第且是→第一且是",
+    "count": 1,
+    "from": "第且是",
+    "to": "第一且是"
+  },
+  {
+    "cardId": "study-bible-deut-6-13-p016-n127",
+    "bookId": "Deut",
+    "field": "searchText",
+    "label": "路48→路4:8",
+    "count": 1,
+    "from": "路48）",
+    "to": "路4:8）"
+  },
+  {
+    "cardId": "study-bible-deut-8-7-p019-n151",
+    "bookId": "Deut",
+    "field": "searchText",
+    "label": "第了节→第2节",
+    "count": 1,
+    "from": "第了节",
+    "to": "第2节"
+  },
+  {
+    "cardId": "study-bible-deut-12-16-p024-n220",
+    "bookId": "Deut",
+    "field": "searchText",
+    "label": "用来罪的→用来赎罪的",
+    "count": 1,
+    "from": "用来罪的",
+    "to": "用来赎罪的"
+  },
+  {
+    "cardId": "study-bible-deut-29-29-p042-n402",
+    "bookId": "Deut",
+    "field": "searchText",
+    "label": "searchText-garbage",
+    "count": 1,
+    "from": "（见30:11-14）。规改邊有隻準間金業器",
+    "to": "（见30:11-14）。"
+  },
+  {
+    "cardId": "study-bible-deut-intro-p003-n007",
+    "bookId": "Deut",
+    "field": "searchText",
+    "label": "《《圣概述》→《〈圣经〉概述》",
+    "count": 1,
+    "from": "《《圣概述》",
+    "to": "《〈圣经〉概述》"
+  },
+  {
+    "cardId": "study-bible-esth-intro-p003-n007",
+    "bookId": "Esth",
+    "field": "body",
+    "label": "《<圣经〉概述》→《〈圣经〉概述》",
+    "count": 1,
+    "from": "《<圣经〉概述》",
+    "to": "《〈圣经〉概述》"
+  },
+  {
+    "cardId": "study-bible-esth-intro-p003-n007",
+    "bookId": "Esth",
+    "field": "searchText",
+    "label": "《<圣经〉概述》→《〈圣经〉概述》",
+    "count": 1,
+    "from": "《<圣经〉概述》",
+    "to": "《〈圣经〉概述》"
+  },
+  {
+    "cardId": "study-bible-exod-4-5-p011-n048",
+    "bookId": "Exod",
+    "field": "summary",
+    "label": "summary-dump",
+    "count": 1,
+    "from": "以回应上帝对以色列人的心意。法老的心变刚硬宣告 刚硬我［耶和华］将耶",
+    "to": "以回应上帝对以色列人的心意。"
+  },
+  {
+    "cardId": "study-bible-exod-4-5-p011-n048",
+    "bookId": "Exod",
+    "field": "searchText",
+    "label": "summary-dump",
+    "count": 1,
+    "from": "以回应上帝对以色列人的心意。法老的心变刚硬宣告 刚硬我［耶和华］将耶",
+    "to": "以回应上帝对以色列人的心意。"
+  },
+  {
+    "cardId": "study-bible-exod-22-9-p037-n190",
+    "bookId": "Exod",
+    "field": "body",
+    "label": "占为已有→占为己有",
+    "count": 1,
+    "from": "占为已有",
+    "to": "占为己有"
+  },
+  {
+    "cardId": "study-bible-exod-22-9-p037-n190",
+    "bookId": "Exod",
+    "field": "summary",
+    "label": "占为已有→占为己有",
+    "count": 1,
+    "from": "占为已有",
+    "to": "占为己有"
+  },
+  {
+    "cardId": "study-bible-exod-22-9-p037-n190",
+    "bookId": "Exod",
+    "field": "searchText",
+    "label": "占为已有→占为己有",
+    "count": 2,
+    "from": "占为已有",
+    "to": "占为己有"
+  },
+  {
+    "cardId": "study-bible-exod-23-6-p038-n294",
+    "bookId": "Exod",
+    "field": "body",
+    "label": "table-tail",
+    "count": 1,
+    "from": "（3节）。24:1K本书28:1：见本书6:231民11:1624:2m13.23:10-19见20:22-26注。",
+    "to": "（3节）。"
+  },
+  {
+    "cardId": "study-bible-exod-23-6-p038-n294",
+    "bookId": "Exod",
+    "field": "summary",
+    "label": "table-tail",
+    "count": 1,
+    "from": "（3节）。24:1K本书28:1：见本书6:231民11:1624:2m13.23:10-19见20:22-26注。",
+    "to": "（3节）。"
+  },
+  {
+    "cardId": "study-bible-exod-23-6-p038-n294",
+    "bookId": "Exod",
+    "field": "searchText",
+    "label": "table-tail",
+    "count": 2,
+    "from": "（3节）。24:1K本书28:1：见本书6:231民11:1624:2m13.23:10-19见20:22-26注。",
+    "to": "（3节）。"
+  },
+  {
+    "cardId": "study-bible-ezek-38-6-p058-n472",
+    "bookId": "Ezek",
+    "field": "body",
+    "label": "人侵→入侵",
+    "count": 1,
+    "from": "人侵",
+    "to": "入侵"
+  },
+  {
+    "cardId": "study-bible-ezek-38-6-p058-n472",
+    "bookId": "Ezek",
+    "field": "summary",
+    "label": "人侵→入侵",
+    "count": 1,
+    "from": "人侵",
+    "to": "入侵"
+  },
+  {
+    "cardId": "study-bible-ezek-38-6-p058-n472",
+    "bookId": "Ezek",
+    "field": "searchText",
+    "label": "人侵→入侵",
+    "count": 2,
+    "from": "人侵",
+    "to": "入侵"
+  },
+  {
+    "cardId": "study-bible-ezek-intro-p003-n008",
+    "bookId": "Ezek",
+    "field": "body",
+    "label": "《《旧约〉→《〈旧约〉",
+    "count": 1,
+    "from": "《《旧约〉",
+    "to": "《〈旧约〉"
+  },
+  {
+    "cardId": "study-bible-ezek-intro-p003-n008",
+    "bookId": "Ezek",
+    "field": "body",
+    "label": "《〈圣经》概述》→《〈圣经〉概述》",
+    "count": 1,
+    "from": "《〈圣经》概述》",
+    "to": "《〈圣经〉概述》"
+  },
+  {
+    "cardId": "study-bible-ezek-intro-p003-n008",
+    "bookId": "Ezek",
+    "field": "searchText",
+    "label": "《《旧约〉→《〈旧约〉",
+    "count": 1,
+    "from": "《《旧约〉",
+    "to": "《〈旧约〉"
+  },
+  {
+    "cardId": "study-bible-ezek-intro-p003-n008",
+    "bookId": "Ezek",
+    "field": "searchText",
+    "label": "《〈圣经》概述》→《〈圣经〉概述》",
+    "count": 1,
+    "from": "《〈圣经》概述》",
+    "to": "《〈圣经〉概述》"
+  },
+  {
+    "cardId": "study-bible-gen-14-12-p033-n108",
+    "bookId": "Gen",
+    "field": "body",
+    "label": "人侵→入侵",
+    "count": 1,
+    "from": "人侵",
+    "to": "入侵"
+  },
+  {
+    "cardId": "study-bible-gen-14-12-p033-n108",
+    "bookId": "Gen",
+    "field": "summary",
+    "label": "人侵→入侵",
+    "count": 1,
+    "from": "人侵",
+    "to": "入侵"
+  },
+  {
+    "cardId": "study-bible-gen-14-12-p033-n108",
+    "bookId": "Gen",
+    "field": "searchText",
+    "label": "人侵→入侵",
+    "count": 2,
+    "from": "人侵",
+    "to": "入侵"
+  },
+  {
+    "cardId": "study-bible-gen-49-19-p082-n637",
+    "bookId": "Gen",
+    "field": "body",
+    "label": "人侵→入侵",
+    "count": 2,
+    "from": "人侵",
+    "to": "入侵"
+  },
+  {
+    "cardId": "study-bible-gen-49-19-p082-n637",
+    "bookId": "Gen",
+    "field": "summary",
+    "label": "人侵→入侵",
+    "count": 2,
+    "from": "人侵",
+    "to": "入侵"
+  },
+  {
+    "cardId": "study-bible-gen-49-19-p082-n637",
+    "bookId": "Gen",
+    "field": "searchText",
+    "label": "人侵→入侵",
+    "count": 4,
+    "from": "人侵",
+    "to": "入侵"
+  },
+  {
+    "cardId": "study-bible-hab-1-4-p004-n007",
+    "bookId": "Hab",
+    "field": "body",
+    "label": "人侵→入侵",
+    "count": 1,
+    "from": "人侵",
+    "to": "入侵"
+  },
+  {
+    "cardId": "study-bible-hab-1-4-p004-n007",
+    "bookId": "Hab",
+    "field": "searchText",
+    "label": "人侵→入侵",
+    "count": 1,
+    "from": "人侵",
+    "to": "入侵"
+  },
+  {
+    "cardId": "study-bible-hos-intro-p003-n006",
+    "bookId": "Hos",
+    "field": "body",
+    "label": "《《旧约〉→《〈旧约〉",
+    "count": 1,
+    "from": "《《旧约〉",
+    "to": "《〈旧约〉"
+  },
+  {
+    "cardId": "study-bible-hos-intro-p003-n006",
+    "bookId": "Hos",
+    "field": "searchText",
+    "label": "《《旧约〉→《〈旧约〉",
+    "count": 1,
+    "from": "《《旧约〉",
+    "to": "《〈旧约〉"
+  },
+  {
+    "cardId": "study-bible-isa-10-3-p023-n109",
+    "bookId": "Isa",
+    "field": "title",
+    "label": "人侵→入侵",
+    "count": 1,
+    "from": "人侵",
+    "to": "入侵"
+  },
+  {
+    "cardId": "study-bible-isa-10-3-p023-n109",
+    "bookId": "Isa",
+    "field": "body",
+    "label": "人侵→入侵",
+    "count": 1,
+    "from": "人侵",
+    "to": "入侵"
+  },
+  {
+    "cardId": "study-bible-isa-10-3-p023-n109",
+    "bookId": "Isa",
+    "field": "summary",
+    "label": "人侵→入侵",
+    "count": 1,
+    "from": "人侵",
+    "to": "入侵"
+  },
+  {
+    "cardId": "study-bible-isa-10-3-p023-n109",
+    "bookId": "Isa",
+    "field": "searchText",
+    "label": "人侵→入侵",
+    "count": 3,
+    "from": "人侵",
+    "to": "入侵"
+  },
+  {
+    "cardId": "study-bible-isa-15-9-p031-n154",
+    "bookId": "Isa",
+    "field": "body",
+    "label": "人侵→入侵",
+    "count": 1,
+    "from": "人侵",
+    "to": "入侵"
+  },
+  {
+    "cardId": "study-bible-isa-15-9-p031-n154",
+    "bookId": "Isa",
+    "field": "summary",
+    "label": "人侵→入侵",
+    "count": 1,
+    "from": "人侵",
+    "to": "入侵"
+  },
+  {
+    "cardId": "study-bible-isa-15-9-p031-n154",
+    "bookId": "Isa",
+    "field": "searchText",
+    "label": "人侵→入侵",
+    "count": 2,
+    "from": "人侵",
+    "to": "入侵"
+  },
+  {
+    "cardId": "study-bible-isa-25-2-p040-n328",
+    "bookId": "Isa",
+    "field": "body",
+    "label": "人侵→入侵",
+    "count": 1,
+    "from": "人侵",
+    "to": "入侵"
+  },
+  {
+    "cardId": "study-bible-isa-25-2-p040-n328",
+    "bookId": "Isa",
+    "field": "summary",
+    "label": "人侵→入侵",
+    "count": 1,
+    "from": "人侵",
+    "to": "入侵"
+  },
+  {
+    "cardId": "study-bible-isa-25-2-p040-n328",
+    "bookId": "Isa",
+    "field": "searchText",
+    "label": "人侵→入侵",
+    "count": 2,
+    "from": "人侵",
+    "to": "入侵"
+  },
+  {
+    "cardId": "study-bible-isa-32-10-p050-n439",
+    "bookId": "Isa",
+    "field": "body",
+    "label": "人侵→入侵",
+    "count": 1,
+    "from": "人侵",
+    "to": "入侵"
+  },
+  {
+    "cardId": "study-bible-isa-32-10-p050-n439",
+    "bookId": "Isa",
+    "field": "summary",
+    "label": "人侵→入侵",
+    "count": 1,
+    "from": "人侵",
+    "to": "入侵"
+  },
+  {
+    "cardId": "study-bible-isa-32-10-p050-n439",
+    "bookId": "Isa",
+    "field": "searchText",
+    "label": "人侵→入侵",
+    "count": 2,
+    "from": "人侵",
+    "to": "入侵"
+  },
+  {
+    "cardId": "study-bible-isa-52-1-p080-n747",
+    "bookId": "Isa",
+    "field": "body",
+    "label": "人侵→入侵",
+    "count": 1,
+    "from": "人侵",
+    "to": "入侵"
+  },
+  {
+    "cardId": "study-bible-isa-52-1-p080-n747",
+    "bookId": "Isa",
+    "field": "searchText",
+    "label": "人侵→入侵",
+    "count": 1,
+    "from": "人侵",
+    "to": "入侵"
+  },
+  {
+    "cardId": "study-bible-jas-1-5-p005-n008",
+    "bookId": "Jas",
+    "field": "summary",
+    "label": "像慨→慷慨",
+    "count": 1,
+    "from": "像慨",
+    "to": "慷慨"
+  },
+  {
+    "cardId": "study-bible-jas-1-5-p005-n008",
+    "bookId": "Jas",
+    "field": "searchText",
+    "label": "像慨→慷慨",
+    "count": 2,
+    "from": "像慨",
+    "to": "慷慨"
+  },
+  {
+    "cardId": "study-bible-jas-2-8-p012-n067",
+    "bookId": "Jas",
+    "field": "summary",
+    "label": "爱人如已→爱人如己",
+    "count": 1,
+    "from": "爱人如已",
+    "to": "爱人如己"
+  },
+  {
+    "cardId": "study-bible-jas-2-8-p012-n067",
+    "bookId": "Jas",
+    "field": "searchText",
+    "label": "爱人如已→爱人如己",
+    "count": 2,
+    "from": "爱人如已",
+    "to": "爱人如己"
+  },
+  {
+    "cardId": "study-bible-jas-2-23-p009-n056",
+    "bookId": "Jas",
+    "field": "summary",
+    "label": "亚作拉罕→亚伯拉罕",
+    "count": 1,
+    "from": "亚作拉罕",
+    "to": "亚伯拉罕"
+  },
+  {
+    "cardId": "study-bible-jas-2-23-p009-n056",
+    "bookId": "Jas",
+    "field": "searchText",
+    "label": "亚作拉罕→亚伯拉罕",
+    "count": 2,
+    "from": "亚作拉罕",
+    "to": "亚伯拉罕"
+  },
+  {
+    "cardId": "study-bible-jas-3-13-p010-n046",
+    "bookId": "Jas",
+    "field": "summary",
+    "label": "温菜→温柔",
+    "count": 1,
+    "from": "将温菜",
+    "to": "将温柔"
+  },
+  {
+    "cardId": "study-bible-jas-3-13-p010-n046",
+    "bookId": "Jas",
+    "field": "searchText",
+    "label": "温菜→温柔",
+    "count": 2,
+    "from": "将温菜",
+    "to": "将温柔"
+  },
+  {
+    "cardId": "study-bible-jas-5-4-p012-n066",
+    "bookId": "Jas",
+    "field": "searchText",
+    "label": "爱人如已→爱人如己",
+    "count": 1,
+    "from": "爱人如已",
+    "to": "爱人如己"
+  },
+  {
+    "cardId": "study-bible-jas-intro-p002-n006",
+    "bookId": "Jas",
+    "field": "body",
+    "label": "《<圣经〉概述》→《〈圣经〉概述》",
+    "count": 1,
+    "from": "《<圣经〉概述》",
+    "to": "《〈圣经〉概述》"
+  },
+  {
+    "cardId": "study-bible-jas-intro-p002-n006",
+    "bookId": "Jas",
+    "field": "summary",
+    "label": "《<圣经〉概述》→《〈圣经〉概述》",
+    "count": 1,
+    "from": "《<圣经〉概述》",
+    "to": "《〈圣经〉概述》"
+  },
+  {
+    "cardId": "study-bible-jas-intro-p002-n006",
+    "bookId": "Jas",
+    "field": "searchText",
+    "label": "《<圣经〉概述》→《〈圣经〉概述》",
+    "count": 2,
+    "from": "《<圣经〉概述》",
+    "to": "《〈圣经〉概述》"
+  },
+  {
+    "cardId": "study-bible-jer-1-3-p007-n018",
+    "bookId": "Jer",
+    "field": "searchText",
+    "label": "人侵→入侵",
+    "count": 1,
+    "from": "人侵",
+    "to": "入侵"
+  },
+  {
+    "cardId": "study-bible-jer-18-8-p037-n251",
+    "bookId": "Jer",
+    "field": "searchText",
+    "label": "差遗→差遣",
+    "count": 1,
+    "from": "差遗",
+    "to": "差遣"
+  },
+  {
+    "cardId": "study-bible-jer-25-38-p047-n453",
+    "bookId": "Jer",
+    "field": "body",
+    "label": "《《和修》→《和修》",
+    "count": 1,
+    "from": "《《和修》",
+    "to": "《和修》"
+  },
+  {
+    "cardId": "study-bible-jer-25-38-p047-n453",
+    "bookId": "Jer",
+    "field": "summary",
+    "label": "《《和修》→《和修》",
+    "count": 1,
+    "from": "《《和修》",
+    "to": "《和修》"
+  },
+  {
+    "cardId": "study-bible-jer-25-38-p047-n453",
+    "bookId": "Jer",
+    "field": "searchText",
+    "label": "《《和修》→《和修》",
+    "count": 2,
+    "from": "《《和修》",
+    "to": "《和修》"
+  },
+  {
+    "cardId": "study-bible-jer-26-18-p048-n467",
+    "bookId": "Jer",
+    "field": "body",
+    "label": "弥迎→弥迦",
+    "count": 1,
+    "from": "弥迎",
+    "to": "弥迦"
+  },
+  {
+    "cardId": "study-bible-jer-26-18-p048-n467",
+    "bookId": "Jer",
+    "field": "summary",
+    "label": "弥迎→弥迦",
+    "count": 1,
+    "from": "弥迎",
+    "to": "弥迦"
+  },
+  {
+    "cardId": "study-bible-jer-26-18-p048-n467",
+    "bookId": "Jer",
+    "field": "searchText",
+    "label": "弥迎→弥迦",
+    "count": 2,
+    "from": "弥迎",
+    "to": "弥迦"
+  },
+  {
+    "cardId": "study-bible-jer-26-19-p048-n469",
+    "bookId": "Jer",
+    "field": "body",
+    "label": "弥迎→弥迦",
+    "count": 2,
+    "from": "弥迎",
+    "to": "弥迦"
+  },
+  {
+    "cardId": "study-bible-jer-26-19-p048-n469",
+    "bookId": "Jer",
+    "field": "body",
+    "label": "当时己被→当时已被",
+    "count": 1,
+    "from": "当时己被",
+    "to": "当时已被"
+  },
+  {
+    "cardId": "study-bible-jer-26-19-p048-n469",
+    "bookId": "Jer",
+    "field": "summary",
+    "label": "弥迎→弥迦",
+    "count": 2,
+    "from": "弥迎",
+    "to": "弥迦"
+  },
+  {
+    "cardId": "study-bible-jer-26-19-p048-n469",
+    "bookId": "Jer",
+    "field": "summary",
+    "label": "当时己被→当时已被",
+    "count": 1,
+    "from": "当时己被",
+    "to": "当时已被"
+  },
+  {
+    "cardId": "study-bible-jer-26-19-p048-n469",
+    "bookId": "Jer",
+    "field": "searchText",
+    "label": "弥迎→弥迦",
+    "count": 4,
+    "from": "弥迎",
+    "to": "弥迦"
+  },
+  {
+    "cardId": "study-bible-jer-26-19-p048-n469",
+    "bookId": "Jer",
+    "field": "searchText",
+    "label": "当时己被→当时已被",
+    "count": 2,
+    "from": "当时己被",
+    "to": "当时已被"
+  },
+  {
+    "cardId": "study-bible-jer-36-6-p062-n452",
+    "bookId": "Jer",
+    "field": "searchText",
+    "label": "人侵→入侵",
+    "count": 1,
+    "from": "人侵",
+    "to": "入侵"
+  },
+  {
+    "cardId": "study-bible-jer-39-2-p066-n481",
+    "bookId": "Jer",
+    "field": "body",
+    "label": "第了节→第2节",
+    "count": 1,
+    "from": "第了节",
+    "to": "第2节"
+  },
+  {
+    "cardId": "study-bible-jer-39-2-p066-n481",
+    "bookId": "Jer",
+    "field": "summary",
+    "label": "第了节→第2节",
+    "count": 1,
+    "from": "第了节",
+    "to": "第2节"
+  },
+  {
+    "cardId": "study-bible-jer-39-2-p066-n481",
+    "bookId": "Jer",
+    "field": "searchText",
+    "label": "第了节→第2节",
+    "count": 2,
+    "from": "第了节",
+    "to": "第2节"
+  },
+  {
+    "cardId": "study-bible-jer-41-1-p068-n492",
+    "bookId": "Jer",
+    "field": "searchText",
+    "label": "盼希望→盼望",
+    "count": 1,
+    "from": "盼希望",
+    "to": "盼望"
+  },
+  {
+    "cardId": "study-bible-jer-47-2-p076-n800",
+    "bookId": "Jer",
+    "field": "body",
+    "label": "迎萨→迦萨",
+    "count": 1,
+    "from": "迎萨",
+    "to": "迦萨"
+  },
+  {
+    "cardId": "study-bible-jer-47-2-p076-n800",
+    "bookId": "Jer",
+    "field": "body",
+    "label": "所有的的→所有的",
+    "count": 1,
+    "from": "所有的的",
+    "to": "所有的"
+  },
+  {
+    "cardId": "study-bible-jer-47-2-p076-n800",
+    "bookId": "Jer",
+    "field": "summary",
+    "label": "迎萨→迦萨",
+    "count": 1,
+    "from": "迎萨",
+    "to": "迦萨"
+  },
+  {
+    "cardId": "study-bible-jer-47-2-p076-n800",
+    "bookId": "Jer",
+    "field": "summary",
+    "label": "所有的的→所有的",
+    "count": 1,
+    "from": "所有的的",
+    "to": "所有的"
+  },
+  {
+    "cardId": "study-bible-jer-47-2-p076-n800",
+    "bookId": "Jer",
+    "field": "searchText",
+    "label": "迎萨→迦萨",
+    "count": 2,
+    "from": "迎萨",
+    "to": "迦萨"
+  },
+  {
+    "cardId": "study-bible-jer-47-2-p076-n800",
+    "bookId": "Jer",
+    "field": "searchText",
+    "label": "所有的的→所有的",
+    "count": 2,
+    "from": "所有的的",
+    "to": "所有的"
+  },
+  {
+    "cardId": "study-bible-jer-49-28-p082-n907",
+    "bookId": "Jer",
+    "field": "searchText",
+    "label": "人侵→入侵",
+    "count": 1,
+    "from": "人侵",
+    "to": "入侵"
+  },
+  {
+    "cardId": "study-bible-jer-50-7-p083-n877",
+    "bookId": "Jer",
+    "field": "body",
+    "label": "误人歧途→误入歧途",
+    "count": 1,
+    "from": "误人歧途",
+    "to": "误入歧途"
+  },
+  {
+    "cardId": "study-bible-jer-50-7-p083-n877",
+    "bookId": "Jer",
+    "field": "summary",
+    "label": "误人歧途→误入歧途",
+    "count": 1,
+    "from": "误人歧途",
+    "to": "误入歧途"
+  },
+  {
+    "cardId": "study-bible-jer-50-7-p083-n877",
+    "bookId": "Jer",
+    "field": "searchText",
+    "label": "误人歧途→误入歧途",
+    "count": 2,
+    "from": "误人歧途",
+    "to": "误入歧途"
+  },
+  {
+    "cardId": "study-bible-jer-50-29-p085-n610",
+    "bookId": "Jer",
+    "field": "searchText",
+    "label": "人侵→入侵",
+    "count": 1,
+    "from": "人侵",
+    "to": "入侵"
+  },
+  {
+    "cardId": "study-bible-jer-intro-p004-n006",
+    "bookId": "Jer",
+    "field": "body",
+    "label": "《《旧约〉→《〈旧约〉",
+    "count": 1,
+    "from": "《《旧约〉",
+    "to": "《〈旧约〉"
+  },
+  {
+    "cardId": "study-bible-jer-intro-p004-n006",
+    "bookId": "Jer",
+    "field": "body",
+    "label": "《〈圣经》概述》→《〈圣经〉概述》",
+    "count": 1,
+    "from": "《〈圣经》概述》",
+    "to": "《〈圣经〉概述》"
+  },
+  {
+    "cardId": "study-bible-jer-intro-p004-n006",
+    "bookId": "Jer",
+    "field": "searchText",
+    "label": "《《旧约〉→《〈旧约〉",
+    "count": 1,
+    "from": "《《旧约〉",
+    "to": "《〈旧约〉"
+  },
+  {
+    "cardId": "study-bible-jer-intro-p004-n006",
+    "bookId": "Jer",
+    "field": "searchText",
+    "label": "《〈圣经》概述》→《〈圣经〉概述》",
+    "count": 1,
+    "from": "《〈圣经》概述》",
+    "to": "《〈圣经〉概述》"
+  },
+  {
+    "cardId": "study-bible-john-2-1-p009-n041",
+    "bookId": "John",
+    "field": "body",
+    "label": "迎拿→迦拿",
+    "count": 1,
+    "from": "迎拿",
+    "to": "迦拿"
+  },
+  {
+    "cardId": "study-bible-john-2-1-p009-n041",
+    "bookId": "John",
+    "field": "searchText",
+    "label": "迎拿→迦拿",
+    "count": 1,
+    "from": "迎拿",
+    "to": "迦拿"
+  },
+  {
+    "cardId": "study-bible-john-2-12-p009-n036",
+    "bookId": "John",
+    "field": "body",
+    "label": "边拿→迦拿",
+    "count": 1,
+    "from": "从边拿步行",
+    "to": "从迦拿步行"
+  },
+  {
+    "cardId": "study-bible-john-2-12-p009-n036",
+    "bookId": "John",
+    "field": "body",
+    "label": "迎拿→迦拿",
+    "count": 1,
+    "from": "迎拿",
+    "to": "迦拿"
+  },
+  {
+    "cardId": "study-bible-john-2-12-p009-n036",
+    "bookId": "John",
+    "field": "summary",
+    "label": "边拿→迦拿",
+    "count": 1,
+    "from": "从边拿步行",
+    "to": "从迦拿步行"
+  },
+  {
+    "cardId": "study-bible-john-2-12-p009-n036",
+    "bookId": "John",
+    "field": "summary",
+    "label": "迎拿→迦拿",
+    "count": 1,
+    "from": "迎拿",
+    "to": "迦拿"
+  },
+  {
+    "cardId": "study-bible-john-2-12-p009-n036",
+    "bookId": "John",
+    "field": "searchText",
+    "label": "边拿→迦拿",
+    "count": 2,
+    "from": "从边拿步行",
+    "to": "从迦拿步行"
+  },
+  {
+    "cardId": "study-bible-john-2-12-p009-n036",
+    "bookId": "John",
+    "field": "searchText",
+    "label": "迎拿→迦拿",
+    "count": 2,
+    "from": "迎拿",
+    "to": "迦拿"
+  },
+  {
+    "cardId": "study-bible-john-3-16-p011-n052",
+    "bookId": "John",
+    "field": "body",
+    "label": "霞惊→震惊",
+    "count": 1,
+    "from": "霞惊",
+    "to": "震惊"
+  },
+  {
+    "cardId": "study-bible-john-3-16-p011-n052",
+    "bookId": "John",
+    "field": "summary",
+    "label": "霞惊→震惊",
+    "count": 1,
+    "from": "霞惊",
+    "to": "震惊"
+  },
+  {
+    "cardId": "study-bible-john-3-16-p011-n052",
+    "bookId": "John",
+    "field": "searchText",
+    "label": "霞惊→震惊",
+    "count": 2,
+    "from": "霞惊",
+    "to": "震惊"
+  },
+  {
+    "cardId": "study-bible-john-14-6-p036-n343",
+    "bookId": "John",
+    "field": "body",
+    "label": "慢子→幔子",
+    "count": 1,
+    "from": "至圣所的慢子",
+    "to": "至圣所的幔子"
+  },
+  {
+    "cardId": "study-bible-john-14-6-p036-n343",
+    "bookId": "John",
+    "field": "body",
+    "label": "宜告了→宣告了",
+    "count": 1,
+    "from": "宜告了",
+    "to": "宣告了"
+  },
+  {
+    "cardId": "study-bible-john-14-6-p036-n343",
+    "bookId": "John",
+    "field": "body",
+    "label": "彰昆→彰显",
+    "count": 1,
+    "from": "彰昆",
+    "to": "彰显"
+  },
+  {
+    "cardId": "study-bible-john-14-6-p036-n343",
+    "bookId": "John",
+    "field": "body",
+    "label": "霞惊→震惊",
+    "count": 1,
+    "from": "霞惊",
+    "to": "震惊"
+  },
+  {
+    "cardId": "study-bible-john-14-6-p036-n343",
+    "bookId": "John",
+    "field": "body",
+    "label": "table-tail",
+    "count": 1,
+    "from": "14:20h本书16:23.2610节",
+    "to": ""
+  },
+  {
+    "cardId": "study-bible-john-14-6-p036-n343",
+    "bookId": "John",
+    "field": "summary",
+    "label": "慢子→幔子",
+    "count": 1,
+    "from": "至圣所的慢子",
+    "to": "至圣所的幔子"
+  },
+  {
+    "cardId": "study-bible-john-14-6-p036-n343",
+    "bookId": "John",
+    "field": "summary",
+    "label": "table-tail",
+    "count": 1,
+    "from": "14:20h本书16:23.2610节",
+    "to": ""
+  },
+  {
+    "cardId": "study-bible-john-14-6-p036-n343",
+    "bookId": "John",
+    "field": "searchText",
+    "label": "慢子→幔子",
+    "count": 2,
+    "from": "至圣所的慢子",
+    "to": "至圣所的幔子"
+  },
+  {
+    "cardId": "study-bible-john-14-6-p036-n343",
+    "bookId": "John",
+    "field": "searchText",
+    "label": "宜告了→宣告了",
+    "count": 1,
+    "from": "宜告了",
+    "to": "宣告了"
+  },
+  {
+    "cardId": "study-bible-john-14-6-p036-n343",
+    "bookId": "John",
+    "field": "searchText",
+    "label": "彰昆→彰显",
+    "count": 1,
+    "from": "彰昆",
+    "to": "彰显"
+  },
+  {
+    "cardId": "study-bible-john-14-6-p036-n343",
+    "bookId": "John",
+    "field": "searchText",
+    "label": "霞惊→震惊",
+    "count": 1,
+    "from": "霞惊",
+    "to": "震惊"
+  },
+  {
+    "cardId": "study-bible-john-14-6-p036-n343",
+    "bookId": "John",
+    "field": "searchText",
+    "label": "table-tail",
+    "count": 2,
+    "from": "14:20h本书16:23.2610节",
+    "to": ""
+  },
+  {
+    "cardId": "study-bible-john-intro-p002-n006",
+    "bookId": "John",
+    "field": "body",
+    "label": "《〈圣经》概述》→《〈圣经〉概述》",
+    "count": 1,
+    "from": "《〈圣经》概述》",
+    "to": "《〈圣经〉概述》"
+  },
+  {
+    "cardId": "study-bible-john-intro-p002-n006",
+    "bookId": "John",
+    "field": "searchText",
+    "label": "《〈圣经》概述》→《〈圣经〉概述》",
+    "count": 1,
+    "from": "《〈圣经》概述》",
+    "to": "《〈圣经〉概述》"
+  },
+  {
+    "cardId": "study-bible-john-intro-p003-n008",
+    "bookId": "John",
+    "field": "body",
+    "label": "timeline-axis in 圣经文集",
+    "count": 1,
+    "from": "《圣经文集主后1年102030405060708090100》",
+    "to": "《圣经文集》"
+  },
+  {
+    "cardId": "study-bible-john-intro-p003-n008",
+    "bookId": "John",
+    "field": "searchText",
+    "label": "timeline-axis in 圣经文集",
+    "count": 1,
+    "from": "《圣经文集主后1年102030405060708090100》",
+    "to": "《圣经文集》"
+  },
+  {
+    "cardId": "study-bible-josh-intro-p003-n006",
+    "bookId": "Josh",
+    "field": "body",
+    "label": "《〈圣经》概述》→《〈圣经〉概述》",
+    "count": 1,
+    "from": "《〈圣经》概述》",
+    "to": "《〈圣经〉概述》"
+  },
+  {
+    "cardId": "study-bible-josh-intro-p003-n006",
+    "bookId": "Josh",
+    "field": "searchText",
+    "label": "《〈圣经》概述》→《〈圣经〉概述》",
+    "count": 1,
+    "from": "《〈圣经》概述》",
+    "to": "《〈圣经〉概述》"
+  },
+  {
+    "cardId": "study-bible-lev-19-18-p025-n126",
+    "bookId": "Lev",
+    "field": "body",
+    "label": "爱人如已→爱人如己",
+    "count": 1,
+    "from": "爱人如已",
+    "to": "爱人如己"
+  },
+  {
+    "cardId": "study-bible-lev-19-18-p025-n126",
+    "bookId": "Lev",
+    "field": "summary",
+    "label": "爱人如已→爱人如己",
+    "count": 1,
+    "from": "爱人如已",
+    "to": "爱人如己"
+  },
+  {
+    "cardId": "study-bible-lev-19-18-p025-n126",
+    "bookId": "Lev",
+    "field": "searchText",
+    "label": "爱人如已→爱人如己",
+    "count": 2,
+    "from": "爱人如已",
+    "to": "爱人如己"
+  },
+  {
+    "cardId": "study-bible-luke-1-32-p010-n030",
+    "bookId": "Luke",
+    "field": "body",
+    "label": "《《和修》→《和修》",
+    "count": 1,
+    "from": "《《和修》",
+    "to": "《和修》"
+  },
+  {
+    "cardId": "study-bible-luke-1-32-p010-n030",
+    "bookId": "Luke",
+    "field": "searchText",
+    "label": "《《和修》→《和修》",
+    "count": 1,
+    "from": "《《和修》",
+    "to": "《和修》"
+  },
+  {
+    "cardId": "study-bible-luke-10-21-p041-n394",
+    "bookId": "Luke",
+    "field": "body",
+    "label": "《《和修》→《和修》",
+    "count": 1,
+    "from": "《《和修》",
+    "to": "《和修》"
+  },
+  {
+    "cardId": "study-bible-luke-10-21-p041-n394",
+    "bookId": "Luke",
+    "field": "searchText",
+    "label": "《《和修》→《和修》",
+    "count": 1,
+    "from": "《《和修》",
+    "to": "《和修》"
+  },
+  {
+    "cardId": "study-bible-luke-19-16-p060-n470",
+    "bookId": "Luke",
+    "field": "body",
+    "label": "己经赚→已经赚",
+    "count": 1,
+    "from": "己经赚",
+    "to": "已经赚"
+  },
+  {
+    "cardId": "study-bible-luke-19-16-p060-n470",
+    "bookId": "Luke",
+    "field": "summary",
+    "label": "己经赚→已经赚",
+    "count": 1,
+    "from": "己经赚",
+    "to": "已经赚"
+  },
+  {
+    "cardId": "study-bible-luke-19-16-p060-n470",
+    "bookId": "Luke",
+    "field": "searchText",
+    "label": "己经赚→已经赚",
+    "count": 2,
+    "from": "己经赚",
+    "to": "已经赚"
+  },
+  {
+    "cardId": "study-bible-luke-19-30-p061-n651",
+    "bookId": "Luke",
+    "field": "body",
+    "label": "必着见→必看见",
+    "count": 1,
+    "from": "必着见",
+    "to": "必看见"
+  },
+  {
+    "cardId": "study-bible-luke-19-30-p061-n651",
+    "bookId": "Luke",
+    "field": "body",
+    "label": "map-scale-dump",
+    "count": 1,
+    "from": "或是他预先的安排耶稣时代的耶路撒冷10002000英尺到了耶稣的时代，耶路撒冷已经由一500米 个普通的军事要塞",
+    "to": "或是他预先的安排。到了耶稣的时代，耶路撒冷已经由一个普通的军事要塞"
+  },
+  {
+    "cardId": "study-bible-luke-19-30-p061-n651",
+    "bookId": "Luke",
+    "field": "body",
+    "label": "map-label-dump",
+    "count": 1,
+    "from": "另见1530-1531页插图\"耶稣时代的耶路撒冷\"伯法其？往伯大尼一耶稣时期的城墻建于耶稣时期之后的城墙（参22:13）。",
+    "to": "另见1530-1531页插图\"耶稣时代的耶路撒冷\"。"
+  },
+  {
+    "cardId": "study-bible-luke-19-30-p061-n651",
+    "bookId": "Luke",
+    "field": "summary",
+    "label": "必着见→必看见",
+    "count": 1,
+    "from": "必着见",
+    "to": "必看见"
+  },
+  {
+    "cardId": "study-bible-luke-19-30-p061-n651",
+    "bookId": "Luke",
+    "field": "summary",
+    "label": "map-scale-dump",
+    "count": 1,
+    "from": "或是他预先的安排耶稣时代的耶路撒冷10002000英尺到了耶稣的时代，耶路撒冷已经由一500米 个普通的军事要塞",
+    "to": "或是他预先的安排。到了耶稣的时代，耶路撒冷已经由一个普通的军事要塞"
+  },
+  {
+    "cardId": "study-bible-luke-19-30-p061-n651",
+    "bookId": "Luke",
+    "field": "searchText",
+    "label": "必着见→必看见",
+    "count": 2,
+    "from": "必着见",
+    "to": "必看见"
+  },
+  {
+    "cardId": "study-bible-luke-19-30-p061-n651",
+    "bookId": "Luke",
+    "field": "searchText",
+    "label": "map-scale-dump",
+    "count": 2,
+    "from": "或是他预先的安排耶稣时代的耶路撒冷10002000英尺到了耶稣的时代，耶路撒冷已经由一500米 个普通的军事要塞",
+    "to": "或是他预先的安排。到了耶稣的时代，耶路撒冷已经由一个普通的军事要塞"
+  },
+  {
+    "cardId": "study-bible-luke-19-30-p061-n651",
+    "bookId": "Luke",
+    "field": "searchText",
+    "label": "map-label-dump",
+    "count": 1,
+    "from": "另见1530-1531页插图\"耶稣时代的耶路撒冷\"伯法其？往伯大尼一耶稣时期的城墻建于耶稣时期之后的城墙（参22:13）。",
+    "to": "另见1530-1531页插图\"耶稣时代的耶路撒冷\"。"
+  },
+  {
+    "cardId": "study-bible-luke-24-27-p076-n608",
+    "bookId": "Luke",
+    "field": "body",
+    "label": "《<圣经〉概述》→《〈圣经〉概述》",
+    "count": 1,
+    "from": "《<圣经〉概述》",
+    "to": "《〈圣经〉概述》"
+  },
+  {
+    "cardId": "study-bible-luke-24-27-p076-n608",
+    "bookId": "Luke",
+    "field": "summary",
+    "label": "《<圣经〉概述》→《〈圣经〉概述》",
+    "count": 1,
+    "from": "《<圣经〉概述》",
+    "to": "《〈圣经〉概述》"
+  },
+  {
+    "cardId": "study-bible-luke-24-27-p076-n608",
+    "bookId": "Luke",
+    "field": "searchText",
+    "label": "《<圣经〉概述》→《〈圣经〉概述》",
+    "count": 2,
+    "from": "《<圣经〉概述》",
+    "to": "《〈圣经〉概述》"
+  },
+  {
+    "cardId": "study-bible-mark-1-21-p006-n025",
+    "bookId": "Mark",
+    "field": "body",
+    "label": "迎百农→迦百农",
+    "count": 1,
+    "from": "迎百农",
+    "to": "迦百农"
+  },
+  {
+    "cardId": "study-bible-mark-1-21-p006-n025",
+    "bookId": "Mark",
+    "field": "summary",
+    "label": "迎百农→迦百农",
+    "count": 1,
+    "from": "迎百农",
+    "to": "迦百农"
+  },
+  {
+    "cardId": "study-bible-mark-1-21-p006-n025",
+    "bookId": "Mark",
+    "field": "searchText",
+    "label": "迎百农→迦百农",
+    "count": 2,
+    "from": "迎百农",
+    "to": "迦百农"
+  },
+  {
+    "cardId": "study-bible-mark-2-1-p007-n035",
+    "bookId": "Mark",
+    "field": "body",
+    "label": "迎百农→迦百农",
+    "count": 1,
+    "from": "迎百农",
+    "to": "迦百农"
+  },
+  {
+    "cardId": "study-bible-mark-2-1-p007-n035",
+    "bookId": "Mark",
+    "field": "summary",
+    "label": "迎百农→迦百农",
+    "count": 1,
+    "from": "迎百农",
+    "to": "迦百农"
+  },
+  {
+    "cardId": "study-bible-mark-2-1-p007-n035",
+    "bookId": "Mark",
+    "field": "searchText",
+    "label": "迎百农→迦百农",
+    "count": 2,
+    "from": "迎百农",
+    "to": "迦百农"
+  },
+  {
+    "cardId": "study-bible-mark-8-34-p021-n127",
+    "bookId": "Mark",
+    "field": "body",
+    "label": "舍已→舍己",
+    "count": 2,
+    "from": "舍已",
+    "to": "舍己"
+  },
+  {
+    "cardId": "study-bible-mark-8-34-p021-n127",
+    "bookId": "Mark",
+    "field": "summary",
+    "label": "舍已→舍己",
+    "count": 2,
+    "from": "舍已",
+    "to": "舍己"
+  },
+  {
+    "cardId": "study-bible-mark-8-34-p021-n127",
+    "bookId": "Mark",
+    "field": "searchText",
+    "label": "舍已→舍己",
+    "count": 4,
+    "from": "舍已",
+    "to": "舍己"
+  },
+  {
+    "cardId": "study-bible-matt-5-1-p012-n064",
+    "bookId": "Matt",
+    "field": "body",
+    "label": "迎百农→迦百农",
+    "count": 2,
+    "from": "迎百农",
+    "to": "迦百农"
+  },
+  {
+    "cardId": "study-bible-matt-5-1-p012-n064",
+    "bookId": "Matt",
+    "field": "summary",
+    "label": "迎百农→迦百农",
+    "count": 2,
+    "from": "迎百农",
+    "to": "迦百农"
+  },
+  {
+    "cardId": "study-bible-matt-5-1-p012-n064",
+    "bookId": "Matt",
+    "field": "searchText",
+    "label": "迎百农→迦百农",
+    "count": 4,
+    "from": "迎百农",
+    "to": "迦百农"
+  },
+  {
+    "cardId": "study-bible-matt-9-1-p022-n147",
+    "bookId": "Matt",
+    "field": "body",
+    "label": "迎百农→迦百农",
+    "count": 1,
+    "from": "迎百农",
+    "to": "迦百农"
+  },
+  {
+    "cardId": "study-bible-matt-9-1-p022-n147",
+    "bookId": "Matt",
+    "field": "summary",
+    "label": "迎百农→迦百农",
+    "count": 1,
+    "from": "迎百农",
+    "to": "迦百农"
+  },
+  {
+    "cardId": "study-bible-matt-9-1-p022-n147",
+    "bookId": "Matt",
+    "field": "searchText",
+    "label": "迎百农→迦百农",
+    "count": 2,
+    "from": "迎百农",
+    "to": "迦百农"
+  },
+  {
+    "cardId": "study-bible-matt-11-16-p027-n193",
+    "bookId": "Matt",
+    "field": "body",
+    "label": "固执已见→固执己见",
+    "count": 1,
+    "from": "固执已见",
+    "to": "固执己见"
+  },
+  {
+    "cardId": "study-bible-matt-11-16-p027-n193",
+    "bookId": "Matt",
+    "field": "summary",
+    "label": "固执已见→固执己见",
+    "count": 1,
+    "from": "固执已见",
+    "to": "固执己见"
+  },
+  {
+    "cardId": "study-bible-matt-11-16-p027-n193",
+    "bookId": "Matt",
+    "field": "searchText",
+    "label": "固执已见→固执己见",
+    "count": 2,
+    "from": "固执已见",
+    "to": "固执己见"
+  },
+  {
+    "cardId": "study-bible-matt-13-54-p033-n242",
+    "bookId": "Matt",
+    "field": "body",
+    "label": "迎百农→迦百农",
+    "count": 1,
+    "from": "迎百农",
+    "to": "迦百农"
+  },
+  {
+    "cardId": "study-bible-matt-13-54-p033-n242",
+    "bookId": "Matt",
+    "field": "summary",
+    "label": "迎百农→迦百农",
+    "count": 1,
+    "from": "迎百农",
+    "to": "迦百农"
+  },
+  {
+    "cardId": "study-bible-matt-13-54-p033-n242",
+    "bookId": "Matt",
+    "field": "searchText",
+    "label": "迎百农→迦百农",
+    "count": 2,
+    "from": "迎百农",
+    "to": "迦百农"
+  },
+  {
+    "cardId": "study-bible-matt-22-39-p052-n487",
+    "bookId": "Matt",
+    "field": "body",
+    "label": "爱人如已→爱人如己",
+    "count": 1,
+    "from": "爱人如已",
+    "to": "爱人如己"
+  },
+  {
+    "cardId": "study-bible-matt-22-39-p052-n487",
+    "bookId": "Matt",
+    "field": "summary",
+    "label": "爱人如已→爱人如己",
+    "count": 1,
+    "from": "爱人如已",
+    "to": "爱人如己"
+  },
+  {
+    "cardId": "study-bible-matt-22-39-p052-n487",
+    "bookId": "Matt",
+    "field": "searchText",
+    "label": "爱人如已→爱人如己",
+    "count": 2,
+    "from": "爱人如已",
+    "to": "爱人如己"
+  },
+  {
+    "cardId": "study-bible-matt-27-50-p068-n481",
+    "bookId": "Matt",
+    "field": "body",
+    "label": "霞惊→震惊",
+    "count": 1,
+    "from": "霞惊",
+    "to": "震惊"
+  },
+  {
+    "cardId": "study-bible-matt-27-50-p068-n481",
+    "bookId": "Matt",
+    "field": "searchText",
+    "label": "霞惊→震惊",
+    "count": 1,
+    "from": "霞惊",
+    "to": "震惊"
+  },
+  {
+    "cardId": "study-bible-neh-6-4-p012-n082",
+    "bookId": "Neh",
+    "field": "summary",
+    "label": "table-dump w拉8:16",
+    "count": 1,
+    "from": "施加更大w拉8:16的压力",
+    "to": "施加更大的压力"
+  },
+  {
+    "cardId": "study-bible-neh-6-4-p012-n082",
+    "bookId": "Neh",
+    "field": "searchText",
+    "label": "table-dump w拉8:16",
+    "count": 1,
+    "from": "施加更大w拉8:16的压力",
+    "to": "施加更大的压力"
+  },
+  {
+    "cardId": "study-bible-prov-28-5-p044-n235",
+    "bookId": "Prov",
+    "field": "summary",
+    "label": "table-tail",
+    "count": 1,
+    "from": "对公义有最准确的认识。28:109见诗7:15本书292：传105.528:130［伯3133：時太6",
+    "to": "对公义有最准确的认识。"
+  },
+  {
+    "cardId": "study-bible-prov-28-5-p044-n235",
+    "bookId": "Prov",
+    "field": "searchText",
+    "label": "table-tail",
+    "count": 1,
+    "from": "对公义有最准确的认识。28:109见诗7:15本书292：传105.528:130［伯3133：時太6",
+    "to": "对公义有最准确的认识。"
+  },
+  {
+    "cardId": "study-bible-ps-94-19-p098-n437",
+    "bookId": "Ps",
+    "field": "title",
+    "label": "第了节→第2节",
+    "count": 1,
+    "from": "第了节",
+    "to": "第2节"
+  },
+  {
+    "cardId": "study-bible-ps-94-19-p098-n437",
+    "bookId": "Ps",
+    "field": "body",
+    "label": "第了节→第2节",
+    "count": 1,
+    "from": "第了节",
+    "to": "第2节"
+  },
+  {
+    "cardId": "study-bible-ps-94-19-p098-n437",
+    "bookId": "Ps",
+    "field": "summary",
+    "label": "第了节→第2节",
+    "count": 1,
+    "from": "第了节",
+    "to": "第2节"
+  },
+  {
+    "cardId": "study-bible-ps-94-19-p098-n437",
+    "bookId": "Ps",
+    "field": "searchText",
+    "label": "第了节→第2节",
+    "count": 3,
+    "from": "第了节",
+    "to": "第2节"
+  },
+  {
+    "cardId": "study-bible-ps-intro-p001-n003",
+    "bookId": "Ps",
+    "field": "body",
+    "label": "迎特→迦特",
+    "count": 2,
+    "from": "迎特",
+    "to": "迦特"
+  },
+  {
+    "cardId": "study-bible-ps-intro-p001-n003",
+    "bookId": "Ps",
+    "field": "searchText",
+    "label": "迎特→迦特",
+    "count": 2,
+    "from": "迎特",
+    "to": "迦特"
+  },
+  {
+    "cardId": "study-bible-ps-intro-p003-n005",
+    "bookId": "Ps",
+    "field": "body",
+    "label": "《《旧约〉→《〈旧约〉",
+    "count": 1,
+    "from": "《《旧约〉",
+    "to": "《〈旧约〉"
+  },
+  {
+    "cardId": "study-bible-ps-intro-p003-n005",
+    "bookId": "Ps",
+    "field": "searchText",
+    "label": "《《旧约〉→《〈旧约〉",
+    "count": 1,
+    "from": "《《旧约〉",
+    "to": "《〈旧约〉"
+  },
+  {
+    "cardId": "study-bible-rev-19-6-p036-n181",
+    "bookId": "Rev",
+    "field": "summary",
+    "label": "table-tail",
+    "count": 1,
+    "from": "这声音源自许多人在天上敬拜上帝（参：［1节］\"见本书1:15V本书6:1.14:2w本书11:15.17：诗97:1赛54:5：何2:19.20］19:8Z［诗45:13-15：",
+    "to": "这声音源自许多人在天上敬拜上帝。"
+  },
+  {
+    "cardId": "study-bible-rev-19-6-p036-n181",
+    "bookId": "Rev",
+    "field": "searchText",
+    "label": "table-tail",
+    "count": 1,
+    "from": "这声音源自许多人在天上敬拜上帝（参：［1节］\"见本书1:15V本书6:1.14:2w本书11:15.17：诗97:1赛54:5：何2:19.20］19:8Z［诗45:13-15：",
+    "to": "这声音源自许多人在天上敬拜上帝。"
+  },
+  {
+    "cardId": "study-bible-rom-6-4-p016-n129",
+    "bookId": "Rom",
+    "field": "searchText",
+    "label": "酒水礼→洒水礼",
+    "count": 1,
+    "from": "酒水礼",
+    "to": "洒水礼"
+  },
+  {
+    "cardId": "study-bible-rom-8-7-p019-n108",
+    "bookId": "Rom",
+    "field": "searchText",
+    "label": "table-tail",
+    "count": 1,
+    "from": "（6:6.17,19-20）。14:7］V见徒16:78:112见徒2:24",
+    "to": "（6:6.17,19-20）。"
+  },
+  {
+    "cardId": "study-bible-zech-12-9-p017-n083",
+    "bookId": "Zech",
+    "field": "body",
+    "label": "第了节→第2节",
+    "count": 2,
+    "from": "第了节",
+    "to": "第2节"
+  },
+  {
+    "cardId": "study-bible-zech-12-9-p017-n083",
+    "bookId": "Zech",
+    "field": "summary",
+    "label": "第了节→第2节",
+    "count": 2,
+    "from": "第了节",
+    "to": "第2节"
+  },
+  {
+    "cardId": "study-bible-zech-12-9-p017-n083",
+    "bookId": "Zech",
+    "field": "searchText",
+    "label": "第了节→第2节",
+    "count": 4,
+    "from": "第了节",
+    "to": "第2节"
+  },
+  {
+    "cardId": "study-bible-1cor-1-1-p006-n014",
+    "bookId": "1Cor",
+    "field": "summary",
+    "label": "summary-tail",
+    "count": 1,
+    "from": "15:7.9［两次］），比保罗其他书",
+    "to": "15:7.9［两次］）。"
+  },
+  {
+    "cardId": "study-bible-1cor-7-5-p013-n065",
+    "bookId": "1Cor",
+    "field": "summary",
+    "label": "quote-ocr",
+    "count": 1,
+    "from": "不可忽略对方的需求》，夫妻",
+    "to": "不可忽略对方的需求\"），夫妻"
+  },
+  {
+    "cardId": "study-bible-1john-1-7-p006-n014",
+    "bookId": "1John",
+    "field": "searchText",
+    "label": "searchText-garbage",
+    "count": 1,
+    "from": "不会有隐藏的罪。信徒这样行\"在光明中\"，既可与上帝有深人的相交（《和修》\"团契\"：见3节），也可渐渐洗净",
+    "to": "不会有隐藏的罪。"
+  },
+  {
+    "cardId": "study-bible-1john-2-18-p008-n034",
+    "bookId": "1John",
+    "field": "summary",
+    "label": "table-ref-dump",
+    "count": 1,
+    "from": "提后3:1：见本页表）",
+    "to": "提后3:1）"
+  },
+  {
+    "cardId": "study-bible-1john-2-18-p008-n034",
+    "bookId": "1John",
+    "field": "searchText",
+    "label": "table-ref-dump",
+    "count": 2,
+    "from": "提后3:1：见本页表）",
+    "to": "提后3:1）"
+  },
+  {
+    "cardId": "study-bible-1john-2-27-p008-n031",
+    "bookId": "1John",
+    "field": "summary",
+    "label": "恩常→恩膏常",
+    "count": 1,
+    "from": "恩常存在心里",
+    "to": "恩膏常存在心里"
+  },
+  {
+    "cardId": "study-bible-1john-2-27-p008-n031",
+    "bookId": "1John",
+    "field": "searchText",
+    "label": "恩常→恩膏常",
+    "count": 2,
+    "from": "恩常存在心里",
+    "to": "恩膏常存在心里"
+  },
+  {
+    "cardId": "study-bible-1john-5-20-p013-n110",
+    "bookId": "1John",
+    "field": "summary",
+    "label": "真人能→真神。人能",
+    "count": 1,
+    "from": "使我们认识那位真人能真正认识上帝",
+    "to": "使我们认识那位真神。人能真正认识上帝"
+  },
+  {
+    "cardId": "study-bible-1john-5-20-p013-n110",
+    "bookId": "1John",
+    "field": "searchText",
+    "label": "真人能→真神。人能",
+    "count": 2,
+    "from": "使我们认识那位真人能真正认识上帝",
+    "to": "使我们认识那位真神。人能真正认识上帝"
+  },
+  {
+    "cardId": "study-bible-1john-intro-p001-n001",
+    "bookId": "1John",
+    "field": "searchText",
+    "label": "永生也儿子里面→永生也在儿子里面",
+    "count": 1,
+    "from": "永生也儿子里面",
+    "to": "永生也在儿子里面"
+  },
+  {
+    "cardId": "study-bible-1john-intro-p001-n003",
+    "bookId": "1John",
+    "field": "searchText",
+    "label": "一致认→一致认为",
+    "count": 1,
+    "from": "一致认《约翰一书》",
+    "to": "一致认为《约翰一书》"
+  },
+  {
+    "cardId": "study-bible-1john-intro-p002-n004",
+    "bookId": "1John",
+    "field": "searchText",
+    "label": "table-page-dump",
+    "count": 1,
+    "from": "后来在变奏中重现主题（见2063页表）。",
+    "to": "后来在变奏中重现主题。"
+  },
+  {
+    "cardId": "study-bible-hos-2-2-p006-n017",
+    "bookId": "Hos",
+    "field": "searchText",
+    "label": "争辦→争辩",
+    "count": 1,
+    "from": "大大争辦",
+    "to": "大大争辩"
+  },
+  {
+    "cardId": "study-bible-hos-5-12-p010-n069",
+    "bookId": "Hos",
+    "field": "searchText",
+    "label": "杓烂→朽烂",
+    "count": 1,
+    "from": "杓烂的比喻",
+    "to": "朽烂的比喻"
+  },
+  {
+    "cardId": "study-bible-jas-4-3-p010-n049",
+    "bookId": "Jas",
+    "field": "searchText",
+    "label": "searchText-garbage",
+    "count": 1,
+    "from": "雅各不是说所有使人愉悦的事都是错的態勇生摇義利是：規（参创1:31",
+    "to": "雅各不是说所有使人愉悦的事都是错的（参创1:31"
+  },
+  {
+    "cardId": "study-bible-jas-intro-p001-n001",
+    "bookId": "Jas",
+    "field": "searchText",
+    "label": "《雅各者的理由→《雅各书》作者的理由",
+    "count": 1,
+    "from": "《雅各者的理由",
+    "to": "《雅各书》作者的理由"
+  },
+  {
+    "cardId": "study-bible-jas-intro-p001-n002",
+    "bookId": "Jas",
+    "field": "summary",
+    "label": "与于→写于",
+    "count": 1,
+    "from": "一定与于雅各殉道之前",
+    "to": "一定写于雅各殉道之前"
+  },
+  {
+    "cardId": "study-bible-jas-intro-p001-n002",
+    "bookId": "Jas",
+    "field": "searchText",
+    "label": "与于→写于",
+    "count": 2,
+    "from": "一定与于雅各殉道之前",
+    "to": "一定写于雅各殉道之前"
+  },
+  {
+    "cardId": "study-bible-jer-1-7-p007-n014",
+    "bookId": "Jer",
+    "field": "searchText",
+    "label": "timeline-dump",
+    "count": 1,
+    "from": "也不应去取悦任何人。耶利米蒙召的年份年份（主前）事件628/627年约西亚洁净圣殿（约西亚第十二年）",
+    "to": "也不应去取悦任何人。"
+  },
+  {
+    "cardId": "study-bible-judg-15-4-p027-n108",
+    "bookId": "Judg",
+    "field": "searchText",
+    "label": "table-dump",
+    "count": 1,
+    "from": "狐狸的生活习参孙展示他能力和英勇的十项战绩第一部分：三次提到\"耶和华的灵\"\"耶和华的灵大大1.杀死狮",
+    "to": "狐狸的生活习性是独自出没"
+  },
+  {
+    "cardId": "study-bible-neh-10-32-p019-n097",
+    "bookId": "Neh",
+    "field": "summary",
+    "label": "一會客勒三分之→一舍客勒的三分之一",
+    "count": 1,
+    "from": "一會客勒三分之",
+    "to": "一舍客勒的三分之一"
+  },
+  {
+    "cardId": "study-bible-neh-10-32-p019-n097",
+    "bookId": "Neh",
+    "field": "searchText",
+    "label": "一會客勒三分之→一舍客勒的三分之一",
+    "count": 1,
+    "from": "一會客勒三分之",
+    "to": "一舍客勒的三分之一"
+  },
+  {
+    "cardId": "study-bible-neh-12-27-p022-n181",
+    "bookId": "Neh",
+    "field": "summary",
+    "label": "summary-dump",
+    "count": 1,
+    "from": "（见申12:18，16:14；尼8:9-12）。来原文用词与《历代志》12:28-29利未歌唱的人的家族，定居在工作地点附近",
+    "to": "（见申12:18，16:14；尼8:9-12）。利未歌唱的人的家族定居在工作地点附近"
+  },
+  {
+    "cardId": "study-bible-neh-12-27-p022-n181",
+    "bookId": "Neh",
+    "field": "searchText",
+    "label": "summary-dump",
+    "count": 1,
+    "from": "（见申12:18，16:14；尼8:9-12）。来原文用词与《历代志》12:28-29利未歌唱的人的家族，定居在工作地点附近",
+    "to": "（见申12:18，16:14；尼8:9-12）。利未歌唱的人的家族定居在工作地点附近"
+  },
+  {
+    "cardId": "study-bible-prov-6-26-p014-n082",
+    "bookId": "Prov",
+    "field": "summary",
+    "label": "summary-midcut-tail",
+    "count": 1,
+    "from": "雇价低至一块饼。但是，与淫妇（《和修》\"有夫之妇\"）有染是致命",
+    "to": "雇价低至一块饼。"
+  },
+  {
+    "cardId": "study-bible-rev-1-18-p012-n020",
+    "bookId": "Rev",
+    "field": "searchText",
+    "label": "searchText-midcut",
+    "count": 1,
+    "from": "因为耶稣已经永远胜过了死亡。关于基督的复活，见林前",
+    "to": "因为耶稣已经永远胜过了死亡。"
+  },
+  {
+    "cardId": "study-bible-rev-1-19-p012-n022",
+    "bookId": "Rev",
+    "field": "searchText",
+    "label": "searchText-midcut",
+    "count": 1,
+    "from": "参但10:13-",
+    "to": ""
+  },
+  {
+    "cardId": "study-bible-rom-1-18-p008-n031",
+    "bookId": "Rom",
+    "field": "searchText",
+    "label": "《圣经启示→《圣经》启示",
+    "count": 1,
+    "from": "《圣经启示的世界观",
+    "to": "《圣经》启示的世界观"
+  },
+  {
+    "cardId": "study-bible-rom-11-1-p024-n228",
+    "bookId": "Rom",
+    "field": "searchText",
+    "label": "明上帝→表明上帝",
+    "count": 1,
+    "from": "为例，明上帝",
+    "to": "为例，表明上帝"
+  },
+  {
+    "cardId": "study-bible-rom-intro-p001-n001",
+    "bookId": "Rom",
+    "field": "searchText",
+    "label": "《罗马书》。的标题→《罗马书》的标题",
+    "count": 1,
+    "from": "《罗马书》。的标题",
+    "to": "《罗马书》的标题"
+  },
+  {
+    "cardId": "study-bible-2sam-7-14-p013-n083",
+    "bookId": "2Sam",
+    "field": "summary",
+    "label": "summary-midcut-tail",
+    "count": 1,
+    "from": "代表的角色。；意思是说，所有人都能从宣言（参撒上2:2）。随后大卫说有何民能比你的民",
+    "to": "代表的角色。"
+  },
+  {
+    "cardId": "study-bible-2sam-7-14-p013-n083",
+    "bookId": "2Sam",
+    "field": "searchText",
+    "label": "summary-midcut-tail",
+    "count": 1,
+    "from": "代表的角色。；意思是说，所有人都能从宣言（参撒上2:2）。随后大卫说有何民能比你的民",
+    "to": "代表的角色。"
+  },
+  {
+    "cardId": "study-bible-1john-5-20-p013-n110",
+    "bookId": "1John",
+    "field": "summary",
+    "label": "quote-ocr",
+    "count": 1,
+    "from": "将悟性赐给我们》",
+    "to": "将悟性赐给我们\""
+  },
+  {
+    "cardId": "study-bible-1john-5-20-p013-n110",
+    "bookId": "1John",
+    "field": "searchText",
+    "label": "quote-ocr",
+    "count": 2,
+    "from": "将悟性赐给我们》",
+    "to": "将悟性赐给我们\""
+  },
+  {
+    "cardId": "study-bible-matt-15-32-p037-n360",
+    "bookId": "Matt",
+    "field": "body",
+    "label": "table-tail",
+    "count": 1,
+    "from": "低加波利位［本书12:28：路19:44］16:42见本书12:39a本书4:13.于加利利海东南岸",
+    "to": "低加波利位于加利利海东南岸"
+  },
+  {
+    "cardId": "study-bible-matt-15-32-p037-n360",
+    "bookId": "Matt",
+    "field": "summary",
+    "label": "table-tail",
+    "count": 1,
+    "from": "低加波利位［本书12:28：路19:44］16:42见本书12:39a本书4:13.于加利利海东南岸",
+    "to": "低加波利位于加利利海东南岸"
+  },
+  {
+    "cardId": "study-bible-matt-15-32-p037-n360",
+    "bookId": "Matt",
+    "field": "searchText",
+    "label": "table-tail",
+    "count": 2,
+    "from": "低加波利位［本书12:28：路19:44］16:42见本书12:39a本书4:13.于加利利海东南岸",
+    "to": "低加波利位于加利利海东南岸"
+  },
+  {
+    "cardId": "study-bible-deut-1-7-p006-n014",
+    "bookId": "Deut",
+    "field": "searchText",
+    "label": "quote-ocr",
+    "count": 1,
+    "from": "（《和修》注\"低地是继续",
+    "to": "（《和修》注\"低地\"）是继续"
+  },
+  {
+    "cardId": "study-bible-1john-2-2-p007-n021",
+    "bookId": "1John",
+    "field": "searchText",
+    "label": "searchText-midcut",
+    "count": 1,
+    "from": "（见2:4，23，3:10.5:12；参约3:18.5:24）。耶稣献上自己祭，不只是为了约翰和当时的读者，也是为了\"普天下\"的每一",
+    "to": "（见2:4，23，3:10.5:12；参约3:18.5:24）。"
+  },
+  {
+    "cardId": "study-bible-rev-12-7-p027-n119",
+    "bookId": "Rev",
+    "field": "searchText",
+    "label": "searchText-midcut",
+    "count": 1,
+    "from": "时期开始。\"大艰难\"也就是",
+    "to": "时期开始。"
+  },
+  {
+    "cardId": "study-bible-rev-15-8-p031-n203",
+    "bookId": "Rev",
+    "field": "summary",
+    "label": "quote-ocr",
+    "count": 1,
+    "from": "七灾完毕（\"完毕\"在1作\"发尽》，才能进殿",
+    "to": "七灾完毕（\"完毕\"在1节作\"发尽\"），才能进殿"
+  },
+  {
+    "cardId": "study-bible-rev-15-8-p031-n203",
+    "bookId": "Rev",
+    "field": "searchText",
+    "label": "quote-ocr",
+    "count": 1,
+    "from": "七灾完毕（\"完毕\"在1作\"发尽》，才能进殿",
+    "to": "七灾完毕（\"完毕\"在1节作\"发尽\"），才能进殿"
+  },
+  {
+    "cardId": "study-bible-rev-21-1-p039-n195",
+    "bookId": "Rev",
+    "field": "summary",
+    "label": "summary-midcut-tail",
+    "count": 1,
+    "from": "毁灭性影响，取而代之的是新的宇\"叹息、劳苦，直直到如今\"，等待着\"天……销化\"的\"新天新地\"（彼后3:12-13）到来，永远取代旧的天地。这表明",
+    "to": "毁灭性影响，这表明"
+  },
+  {
+    "cardId": "study-bible-rev-21-1-p039-n195",
+    "bookId": "Rev",
+    "field": "searchText",
+    "label": "summary-midcut-tail",
+    "count": 2,
+    "from": "毁灭性影响，取而代之的是新的宇\"叹息、劳苦，直直到如今\"，等待着\"天……销化\"的\"新天新地\"（彼后3:12-13）到来，永远取代旧的天地。这表明",
+    "to": "毁灭性影响，这表明"
+  }
+]

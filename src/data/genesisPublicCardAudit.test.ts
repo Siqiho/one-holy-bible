@@ -38,6 +38,7 @@ const forbiddenFragments = [
   "尽都毁灭口",
   "Double Blessings",
   "迎勒底",
+  "人侵",
 ];
 
 const expectedCounts: Record<string, number> = {
@@ -126,7 +127,7 @@ describe("Genesis public card audit and isolation hold-queue", () => {
       }
       for (const card of payload.textCards) {
         publicIds.add(card.id);
-        blobParts.push(`${card.title ?? ""}\n${card.body ?? ""}`);
+        blobParts.push(`${card.title ?? ""}\n${card.body ?? ""}\n${card.summary ?? ""}\n${card.searchText ?? ""}`);
       }
     }
 

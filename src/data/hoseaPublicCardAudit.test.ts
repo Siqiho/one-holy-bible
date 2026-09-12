@@ -35,6 +35,7 @@ const forbiddenFragments = [
   "（《和修》\"与神庙娼妓一同献",
   "杓烂的比喻",
   "所种的是风》，必会收获",
+  "杓烂的比喻",
 ];
 
 function loadBook(bookId: string): PublicBookPayload {
@@ -85,7 +86,7 @@ describe("Hosea public card audit and isolation hold-queue", () => {
       expect(ids.has(id), id).toBe(false);
     }
 
-    const blob = payload.textCards.map((card) => `${card.title ?? ""}\n${card.body ?? ""}`).join("\n");
+    const blob = payload.textCards.map((card) => `${card.title ?? ""}\n${card.body ?? ""}\n${card.summary ?? ""}\n${card.searchText ?? ""}`).join("\n");
     for (const fragment of forbiddenFragments) {
       expect(blob.includes(fragment), fragment).toBe(false);
     }

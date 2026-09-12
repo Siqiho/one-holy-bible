@@ -1,0 +1,16 @@
+=== vitest public audits + residual holds ===
+
+ RUN  v4.1.5 /workspace
+
+
+ Test Files  73 passed (73)
+      Tests  282 passed (282)
+   Start at  01:45:18
+   Duration  31.84s (transform 851ms, setup 2.73s, import 2.08s, tests 44.26s, environment 35.68s)
+
+
+=== generatePublicBibleData --validate-only ===
+Public data valid: 66 books, 31102 CUV verses, 31102 KJV verses, 10096 text cards, 62204 search entries, 0 image cards, 0 unsafe matches
+
+=== validatePublicRepository ===
+Public repository metadata valid: 8 required files, Node 24

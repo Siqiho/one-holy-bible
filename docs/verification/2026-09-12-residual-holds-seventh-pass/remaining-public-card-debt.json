@@ -112,6 +112,34 @@
       "fragment": "吃喝自己的吃喝就是定自己的罪了）",
       "verdict": "hold-in-place",
       "reason": "缺开括号/前半句；本轮只改同卡「亵读 / 響告」，不补造残句"
+    },
+    {
+      "id": "study-bible-1cor-7-39-p015-n079",
+      "bookId": "1Cor",
+      "fragment": "意*愿意",
+      "verdict": "hold-in-place",
+      "reason": "星号落在词中，不是唯一开/闭引号，不补造"
+    },
+    {
+      "id": "study-bible-acts-3-18-p037-n312",
+      "bookId": "Acts",
+      "fragment": "主将得救的11:18*",
+      "verdict": "hold-in-place",
+      "reason": "年表倾倒后的残句，无 PDF 不补造"
+    },
+    {
+      "id": "study-bible-acts-4-13-p015-n084",
+      "bookId": "Acts",
+      "fragment": "4:31（*放胆》",
+      "verdict": "hold-in-place",
+      "reason": "中截 / 书名号倾倒，不补造"
+    },
+    {
+      "id": "study-bible-john-19-14-p048-n463",
+      "bookId": "John",
+      "fragment": "约\"是：*",
+      "verdict": "hold-in-place",
+      "reason": "中截，无 PDF 不补造"
     }
   ],
   "crossFieldCopyRemaining": [
@@ -120,7 +148,7 @@
       "note": "body 用「拣选术语」，summary/searchText 用「选举术语」。两词都合法，不按正文改写"
     },
     {
-      "note": "第七轮已按正文抄高置信残串：提前 6:5 body 已是「谴责」，summary/searchText 的「遺责」改为「谴责」。其余 summary 分叉多为括号切边 / 省略号截断。"
+      "note": "第七轮已按正文抄高置信残串：提前 6:5 body 已是「谴责」，summary/searchText 的「遺责」改为「谴责」；提前 4:10 searchText 的「\"万人*」按 body 闭合为「\"万人\"」。其余 summary 分叉多为括号切边 / 省略号截断。"
     }
   ],
   "keepNotDebt": [
@@ -138,7 +166,8 @@
     "着重（强调义）",
     "善事上常用（上常是子串；只有与上常同在是上帝 OCR）",
     "昆虫 / 昆兰 / 撤离 / 撤兵 / 撤销",
-    "墻垣 / 墻壁（墙的传统异体）"
+    "墻垣 / 墻壁（墙的传统异体）",
+    "年表/大纲脚注星号（年*、2:12*），不是闭合引号 OCR"
   ],
   "blockedWithoutWorkbenchV4": [
     "不能从工作台重生成 66 卷公开包",

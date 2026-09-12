@@ -80,6 +80,7 @@ const forbiddenFragments = [
   "酒水礼",
   "］V见徒",
   "人狱",
+  "\"使人因信而顺服*",
 ];
 
 function loadBook(bookId: string): PublicBookPayload {

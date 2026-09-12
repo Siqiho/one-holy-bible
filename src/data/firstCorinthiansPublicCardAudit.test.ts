@@ -74,6 +74,7 @@ const forbiddenFragments = [
   "披肩或头中",
   "亵读",
   "響告",
+  "\"奥秘事*",
 ];
 
 function loadBook(bookId: string): PublicBookPayload {

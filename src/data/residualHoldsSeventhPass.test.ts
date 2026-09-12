@@ -92,6 +92,10 @@ const CORE_SEVENTH_PASS_LABELS = [
   "亵读→亵渎",
   "头中→头巾",
   "好淫→奸淫",
+  "五干→五千",
+  "《I约》→《旧约》",
+  "open-quote-star",
+  "stray-closer",
 ];
 
 const SIXTH_PASS_PIN_FRAGMENTS = [
@@ -252,7 +256,7 @@ describe("residual holds seventh-pass after sixth-pass inventory", () => {
 
   it("pins the seventh-pass fix inventory without changing card counts", () => {
     expect(fixes.length).toBeGreaterThan(50);
-    expect(new Set(fixes.map((row) => row.cardId)).size).toBe(18);
+    expect(new Set(fixes.map((row) => row.cardId)).size).toBe(42);
     const labels = new Set(fixes.map((row) => row.label));
     for (const label of CORE_SEVENTH_PASS_LABELS) {
       expect(labels.has(label), label).toBe(true);

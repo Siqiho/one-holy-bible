@@ -80,6 +80,11 @@ const forbiddenFragments = [
   "上帝右边*",
   "为1\"我主\"",
   "辦白",
+  "《I约》",
+  "\"道路*（箴",
+  "\"剪除*通常",
+  "\"坚定不移的爱*",
+  "\"忘记*等词",
 ];
 
 function loadBook(bookId: string): PublicBookPayload {

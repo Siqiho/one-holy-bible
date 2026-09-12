@@ -92,6 +92,10 @@ const forbiddenFragments = [
   "放人水中",
   "29节27:188拿1:5：［38节］",
   "辦士",
+  "五干人",
+  "受咒诅的*",
+  "\"犹太人*一词",
+  "原文直译是*为自己的名\"",
 ];
 
 function loadBook(bookId: string): PublicBookPayload {

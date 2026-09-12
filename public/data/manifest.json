@@ -271,11 +271,11 @@
       "url": "/data/books/Amos.json"
     },
     {
-      "bytes": 44612,
+      "bytes": 44008,
       "cuvVerseCount": 21,
       "id": "Obad",
       "kjvVerseCount": 21,
-      "sha256": "d434affa21521b42c222b96ba757b328e0e02e4c8bc272293ddde708c7ad68be",
+      "sha256": "a3c776d24b14c4bdac7f513e785252e5ea984e5efe6de210a8ff2ed0b5bf640f",
       "textCardCount": 13,
       "url": "/data/books/Obad.json"
     },
@@ -343,11 +343,11 @@
       "url": "/data/books/Zech.json"
     },
     {
-      "bytes": 104869,
+      "bytes": 101581,
       "cuvVerseCount": 55,
       "id": "Mal",
       "kjvVerseCount": 55,
-      "sha256": "b709dfc87986be416ed6520ce3dc6504f56632bc7cf65acc6ae8958315bdfe00",
+      "sha256": "25b87fa2059408609ca22273fde3ff03862d0b0eecb33142222d6920d8821377",
       "textCardCount": 22,
       "url": "/data/books/Mal.json"
     },
@@ -505,11 +505,11 @@
       "url": "/data/books/Titus.json"
     },
     {
-      "bytes": 51362,
+      "bytes": 51438,
       "cuvVerseCount": 25,
       "id": "Phlm",
       "kjvVerseCount": 25,
-      "sha256": "c87c8dc508c7caff94086cd2c8a13430e9294e92c49af228b8480806853ecd79",
+      "sha256": "56ac8f96d8d3198efef93b35f750e2a01fe13ab0e884cd8ebdde6873453cc9cb",
       "textCardCount": 19,
       "url": "/data/books/Phlm.json"
     },
@@ -559,30 +559,30 @@
       "url": "/data/books/1John.json"
     },
     {
-      "bytes": 39283,
+      "bytes": 39485,
       "cuvVerseCount": 13,
       "id": "2John",
       "kjvVerseCount": 13,
-      "sha256": "02be2b032f1821dd94b6aaeacfdc24ac69120a3c1f11ceeccd4feeb4db13b4f0",
+      "sha256": "8e1b4733635d978bd9a2028772d96bd629e4901fea7fd7c157d2aa8ef3375fb4",
       "textCardCount": 17,
       "url": "/data/books/2John.json"
     },
     {
-      "bytes": 40173,
+      "bytes": 40401,
       "cuvVerseCount": 14,
       "id": "3John",
       "kjvVerseCount": 14,
-      "sha256": "836878ef1ab547085f78b557bfc2effae14a7a8302a30cd17742620b820f09f9",
+      "sha256": "428c91db3c5c7e0bc26e24e8e661e7fe5c5f86a04143f87f6963610ff78ec287",
       "textCardCount": 17,
       "url": "/data/books/3John.json"
     },
     {
-      "bytes": 56733,
+      "bytes": 54950,
       "cuvVerseCount": 25,
       "id": "Jude",
       "kjvVerseCount": 25,
-      "sha256": "b76f821f83fc39921d506b963308e648ed4ec7c8f4bbb615bceabd54d363ad0e",
-      "textCardCount": 20,
+      "sha256": "b533595ca3d2fd72e071003b4fdf69a9e57de6412f38a03ebf831c48010a80ca",
+      "textCardCount": 18,
       "url": "/data/books/Jude.json"
     },
     {

@@ -19,11 +19,11 @@
       "url": "/data/books/Exod.json"
     },
     {
-      "bytes": 509675,
+      "bytes": 509753,
       "cuvVerseCount": 859,
       "id": "Lev",
       "kjvVerseCount": 859,
-      "sha256": "e782051f902ff34089a39fc509b5f39afdca54fdf30df0ef390d84fffb38523d",
+      "sha256": "e31df52d4692b70ba8f035d9619d425262b774d9d87fd3b5db41f10d826a4f6a",
       "textCardCount": 36,
       "url": "/data/books/Lev.json"
     },
@@ -469,11 +469,11 @@
       "url": "/data/books/1Thess.json"
     },
     {
-      "bytes": 103546,
+      "bytes": 103552,
       "cuvVerseCount": 47,
       "id": "2Thess",
       "kjvVerseCount": 47,
-      "sha256": "656fc199d99159045c3d6d2c1bd10536f8a6c538a15c095bdaf56c5111dd86e1",
+      "sha256": "1babdec039c49b0614a328b007751a2686590381d9eb5b5013c896c2e0c7c9e8",
       "textCardCount": 34,
       "url": "/data/books/2Thess.json"
     },
@@ -496,11 +496,11 @@
       "url": "/data/books/2Tim.json"
     },
     {
-      "bytes": 94351,
+      "bytes": 94006,
       "cuvVerseCount": 46,
       "id": "Titus",
       "kjvVerseCount": 46,
-      "sha256": "96a031474487ef5a6279f2d878c7cc75ebc8f7982195fcbab12e91f91debc47d",
+      "sha256": "2558f89e1f23152cc46f6cdfc05d303481345247a4869ab9a6b7d542111e29d3",
       "textCardCount": 34,
       "url": "/data/books/Titus.json"
     },
@@ -541,12 +541,12 @@
       "url": "/data/books/1Pet.json"
     },
     {
-      "bytes": 140342,
+      "bytes": 135941,
       "cuvVerseCount": 61,
       "id": "2Pet",
       "kjvVerseCount": 61,
-      "sha256": "47719c28d198187a104f02cf13a07201925baf59acd2d78fc810e8a6fece8368",
-      "textCardCount": 49,
+      "sha256": "4fe25e49abae2f1ae4f1c2370cbf4868c08fae2ea23225df18722f64922b0b59",
+      "textCardCount": 48,
       "url": "/data/books/2Pet.json"
     },
     {

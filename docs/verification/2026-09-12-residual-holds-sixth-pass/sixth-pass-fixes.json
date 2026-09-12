@@ -1,0 +1,533 @@
+[
+  {
+    "cardId": "study-bible-luke-2-1-p013-n050",
+    "bookId": "Luke",
+    "field": "body",
+    "label": "主前N一主前→主前N—主前",
+    "count": 1,
+    "from": "主前31一主后",
+    "to": "主前31—主后"
+  },
+  {
+    "cardId": "study-bible-luke-2-1-p013-n050",
+    "bookId": "Luke",
+    "field": "summary",
+    "label": "主前N一主前→主前N—主前",
+    "count": 1,
+    "from": "主前31一主后",
+    "to": "主前31—主后"
+  },
+  {
+    "cardId": "study-bible-luke-2-1-p013-n050",
+    "bookId": "Luke",
+    "field": "searchText",
+    "label": "主前N一主前→主前N—主前",
+    "count": 2,
+    "from": "主前31一主后",
+    "to": "主前31—主后"
+  },
+  {
+    "cardId": "study-bible-mic-6-15-p012-n100",
+    "bookId": "Mic",
+    "field": "body",
+    "label": "主前N一主前→主前N—主前",
+    "count": 1,
+    "from": "主前8世纪一主前",
+    "to": "主前8世纪—主前"
+  },
+  {
+    "cardId": "study-bible-mic-6-15-p012-n100",
+    "bookId": "Mic",
+    "field": "summary",
+    "label": "主前N一主前→主前N—主前",
+    "count": 1,
+    "from": "主前8世纪一主前",
+    "to": "主前8世纪—主前"
+  },
+  {
+    "cardId": "study-bible-mic-6-15-p012-n100",
+    "bookId": "Mic",
+    "field": "searchText",
+    "label": "主前N一主前→主前N—主前",
+    "count": 2,
+    "from": "主前8世纪一主前",
+    "to": "主前8世纪—主前"
+  },
+  {
+    "cardId": "study-bible-num-intro-p001-n001",
+    "bookId": "Num",
+    "field": "body",
+    "label": "主前N一主前→主前N—主前",
+    "count": 1,
+    "from": "主前15世纪一主前",
+    "to": "主前15世纪—主前"
+  },
+  {
+    "cardId": "study-bible-num-intro-p001-n001",
+    "bookId": "Num",
+    "field": "searchText",
+    "label": "主前N一主前→主前N—主前",
+    "count": 1,
+    "from": "主前15世纪一主前",
+    "to": "主前15世纪—主前"
+  },
+  {
+    "cardId": "study-bible-num-intro-p001-n001",
+    "bookId": "Num",
+    "field": "body",
+    "label": "主前N一主前→主前N—主前",
+    "count": 1,
+    "from": "主前18世纪一主前",
+    "to": "主前18世纪—主前"
+  },
+  {
+    "cardId": "study-bible-num-intro-p001-n001",
+    "bookId": "Num",
+    "field": "searchText",
+    "label": "主前N一主前→主前N—主前",
+    "count": 1,
+    "from": "主前18世纪一主前",
+    "to": "主前18世纪—主前"
+  },
+  {
+    "cardId": "study-bible-prov-intro-p001-n001",
+    "bookId": "Prov",
+    "field": "body",
+    "label": "主前N一主前→主前N—主前",
+    "count": 1,
+    "from": "前715一主前",
+    "to": "前715—主前"
+  },
+  {
+    "cardId": "study-bible-prov-intro-p001-n001",
+    "bookId": "Prov",
+    "field": "searchText",
+    "label": "主前N一主前→主前N—主前",
+    "count": 1,
+    "from": "前715一主前",
+    "to": "前715—主前"
+  },
+  {
+    "cardId": "study-bible-ps-110-1-p118-n553",
+    "bookId": "Ps",
+    "field": "body",
+    "label": "仂敌→仇敌",
+    "count": 1,
+    "from": "仂敌",
+    "to": "仇敌"
+  },
+  {
+    "cardId": "study-bible-ps-110-1-p118-n553",
+    "bookId": "Ps",
+    "field": "summary",
+    "label": "仂敌→仇敌",
+    "count": 1,
+    "from": "仂敌",
+    "to": "仇敌"
+  },
+  {
+    "cardId": "study-bible-ps-110-1-p118-n553",
+    "bookId": "Ps",
+    "field": "searchText",
+    "label": "仂敌→仇敌",
+    "count": 2,
+    "from": "仂敌",
+    "to": "仇敌"
+  },
+  {
+    "cardId": "study-bible-ps-110-1-p118-n553",
+    "bookId": "Ps",
+    "field": "body",
+    "label": "大工家→大卫家",
+    "count": 1,
+    "from": "大工家的王",
+    "to": "大卫家的王"
+  },
+  {
+    "cardId": "study-bible-ps-110-1-p118-n553",
+    "bookId": "Ps",
+    "field": "summary",
+    "label": "大工家→大卫家",
+    "count": 1,
+    "from": "大工家的王",
+    "to": "大卫家的王"
+  },
+  {
+    "cardId": "study-bible-ps-110-1-p118-n553",
+    "bookId": "Ps",
+    "field": "searchText",
+    "label": "大工家→大卫家",
+    "count": 2,
+    "from": "大工家的王",
+    "to": "大卫家的王"
+  },
+  {
+    "cardId": "study-bible-ps-110-1-p118-n553",
+    "bookId": "Ps",
+    "field": "body",
+    "label": "mixed-punct",
+    "count": 1,
+    "from": "参王上5：。",
+    "to": "参王上5。"
+  },
+  {
+    "cardId": "study-bible-ps-110-1-p118-n553",
+    "bookId": "Ps",
+    "field": "summary",
+    "label": "mixed-punct",
+    "count": 1,
+    "from": "参王上5：。",
+    "to": "参王上5。"
+  },
+  {
+    "cardId": "study-bible-ps-110-1-p118-n553",
+    "bookId": "Ps",
+    "field": "searchText",
+    "label": "mixed-punct",
+    "count": 2,
+    "from": "参王上5：。",
+    "to": "参王上5。"
+  },
+  {
+    "cardId": "study-bible-ps-41-13-p044-n198",
+    "bookId": "Ps",
+    "field": "body",
+    "label": "完金→完全",
+    "count": 1,
+    "from": "完金一样",
+    "to": "完全一样"
+  },
+  {
+    "cardId": "study-bible-ps-41-13-p044-n198",
+    "bookId": "Ps",
+    "field": "searchText",
+    "label": "完金→完全",
+    "count": 1,
+    "from": "完金一样",
+    "to": "完全一样"
+  },
+  {
+    "cardId": "study-bible-ps-41-13-p044-n198",
+    "bookId": "Ps",
+    "field": "body",
+    "label": "上常→上帝",
+    "count": 1,
+    "from": "与上常同在",
+    "to": "与上帝同在"
+  },
+  {
+    "cardId": "study-bible-ps-41-13-p044-n198",
+    "bookId": "Ps",
+    "field": "searchText",
+    "label": "上常→上帝",
+    "count": 1,
+    "from": "与上常同在",
+    "to": "与上帝同在"
+  },
+  {
+    "cardId": "study-bible-ps-41-13-p044-n198",
+    "bookId": "Ps",
+    "field": "body",
+    "label": "剧歌→副歌",
+    "count": 1,
+    "from": "剧歌相同",
+    "to": "副歌相同"
+  },
+  {
+    "cardId": "study-bible-ps-41-13-p044-n198",
+    "bookId": "Ps",
+    "field": "searchText",
+    "label": "剧歌→副歌",
+    "count": 1,
+    "from": "剧歌相同",
+    "to": "副歌相同"
+  },
+  {
+    "cardId": "study-bible-ps-25-22-p029-n145",
+    "bookId": "Ps",
+    "field": "body",
+    "label": "人门→入门",
+    "count": 1,
+    "from": "礼拜人门仪式",
+    "to": "礼拜入门仪式"
+  },
+  {
+    "cardId": "study-bible-ps-25-22-p029-n145",
+    "bookId": "Ps",
+    "field": "searchText",
+    "label": "人门→入门",
+    "count": 1,
+    "from": "礼拜人门仪式",
+    "to": "礼拜入门仪式"
+  },
+  {
+    "cardId": "study-bible-ps-94-14-p097-n628",
+    "bookId": "Ps",
+    "field": "body",
+    "label": "mixed-punct",
+    "count": 1,
+    "from": "基业，；参",
+    "to": "基业；参"
+  },
+  {
+    "cardId": "study-bible-ps-94-14-p097-n628",
+    "bookId": "Ps",
+    "field": "summary",
+    "label": "mixed-punct",
+    "count": 1,
+    "from": "基业，；参",
+    "to": "基业；参"
+  },
+  {
+    "cardId": "study-bible-ps-94-14-p097-n628",
+    "bookId": "Ps",
+    "field": "searchText",
+    "label": "mixed-punct",
+    "count": 2,
+    "from": "基业，；参",
+    "to": "基业；参"
+  },
+  {
+    "cardId": "study-bible-ps-98-9-p101-n659",
+    "bookId": "Ps",
+    "field": "body",
+    "label": "mixed-punct",
+    "count": 1,
+    "from": "以色列民，；然而",
+    "to": "以色列民；然而"
+  },
+  {
+    "cardId": "study-bible-ps-98-9-p101-n659",
+    "bookId": "Ps",
+    "field": "searchText",
+    "label": "mixed-punct",
+    "count": 1,
+    "from": "以色列民，；然而",
+    "to": "以色列民；然而"
+  },
+  {
+    "cardId": "study-bible-ps-100-5-p103-n471",
+    "bookId": "Ps",
+    "field": "body",
+    "label": "closed-quote-punct",
+    "count": 1,
+    "from": "\"直到千万代，。敬拜者",
+    "to": "\"直到千万代\"。敬拜者"
+  },
+  {
+    "cardId": "study-bible-ps-100-5-p103-n471",
+    "bookId": "Ps",
+    "field": "searchText",
+    "label": "closed-quote-punct",
+    "count": 1,
+    "from": "\"直到千万代，。敬拜者",
+    "to": "\"直到千万代\"。敬拜者"
+  },
+  {
+    "cardId": "study-bible-gal-3-12-p010-n066",
+    "bookId": "Gal",
+    "field": "body",
+    "label": "人门→入门",
+    "count": 1,
+    "from": "人门规条",
+    "to": "入门规条"
+  },
+  {
+    "cardId": "study-bible-gal-3-12-p010-n066",
+    "bookId": "Gal",
+    "field": "searchText",
+    "label": "人门→入门",
+    "count": 1,
+    "from": "人门规条",
+    "to": "入门规条"
+  },
+  {
+    "cardId": "study-bible-gen-1-28-p012-n019",
+    "bookId": "Gen",
+    "field": "body",
+    "label": "意人→意即人",
+    "count": 1,
+    "from": "这里意人必须",
+    "to": "这里意即人必须"
+  },
+  {
+    "cardId": "study-bible-gen-1-28-p012-n019",
+    "bookId": "Gen",
+    "field": "searchText",
+    "label": "意人→意即人",
+    "count": 1,
+    "from": "这里意人必须",
+    "to": "这里意即人必须"
+  },
+  {
+    "cardId": "study-bible-gen-11-26-p027-n133",
+    "bookId": "Gen",
+    "field": "summary",
+    "label": "table-tail",
+    "count": 1,
+    "from": "。这种塔通常用晒干的泥草砖为材料，以柏油当作灰泥庙宇或神龛。下图描绘的是吾珥的南娜庙塔，建于吾珥地面…",
+    "to": ""
+  },
+  {
+    "cardId": "study-bible-gen-11-26-p027-n133",
+    "bookId": "Gen",
+    "field": "searchText",
+    "label": "table-tail",
+    "count": 1,
+    "from": "。这种塔通常用晒干的泥草砖为材料，以柏油当作灰泥庙宇或神龛。下图描绘的是吾珥的南娜庙塔，建于吾珥地面…",
+    "to": ""
+  },
+  {
+    "cardId": "study-bible-heb-intro-p001-n001",
+    "bookId": "Heb",
+    "field": "body",
+    "label": "mixed-punct",
+    "count": 1,
+    "from": "旧约经文，：以及",
+    "to": "旧约经文，以及"
+  },
+  {
+    "cardId": "study-bible-heb-intro-p001-n001",
+    "bookId": "Heb",
+    "field": "searchText",
+    "label": "mixed-punct",
+    "count": 1,
+    "from": "旧约经文，：以及",
+    "to": "旧约经文，以及"
+  },
+  {
+    "cardId": "study-bible-joel-intro-p001-n001",
+    "bookId": "Joel",
+    "field": "body",
+    "label": "mixed-punct",
+    "count": 1,
+    "from": "的记述，：以及",
+    "to": "的记述，以及"
+  },
+  {
+    "cardId": "study-bible-joel-intro-p001-n001",
+    "bookId": "Joel",
+    "field": "summary",
+    "label": "mixed-punct",
+    "count": 1,
+    "from": "的记述，：以及",
+    "to": "的记述，以及"
+  },
+  {
+    "cardId": "study-bible-joel-intro-p001-n001",
+    "bookId": "Joel",
+    "field": "searchText",
+    "label": "mixed-punct",
+    "count": 2,
+    "from": "的记述，：以及",
+    "to": "的记述，以及"
+  },
+  {
+    "cardId": "study-bible-mark-7-19-p018-n105",
+    "bookId": "Mark",
+    "field": "body",
+    "label": "mixed-punct",
+    "count": 1,
+    "from": "4:10.5：。关于",
+    "to": "4:10.5。关于"
+  },
+  {
+    "cardId": "study-bible-mark-7-19-p018-n105",
+    "bookId": "Mark",
+    "field": "searchText",
+    "label": "mixed-punct",
+    "count": 1,
+    "from": "4:10.5：。关于",
+    "to": "4:10.5。关于"
+  },
+  {
+    "cardId": "study-bible-1john-4-6-p010-n077",
+    "bookId": "1John",
+    "field": "body",
+    "label": "table-tail",
+    "count": 1,
+    "from": "［约8.47，10:16.18.3",
+    "to": ""
+  },
+  {
+    "cardId": "study-bible-1john-4-6-p010-n077",
+    "bookId": "1John",
+    "field": "summary",
+    "label": "table-tail",
+    "count": 1,
+    "from": "［约8.47，10:16.18.3",
+    "to": ""
+  },
+  {
+    "cardId": "study-bible-1john-4-6-p010-n077",
+    "bookId": "1John",
+    "field": "searchText",
+    "label": "table-tail",
+    "count": 2,
+    "from": "［约8.47，10:16.18.3",
+    "to": ""
+  },
+  {
+    "cardId": "study-bible-matt-2-2-p007-n029",
+    "bookId": "Matt",
+    "field": "body",
+    "label": "table-tail",
+    "count": 1,
+    "from": "节；本书1:20；［12,22节］",
+    "to": ""
+  },
+  {
+    "cardId": "study-bible-matt-2-2-p007-n029",
+    "bookId": "Matt",
+    "field": "summary",
+    "label": "table-tail",
+    "count": 1,
+    "from": "节；本书1:20；［12,22节］",
+    "to": ""
+  },
+  {
+    "cardId": "study-bible-matt-2-2-p007-n029",
+    "bookId": "Matt",
+    "field": "searchText",
+    "label": "table-tail",
+    "count": 2,
+    "from": "节；本书1:20；［12,22节］",
+    "to": ""
+  },
+  {
+    "cardId": "study-bible-acts-27-7-p064-n393",
+    "bookId": "Acts",
+    "field": "body",
+    "label": "table-tail",
+    "count": 1,
+    "from": "29节27:188拿1:5：［38节］",
+    "to": ""
+  },
+  {
+    "cardId": "study-bible-acts-27-7-p064-n393",
+    "bookId": "Acts",
+    "field": "summary",
+    "label": "table-tail",
+    "count": 1,
+    "from": "29节27:188拿1:5：［38节］",
+    "to": ""
+  },
+  {
+    "cardId": "study-bible-acts-27-7-p064-n393",
+    "bookId": "Acts",
+    "field": "searchText",
+    "label": "table-tail",
+    "count": 2,
+    "from": "29节27:188拿1:5：［38节］",
+    "to": ""
+  },
+  {
+    "cardId": "study-bible-prov-12-18-p022-n100",
+    "bookId": "Prov",
+    "field": "summary",
+    "label": "table-tail",
+    "count": 1,
+    "from": "13:19×［12节］",
+    "to": ""
+  }
+]

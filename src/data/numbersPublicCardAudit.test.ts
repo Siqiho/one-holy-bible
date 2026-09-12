@@ -45,6 +45,8 @@ const forbiddenFragments = [
   "常叫\"马利亚\"\"",
   "他们要子的墓地",
   "身材高大薯称",
+  "主前15世纪一主前",
+  "主前18世纪一主前",
 ];
 
 function loadBook(bookId: string): PublicBookPayload {

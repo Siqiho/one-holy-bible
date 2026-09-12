@@ -44,6 +44,8 @@ const forbiddenFragments = [
   "［本书12:17］",
   "示剑的士地",
   "一般认力",
+  "这里意人必须",
+  "这种塔通常用晒干的泥草砖",
 ];
 
 const expectedCounts: Record<string, number> = {

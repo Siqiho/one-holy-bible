@@ -90,6 +90,7 @@ const forbiddenFragments = [
   "慈普",
   "《<圣经",
   "放人水中",
+  "29节27:188拿1:5：［38节］",
 ];
 
 function loadBook(bookId: string): PublicBookPayload {

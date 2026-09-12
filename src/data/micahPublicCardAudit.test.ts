@@ -60,6 +60,7 @@ const forbiddenFragments = [
   "拒绝活出上帝的心它们已经败坏",
   "《<圣经》概述》和《〈旧意，约》",
   "例如辦论（2:6-11）",
+  "主前8世纪一主前",
 ];
 
 function loadBook(bookId: string): PublicBookPayload {

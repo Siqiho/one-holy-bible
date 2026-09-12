@@ -1,0 +1,2144 @@
+[
+  {
+    "cardId": "study-bible-1cor-2-7-p008-n031",
+    "bookId": "1Cor",
+    "field": "body",
+    "label": "open-quote-star",
+    "count": 1,
+    "from": "信息.*上帝一切的旨意\"",
+    "to": "信息。\"上帝一切的旨意\""
+  },
+  {
+    "cardId": "study-bible-1cor-2-7-p008-n031",
+    "bookId": "1Cor",
+    "field": "summary",
+    "label": "open-quote-star",
+    "count": 1,
+    "from": "信息.*上帝一切的旨意\"",
+    "to": "信息。\"上帝一切的旨意\""
+  },
+  {
+    "cardId": "study-bible-1cor-2-7-p008-n031",
+    "bookId": "1Cor",
+    "field": "searchText",
+    "label": "open-quote-star",
+    "count": 2,
+    "from": "信息.*上帝一切的旨意\"",
+    "to": "信息。\"上帝一切的旨意\""
+  },
+  {
+    "cardId": "study-bible-1cor-7-15-p014-n068",
+    "bookId": "1Cor",
+    "field": "body",
+    "label": "gloss-closer",
+    "count": 1,
+    "from": "\"'<punct>",
+    "to": "\"<punct>"
+  },
+  {
+    "cardId": "study-bible-1cor-7-15-p014-n068",
+    "bookId": "1Cor",
+    "field": "searchText",
+    "label": "gloss-closer",
+    "count": 1,
+    "from": "\"'<punct>",
+    "to": "\"<punct>"
+  },
+  {
+    "cardId": "study-bible-1cor-10-2-p017-n094",
+    "bookId": "1Cor",
+    "field": "body",
+    "label": "open-quote-star",
+    "count": 1,
+    "from": "这些事件*受洗归入基督\"",
+    "to": "这些事件\"受洗归入基督\""
+  },
+  {
+    "cardId": "study-bible-1cor-10-2-p017-n094",
+    "bookId": "1Cor",
+    "field": "summary",
+    "label": "open-quote-star",
+    "count": 1,
+    "from": "这些事件*受洗归入基督\"",
+    "to": "这些事件\"受洗归入基督\""
+  },
+  {
+    "cardId": "study-bible-1cor-10-2-p017-n094",
+    "bookId": "1Cor",
+    "field": "searchText",
+    "label": "open-quote-star",
+    "count": 2,
+    "from": "这些事件*受洗归入基督\"",
+    "to": "这些事件\"受洗归入基督\""
+  },
+  {
+    "cardId": "study-bible-1cor-11-4-p019-n164",
+    "bookId": "1Cor",
+    "field": "body",
+    "label": "gloss-closer",
+    "count": 1,
+    "from": "\"'<punct>",
+    "to": "\"<punct>"
+  },
+  {
+    "cardId": "study-bible-1cor-11-4-p019-n164",
+    "bookId": "1Cor",
+    "field": "summary",
+    "label": "gloss-closer",
+    "count": 1,
+    "from": "\"'<punct>",
+    "to": "\"<punct>"
+  },
+  {
+    "cardId": "study-bible-1cor-11-4-p019-n164",
+    "bookId": "1Cor",
+    "field": "searchText",
+    "label": "gloss-closer",
+    "count": 2,
+    "from": "\"'<punct>",
+    "to": "\"<punct>"
+  },
+  {
+    "cardId": "study-bible-1cor-14-14-p024-n212",
+    "bookId": "1Cor",
+    "field": "summary",
+    "label": "dirty-copy-star",
+    "count": 1,
+    "from": "人的*灵\"\"",
+    "to": "人的\"灵\""
+  },
+  {
+    "cardId": "study-bible-1cor-14-14-p024-n212",
+    "bookId": "1Cor",
+    "field": "searchText",
+    "label": "dirty-copy-star",
+    "count": 1,
+    "from": "人的*灵\"\"",
+    "to": "人的\"灵\""
+  },
+  {
+    "cardId": "study-bible-1sam-2-2-p009-n031",
+    "bookId": "1Sam",
+    "field": "body",
+    "label": "gloss-closer",
+    "count": 1,
+    "from": "\"'<punct>",
+    "to": "\"<punct>"
+  },
+  {
+    "cardId": "study-bible-1sam-2-2-p009-n031",
+    "bookId": "1Sam",
+    "field": "searchText",
+    "label": "gloss-closer",
+    "count": 1,
+    "from": "\"'<punct>",
+    "to": "\"<punct>"
+  },
+  {
+    "cardId": "study-bible-1sam-16-2-p029-n236",
+    "bookId": "1Sam",
+    "field": "body",
+    "label": "gloss-closer",
+    "count": 1,
+    "from": "\"'<punct>",
+    "to": "\"<punct>"
+  },
+  {
+    "cardId": "study-bible-1sam-16-2-p029-n236",
+    "bookId": "1Sam",
+    "field": "summary",
+    "label": "gloss-closer",
+    "count": 1,
+    "from": "\"'<punct>",
+    "to": "\"<punct>"
+  },
+  {
+    "cardId": "study-bible-1sam-16-2-p029-n236",
+    "bookId": "1Sam",
+    "field": "searchText",
+    "label": "gloss-closer",
+    "count": 2,
+    "from": "\"'<punct>",
+    "to": "\"<punct>"
+  },
+  {
+    "cardId": "study-bible-1tim-3-13-p010-n078",
+    "bookId": "1Tim",
+    "field": "searchText",
+    "label": "gloss-closer",
+    "count": 1,
+    "from": "\"'<punct>",
+    "to": "\"<punct>"
+  },
+  {
+    "cardId": "study-bible-1tim-6-20-p014-n106",
+    "bookId": "1Tim",
+    "field": "body",
+    "label": "gloss-closer",
+    "count": 1,
+    "from": "\"'<punct>",
+    "to": "\"<punct>"
+  },
+  {
+    "cardId": "study-bible-1tim-6-20-p014-n106",
+    "bookId": "1Tim",
+    "field": "searchText",
+    "label": "gloss-closer",
+    "count": 1,
+    "from": "\"'<punct>",
+    "to": "\"<punct>"
+  },
+  {
+    "cardId": "study-bible-2cor-4-13-p010-n054",
+    "bookId": "2Cor",
+    "field": "body",
+    "label": "gloss-closer",
+    "count": 1,
+    "from": "\"'<punct>",
+    "to": "\"<punct>"
+  },
+  {
+    "cardId": "study-bible-2cor-4-13-p010-n054",
+    "bookId": "2Cor",
+    "field": "summary",
+    "label": "gloss-closer",
+    "count": 1,
+    "from": "\"'<punct>",
+    "to": "\"<punct>"
+  },
+  {
+    "cardId": "study-bible-2cor-4-13-p010-n054",
+    "bookId": "2Cor",
+    "field": "searchText",
+    "label": "gloss-closer",
+    "count": 2,
+    "from": "\"'<punct>",
+    "to": "\"<punct>"
+  },
+  {
+    "cardId": "study-bible-2kgs-1-2-p002-n004",
+    "bookId": "2Kgs",
+    "field": "body",
+    "label": "gloss-closer",
+    "count": 1,
+    "from": "\"'<punct>",
+    "to": "\"<punct>"
+  },
+  {
+    "cardId": "study-bible-2kgs-1-2-p002-n004",
+    "bookId": "2Kgs",
+    "field": "searchText",
+    "label": "gloss-closer",
+    "count": 1,
+    "from": "\"'<punct>",
+    "to": "\"<punct>"
+  },
+  {
+    "cardId": "study-bible-2kgs-20-4-p035-n163",
+    "bookId": "2Kgs",
+    "field": "body",
+    "label": "官殿→宫殿",
+    "count": 1,
+    "from": "官殿",
+    "to": "宫殿"
+  },
+  {
+    "cardId": "study-bible-2kgs-20-4-p035-n163",
+    "bookId": "2Kgs",
+    "field": "summary",
+    "label": "官殿→宫殿",
+    "count": 1,
+    "from": "官殿",
+    "to": "宫殿"
+  },
+  {
+    "cardId": "study-bible-2kgs-20-4-p035-n163",
+    "bookId": "2Kgs",
+    "field": "searchText",
+    "label": "官殿→宫殿",
+    "count": 2,
+    "from": "官殿",
+    "to": "宫殿"
+  },
+  {
+    "cardId": "study-bible-2pet-1-16-p005-n022",
+    "bookId": "2Pet",
+    "field": "body",
+    "label": "gloss-closer",
+    "count": 1,
+    "from": "\"'<punct>",
+    "to": "\"<punct>"
+  },
+  {
+    "cardId": "study-bible-2pet-1-16-p005-n022",
+    "bookId": "2Pet",
+    "field": "summary",
+    "label": "gloss-closer",
+    "count": 1,
+    "from": "\"'<punct>",
+    "to": "\"<punct>"
+  },
+  {
+    "cardId": "study-bible-2pet-1-16-p005-n022",
+    "bookId": "2Pet",
+    "field": "searchText",
+    "label": "gloss-closer",
+    "count": 2,
+    "from": "\"'<punct>",
+    "to": "\"<punct>"
+  },
+  {
+    "cardId": "study-bible-2pet-3-13-p008-n069",
+    "bookId": "2Pet",
+    "field": "body",
+    "label": "gloss-closer",
+    "count": 1,
+    "from": "\"'<punct>",
+    "to": "\"<punct>"
+  },
+  {
+    "cardId": "study-bible-2pet-3-13-p008-n069",
+    "bookId": "2Pet",
+    "field": "searchText",
+    "label": "gloss-closer",
+    "count": 1,
+    "from": "\"'<punct>",
+    "to": "\"<punct>"
+  },
+  {
+    "cardId": "study-bible-2sam-21-19-p032-n173",
+    "bookId": "2Sam",
+    "field": "body",
+    "label": "gloss-closer",
+    "count": 1,
+    "from": "\"'<punct>",
+    "to": "\"<punct>"
+  },
+  {
+    "cardId": "study-bible-2sam-21-19-p032-n173",
+    "bookId": "2Sam",
+    "field": "searchText",
+    "label": "gloss-closer",
+    "count": 1,
+    "from": "\"'<punct>",
+    "to": "\"<punct>"
+  },
+  {
+    "cardId": "study-bible-acts-2-42-p013-n045",
+    "bookId": "Acts",
+    "field": "body",
+    "label": "gloss-closer",
+    "count": 1,
+    "from": "\"'<punct>",
+    "to": "\"<punct>"
+  },
+  {
+    "cardId": "study-bible-acts-2-42-p013-n045",
+    "bookId": "Acts",
+    "field": "summary",
+    "label": "gloss-closer",
+    "count": 1,
+    "from": "\"'<punct>",
+    "to": "\"<punct>"
+  },
+  {
+    "cardId": "study-bible-acts-2-42-p013-n045",
+    "bookId": "Acts",
+    "field": "searchText",
+    "label": "gloss-closer",
+    "count": 2,
+    "from": "\"'<punct>",
+    "to": "\"<punct>"
+  },
+  {
+    "cardId": "study-bible-acts-18-4-p048-n284",
+    "bookId": "Acts",
+    "field": "title",
+    "label": "辨论→辩论",
+    "count": 1,
+    "from": "辨论",
+    "to": "辩论"
+  },
+  {
+    "cardId": "study-bible-acts-18-4-p048-n284",
+    "bookId": "Acts",
+    "field": "body",
+    "label": "辨论→辩论",
+    "count": 1,
+    "from": "辨论",
+    "to": "辩论"
+  },
+  {
+    "cardId": "study-bible-acts-18-4-p048-n284",
+    "bookId": "Acts",
+    "field": "body",
+    "label": "暂学→哲学",
+    "count": 1,
+    "from": "暂学家",
+    "to": "哲学家"
+  },
+  {
+    "cardId": "study-bible-acts-18-4-p048-n284",
+    "bookId": "Acts",
+    "field": "summary",
+    "label": "辨论→辩论",
+    "count": 1,
+    "from": "辨论",
+    "to": "辩论"
+  },
+  {
+    "cardId": "study-bible-acts-18-4-p048-n284",
+    "bookId": "Acts",
+    "field": "summary",
+    "label": "暂学→哲学",
+    "count": 1,
+    "from": "暂学家",
+    "to": "哲学家"
+  },
+  {
+    "cardId": "study-bible-acts-18-4-p048-n284",
+    "bookId": "Acts",
+    "field": "searchText",
+    "label": "辨论→辩论",
+    "count": 3,
+    "from": "辨论",
+    "to": "辩论"
+  },
+  {
+    "cardId": "study-bible-acts-18-4-p048-n284",
+    "bookId": "Acts",
+    "field": "searchText",
+    "label": "暂学→哲学",
+    "count": 2,
+    "from": "暂学家",
+    "to": "哲学家"
+  },
+  {
+    "cardId": "study-bible-acts-18-24-p049-n302",
+    "bookId": "Acts",
+    "field": "body",
+    "label": "gloss-closer",
+    "count": 1,
+    "from": "\"'<punct>",
+    "to": "\"<punct>"
+  },
+  {
+    "cardId": "study-bible-acts-18-24-p049-n302",
+    "bookId": "Acts",
+    "field": "searchText",
+    "label": "gloss-closer",
+    "count": 2,
+    "from": "\"'<punct>",
+    "to": "\"<punct>"
+  },
+  {
+    "cardId": "study-bible-acts-23-35-p059-n558",
+    "bookId": "Acts",
+    "field": "body",
+    "label": "官殿→宫殿",
+    "count": 1,
+    "from": "官殿",
+    "to": "宫殿"
+  },
+  {
+    "cardId": "study-bible-acts-23-35-p059-n558",
+    "bookId": "Acts",
+    "field": "summary",
+    "label": "官殿→宫殿",
+    "count": 1,
+    "from": "官殿",
+    "to": "宫殿"
+  },
+  {
+    "cardId": "study-bible-acts-23-35-p059-n558",
+    "bookId": "Acts",
+    "field": "searchText",
+    "label": "官殿→宫殿",
+    "count": 2,
+    "from": "官殿",
+    "to": "宫殿"
+  },
+  {
+    "cardId": "study-bible-acts-intro-p004-n008",
+    "bookId": "Acts",
+    "field": "body",
+    "label": "gloss-closer",
+    "count": 2,
+    "from": "\"'<punct>",
+    "to": "\"<punct>"
+  },
+  {
+    "cardId": "study-bible-acts-intro-p004-n008",
+    "bookId": "Acts",
+    "field": "summary",
+    "label": "gloss-closer",
+    "count": 1,
+    "from": "\"'<punct>",
+    "to": "\"<punct>"
+  },
+  {
+    "cardId": "study-bible-acts-intro-p004-n008",
+    "bookId": "Acts",
+    "field": "searchText",
+    "label": "gloss-closer",
+    "count": 3,
+    "from": "\"'<punct>",
+    "to": "\"<punct>"
+  },
+  {
+    "cardId": "study-bible-col-intro-p001-n001",
+    "bookId": "Col",
+    "field": "body",
+    "label": "gloss-closer",
+    "count": 1,
+    "from": "\"'<punct>",
+    "to": "\"<punct>"
+  },
+  {
+    "cardId": "study-bible-col-intro-p001-n001",
+    "bookId": "Col",
+    "field": "summary",
+    "label": "gloss-closer",
+    "count": 1,
+    "from": "\"'<punct>",
+    "to": "\"<punct>"
+  },
+  {
+    "cardId": "study-bible-col-intro-p001-n001",
+    "bookId": "Col",
+    "field": "searchText",
+    "label": "gloss-closer",
+    "count": 2,
+    "from": "\"'<punct>",
+    "to": "\"<punct>"
+  },
+  {
+    "cardId": "study-bible-dan-11-36-p031-n116",
+    "bookId": "Dan",
+    "field": "body",
+    "label": "gloss-closer",
+    "count": 1,
+    "from": "\"'<punct>",
+    "to": "\"<punct>"
+  },
+  {
+    "cardId": "study-bible-dan-11-36-p031-n116",
+    "bookId": "Dan",
+    "field": "summary",
+    "label": "gloss-closer",
+    "count": 1,
+    "from": "\"'<punct>",
+    "to": "\"<punct>"
+  },
+  {
+    "cardId": "study-bible-dan-11-36-p031-n116",
+    "bookId": "Dan",
+    "field": "searchText",
+    "label": "gloss-closer",
+    "count": 2,
+    "from": "\"'<punct>",
+    "to": "\"<punct>"
+  },
+  {
+    "cardId": "study-bible-dan-intro-p001-n002",
+    "bookId": "Dan",
+    "field": "body",
+    "label": "gloss-closer",
+    "count": 1,
+    "from": "\"'<punct>",
+    "to": "\"<punct>"
+  },
+  {
+    "cardId": "study-bible-dan-intro-p001-n002",
+    "bookId": "Dan",
+    "field": "searchText",
+    "label": "gloss-closer",
+    "count": 1,
+    "from": "\"'<punct>",
+    "to": "\"<punct>"
+  },
+  {
+    "cardId": "study-bible-deut-9-25-p020-n168",
+    "bookId": "Deut",
+    "field": "body",
+    "label": "gloss-closer",
+    "count": 1,
+    "from": "\"'<punct>",
+    "to": "\"<punct>"
+  },
+  {
+    "cardId": "study-bible-deut-9-25-p020-n168",
+    "bookId": "Deut",
+    "field": "summary",
+    "label": "gloss-closer",
+    "count": 1,
+    "from": "\"'<punct>",
+    "to": "\"<punct>"
+  },
+  {
+    "cardId": "study-bible-deut-9-25-p020-n168",
+    "bookId": "Deut",
+    "field": "searchText",
+    "label": "gloss-closer",
+    "count": 2,
+    "from": "\"'<punct>",
+    "to": "\"<punct>"
+  },
+  {
+    "cardId": "study-bible-eccl-11-5-p014-n077",
+    "bookId": "Eccl",
+    "field": "body",
+    "label": "gloss-closer",
+    "count": 1,
+    "from": "\"'<punct>",
+    "to": "\"<punct>"
+  },
+  {
+    "cardId": "study-bible-eccl-11-5-p014-n077",
+    "bookId": "Eccl",
+    "field": "summary",
+    "label": "gloss-closer",
+    "count": 1,
+    "from": "\"'<punct>",
+    "to": "\"<punct>"
+  },
+  {
+    "cardId": "study-bible-eccl-11-5-p014-n077",
+    "bookId": "Eccl",
+    "field": "searchText",
+    "label": "gloss-closer",
+    "count": 2,
+    "from": "\"'<punct>",
+    "to": "\"<punct>"
+  },
+  {
+    "cardId": "study-bible-exod-11-4-p022-n118",
+    "bookId": "Exod",
+    "field": "body",
+    "label": "gloss-closer",
+    "count": 1,
+    "from": "\"'<punct>",
+    "to": "\"<punct>"
+  },
+  {
+    "cardId": "study-bible-exod-11-4-p022-n118",
+    "bookId": "Exod",
+    "field": "searchText",
+    "label": "gloss-closer",
+    "count": 1,
+    "from": "\"'<punct>",
+    "to": "\"<punct>"
+  },
+  {
+    "cardId": "study-bible-exod-intro-p001-n001",
+    "bookId": "Exod",
+    "field": "body",
+    "label": "gloss-closer",
+    "count": 1,
+    "from": "\"'<punct>",
+    "to": "\"<punct>"
+  },
+  {
+    "cardId": "study-bible-exod-intro-p001-n001",
+    "bookId": "Exod",
+    "field": "searchText",
+    "label": "gloss-closer",
+    "count": 1,
+    "from": "\"'<punct>",
+    "to": "\"<punct>"
+  },
+  {
+    "cardId": "study-bible-ezek-26-3-p039-n307",
+    "bookId": "Ezek",
+    "field": "body",
+    "label": "table-prefix",
+    "count": 1,
+    "from": "征服的1\"多国\"",
+    "to": "征服的\"多国\""
+  },
+  {
+    "cardId": "study-bible-ezek-26-3-p039-n307",
+    "bookId": "Ezek",
+    "field": "searchText",
+    "label": "table-prefix",
+    "count": 1,
+    "from": "征服的1\"多国\"",
+    "to": "征服的\"多国\""
+  },
+  {
+    "cardId": "study-bible-ezek-29-19-p045-n355",
+    "bookId": "Ezek",
+    "field": "body",
+    "label": "纳人→纳入",
+    "count": 1,
+    "from": "被纳人罗马",
+    "to": "被纳入罗马"
+  },
+  {
+    "cardId": "study-bible-ezek-29-19-p045-n355",
+    "bookId": "Ezek",
+    "field": "searchText",
+    "label": "纳人→纳入",
+    "count": 1,
+    "from": "被纳人罗马",
+    "to": "被纳入罗马"
+  },
+  {
+    "cardId": "study-bible-gen-1-27-p012-n018",
+    "bookId": "Gen",
+    "field": "body",
+    "label": "gloss-closer",
+    "count": 1,
+    "from": "\"'<punct>",
+    "to": "\"<punct>"
+  },
+  {
+    "cardId": "study-bible-gen-1-27-p012-n018",
+    "bookId": "Gen",
+    "field": "searchText",
+    "label": "gloss-closer",
+    "count": 1,
+    "from": "\"'<punct>",
+    "to": "\"<punct>"
+  },
+  {
+    "cardId": "study-bible-gen-3-1-p015-n031",
+    "bookId": "Gen",
+    "field": "body",
+    "label": "好诈→奸诈",
+    "count": 1,
+    "from": "好诈",
+    "to": "奸诈"
+  },
+  {
+    "cardId": "study-bible-gen-3-1-p015-n031",
+    "bookId": "Gen",
+    "field": "summary",
+    "label": "好诈→奸诈",
+    "count": 1,
+    "from": "好诈",
+    "to": "奸诈"
+  },
+  {
+    "cardId": "study-bible-gen-3-1-p015-n031",
+    "bookId": "Gen",
+    "field": "searchText",
+    "label": "好诈→奸诈",
+    "count": 2,
+    "from": "好诈",
+    "to": "奸诈"
+  },
+  {
+    "cardId": "study-bible-gen-4-17-p017-n068",
+    "bookId": "Gen",
+    "field": "body",
+    "label": "因力→因为",
+    "count": 1,
+    "from": "因力",
+    "to": "因为"
+  },
+  {
+    "cardId": "study-bible-gen-4-17-p017-n068",
+    "bookId": "Gen",
+    "field": "body",
+    "label": "extra-book-closer",
+    "count": 1,
+    "from": "《创世记》》。",
+    "to": "《创世记》。"
+  },
+  {
+    "cardId": "study-bible-gen-4-17-p017-n068",
+    "bookId": "Gen",
+    "field": "summary",
+    "label": "因力→因为",
+    "count": 1,
+    "from": "因力",
+    "to": "因为"
+  },
+  {
+    "cardId": "study-bible-gen-4-17-p017-n068",
+    "bookId": "Gen",
+    "field": "summary",
+    "label": "extra-book-closer",
+    "count": 1,
+    "from": "《创世记》》。",
+    "to": "《创世记》。"
+  },
+  {
+    "cardId": "study-bible-gen-4-17-p017-n068",
+    "bookId": "Gen",
+    "field": "searchText",
+    "label": "因力→因为",
+    "count": 2,
+    "from": "因力",
+    "to": "因为"
+  },
+  {
+    "cardId": "study-bible-gen-4-17-p017-n068",
+    "bookId": "Gen",
+    "field": "searchText",
+    "label": "extra-book-closer",
+    "count": 2,
+    "from": "《创世记》》。",
+    "to": "《创世记》。"
+  },
+  {
+    "cardId": "study-bible-gen-29-31-p054-n258",
+    "bookId": "Gen",
+    "field": "body",
+    "label": "因力→因为",
+    "count": 1,
+    "from": "因力",
+    "to": "因为"
+  },
+  {
+    "cardId": "study-bible-gen-29-31-p054-n258",
+    "bookId": "Gen",
+    "field": "summary",
+    "label": "因力→因为",
+    "count": 1,
+    "from": "因力",
+    "to": "因为"
+  },
+  {
+    "cardId": "study-bible-gen-29-31-p054-n258",
+    "bookId": "Gen",
+    "field": "searchText",
+    "label": "因力→因为",
+    "count": 2,
+    "from": "因力",
+    "to": "因为"
+  },
+  {
+    "cardId": "study-bible-gen-37-36-p067-n343",
+    "bookId": "Gen",
+    "field": "title",
+    "label": "王官→王宫",
+    "count": 1,
+    "from": "王官",
+    "to": "王宫"
+  },
+  {
+    "cardId": "study-bible-gen-37-36-p067-n343",
+    "bookId": "Gen",
+    "field": "body",
+    "label": "王官→王宫",
+    "count": 1,
+    "from": "王官",
+    "to": "王宫"
+  },
+  {
+    "cardId": "study-bible-gen-37-36-p067-n343",
+    "bookId": "Gen",
+    "field": "summary",
+    "label": "王官→王宫",
+    "count": 1,
+    "from": "王官",
+    "to": "王宫"
+  },
+  {
+    "cardId": "study-bible-gen-37-36-p067-n343",
+    "bookId": "Gen",
+    "field": "searchText",
+    "label": "王官→王宫",
+    "count": 3,
+    "from": "王官",
+    "to": "王宫"
+  },
+  {
+    "cardId": "study-bible-gen-41-45-p072-n370",
+    "bookId": "Gen",
+    "field": "body",
+    "label": "纳人→纳入",
+    "count": 1,
+    "from": "完全纳人王宫",
+    "to": "完全纳入王宫"
+  },
+  {
+    "cardId": "study-bible-gen-41-45-p072-n370",
+    "bookId": "Gen",
+    "field": "summary",
+    "label": "纳人→纳入",
+    "count": 1,
+    "from": "完全纳人王宫",
+    "to": "完全纳入王宫"
+  },
+  {
+    "cardId": "study-bible-gen-41-45-p072-n370",
+    "bookId": "Gen",
+    "field": "searchText",
+    "label": "纳人→纳入",
+    "count": 2,
+    "from": "完全纳人王宫",
+    "to": "完全纳入王宫"
+  },
+  {
+    "cardId": "study-bible-gen-intro-p001-n002",
+    "bookId": "Gen",
+    "field": "body",
+    "label": "gloss-closer",
+    "count": 1,
+    "from": "\"'<punct>",
+    "to": "\"<punct>"
+  },
+  {
+    "cardId": "study-bible-gen-intro-p001-n002",
+    "bookId": "Gen",
+    "field": "searchText",
+    "label": "gloss-closer",
+    "count": 1,
+    "from": "\"'<punct>",
+    "to": "\"<punct>"
+  },
+  {
+    "cardId": "study-bible-gen-intro-p005-n008",
+    "bookId": "Gen",
+    "field": "body",
+    "label": "gloss-closer",
+    "count": 1,
+    "from": "\"'<punct>",
+    "to": "\"<punct>"
+  },
+  {
+    "cardId": "study-bible-gen-intro-p005-n008",
+    "bookId": "Gen",
+    "field": "searchText",
+    "label": "gloss-closer",
+    "count": 1,
+    "from": "\"'<punct>",
+    "to": "\"<punct>"
+  },
+  {
+    "cardId": "study-bible-heb-3-6-p007-n048",
+    "bookId": "Heb",
+    "field": "body",
+    "label": "open-quote-star",
+    "count": 1,
+    "from": "）。*耶稣\"",
+    "to": "）。\"耶稣\""
+  },
+  {
+    "cardId": "study-bible-heb-3-6-p007-n048",
+    "bookId": "Heb",
+    "field": "summary",
+    "label": "open-quote-star",
+    "count": 1,
+    "from": "）。*耶稣\"",
+    "to": "）。\"耶稣\""
+  },
+  {
+    "cardId": "study-bible-heb-3-6-p007-n048",
+    "bookId": "Heb",
+    "field": "searchText",
+    "label": "open-quote-star",
+    "count": 2,
+    "from": "）。*耶稣\"",
+    "to": "）。\"耶稣\""
+  },
+  {
+    "cardId": "study-bible-hos-11-1-p016-n085",
+    "bookId": "Hos",
+    "field": "body",
+    "label": "gloss-closer",
+    "count": 1,
+    "from": "\"'<punct>",
+    "to": "\"<punct>"
+  },
+  {
+    "cardId": "study-bible-hos-11-1-p016-n085",
+    "bookId": "Hos",
+    "field": "searchText",
+    "label": "gloss-closer",
+    "count": 1,
+    "from": "\"'<punct>",
+    "to": "\"<punct>"
+  },
+  {
+    "cardId": "study-bible-isa-7-14-p018-n085",
+    "bookId": "Isa",
+    "field": "body",
+    "label": "gloss-closer",
+    "count": 2,
+    "from": "\"'<punct>",
+    "to": "\"<punct>"
+  },
+  {
+    "cardId": "study-bible-isa-7-14-p018-n085",
+    "bookId": "Isa",
+    "field": "searchText",
+    "label": "gloss-closer",
+    "count": 2,
+    "from": "\"'<punct>",
+    "to": "\"<punct>"
+  },
+  {
+    "cardId": "study-bible-isa-53-12-p083-n781",
+    "bookId": "Isa",
+    "field": "body",
+    "label": "水恒→永恒",
+    "count": 1,
+    "from": "水恒",
+    "to": "永恒"
+  },
+  {
+    "cardId": "study-bible-isa-53-12-p083-n781",
+    "bookId": "Isa",
+    "field": "body",
+    "label": "糖物→掳物",
+    "count": 1,
+    "from": "糖物",
+    "to": "掳物"
+  },
+  {
+    "cardId": "study-bible-isa-53-12-p083-n781",
+    "bookId": "Isa",
+    "field": "summary",
+    "label": "水恒→永恒",
+    "count": 1,
+    "from": "水恒",
+    "to": "永恒"
+  },
+  {
+    "cardId": "study-bible-isa-53-12-p083-n781",
+    "bookId": "Isa",
+    "field": "summary",
+    "label": "糖物→掳物",
+    "count": 1,
+    "from": "糖物",
+    "to": "掳物"
+  },
+  {
+    "cardId": "study-bible-isa-53-12-p083-n781",
+    "bookId": "Isa",
+    "field": "searchText",
+    "label": "水恒→永恒",
+    "count": 2,
+    "from": "水恒",
+    "to": "永恒"
+  },
+  {
+    "cardId": "study-bible-isa-53-12-p083-n781",
+    "bookId": "Isa",
+    "field": "searchText",
+    "label": "糖物→掳物",
+    "count": 2,
+    "from": "糖物",
+    "to": "掳物"
+  },
+  {
+    "cardId": "study-bible-jas-5-20-p013-n128",
+    "bookId": "Jas",
+    "field": "body",
+    "label": "gloss-closer",
+    "count": 1,
+    "from": "\"'<punct>",
+    "to": "\"<punct>"
+  },
+  {
+    "cardId": "study-bible-jas-5-20-p013-n128",
+    "bookId": "Jas",
+    "field": "summary",
+    "label": "gloss-closer",
+    "count": 1,
+    "from": "\"'<punct>",
+    "to": "\"<punct>"
+  },
+  {
+    "cardId": "study-bible-jas-5-20-p013-n128",
+    "bookId": "Jas",
+    "field": "searchText",
+    "label": "gloss-closer",
+    "count": 2,
+    "from": "\"'<punct>",
+    "to": "\"<punct>"
+  },
+  {
+    "cardId": "study-bible-jer-3-11-p013-n064",
+    "bookId": "Jer",
+    "field": "title",
+    "label": "好诈→奸诈",
+    "count": 1,
+    "from": "好诈",
+    "to": "奸诈"
+  },
+  {
+    "cardId": "study-bible-jer-3-11-p013-n064",
+    "bookId": "Jer",
+    "field": "body",
+    "label": "好诈→奸诈",
+    "count": 1,
+    "from": "好诈",
+    "to": "奸诈"
+  },
+  {
+    "cardId": "study-bible-jer-3-11-p013-n064",
+    "bookId": "Jer",
+    "field": "summary",
+    "label": "好诈→奸诈",
+    "count": 1,
+    "from": "好诈",
+    "to": "奸诈"
+  },
+  {
+    "cardId": "study-bible-jer-3-11-p013-n064",
+    "bookId": "Jer",
+    "field": "searchText",
+    "label": "好诈→奸诈",
+    "count": 3,
+    "from": "好诈",
+    "to": "奸诈"
+  },
+  {
+    "cardId": "study-bible-jer-20-5-p039-n272",
+    "bookId": "Jer",
+    "field": "body",
+    "label": "王官→王宫",
+    "count": 1,
+    "from": "王官",
+    "to": "王宫"
+  },
+  {
+    "cardId": "study-bible-jer-20-5-p039-n272",
+    "bookId": "Jer",
+    "field": "summary",
+    "label": "王官→王宫",
+    "count": 1,
+    "from": "王官",
+    "to": "王宫"
+  },
+  {
+    "cardId": "study-bible-jer-20-5-p039-n272",
+    "bookId": "Jer",
+    "field": "searchText",
+    "label": "王官→王宫",
+    "count": 2,
+    "from": "王官",
+    "to": "王宫"
+  },
+  {
+    "cardId": "study-bible-jer-51-59-p089-n949",
+    "bookId": "Jer",
+    "field": "body",
+    "label": "负资→负责",
+    "count": 1,
+    "from": "负资",
+    "to": "负责"
+  },
+  {
+    "cardId": "study-bible-jer-51-59-p089-n949",
+    "bookId": "Jer",
+    "field": "summary",
+    "label": "负资→负责",
+    "count": 1,
+    "from": "负资",
+    "to": "负责"
+  },
+  {
+    "cardId": "study-bible-jer-51-59-p089-n949",
+    "bookId": "Jer",
+    "field": "searchText",
+    "label": "负资→负责",
+    "count": 2,
+    "from": "负资",
+    "to": "负责"
+  },
+  {
+    "cardId": "study-bible-jer-52-12-p090-n964",
+    "bookId": "Jer",
+    "field": "body",
+    "label": "尼布撤拉旦→尼布撒拉旦",
+    "count": 1,
+    "from": "尼布撤拉旦",
+    "to": "尼布撒拉旦"
+  },
+  {
+    "cardId": "study-bible-jer-52-12-p090-n964",
+    "bookId": "Jer",
+    "field": "body",
+    "label": "王官→王宫",
+    "count": 1,
+    "from": "王官",
+    "to": "王宫"
+  },
+  {
+    "cardId": "study-bible-jer-52-12-p090-n964",
+    "bookId": "Jer",
+    "field": "summary",
+    "label": "尼布撤拉旦→尼布撒拉旦",
+    "count": 1,
+    "from": "尼布撤拉旦",
+    "to": "尼布撒拉旦"
+  },
+  {
+    "cardId": "study-bible-jer-52-12-p090-n964",
+    "bookId": "Jer",
+    "field": "summary",
+    "label": "王官→王宫",
+    "count": 1,
+    "from": "王官",
+    "to": "王宫"
+  },
+  {
+    "cardId": "study-bible-jer-52-12-p090-n964",
+    "bookId": "Jer",
+    "field": "searchText",
+    "label": "尼布撤拉旦→尼布撒拉旦",
+    "count": 2,
+    "from": "尼布撤拉旦",
+    "to": "尼布撒拉旦"
+  },
+  {
+    "cardId": "study-bible-jer-52-12-p090-n964",
+    "bookId": "Jer",
+    "field": "searchText",
+    "label": "王官→王宫",
+    "count": 2,
+    "from": "王官",
+    "to": "王宫"
+  },
+  {
+    "cardId": "study-bible-job-27-13-p032-n208",
+    "bookId": "Job",
+    "field": "body",
+    "label": "gloss-closer",
+    "count": 1,
+    "from": "\"'<punct>",
+    "to": "\"<punct>"
+  },
+  {
+    "cardId": "study-bible-job-27-13-p032-n208",
+    "bookId": "Job",
+    "field": "summary",
+    "label": "gloss-closer",
+    "count": 1,
+    "from": "\"'<punct>",
+    "to": "\"<punct>"
+  },
+  {
+    "cardId": "study-bible-job-27-13-p032-n208",
+    "bookId": "Job",
+    "field": "searchText",
+    "label": "gloss-closer",
+    "count": 2,
+    "from": "\"'<punct>",
+    "to": "\"<punct>"
+  },
+  {
+    "cardId": "study-bible-job-42-14-p049-n343",
+    "bookId": "Job",
+    "field": "body",
+    "label": "gloss-closer",
+    "count": 1,
+    "from": "\"'<punct>",
+    "to": "\"<punct>"
+  },
+  {
+    "cardId": "study-bible-job-42-14-p049-n343",
+    "bookId": "Job",
+    "field": "summary",
+    "label": "gloss-closer",
+    "count": 1,
+    "from": "\"'<punct>",
+    "to": "\"<punct>"
+  },
+  {
+    "cardId": "study-bible-job-42-14-p049-n343",
+    "bookId": "Job",
+    "field": "searchText",
+    "label": "gloss-closer",
+    "count": 2,
+    "from": "\"'<punct>",
+    "to": "\"<punct>"
+  },
+  {
+    "cardId": "study-bible-job-intro-p003-n007",
+    "bookId": "Job",
+    "field": "body",
+    "label": "gloss-closer",
+    "count": 1,
+    "from": "\"'<punct>",
+    "to": "\"<punct>"
+  },
+  {
+    "cardId": "study-bible-job-intro-p003-n007",
+    "bookId": "Job",
+    "field": "searchText",
+    "label": "gloss-closer",
+    "count": 1,
+    "from": "\"'<punct>",
+    "to": "\"<punct>"
+  },
+  {
+    "cardId": "study-bible-john-2-20-p010-n044",
+    "bookId": "John",
+    "field": "body",
+    "label": "gloss-closer",
+    "count": 1,
+    "from": "\"'<punct>",
+    "to": "\"<punct>"
+  },
+  {
+    "cardId": "study-bible-john-2-20-p010-n044",
+    "bookId": "John",
+    "field": "searchText",
+    "label": "gloss-closer",
+    "count": 1,
+    "from": "\"'<punct>",
+    "to": "\"<punct>"
+  },
+  {
+    "cardId": "study-bible-john-3-16-p011-n052",
+    "bookId": "John",
+    "field": "body",
+    "label": "gloss-closer",
+    "count": 1,
+    "from": "\"'<punct>",
+    "to": "\"<punct>"
+  },
+  {
+    "cardId": "study-bible-john-3-16-p011-n052",
+    "bookId": "John",
+    "field": "searchText",
+    "label": "gloss-closer",
+    "count": 1,
+    "from": "\"'<punct>",
+    "to": "\"<punct>"
+  },
+  {
+    "cardId": "study-bible-john-6-35-p020-n152",
+    "bookId": "John",
+    "field": "body",
+    "label": "gloss-closer",
+    "count": 1,
+    "from": "\"'<punct>",
+    "to": "\"<punct>"
+  },
+  {
+    "cardId": "study-bible-john-6-35-p020-n152",
+    "bookId": "John",
+    "field": "summary",
+    "label": "gloss-closer",
+    "count": 1,
+    "from": "\"'<punct>",
+    "to": "\"<punct>"
+  },
+  {
+    "cardId": "study-bible-john-6-35-p020-n152",
+    "bookId": "John",
+    "field": "searchText",
+    "label": "gloss-closer",
+    "count": 2,
+    "from": "\"'<punct>",
+    "to": "\"<punct>"
+  },
+  {
+    "cardId": "study-bible-john-7-8-p022-n187",
+    "bookId": "John",
+    "field": "body",
+    "label": "gloss-closer",
+    "count": 1,
+    "from": "\"'<punct>",
+    "to": "\"<punct>"
+  },
+  {
+    "cardId": "study-bible-john-7-8-p022-n187",
+    "bookId": "John",
+    "field": "summary",
+    "label": "gloss-closer",
+    "count": 1,
+    "from": "\"'<punct>",
+    "to": "\"<punct>"
+  },
+  {
+    "cardId": "study-bible-john-7-8-p022-n187",
+    "bookId": "John",
+    "field": "searchText",
+    "label": "gloss-closer",
+    "count": 2,
+    "from": "\"'<punct>",
+    "to": "\"<punct>"
+  },
+  {
+    "cardId": "study-bible-john-10-35-p029-n252",
+    "bookId": "John",
+    "field": "body",
+    "label": "gloss-closer",
+    "count": 1,
+    "from": "\"'<punct>",
+    "to": "\"<punct>"
+  },
+  {
+    "cardId": "study-bible-john-10-35-p029-n252",
+    "bookId": "John",
+    "field": "summary",
+    "label": "gloss-closer",
+    "count": 1,
+    "from": "\"'<punct>",
+    "to": "\"<punct>"
+  },
+  {
+    "cardId": "study-bible-john-10-35-p029-n252",
+    "bookId": "John",
+    "field": "searchText",
+    "label": "gloss-closer",
+    "count": 2,
+    "from": "\"'<punct>",
+    "to": "\"<punct>"
+  },
+  {
+    "cardId": "study-bible-john-12-20-p033-n205",
+    "bookId": "John",
+    "field": "body",
+    "label": "gloss-closer",
+    "count": 1,
+    "from": "\"'<punct>",
+    "to": "\"<punct>"
+  },
+  {
+    "cardId": "study-bible-john-12-20-p033-n205",
+    "bookId": "John",
+    "field": "summary",
+    "label": "gloss-closer",
+    "count": 1,
+    "from": "\"'<punct>",
+    "to": "\"<punct>"
+  },
+  {
+    "cardId": "study-bible-john-12-20-p033-n205",
+    "bookId": "John",
+    "field": "searchText",
+    "label": "gloss-closer",
+    "count": 2,
+    "from": "\"'<punct>",
+    "to": "\"<punct>"
+  },
+  {
+    "cardId": "study-bible-john-15-5-p040-n251",
+    "bookId": "John",
+    "field": "body",
+    "label": "gloss-closer",
+    "count": 1,
+    "from": "\"'<punct>",
+    "to": "\"<punct>"
+  },
+  {
+    "cardId": "study-bible-john-15-5-p040-n251",
+    "bookId": "John",
+    "field": "summary",
+    "label": "gloss-closer",
+    "count": 1,
+    "from": "\"'<punct>",
+    "to": "\"<punct>"
+  },
+  {
+    "cardId": "study-bible-john-15-5-p040-n251",
+    "bookId": "John",
+    "field": "searchText",
+    "label": "gloss-closer",
+    "count": 2,
+    "from": "\"'<punct>",
+    "to": "\"<punct>"
+  },
+  {
+    "cardId": "study-bible-josh-24-15-p036-n149",
+    "bookId": "Josh",
+    "field": "body",
+    "label": "gloss-closer",
+    "count": 1,
+    "from": "\"'<punct>",
+    "to": "\"<punct>"
+  },
+  {
+    "cardId": "study-bible-josh-24-15-p036-n149",
+    "bookId": "Josh",
+    "field": "searchText",
+    "label": "gloss-closer",
+    "count": 1,
+    "from": "\"'<punct>",
+    "to": "\"<punct>"
+  },
+  {
+    "cardId": "study-bible-lam-5-18-p015-n089",
+    "bookId": "Lam",
+    "field": "body",
+    "label": "王官→王宫",
+    "count": 1,
+    "from": "王官",
+    "to": "王宫"
+  },
+  {
+    "cardId": "study-bible-lam-5-18-p015-n089",
+    "bookId": "Lam",
+    "field": "summary",
+    "label": "王官→王宫",
+    "count": 1,
+    "from": "王官",
+    "to": "王宫"
+  },
+  {
+    "cardId": "study-bible-lam-5-18-p015-n089",
+    "bookId": "Lam",
+    "field": "searchText",
+    "label": "王官→王宫",
+    "count": 2,
+    "from": "王官",
+    "to": "王宫"
+  },
+  {
+    "cardId": "study-bible-luke-1-32-p010-n030",
+    "bookId": "Luke",
+    "field": "body",
+    "label": "open-quote-star",
+    "count": 1,
+    "from": "为*至高者\"",
+    "to": "为\"至高者\""
+  },
+  {
+    "cardId": "study-bible-luke-1-32-p010-n030",
+    "bookId": "Luke",
+    "field": "searchText",
+    "label": "open-quote-star",
+    "count": 1,
+    "from": "为*至高者\"",
+    "to": "为\"至高者\""
+  },
+  {
+    "cardId": "study-bible-luke-8-50-p035-n226",
+    "bookId": "Luke",
+    "field": "body",
+    "label": "gloss-closer",
+    "count": 1,
+    "from": "\"'<punct>",
+    "to": "\"<punct>"
+  },
+  {
+    "cardId": "study-bible-luke-8-50-p035-n226",
+    "bookId": "Luke",
+    "field": "summary",
+    "label": "gloss-closer",
+    "count": 1,
+    "from": "\"'<punct>",
+    "to": "\"<punct>"
+  },
+  {
+    "cardId": "study-bible-luke-8-50-p035-n226",
+    "bookId": "Luke",
+    "field": "searchText",
+    "label": "gloss-closer",
+    "count": 2,
+    "from": "\"'<punct>",
+    "to": "\"<punct>"
+  },
+  {
+    "cardId": "study-bible-luke-16-25-p055-n410",
+    "bookId": "Luke",
+    "field": "body",
+    "label": "gloss-closer",
+    "count": 1,
+    "from": "\"'<punct>",
+    "to": "\"<punct>"
+  },
+  {
+    "cardId": "study-bible-luke-16-25-p055-n410",
+    "bookId": "Luke",
+    "field": "summary",
+    "label": "gloss-closer",
+    "count": 1,
+    "from": "\"'<punct>",
+    "to": "\"<punct>"
+  },
+  {
+    "cardId": "study-bible-luke-16-25-p055-n410",
+    "bookId": "Luke",
+    "field": "searchText",
+    "label": "gloss-closer",
+    "count": 2,
+    "from": "\"'<punct>",
+    "to": "\"<punct>"
+  },
+  {
+    "cardId": "study-bible-luke-18-10-p057-n591",
+    "bookId": "Luke",
+    "field": "body",
+    "label": "gloss-closer",
+    "count": 1,
+    "from": "\"'<punct>",
+    "to": "\"<punct>"
+  },
+  {
+    "cardId": "study-bible-luke-18-10-p057-n591",
+    "bookId": "Luke",
+    "field": "summary",
+    "label": "gloss-closer",
+    "count": 1,
+    "from": "\"'<punct>",
+    "to": "\"<punct>"
+  },
+  {
+    "cardId": "study-bible-luke-18-10-p057-n591",
+    "bookId": "Luke",
+    "field": "searchText",
+    "label": "gloss-closer",
+    "count": 2,
+    "from": "\"'<punct>",
+    "to": "\"<punct>"
+  },
+  {
+    "cardId": "study-bible-luke-18-33-p036-n245",
+    "bookId": "Luke",
+    "field": "body",
+    "label": "负资→负责",
+    "count": 1,
+    "from": "负资",
+    "to": "负责"
+  },
+  {
+    "cardId": "study-bible-luke-18-33-p036-n245",
+    "bookId": "Luke",
+    "field": "searchText",
+    "label": "负资→负责",
+    "count": 1,
+    "from": "负资",
+    "to": "负责"
+  },
+  {
+    "cardId": "study-bible-mark-5-35-p014-n075",
+    "bookId": "Mark",
+    "field": "body",
+    "label": "gloss-closer",
+    "count": 1,
+    "from": "\"'<punct>",
+    "to": "\"<punct>"
+  },
+  {
+    "cardId": "study-bible-mark-5-35-p014-n075",
+    "bookId": "Mark",
+    "field": "summary",
+    "label": "gloss-closer",
+    "count": 1,
+    "from": "\"'<punct>",
+    "to": "\"<punct>"
+  },
+  {
+    "cardId": "study-bible-mark-5-35-p014-n075",
+    "bookId": "Mark",
+    "field": "searchText",
+    "label": "gloss-closer",
+    "count": 2,
+    "from": "\"'<punct>",
+    "to": "\"<punct>"
+  },
+  {
+    "cardId": "study-bible-mark-intro-p002-n007",
+    "bookId": "Mark",
+    "field": "body",
+    "label": "gloss-closer",
+    "count": 1,
+    "from": "\"'<punct>",
+    "to": "\"<punct>"
+  },
+  {
+    "cardId": "study-bible-mark-intro-p002-n007",
+    "bookId": "Mark",
+    "field": "summary",
+    "label": "gloss-closer",
+    "count": 1,
+    "from": "\"'<punct>",
+    "to": "\"<punct>"
+  },
+  {
+    "cardId": "study-bible-mark-intro-p002-n007",
+    "bookId": "Mark",
+    "field": "searchText",
+    "label": "gloss-closer",
+    "count": 2,
+    "from": "\"'<punct>",
+    "to": "\"<punct>"
+  },
+  {
+    "cardId": "study-bible-matt-6-9-p016-n125",
+    "bookId": "Matt",
+    "field": "body",
+    "label": "gloss-closer",
+    "count": 1,
+    "from": "\"'<punct>",
+    "to": "\"<punct>"
+  },
+  {
+    "cardId": "study-bible-matt-6-9-p016-n125",
+    "bookId": "Matt",
+    "field": "searchText",
+    "label": "gloss-closer",
+    "count": 1,
+    "from": "\"'<punct>",
+    "to": "\"<punct>"
+  },
+  {
+    "cardId": "study-bible-matt-6-13-p017-n107",
+    "bookId": "Matt",
+    "field": "body",
+    "label": "gloss-closer",
+    "count": 1,
+    "from": "\"'<punct>",
+    "to": "\"<punct>"
+  },
+  {
+    "cardId": "study-bible-matt-6-13-p017-n107",
+    "bookId": "Matt",
+    "field": "searchText",
+    "label": "gloss-closer",
+    "count": 1,
+    "from": "\"'<punct>",
+    "to": "\"<punct>"
+  },
+  {
+    "cardId": "study-bible-matt-9-27-p023-n197",
+    "bookId": "Matt",
+    "field": "body",
+    "label": "gloss-closer",
+    "count": 1,
+    "from": "\"'<punct>",
+    "to": "\"<punct>"
+  },
+  {
+    "cardId": "study-bible-matt-9-27-p023-n197",
+    "bookId": "Matt",
+    "field": "searchText",
+    "label": "gloss-closer",
+    "count": 1,
+    "from": "\"'<punct>",
+    "to": "\"<punct>"
+  },
+  {
+    "cardId": "study-bible-matt-22-36-p052-n372",
+    "bookId": "Matt",
+    "field": "body",
+    "label": "table-prefix",
+    "count": 1,
+    "from": "和1\"意\"",
+    "to": "和\"意\""
+  },
+  {
+    "cardId": "study-bible-matt-22-36-p052-n372",
+    "bookId": "Matt",
+    "field": "searchText",
+    "label": "table-prefix",
+    "count": 1,
+    "from": "和1\"意\"",
+    "to": "和\"意\""
+  },
+  {
+    "cardId": "study-bible-matt-24-5-p055-n529",
+    "bookId": "Matt",
+    "field": "body",
+    "label": "gloss-closer",
+    "count": 1,
+    "from": "\"'<punct>",
+    "to": "\"<punct>"
+  },
+  {
+    "cardId": "study-bible-matt-24-5-p055-n529",
+    "bookId": "Matt",
+    "field": "summary",
+    "label": "gloss-closer",
+    "count": 1,
+    "from": "\"'<punct>",
+    "to": "\"<punct>"
+  },
+  {
+    "cardId": "study-bible-matt-24-5-p055-n529",
+    "bookId": "Matt",
+    "field": "searchText",
+    "label": "gloss-closer",
+    "count": 2,
+    "from": "\"'<punct>",
+    "to": "\"<punct>"
+  },
+  {
+    "cardId": "study-bible-num-intro-p001-n001",
+    "bookId": "Num",
+    "field": "body",
+    "label": "gloss-closer",
+    "count": 1,
+    "from": "\"'<punct>",
+    "to": "\"<punct>"
+  },
+  {
+    "cardId": "study-bible-num-intro-p001-n001",
+    "bookId": "Num",
+    "field": "searchText",
+    "label": "gloss-closer",
+    "count": 1,
+    "from": "\"'<punct>",
+    "to": "\"<punct>"
+  },
+  {
+    "cardId": "study-bible-prov-13-10-p023-n159",
+    "bookId": "Prov",
+    "field": "summary",
+    "label": "gloss-closer",
+    "count": 1,
+    "from": "\"'<punct>",
+    "to": "\"<punct>"
+  },
+  {
+    "cardId": "study-bible-ps-8-9-p014-n051",
+    "bookId": "Ps",
+    "field": "body",
+    "label": "table-prefix",
+    "count": 1,
+    "from": "诗中的1\"我\"",
+    "to": "诗中的\"我\""
+  },
+  {
+    "cardId": "study-bible-ps-8-9-p014-n051",
+    "bookId": "Ps",
+    "field": "searchText",
+    "label": "table-prefix",
+    "count": 1,
+    "from": "诗中的1\"我\"",
+    "to": "诗中的\"我\""
+  },
+  {
+    "cardId": "study-bible-ps-10-3-p015-n089",
+    "bookId": "Ps",
+    "field": "body",
+    "label": "gloss-closer",
+    "count": 1,
+    "from": "\"'<punct>",
+    "to": "\"<punct>"
+  },
+  {
+    "cardId": "study-bible-ps-10-3-p015-n089",
+    "bookId": "Ps",
+    "field": "summary",
+    "label": "gloss-closer",
+    "count": 1,
+    "from": "\"'<punct>",
+    "to": "\"<punct>"
+  },
+  {
+    "cardId": "study-bible-ps-10-3-p015-n089",
+    "bookId": "Ps",
+    "field": "searchText",
+    "label": "gloss-closer",
+    "count": 2,
+    "from": "\"'<punct>",
+    "to": "\"<punct>"
+  },
+  {
+    "cardId": "study-bible-ps-41-9-p044-n201",
+    "bookId": "Ps",
+    "field": "body",
+    "label": "好诈→奸诈",
+    "count": 1,
+    "from": "好诈",
+    "to": "奸诈"
+  },
+  {
+    "cardId": "study-bible-ps-41-9-p044-n201",
+    "bookId": "Ps",
+    "field": "summary",
+    "label": "好诈→奸诈",
+    "count": 1,
+    "from": "好诈",
+    "to": "奸诈"
+  },
+  {
+    "cardId": "study-bible-ps-41-9-p044-n201",
+    "bookId": "Ps",
+    "field": "searchText",
+    "label": "好诈→奸诈",
+    "count": 2,
+    "from": "好诈",
+    "to": "奸诈"
+  },
+  {
+    "cardId": "study-bible-ps-58-1-p057-n384",
+    "bookId": "Ps",
+    "field": "body",
+    "label": "gloss-closer",
+    "count": 1,
+    "from": "\"'<punct>",
+    "to": "\"<punct>"
+  },
+  {
+    "cardId": "study-bible-ps-58-1-p057-n384",
+    "bookId": "Ps",
+    "field": "searchText",
+    "label": "gloss-closer",
+    "count": 1,
+    "from": "\"'<punct>",
+    "to": "\"<punct>"
+  },
+  {
+    "cardId": "study-bible-ps-78-2-p078-n507-2-2-2",
+    "bookId": "Ps",
+    "field": "body",
+    "label": "gloss-closer",
+    "count": 1,
+    "from": "\"'<punct>",
+    "to": "\"<punct>"
+  },
+  {
+    "cardId": "study-bible-ps-78-2-p078-n507-2-2-2",
+    "bookId": "Ps",
+    "field": "summary",
+    "label": "gloss-closer",
+    "count": 1,
+    "from": "\"'<punct>",
+    "to": "\"<punct>"
+  },
+  {
+    "cardId": "study-bible-ps-78-2-p078-n507-2-2-2",
+    "bookId": "Ps",
+    "field": "searchText",
+    "label": "gloss-closer",
+    "count": 2,
+    "from": "\"'<punct>",
+    "to": "\"<punct>"
+  },
+  {
+    "cardId": "study-bible-ps-99-9-p102-n662",
+    "bookId": "Ps",
+    "field": "body",
+    "label": "劫活→却活",
+    "count": 1,
+    "from": "劫活泼",
+    "to": "却活泼"
+  },
+  {
+    "cardId": "study-bible-ps-99-9-p102-n662",
+    "bookId": "Ps",
+    "field": "body",
+    "label": "table-prefix",
+    "count": 1,
+    "from": "称本诗1\"称谢诗\"",
+    "to": "称本诗\"称谢诗\""
+  },
+  {
+    "cardId": "study-bible-ps-99-9-p102-n662",
+    "bookId": "Ps",
+    "field": "summary",
+    "label": "劫活→却活",
+    "count": 1,
+    "from": "劫活泼",
+    "to": "却活泼"
+  },
+  {
+    "cardId": "study-bible-ps-99-9-p102-n662",
+    "bookId": "Ps",
+    "field": "searchText",
+    "label": "劫活→却活",
+    "count": 2,
+    "from": "劫活泼",
+    "to": "却活泼"
+  },
+  {
+    "cardId": "study-bible-ps-99-9-p102-n662",
+    "bookId": "Ps",
+    "field": "searchText",
+    "label": "table-prefix",
+    "count": 1,
+    "from": "称本诗1\"称谢诗\"",
+    "to": "称本诗\"称谢诗\""
+  },
+  {
+    "cardId": "study-bible-ps-106-6-p112-n532",
+    "bookId": "Ps",
+    "field": "body",
+    "label": "纳人→纳入",
+    "count": 1,
+    "from": "代纳人到",
+    "to": "代纳入到"
+  },
+  {
+    "cardId": "study-bible-ps-106-6-p112-n532",
+    "bookId": "Ps",
+    "field": "searchText",
+    "label": "纳人→纳入",
+    "count": 1,
+    "from": "代纳人到",
+    "to": "代纳入到"
+  },
+  {
+    "cardId": "study-bible-ps-116-11-p124-n849",
+    "bookId": "Ps",
+    "field": "body",
+    "label": "gloss-closer",
+    "count": 1,
+    "from": "\"'<punct>",
+    "to": "\"<punct>"
+  },
+  {
+    "cardId": "study-bible-ps-116-11-p124-n849",
+    "bookId": "Ps",
+    "field": "summary",
+    "label": "gloss-closer",
+    "count": 1,
+    "from": "\"'<punct>",
+    "to": "\"<punct>"
+  },
+  {
+    "cardId": "study-bible-ps-116-11-p124-n849",
+    "bookId": "Ps",
+    "field": "searchText",
+    "label": "gloss-closer",
+    "count": 2,
+    "from": "\"'<punct>",
+    "to": "\"<punct>"
+  },
+  {
+    "cardId": "study-bible-ps-134-3-p139-n969",
+    "bookId": "Ps",
+    "field": "title",
+    "label": "萦福→蒙福",
+    "count": 1,
+    "from": "萦福",
+    "to": "蒙福"
+  },
+  {
+    "cardId": "study-bible-ps-134-3-p139-n969",
+    "bookId": "Ps",
+    "field": "body",
+    "label": "因力→因为",
+    "count": 1,
+    "from": "因力",
+    "to": "因为"
+  },
+  {
+    "cardId": "study-bible-ps-134-3-p139-n969",
+    "bookId": "Ps",
+    "field": "body",
+    "label": "萦福→蒙福",
+    "count": 1,
+    "from": "萦福",
+    "to": "蒙福"
+  },
+  {
+    "cardId": "study-bible-ps-134-3-p139-n969",
+    "bookId": "Ps",
+    "field": "summary",
+    "label": "萦福→蒙福",
+    "count": 1,
+    "from": "萦福",
+    "to": "蒙福"
+  },
+  {
+    "cardId": "study-bible-ps-134-3-p139-n969",
+    "bookId": "Ps",
+    "field": "searchText",
+    "label": "因力→因为",
+    "count": 1,
+    "from": "因力",
+    "to": "因为"
+  },
+  {
+    "cardId": "study-bible-ps-134-3-p139-n969",
+    "bookId": "Ps",
+    "field": "searchText",
+    "label": "萦福→蒙福",
+    "count": 3,
+    "from": "萦福",
+    "to": "蒙福"
+  },
+  {
+    "cardId": "study-bible-rev-1-17-p012-n019",
+    "bookId": "Rev",
+    "field": "body",
+    "label": "未后→末后",
+    "count": 1,
+    "from": "首先的 …未后的",
+    "to": "首先的 …末后的"
+  },
+  {
+    "cardId": "study-bible-rev-1-17-p012-n019",
+    "bookId": "Rev",
+    "field": "summary",
+    "label": "未后→末后",
+    "count": 1,
+    "from": "首先的 …未后的",
+    "to": "首先的 …末后的"
+  },
+  {
+    "cardId": "study-bible-rev-1-17-p012-n019",
+    "bookId": "Rev",
+    "field": "searchText",
+    "label": "未后→末后",
+    "count": 2,
+    "from": "首先的 …未后的",
+    "to": "首先的 …末后的"
+  },
+  {
+    "cardId": "study-bible-rom-5-12-p015-n071",
+    "bookId": "Rom",
+    "field": "body",
+    "label": "gloss-closer",
+    "count": 1,
+    "from": "\"'<punct>",
+    "to": "\"<punct>"
+  },
+  {
+    "cardId": "study-bible-rom-5-12-p015-n071",
+    "bookId": "Rom",
+    "field": "searchText",
+    "label": "gloss-closer",
+    "count": 1,
+    "from": "\"'<punct>",
+    "to": "\"<punct>"
+  },
+  {
+    "cardId": "study-bible-zech-2-8-p006-n022",
+    "bookId": "Zech",
+    "field": "body",
+    "label": "gloss-closer",
+    "count": 1,
+    "from": "\"'<punct>",
+    "to": "\"<punct>"
+  },
+  {
+    "cardId": "study-bible-zech-2-8-p006-n022",
+    "bookId": "Zech",
+    "field": "summary",
+    "label": "gloss-closer",
+    "count": 1,
+    "from": "\"'<punct>",
+    "to": "\"<punct>"
+  },
+  {
+    "cardId": "study-bible-zech-2-8-p006-n022",
+    "bookId": "Zech",
+    "field": "searchText",
+    "label": "gloss-closer",
+    "count": 2,
+    "from": "\"'<punct>",
+    "to": "\"<punct>"
+  },
+  {
+    "cardId": "study-bible-zech-10-4-p014-n066",
+    "bookId": "Zech",
+    "field": "body",
+    "label": "gloss-closer",
+    "count": 1,
+    "from": "\"'<punct>",
+    "to": "\"<punct>"
+  },
+  {
+    "cardId": "study-bible-zech-10-4-p014-n066",
+    "bookId": "Zech",
+    "field": "summary",
+    "label": "gloss-closer",
+    "count": 1,
+    "from": "\"'<punct>",
+    "to": "\"<punct>"
+  },
+  {
+    "cardId": "study-bible-zech-10-4-p014-n066",
+    "bookId": "Zech",
+    "field": "searchText",
+    "label": "gloss-closer",
+    "count": 2,
+    "from": "\"'<punct>",
+    "to": "\"<punct>"
+  }
+]

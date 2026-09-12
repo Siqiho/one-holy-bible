@@ -98,6 +98,7 @@ const forbiddenFragments = [
   "见《圣经文集的《〈圣经〉概述》",
   "3540.45 55 70 809095",
   "指给你看\"后在灵里",
+  "首先的 …未后的",
 ];
 
 function loadBook(bookId: string): PublicBookPayload {

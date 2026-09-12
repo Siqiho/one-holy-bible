@@ -77,6 +77,11 @@ const forbiddenFragments = [
   "故士",
   "并人波斯",
   "介人",
+  "好诈",
+  "尼布撤拉旦",
+  "指王官和圣殿",
+  "焚烧圣殿、王官",
+  "负资安排",
 ];
 
 function loadBook(bookId: string): PublicBookPayload {

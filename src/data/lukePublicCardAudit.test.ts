@@ -103,6 +103,8 @@ const forbiddenFragments = [
   "主前31一主后",
   "\"高上帝*",
   "\"贫穷人*",
+  "为*至高者\"",
+  "负资发掘",
 ];
 
 function loadBook(bookId: string): PublicBookPayload {

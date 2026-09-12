@@ -1,0 +1,493 @@
+{
+  "asOf": "2026-09-12",
+  "method": "Matthew keep/fix/hold; no Mac Resources; no invented study-bible text; no six-source rewrite",
+  "publicMix": {
+    "studyBible": 9089,
+    "ocr": 146,
+    "cmc": 858,
+    "message": 3,
+    "books": 66,
+    "cards": 10096
+  },
+  "needsMacResourcesOrSourcePdf": {
+    "heldStudyBible": 347,
+    "heldStudyBibleVerdict": "keep-hold",
+    "note": "第二轮已从 main 找回原文；无源 PDF 不能救回。第十三轮不伪造权柄/儿子/诫命后文。"
+  },
+  "needsVolumeOcrLedger": {
+    "publicOcrHoldAsClass": 145,
+    "publicOcrKeep": 1,
+    "johnLeftoverOcr": [
+      "image-text-43-约翰福音-codex-pdf-p019-img004"
+    ],
+    "note": "无卷级台账则不改正文、不补造、不撤卡。"
+  },
+  "ledgerOnlyDoNotLift": {
+    "isolationCmc": 18387,
+    "isolationCmcSha256": "fa086c106e0fe8f96facdc00e0946233b524a28e25d02c8a13ff8cb74643c257",
+    "publicCmcSha256": "57faabdbe9c8ced51267e6b1142581e1e5475c08e6392f8d2451f93bb87377f6",
+    "isolationStudyBible": 10,
+    "qidabenPublic": 0,
+    "hurlbutPublic": 0
+  },
+  "publicMidCutStillInPackage": [
+    {
+      "id": "study-bible-john-18-22-p046-n297",
+      "bookId": "John",
+      "fragment": "参了、12节",
+      "verdict": "hold-in-place",
+      "reason": "可能是参7、12节，无 PDF 不能补数字"
+    },
+    {
+      "id": "study-bible-john-3-17-p011-n061",
+      "bookId": "John",
+      "fragment": "受差遣的遭者自己",
+      "verdict": "hold-in-place",
+      "reason": "差遭已改差遣；「遭者自己」仍是中截，不补造差遣者"
+    },
+    {
+      "id": "study-bible-luke-19-30-p061-n651",
+      "bookId": "Luke",
+      "fragment": "路加懞只提到",
+      "verdict": "hold-in-place",
+      "reason": "懞不能唯一还原为则/仅/却；已删地图尺标，不补造该字"
+    },
+    {
+      "id": "study-bible-luke-6-29-p028-n173",
+      "bookId": "Luke",
+      "fragment": "懞生动地说明",
+      "verdict": "hold-in-place",
+      "reason": "与路 19:30 同类，懞无唯一还原"
+    },
+    {
+      "id": "study-bible-ps-12-8-p017-n078",
+      "bookId": "Ps",
+      "fragment": "懞提醒忠信人",
+      "verdict": "hold-in-place",
+      "reason": "懞无唯一还原，不补造"
+    },
+    {
+      "id": "study-bible-jer-26-19-p048-n469",
+      "bookId": "Jer",
+      "fragment": "入侵犹大这里指审判官。坐在，时降下灾祸",
+      "verdict": "hold-in-place",
+      "reason": "弥迎/己被已改；「这里指审判官。坐在，时」仍中截，无 PDF 不补造"
+    },
+    {
+      "id": "study-bible-isa-7-14-p018-n085",
+      "bookId": "Isa",
+      "fragment": "责备亚哈斯没有信心的世俗还有一些人认为",
+      "verdict": "hold-in-place",
+      "reason": "已删「见本书7:8.9」表尾；两侧中截无 PDF 不补造"
+    },
+    {
+      "id": "study-bible-acts-22-28-p058-n357",
+      "bookId": "Acts",
+      "fragment": "密谋罗余害保岁",
+      "verdict": "hold-in-place",
+      "reason": "年表/地图倾倒后的残句，无 PDF 不补造"
+    },
+    {
+      "id": "study-bible-acts-14-2-p050-n462",
+      "bookId": "Acts",
+      "fragment": "/23节；见本书9:2章",
+      "verdict": "hold-in-place",
+      "reason": "表头倾倒后正文讲以弗所/施洗约翰，属徒 18:24-25 亚波罗材料，不是徒 14:2；删表头不能复原本卡，无 PDF 不补造"
+    },
+    {
+      "id": "study-bible-ps-41-13-p044-n198",
+      "bookId": "Ps",
+      "fragment": "其中首似乎不属于相关诗篇的部分",
+      "verdict": "hold-in-place",
+      "reason": "「其中首」可能是「其中有些」或「其中三首」，无 PDF 不补造"
+    },
+    {
+      "id": "study-bible-1cor-11-4-p019-n164",
+      "bookId": "1Cor",
+      "fragment": "就必须先了当时的社会背景",
+      "verdict": "hold-in-place",
+      "reason": "「先了」可能是「先了解」中截；第七轮已改「披肩或头中」，第八轮只改同卡 gloss closer，不补造该字"
+    },
+    {
+      "id": "study-bible-1cor-11-29-p021-n117",
+      "bookId": "1Cor",
+      "fragment": "吃喝自己的吃喝就是定自己的罪了）",
+      "verdict": "hold-in-place",
+      "reason": "缺开括号/前半句；第七轮只改同卡「亵读 / 響告」，不补造残句"
+    },
+    {
+      "id": "study-bible-1cor-7-39-p015-n079",
+      "bookId": "1Cor",
+      "fragment": "意*愿意",
+      "verdict": "hold-in-place",
+      "reason": "星号落在词中，不是唯一开/闭引号，不补造"
+    },
+    {
+      "id": "study-bible-acts-3-18-p037-n312",
+      "bookId": "Acts",
+      "fragment": "主将得救的11:18*",
+      "verdict": "hold-in-place",
+      "reason": "年表倾倒后的残句，无 PDF 不补造"
+    },
+    {
+      "id": "study-bible-acts-4-13-p015-n084",
+      "bookId": "Acts",
+      "fragment": "4:31（*放胆》",
+      "verdict": "hold-in-place",
+      "reason": "中截 / 书名号倾倒，不补造"
+    },
+    {
+      "id": "study-bible-john-19-14-p048-n463",
+      "bookId": "John",
+      "fragment": "约\"是：*",
+      "verdict": "hold-in-place",
+      "reason": "中截，无 PDF 不补造"
+    },
+    {
+      "id": "study-bible-jas-4-11-p012-n117",
+      "bookId": "Jas",
+      "fragment": "*不可彼此批评（《和修》\"诋毁\")\"",
+      "verdict": "hold-in-place",
+      "reason": "整卡只剩表头残句，改星号不能复原，无 PDF 不补造"
+    },
+    {
+      "id": "study-bible-jas-5-4-p012-n066",
+      "bookId": "Jas",
+      "fragment": "*不可……起……誓\"",
+      "verdict": "hold-in-place",
+      "reason": "同卡利 19 表轴残句；第九轮只改收劃/残人自肥，不复原表"
+    },
+    {
+      "id": "study-bible-acts-13-48-p037-n209-2-2",
+      "bookId": "Acts",
+      "fragment": "*凡预定得保罗所讲的话\"",
+      "verdict": "hold-in-place",
+      "reason": "表轴倾倒残句，无 PDF 不补造"
+    },
+    {
+      "id": "study-bible-1john-intro-p001-n001",
+      "bookId": "1John",
+      "fragment": "或某位\"\"，",
+      "verdict": "hold-in-place",
+      "reason": "空 gloss 中截，不补造被删的词"
+    },
+    {
+      "id": "study-bible-luke-9-60-p039-n273",
+      "bookId": "Luke",
+      "fragment": "也表示\"\"。",
+      "verdict": "hold-in-place",
+      "reason": "空 gloss 中截，不补造被删的词"
+    },
+    {
+      "id": "study-bible-matt-12-27-p029-n258",
+      "bookId": "Matt",
+      "fragment": "径异仪式",
+      "verdict": "hold-in-place",
+      "reason": "驱邪/禁咒/赶鬼不唯一，不补造"
+    },
+    {
+      "id": "study-bible-1chr-intro-p001-n001",
+      "bookId": "1Chr",
+      "fragment": "'编年史\"\"。",
+      "verdict": "hold-in-place",
+      "reason": "嵌套单引号+多余闭引号，改一处不等于复原内层，hold"
+    },
+    {
+      "id": "study-bible-john-1-51-p008-n034",
+      "bookId": "John",
+      "fragment": "个像人子的",
+      "verdict": "hold-in-place",
+      "reason": "但7:13 一个/有一位/那位不唯一，第十轮只改同卡将水远/9里，不补造该字"
+    },
+    {
+      "id": "study-bible-mark-12-14-p030-n301",
+      "bookId": "Mark",
+      "fragment": "耶稣己的看法",
+      "verdict": "hold-in-place",
+      "reason": "（《和修》\"合法\"后中截，自己的/己的看法不补整句"
+    },
+    {
+      "id": "study-bible-1john-2-6-p007-n026",
+      "bookId": "1John",
+      "fragment": "我们是在面",
+      "verdict": "hold-in-place",
+      "reason": "第十轮只把面〞闭合引号改成 ASCII 引号，不补造「在他里面」等"
+    },
+    {
+      "id": "study-bible-acts-18-12-p048-n286",
+      "bookId": "Acts",
+      "fragment": "（《和庭\"",
+      "verdict": "hold-in-place",
+      "reason": "公堂/法庭/和修注不唯一，不补造"
+    },
+    {
+      "id": "study-bible-matt-15-2-p036-n258",
+      "bookId": "Matt",
+      "fragment": "那时的人经》",
+      "verdict": "hold-in-place",
+      "reason": "中截书名号，经典/经文不唯一，不补造"
+    },
+    {
+      "id": "study-bible-matt-10-23-p025-n175",
+      "bookId": "Matt",
+      "fragment": "（《和修》-人子就要来临）",
+      "verdict": "hold-in-place",
+      "reason": "破折号是否等于引号不唯一，不改"
+    },
+    {
+      "id": "study-bible-1cor-12-18-p023-n131",
+      "bookId": "1Cor",
+      "fragment": "另参了、11、28节",
+      "verdict": "hold-in-place",
+      "reason": "与约 18:22「参了、12节」同类；4/7 不唯一，不补造数字"
+    },
+    {
+      "id": "study-bible-acts-10-35-p030-n167",
+      "bookId": "Acts",
+      "fragment": "美好行。",
+      "verdict": "hold-in-place",
+      "reason": "行为/品行不唯一；本轮只补同卡「受欢迎」缺闭引号，不补造该字"
+    },
+    {
+      "id": "study-bible-acts-18-26-p049-n451",
+      "bookId": "Acts",
+      "fragment": "如个谈或小组查经",
+      "verdict": "hold-in-place",
+      "reason": "个别谈/个人谈/面谈不唯一，不补造"
+    },
+    {
+      "id": "study-bible-mark-intro-p002-n007",
+      "bookId": "Mark",
+      "fragment": "与他一起到处，搜集",
+      "verdict": "hold-in-place",
+      "reason": "到处走/到处去不唯一；本轮只改同卡主人体/腊文/多余分号，不补造该字"
+    },
+    {
+      "id": "study-bible-acts-20-28-p054-n520",
+      "bookId": "Acts",
+      "fragment": "商數食會中喬理至朶「濃",
+      "verdict": "hold-in-place",
+      "reason": "表轴/乱码倾倒，无 PDF 不补造"
+    },
+    {
+      "id": "study-bible-jer-24-7-p045-n435",
+      "bookId": "Jer",
+      "fragment": "吾珥\"「答比歷犹大埃及",
+      "verdict": "hold-in-place",
+      "reason": "地图倾倒，无 PDF 不补造"
+    },
+    {
+      "id": "study-bible-john-14-12-p037-n239",
+      "bookId": "John",
+      "fragment": "安有通奕加「希關原要處的",
+      "verdict": "hold-in-place",
+      "reason": "乱码倾倒，无 PDF 不补造"
+    },
+    {
+      "id": "study-bible-gen-intro-p001-n002",
+      "bookId": "Gen",
+      "fragment": "和记长信靠顺服",
+      "verdict": "hold-in-place",
+      "reason": "记载长篇/记长篇不唯一；本轮只改同卡才民→子民"
+    },
+    {
+      "id": "study-bible-gen-intro-p001-n002",
+      "bookId": "Gen",
+      "fragment": "神也就是按照上帝的指示",
+      "verdict": "hold-in-place",
+      "reason": "中截，无 PDF 不补造"
+    },
+    {
+      "id": "study-bible-gen-28-12-p052-n248",
+      "bookId": "Gen",
+      "fragment": "容是需說的的魚翅",
+      "verdict": "hold-in-place",
+      "reason": "表轴/乱码倾倒，不按叠的的批量删"
+    },
+    {
+      "id": "study-bible-acts-2-17-p011-n041",
+      "bookId": "Acts",
+      "fragment": "重基督再来之前完成",
+      "verdict": "hold-in-place",
+      "reason": "中截；本轮只改同卡五句节/旧知/知说话/的的"
+    },
+    {
+      "id": "study-bible-acts-2-17-p011-n041",
+      "bookId": "Acts",
+      "fragment": "女，楼房上的妇女",
+      "verdict": "hold-in-place",
+      "reason": "中截尾句，不补造主语"
+    },
+    {
+      "id": "study-bible-1cor-4-3-p009-n037",
+      "bookId": "1Cor",
+      "fragment": "口才（1.：2:3-4",
+      "verdict": "hold-in-place",
+      "reason": "digit.：digit 与后文表轴缠在一起，不唯一"
+    },
+    {
+      "id": "study-bible-1john-4-18-p011-n085",
+      "bookId": "1John",
+      "fragment": "惧怕上积极影响",
+      "verdict": "hold-in-place",
+      "reason": "中截；本轮只补同卡 searchText 和修缺）"
+    },
+    {
+      "id": "study-bible-acts-17-26-p047-n279",
+      "bookId": "Acts",
+      "fragment": "（《和修》\"一人指人类的始祖亚当",
+      "verdict": "hold-in-place",
+      "reason": "和修缺闭引号/闭括号，一人/一本后文中截，不补造"
+    },
+    {
+      "id": "study-bible-acts-13-15-p036-n195",
+      "bookId": "Acts",
+      "fragment": "（《和修》\"会堂主会堂的崇拜",
+      "verdict": "hold-in-place",
+      "reason": "和修 gloss 中截，会堂主管/会堂主人不唯一"
+    },
+    {
+      "id": "study-bible-acts-19-32-p052-n476",
+      "bookId": "Acts",
+      "fragment": "（《和修》\"乱成一人连为什么",
+      "verdict": "hold-in-place",
+      "reason": "乱成一团中截，不补造"
+    },
+    {
+      "id": "study-bible-1tim-1-18-p007-n034",
+      "bookId": "1Tim",
+      "fragment": "（《和修》上触了礁\"",
+      "verdict": "hold-in-place",
+      "reason": "缺开引号/前半句；本轮只改同卡宜认→宣认，不补造触礁 gloss"
+    },
+    {
+      "id": "study-bible-john-3-16-p011-n052",
+      "bookId": "John",
+      "fragment": "在恒审判时不至灭亡",
+      "verdict": "hold-in-place",
+      "reason": "永恒/最后/末日不唯一；本轮只改同卡 11：.25→11:25"
+    },
+    {
+      "id": "study-bible-john-3-16-p011-n052",
+      "bookId": "John",
+      "fragment": "那督的人得",
+      "verdict": "hold-in-place",
+      "reason": "信基督中截，不补造"
+    }
+  ],
+  "crossFieldCopyRemaining": [
+    {
+      "id": "study-bible-jas-2-21-p008-n051",
+      "note": "第十一轮已按正文抄高置信残串：body 已是「因行为称义 / 希腊原文dikaioo」，summary/searchText 的「因行为称（ / 腊原文dikaioo）」改为正文。"
+    },
+    {
+      "id": "study-bible-1cor-8-1-p015-n110",
+      "note": "第十一轮已按正文抄高置信残串：body 已是「希腊原文brasis」，summary/searchText 的「腊原文brasis」改为正文。"
+    },
+    {
+      "id": "study-bible-jas-2-5-p007-n033",
+      "note": "body 用「拣选术语」，summary/searchText 用「选举术语」。两词都合法，不按正文改写"
+    },
+    {
+      "id": "study-bible-1john-1-9-p006-n018",
+      "note": "第十轮已按正文抄高置信残串：body 已是「赦免罪孽和过犯」（民14:18），searchText 的「罪摩 / 《民14:18）」改为正文。"
+    },
+    {
+      "id": "study-bible-1tim-1-20-p007-n035",
+      "note": "第十轮已按正文抄高置信残串：body 已是「不再谤渎 / 谤渎 / 执行教会纪律」，summary/searchText 的「不再谤了 / 谤读 / 扶行」改为正文。"
+    },
+    {
+      "id": "study-bible-jas-5-4-p012-n066",
+      "note": "第九轮已按正文抄高置信残串：body 已是「损人自肥 / 收割」，summary/searchText 的「残人自肥 / 收劃」改为正文。同卡利 19 表轴 *不可……起……誓 仍 hold。"
+    },
+    {
+      "id": "study-bible-luke-11-8-p042-n424",
+      "note": "第九轮已按 searchText 抄高置信残串：searchText 已是「情词迫切」，body/summary 的「情词迫场」改为「情词迫切」。不补造「表示」。"
+    },
+    {
+      "note": "其余 summary 分叉多为括号切边 / 省略号截断，不整段重写。"
+    },
+    {
+      "id": "study-bible-1cor-7-18-p014-n072",
+      "note": "第十二轮已按正文抄高置信残串：body 已是（《和修》\"除去割礼的记号\"），summary/searchText 缺）按正文闭合。"
+    },
+    {
+      "id": "study-bible-1cor-9-21-p017-n093",
+      "note": "第十二轮已按正文抄高置信残串：body 已是（《和修》\"不是没有律法，而是在基督的律法之下\"），summary/searchText 缺）按正文闭合。"
+    },
+    {
+      "id": "study-bible-1john-5-20-p013-n110",
+      "note": "第十二轮已按正文抄高置信残串：body 已是（《和修》\"将悟性赐给我们\"），summary/searchText 缺）按正文闭合。"
+    },
+    {
+      "id": "study-bible-1john-4-18-p011-n085",
+      "note": "第十二轮已按正文抄高置信残串：searchText（《和修》\"驱逐出去\"。按正文补）。"
+    },
+    {
+      "note": "其余 summary 分叉多为括号切边 / 省略号截断，不整段重写。"
+    },
+    {
+      "id": "study-bible-eph-2-13-p009-n041",
+      "note": "第十三轮已按正文抄高置信残串：body 已是徒14:1，18:4，searchText 的徒14：.18:4 改为正文。"
+    },
+    {
+      "note": "第十三轮和修缺）只在 gloss 已闭引号且后文明确接续正文（指/这/保罗/没有等）时补）；会堂主/乱成一人/一人指人类/上触了礁仍 hold。"
+    }
+  ],
+  "keepNotDebt": [
+    "Iesous 希腊转写（书/太）",
+    "形成鲜明对比",
+    "可读年表中的主后30",
+    "自己经历（含己经子串，不能当禁串）",
+    "非利士地",
+    "希伯来话（与希腊话/亚兰话并列）",
+    "隐罗结",
+    "ViaDolorosa",
+    "《和修》注",
+    "征收人头税 / 纳人头税（纳人是子串；只有被纳人罗马 / 完全纳人王宫 / 代纳人到是纳入 OCR）",
+    "悦纳人（悦纳 + 人，不是纳入 OCR）",
+    "救赎大工 / 办理大工（大工合法；只有大工家是大卫 OCR）",
+    "着重（强调义）",
+    "善事上常用（上常是子串；只有与上常同在是上帝 OCR）",
+    "昆虫 / 昆兰 / 撤离 / 撤兵 / 撤销",
+    "墻垣 / 墻壁（墙的传统异体）",
+    "年表/大纲脚注星号（年*、2:12*），不是闭合引号 OCR",
+    "美好计划（好计是子串，不是奸计 OCR）",
+    "味道很不好细心栽培（好细是跨词子串，不是奸细 OCR）",
+    "dia加人名属格（dia + 人名属格，不是加入 OCR）",
+    "堕落人性（堕落 + 人性，不是落入 OCR）",
+    "出人意料 / 出人的眼睛 / 引出人（不是出入 OCR）",
+    "浩瀚宇宙（瀚合法；只有约瀚是约翰 OCR）",
+    "释放人自由（释放 + 人，不是放入 OCR）",
+    "《次经，马加比传上》（次经书名列举，不是《创，世记》类书名折断）",
+    "有助于 / 求助于（只有巴拿巴的助于是助手 OCR）",
+    "河水远远 / 水存在于海绵（不是永远 / 永存 OCR）",
+    "犹太老师（含太老子串，不能当禁串；只有太老们是长老 OCR）",
+    "因徒劳 / 因犯罪（不是囚徒 / 囚犯 OCR）",
+    "他连得（他连得是 talent；只有一万他他连得 / 他他所有的家人是叠字 OCR）",
+    "膳长 / 王膳（只有生来膳眼是瞎眼 OCR）",
+    "满有良善 / 普世（只有良普是慈善同类 OCR）",
+    "无辜 / 谴责（已修无宰 / 道责）",
+    "希腊原文 / 《使徒行传》（只有缺「希」的腊原文、缺「使」的《徒行传》是 OCR）",
+    "主人公 / 灵性（已修主人体 / 员性）",
+    "拐带人 / 带人进入（带 + 人，不是带入 OCR）",
+    "慈愛（繁体爱，不是 OCR）",
+    "「牧人」合法角引号（不是乱码倾倒里的「）",
+    "有目的的 / 目的的确实性质（只有叠字「的的」残串是 OCR）",
+    "五旬节（只有五句节是旬 OCR）",
+    "家乡 / 以色列子民 / 如果要（只有察乡 / 才民 / 骆驼果要是 OCR）",
+    "藉着先知说话（只有不再知说话是开口 OCR）",
+    "腓尼基（只有排尼基是腓 OCR）",
+    "千万人 / 千代（只有干万人 / 干代是千 OCR）",
+    "后裔（只有后餅是裔 OCR）",
+    "审判的目的（只有审判的目子是日子 OCR）",
+    "宣认（只有宜认的信仰是宣 OCR）",
+    "彼后1:17（只有倒在地上清单后1:17.19:10.22:8是启 OCR）",
+    "赛43:3（只有诗赛43:3是叠书名 OCR）",
+    "纷纷乱乱（与和合本徒19:32经文一致，不是乱码）"
+  ],
+  "blockedWithoutWorkbenchV4": [
+    "不能从工作台重生成 66 卷公开包",
+    "不能按用户全库数补齐研修本/CMC/启导本/故事卡缺口"
+  ]
+}

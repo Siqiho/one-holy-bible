@@ -1,0 +1,1046 @@
+[
+  {
+    "cardId": "study-bible-1chr-intro-p004-n008",
+    "bookId": "1Chr",
+    "field": "body",
+    "label": "colon-dot-ref",
+    "count": 1,
+    "from": "：.",
+    "to": ":"
+  },
+  {
+    "cardId": "study-bible-1chr-intro-p004-n008",
+    "bookId": "1Chr",
+    "field": "searchText",
+    "label": "colon-dot-ref",
+    "count": 1,
+    "from": "：.",
+    "to": ":"
+  },
+  {
+    "cardId": "study-bible-1thess-2-16-p007-n030",
+    "bookId": "1Thess",
+    "field": "body",
+    "label": "hexiu-missing-paren",
+    "count": 1,
+    "from": "（《和修》\"…\"，",
+    "to": "（《和修》\"…\"），"
+  },
+  {
+    "cardId": "study-bible-1thess-2-16-p007-n030",
+    "bookId": "1Thess",
+    "field": "searchText",
+    "label": "hexiu-missing-paren",
+    "count": 2,
+    "from": "（《和修》\"…\"，",
+    "to": "（《和修》\"…\"），"
+  },
+  {
+    "cardId": "study-bible-1thess-2-16-p007-n030",
+    "bookId": "1Thess",
+    "field": "summary",
+    "label": "hexiu-missing-paren",
+    "count": 1,
+    "from": "（《和修》\"…\"，",
+    "to": "（《和修》\"…\"），"
+  },
+  {
+    "cardId": "study-bible-1tim-1-18-p007-n034",
+    "bookId": "1Tim",
+    "field": "searchText",
+    "label": "宜认→宣认",
+    "count": 1,
+    "from": "宜认的信仰",
+    "to": "宣认的信仰"
+  },
+  {
+    "cardId": "study-bible-1tim-6-20-p014-n106",
+    "bookId": "1Tim",
+    "field": "body",
+    "label": "hexiu-missing-paren",
+    "count": 1,
+    "from": "（《和修》\"…\"，",
+    "to": "（《和修》\"…\"），"
+  },
+  {
+    "cardId": "study-bible-1tim-6-20-p014-n106",
+    "bookId": "1Tim",
+    "field": "searchText",
+    "label": "hexiu-missing-paren",
+    "count": 2,
+    "from": "（《和修》\"…\"，",
+    "to": "（《和修》\"…\"），"
+  },
+  {
+    "cardId": "study-bible-1tim-6-20-p014-n106",
+    "bookId": "1Tim",
+    "field": "summary",
+    "label": "hexiu-missing-paren",
+    "count": 1,
+    "from": "（《和修》\"…\"，",
+    "to": "（《和修》\"…\"），"
+  },
+  {
+    "cardId": "study-bible-2pet-1-4-p004-n016",
+    "bookId": "2Pet",
+    "field": "body",
+    "label": "colon-dot-ref",
+    "count": 1,
+    "from": "：.",
+    "to": ":"
+  },
+  {
+    "cardId": "study-bible-2pet-1-4-p004-n016",
+    "bookId": "2Pet",
+    "field": "searchText",
+    "label": "colon-dot-ref",
+    "count": 1,
+    "from": "：.",
+    "to": ":"
+  },
+  {
+    "cardId": "study-bible-2sam-12-8-p018-n078",
+    "bookId": "2Sam",
+    "field": "body",
+    "label": "hexiu-missing-paren",
+    "count": 1,
+    "from": "（《和修》\"…\"，",
+    "to": "（《和修》\"…\"），"
+  },
+  {
+    "cardId": "study-bible-2sam-12-8-p018-n078",
+    "bookId": "2Sam",
+    "field": "searchText",
+    "label": "hexiu-missing-paren",
+    "count": 2,
+    "from": "（《和修》\"…\"，",
+    "to": "（《和修》\"…\"），"
+  },
+  {
+    "cardId": "study-bible-2sam-12-8-p018-n078",
+    "bookId": "2Sam",
+    "field": "summary",
+    "label": "hexiu-missing-paren",
+    "count": 1,
+    "from": "（《和修》\"…\"，",
+    "to": "（《和修》\"…\"），"
+  },
+  {
+    "cardId": "study-bible-acts-17-26-p047-n279",
+    "bookId": "Acts",
+    "field": "body",
+    "label": "后餅→后裔",
+    "count": 1,
+    "from": "后餅",
+    "to": "后裔"
+  },
+  {
+    "cardId": "study-bible-acts-17-26-p047-n279",
+    "bookId": "Acts",
+    "field": "searchText",
+    "label": "后餅→后裔",
+    "count": 2,
+    "from": "后餅",
+    "to": "后裔"
+  },
+  {
+    "cardId": "study-bible-acts-17-26-p047-n279",
+    "bookId": "Acts",
+    "field": "summary",
+    "label": "后餅→后裔",
+    "count": 1,
+    "from": "后餅",
+    "to": "后裔"
+  },
+  {
+    "cardId": "study-bible-acts-19-1-p049-n459",
+    "bookId": "Acts",
+    "field": "body",
+    "label": "hexiu-missing-paren",
+    "count": 1,
+    "from": "（《和修》\"…\"，",
+    "to": "（《和修》\"…\"），"
+  },
+  {
+    "cardId": "study-bible-acts-19-1-p049-n459",
+    "bookId": "Acts",
+    "field": "searchText",
+    "label": "hexiu-missing-paren",
+    "count": 2,
+    "from": "（《和修》\"…\"，",
+    "to": "（《和修》\"…\"），"
+  },
+  {
+    "cardId": "study-bible-acts-19-1-p049-n459",
+    "bookId": "Acts",
+    "field": "summary",
+    "label": "hexiu-missing-paren",
+    "count": 1,
+    "from": "（《和修》\"…\"，",
+    "to": "（《和修》\"…\"），"
+  },
+  {
+    "cardId": "study-bible-acts-21-3-p055-n336",
+    "bookId": "Acts",
+    "field": "body",
+    "label": "colon-dot-ref",
+    "count": 1,
+    "from": "：.",
+    "to": ":"
+  },
+  {
+    "cardId": "study-bible-acts-21-3-p055-n336",
+    "bookId": "Acts",
+    "field": "body",
+    "label": "排尼基→腓尼基",
+    "count": 1,
+    "from": "排尼基",
+    "to": "腓尼基"
+  },
+  {
+    "cardId": "study-bible-acts-21-3-p055-n336",
+    "bookId": "Acts",
+    "field": "searchText",
+    "label": "colon-dot-ref",
+    "count": 2,
+    "from": "：.",
+    "to": ":"
+  },
+  {
+    "cardId": "study-bible-acts-21-3-p055-n336",
+    "bookId": "Acts",
+    "field": "searchText",
+    "label": "排尼基→腓尼基",
+    "count": 3,
+    "from": "排尼基",
+    "to": "腓尼基"
+  },
+  {
+    "cardId": "study-bible-acts-21-3-p055-n336",
+    "bookId": "Acts",
+    "field": "summary",
+    "label": "colon-dot-ref",
+    "count": 1,
+    "from": "：.",
+    "to": ":"
+  },
+  {
+    "cardId": "study-bible-acts-21-3-p055-n336",
+    "bookId": "Acts",
+    "field": "summary",
+    "label": "排尼基→腓尼基",
+    "count": 1,
+    "from": "排尼基",
+    "to": "腓尼基"
+  },
+  {
+    "cardId": "study-bible-acts-21-3-p055-n336",
+    "bookId": "Acts",
+    "field": "title",
+    "label": "排尼基→腓尼基",
+    "count": 1,
+    "from": "排尼基",
+    "to": "腓尼基"
+  },
+  {
+    "cardId": "study-bible-acts-4-12-p015-n082",
+    "bookId": "Acts",
+    "field": "body",
+    "label": "colon-dot-ref",
+    "count": 1,
+    "from": "：.",
+    "to": ":"
+  },
+  {
+    "cardId": "study-bible-acts-4-12-p015-n082",
+    "bookId": "Acts",
+    "field": "searchText",
+    "label": "colon-dot-ref",
+    "count": 1,
+    "from": "：.",
+    "to": ":"
+  },
+  {
+    "cardId": "study-bible-acts-5-15-p017-n113",
+    "bookId": "Acts",
+    "field": "body",
+    "label": "hexiu-missing-paren",
+    "count": 1,
+    "from": "（《和修》\"…\"，",
+    "to": "（《和修》\"…\"），"
+  },
+  {
+    "cardId": "study-bible-acts-5-15-p017-n113",
+    "bookId": "Acts",
+    "field": "searchText",
+    "label": "hexiu-missing-paren",
+    "count": 2,
+    "from": "（《和修》\"…\"，",
+    "to": "（《和修》\"…\"），"
+  },
+  {
+    "cardId": "study-bible-acts-5-15-p017-n113",
+    "bookId": "Acts",
+    "field": "summary",
+    "label": "hexiu-missing-paren",
+    "count": 1,
+    "from": "（《和修》\"…\"，",
+    "to": "（《和修》\"…\"），"
+  },
+  {
+    "cardId": "study-bible-acts-9-11-p025-n141",
+    "bookId": "Acts",
+    "field": "searchText",
+    "label": "colon-dot-ref",
+    "count": 1,
+    "from": "：.",
+    "to": ":"
+  },
+  {
+    "cardId": "study-bible-deut-10-16-p021-n180",
+    "bookId": "Deut",
+    "field": "searchText",
+    "label": "hexiu-missing-paren",
+    "count": 1,
+    "from": "（《和修》\"…\"，",
+    "to": "（《和修》\"…\"），"
+  },
+  {
+    "cardId": "study-bible-deut-29-19-p042-n394",
+    "bookId": "Deut",
+    "field": "searchText",
+    "label": "hexiu-missing-paren",
+    "count": 1,
+    "from": "（《和修》\"…\"，",
+    "to": "（《和修》\"…\"），"
+  },
+  {
+    "cardId": "study-bible-deut-intro-p001-n001",
+    "bookId": "Deut",
+    "field": "body",
+    "label": "colon-dot-ref",
+    "count": 1,
+    "from": "：.",
+    "to": ":"
+  },
+  {
+    "cardId": "study-bible-deut-intro-p001-n001",
+    "bookId": "Deut",
+    "field": "searchText",
+    "label": "colon-dot-ref",
+    "count": 1,
+    "from": "：.",
+    "to": ":"
+  },
+  {
+    "cardId": "study-bible-eph-2-13-p009-n041",
+    "bookId": "Eph",
+    "field": "searchText",
+    "label": "dirty-colon-dot",
+    "count": 1,
+    "from": "徒14：.18:4",
+    "to": "徒14:1，18:4"
+  },
+  {
+    "cardId": "study-bible-exod-34-30-p055-n394",
+    "bookId": "Exod",
+    "field": "body",
+    "label": "hexiu-missing-paren",
+    "count": 1,
+    "from": "（《和修》\"…\"，",
+    "to": "（《和修》\"…\"），"
+  },
+  {
+    "cardId": "study-bible-exod-34-30-p055-n394",
+    "bookId": "Exod",
+    "field": "searchText",
+    "label": "hexiu-missing-paren",
+    "count": 2,
+    "from": "（《和修》\"…\"，",
+    "to": "（《和修》\"…\"），"
+  },
+  {
+    "cardId": "study-bible-exod-34-30-p055-n394",
+    "bookId": "Exod",
+    "field": "summary",
+    "label": "hexiu-missing-paren",
+    "count": 1,
+    "from": "（《和修》\"…\"，",
+    "to": "（《和修》\"…\"），"
+  },
+  {
+    "cardId": "study-bible-gal-4-3-p011-n052",
+    "bookId": "Gal",
+    "field": "body",
+    "label": "hexiu-missing-paren",
+    "count": 1,
+    "from": "（《和修》\"…\"，",
+    "to": "（《和修》\"…\"），"
+  },
+  {
+    "cardId": "study-bible-gal-4-3-p011-n052",
+    "bookId": "Gal",
+    "field": "searchText",
+    "label": "hexiu-missing-paren",
+    "count": 2,
+    "from": "（《和修》\"…\"，",
+    "to": "（《和修》\"…\"），"
+  },
+  {
+    "cardId": "study-bible-gal-4-3-p011-n052",
+    "bookId": "Gal",
+    "field": "summary",
+    "label": "hexiu-missing-paren",
+    "count": 1,
+    "from": "（《和修》\"…\"，",
+    "to": "（《和修》\"…\"），"
+  },
+  {
+    "cardId": "study-bible-gen-2-18-p014-n034",
+    "bookId": "Gen",
+    "field": "body",
+    "label": "colon-dot-ref",
+    "count": 1,
+    "from": "：.",
+    "to": ":"
+  },
+  {
+    "cardId": "study-bible-gen-2-18-p014-n034",
+    "bookId": "Gen",
+    "field": "searchText",
+    "label": "colon-dot-ref",
+    "count": 2,
+    "from": "：.",
+    "to": ":"
+  },
+  {
+    "cardId": "study-bible-gen-2-18-p014-n034",
+    "bookId": "Gen",
+    "field": "summary",
+    "label": "colon-dot-ref",
+    "count": 1,
+    "from": "：.",
+    "to": ":"
+  },
+  {
+    "cardId": "study-bible-heb-2-9-p006-n029",
+    "bookId": "Heb",
+    "field": "body",
+    "label": "colon-dot-ref",
+    "count": 1,
+    "from": "：.",
+    "to": ":"
+  },
+  {
+    "cardId": "study-bible-heb-2-9-p006-n029",
+    "bookId": "Heb",
+    "field": "searchText",
+    "label": "colon-dot-ref",
+    "count": 1,
+    "from": "：.",
+    "to": ":"
+  },
+  {
+    "cardId": "study-bible-hos-5-1-p010-n043",
+    "bookId": "Hos",
+    "field": "body",
+    "label": "colon-dot-ref",
+    "count": 1,
+    "from": "：.",
+    "to": ":"
+  },
+  {
+    "cardId": "study-bible-hos-5-1-p010-n043",
+    "bookId": "Hos",
+    "field": "searchText",
+    "label": "colon-dot-ref",
+    "count": 2,
+    "from": "：.",
+    "to": ":"
+  },
+  {
+    "cardId": "study-bible-hos-5-1-p010-n043",
+    "bookId": "Hos",
+    "field": "summary",
+    "label": "colon-dot-ref",
+    "count": 1,
+    "from": "：.",
+    "to": ":"
+  },
+  {
+    "cardId": "study-bible-jer-31-3-p054-n550",
+    "bookId": "Jer",
+    "field": "body",
+    "label": "colon-dot-ref",
+    "count": 1,
+    "from": "：.",
+    "to": ":"
+  },
+  {
+    "cardId": "study-bible-jer-31-3-p054-n550",
+    "bookId": "Jer",
+    "field": "searchText",
+    "label": "colon-dot-ref",
+    "count": 2,
+    "from": "：.",
+    "to": ":"
+  },
+  {
+    "cardId": "study-bible-jer-31-3-p054-n550",
+    "bookId": "Jer",
+    "field": "summary",
+    "label": "colon-dot-ref",
+    "count": 1,
+    "from": "：.",
+    "to": ":"
+  },
+  {
+    "cardId": "study-bible-jer-32-18-p057-n588",
+    "bookId": "Jer",
+    "field": "body",
+    "label": "colon-dot-ref",
+    "count": 1,
+    "from": "：.",
+    "to": ":"
+  },
+  {
+    "cardId": "study-bible-jer-32-18-p057-n588",
+    "bookId": "Jer",
+    "field": "body",
+    "label": "干万人→千万人",
+    "count": 1,
+    "from": "干万人",
+    "to": "千万人"
+  },
+  {
+    "cardId": "study-bible-jer-32-18-p057-n588",
+    "bookId": "Jer",
+    "field": "searchText",
+    "label": "colon-dot-ref",
+    "count": 1,
+    "from": "：.",
+    "to": ":"
+  },
+  {
+    "cardId": "study-bible-jer-32-18-p057-n588",
+    "bookId": "Jer",
+    "field": "searchText",
+    "label": "干万人→千万人",
+    "count": 2,
+    "from": "干万人",
+    "to": "千万人"
+  },
+  {
+    "cardId": "study-bible-jer-32-18-p057-n588",
+    "bookId": "Jer",
+    "field": "summary",
+    "label": "干万人→千万人",
+    "count": 1,
+    "from": "干万人",
+    "to": "千万人"
+  },
+  {
+    "cardId": "study-bible-jer-47-4-p077-n542",
+    "bookId": "Jer",
+    "field": "body",
+    "label": "目子→日子",
+    "count": 1,
+    "from": "审判的目子",
+    "to": "审判的日子"
+  },
+  {
+    "cardId": "study-bible-jer-47-4-p077-n542",
+    "bookId": "Jer",
+    "field": "searchText",
+    "label": "目子→日子",
+    "count": 2,
+    "from": "审判的目子",
+    "to": "审判的日子"
+  },
+  {
+    "cardId": "study-bible-jer-47-4-p077-n542",
+    "bookId": "Jer",
+    "field": "summary",
+    "label": "目子→日子",
+    "count": 1,
+    "from": "审判的目子",
+    "to": "审判的日子"
+  },
+  {
+    "cardId": "study-bible-jer-50-34-p085-n618",
+    "bookId": "Jer",
+    "field": "searchText",
+    "label": "hexiu-missing-paren",
+    "count": 1,
+    "from": "（《和修》\"…\"，",
+    "to": "（《和修》\"…\"），"
+  },
+  {
+    "cardId": "study-bible-job-1-6-p006-n016",
+    "bookId": "Job",
+    "field": "body",
+    "label": "hexiu-missing-paren",
+    "count": 1,
+    "from": "（《和修》\"…\"，",
+    "to": "（《和修》\"…\"），"
+  },
+  {
+    "cardId": "study-bible-job-1-6-p006-n016",
+    "bookId": "Job",
+    "field": "searchText",
+    "label": "hexiu-missing-paren",
+    "count": 2,
+    "from": "（《和修》\"…\"，",
+    "to": "（《和修》\"…\"），"
+  },
+  {
+    "cardId": "study-bible-job-1-6-p006-n016",
+    "bookId": "Job",
+    "field": "summary",
+    "label": "hexiu-missing-paren",
+    "count": 1,
+    "from": "（《和修》\"…\"，",
+    "to": "（《和修》\"…\"），"
+  },
+  {
+    "cardId": "study-bible-john-11-28-p031-n185",
+    "bookId": "John",
+    "field": "body",
+    "label": "hexiu-missing-paren",
+    "count": 1,
+    "from": "（《和修》\"…\"，",
+    "to": "（《和修》\"…\"），"
+  },
+  {
+    "cardId": "study-bible-john-11-28-p031-n185",
+    "bookId": "John",
+    "field": "searchText",
+    "label": "hexiu-missing-paren",
+    "count": 2,
+    "from": "（《和修》\"…\"，",
+    "to": "（《和修》\"…\"），"
+  },
+  {
+    "cardId": "study-bible-john-11-28-p031-n185",
+    "bookId": "John",
+    "field": "summary",
+    "label": "hexiu-missing-paren",
+    "count": 1,
+    "from": "（《和修》\"…\"，",
+    "to": "（《和修》\"…\"），"
+  },
+  {
+    "cardId": "study-bible-john-16-8-p041-n378",
+    "bookId": "John",
+    "field": "body",
+    "label": "hexiu-missing-paren",
+    "count": 1,
+    "from": "（《和修》\"…\"，",
+    "to": "（《和修》\"…\"），"
+  },
+  {
+    "cardId": "study-bible-john-16-8-p041-n378",
+    "bookId": "John",
+    "field": "searchText",
+    "label": "hexiu-missing-paren",
+    "count": 2,
+    "from": "（《和修》\"…\"，",
+    "to": "（《和修》\"…\"），"
+  },
+  {
+    "cardId": "study-bible-john-16-8-p041-n378",
+    "bookId": "John",
+    "field": "summary",
+    "label": "hexiu-missing-paren",
+    "count": 1,
+    "from": "（《和修》\"…\"，",
+    "to": "（《和修》\"…\"），"
+  },
+  {
+    "cardId": "study-bible-john-18-5-p045-n427",
+    "bookId": "John",
+    "field": "body",
+    "label": "后1:17→启1:17",
+    "count": 1,
+    "from": "后1:17.19:10.22:8",
+    "to": "启1:17.19:10.22:8"
+  },
+  {
+    "cardId": "study-bible-john-18-5-p045-n427",
+    "bookId": "John",
+    "field": "searchText",
+    "label": "后1:17→启1:17",
+    "count": 1,
+    "from": "后1:17.19:10.22:8",
+    "to": "启1:17.19:10.22:8"
+  },
+  {
+    "cardId": "study-bible-john-3-16-p011-n052",
+    "bookId": "John",
+    "field": "body",
+    "label": "colon-dot-ref",
+    "count": 1,
+    "from": "：.",
+    "to": ":"
+  },
+  {
+    "cardId": "study-bible-john-3-16-p011-n052",
+    "bookId": "John",
+    "field": "searchText",
+    "label": "colon-dot-ref",
+    "count": 1,
+    "from": "：.",
+    "to": ":"
+  },
+  {
+    "cardId": "study-bible-john-6-68-p021-n128",
+    "bookId": "John",
+    "field": "body",
+    "label": "hexiu-missing-paren",
+    "count": 1,
+    "from": "（《和修》\"…\"，",
+    "to": "（《和修》\"…\"），"
+  },
+  {
+    "cardId": "study-bible-john-6-68-p021-n128",
+    "bookId": "John",
+    "field": "searchText",
+    "label": "hexiu-missing-paren",
+    "count": 2,
+    "from": "（《和修》\"…\"，",
+    "to": "（《和修》\"…\"），"
+  },
+  {
+    "cardId": "study-bible-john-6-68-p021-n128",
+    "bookId": "John",
+    "field": "summary",
+    "label": "hexiu-missing-paren",
+    "count": 1,
+    "from": "（《和修》\"…\"，",
+    "to": "（《和修》\"…\"），"
+  },
+  {
+    "cardId": "study-bible-john-6-69-p021-n129",
+    "bookId": "John",
+    "field": "body",
+    "label": "诗赛→赛",
+    "count": 1,
+    "from": "诗赛43:3",
+    "to": "赛43:3"
+  },
+  {
+    "cardId": "study-bible-john-6-69-p021-n129",
+    "bookId": "John",
+    "field": "searchText",
+    "label": "诗赛→赛",
+    "count": 1,
+    "from": "诗赛43:3",
+    "to": "赛43:3"
+  },
+  {
+    "cardId": "study-bible-lam-1-21-p007-n022",
+    "bookId": "Lam",
+    "field": "body",
+    "label": "colon-dot-ref",
+    "count": 1,
+    "from": "：.",
+    "to": ":"
+  },
+  {
+    "cardId": "study-bible-lam-1-21-p007-n022",
+    "bookId": "Lam",
+    "field": "searchText",
+    "label": "colon-dot-ref",
+    "count": 2,
+    "from": "：.",
+    "to": ":"
+  },
+  {
+    "cardId": "study-bible-lam-1-21-p007-n022",
+    "bookId": "Lam",
+    "field": "summary",
+    "label": "colon-dot-ref",
+    "count": 1,
+    "from": "：.",
+    "to": ":"
+  },
+  {
+    "cardId": "study-bible-mark-12-14-p030-n301",
+    "bookId": "Mark",
+    "field": "body",
+    "label": "hexiu-missing-paren",
+    "count": 1,
+    "from": "（《和修》\"…\"，",
+    "to": "（《和修》\"…\"），"
+  },
+  {
+    "cardId": "study-bible-mark-12-14-p030-n301",
+    "bookId": "Mark",
+    "field": "searchText",
+    "label": "hexiu-missing-paren",
+    "count": 2,
+    "from": "（《和修》\"…\"，",
+    "to": "（《和修》\"…\"），"
+  },
+  {
+    "cardId": "study-bible-mark-12-14-p030-n301",
+    "bookId": "Mark",
+    "field": "summary",
+    "label": "hexiu-missing-paren",
+    "count": 1,
+    "from": "（《和修》\"…\"，",
+    "to": "（《和修》\"…\"），"
+  },
+  {
+    "cardId": "study-bible-mark-6-48-p016-n150",
+    "bookId": "Mark",
+    "field": "body",
+    "label": "hexiu-missing-paren",
+    "count": 1,
+    "from": "（《和修》\"…\"，",
+    "to": "（《和修》\"…\"），"
+  },
+  {
+    "cardId": "study-bible-mark-6-48-p016-n150",
+    "bookId": "Mark",
+    "field": "searchText",
+    "label": "hexiu-missing-paren",
+    "count": 1,
+    "from": "（《和修》\"…\"，",
+    "to": "（《和修》\"…\"），"
+  },
+  {
+    "cardId": "study-bible-matt-5-3-p013-n071",
+    "bookId": "Matt",
+    "field": "body",
+    "label": "hexiu-missing-paren",
+    "count": 1,
+    "from": "（《和修》\"…\"，",
+    "to": "（《和修》\"…\"），"
+  },
+  {
+    "cardId": "study-bible-matt-5-3-p013-n071",
+    "bookId": "Matt",
+    "field": "searchText",
+    "label": "hexiu-missing-paren",
+    "count": 2,
+    "from": "（《和修》\"…\"，",
+    "to": "（《和修》\"…\"），"
+  },
+  {
+    "cardId": "study-bible-matt-5-3-p013-n071",
+    "bookId": "Matt",
+    "field": "summary",
+    "label": "hexiu-missing-paren",
+    "count": 1,
+    "from": "（《和修》\"…\"，",
+    "to": "（《和修》\"…\"），"
+  },
+  {
+    "cardId": "study-bible-matt-9-18-p022-n193",
+    "bookId": "Matt",
+    "field": "body",
+    "label": "hexiu-missing-paren",
+    "count": 1,
+    "from": "（《和修》\"…\"，",
+    "to": "（《和修》\"…\"），"
+  },
+  {
+    "cardId": "study-bible-matt-9-18-p022-n193",
+    "bookId": "Matt",
+    "field": "searchText",
+    "label": "hexiu-missing-paren",
+    "count": 2,
+    "from": "（《和修》\"…\"，",
+    "to": "（《和修》\"…\"），"
+  },
+  {
+    "cardId": "study-bible-matt-9-18-p022-n193",
+    "bookId": "Matt",
+    "field": "summary",
+    "label": "hexiu-missing-paren",
+    "count": 1,
+    "from": "（《和修》\"…\"，",
+    "to": "（《和修》\"…\"），"
+  },
+  {
+    "cardId": "study-bible-mic-1-5-p004-n011",
+    "bookId": "Mic",
+    "field": "body",
+    "label": "hexiu-missing-paren",
+    "count": 1,
+    "from": "（《和修》\"…\"，",
+    "to": "（《和修》\"…\"），"
+  },
+  {
+    "cardId": "study-bible-mic-1-5-p004-n011",
+    "bookId": "Mic",
+    "field": "searchText",
+    "label": "hexiu-missing-paren",
+    "count": 1,
+    "from": "（《和修》\"…\"，",
+    "to": "（《和修》\"…\"），"
+  },
+  {
+    "cardId": "study-bible-neh-13-3-p023-n188",
+    "bookId": "Neh",
+    "field": "body",
+    "label": "hexiu-missing-paren",
+    "count": 1,
+    "from": "（《和修》\"…\"，",
+    "to": "（《和修》\"…\"），"
+  },
+  {
+    "cardId": "study-bible-neh-13-3-p023-n188",
+    "bookId": "Neh",
+    "field": "searchText",
+    "label": "hexiu-missing-paren",
+    "count": 2,
+    "from": "（《和修》\"…\"，",
+    "to": "（《和修》\"…\"），"
+  },
+  {
+    "cardId": "study-bible-neh-13-3-p023-n188",
+    "bookId": "Neh",
+    "field": "summary",
+    "label": "hexiu-missing-paren",
+    "count": 1,
+    "from": "（《和修》\"…\"，",
+    "to": "（《和修》\"…\"），"
+  },
+  {
+    "cardId": "study-bible-phlm-12-p004-n015",
+    "bookId": "Phlm",
+    "field": "body",
+    "label": "hexiu-missing-paren",
+    "count": 1,
+    "from": "（《和修》\"…\"，",
+    "to": "（《和修》\"…\"），"
+  },
+  {
+    "cardId": "study-bible-phlm-12-p004-n015",
+    "bookId": "Phlm",
+    "field": "searchText",
+    "label": "hexiu-missing-paren",
+    "count": 2,
+    "from": "（《和修》\"…\"，",
+    "to": "（《和修》\"…\"），"
+  },
+  {
+    "cardId": "study-bible-phlm-12-p004-n015",
+    "bookId": "Phlm",
+    "field": "summary",
+    "label": "hexiu-missing-paren",
+    "count": 1,
+    "from": "（《和修》\"…\"，",
+    "to": "（《和修》\"…\"），"
+  },
+  {
+    "cardId": "study-bible-ps-105-8-p110-n504",
+    "bookId": "Ps",
+    "field": "body",
+    "label": "干代→千代",
+    "count": 1,
+    "from": "干代，",
+    "to": "千代，"
+  },
+  {
+    "cardId": "study-bible-ps-105-8-p110-n504",
+    "bookId": "Ps",
+    "field": "searchText",
+    "label": "干代→千代",
+    "count": 2,
+    "from": "干代，",
+    "to": "千代，"
+  },
+  {
+    "cardId": "study-bible-ps-105-8-p110-n504",
+    "bookId": "Ps",
+    "field": "summary",
+    "label": "干代→千代",
+    "count": 1,
+    "from": "干代，",
+    "to": "千代，"
+  },
+  {
+    "cardId": "study-bible-rev-3-14-p017-n055",
+    "bookId": "Rev",
+    "field": "body",
+    "label": "hexiu-missing-paren",
+    "count": 1,
+    "from": "（《和修》\"…\"，",
+    "to": "（《和修》\"…\"），"
+  },
+  {
+    "cardId": "study-bible-rev-3-14-p017-n055",
+    "bookId": "Rev",
+    "field": "searchText",
+    "label": "hexiu-missing-paren",
+    "count": 2,
+    "from": "（《和修》\"…\"，",
+    "to": "（《和修》\"…\"），"
+  },
+  {
+    "cardId": "study-bible-rev-3-14-p017-n055",
+    "bookId": "Rev",
+    "field": "summary",
+    "label": "hexiu-missing-paren",
+    "count": 1,
+    "from": "（《和修》\"…\"，",
+    "to": "（《和修》\"…\"），"
+  },
+  {
+    "cardId": "study-bible-rom-11-11-p025-n147",
+    "bookId": "Rom",
+    "field": "searchText",
+    "label": "hexiu-missing-paren",
+    "count": 1,
+    "from": "（《和修》\"…\"，",
+    "to": "（《和修》\"…\"），"
+  },
+  {
+    "cardId": "study-bible-rom-16-26-p033-n210",
+    "bookId": "Rom",
+    "field": "searchText",
+    "label": "hexiu-missing-paren",
+    "count": 1,
+    "from": "（《和修》\"…\"，",
+    "to": "（《和修》\"…\"），"
+  },
+  {
+    "cardId": "study-bible-rom-5-20-p016-n084",
+    "bookId": "Rom",
+    "field": "searchText",
+    "label": "hexiu-missing-paren",
+    "count": 1,
+    "from": "（《和修》\"…\"，",
+    "to": "（《和修》\"…\"），"
+  },
+  {
+    "cardId": "study-bible-zech-6-8-p010-n044",
+    "bookId": "Zech",
+    "field": "body",
+    "label": "hexiu-missing-paren",
+    "count": 1,
+    "from": "（《和修》\"…\"，",
+    "to": "（《和修》\"…\"），"
+  },
+  {
+    "cardId": "study-bible-zech-6-8-p010-n044",
+    "bookId": "Zech",
+    "field": "searchText",
+    "label": "hexiu-missing-paren",
+    "count": 2,
+    "from": "（《和修》\"…\"，",
+    "to": "（《和修》\"…\"），"
+  },
+  {
+    "cardId": "study-bible-zech-6-8-p010-n044",
+    "bookId": "Zech",
+    "field": "summary",
+    "label": "hexiu-missing-paren",
+    "count": 1,
+    "from": "（《和修》\"…\"，",
+    "to": "（《和修》\"…\"），"
+  }
+]

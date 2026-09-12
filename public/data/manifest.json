@@ -280,11 +280,11 @@
       "url": "/data/books/Obad.json"
     },
     {
-      "bytes": 109007,
+      "bytes": 106985,
       "cuvVerseCount": 48,
       "id": "Jonah",
       "kjvVerseCount": 48,
-      "sha256": "53e1e67338e53df84e68ee575f6281708ca053c93b1816d60c0aa35867355711",
+      "sha256": "e2814cb88dc91a9ab377659c32435e252e5bf75477d3f3d19c7f38ab6cb2ed17",
       "textCardCount": 40,
       "url": "/data/books/Jonah.json"
     },
@@ -298,11 +298,11 @@
       "url": "/data/books/Mic.json"
     },
     {
-      "bytes": 115351,
+      "bytes": 112045,
       "cuvVerseCount": 47,
       "id": "Nah",
       "kjvVerseCount": 47,
-      "sha256": "c4fc89096a66afd20d8088ce198f7ca58fe5a85065838ac643d1cebf5e368808",
+      "sha256": "65524ae648e863da2323abbb2d2fd57a3836e266bda99380bf994f1ca5ea1e64",
       "textCardCount": 40,
       "url": "/data/books/Nah.json"
     },
@@ -325,11 +325,11 @@
       "url": "/data/books/Zeph.json"
     },
     {
-      "bytes": 100561,
+      "bytes": 99671,
       "cuvVerseCount": 38,
       "id": "Hag",
       "kjvVerseCount": 38,
-      "sha256": "a6e8183afd58bd5b4ab6584b05a21365b098300e57162ad48747f72cace0882c",
+      "sha256": "cf54c1adb95ad06177b6016299392e73adbe6083f680d02c0a09d9cd7c71cf2c",
       "textCardCount": 40,
       "url": "/data/books/Hag.json"
     },

@@ -1,7 +1,8 @@
 #!/usr/bin/env node
 // Maps workbench-synced Genesis image cards to the curated stable Genesis image
 // cards that ship the byte-identical picture (both pipelines extracted the same PDF).
-// The reader uses this map to show each picture once; see src/data/genesisImageTwins.ts.
+// The reader uses this map to show each picture once (workbench card wins, stable card is
+// the fallback); see src/data/genesisImageTwins.ts.
 //
 // Usage: node scripts/generateGenesisImageTwins.mjs
 //   reads  src/assets/resources/genesis/images/cmc-01/*.png

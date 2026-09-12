@@ -14,8 +14,9 @@ export function mergeResourcesById(...resourceGroups: StudyResource[][]): StudyR
 
 /**
  * @param workbenchTwinsOfStable workbench resource id → stable resource id that carries the
- *   same picture. A workbench twin is dropped while its stable card is visible, so the same
- *   image is never shown twice; once the stable card is excluded the twin takes its place.
+ *   same picture. The workbench card is the editable source of truth, so its stable twin is
+ *   dropped while the workbench card is present; if the workbench card is unsynced or
+ *   excluded, the stable twin shows again as a fallback.
  */
 export function mergeStableAndWorkbenchResources(
   stableResources: StudyResource[],
@@ -24,11 +25,13 @@ export function mergeStableAndWorkbenchResources(
   workbenchTwinsOfStable: Readonly<Record<string, string>> = {},
 ): StudyResource[] {
   const excludedResourceIdSet = new Set(excludedResourceIds);
-  const visibleStableResources = stableResources.filter((resource) => !excludedResourceIdSet.has(resource.id));
-  const visibleStableIds = new Set(visibleStableResources.map((resource) => resource.id));
-  const dedupedWorkbenchResources = workbenchResources.filter((resource) => {
-    const stableTwinId = workbenchTwinsOfStable[resource.id];
-    return stableTwinId === undefined || !visibleStableIds.has(stableTwinId);
-  });
-  return mergeResourcesById(visibleStableResources, dedupedWorkbenchResources);
+  const supersededStableIds = new Set(
+    workbenchResources
+      .map((resource) => workbenchTwinsOfStable[resource.id])
+      .filter((stableId): stableId is string => stableId !== undefined),
+  );
+  const visibleStableResources = stableResources.filter((resource) => (
+    !excludedResourceIdSet.has(resource.id) && !supersededStableIds.has(resource.id)
+  ));
+  return mergeResourcesById(visibleStableResources, workbenchResources);
 }

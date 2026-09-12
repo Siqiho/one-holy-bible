@@ -70,26 +70,34 @@ describe("mergeStableAndWorkbenchResources", () => {
     expect(merged).toEqual([commentary("shared-card", "Workbench override")]);
   });
 
-  it("hides a workbench image twin while its curated stable card is visible, and shows it once the stable card is excluded", () => {
+  it("hides a stable image twin while its workbench card is present, and falls back to it when the workbench card is gone", () => {
     const stableImage = commentary("genesis-cmc-01-p015-img003", "2701 与三角数分解");
-    const workbenchTwin = commentary("document-image-p009-img002", "3 是第 2 个三角数");
+    const otherStable = commentary("genesis-cmc-01-p001-img000", "无工作台孪生卡");
+    const workbenchTwin = commentary("document-image-p009-img002", "2701 与三角数分解");
     const unrelatedWorkbench = commentary("document-image-p009-img007", "另一张图");
     const twins = { "document-image-p009-img002": "genesis-cmc-01-p015-img003" };
 
-    const deduped = mergeStableAndWorkbenchResources([stableImage], [workbenchTwin, unrelatedWorkbench], [], twins);
+    const deduped = mergeStableAndWorkbenchResources(
+      [stableImage, otherStable],
+      [workbenchTwin, unrelatedWorkbench],
+      [],
+      twins,
+    );
     expect(deduped.map((resource) => resource.id)).toEqual([
-      "genesis-cmc-01-p015-img003",
+      "genesis-cmc-01-p001-img000",
+      "document-image-p009-img002",
       "document-image-p009-img007",
     ]);
 
-    const stableHidden = mergeStableAndWorkbenchResources(
-      [stableImage],
-      [workbenchTwin, unrelatedWorkbench],
-      ["genesis-cmc-01-p015-img003"],
+    const workbenchTwinUnsynced = mergeStableAndWorkbenchResources(
+      [stableImage, otherStable],
+      [unrelatedWorkbench],
+      [],
       twins,
     );
-    expect(stableHidden.map((resource) => resource.id)).toEqual([
-      "document-image-p009-img002",
+    expect(workbenchTwinUnsynced.map((resource) => resource.id)).toEqual([
+      "genesis-cmc-01-p015-img003",
+      "genesis-cmc-01-p001-img000",
       "document-image-p009-img007",
     ]);
   });

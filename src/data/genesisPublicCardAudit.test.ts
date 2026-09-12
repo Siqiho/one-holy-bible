@@ -46,6 +46,11 @@ const forbiddenFragments = [
   "一般认力",
   "这里意人必须",
   "这种塔通常用晒干的泥草砖",
+  "好诈",
+  "因力全人类",
+  "《创世记》》。",
+  "在王官地位",
+  "完全纳人王宫",
 ];
 
 const expectedCounts: Record<string, number> = {

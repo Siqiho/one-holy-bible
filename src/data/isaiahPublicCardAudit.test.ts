@@ -90,6 +90,8 @@ const forbiddenFragments = [
   "莱耀",
   "官廷",
   "介人",
+  "水恒",
+  "糖物",
 ];
 
 function loadBook(bookId: string): PublicBookPayload {

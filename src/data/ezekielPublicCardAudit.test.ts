@@ -88,6 +88,8 @@ const forbiddenFragments = [
   "撒率领的",
   "看守殿宇的祭司\"《",
   "人侵",
+  "征服的1\"多国\"",
+  "被纳人罗马",
 ];
 
 function loadBook(bookId: string): PublicBookPayload {

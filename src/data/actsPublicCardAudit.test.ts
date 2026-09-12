@@ -96,6 +96,9 @@ const forbiddenFragments = [
   "受咒诅的*",
   "\"犹太人*一词",
   "原文直译是*为自己的名\"",
+  "辨论 …劝化",
+  "暂学家",
+  "希律的官殿",
 ];
 
 function loadBook(bookId: string): PublicBookPayload {

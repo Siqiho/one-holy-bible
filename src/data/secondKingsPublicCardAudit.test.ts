@@ -61,6 +61,7 @@ const forbiddenFragments = [
   "后官",
   "亵读",
   "\"定睛*看",
+  "官殿群",
 ];
 
 function loadBook(bookId: string): PublicBookPayload {

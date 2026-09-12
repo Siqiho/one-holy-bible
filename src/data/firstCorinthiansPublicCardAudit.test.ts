@@ -75,6 +75,9 @@ const forbiddenFragments = [
   "亵读",
   "響告",
   "\"奥秘事*",
+  "信息.*上帝一切的旨意\"",
+  "这些事件*受洗归入基督\"",
+  "人的*灵\"\"",
 ];
 
 function loadBook(bookId: string): PublicBookPayload {

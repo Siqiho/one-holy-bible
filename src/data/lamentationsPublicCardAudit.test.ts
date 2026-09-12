@@ -57,6 +57,7 @@ const forbiddenFragments = [
   "见耶中无处避难",
   "然而他39:1-10。",
   "《耶利米书》与《耶利米哀歌》的平行经文",
+  "王官和圣殿被毁",
 ];
 
 function loadBook(bookId: string): PublicBookPayload {

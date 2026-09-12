@@ -85,6 +85,13 @@ const forbiddenFragments = [
   "\"剪除*通常",
   "\"坚定不移的爱*",
   "\"忘记*等词",
+  "好诈",
+  "因力敬拜",
+  "萦福",
+  "劫活泼",
+  "诗中的1\"我\"",
+  "称本诗1\"称谢诗\"",
+  "代纳人到",
 ];
 
 function loadBook(bookId: string): PublicBookPayload {

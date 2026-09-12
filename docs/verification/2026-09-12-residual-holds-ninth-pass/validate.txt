@@ -1,0 +1,8 @@
+=== vitest public audits + residual holds ===
+pending local run after commit
+
+=== generatePublicBibleData --validate-only ===
+pending local run after commit
+
+=== validatePublicRepository ===
+pending local run after commit

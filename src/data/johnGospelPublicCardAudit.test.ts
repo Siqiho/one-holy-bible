@@ -67,6 +67,9 @@ const forbiddenFragments = [
   "通迫",
   "短吾",
   "就以是侍",
+  "落人罗马",
+  "约瀚",
+  "67年\"）",
 ];
 
 function loadPublicJohn(): PublicJohnPayload {

@@ -92,6 +92,12 @@ const forbiddenFragments = [
   "诗中的1\"我\"",
   "称本诗1\"称谢诗\"",
   "代纳人到",
+  "\"卸下你的焦虑\"\"，",
+  "\"静默\"\"，",
+  "\"使我们再次转回\"\"，",
+  "\"怜爱他们的主\"\"，",
+  "\"恶人\"\"，",
+  "\"主\"\"。",
 ];
 
 function loadBook(bookId: string): PublicBookPayload {

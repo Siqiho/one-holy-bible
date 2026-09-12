@@ -101,6 +101,8 @@ const forbiddenFragments = [
   "罐子\"可以",
   "《<圣经",
   "遺散军队",
+  "\"切一个约\"\"",
+  "\"年轻人\"\"，",
 ];
 
 function loadBook(bookId: string): PublicBookPayload {

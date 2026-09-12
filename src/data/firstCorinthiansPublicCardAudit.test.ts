@@ -78,6 +78,10 @@ const forbiddenFragments = [
   "信息.*上帝一切的旨意\"",
   "这些事件*受洗归入基督\"",
   "人的*灵\"\"",
+  "\"败亡之人\"\"",
+  "\"十二使徒\"\"",
+  "\"外邦人的使徒\"\"，",
+  "\"同工\"\"，",
 ];
 
 function loadBook(bookId: string): PublicBookPayload {

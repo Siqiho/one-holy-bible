@@ -90,6 +90,7 @@ const forbiddenFragments = [
   "人侵",
   "征服的1\"多国\"",
   "被纳人罗马",
+  "\"淫妇\"\"，",
 ];
 
 function loadBook(bookId: string): PublicBookPayload {

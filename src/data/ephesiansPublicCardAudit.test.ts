@@ -85,6 +85,9 @@ const forbiddenFragments = [
   "（一）向候（1:1-2）",
   "（一）己之爱（5:1-2*）",
   "七、基督身体的合（4:1-16）",
+  "责打、因禁",
+  "\"儿子\"\"，",
+  "\"得益处\"\"，",
 ];
 
 function loadBook(bookId: string): PublicBookPayload {

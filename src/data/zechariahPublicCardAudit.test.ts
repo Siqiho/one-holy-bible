@@ -47,6 +47,7 @@ const forbiddenFragments = [
   "至膏统治",
   "敬50:3：拜对象",
   "介人",
+  "：*新油之子）",
 ];
 
 function loadBook(bookId: string): PublicBookPayload {

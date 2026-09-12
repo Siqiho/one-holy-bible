@@ -99,6 +99,13 @@ const forbiddenFragments = [
   "辨论 …劝化",
   "暂学家",
   "希律的官殿",
+  "加人了起初",
+  "才加人这个",
+  "（*离散；diaspora）",
+  "\"自由人\"\"，",
+  "\"艰难\"\"，",
+  "\"沿岸船舶\"\"，",
+  "\"确实的\"\"，",
 ];
 
 function loadBook(bookId: string): PublicBookPayload {

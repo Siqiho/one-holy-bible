@@ -43,6 +43,7 @@ const forbiddenFragments = [
   "写彼得后书》",
   "主后3035404550556065707580",
   "\"祷告》和2的一个分词",
+  "落人罪恶",
 ];
 
 function loadBook(bookId: string): PublicBookPayload {

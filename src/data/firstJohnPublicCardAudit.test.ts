@@ -51,6 +51,7 @@ const forbiddenFragments = [
   "见本书1:62",
   "道徳",
   "［约8.47，10:16.18.3",
+  "约瀚",
 ];
 
 function loadBook(bookId: string): PublicBookPayload {

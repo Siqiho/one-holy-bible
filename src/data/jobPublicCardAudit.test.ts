@@ -41,6 +41,7 @@ const forbiddenFragments = [
   "介人",
   "辦论者",
   "被称作他们的*父亲\"",
+  "\"仲裁\"\"，",
 ];
 
 function loadBook(bookId: string): PublicBookPayload {

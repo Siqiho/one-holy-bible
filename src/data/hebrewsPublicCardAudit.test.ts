@@ -83,6 +83,7 @@ const forbiddenFragments = [
   "\"一次*显明",
   "\"与上帝同行*",
   "）。*耶稣\"",
+  "\"违背那从天上警戒我们的\"\"，",
 ];
 
 function loadBook(bookId: string): PublicBookPayload {

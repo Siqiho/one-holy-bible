@@ -9,6 +9,7 @@ import { formatTextResourceBody } from "../lib/formatTextResourceBody";
 import { ScriptureLinkedText } from "./ScriptureLinkedText";
 import { VersePreviewProvider } from "./VersePreviewContext";
 import { readerPositionStorageKey, storedReaderPosition, type ReaderPosition } from "../data/readerPosition";
+import { ResourceImage } from "./ResourceImage";
 
 export { readerPositionStorageKey, type ReaderPosition };
 export const readerPrefsStorageKey = "one-holy-bible-reader-prefs";
@@ -106,6 +107,13 @@ function persistJson(key: string, value: unknown) {
   } catch {
     return false;
   }
+}
+
+function isInteractiveShortcutTarget(target: EventTarget | null) {
+  if (!(target instanceof Element)) return false;
+  return Boolean(target.closest(
+    "button, a, summary, input, textarea, select, [contenteditable=true], [role='button'], [role='tab'], [role='menuitem'], [role='link'], [role='option'], [role='switch'], [role='checkbox'], [role='separator']",
+  ));
 }
 
 /** Span of a resource inside the current chapter, for the coverage badge. */
@@ -222,6 +230,8 @@ export function ReaderView({ versions, resources, initialPosition: preferredPosi
   const [peekSplit, setPeekSplit] = useState(defaultPeekSplit);
   const [savePulse, setSavePulse] = useState(false);
   const [doreByChapter, setDoreByChapter] = useState<Map<string, DoreChapterArtwork> | null>(null);
+  const [positionSaveFailed, setPositionSaveFailed] = useState(false);
+  const [prefsSaveFailed, setPrefsSaveFailed] = useState(false);
 
   const viewRef = useRef<HTMLDivElement | null>(null);
   const scrollRef = useRef<HTMLDivElement | null>(null);
@@ -302,10 +312,10 @@ export function ReaderView({ versions, resources, initialPosition: preferredPosi
   }, []);
 
   useEffect(() => {
-    persistJson(readerPositionStorageKey, { book, chapter, verse: selectedVerse } satisfies ReaderPosition);
+    setPositionSaveFailed(!persistJson(readerPositionStorageKey, { book, chapter, verse: selectedVerse } satisfies ReaderPosition));
   }, [book, chapter, selectedVerse]);
   useEffect(() => {
-    persistJson(readerPrefsStorageKey, { railOpen, showKjv, fontSize, marginWidth } satisfies ReaderPrefs);
+    setPrefsSaveFailed(!persistJson(readerPrefsStorageKey, { railOpen, showKjv, fontSize, marginWidth } satisfies ReaderPrefs));
   }, [fontSize, marginWidth, railOpen, showKjv]);
   useEffect(() => () => window.clearTimeout(savePulseTimer.current), []);
 
@@ -460,8 +470,9 @@ export function ReaderView({ versions, resources, initialPosition: preferredPosi
         return;
       }
       const target = event.target as HTMLElement | null;
-      if (target && target.matches("input, textarea, select, [contenteditable=true]")) return;
-      if (target && target.closest("[role='separator']")) return;
+      const isVerseNavigation = target?.closest(".reader-verse") && ["ArrowDown", "ArrowUp", "ArrowLeft", "ArrowRight", "j", "k"].includes(event.key);
+      if (isInteractiveShortcutTarget(target) && !isVerseNavigation) return;
+      if (event.defaultPrevented || event.ctrlKey || event.metaKey || event.altKey) return;
       if (drawerOpen || booksOpen || lightbox) return;
       if (event.key === "ArrowDown" || event.key === "j") {
         event.preventDefault();
@@ -544,14 +555,18 @@ export function ReaderView({ versions, resources, initialPosition: preferredPosi
               setLightbox({ src: resource.assetPath!, alt: resource.title, caption: resource.summary ?? resource.title });
             }}
           >
-            <img src={resource.assetPath} alt={resource.title} loading="lazy" />
+            <ResourceImage src={resource.assetPath} alt={resource.title} loading="lazy" />
           </button>
         ) : null}
         <h4>{resource.title}</h4>
         {isImage && (resource.summary ?? resource.body).trim() ? (
           <p className="reader-card__caption">{resource.summary ?? resource.body}</p>
         ) : null}
-        {!isImage && resource.body.trim() ? (
+        {resource.type === "html" && !resource.assetPath ? (
+          <p className="reader-card__placeholder">互动内容尚未提供</p>
+        ) : resource.type === "video" && !resource.assetPath ? (
+          <p className="reader-card__placeholder">视频尚未提供</p>
+        ) : !isImage && resource.body.trim() ? (
           <div className="reader-card__body">
             <ScriptureLinkedText
               text={formatTextResourceBody(resource.body)}
@@ -576,11 +591,11 @@ export function ReaderView({ versions, resources, initialPosition: preferredPosi
             <button
               className="reader-topbar__btn"
               type="button"
-              aria-label="阅读台"
-              title="阅读台"
+              aria-label="返回工作台"
+              title="返回工作台"
               onClick={() => onExitReader({ book, chapter, verse: selectedVerse })}
             >
-              ⊞ 阅读台
+              ⊞ 工作台
             </button>
           ) : null}
           <span className="reader-topbar__loc">
@@ -588,6 +603,15 @@ export function ReaderView({ versions, resources, initialPosition: preferredPosi
             <span className="reader-topbar__loc-en">{englishTitle}</span>
           </span>
           <div className="reader-topbar__actions">
+            <button
+              className="reader-topbar__btn reader-topbar__cards"
+              type="button"
+              aria-label="查看本节卡片"
+              title="查看本节卡片"
+              onClick={() => openDrawer("verse")}
+            >
+              本节卡片 {selectedVerseResources.length}
+            </button>
             <button
               className="reader-topbar__btn"
               type="button"
@@ -598,12 +622,12 @@ export function ReaderView({ versions, resources, initialPosition: preferredPosi
               英文对照
             </button>
             <span className="reader-stepper" role="group" aria-label="经文字号">
-              <button type="button" aria-label="减小字号" onClick={() => { setFontSize((v) => Math.max(minFontSize, v - 1)); pulseAutosave(); }}>−</button>
-              <button type="button" aria-label="增大字号" onClick={() => { setFontSize((v) => Math.min(maxFontSize, v + 1)); pulseAutosave(); }}>+</button>
+              <button type="button" aria-label="减小字号" disabled={fontSize <= minFontSize} onClick={() => { setFontSize((v) => Math.max(minFontSize, v - 1)); pulseAutosave(); }}>−</button>
+              <button type="button" aria-label="增大字号" disabled={fontSize >= maxFontSize} onClick={() => { setFontSize((v) => Math.min(maxFontSize, v + 1)); pulseAutosave(); }}>+</button>
             </span>
-            <span className={`reader-autosave${savePulse ? " reader-autosave--pulse" : ""}`} role="status">
+            <span className={`reader-autosave${positionSaveFailed || prefsSaveFailed ? "" : savePulse ? " reader-autosave--pulse" : ""}`} role="status">
               <span className="reader-autosave__dot" aria-hidden="true" />
-              已自动保存
+              {positionSaveFailed || prefsSaveFailed ? "未能保存到本机" : "已自动保存"}
             </span>
           </div>
         </header>
@@ -700,7 +724,7 @@ export function ReaderView({ versions, resources, initialPosition: preferredPosi
                     });
                   }}
                 >
-                  <img src={chapterArtwork.assetPath} alt={`多雷《圣经》插图:${chapterArtwork.title}`} />
+                  <ResourceImage src={chapterArtwork.assetPath} alt={`多雷《圣经》插图:${chapterArtwork.title}`} />
                   <span className="reader-chapter-art__caption">多雷《圣经》插图 · {chapterArtwork.title}</span>
                 </button>
               ) : null}
@@ -777,7 +801,7 @@ export function ReaderView({ versions, resources, initialPosition: preferredPosi
                           >
                             {isImage ? (
                               <span className="reader-marginalia__thumb-media">
-                                <img src={resource.assetPath} alt={resource.title} />
+                                <ResourceImage src={resource.assetPath} alt={resource.title} />
                                 <span className="reader-marginalia__thumb-copy">
                                   <span className="reader-marginalia__thumb-title">{resource.title}</span>
                                 </span>
@@ -800,7 +824,7 @@ export function ReaderView({ versions, resources, initialPosition: preferredPosi
                             type="button"
                             onClick={() => peekCard(resource.id)}
                           >
-                            <img src={resource.assetPath} alt={resource.title} />
+                            <ResourceImage src={resource.assetPath} alt={resource.title} />
                             <span className="reader-marginalia__title">{resource.title}</span>
                           </button>
                         );
@@ -972,7 +996,7 @@ export function ReaderView({ versions, resources, initialPosition: preferredPosi
               }
             }}
           >
-            <img src={lightbox.src} alt={lightbox.alt} />
+            <ResourceImage src={lightbox.src} alt={lightbox.alt} />
             <p className="reader-lightbox__caption">{lightbox.caption}</p>
             <button
               className="reader-lightbox__close"

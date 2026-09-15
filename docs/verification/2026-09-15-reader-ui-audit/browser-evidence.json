@@ -1,0 +1,531 @@
+{
+  "checkedAt": "2026-09-15T15:03:33.154Z",
+  "url": "http://localhost:1420/",
+  "imageState": {
+    "images": [
+      {
+        "alt": "多雷《圣经》插图:The Creation of Light",
+        "complete": true,
+        "naturalHeight": 1200,
+        "naturalWidth": 952,
+        "src": "http://localhost:1420/resources/dore/001_Gen.1.jpg"
+      },
+      {
+        "alt": "创世记第 1 章第 1 节的希伯来原文",
+        "complete": true,
+        "naturalHeight": 195,
+        "naturalWidth": 669,
+        "src": "http://localhost:1420/src/assets/resources/genesis/images/cmc-01/p014_img002_669x195.png"
+      },
+      {
+        "alt": "希伯来文创世记残片",
+        "complete": true,
+        "naturalHeight": 631,
+        "naturalWidth": 661,
+        "src": "http://localhost:1420/resources/workbench/01_%E5%88%9B%E4%B8%96%E8%AE%B0/document-image-01-%E5%88%9B%E4%B8%96%E8%AE%B0-codex-pdf-p005-img000.png"
+      },
+      {
+        "alt": "2701 与三角数分解",
+        "complete": true,
+        "naturalHeight": 262,
+        "naturalWidth": 435,
+        "src": "http://localhost:1420/resources/workbench/01_%E5%88%9B%E4%B8%96%E8%AE%B0/document-image-01-%E5%88%9B%E4%B8%96%E8%AE%B0-codex-pdf-p009-img002.png"
+      },
+      {
+        "alt": "2701 的三角数图示",
+        "complete": true,
+        "naturalHeight": 426,
+        "naturalWidth": 553,
+        "src": "http://localhost:1420/resources/workbench/01_%E5%88%9B%E4%B8%96%E8%AE%B0/document-image-01-%E5%88%9B%E4%B8%96%E8%AE%B0-codex-pdf-p009-img003.png"
+      },
+      {
+        "alt": "创世记 1:1 的三角形排列",
+        "complete": true,
+        "naturalHeight": 635,
+        "naturalWidth": 720,
+        "src": "http://localhost:1420/resources/workbench/01_%E5%88%9B%E4%B8%96%E8%AE%B0/document-image-01-%E5%88%9B%E4%B8%96%E8%AE%B0-codex-pdf-p010-img004.png"
+      },
+      {
+        "alt": "37 与 73 的大卫星数",
+        "complete": true,
+        "naturalHeight": 258,
+        "naturalWidth": 389,
+        "src": "http://localhost:1420/resources/workbench/01_%E5%88%9B%E4%B8%96%E8%AE%B0/document-image-01-%E5%88%9B%E4%B8%96%E8%AE%B0-codex-pdf-p010-img005.png"
+      },
+      {
+        "alt": "37 与 73 的组合图示",
+        "complete": true,
+        "naturalHeight": 361,
+        "naturalWidth": 599,
+        "src": "http://localhost:1420/resources/workbench/01_%E5%88%9B%E4%B8%96%E8%AE%B0/document-image-01-%E5%88%9B%E4%B8%96%E8%AE%B0-codex-pdf-p011-img006.png"
+      },
+      {
+        "alt": "以色列国旗上的大卫星",
+        "complete": true,
+        "naturalHeight": 405,
+        "naturalWidth": 717,
+        "src": "http://localhost:1420/resources/workbench/01_%E5%88%9B%E4%B8%96%E8%AE%B0/document-image-01-%E5%88%9B%E4%B8%96%E8%AE%B0-codex-pdf-p011-img007.png"
+      },
+      {
+        "alt": "阿波罗 8 号诵读创世记",
+        "complete": true,
+        "naturalHeight": 500,
+        "naturalWidth": 400,
+        "src": "http://localhost:1420/resources/workbench/01_%E5%88%9B%E4%B8%96%E8%AE%B0/document-image-01-%E5%88%9B%E4%B8%96%E8%AE%B0-codex-pdf-p018-img013.png"
+      }
+    ],
+    "width": 1600
+  },
+  "responsiveWorkbench": [
+    {
+      "bodyScrollWidth": 1440,
+      "headerControls": [
+        {
+          "h": 31,
+          "name": "选择书卷 创世记",
+          "w": 87,
+          "x": 167,
+          "y": 7
+        },
+        {
+          "h": 31,
+          "name": "选择章节 第 1 章",
+          "w": 82,
+          "x": 257,
+          "y": 7
+        },
+        {
+          "h": 30,
+          "name": "和合本",
+          "w": 83,
+          "x": 471,
+          "y": 7
+        },
+        {
+          "h": 30,
+          "name": "KJV",
+          "w": 74,
+          "x": 556,
+          "y": 6
+        },
+        {
+          "h": 30,
+          "name": "卡片",
+          "w": 74,
+          "x": 632,
+          "y": 7
+        },
+        {
+          "h": 31,
+          "name": "交换中间模块顺序",
+          "w": 31,
+          "x": 710,
+          "y": 7
+        },
+        {
+          "h": 37,
+          "name": "搜索卡片资源",
+          "w": 248,
+          "x": 162,
+          "y": 48
+        },
+        {
+          "h": 37,
+          "name": "搜索经文",
+          "w": 335,
+          "x": 466,
+          "y": 48
+        },
+        {
+          "h": 37,
+          "name": "搜索",
+          "w": 62,
+          "x": 807,
+          "y": 48
+        },
+        {
+          "h": 31,
+          "name": "切换到阅读模式",
+          "w": 70,
+          "x": 1084,
+          "y": 7
+        },
+        {
+          "h": 31,
+          "name": "刷新卡片",
+          "w": 96,
+          "x": 1156,
+          "y": 7
+        },
+        {
+          "h": 31,
+          "name": "保存布局",
+          "w": 96,
+          "x": 1254,
+          "y": 7
+        },
+        {
+          "h": 31,
+          "name": "重置",
+          "w": 70,
+          "x": 1352,
+          "y": 7
+        },
+        {
+          "h": 26,
+          "name": "展开左侧资料栏",
+          "w": 26,
+          "x": 6,
+          "y": 100
+        },
+        {
+          "h": 112,
+          "name": "上一章",
+          "w": 570,
+          "x": 49,
+          "y": 88
+        }
+      ],
+      "width": 1440
+    },
+    {
+      "bodyScrollWidth": 1280,
+      "headerControls": [
+        {
+          "h": 31,
+          "name": "选择书卷 创世记",
+          "w": 87,
+          "x": 167,
+          "y": 7
+        },
+        {
+          "h": 31,
+          "name": "选择章节 第 1 章",
+          "w": 82,
+          "x": 257,
+          "y": 7
+        },
+        {
+          "h": 30,
+          "name": "和合本",
+          "w": 83,
+          "x": 457,
+          "y": 7
+        },
+        {
+          "h": 30,
+          "name": "KJV",
+          "w": 74,
+          "x": 542,
+          "y": 6
+        },
+        {
+          "h": 30,
+          "name": "卡片",
+          "w": 74,
+          "x": 618,
+          "y": 7
+        },
+        {
+          "h": 31,
+          "name": "交换中间模块顺序",
+          "w": 31,
+          "x": 696,
+          "y": 7
+        },
+        {
+          "h": 37,
+          "name": "搜索卡片资源",
+          "w": 234,
+          "x": 162,
+          "y": 48
+        },
+        {
+          "h": 37,
+          "name": "搜索经文",
+          "w": 290,
+          "x": 452,
+          "y": 48
+        },
+        {
+          "h": 37,
+          "name": "搜索",
+          "w": 62,
+          "x": 748,
+          "y": 48
+        },
+        {
+          "h": 31,
+          "name": "切换到阅读模式",
+          "w": 70,
+          "x": 924,
+          "y": 7
+        },
+        {
+          "h": 31,
+          "name": "刷新卡片",
+          "w": 96,
+          "x": 996,
+          "y": 7
+        },
+        {
+          "h": 31,
+          "name": "保存布局",
+          "w": 96,
+          "x": 1094,
+          "y": 7
+        },
+        {
+          "h": 31,
+          "name": "重置",
+          "w": 70,
+          "x": 1192,
+          "y": 7
+        },
+        {
+          "h": 26,
+          "name": "展开左侧资料栏",
+          "w": 26,
+          "x": 6,
+          "y": 100
+        },
+        {
+          "h": 112,
+          "name": "上一章",
+          "w": 490,
+          "x": 49,
+          "y": 88
+        }
+      ],
+      "width": 1280
+    },
+    {
+      "bodyScrollWidth": 1100,
+      "headerControls": [
+        {
+          "h": 31,
+          "name": "选择书卷 创世记",
+          "w": 82,
+          "x": 61,
+          "y": 7
+        },
+        {
+          "h": 31,
+          "name": "选择章节 第 1 章",
+          "w": 82,
+          "x": 146,
+          "y": 7
+        },
+        {
+          "h": 30,
+          "name": "和合本",
+          "w": 79,
+          "x": 311,
+          "y": 7
+        },
+        {
+          "h": 30,
+          "name": "KJV",
+          "w": 74,
+          "x": 392,
+          "y": 6
+        },
+        {
+          "h": 30,
+          "name": "卡片",
+          "w": 74,
+          "x": 468,
+          "y": 7
+        },
+        {
+          "h": 31,
+          "name": "交换中间模块顺序",
+          "w": 31,
+          "x": 546,
+          "y": 7
+        },
+        {
+          "h": 37,
+          "name": "搜索卡片资源",
+          "w": 194,
+          "x": 56,
+          "y": 48
+        },
+        {
+          "h": 37,
+          "name": "搜索经文",
+          "w": 240,
+          "x": 306,
+          "y": 48
+        },
+        {
+          "h": 37,
+          "name": "搜索",
+          "w": 62,
+          "x": 552,
+          "y": 48
+        },
+        {
+          "h": 31,
+          "name": "切换到阅读模式",
+          "w": 66,
+          "x": 764,
+          "y": 7
+        },
+        {
+          "h": 31,
+          "name": "刷新卡片",
+          "w": 92,
+          "x": 832,
+          "y": 7
+        },
+        {
+          "h": 31,
+          "name": "保存布局",
+          "w": 92,
+          "x": 926,
+          "y": 7
+        },
+        {
+          "h": 31,
+          "name": "重置",
+          "w": 66,
+          "x": 1020,
+          "y": 7
+        },
+        {
+          "h": 26,
+          "name": "展开左侧资料栏",
+          "w": 26,
+          "x": 6,
+          "y": 100
+        },
+        {
+          "h": 112,
+          "name": "上一章",
+          "w": 383,
+          "x": 73,
+          "y": 88
+        }
+      ],
+      "width": 1100
+    },
+    {
+      "bodyScrollWidth": 900,
+      "headerControls": [
+        {
+          "h": 31,
+          "name": "选择书卷 创世记",
+          "w": 82,
+          "x": 61,
+          "y": 7
+        },
+        {
+          "h": 31,
+          "name": "选择章节 第 1 章",
+          "w": 82,
+          "x": 146,
+          "y": 7
+        },
+        {
+          "h": 30,
+          "name": "和合本",
+          "w": 79,
+          "x": 269,
+          "y": 7
+        },
+        {
+          "h": 30,
+          "name": "KJV",
+          "w": 74,
+          "x": 350,
+          "y": 6
+        },
+        {
+          "h": 30,
+          "name": "卡片",
+          "w": 74,
+          "x": 426,
+          "y": 7
+        },
+        {
+          "h": 31,
+          "name": "交换中间模块顺序",
+          "w": 31,
+          "x": 504,
+          "y": 7
+        },
+        {
+          "h": 37,
+          "name": "搜索卡片资源",
+          "w": 152,
+          "x": 56,
+          "y": 48
+        },
+        {
+          "h": 37,
+          "name": "搜索经文",
+          "w": 208,
+          "x": 264,
+          "y": 48
+        },
+        {
+          "h": 37,
+          "name": "搜索",
+          "w": 62,
+          "x": 478,
+          "y": 48
+        },
+        {
+          "h": 31,
+          "name": "切换到阅读模式",
+          "w": 66,
+          "x": 564,
+          "y": 7
+        },
+        {
+          "h": 31,
+          "name": "刷新卡片",
+          "w": 92,
+          "x": 632,
+          "y": 7
+        },
+        {
+          "h": 31,
+          "name": "保存布局",
+          "w": 92,
+          "x": 726,
+          "y": 7
+        },
+        {
+          "h": 31,
+          "name": "重置",
+          "w": 66,
+          "x": 820,
+          "y": 7
+        },
+        {
+          "h": 26,
+          "name": "展开左侧资料栏",
+          "w": 26,
+          "x": 6,
+          "y": 100
+        },
+        {
+          "h": 112,
+          "name": "上一章",
+          "w": 298,
+          "x": 73,
+          "y": 88
+        }
+      ],
+      "width": 900
+    }
+  ],
+  "narrowCards": {
+    "marginVisible": false,
+    "visibleCardButtons": 0,
+    "width": 900
+  },
+  "logs": []
+}

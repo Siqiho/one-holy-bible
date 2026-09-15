@@ -1,0 +1,19 @@
+Final targeted tests (--maxWorkers=2)
+ Test Files  8 passed (8)
+      Tests  231 passed (231)
+   Start at  23:31:05
+   Duration  20.76s (transform 5.25s, setup 219ms, import 3.93s, tests 24.60s, environment 2.46s)
+
+
+Build
+dist/assets/markdown-YWtIasS9.js                              0.51 kB │ gzip:      0.33 kB
+dist/assets/dnd-qgu1ERDy.js                                  59.83 kB │ gzip:     20.05 kB
+dist/assets/index-nn4Q6VeA.js                             1,236.91 kB │ gzip:    346.35 kB
+
+(!) Some chunks are larger than 500 kB after minification. Consider:
+- Using dynamic import() to code-split the application
+- Use build.rollupOptions.output.manualChunks to improve chunking: https://rollupjs.org/configuration-options/#output-manualchunks
+- Adjust chunk size limit for this warning via build.chunkSizeWarningLimit.
+✓ built in 12.25s
+
+Scope: local Vite localhost:1420, no deployment, no product data mutation.

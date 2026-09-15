@@ -1223,7 +1223,8 @@ describe("Workbench", () => {
     );
 
     const rightDock = screen.getByRole("complementary", { name: "右侧资料栏" });
-    const cardSearch = screen.getByRole("search", { name: "卡片搜索" });
+    await userEvent.selectOptions(screen.getByRole("combobox", { name: "搜索类型" }), "cards");
+    const cardSearch = screen.getByRole("search", { name: "经文与卡片搜索" });
     const searchInput = within(cardSearch).getByRole("searchbox", { name: "搜索卡片资源" });
 
     expect(within(rightDock).getByRole("article", { name: "安静笔记" })).toBeInTheDocument();
@@ -1309,7 +1310,8 @@ describe("Workbench", () => {
     const rightDock = screen.getByRole("complementary", { name: "右侧资料栏" });
     const leftStack = getLeftOrganizedCardStack();
     const centerCards = getCenterCurrentCardModule();
-    const cardSearch = screen.getByRole("search", { name: "卡片搜索" });
+    await userEvent.selectOptions(screen.getByRole("combobox", { name: "搜索类型" }), "cards");
+    const cardSearch = screen.getByRole("search", { name: "经文与卡片搜索" });
     const searchInput = within(cardSearch).getByRole("searchbox", { name: "搜索卡片资源" });
 
     expect(within(rightDock).getByRole("article", { name: "安静笔记" })).toBeInTheDocument();
@@ -1331,6 +1333,48 @@ describe("Workbench", () => {
     expect(searchInput).toHaveValue("");
     expect(within(rightDock).getByRole("article", { name: "安静笔记" })).toBeInTheDocument();
     expect(within(rightDock).queryByText("没有匹配的卡片。")).not.toBeInTheDocument();
+  });
+
+  it("uses one search field and carries its query between scripture and card search", async () => {
+    render(<Workbench versions={[navigationCuv, navigationKjv]} resources={searchableResources} initialLayout={dualCenterLayout} />);
+    const search = screen.getByRole("search", { name: "经文与卡片搜索" });
+    const input = within(search).getByRole("searchbox");
+    const target = within(search).getByRole("combobox", { name: "搜索类型" });
+    await userEvent.type(input, "hiddenriver{Enter}");
+    expect(screen.getByRole("region", { name: "经文搜索结果" })).toBeInTheDocument();
+    await userEvent.selectOptions(target, "cards");
+    expect(screen.getAllByRole("searchbox")).toHaveLength(1);
+    expect(input).toHaveValue("hiddenriver");
+    expect(input).toHaveAttribute("placeholder", "搜索本章卡片");
+    expect(screen.queryByRole("region", { name: "经文搜索结果" })).not.toBeInTheDocument();
+    const dock = screen.getByRole("complementary", { name: "右侧资料栏" });
+    expect(within(dock).queryByRole("article", { name: "安静笔记" })).not.toBeInTheDocument();
+    expect(within(dock).getByRole("article", { name: "晨星综合解读" })).toBeInTheDocument();
+    await userEvent.selectOptions(target, "scripture");
+    expect(input).toHaveValue("hiddenriver");
+    expect(within(dock).getByRole("article", { name: "安静笔记" })).toBeInTheDocument();
+    await userEvent.click(within(search).getByRole("button", { name: "清除搜索" }));
+    await userEvent.selectOptions(target, "cards");
+    expect(input).toHaveValue("");
+    expect(within(dock).getByRole("article", { name: "安静笔记" })).toBeInTheDocument();
+  });
+
+  it("resets only presentation and preserves organized card references", async () => {
+    render(<Workbench versions={[cuvBible, kjvBible]} resources={sampleResources} initialLayout={{
+      ...defaultWorkbenchLayout,
+      leftWidth: 410,
+      savedCardsByBook: { Gen: [{ resourceId: genesisMathImageId, sourceVerseId: "Gen.1.1" }] },
+      centerCardResourceIdsByBook: { Gen: [genesisMathImageId] },
+    }} />);
+    await userEvent.click(screen.getByRole("button", { name: "保存布局" }));
+    const before = JSON.parse(localStorage.getItem(layoutStorageKey)!);
+    await userEvent.click(screen.getByRole("button", { name: "重置排版" }));
+    const after = JSON.parse(localStorage.getItem(layoutStorageKey)!);
+    expect(after.savedCardsByBook).toEqual(before.savedCardsByBook);
+    expect(after.savedCardsByVerse).toEqual(before.savedCardsByVerse);
+    expect(after.centerCardResourceIdsByBook).toEqual(before.centerCardResourceIdsByBook);
+    expect(after.leftWidth).toBe(defaultWorkbenchLayout.leftWidth);
+    expect(screen.getByText("排版已重置，整理卡片已保留")).toBeInTheDocument();
   });
 
   it("exposes a top toolbar action for refreshing synced cards", async () => {
@@ -1359,8 +1403,8 @@ describe("Workbench", () => {
 	    await waitFor(() => {
 	      expect(screen.getAllByRole("status").some((element) => element.textContent === "卡片资源已刷新")).toBe(true);
 	    });
-	    expect(within(layoutGroup).getByText("已刷新")).toBeVisible();
-	    expect(within(layoutGroup).getByText("已刷新")).toHaveClass("toolbar-refresh-status");
+	    expect(within(layoutGroup).queryByText("已刷新")).not.toBeInTheDocument();
+	    expect(screen.getByText("卡片资源已刷新")).toHaveClass("workbench-status");
 	  });
 
   it("guards against duplicate toolbar refresh requests before parent state catches up", async () => {
@@ -1805,10 +1849,10 @@ describe("Workbench", () => {
 	    await userEvent.click(within(layoutGroup).getByRole("button", { name: "刷新卡片" }));
 
 	    await waitFor(() => {
-	      expect(within(layoutGroup).getByRole("alert")).toHaveTextContent("刷新失败");
+	      expect(screen.getByText("卡片资源刷新失败")).toHaveClass("workbench-status");
 	    });
-	    expect(within(layoutGroup).getByRole("alert")).toBeVisible();
-	    expect(within(layoutGroup).getByRole("alert")).toHaveClass("toolbar-refresh-status");
+	    expect(screen.getByText("卡片资源刷新失败")).toBeVisible();
+	    expect(screen.getByText("卡片资源刷新失败")).toHaveClass("toolbar-refresh-status--error");
 	    expect(screen.getAllByRole("status").some((element) => element.textContent === "卡片资源刷新失败")).toBe(true);
 	    consoleErrorSpy.mockRestore();
 	  });
@@ -1973,7 +2017,6 @@ describe("Workbench", () => {
     const surface = oklchToken(rootRule, "--surface");
 
     expect(contrastRatio(muted, surface)).toBeGreaterThanOrEqual(4.5);
-    expect(cssContractRule(taskRules, `${productionPaperRoot} .card-search input::placeholder`).body).toMatch(/color:\s*var\(--muted\)/);
     expect(cssContractRule(taskRules, `${productionPaperRoot} .bible-search input::placeholder`).body).toMatch(/color:\s*var\(--muted\)/);
     expect(cssContractRule(taskRules, `${productionPaperRoot} .bible-search-result__meta > span`).body).toMatch(/color:\s*var\(--muted\)/);
   });
@@ -2012,12 +2055,7 @@ describe("Workbench", () => {
     }
   });
 
-  it("guards toolbar card search offset and rounded resource card CSS polish", () => {
-    expect(styles).toMatch(/\.card-search\s*{[^}]*margin-left:\s*clamp\(18px,\s*2\.4vw,\s*34px\)/s);
-    expect(styles).toMatch(/\.toolbar__group--layout\s*{[^}]*margin-left:\s*auto/s);
-    expect(styles).toMatch(/@media\s*\(max-width:\s*1100px\)\s*{[\s\S]*?\.card-search\s*{[^}]*margin-left:\s*10px/s);
-    expect(styles).not.toMatch(/\.card-search\s*{[^}]*position:\s*absolute/s);
-
+  it("keeps rounded resource card CSS polish", () => {
     expect(styles).toMatch(/\.resource-card\s*{[^}]*border:\s*1px solid color-mix\(in oklch,\s*var\(--line\)\s*72%,\s*var\(--surface\)\)/s);
     expect(styles).toMatch(/\.resource-card\s*{[^}]*border-radius:\s*var\(--radius-xl\)/s);
     expect(styles).toMatch(/\.resource-card\s*{[^}]*box-shadow:[^}]*0 1px 1px rgb\(70 48 22 \/ 4%\)[^}]*inset 0 1px 0 rgb\(255 253 247 \/ 68%\)/s);
@@ -2030,27 +2068,6 @@ describe("Workbench", () => {
     expect(styles).toMatch(/\.resource-card__source-pill\s*{[^}]*padding:\s*2px 7px/s);
     expect(styles).toMatch(/\.resource-card__source-pill\s*{[^}]*letter-spacing:\s*0/s);
     expect(styles).toMatch(/\.resource-card__source-pill\s*{[^}]*text-transform:\s*none/s);
-  });
-
-  it("uses a non-shrinking two-row toolbar contract before controls can overlap", () => {
-    expect(styles).toMatch(
-      /\.toolbar__group--modules\s*{[^}]*flex:\s*0 0 auto;[^}]*min-width:\s*max-content;/s,
-    );
-    expect(styles).toMatch(
-      /@media\s*\(max-width:\s*1450px\)\s*{[\s\S]*?\.workbench\s*{[^}]*grid-template-rows:\s*88px minmax\(0,\s*1fr\)/s,
-    );
-    expect(styles).toMatch(
-      /@media\s*\(max-width:\s*1450px\)\s*{[\s\S]*?\.toolbar\s*{[^}]*display:\s*grid;[^}]*grid-template-areas:\s*"brand chapter modules layout"\s*"\. card-search bible-search \."/s,
-    );
-    expect(styles).toMatch(
-      /@media\s*\(max-width:\s*1450px\)\s*{[\s\S]*?\.toolbar\s*{[^}]*grid-template-columns:\s*max-content max-content minmax\(max-content,\s*1fr\) max-content/s,
-    );
-    expect(styles).toMatch(
-      /@media\s*\(max-width:\s*1450px\)\s*{[\s\S]*?\.card-search\s*{[^}]*grid-area:\s*card-search;[^}]*justify-self:\s*start;[^}]*margin-left:\s*0;[^}]*width:\s*clamp\(200px,\s*22vw,\s*296px\)/s,
-    );
-    expect(styles).toMatch(
-      /@media\s*\(max-width:\s*1450px\)\s*{[\s\S]*?\.bible-search\s*{[^}]*grid-area:\s*bible-search;[^}]*justify-self:\s*start;[^}]*width:\s*clamp\(276px,\s*28vw,\s*420px\)/s,
-    );
   });
 
   it("keeps the workbench grid within a 900px viewport while controls stay reachable", () => {
@@ -2080,7 +2097,8 @@ describe("Workbench", () => {
       expect(screen.getByRole("button", { name: "和合本" })).toBeEnabled();
       expect(screen.getByRole("button", { name: "KJV" })).toBeEnabled();
       expect(screen.getByRole("button", { name: "卡片" })).toBeEnabled();
-      expect(screen.getByRole("searchbox", { name: "搜索卡片资源" })).toBeInTheDocument();
+      expect(screen.getByRole("combobox", { name: "搜索类型" })).toBeInTheDocument();
+      expect(screen.getAllByRole("searchbox")).toHaveLength(1);
       expect(screen.getByRole("searchbox", { name: "搜索经文" })).toBeInTheDocument();
       expect(screen.getByRole("button", { name: "保存布局" })).toBeInTheDocument();
     } finally {
@@ -4461,6 +4479,18 @@ describe("Workbench", () => {
     expect(screen.queryByRole("dialog", { name: "书卷选择" })).not.toBeInTheDocument();
   });
 
+  it("keeps a failed lightbox image retry reachable by keyboard", async () => {
+    render(<Workbench versions={[cuvBible, kjvBible]} resources={sampleResources} initialLayout={dualCenterLayout} />);
+    await userEvent.click(within(screen.getByRole("complementary", { name: "右侧资料栏" })).getByRole("button", { name: `放大${genesisMathImageTitle}` }));
+    const dialog = screen.getByRole("dialog", { name: `图片预览：${genesisMathImageTitle}` });
+    fireEvent.error(within(dialog).getByRole("img"));
+    await userEvent.tab();
+    expect(within(dialog).getByRole("button", { name: `重试加载图片：${genesisMathImageTitle}` })).toHaveFocus();
+    await userEvent.keyboard("{Enter}");
+    expect(within(dialog).getByRole("img")).toBeInTheDocument();
+    expect(dialog).toBeInTheDocument();
+  });
+
   it("stage2 closes copy menus with Escape or outside clicks and restores keyboard entry", async () => {
     render(<Workbench versions={[cuvBible, kjvBible]} resources={sampleResources} initialLayout={dualCenterLayout} />);
     const dock = screen.getByRole("complementary", { name: "右侧资料栏" });
@@ -4557,7 +4587,7 @@ describe("Workbench", () => {
       />,
     );
 
-    const searchRegion = screen.getByRole("search", { name: "经文搜索" });
+    const searchRegion = screen.getByRole("search", { name: "经文与卡片搜索" });
     await userEvent.type(within(searchRegion).getByRole("searchbox", { name: "搜索经文" }), "created");
     await userEvent.click(within(searchRegion).getByRole("button", { name: "搜索" }));
     await userEvent.click(screen.getByRole("button", { name: "KJV Gen.1.1 In the beginning God created the heaven and the earth." }));
@@ -4576,7 +4606,7 @@ describe("Workbench", () => {
       />,
     );
 
-    const searchRegion = screen.getByRole("search", { name: "经文搜索" });
+    const searchRegion = screen.getByRole("search", { name: "经文与卡片搜索" });
     await userEvent.type(within(searchRegion).getByRole("searchbox", { name: "搜索经文" }), "created");
     await userEvent.click(within(searchRegion).getByRole("button", { name: "搜索" }));
 
@@ -4606,7 +4636,7 @@ describe("Workbench", () => {
       />,
     );
 
-    const searchRegion = screen.getByRole("search", { name: "经文搜索" });
+    const searchRegion = screen.getByRole("search", { name: "经文与卡片搜索" });
     const searchInput = within(searchRegion).getByRole("searchbox", { name: "搜索经文" });
 
     await userEvent.type(searchInput, "created");
@@ -4632,7 +4662,7 @@ describe("Workbench", () => {
       />,
     );
 
-    const searchRegion = screen.getByRole("search", { name: "经文搜索" });
+    const searchRegion = screen.getByRole("search", { name: "经文与卡片搜索" });
     const searchInput = within(searchRegion).getByRole("searchbox", { name: "搜索经文" });
     await userEvent.click(searchInput);
     await userEvent.type(searchInput, "God");
@@ -4922,7 +4952,7 @@ describe("Workbench", () => {
       />,
     );
 
-    const searchRegion = screen.getByRole("search", { name: "经文搜索" });
+    const searchRegion = screen.getByRole("search", { name: "经文与卡片搜索" });
     await userEvent.type(within(searchRegion).getByRole("searchbox", { name: "搜索经文" }), "only begotten");
     await userEvent.click(within(searchRegion).getByRole("button", { name: "搜索" }));
     await userEvent.click(screen.getByRole("button", { name: /KJV John\.3\.16/ }));
@@ -4975,7 +5005,7 @@ describe("Workbench", () => {
       />,
     );
 
-    const searchRegion = screen.getByRole("search", { name: "经文搜索" });
+    const searchRegion = screen.getByRole("search", { name: "经文与卡片搜索" });
     await userEvent.type(within(searchRegion).getByRole("searchbox", { name: "搜索经文" }), "loved");
     await userEvent.click(within(searchRegion).getByRole("button", { name: "搜索" }));
     await userEvent.click(screen.getByRole("button", { name: /KJV John\.3\.16/ }));
@@ -5020,7 +5050,7 @@ describe("Workbench", () => {
     }
 
     render(<Harness />);
-    const searchRegion = screen.getByRole("search", { name: "经文搜索" });
+    const searchRegion = screen.getByRole("search", { name: "经文与卡片搜索" });
     await userEvent.type(within(searchRegion).getByRole("searchbox", { name: "搜索经文" }), "loved");
     await userEvent.click(within(searchRegion).getByRole("button", { name: "搜索" }));
     await userEvent.click(screen.getByRole("button", { name: /KJV John\.3\.16/ }));

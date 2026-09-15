@@ -3,20 +3,16 @@ import { loadDoreChapterArtworkByChapter, type DoreChapterArtwork } from "../dat
 import type { BibleVersion, BibleVerse } from "../domain/bible";
 import { bibleBooks, bookTitle, chaptersForBook, englishBookTitle, getBibleBook } from "../domain/bibleBooks";
 import type { StudyResource } from "../domain/resources";
-import { verseIdFromParts, type VerseId } from "../domain/verse";
-import { resourceMentionsVerse, resourcesForVerse } from "../lib/backlinks";
+import { verseIdFromParts } from "../domain/verse";
+import { createVerseResourceIndex } from "../lib/backlinks";
 import { formatTextResourceBody } from "../lib/formatTextResourceBody";
 import { ScriptureLinkedText } from "./ScriptureLinkedText";
 import { VersePreviewProvider } from "./VersePreviewContext";
+import { readerPositionStorageKey, storedReaderPosition, type ReaderPosition } from "../data/readerPosition";
+import { ResourceImage } from "./ResourceImage";
 
-export const readerPositionStorageKey = "one-holy-bible-reader-position";
+export { readerPositionStorageKey, type ReaderPosition };
 export const readerPrefsStorageKey = "one-holy-bible-reader-prefs";
-
-export interface ReaderPosition {
-  book: string;
-  chapter: number;
-  verse: number;
-}
 
 export interface ReaderViewProps {
   versions: BibleVersion[];
@@ -32,7 +28,6 @@ interface ReaderPrefs {
   marginWidth: number;
 }
 
-const defaultPosition: ReaderPosition = { book: "Gen", chapter: 1, verse: 1 };
 const defaultPrefs: ReaderPrefs = { railOpen: false, showKjv: true, fontSize: 21, marginWidth: 340 };
 const minFontSize = 18;
 const maxFontSize = 25;
@@ -82,24 +77,7 @@ function resolveInitialPosition(preferred?: ReaderPosition | null): ReaderPositi
     const verse = preferred.verse >= 1 ? preferred.verse : 1;
     return { book: preferred.book, chapter, verse };
   }
-  return storedPosition();
-}
-
-function storedPosition(): ReaderPosition {
-  try {
-    const raw = window.localStorage.getItem(readerPositionStorageKey);
-    if (!raw) return defaultPosition;
-    const parsed = JSON.parse(raw) as Partial<ReaderPosition>;
-    const book = typeof parsed.book === "string" && getBibleBook(parsed.book) ? parsed.book : defaultPosition.book;
-    const chapterCount = chaptersForBook(book);
-    const chapter = typeof parsed.chapter === "number" && parsed.chapter >= 1 && parsed.chapter <= chapterCount
-      ? parsed.chapter
-      : 1;
-    const verse = typeof parsed.verse === "number" && parsed.verse >= 1 ? parsed.verse : 1;
-    return { book, chapter, verse };
-  } catch {
-    return defaultPosition;
-  }
+  return storedReaderPosition();
 }
 
 function storedPrefs(): ReaderPrefs {
@@ -129,6 +107,13 @@ function persistJson(key: string, value: unknown) {
   } catch {
     return false;
   }
+}
+
+function isInteractiveShortcutTarget(target: EventTarget | null) {
+  if (!(target instanceof Element)) return false;
+  return Boolean(target.closest(
+    "button, a, summary, input, textarea, select, [contenteditable=true], [role='button'], [role='tab'], [role='menuitem'], [role='link'], [role='option'], [role='switch'], [role='checkbox'], [role='separator']",
+  ));
 }
 
 /** Span of a resource inside the current chapter, for the coverage badge. */
@@ -170,10 +155,6 @@ interface VerseCardKinds {
 
 function emptyVerseCardKinds(): VerseCardKinds {
   return { text: false, image: false, html: false };
-}
-
-function resourceTouchesVerse(resource: StudyResource, verseId: VerseId): boolean {
-  return resource.primaryAnchor === verseId || resource.verses.includes(verseId);
 }
 
 function kindsFromResources(cards: StudyResource[]): VerseCardKinds {
@@ -249,6 +230,8 @@ export function ReaderView({ versions, resources, initialPosition: preferredPosi
   const [peekSplit, setPeekSplit] = useState(defaultPeekSplit);
   const [savePulse, setSavePulse] = useState(false);
   const [doreByChapter, setDoreByChapter] = useState<Map<string, DoreChapterArtwork> | null>(null);
+  const [positionSaveFailed, setPositionSaveFailed] = useState(false);
+  const [prefsSaveFailed, setPrefsSaveFailed] = useState(false);
 
   const viewRef = useRef<HTMLDivElement | null>(null);
   const scrollRef = useRef<HTMLDivElement | null>(null);
@@ -297,27 +280,30 @@ export function ReaderView({ versions, resources, initialPosition: preferredPosi
     () => chapterCuvVerses.map((verse) => verse.id),
     [chapterCuvVerses],
   );
+  // Built once per resource set; chapter/verse lookups then cost O(hits) instead of
+  // re-scanning every resource body per verse (Ps 119 × 30k cards was ~1.7 s).
+  const resourceIndex = useMemo(() => createVerseResourceIndex(resources), [resources]);
   // Same relation semantics as the workbench chapter dock (anchor, verses, or wiki links in the body).
   const chapterResources = useMemo(
-    () => resources.filter((resource) => chapterVerseIds.some((verseId) => resourceMentionsVerse(resource, verseId))),
-    [chapterVerseIds, resources],
+    () => resourceIndex.mentioningAny(chapterVerseIds),
+    [chapterVerseIds, resourceIndex],
   );
   const selectedVerseId = useMemo(
     () => verseIdFromParts(book, chapter, selectedVerse),
     [book, chapter, selectedVerse],
   );
   const selectedVerseResources = useMemo(
-    () => resourcesForVerse(chapterResources, selectedVerseId),
-    [chapterResources, selectedVerseId],
+    () => resourceIndex.mentioning(selectedVerseId),
+    [resourceIndex, selectedVerseId],
   );
   const verseCardKinds = useMemo(() => {
     const marked = new Map<number, VerseCardKinds>();
     for (const verse of chapterCuvVerses) {
-      const cards = chapterResources.filter((resource) => resourceTouchesVerse(resource, verse.id));
+      const cards = resourceIndex.touching(verse.id);
       if (cards.length) marked.set(verse.verse, kindsFromResources(cards));
     }
     return marked;
-  }, [chapterCuvVerses, chapterResources]);
+  }, [chapterCuvVerses, resourceIndex]);
 
   const pulseAutosave = useCallback(() => {
     setSavePulse(true);
@@ -326,10 +312,10 @@ export function ReaderView({ versions, resources, initialPosition: preferredPosi
   }, []);
 
   useEffect(() => {
-    persistJson(readerPositionStorageKey, { book, chapter, verse: selectedVerse } satisfies ReaderPosition);
+    setPositionSaveFailed(!persistJson(readerPositionStorageKey, { book, chapter, verse: selectedVerse } satisfies ReaderPosition));
   }, [book, chapter, selectedVerse]);
   useEffect(() => {
-    persistJson(readerPrefsStorageKey, { railOpen, showKjv, fontSize, marginWidth } satisfies ReaderPrefs);
+    setPrefsSaveFailed(!persistJson(readerPrefsStorageKey, { railOpen, showKjv, fontSize, marginWidth } satisfies ReaderPrefs));
   }, [fontSize, marginWidth, railOpen, showKjv]);
   useEffect(() => () => window.clearTimeout(savePulseTimer.current), []);
 
@@ -484,8 +470,9 @@ export function ReaderView({ versions, resources, initialPosition: preferredPosi
         return;
       }
       const target = event.target as HTMLElement | null;
-      if (target && target.matches("input, textarea, select, [contenteditable=true]")) return;
-      if (target && target.closest("[role='separator']")) return;
+      const isVerseNavigation = target?.closest(".reader-verse") && ["ArrowDown", "ArrowUp", "ArrowLeft", "ArrowRight", "j", "k"].includes(event.key);
+      if (isInteractiveShortcutTarget(target) && !isVerseNavigation) return;
+      if (event.defaultPrevented || event.ctrlKey || event.metaKey || event.altKey) return;
       if (drawerOpen || booksOpen || lightbox) return;
       if (event.key === "ArrowDown" || event.key === "j") {
         event.preventDefault();
@@ -568,14 +555,18 @@ export function ReaderView({ versions, resources, initialPosition: preferredPosi
               setLightbox({ src: resource.assetPath!, alt: resource.title, caption: resource.summary ?? resource.title });
             }}
           >
-            <img src={resource.assetPath} alt={resource.title} loading="lazy" />
+            <ResourceImage src={resource.assetPath} alt={resource.title} loading="lazy" />
           </button>
         ) : null}
         <h4>{resource.title}</h4>
         {isImage && (resource.summary ?? resource.body).trim() ? (
           <p className="reader-card__caption">{resource.summary ?? resource.body}</p>
         ) : null}
-        {!isImage && resource.body.trim() ? (
+        {resource.type === "html" && !resource.assetPath ? (
+          <p className="reader-card__placeholder">互动内容尚未提供</p>
+        ) : resource.type === "video" && !resource.assetPath ? (
+          <p className="reader-card__placeholder">视频尚未提供</p>
+        ) : !isImage && resource.body.trim() ? (
           <div className="reader-card__body">
             <ScriptureLinkedText
               text={formatTextResourceBody(resource.body)}
@@ -600,11 +591,11 @@ export function ReaderView({ versions, resources, initialPosition: preferredPosi
             <button
               className="reader-topbar__btn"
               type="button"
-              aria-label="阅读台"
-              title="阅读台"
+              aria-label="返回工作台"
+              title="返回工作台"
               onClick={() => onExitReader({ book, chapter, verse: selectedVerse })}
             >
-              ⊞ 阅读台
+              ⊞ 工作台
             </button>
           ) : null}
           <span className="reader-topbar__loc">
@@ -612,6 +603,15 @@ export function ReaderView({ versions, resources, initialPosition: preferredPosi
             <span className="reader-topbar__loc-en">{englishTitle}</span>
           </span>
           <div className="reader-topbar__actions">
+            <button
+              className="reader-topbar__btn reader-topbar__cards"
+              type="button"
+              aria-label="查看本节卡片"
+              title="查看本节卡片"
+              onClick={() => openDrawer("verse")}
+            >
+              本节卡片 {selectedVerseResources.length}
+            </button>
             <button
               className="reader-topbar__btn"
               type="button"
@@ -622,12 +622,12 @@ export function ReaderView({ versions, resources, initialPosition: preferredPosi
               英文对照
             </button>
             <span className="reader-stepper" role="group" aria-label="经文字号">
-              <button type="button" aria-label="减小字号" onClick={() => { setFontSize((v) => Math.max(minFontSize, v - 1)); pulseAutosave(); }}>−</button>
-              <button type="button" aria-label="增大字号" onClick={() => { setFontSize((v) => Math.min(maxFontSize, v + 1)); pulseAutosave(); }}>+</button>
+              <button type="button" aria-label="减小字号" disabled={fontSize <= minFontSize} onClick={() => { setFontSize((v) => Math.max(minFontSize, v - 1)); pulseAutosave(); }}>−</button>
+              <button type="button" aria-label="增大字号" disabled={fontSize >= maxFontSize} onClick={() => { setFontSize((v) => Math.min(maxFontSize, v + 1)); pulseAutosave(); }}>+</button>
             </span>
-            <span className={`reader-autosave${savePulse ? " reader-autosave--pulse" : ""}`} role="status">
+            <span className={`reader-autosave${positionSaveFailed || prefsSaveFailed ? "" : savePulse ? " reader-autosave--pulse" : ""}`} role="status">
               <span className="reader-autosave__dot" aria-hidden="true" />
-              已自动保存
+              {positionSaveFailed || prefsSaveFailed ? "未能保存到本机" : "已自动保存"}
             </span>
           </div>
         </header>
@@ -724,7 +724,7 @@ export function ReaderView({ versions, resources, initialPosition: preferredPosi
                     });
                   }}
                 >
-                  <img src={chapterArtwork.assetPath} alt={`多雷《圣经》插图:${chapterArtwork.title}`} />
+                  <ResourceImage src={chapterArtwork.assetPath} alt={`多雷《圣经》插图:${chapterArtwork.title}`} />
                   <span className="reader-chapter-art__caption">多雷《圣经》插图 · {chapterArtwork.title}</span>
                 </button>
               ) : null}
@@ -801,7 +801,7 @@ export function ReaderView({ versions, resources, initialPosition: preferredPosi
                           >
                             {isImage ? (
                               <span className="reader-marginalia__thumb-media">
-                                <img src={resource.assetPath} alt={resource.title} />
+                                <ResourceImage src={resource.assetPath} alt={resource.title} />
                                 <span className="reader-marginalia__thumb-copy">
                                   <span className="reader-marginalia__thumb-title">{resource.title}</span>
                                 </span>
@@ -824,7 +824,7 @@ export function ReaderView({ versions, resources, initialPosition: preferredPosi
                             type="button"
                             onClick={() => peekCard(resource.id)}
                           >
-                            <img src={resource.assetPath} alt={resource.title} />
+                            <ResourceImage src={resource.assetPath} alt={resource.title} />
                             <span className="reader-marginalia__title">{resource.title}</span>
                           </button>
                         );
@@ -996,7 +996,7 @@ export function ReaderView({ versions, resources, initialPosition: preferredPosi
               }
             }}
           >
-            <img src={lightbox.src} alt={lightbox.alt} />
+            <ResourceImage src={lightbox.src} alt={lightbox.alt} />
             <p className="reader-lightbox__caption">{lightbox.caption}</p>
             <button
               className="reader-lightbox__close"

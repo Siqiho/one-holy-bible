@@ -2,7 +2,7 @@ import { act, fireEvent, render, screen, within } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import { beforeEach, describe, expect, it, vi } from "vitest";
 
-import { ReaderView } from "./ReaderView";
+import { ReaderView, readerPrefsStorageKey, readerPositionStorageKey } from "./ReaderView";
 import type { DoreChapterArtwork } from "../data/doreChapterArtwork";
 import type { BibleVersion } from "../domain/bible";
 import type { StudyResource } from "../domain/resources";
@@ -372,8 +372,51 @@ describe("ReaderView", () => {
     const { onExitReader } = await renderReader();
 
     await user.click(screen.getByTestId("reader-verse-2"));
-    await user.click(screen.getByRole("button", { name: "阅读台" }));
+    await user.click(screen.getByRole("button", { name: "返回工作台" }));
     expect(onExitReader).toHaveBeenCalledTimes(1);
     expect(onExitReader).toHaveBeenCalledWith({ book: "Gen", chapter: 1, verse: 2 });
   });
+  it("keeps native button Enter activation and verse navigation shortcuts separate", async () => {
+    await renderReader();
+    const english = screen.getByRole("button", { name: "英文对照" });
+    english.focus();
+    await userEvent.keyboard("{Enter}");
+    expect(english).toHaveAttribute("aria-pressed", "false");
+    expect(screen.queryByRole("dialog", { name: "卡片" })).not.toBeInTheDocument();
+    await userEvent.click(screen.getByTestId("reader-verse-1"));
+    await userEvent.keyboard("j");
+    expect(screen.getByTestId("reader-verse-2")).toHaveAttribute("aria-current", "true");
+    await userEvent.click(screen.getByRole("button", { name: "查看本节卡片" }));
+    expect(screen.getByRole("dialog", { name: "卡片" })).toHaveTextContent("阿波罗 8 号地球照片");
+  });
+
+  it.each([readerPrefsStorageKey, readerPositionStorageKey])("reports and recovers storage failures for %s", async (failedKey) => {
+    const nativeSetItem = Storage.prototype.setItem;
+    const spy = vi.spyOn(Storage.prototype, "setItem").mockImplementation(function (key, value) {
+      if (key === failedKey) throw new Error("storage unavailable");
+      nativeSetItem.call(this, key, value);
+    });
+    try {
+      await renderReader();
+      expect(screen.getByRole("status")).toHaveTextContent("未能保存到本机");
+      if (failedKey === readerPositionStorageKey) await userEvent.click(screen.getByRole("button", { name: "英文对照" }));
+      else await userEvent.click(screen.getByTestId("reader-verse-2"));
+      expect(screen.getByRole("status")).toHaveTextContent("未能保存到本机");
+      spy.mockRestore();
+      if (failedKey === readerPositionStorageKey) await userEvent.click(screen.getByTestId("reader-verse-3"));
+      else await userEvent.click(screen.getByRole("button", { name: "英文对照" }));
+      expect(screen.getByRole("status")).toHaveTextContent("已自动保存");
+    } finally { spy.mockRestore(); }
+  });
+
+  it("disables font controls at the supported bounds", async () => {
+    localStorage.setItem(readerPrefsStorageKey, JSON.stringify({ fontSize: 25 }));
+    await renderReader();
+    expect(screen.getByRole("button", { name: "增大字号" })).toBeDisabled();
+    const smaller = screen.getByRole("button", { name: "减小字号" });
+    for (let i = 0; i < 7; i += 1) await userEvent.click(smaller);
+    expect(smaller).toBeDisabled();
+    expect(screen.getByRole("button", { name: "增大字号" })).toBeEnabled();
+  });
+
 });

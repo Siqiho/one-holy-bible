@@ -35,6 +35,7 @@ import { horizontalListSortingStrategy, SortableContext, useSortable, verticalLi
 import { CSS } from "@dnd-kit/utilities";
 import type { BibleVersion } from "../domain/bible";
 import { ScriptureLinkedText } from "./ScriptureLinkedText";
+import { ResourceImage } from "./ResourceImage";
 import { VersePreviewProvider } from "./VersePreviewContext";
 import type { PublicScriptureSearchEntry } from "../data/publicData";
 import { bookTitle, englishBookTitle, newTestamentBooks, oldTestamentBooks } from "../domain/bibleBooks";
@@ -43,7 +44,7 @@ import { buildBookIntroView, type BookIntroViewModel } from "../domain/bookIntro
 import type { StudyResource } from "../domain/resources";
 import type { VerseId } from "../domain/verse";
 import { parseVerseId } from "../domain/verse";
-import { resourceMentionsVerse, resourcesForBookIntro, resourcesForVerse } from "../lib/backlinks";
+import { createVerseResourceIndex, resourceMentionsVerse, resourcesForBookIntro, resourcesForVerse } from "../lib/backlinks";
 import { createBibleSearchIndex, createPublicScriptureSearchIndex, type BibleSearchMatchRange, type IndexedBibleSearchResult } from "../lib/bibleSearch";
 import { formatTextResourceBody } from "../lib/formatTextResourceBody";
 
@@ -2084,25 +2085,27 @@ export function ResourceCard({
         <div className="resource-card__body">
           {resource.type === "html" ? (
             <div
-              className="html-preview resource-card__selectable-text"
+              className="resource-media-unavailable resource-card__selectable-text"
               data-selection-mode="text"
               data-testid="resource-selectable-text"
               onClick={stopResourceTextSelectionEvent}
               onDoubleClick={stopResourceTextSelectionEvent}
               onPointerDown={stopResourceTextSelectionEvent}
             >
-              互动 HTML：词语关系图 / 时间轴 / 小测验
+              <p>互动内容尚未提供</p>
+              <ScriptureLinkedText text={resource.body} sourceBookId={resource.verses[0]?.split(".")[0]} />
             </div>
           ) : resource.type === "video" ? (
             <div
-              className="video-preview resource-card__selectable-text"
+              className="resource-media-unavailable resource-card__selectable-text"
               data-selection-mode="text"
               data-testid="resource-selectable-text"
               onClick={stopResourceTextSelectionEvent}
               onDoubleClick={stopResourceTextSelectionEvent}
               onPointerDown={stopResourceTextSelectionEvent}
             >
-              播放：{resource.title}
+              <p>视频尚未提供</p>
+              <ScriptureLinkedText text={resource.body} sourceBookId={resource.verses[0]?.split(".")[0]} />
             </div>
           ) : resource.type === "image" ? (
             resource.assetPath ? (
@@ -2125,7 +2128,7 @@ export function ResourceCard({
                     }}
                     onPointerDown={stopResourceActionEvent}
                   >
-                    <img
+                    <ResourceImage
                       src={resource.assetPath}
                       alt={imageResourceAlt(resource)}
                       data-paper-blend={shouldBlendImageWithPaper(resource) ? "true" : undefined}
@@ -2141,7 +2144,7 @@ export function ResourceCard({
                     />
                   </button>
                 ) : (
-                  <img
+                  <ResourceImage
                     src={resource.assetPath}
                     alt={imageResourceAlt(resource)}
                     data-paper-blend={shouldBlendImageWithPaper(resource) ? "true" : undefined}
@@ -3304,7 +3307,8 @@ export function Workbench({
   const [selectedIntroBook, setSelectedIntroBook] = useState<string | null>(initialIntroBook);
   const [openNavigationPanel, setOpenNavigationPanel] = useState<"book" | "chapter" | null>(null);
   const [query, setQuery] = useState("");
-  const [cardQuery, setCardQuery] = useState("");
+  const [searchTarget, setSearchTarget] = useState<"scripture" | "cards">("scripture");
+  const cardQuery = searchTarget === "cards" ? query : "";
   const [submittedQuery, setSubmittedQuery] = useState("");
   const [searchDisplayLimit, setSearchDisplayLimit] = useState(searchResultLimit);
   const [searchVersionFilter, setSearchVersionFilter] = useState<SearchVersionFilter>("all");
@@ -3312,7 +3316,6 @@ export function Workbench({
   const [isSearchPanelOpen, setIsSearchPanelOpen] = useState(false);
   const [collapsedCenterCardIds, setCollapsedCenterCardIds] = useState<Set<string>>(() => new Set());
   const [status, setStatus] = useState("工作台已加载");
-  const [refreshStatus, setRefreshStatus] = useState<"idle" | "success" | "error">("idle");
   const [unsyncFailedResourceId, setUnsyncFailedResourceId] = useState<string | null>(null);
   const [locallyUnsyncingResourceId, setLocallyUnsyncingResourceId] = useState<string | null>(null);
   const [updateInFlightResourceId, setUpdateInFlightResourceId] = useState<string | null>(null);
@@ -3389,13 +3392,15 @@ export function Workbench({
     });
     return Array.from(verseIds);
   }, [currentBook, currentChapter, selectedIntroBook, versions]);
+  const libraryResourceIndex = useMemo(
+    () => createVerseResourceIndex(libraryFilteredResources),
+    [libraryFilteredResources],
+  );
   const currentResources = useMemo(() => (
     selectedIntroBook
       ? verseFirstBookIntroResources(libraryFilteredResources, selectedIntroBook)
-      : libraryFilteredResources.filter((resource) => (
-        currentChapterVerseIds.some((verseId) => resourceMentionsVerse(resource, verseId))
-      ))
-  ), [currentChapterVerseIds, libraryFilteredResources, selectedIntroBook]);
+      : libraryResourceIndex.mentioningAny(currentChapterVerseIds)
+  ), [currentChapterVerseIds, libraryFilteredResources, libraryResourceIndex, selectedIntroBook]);
   const hasAnyUnsyncInFlight = Boolean(activeUnsyncingResourceId || unsyncInFlightResourceIdRef.current);
   const filteredCurrentResources = useMemo(
     () => filterResourcesByCardQuery(currentResources, cardQuery),
@@ -3475,7 +3480,7 @@ export function Workbench({
     });
   }, [pendingSearchQuery, searchQuery, searchVersionFilter, searchScope, currentBook, searchResponse.totalCount, hasPendingSearchChange]);
   const searchResults = searchResponse.results;
-  const shouldShowSearchPanel = isSearchPanelOpen && (pendingSearchQuery.length > 0 || searchQuery.length > 0);
+  const shouldShowSearchPanel = searchTarget === "scripture" && isSearchPanelOpen && (pendingSearchQuery.length > 0 || searchQuery.length > 0);
   useEffect(() => {
     if (!shouldShowSearchPanel) return;
     function closeSearchOnOutsidePointer(event: PointerEvent) {
@@ -3512,15 +3517,6 @@ export function Workbench({
       activeCenterModules: normalizeActiveCenterModules(layoutRef.current.activeCenterModules),
     });
   }, []);
-
-  useEffect(() => {
-    if (refreshStatus === "idle") return;
-    const timeoutMs = refreshStatus === "success" ? 1800 : 2600;
-    const timer = window.setTimeout(() => {
-      setRefreshStatus("idle");
-    }, timeoutMs);
-    return () => window.clearTimeout(timer);
-  }, [refreshStatus]);
 
   useEffect(() => {
     const previous = initialNavigationRef.current;
@@ -3713,10 +3709,16 @@ export function Workbench({
         event.stopPropagation();
         closeImagePreview();
       } else if (event.key === "Tab") {
-        // The close button is the lightbox's only interactive element.
-        event.preventDefault();
-        event.stopPropagation();
-        imagePreviewCloseRef.current?.focus();
+        const dialog = imagePreviewCloseRef.current?.closest("[role='dialog']");
+        const controls = dialog ? [...dialog.querySelectorAll<HTMLElement>("button:not([disabled]), [role='button'][tabindex='0']")] : [];
+        const first = controls[0];
+        const last = controls[controls.length - 1];
+        if (!controls.includes(document.activeElement as HTMLElement) || controls.length === 1
+          || (event.shiftKey && document.activeElement === first) || (!event.shiftKey && document.activeElement === last)) {
+          event.preventDefault();
+          event.stopPropagation();
+          (event.shiftKey ? last : first)?.focus();
+        }
       }
     }
     document.addEventListener("keydown", handlePreviewKeyDown, true);
@@ -3842,6 +3844,11 @@ export function Workbench({
   }
 
   function runSearch(nextQuery = query) {
+    if (searchTarget === "cards") {
+      if (layoutRef.current.rightCollapsed) toggleDock("right");
+      setStatus(`卡片搜索：${filteredCurrentResources.length} 张匹配 ${cardQuery.trim() || "全部"}`);
+      return;
+    }
     setSearchDisplayLimit(searchResultLimit);
     const normalizedQuery = nextQuery.trim();
     if (!normalizedQuery) {
@@ -3891,13 +3898,10 @@ export function Workbench({
     });
   }
 
-  function updateCardSearchQuery(value: string) {
-    setCardQuery(value);
-  }
-
   function clearCardSearch() {
     const previousQuery = cardQuery.trim();
-    setCardQuery("");
+    setQuery("");
+    setSubmittedQuery("");
     setStatus("卡片搜索已清除");
     logCardSearchInteraction("cleared", {
       query: previousQuery,
@@ -3909,10 +3913,18 @@ export function Workbench({
 
   function updateSearchQuery(value: string) {
     setQuery(value);
-    setIsSearchPanelOpen(true);
+    setIsSearchPanelOpen(searchTarget === "scripture");
     if (!value.trim()) {
       setSubmittedQuery("");
     }
+  }
+
+  function changeSearchTarget(target: "scripture" | "cards") {
+    setSearchTarget(target);
+    setSubmittedQuery("");
+    setIsSearchPanelOpen(false);
+    if (target === "cards" && layoutRef.current.rightCollapsed) toggleDock("right");
+    setStatus(target === "cards" ? "搜索当前资料栏的卡片" : "输入关键词后搜索经文");
   }
 
   function updateSearchVersionFilter(nextFilter: SearchVersionFilter) {
@@ -4151,14 +4163,20 @@ export function Workbench({
   }
 
   function resetLayout() {
-    changeLayout(defaultWorkbenchLayout, "layout_reset");
-    setStatus("布局已重置");
+    const current = layoutRef.current;
+    const result = changeLayout({
+      ...defaultWorkbenchLayout,
+      savedCardsByBook: current.savedCardsByBook,
+      savedCardsByVerse: current.savedCardsByVerse,
+      centerCardResourceIds: current.centerCardResourceIds,
+      centerCardResourceIdsByBook: current.centerCardResourceIdsByBook,
+    }, "layout_reset");
+    setStatus(`排版已重置，整理卡片已保留${localPersistenceSuffix(result.persisted)}`);
   }
 
   async function refreshResources() {
     if (!onRefreshResources || isRefreshingResources || refreshInFlightRef.current) return;
     refreshInFlightRef.current = true;
-    setRefreshStatus("idle");
     setStatus("正在刷新卡片资源...");
     logWorkbenchInfo("[workbench] synced resources refresh requested", {
       resourceCount: resources.length,
@@ -4168,11 +4186,9 @@ export function Workbench({
 
     try {
       await onRefreshResources();
-      setRefreshStatus("success");
       setStatus("卡片资源已刷新");
     } catch (error) {
       console.error("[workbench] synced resources refresh failed", error);
-      setRefreshStatus("error");
       setStatus("卡片资源刷新失败");
     } finally {
       refreshInFlightRef.current = false;
@@ -5182,60 +5198,42 @@ export function Workbench({
             <ArrowLeftRight size={15} />
           </button>
         </div>
-        <div className="card-search" role="search" aria-label="卡片搜索">
-          <Search size={15} />
+        <div ref={searchFormRef} className="bible-search" role="search" aria-label="经文与卡片搜索">
+          <select
+            aria-label="搜索类型"
+            className="bible-search__target"
+            value={searchTarget}
+            onChange={(event) => changeSearchTarget(event.target.value as "scripture" | "cards")}
+          >
+            <option value="scripture">经文</option>
+            <option value="cards">卡片</option>
+          </select>
+          <Search size={16} aria-hidden="true" />
           <input
-            aria-label="搜索卡片资源"
-            placeholder="搜索卡片"
-            type="search"
-            value={cardQuery}
-            onChange={(event) => updateCardSearchQuery(event.target.value)}
-          />
-          {cardQuery.trim() ? (
-            <button
-              aria-label="清除卡片搜索"
-              className="card-search__clear"
-              title="清除卡片搜索"
-              type="button"
-              onClick={clearCardSearch}
-            >
-              <X size={13} />
-            </button>
-          ) : null}
-          <span aria-live="polite" className="card-search__status">
-            {cardSearchQuery ? `${filteredCurrentResources.length} 张` : "全部"}
-          </span>
-        </div>
-        <div ref={searchFormRef} className="bible-search" role="search" aria-label="经文搜索">
-          <Search size={16} />
-          <input
-            aria-label="搜索经文"
+            aria-label={searchTarget === "cards" ? "搜索卡片资源" : "搜索经文"}
             ref={searchInputRef}
-            placeholder="搜索经文"
+            placeholder={searchTarget === "cards" ? (selectedIntroBook ? "搜索本卷序言卡片" : "搜索本章卡片") : "搜索经文"}
             type="search"
             value={query}
             onChange={(event) => updateSearchQuery(event.target.value)}
-            onFocus={() => setIsSearchPanelOpen(true)}
+            onFocus={() => setIsSearchPanelOpen(searchTarget === "scripture")}
             onKeyDown={handleSearchInputKeyDown}
           />
           {query.trim() ? (
             <button
-              aria-label="清除搜索"
+              aria-label={searchTarget === "cards" ? "清除卡片搜索" : "清除搜索"}
               className="bible-search__clear"
               title="清除搜索"
               type="button"
-              onClick={clearSearch}
+              onClick={searchTarget === "cards" ? clearCardSearch : clearSearch}
             >
               <X size={14} />
             </button>
           ) : null}
-          <button
-            className="bible-search__submit"
-            type="button"
-            onClick={() => runSearch()}
-          >
-            搜索
-          </button>
+          {searchTarget === "cards" ? (
+            <span aria-live="polite" className="bible-search__count">{filteredCurrentResources.length} 张</span>
+          ) : null}
+          <button className="bible-search__submit" type="button" onClick={() => runSearch()}>搜索</button>
         </div>
         <div className="toolbar__group toolbar__group--layout" aria-label="布局操作" role="group">
           {onOpenReader ? (
@@ -5263,23 +5261,16 @@ export function Workbench({
                 <RefreshCcw size={16} />
                 {isRefreshingResources ? "刷新中" : "刷新卡片"}
               </button>
-              {refreshStatus !== "idle" ? (
-                <span
-                  className={`toolbar-refresh-status toolbar-refresh-status--${refreshStatus}`}
-                  role={refreshStatus === "error" ? "alert" : "status"}
-                >
-                  {refreshStatus === "success" ? "已刷新" : "刷新失败"}
-                </span>
-              ) : null}
+
             </>
           ) : null}
-          <button className="toolbar-button toolbar-button--primary" type="button" onClick={saveLayout}>
+          <button className="toolbar-button" title="布局会自动保存；点击再次保存" type="button" onClick={saveLayout}>
             <Save size={16} />
             保存布局
           </button>
-          <button className="toolbar-button" type="button" onClick={resetLayout}>
+          <button className="toolbar-button" title="恢复栏宽和模块排版，保留已整理卡片" type="button" onClick={resetLayout}>
             <RotateCcw size={16} />
-            重置
+            重置排版
           </button>
         </div>
       </header>
@@ -5538,7 +5529,7 @@ export function Workbench({
               </button>
             </header>
             <div className="image-lightbox__canvas">
-              <img
+              <ResourceImage
                 src={previewImageResource.assetPath}
                 alt={imageResourceAlt(previewImageResource)}
                 data-paper-blend={shouldBlendImageWithPaper(previewImageResource) ? "true" : undefined}

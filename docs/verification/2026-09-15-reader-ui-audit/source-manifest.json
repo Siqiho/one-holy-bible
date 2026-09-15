@@ -1,0 +1,38 @@
+{
+  "checkedAt": "2026-09-15T23:31:27.530323",
+  "sourceRoot": "/Users/simon/OHB/one-holy-bible",
+  "url": "http://localhost:1420/",
+  "files": [
+    {
+      "path": "src/components/ReaderView.tsx",
+      "sha256": "f68c8138637a0210945a567862dc1c37633eac586e6baa4236a32617406026be",
+      "viteSourceMatchesDisk": true
+    },
+    {
+      "path": "src/components/Workbench.tsx",
+      "sha256": "e1b245bc8172736179086eb0f2011c5add4616a8455828788129c20d1f439dbd",
+      "viteSourceMatchesDisk": true
+    },
+    {
+      "path": "src/components/ResourceImage.tsx",
+      "sha256": "f6d6bf07850c9394381da9e6b0916ddfe59ed19436269ddc3f3260c7ece42b96",
+      "viteSourceMatchesDisk": true
+    },
+    {
+      "path": "src/components/ReaderView.test.tsx",
+      "sha256": "9e3096c4f1cd314a9edef19fc57a1280cd1598f34415e65affbb9d04b62ae496"
+    },
+    {
+      "path": "src/components/Workbench.test.tsx",
+      "sha256": "6c18dd532d76a33ca7167afbd0c054aa1e54b6f89c64f7200c5736cebc8a9dcc"
+    },
+    {
+      "path": "src/components/ResourceImage.test.tsx",
+      "sha256": "061c3b6c794f463c6a189ad2f4ab53529514310f2d806c1ffffd2ba38ba85ec9"
+    },
+    {
+      "path": "src/styles.css",
+      "sha256": "931db34f91d38d7943c6a2b391c5372b5cccd5f60020253a384c8c6474fe81f7"
+    }
+  ]
+}

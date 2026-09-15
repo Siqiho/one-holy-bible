@@ -1,0 +1,990 @@
+{
+  "checkedAt": "2026-09-15T15:30:23.892Z",
+  "url": "http://localhost:1420/",
+  "readerAfter": [
+    {
+      "barHeight": 44,
+      "cardButtonRect": {
+        "bottom": 37.5,
+        "height": 32,
+        "left": 1235.21875,
+        "right": 1340.5,
+        "top": 5.5,
+        "width": 105.28125,
+        "x": 1235.21875,
+        "y": 5.5
+      },
+      "cardsButton": true,
+      "margin": true,
+      "scrollWidth": 1600,
+      "width": 1600
+    },
+    {
+      "barHeight": 44,
+      "cardButtonRect": {
+        "bottom": 37.5,
+        "height": 32,
+        "left": 915.21875,
+        "right": 1020.5,
+        "top": 5.5,
+        "width": 105.28125,
+        "x": 915.21875,
+        "y": 5.5
+      },
+      "cardsButton": true,
+      "margin": false,
+      "scrollWidth": 1280,
+      "width": 1280
+    },
+    {
+      "barHeight": 44,
+      "cardButtonRect": {
+        "bottom": 37.5,
+        "height": 32,
+        "left": 535.21875,
+        "right": 640.5,
+        "top": 5.5,
+        "width": 105.28125,
+        "x": 535.21875,
+        "y": 5.5
+      },
+      "cardsButton": true,
+      "margin": false,
+      "scrollWidth": 900,
+      "width": 900
+    },
+    {
+      "barHeight": 86,
+      "cardButtonRect": {
+        "bottom": 77.75,
+        "height": 32,
+        "left": 10,
+        "right": 88.1640625,
+        "top": 45.75,
+        "width": 78.1640625,
+        "x": 10,
+        "y": 45.75
+      },
+      "cardsButton": true,
+      "margin": false,
+      "scrollWidth": 600,
+      "width": 600
+    }
+  ],
+  "workbenchAfter": [
+    {
+      "barHeight": 56,
+      "controls": [
+        {
+          "height": 34,
+          "left": 169.171875,
+          "name": "选择书卷 创世记",
+          "right": 256.171875
+        },
+        {
+          "height": 34,
+          "left": 259.171875,
+          "name": "选择章节 第 1 章",
+          "right": 341.171875
+        },
+        {
+          "height": 34,
+          "left": 361.171875,
+          "name": "和合本",
+          "right": 444.171875
+        },
+        {
+          "height": 34,
+          "left": 446.171875,
+          "name": "KJV",
+          "right": 520.171875
+        },
+        {
+          "height": 34,
+          "left": 522.171875,
+          "name": "卡片",
+          "right": 596.171875
+        },
+        {
+          "height": 34,
+          "left": 600.171875,
+          "name": "交换中间模块顺序",
+          "right": 634.171875
+        },
+        {
+          "height": 34,
+          "left": 650.171875,
+          "name": "搜索类型",
+          "right": 714.171875
+        },
+        {
+          "height": 34,
+          "left": 740.171875,
+          "name": "搜索经文",
+          "right": 1049.171875
+        },
+        {
+          "height": 34,
+          "left": 1054.171875,
+          "name": "搜索",
+          "right": 1108.171875
+        },
+        {
+          "height": 34,
+          "left": 1218,
+          "name": "切换到阅读模式",
+          "right": 1288
+        },
+        {
+          "height": 34,
+          "left": 1290,
+          "name": "刷新卡片",
+          "right": 1386
+        },
+        {
+          "height": 34,
+          "left": 1388,
+          "name": "保存布局",
+          "right": 1484
+        },
+        {
+          "height": 34,
+          "left": 1486,
+          "name": "重置排版",
+          "right": 1582
+        }
+      ],
+      "groups": [
+        {
+          "bottom": 40.5,
+          "height": 26,
+          "left": 14,
+          "name": "One Holy Bible",
+          "right": 150.171875,
+          "top": 14.5,
+          "width": 136.171875,
+          "x": 14,
+          "y": 14.5
+        },
+        {
+          "bottom": 49.5,
+          "height": 44,
+          "left": 164.171875,
+          "name": "当前书卷章节",
+          "right": 346.171875,
+          "top": 5.5,
+          "width": 182,
+          "x": 164.171875,
+          "y": 5.5
+        },
+        {
+          "bottom": 49.5,
+          "height": 44,
+          "left": 356.171875,
+          "name": "中间模块",
+          "right": 639.171875,
+          "top": 5.5,
+          "width": 283,
+          "x": 356.171875,
+          "y": 5.5
+        },
+        {
+          "bottom": 45.5,
+          "height": 36,
+          "left": 649.171875,
+          "name": "经文与卡片搜索",
+          "right": 1109.171875,
+          "top": 9.5,
+          "width": 460,
+          "x": 649.171875,
+          "y": 9.5
+        },
+        {
+          "bottom": 48.5,
+          "height": 42,
+          "left": 1214,
+          "name": "布局操作",
+          "right": 1586,
+          "top": 6.5,
+          "width": 372,
+          "x": 1214,
+          "y": 6.5
+        }
+      ],
+      "scrollWidth": 1600,
+      "width": 1600
+    },
+    {
+      "barHeight": 96,
+      "controls": [
+        {
+          "height": 34,
+          "left": 167.171875,
+          "name": "选择书卷 创世记",
+          "right": 254.171875
+        },
+        {
+          "height": 34,
+          "left": 257.171875,
+          "name": "选择章节 第 1 章",
+          "right": 339.171875
+        },
+        {
+          "height": 34,
+          "left": 357.171875,
+          "name": "和合本",
+          "right": 440.171875
+        },
+        {
+          "height": 34,
+          "left": 442.171875,
+          "name": "KJV",
+          "right": 516.171875
+        },
+        {
+          "height": 34,
+          "left": 518.171875,
+          "name": "卡片",
+          "right": 592.171875
+        },
+        {
+          "height": 34,
+          "left": 596.171875,
+          "name": "交换中间模块顺序",
+          "right": 630.171875
+        },
+        {
+          "height": 34,
+          "left": 163.171875,
+          "name": "搜索类型",
+          "right": 227.171875
+        },
+        {
+          "height": 34,
+          "left": 253.171875,
+          "name": "搜索经文",
+          "right": 622.171875
+        },
+        {
+          "height": 34,
+          "left": 627.171875,
+          "name": "搜索",
+          "right": 681.171875
+        },
+        {
+          "height": 34,
+          "left": 1058,
+          "name": "切换到阅读模式",
+          "right": 1128
+        },
+        {
+          "height": 34,
+          "left": 1130,
+          "name": "刷新卡片",
+          "right": 1226
+        },
+        {
+          "height": 34,
+          "left": 1228,
+          "name": "保存布局",
+          "right": 1324
+        },
+        {
+          "height": 34,
+          "left": 1326,
+          "name": "重置排版",
+          "right": 1422
+        }
+      ],
+      "groups": [
+        {
+          "bottom": 37,
+          "height": 26,
+          "left": 14,
+          "name": "One Holy Bible",
+          "right": 150.171875,
+          "top": 11,
+          "width": 136.171875,
+          "x": 14,
+          "y": 11
+        },
+        {
+          "bottom": 46,
+          "height": 44,
+          "left": 162.171875,
+          "name": "当前书卷章节",
+          "right": 344.171875,
+          "top": 2,
+          "width": 182,
+          "x": 162.171875,
+          "y": 2
+        },
+        {
+          "bottom": 46,
+          "height": 44,
+          "left": 352.171875,
+          "name": "中间模块",
+          "right": 635.171875,
+          "top": 2,
+          "width": 283,
+          "x": 352.171875,
+          "y": 2
+        },
+        {
+          "bottom": 90,
+          "height": 36,
+          "left": 162.171875,
+          "name": "经文与卡片搜索",
+          "right": 682.171875,
+          "top": 54,
+          "width": 520,
+          "x": 162.171875,
+          "y": 54
+        },
+        {
+          "bottom": 45,
+          "height": 42,
+          "left": 1054,
+          "name": "布局操作",
+          "right": 1426,
+          "top": 3,
+          "width": 372,
+          "x": 1054,
+          "y": 3
+        }
+      ],
+      "scrollWidth": 1440,
+      "width": 1440
+    },
+    {
+      "barHeight": 96,
+      "controls": [
+        {
+          "height": 34,
+          "left": 167.171875,
+          "name": "选择书卷 创世记",
+          "right": 254.171875
+        },
+        {
+          "height": 34,
+          "left": 257.171875,
+          "name": "选择章节 第 1 章",
+          "right": 339.171875
+        },
+        {
+          "height": 34,
+          "left": 357.171875,
+          "name": "和合本",
+          "right": 440.171875
+        },
+        {
+          "height": 34,
+          "left": 442.171875,
+          "name": "KJV",
+          "right": 516.171875
+        },
+        {
+          "height": 34,
+          "left": 518.171875,
+          "name": "卡片",
+          "right": 592.171875
+        },
+        {
+          "height": 34,
+          "left": 596.171875,
+          "name": "交换中间模块顺序",
+          "right": 630.171875
+        },
+        {
+          "height": 34,
+          "left": 163.171875,
+          "name": "搜索类型",
+          "right": 227.171875
+        },
+        {
+          "height": 34,
+          "left": 253.171875,
+          "name": "搜索经文",
+          "right": 622.171875
+        },
+        {
+          "height": 34,
+          "left": 627.171875,
+          "name": "搜索",
+          "right": 681.171875
+        },
+        {
+          "height": 34,
+          "left": 898,
+          "name": "切换到阅读模式",
+          "right": 968
+        },
+        {
+          "height": 34,
+          "left": 970,
+          "name": "刷新卡片",
+          "right": 1066
+        },
+        {
+          "height": 34,
+          "left": 1068,
+          "name": "保存布局",
+          "right": 1164
+        },
+        {
+          "height": 34,
+          "left": 1166,
+          "name": "重置排版",
+          "right": 1262
+        }
+      ],
+      "groups": [
+        {
+          "bottom": 37,
+          "height": 26,
+          "left": 14,
+          "name": "One Holy Bible",
+          "right": 150.171875,
+          "top": 11,
+          "width": 136.171875,
+          "x": 14,
+          "y": 11
+        },
+        {
+          "bottom": 46,
+          "height": 44,
+          "left": 162.171875,
+          "name": "当前书卷章节",
+          "right": 344.171875,
+          "top": 2,
+          "width": 182,
+          "x": 162.171875,
+          "y": 2
+        },
+        {
+          "bottom": 46,
+          "height": 44,
+          "left": 352.171875,
+          "name": "中间模块",
+          "right": 635.171875,
+          "top": 2,
+          "width": 283,
+          "x": 352.171875,
+          "y": 2
+        },
+        {
+          "bottom": 90,
+          "height": 36,
+          "left": 162.171875,
+          "name": "经文与卡片搜索",
+          "right": 682.171875,
+          "top": 54,
+          "width": 520,
+          "x": 162.171875,
+          "y": 54
+        },
+        {
+          "bottom": 45,
+          "height": 42,
+          "left": 894,
+          "name": "布局操作",
+          "right": 1266,
+          "top": 3,
+          "width": 372,
+          "x": 894,
+          "y": 3
+        }
+      ],
+      "scrollWidth": 1280,
+      "width": 1280
+    },
+    {
+      "barHeight": 96,
+      "controls": [
+        {
+          "height": 34,
+          "left": 61,
+          "name": "选择书卷 创世记",
+          "right": 143
+        },
+        {
+          "height": 34,
+          "left": 146,
+          "name": "选择章节 第 1 章",
+          "right": 228
+        },
+        {
+          "height": 34,
+          "left": 246,
+          "name": "和合本",
+          "right": 325
+        },
+        {
+          "height": 34,
+          "left": 327,
+          "name": "KJV",
+          "right": 401
+        },
+        {
+          "height": 34,
+          "left": 403,
+          "name": "卡片",
+          "right": 477
+        },
+        {
+          "height": 34,
+          "left": 481,
+          "name": "交换中间模块顺序",
+          "right": 515
+        },
+        {
+          "height": 34,
+          "left": 57,
+          "name": "搜索类型",
+          "right": 121
+        },
+        {
+          "height": 34,
+          "left": 147,
+          "name": "搜索经文",
+          "right": 516
+        },
+        {
+          "height": 34,
+          "left": 521,
+          "name": "搜索",
+          "right": 575
+        },
+        {
+          "height": 34,
+          "left": 738,
+          "name": "切换到阅读模式",
+          "right": 804
+        },
+        {
+          "height": 34,
+          "left": 806,
+          "name": "刷新卡片",
+          "right": 898
+        },
+        {
+          "height": 34,
+          "left": 900,
+          "name": "保存布局",
+          "right": 992
+        },
+        {
+          "height": 34,
+          "left": 994,
+          "name": "重置排版",
+          "right": 1086
+        }
+      ],
+      "groups": [
+        {
+          "bottom": 37,
+          "height": 26,
+          "left": 10,
+          "name": "One Holy Bible",
+          "right": 44,
+          "top": 11,
+          "width": 34,
+          "x": 10,
+          "y": 11
+        },
+        {
+          "bottom": 46,
+          "height": 44,
+          "left": 56,
+          "name": "当前书卷章节",
+          "right": 233,
+          "top": 2,
+          "width": 177,
+          "x": 56,
+          "y": 2
+        },
+        {
+          "bottom": 46,
+          "height": 44,
+          "left": 241,
+          "name": "中间模块",
+          "right": 520,
+          "top": 2,
+          "width": 279,
+          "x": 241,
+          "y": 2
+        },
+        {
+          "bottom": 90,
+          "height": 36,
+          "left": 56,
+          "name": "经文与卡片搜索",
+          "right": 576,
+          "top": 54,
+          "width": 520,
+          "x": 56,
+          "y": 54
+        },
+        {
+          "bottom": 45,
+          "height": 42,
+          "left": 734,
+          "name": "布局操作",
+          "right": 1090,
+          "top": 3,
+          "width": 356,
+          "x": 734,
+          "y": 3
+        }
+      ],
+      "scrollWidth": 1100,
+      "width": 1100
+    },
+    {
+      "barHeight": 96,
+      "controls": [
+        {
+          "height": 34,
+          "left": 61,
+          "name": "选择书卷 创世记",
+          "right": 143
+        },
+        {
+          "height": 34,
+          "left": 146,
+          "name": "选择章节 第 1 章",
+          "right": 228
+        },
+        {
+          "height": 34,
+          "left": 246,
+          "name": "和合本",
+          "right": 325
+        },
+        {
+          "height": 34,
+          "left": 327,
+          "name": "KJV",
+          "right": 401
+        },
+        {
+          "height": 34,
+          "left": 403,
+          "name": "卡片",
+          "right": 477
+        },
+        {
+          "height": 34,
+          "left": 481,
+          "name": "交换中间模块顺序",
+          "right": 515
+        },
+        {
+          "height": 34,
+          "left": 57,
+          "name": "搜索类型",
+          "right": 121
+        },
+        {
+          "height": 34,
+          "left": 147,
+          "name": "搜索经文",
+          "right": 466
+        },
+        {
+          "height": 34,
+          "left": 471,
+          "name": "搜索",
+          "right": 525
+        },
+        {
+          "height": 34,
+          "left": 538,
+          "name": "切换到阅读模式",
+          "right": 604
+        },
+        {
+          "height": 34,
+          "left": 606,
+          "name": "刷新卡片",
+          "right": 698
+        },
+        {
+          "height": 34,
+          "left": 700,
+          "name": "保存布局",
+          "right": 792
+        },
+        {
+          "height": 34,
+          "left": 794,
+          "name": "重置排版",
+          "right": 886
+        }
+      ],
+      "groups": [
+        {
+          "bottom": 37,
+          "height": 26,
+          "left": 10,
+          "name": "One Holy Bible",
+          "right": 44,
+          "top": 11,
+          "width": 34,
+          "x": 10,
+          "y": 11
+        },
+        {
+          "bottom": 46,
+          "height": 44,
+          "left": 56,
+          "name": "当前书卷章节",
+          "right": 233,
+          "top": 2,
+          "width": 177,
+          "x": 56,
+          "y": 2
+        },
+        {
+          "bottom": 46,
+          "height": 44,
+          "left": 241,
+          "name": "中间模块",
+          "right": 520,
+          "top": 2,
+          "width": 279,
+          "x": 241,
+          "y": 2
+        },
+        {
+          "bottom": 90,
+          "height": 36,
+          "left": 56,
+          "name": "经文与卡片搜索",
+          "right": 526,
+          "top": 54,
+          "width": 470,
+          "x": 56,
+          "y": 54
+        },
+        {
+          "bottom": 45,
+          "height": 42,
+          "left": 534,
+          "name": "布局操作",
+          "right": 890,
+          "top": 3,
+          "width": 356,
+          "x": 534,
+          "y": 3
+        }
+      ],
+      "scrollWidth": 900,
+      "width": 900
+    },
+    {
+      "barHeight": 144,
+      "controls": [
+        {
+          "height": 34,
+          "left": 61,
+          "name": "选择书卷 创世记",
+          "right": 143
+        },
+        {
+          "height": 34,
+          "left": 146,
+          "name": "选择章节 第 1 章",
+          "right": 228
+        },
+        {
+          "height": 34,
+          "left": 246,
+          "name": "和合本",
+          "right": 325
+        },
+        {
+          "height": 34,
+          "left": 327,
+          "name": "KJV",
+          "right": 401
+        },
+        {
+          "height": 34,
+          "left": 403,
+          "name": "卡片",
+          "right": 477
+        },
+        {
+          "height": 34,
+          "left": 481,
+          "name": "交换中间模块顺序",
+          "right": 515
+        },
+        {
+          "height": 34,
+          "left": 11,
+          "name": "搜索类型",
+          "right": 75
+        },
+        {
+          "height": 34,
+          "left": 101,
+          "name": "搜索经文",
+          "right": 684
+        },
+        {
+          "height": 34,
+          "left": 689,
+          "name": "搜索",
+          "right": 743
+        },
+        {
+          "height": 34,
+          "left": 14,
+          "name": "切换到阅读模式",
+          "right": 80
+        },
+        {
+          "height": 34,
+          "left": 82,
+          "name": "刷新卡片",
+          "right": 174
+        },
+        {
+          "height": 34,
+          "left": 176,
+          "name": "保存布局",
+          "right": 268
+        },
+        {
+          "height": 34,
+          "left": 270,
+          "name": "重置排版",
+          "right": 362
+        }
+      ],
+      "groups": [
+        {
+          "bottom": 37,
+          "height": 26,
+          "left": 10,
+          "name": "One Holy Bible",
+          "right": 44,
+          "top": 11,
+          "width": 34,
+          "x": 10,
+          "y": 11
+        },
+        {
+          "bottom": 46,
+          "height": 44,
+          "left": 56,
+          "name": "当前书卷章节",
+          "right": 233,
+          "top": 2,
+          "width": 177,
+          "x": 56,
+          "y": 2
+        },
+        {
+          "bottom": 46,
+          "height": 44,
+          "left": 241,
+          "name": "中间模块",
+          "right": 520,
+          "top": 2,
+          "width": 279,
+          "x": 241,
+          "y": 2
+        },
+        {
+          "bottom": 90,
+          "height": 36,
+          "left": 10,
+          "name": "经文与卡片搜索",
+          "right": 744,
+          "top": 54,
+          "width": 734,
+          "x": 10,
+          "y": 54
+        },
+        {
+          "bottom": 141,
+          "height": 42,
+          "left": 10,
+          "name": "布局操作",
+          "right": 366,
+          "top": 99,
+          "width": 356,
+          "x": 10,
+          "y": 99
+        }
+      ],
+      "scrollWidth": 754,
+      "width": 754
+    }
+  ],
+  "refreshAfter": {
+    "buttons": [
+      {
+        "name": "创世记",
+        "right": 143
+      },
+      {
+        "name": "第 1 章",
+        "right": 228
+      },
+      {
+        "name": "和合本",
+        "right": 325
+      },
+      {
+        "name": "KJV",
+        "right": 401
+      },
+      {
+        "name": "卡片",
+        "right": 477
+      },
+      {
+        "name": "",
+        "right": 515
+      },
+      {
+        "name": "搜索",
+        "right": 525
+      },
+      {
+        "name": "阅读",
+        "right": 604
+      },
+      {
+        "name": "刷新卡片",
+        "right": 698
+      },
+      {
+        "name": "保存布局",
+        "right": 792
+      },
+      {
+        "name": "重置排版",
+        "right": 886
+      }
+    ],
+    "status": "卡片资源已刷新",
+    "toolbarRight": 900,
+    "width": 900
+  },
+  "networkFaultInjection": {
+    "asset": "/src/assets/resources/genesis/images/cmc-01/p014_img002_669x195.png",
+    "visibleFailure": true,
+    "retryRestoredNaturalWidth": 669,
+    "networkOverridesRestored": true
+  },
+  "finalLogs": [],
+  "viewportRestored": {
+    "height": 900,
+    "width": 900
+  }
+}

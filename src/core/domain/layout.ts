@@ -2,7 +2,7 @@ import type { VerseId } from "./verse";
 
 export type DockSide = "left" | "right";
 
-export type ResourceModuleId = "commentary" | "media" | "notes" | "backlinks" | "encyclopedia" | "dictionary";
+export type ResourceModuleId = "commentary" | "media" | "notes" | "backlinks" | "encyclopedia";
 
 export type CenterModuleId = "cuv" | "kjv" | "card";
 
@@ -59,7 +59,6 @@ export const defaultWorkbenchLayout: WorkbenchLayout = {
     { id: "commentary", title: "注释", side: "right", visible: true },
     { id: "media", title: "媒体", side: "right", visible: true },
     { id: "encyclopedia", title: "百科", side: "right", visible: true },
-    { id: "dictionary", title: "字典", side: "right", visible: true },
     { id: "notes", title: "笔记", side: "right", visible: true },
   ],
 };

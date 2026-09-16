@@ -1,3 +1,4 @@
+import release from "../../PUBLIC_RELEASE.json";
 import {
   validatePublicBookPayload,
   validatePublicManifest,
@@ -138,7 +139,11 @@ export function loadPublicBook(bookId: string, options: PublicDataLoadOptions = 
 export function loadPublicSearchIndex(options: PublicDataLoadOptions = {}): Promise<PublicScriptureSearchEntry[]> {
   if (searchIndexPromise) return searchIndexPromise;
   searchIndexPromise = loadPublicManifest(options)
-    .then((manifest) => fetchJson(manifest.searchIndexUrl, publicFetcher(options.fetcher)))
+    .then(async (manifest) => {
+      const bytes = await fetchBytes(manifest.searchIndexUrl, publicFetcher(options.fetcher));
+      if (await sha256(bytes) !== release.searchIndexSha256) throw new PublicBookLoadError("Public search index integrity sha256 mismatch");
+      return parseJson(bytes, manifest.searchIndexUrl);
+    })
     .then(validatePublicSearchIndex)
     .then((entries) => {
       observe("search-index-loaded", { entryCount: entries.length });

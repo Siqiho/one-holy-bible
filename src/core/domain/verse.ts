@@ -6,13 +6,14 @@ export interface ParsedVerseId {
   verse: number;
 }
 
-const chineseBookMap: Record<string, string> = {
-  创: "Gen",
-  创世记: "Gen",
-};
+import { bookAliases } from "./bibleBooks";
+
+function normalizeBookName(book: string): string | undefined {
+  return bookAliases[book.trim().toLocaleLowerCase()];
+}
 
 export function verseIdFromParts(book: string, chapter: number, verse: number): VerseId {
-  const normalizedBook = chineseBookMap[book] ?? book;
+  const normalizedBook = normalizeBookName(book) ?? book;
   return `${normalizedBook}.${chapter}.${verse}` as VerseId;
 }
 
@@ -27,24 +28,40 @@ export function parseVerseId(id: VerseId | string): ParsedVerseId {
 
 export function normalizeVerseRef(input: string): VerseId {
   const raw = input.replace(/\[\[|\]\]/g, "").trim();
-  if (/^[A-Za-z]+\.\d+\.\d+$/.test(raw)) {
-    return raw as VerseId;
-  }
-
-  const englishMatch = raw.match(/^(Gen)\s+(\d+):(\d+)$/i);
-  if (englishMatch) {
-    const [, book, chapter, verse] = englishMatch;
-    return verseIdFromParts(book[0].toUpperCase() + book.slice(1).toLowerCase(), Number(chapter), Number(verse));
-  }
-
-  const chineseMatch = raw.match(/^([\u4e00-\u9fa5]+)\s*(\d+):(\d+)$/);
-  if (chineseMatch) {
-    const [, bookName, chapter, verse] = chineseMatch;
-    const book = chineseBookMap[bookName];
-    if (!book) {
-      throw new Error(`Unsupported Chinese book name: ${bookName}`);
+  const dotMatch = raw.match(/^(.+?)\.(\d+)\.(\d+)$/);
+  if (dotMatch) {
+    const [, book, chapter, verse] = dotMatch;
+    const normalizedBook = normalizeBookName(book);
+    if (normalizedBook) {
+      return verseIdFromParts(normalizedBook, Number(chapter), Number(verse));
     }
-    return verseIdFromParts(book, Number(chapter), Number(verse));
+  }
+
+  const referenceMatch = raw.match(/^(.+?)\s+(\d+):(\d+)$/);
+  if (referenceMatch) {
+    const [, book, chapter, verse] = referenceMatch;
+    const normalizedBook = normalizeBookName(book);
+    if (normalizedBook) {
+      return verseIdFromParts(normalizedBook, Number(chapter), Number(verse));
+    }
+  }
+
+  const compactEnglishMatch = raw.match(/^([1-3]?[A-Za-z]+)\s*(\d+):(\d+)$/);
+  if (compactEnglishMatch) {
+    const [, book, chapter, verse] = compactEnglishMatch;
+    const normalizedBook = normalizeBookName(book);
+    if (normalizedBook) {
+      return verseIdFromParts(normalizedBook, Number(chapter), Number(verse));
+    }
+  }
+
+  const compactChineseMatch = raw.match(/^([\u4e00-\u9fa5壹贰叁]+)\s*(\d+):(\d+)$/);
+  if (compactChineseMatch) {
+    const [, book, chapter, verse] = compactChineseMatch;
+    const normalizedBook = normalizeBookName(book);
+    if (normalizedBook) {
+      return verseIdFromParts(normalizedBook, Number(chapter), Number(verse));
+    }
   }
 
   throw new Error(`Unsupported Bible reference: ${input}`);

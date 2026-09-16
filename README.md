@@ -1,6 +1,6 @@
 # One Holy Bible
 
-One Holy Bible is a local-first Bible study workbench built with React, TypeScript, Vite, and Tauri. It pairs synchronized Chinese Union Version (CUV) and King James Version (KJV) reading with verse-linked explanatory text and image cards.
+One Holy Bible is a local-first Bible study workbench built with React, TypeScript, and Vite. It pairs synchronized Chinese Union Version (CUV) and King James Version (KJV) reading with verse-linked explanatory text and image cards.
 
 ## 项目初衷 · Why this project exists
 
@@ -16,34 +16,32 @@ One Holy Bible 希望成为一个服务于圣经阅读的数字媒介——不�
 
 这或许只是一次微小的尝试。但我相信，即使面对最不确定的未来，神的话语仍会被阅读、被聆听、被默想。技术可以帮助经文抵达人的眼前和耳畔；至于这活泼的话语如何光照、安慰、责备并更新人心，从来不属于技术的能力，而在于神自己的工作。
 
-## `v0.2.0` scope
+## `v0.3.0` scope
 
-This public release includes all 66 Bible books, CUV and KJV Scripture, 10,963 verse-linked explanatory text cards, and 2,705 image cards. Books are packaged separately and loaded on demand. Image-card binaries are kept in the separate public [one-holy-bible-assets repository](https://github.com/Siqiho/one-holy-bible-assets) and referenced through immutable HTTPS URLs in the checked-in asset manifest.
+This public snapshot follows the latest maintained development reader and contains all 66 Bible books, CUV and KJV Scripture, 16,092 explanatory text cards, and 2,927 image-card placements. Books are packaged separately and loaded on demand. The image cards reference 2,735 unique PNGs; 178 Doré chapter artworks are provided separately for the reading view.
 
-The code repository intentionally does not duplicate the 2,515 unique PNG binaries. Each image descriptor records its SHA-256, byte size, MIME type, and dimensions so release validators and downstream consumers can verify the association without importing the development workbench.
+Image binaries remain in the public [one-holy-bible-assets repository](https://github.com/Siqiho/one-holy-bible-assets). Descriptors record immutable HTTPS URLs, SHA-256, byte size, MIME type, and dimensions. See the [v0.3.0 release notes](docs/releases/2026-09-16-v0.3.0-release-notes.md) for changes and provenance.
 
 ## Features
 
-- synchronized CUV/KJV reading and verse highlighting;
-- navigation across all 66 canonical books;
-- lazy loading with cached return navigation and retry on load failure;
-- whole-Bible Scripture search with cross-book navigation;
-- verse-linked explanatory `commentary` and `note` cards;
-- verse-linked read-only image cards with remote preview and integrity metadata;
+- focused reading and study-workbench views with synchronized CUV/KJV text;
+- navigation across all 66 canonical books and whole-Bible Scripture search;
+- lazy book loading, cached return navigation, and retry on load failure;
+- verse-linked explanatory text and read-only image cards;
+- chapter artwork, remembered reading position, and reading appearance controls;
 - movable study modules in the reading workbench;
 - deterministic public-data packaging and integrity validation.
 
 ## Architecture
 
-The browser UI loads `public/data/manifest.json`, then requests only the selected book package from `public/data/books`. Each book payload contains `textCards` and `imageCards`; image cards carry an `asset` descriptor rather than embedding binary data. The whole-Bible search index contains minimal Scripture fields, while the asset manifest maps image-card hashes to fixed public URLs. Runtime schemas, URL checks, package hashes, asset descriptors, and release validation keep public data fail-closed.
+The public runtime loads `public/data/manifest.json`, then requests the selected book package from `public/data/books`. Each book contains Scripture, `textCards`, and `imageCards`. The search index contains Scripture fields; the asset manifest binds image-card hashes to fixed public URLs. Chapter artwork has a separate `dore-artwork.json` manifest. Runtime schemas, URL checks, package hashes, and release validation protect the public-data boundary. The global Scripture index and chapter artwork manifest are also checked against digests embedded in the release. Related introduction packages are loaded for books that share introductory material.
 
-Tauri provides the desktop shell. The web application can also run directly with Vite for development and review.
+This repository contains the public React runtime. The development workspace's editing services and desktop packaging are maintained separately.
 
 ## Prerequisites
 
 - Node.js 24 (see `.node-version`)
 - npm, using the checked-in lockfile
-- optional: the current Tauri prerequisites and Rust toolchain for desktop packaging
 
 ## Install and run
 
@@ -73,13 +71,9 @@ npm audit --omit=dev
 
 The source-import and release-preparation pipeline is intentionally kept outside this public repository. This checkout is a read-only public snapshot: contributors should update the checked-in book packages, image manifest, and public runtime only through the approved independent release workflow.
 
-## Tauri status
+## Delivery scope
 
-The web build and development server are the primary verified `v0.2.0` paths. Tauri configuration is included, but platform desktop bundles require the relevant OS toolchain and have not all been produced or signed. Run the desktop development shell only after installing Tauri's platform prerequisites:
-
-```bash
-npm run tauri dev
-```
+This release updates the public GitHub source and image repositories. It does not publish or update a hosted website, and it does not provide a new desktop installer.
 
 ## Data rights
 
@@ -89,9 +83,8 @@ The MIT license covers project-owned source code and documentation only. It does
 
 ```text
 src/                  React application, public runtime, and domain logic
-public/data/          public manifest, asset manifest, search index, and 66 book packages
+public/data/          public manifests, search index, and 66 book packages
 scripts/              public-data, repository, and release validation
-src-tauri/            Tauri desktop-shell configuration
 .github/workflows/    continuous integration
 ```
 

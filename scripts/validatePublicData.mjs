@@ -11,7 +11,9 @@ const ASSET_URL = /^https:\/\/raw\.githubusercontent\.com\/Siqiho\/one-holy-bibl
 const LOCAL_PATH = /(?:\/Users\/|\/Volumes\/|file:\/\/|(?:^|[\s"'(])[A-Za-z]:[\\/]|\\\\[^\\\s]+\\)/i;
 const PRIVATE_URL = /https?:\/\/(?:localhost|127(?:\.\d{1,3}){3}|10(?:\.\d{1,3}){3}|172\.(?:1[6-9]|2\d|3[01])(?:\.\d{1,3}){2}|192\.168(?:\.\d{1,3}){2}|\[?(?:::1|fc|fd)[^\]]*\]?)(?=[:/\s"'<>),.;!?]|$)/i;
 const BOOK_SOURCE_PATH = resolve(process.cwd(), "src/core/domain/bibleBooks.ts");
-const BOOK_IDS = [...(await readFile(BOOK_SOURCE_PATH, "utf8")).matchAll(/\{\s*id:\s*"([^"]+)"/g)].map((match) => match[1]);
+const BOOK_SOURCE = await readFile(BOOK_SOURCE_PATH, "utf8");
+const BOOK_CHAPTERS = new Map([...BOOK_SOURCE.matchAll(/\{\s*id:\s*"([^" ]+)"[^\n]+chapterCount: (\d+)/g)].map(match => [match[1], Number(match[2])]));
+const BOOK_IDS = [...BOOK_SOURCE.matchAll(/\{\s*id:\s*"([^"]+)"/g)].map((match) => match[1]);
 const BOOK_ID_SET = new Set(BOOK_IDS);
 const VERSION_LABELS = new Map([["cuv", "和合本"], ["kjv", "KJV"]]);
 
@@ -25,7 +27,7 @@ const ASSET_KEYS = new Set(["url", "sha256", "bytes", "mimeType", "width", "heig
 const RANGE_KEYS = new Set(["start", "end"]);
 const SEARCH_KEYS = new Set(["verseId", "versionId", "versionLabel", "book", "chapter", "verse", "text"]);
 const ASSET_MANIFEST_KEYS = new Set(["schemaVersion", "assets"]);
-const RELEASE_KEYS = new Set(["releaseVersion", "schemaVersion", "developmentSourceCommit", "bibleInputSha256", "cardInputSha256", "assetManifestSha256", "bookCount", "cuvVerseCount", "kjvVerseCount", "textCardCount", "imageCardCount", "generatedAt"]);
+const RELEASE_KEYS = new Set(["releaseVersion", "schemaVersion", "developmentSourceCommit", "bibleInputSha256", "cardInputSha256", "assetManifestSha256", "searchIndexSha256", "bookCount", "cuvVerseCount", "kjvVerseCount", "textCardCount", "imageCardCount", "doreArtworkCount", "doreArtworkSha256", "generatedAt"]);
 
 function fail(message) {
   throw new Error(`Unsafe public data: ${message}`);
@@ -153,10 +155,10 @@ function assertCard(value, bookId, label, type) {
   if (image) assertAssetDescriptor(value.asset, `${label}.asset`);
 }
 
-function assertManifest(value) {
+function assertManifest(value, expectedVersion) {
   assertOnlyKeys(value, MANIFEST_KEYS, "manifest");
   if (value.schemaVersion !== 2) fail("manifest.schemaVersion must be 2");
-  if (value.releaseVersion !== "0.2.0") fail("manifest.releaseVersion must be 0.2.0");
+  if (value.releaseVersion !== expectedVersion) fail("manifest.releaseVersion must match package.json");
   if (value.searchIndexUrl !== "/data/search-index.json") fail("manifest.searchIndexUrl must be /data/search-index.json");
   if (!Array.isArray(value.books) || value.books.length !== BOOK_IDS.length) fail("manifest must contain exactly 66 books");
   value.books.forEach((entry, index) => {
@@ -196,17 +198,45 @@ function assertAssetManifest(value) {
   return bySha;
 }
 
-function assertReleaseManifest(value, stats, assetManifestBytes) {
+function assertReleaseManifest(value, stats, assetManifestBytes, doreBytes, expectedVersion) {
   assertOnlyKeys(value, RELEASE_KEYS, "PUBLIC_RELEASE.json");
-  if (value.releaseVersion !== "0.2.0" || value.schemaVersion !== 2) fail("PUBLIC_RELEASE.json version/schema is invalid");
+  if (value.releaseVersion !== expectedVersion || value.schemaVersion !== 2) fail("PUBLIC_RELEASE.json version/schema is invalid");
   if (typeof value.developmentSourceCommit !== "string" || !GIT_SHA.test(value.developmentSourceCommit)) fail("PUBLIC_RELEASE.json developmentSourceCommit is invalid");
-  for (const key of ["bibleInputSha256", "cardInputSha256", "assetManifestSha256"]) assertSha(value[key], `PUBLIC_RELEASE.json.${key}`);
-  for (const key of ["bookCount", "cuvVerseCount", "kjvVerseCount", "textCardCount", "imageCardCount"]) {
+  for (const key of ["bibleInputSha256", "cardInputSha256", "assetManifestSha256", "searchIndexSha256", "doreArtworkSha256"]) assertSha(value[key], `PUBLIC_RELEASE.json.${key}`);
+  for (const key of ["bookCount", "cuvVerseCount", "kjvVerseCount", "textCardCount", "imageCardCount", "doreArtworkCount"]) {
     assertInteger(value[key], 0, `PUBLIC_RELEASE.json.${key}`);
     if (value[key] !== stats[key]) fail(`PUBLIC_RELEASE.json.${key} does not match checked-in data`);
   }
   if (createHash("sha256").update(assetManifestBytes).digest("hex") !== value.assetManifestSha256) fail("PUBLIC_RELEASE.json.assetManifestSha256 does not match asset manifest");
+  if (createHash("sha256").update(doreBytes).digest("hex") !== value.doreArtworkSha256) fail("PUBLIC_RELEASE.json.doreArtworkSha256 does not match artwork manifest");
   if (typeof value.generatedAt !== "string" || Number.isNaN(Date.parse(value.generatedAt))) fail("PUBLIC_RELEASE.json.generatedAt is invalid");
+}
+
+export function validateDoreArtwork(value) {
+  assertOnlyKeys(value, new Set(["schemaVersion", "entries"]), "dore-artwork");
+  assertSafeValue(value, "dore-artwork");
+  if (value.schemaVersion !== 1 || !Array.isArray(value.entries)) fail("dore-artwork schema is invalid");
+  const allowed = new Set(["page", "book", "chapter", "title", "scriptureReference", "assetPath", "sha256", "bytes", "width", "height", "mimeType"]);
+  const seen = new Set();
+  for (const [index, entry] of value.entries.entries()) {
+    const label = `dore-artwork.entries[${index}]`;
+    assertOnlyKeys(entry, allowed, label);
+    assertBookId(entry.book, `${label}.book`);
+    assertInteger(entry.chapter, 1, `${label}.chapter`);
+    if (entry.chapter > BOOK_CHAPTERS.get(entry.book)) fail(`${label}.chapter exceeds book chapters`);
+    const key = `${entry.book}.${entry.chapter}`;
+    if (seen.has(key)) fail(`${label} has duplicate chapter artwork`);
+    seen.add(key);
+    assertNonEmptyString(entry.title, `${label}.title`);
+    if (entry.scriptureReference !== null) assertString(entry.scriptureReference, `${label}.scriptureReference`);
+    for (const field of ["page", "bytes", "width", "height"]) assertInteger(entry[field], 1, `${label}.${field}`);
+    assertSha(entry.sha256, `${label}.sha256`);
+    assertString(entry.assetPath, `${label}.assetPath`);
+    const match = entry.assetPath.match(/^https:\/\/raw\.githubusercontent\.com\/Siqiho\/one-holy-bible-assets\/[a-f0-9]{40}\/dore\/([a-f0-9]{64})\.jpg$/);
+    if (!match || match[1] !== entry.sha256) fail(`${label}.assetPath must match an immutable public JPEG digest`);
+    if (entry.mimeType !== "image/jpeg") fail(`${label}.mimeType must be image/jpeg`);
+  }
+  return value.entries.length;
 }
 
 export async function validatePublicData(outputPath = "public/data") {
@@ -214,10 +244,12 @@ export async function validatePublicData(outputPath = "public/data") {
   const projectRoot = resolve(dataRoot, "../..");
   if (BOOK_IDS.length !== 66 || BOOK_ID_SET.size !== 66) fail("bibleBooks.ts must define exactly 66 unique books");
 
+  const packageJson = JSON.parse(await readFile(join(projectRoot, "package.json"), "utf8"));
+  if (!/^\d+\.\d+\.\d+$/.test(packageJson.version)) fail("package.json version is invalid");
   const manifestBytes = await readFile(join(dataRoot, "manifest.json"));
   const manifest = JSON.parse(manifestBytes);
   assertSafeValue(manifest, "manifest");
-  assertManifest(manifest);
+  assertManifest(manifest, packageJson.version);
 
   const assetManifestBytes = await readFile(join(dataRoot, "asset-manifest.json"));
   const assetManifest = JSON.parse(assetManifestBytes);
@@ -294,12 +326,17 @@ export async function validatePublicData(outputPath = "public/data") {
   });
   if (seenSearch.size !== scripture.size) fail(`search index is missing ${scripture.size - seenSearch.size} scripture entries`);
 
+  const doreBytes = await readFile(join(dataRoot, "dore-artwork.json"));
+  const doreArtworkCount = validateDoreArtwork(JSON.parse(doreBytes));
   const release = JSON.parse(await readFile(join(projectRoot, "PUBLIC_RELEASE.json"), "utf8"));
-  const stats = { bookCount: BOOK_IDS.length, cuvVerseCount, kjvVerseCount, textCardCount, imageCardCount };
-  assertReleaseManifest(release, stats, assetManifestBytes);
+  if (createHash("sha256").update(searchBytes).digest("hex") !== release.searchIndexSha256) fail("PUBLIC_RELEASE.json.searchIndexSha256 does not match search index");
+  const stats = { bookCount: BOOK_IDS.length, cuvVerseCount, kjvVerseCount, textCardCount, imageCardCount, doreArtworkCount };
+  assertReleaseManifest(release, stats, assetManifestBytes, doreBytes, packageJson.version);
   if (referencedAssets.size > assetsBySha.size) fail("referenced asset count exceeds manifest asset count");
 
   return {
+    releaseVersion: packageJson.version,
+    doreArtworkCount,
     books: BOOK_IDS.length,
     cuvVerseCount,
     kjvVerseCount,
@@ -313,7 +350,7 @@ export async function validatePublicData(outputPath = "public/data") {
 
 async function main() {
   const stats = await validatePublicData(process.argv[2] ?? "public/data");
-  process.stdout.write(`Public v0.2.0 data valid: ${stats.books} books, ${stats.cuvVerseCount} CUV verses, ${stats.kjvVerseCount} KJV verses, ${stats.textCardCount} text cards, ${stats.imageCardCount} image cards, ${stats.uniqueAssetCount} assets, ${stats.searchEntryCount} search entries\n`);
+  process.stdout.write(`Public v${stats.releaseVersion} data valid: ${stats.books} books, ${stats.cuvVerseCount} CUV verses, ${stats.kjvVerseCount} KJV verses, ${stats.textCardCount} text cards, ${stats.imageCardCount} image cards, ${stats.uniqueAssetCount} assets, ${stats.searchEntryCount} search entries\n`);
 }
 
 if (process.argv[1] && import.meta.url === pathToFileURL(resolve(process.argv[1])).href) {

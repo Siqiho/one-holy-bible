@@ -1,7 +1,7 @@
 {
   "name": "one-holy-bible",
   "private": true,
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "Local-first Bible study workbench with CUV/KJV reading and verse-linked explanatory cards",
   "author": "Siqiho",
   "license": "MIT",

@@ -1,3 +1,4 @@
+import type { VerseId } from "../core/domain/verse";
 import {
   isPrivateOrLocalPublicHost,
   isPublicLoopbackHost,
@@ -6,7 +7,7 @@ import {
 export type PublicDataMode = "preview" | "publish";
 
 export interface PublicBibleVerse {
-  id: string;
+  id: VerseId;
   book: string;
   chapter: number;
   verse: number;
@@ -78,7 +79,7 @@ export interface PublicBookPayload {
 }
 
 export interface PublicScriptureSearchEntry {
-  verseId: string;
+  verseId: VerseId;
   versionId: string;
   versionLabel: string;
   book: string;

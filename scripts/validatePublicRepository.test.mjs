@@ -4,9 +4,9 @@ import { validatePublicRepository } from "./validatePublicRepository.mjs";
 import { validatePublicReleaseFiles, trackedFiles } from "./validatePublicRelease.mjs";
 
 describe("public repository release metadata", () => {
-  it("identifies the v0.2.0 public checkout", async () => {
+  it("identifies the v0.3.0 public checkout", async () => {
     await expect(validatePublicRepository(process.cwd())).resolves.toMatchObject({
-      packageVersion: "0.2.0",
+      packageVersion: "0.3.0",
       nodeVersion: "24",
     });
   });

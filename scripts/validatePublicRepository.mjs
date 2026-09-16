@@ -14,6 +14,7 @@ const REQUIRED_FILES = [
   "PUBLIC_RELEASE.json",
   "public/data/manifest.json",
   "public/data/asset-manifest.json",
+  "public/data/dore-artwork.json",
   "scripts/validatePublicData.mjs",
   "scripts/validatePublicRepository.mjs",
   "scripts/validatePublicRelease.mjs",
@@ -40,7 +41,13 @@ export async function validatePublicRepository(root = process.cwd()) {
 
   const packageJson = JSON.parse(await readFile(resolve(root, "package.json"), "utf8"));
   assertEqual(packageJson.name, "one-holy-bible", "package.json name");
-  assertEqual(packageJson.version, "0.2.0", "package.json version");
+  if (!/^\d+\.\d+\.\d+$/.test(packageJson.version)) throw new Error("package.json version is invalid");
+  const release = JSON.parse(await readFile(resolve(root, "PUBLIC_RELEASE.json"), "utf8"));
+  const manifest = JSON.parse(await readFile(resolve(root, "public/data/manifest.json"), "utf8"));
+  const lock = JSON.parse(await readFile(resolve(root, "package-lock.json"), "utf8"));
+  for (const [label, version] of [["release", release.releaseVersion], ["manifest", manifest.releaseVersion], ["lockfile", lock.version], ["lockfile root", lock.packages?.[""]?.version]]) {
+    assertEqual(version, packageJson.version, `${label} version`);
+  }
   assertEqual(packageJson.license, "MIT", "package.json license");
   assertEqual(packageJson.repository?.url, REPOSITORY_URL, "package.json repository.url");
   assertEqual(packageJson.bugs?.url, ISSUES_URL, "package.json bugs.url");
@@ -57,8 +64,8 @@ export async function validatePublicRepository(root = process.cwd()) {
   assertEqual(nodeVersion, "24", ".node-version");
 
   const readme = await readFile(resolve(root, "README.md"), "utf8");
-  if (!readme.includes("v0.2.0") || !readme.includes("one-holy-bible-assets")) {
-    throw new Error("README must describe the v0.2.0 release and its asset repository");
+  if (!readme.includes(`v${packageJson.version}`) || !readme.includes("one-holy-bible-assets")) {
+    throw new Error("README must describe the current release and its asset repository");
   }
   if (/v0\.1\.0 scope|text-first|all image-card payloads are excluded/i.test(readme)) {
     throw new Error("README contains stale v0.1.0/text-first release claims");
